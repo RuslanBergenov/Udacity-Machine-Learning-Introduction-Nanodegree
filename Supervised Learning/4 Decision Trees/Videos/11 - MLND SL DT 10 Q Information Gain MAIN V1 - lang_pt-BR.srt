@@ -1,0 +1,47 @@
+1
+00:00:00,233 --> 00:00:03,467
+Vamos usar a entropia
+e o ganho de informações
+
+2
+00:00:03,500 --> 00:00:05,233
+para criar
+árvores de decisão.
+
+3
+00:00:05,267 --> 00:00:08,200
+Nossos dados são
+estes pontos vermelhos e azuis,
+
+4
+00:00:08,233 --> 00:00:10,433
+que queremos dividir
+em duas partes.
+
+5
+00:00:10,467 --> 00:00:12,800
+Vou mostrar três maneiras
+de dividi-los.
+
+6
+00:00:12,833 --> 00:00:14,800
+Aqui estão elas.
+
+7
+00:00:14,833 --> 00:00:17,000
+Vamos ao questionário.
+
+8
+00:00:17,033 --> 00:00:22,067
+Em qual das opções ganhamos
+mais informações sobre os dados
+
+9
+00:00:22,100 --> 00:00:25,700
+e em qual ganhamos
+menos informações?
+
+10
+00:00:25,733 --> 00:00:27,067
+Responda abaixo.
+

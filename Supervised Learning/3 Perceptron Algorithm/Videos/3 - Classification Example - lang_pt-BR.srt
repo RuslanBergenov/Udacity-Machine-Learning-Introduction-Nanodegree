@@ -1,0 +1,108 @@
+1
+00:00:00,334 --> 00:00:05,534
+Correto? Os dados podem ser
+separados por esta linha
+
+2
+00:00:05,568 --> 00:00:09,400
+e parece que a maioria
+acima da linha foi aceita,
+
+3
+00:00:09,434 --> 00:00:12,234
+e a maioria abaixo da linha
+foi rejeitada.
+
+4
+00:00:12,268 --> 00:00:14,634
+Esta linha será
+o nosso modelo.
+
+5
+00:00:15,534 --> 00:00:17,434
+O modelo comete
+alguns erros,
+
+6
+00:00:17,468 --> 00:00:20,033
+pois há pontos azuis
+abaixo da linha
+
+7
+00:00:20,067 --> 00:00:22,001
+e outros vermelhos acima,
+
+8
+00:00:22,035 --> 00:00:24,000
+mas nós não vamos
+nos importar com eles.
+
+9
+00:00:24,034 --> 00:00:27,968
+É seguro prever que se um ponto
+estiver acima da linha
+
+10
+00:00:28,002 --> 00:00:29,634
+é porque o aluno foi aceito,
+
+11
+00:00:29,668 --> 00:00:32,868
+e se estiver abaixo da linha,
+o aluno foi rejeitado.
+
+12
+00:00:33,501 --> 00:00:35,634
+Usando este modelo,
+vemos que o novo aluno
+
+13
+00:00:35,668 --> 00:00:39,567
+está nos pontos 7 e 6,
+que é acima da linha.
+
+14
+00:00:39,601 --> 00:00:43,067
+Nós podemos prever
+que o aluno será aceito.
+
+15
+00:00:43,101 --> 00:00:44,467
+Se você disse que sim,
+
+16
+00:00:44,501 --> 00:00:45,968
+esta é a resposta certa.
+
+17
+00:00:46,934 --> 00:00:49,734
+Uma pergunta surge:
+
+18
+00:00:49,768 --> 00:00:51,501
+como encontramos
+esta linha?
+
+19
+00:00:51,535 --> 00:00:55,167
+Nós podemos traçá-la a olho,
+mas o computador não pode.
+
+20
+00:00:55,201 --> 00:00:58,133
+O resto da seção
+mostrará algoritmos
+
+21
+00:00:58,167 --> 00:00:59,767
+que encontram a linha,
+
+22
+00:00:59,801 --> 00:01:01,200
+não só para este exemplo,
+
+23
+00:01:01,234 --> 00:01:03,667
+mas para casos mais genéricos
+e complicados.
+

@@ -1,0 +1,80 @@
+1
+00:00:00,000 --> 00:00:01,975
+So, let's start with an example.
+
+2
+00:00:01,975 --> 00:00:03,400
+Let's say we're in charge of writing
+
+3
+00:00:03,399 --> 00:00:07,570
+the recommendation engine for the App Store or for Google play.
+
+4
+00:00:07,570 --> 00:00:11,544
+Our task is to recommend to people the app they're most likely to download,
+
+5
+00:00:11,544 --> 00:00:13,870
+and we should do this based on previous data.
+
+6
+00:00:13,869 --> 00:00:17,195
+Our previous data is this table with six people each in a row,
+
+7
+00:00:17,195 --> 00:00:20,060
+and the columns are their gender, male or female,
+
+8
+00:00:20,059 --> 00:00:22,554
+their occupation, work or study,
+
+9
+00:00:22,554 --> 00:00:24,070
+and the app they downloaded.
+
+10
+00:00:24,070 --> 00:00:28,094
+The options for the app are Pokemon Go, WhatsApp, and Snapchat.
+
+11
+00:00:28,094 --> 00:00:32,325
+So, the model we'll create will take the first two columns and guess the third one.
+
+12
+00:00:32,325 --> 00:00:37,105
+So let's start with some small quizzes to test our intuition with this data.
+
+13
+00:00:37,104 --> 00:00:40,704
+The first quiz is the following: if we have a woman who works at an office,
+
+14
+00:00:40,704 --> 00:00:42,725
+what app should we recommend to her,
+
+15
+00:00:42,725 --> 00:00:46,530
+Pokemon Go, WhatsApp, or Snapchat?
+
+16
+00:00:46,530 --> 00:00:49,914
+The second quiz is the following: if we have a man who works at a factory,
+
+17
+00:00:49,914 --> 00:00:52,064
+what app should we recommend to him?
+
+18
+00:00:52,064 --> 00:00:53,649
+And the third one says, if we have a girl
+
+19
+00:00:53,649 --> 00:00:55,795
+who's in high school, what app do we recommend to her?
+
+20
+00:00:55,795 --> 00:00:57,270
+Enter your answers below.
+

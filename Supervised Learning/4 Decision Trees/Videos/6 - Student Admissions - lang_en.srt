@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:01,679
+Well, let's try both.
+
+2
+00:00:01,679 --> 00:00:05,280
+The best horizontal line would be somewhere around here.
+
+3
+00:00:05,280 --> 00:00:08,699
+It does an okay job, but it doesn't really separate the points that well,
+
+4
+00:00:08,699 --> 00:00:11,579
+at least a lot of blue points in the red area and vice versa.
+
+5
+00:00:11,580 --> 00:00:13,650
+So, what happens if we try a vertical line?
+
+6
+00:00:13,650 --> 00:00:16,500
+Well, it seems that the best cut is here around five.
+
+7
+00:00:16,500 --> 00:00:18,629
+That does a pretty good job and only leaves
+
+8
+00:00:18,629 --> 00:00:22,304
+five red points on the blue side and five blue points on the red side.
+
+9
+00:00:22,304 --> 00:00:23,925
+So, let's go for that one,
+
+10
+00:00:23,925 --> 00:00:26,219
+and our answer is vertical line.
+
+11
+00:00:26,219 --> 00:00:30,269
+This means that the best feature to separate this data is test,
+
+12
+00:00:30,269 --> 00:00:32,564
+and the best threshold is five.
+
+13
+00:00:32,564 --> 00:00:37,655
+Therefore, we can add our first node to the decision tree and this node asks,
+
+14
+00:00:37,655 --> 00:00:41,960
+"Is your test greater than or equal to five or is it less than five?"
+
+15
+00:00:41,960 --> 00:00:43,880
+And now, we can do even more.
+
+16
+00:00:43,880 --> 00:00:47,570
+We can try dividing each of the two halves with a horizontal line,
+
+17
+00:00:47,570 --> 00:00:49,130
+which is the equivalent of saying, "Okay.
+
+18
+00:00:49,130 --> 00:00:51,455
+I've seen your tests.
+
+19
+00:00:51,454 --> 00:00:53,899
+Now, let's see how you did in the grades."
+
+20
+00:00:53,899 --> 00:00:58,280
+The left half can be cut with a vertical line over here at height seven.
+
+21
+00:00:58,280 --> 00:01:02,134
+This means, if your test score is less than five,
+
+22
+00:01:02,134 --> 00:01:05,365
+then you need seven or more in the grades to get accepted,
+
+23
+00:01:05,365 --> 00:01:07,689
+otherwise, you get rejected.
+
+24
+00:01:07,689 --> 00:01:11,819
+The right half can be separated with a vertical line at height two.
+
+25
+00:01:11,819 --> 00:01:15,959
+This means, if your test score is greater than or equal to five,
+
+26
+00:01:15,959 --> 00:01:19,328
+then you need to have two or more in your grades in order to get accepted,
+
+27
+00:01:19,328 --> 00:01:21,404
+otherwise, you get rejected.
+
+28
+00:01:21,405 --> 00:01:24,195
+So, we've built our Decision Tree in a similar way as before,
+
+29
+00:01:24,194 --> 00:01:25,964
+except now at each node,
+
+30
+00:01:25,965 --> 00:01:27,855
+we don't have a yes/no question,
+
+31
+00:01:27,855 --> 00:01:31,329
+but we have a threshold which would cut the values in two.
+

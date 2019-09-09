@@ -1,0 +1,92 @@
+1
+00:00:00,000 --> 00:00:01,470
+Now, in the last example,
+
+2
+00:00:01,470 --> 00:00:03,960
+we constructed a tree with categorical features,
+
+3
+00:00:03,960 --> 00:00:06,120
+namely gender and occupation,
+
+4
+00:00:06,120 --> 00:00:09,000
+but we can also create a tree with continuous features.
+
+5
+00:00:09,000 --> 00:00:10,349
+Let's go to this example,
+
+6
+00:00:10,349 --> 00:00:12,570
+which you may see in other parts of this class.
+
+7
+00:00:12,570 --> 00:00:16,949
+The example is an Admissions Office which takes two pieces of data from the students,
+
+8
+00:00:16,949 --> 00:00:19,724
+their score in a test and their grades,
+
+9
+00:00:19,725 --> 00:00:21,420
+and the better they do on them,
+
+10
+00:00:21,420 --> 00:00:24,030
+the more likely that they'll be accepted at a university.
+
+11
+00:00:24,030 --> 00:00:27,870
+So in here, the blue points are accepted and the red points are rejected,
+
+12
+00:00:27,870 --> 00:00:30,464
+and our model will have the task of determining
+
+13
+00:00:30,464 --> 00:00:33,704
+a rule for future students to be accepted or rejected.
+
+14
+00:00:33,704 --> 00:00:35,820
+So, let's ask the same question as before.
+
+15
+00:00:35,820 --> 00:00:37,484
+Between grades and tests,
+
+16
+00:00:37,484 --> 00:00:40,350
+which one determines student acceptance better?
+
+17
+00:00:40,350 --> 00:00:41,820
+And in order to help you out,
+
+18
+00:00:41,820 --> 00:00:44,685
+let me translate this sentence into graphical terms.
+
+19
+00:00:44,685 --> 00:00:48,900
+Since test is the horizontal axis and grades is the vertical axis,
+
+20
+00:00:48,899 --> 00:00:50,280
+then the question becomes,
+
+21
+00:00:50,280 --> 00:00:53,445
+between a horizontal and a vertical line,
+
+22
+00:00:53,445 --> 00:00:56,414
+which one would cut the data in a better way,
+
+23
+00:00:56,414 --> 00:01:02,799
+namely separating the red and the blue points as much as possible? Give this one a try.
+

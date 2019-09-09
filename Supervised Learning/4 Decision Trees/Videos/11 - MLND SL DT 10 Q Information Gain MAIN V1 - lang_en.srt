@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:02,399
+Okay, so now, we'll use what we know about
+
+2
+00:00:02,399 --> 00:00:04,995
+entropy and information gain to build Decision Trees.
+
+3
+00:00:04,995 --> 00:00:06,690
+Let's say, we have our data in the form of
+
+4
+00:00:06,690 --> 00:00:09,929
+these red and blue points and we want to split it into two.
+
+5
+00:00:09,929 --> 00:00:12,244
+So, I'll show you three ways of splitting it,
+
+6
+00:00:12,244 --> 00:00:14,564
+and here are the three ways.
+
+7
+00:00:14,564 --> 00:00:17,640
+Now, let's have a small quiz: In which of
+
+8
+00:00:17,640 --> 00:00:20,730
+these do you think we have gained more information about
+
+9
+00:00:20,730 --> 00:00:27,530
+our data and in which one did we gain less information? Enter your answers below.
+

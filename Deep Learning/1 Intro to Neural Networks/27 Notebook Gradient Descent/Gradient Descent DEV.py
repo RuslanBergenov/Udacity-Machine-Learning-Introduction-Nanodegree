@@ -41,29 +41,21 @@ plt.show()
 # =============================================================================
 # ## TODO: Implementing the basic functions
 # =============================================================================
-
 import math
-# Implement the following functions
+
 
 # Activation (sigmoid) function
 def sigmoid(x):
     return 1 / (1 + math.e ** -x)
+#    return 1 / (1 + np.exp(-x))
 
 # Output (prediction) formula
 def output_formula(features, weights, bias):
-    global output
-    mySumproduct = 0
+    '''
+    https://docs.scipy.org/doc/numpy/reference/generated/numpy.dot.html
+    '''
+    return sigmoid(np.dot(features, weights) + bias)
     
-    
-    X[:,0] * weights[0]
-    
-    range(X.shape[1]-1)
-    
-    for i in range(len(features)):
-        mySumproduct = mySumproduct + features[i] * weights[i]
-    
-    output = sigmoid(mySumproduct + bias)
-    return output 
 
 # Error (log-loss) formula
 def error_formula(y, output):
@@ -71,15 +63,26 @@ def error_formula(y, output):
 
 # Gradient descent step
 def update_weights(x, y, weights, bias, learnrate):
+    output = output_formula(x, weights, bias)
     for i in range(len(weights)):
         weights[i] = weights[i] + learnrate*(y-output)*x[i]
     bias = bias + learnrate*(y-output)    
     return weights, bias
-
-
 # =============================================================================
 # ## Training function
 # =============================================================================
+    
+
+# # TODO: testing - delete later
+#features = X
+#targets = y
+#n_records, n_features = features.shape
+#weights = np.random.normal(scale=1 / n_features**.5, size=n_features)
+#bias = 0
+#myOutput = output_formula(features, weights, bias)
+# TODO: testing - delete later ENDS
+
+
 np.random.seed(44)
 
 epochs = 100
@@ -131,7 +134,6 @@ def train(features, targets, epochs, learnrate, graph_lines=False):
     plt.ylabel('Error')
     plt.plot(errors)
     plt.show()
-    
     
 # =============================================================================
 # ## Time to train the algorithm!    

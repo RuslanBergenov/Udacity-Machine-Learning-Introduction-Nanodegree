@@ -1,0 +1,298 @@
+1
+00:00:00,200 --> 00:00:02,867
+Bem-vindo à sessão
+da árvore de decisão.
+
+2
+00:00:02,900 --> 00:00:05,067
+Vou apresentar o conceito
+de árvore de decisão
+
+3
+00:00:05,100 --> 00:00:08,233
+com um jogo da internet
+chamado Akinator.
+
+4
+00:00:08,433 --> 00:00:12,067
+O gênio vai fazer perguntas
+sobre um personagem
+
+5
+00:00:12,100 --> 00:00:14,667
+e adivinhar quem é.
+
+6
+00:00:15,333 --> 00:00:18,233
+As perguntas ficam
+cada vez mais informadas,
+
+7
+00:00:18,267 --> 00:00:20,800
+enquanto o gênio vai descobrindo
+quem é.
+
+8
+00:00:20,833 --> 00:00:23,933
+É exatamente
+o que a árvore de decisão faz.
+
+9
+00:00:23,967 --> 00:00:26,067
+Ela faz perguntas
+sobre os dados
+
+10
+00:00:26,100 --> 00:00:28,567
+até filtrar a informação
+o suficiente
+
+11
+00:00:28,600 --> 00:00:29,900
+para fazer uma previsão.
+
+12
+00:00:29,933 --> 00:00:31,100
+Vamos jogar.
+
+13
+00:00:31,133 --> 00:00:33,333
+Vou escolher
+uma personagem da História,
+
+14
+00:00:33,367 --> 00:00:35,500
+a grande matemática Hipátia.
+
+15
+00:00:35,533 --> 00:00:38,133
+Temos a página da Wikipédia
+para nos ajudar.
+
+16
+00:00:38,167 --> 00:00:40,067
+Vamos responder
+às perguntas.
+
+17
+00:00:40,100 --> 00:00:43,267
+Primeira: "Seu personagem
+é um homem adulto?"
+
+18
+00:00:43,300 --> 00:00:44,239
+Não.
+
+19
+00:00:44,272 --> 00:00:45,976
+"Seu personagem
+tem mais de 18 anos?"
+
+20
+00:00:46,009 --> 00:00:47,791
+Muito mais.
+
+21
+00:00:47,824 --> 00:00:49,728
+"Seu personagem
+já engravidou?"
+
+22
+00:00:49,761 --> 00:00:52,100
+Aqui diz que não se sabe
+se teve filhos,
+
+23
+00:00:52,133 --> 00:00:53,533
+então vou dizer que não.
+
+24
+00:00:53,567 --> 00:00:54,905
+"Seu personagem é youtuber?"
+
+25
+00:00:54,938 --> 00:00:56,336
+Ela teria sido
+uma ótima youtuber,
+
+26
+00:00:56,369 --> 00:01:00,267
+mas ela nasceu muito antes
+do YouTube, então não.
+
+27
+00:01:00,300 --> 00:01:03,567
+"Seu personagem gravou álbuns?"
+Mais uma vez, não.
+
+28
+00:01:03,600 --> 00:01:06,267
+"Seu personagem tem celular?"
+Não.
+
+29
+00:01:06,300 --> 00:01:08,133
+Ela existiu muito antes
+dos celulares.
+
+30
+00:01:08,167 --> 00:01:10,600
+"Seu personagem existiu?"
+Claro.
+
+31
+00:01:10,633 --> 00:01:12,900
+"Seu personagem é cidadão
+americano?"
+
+32
+00:01:12,933 --> 00:01:14,800
+Não, ela era egípcia.
+
+33
+00:01:15,033 --> 00:01:17,000
+"Seu personagem se casou?"
+
+34
+00:01:17,033 --> 00:01:20,433
+A Wikipédia não dá certeza,
+então vou dizer que não sei.
+
+35
+00:01:20,467 --> 00:01:23,600
+"Seu personagem está morto
+há mais de 100 anos?"
+
+36
+00:01:23,633 --> 00:01:25,900
+Muito mais do que 100 anos.
+
+37
+00:01:25,933 --> 00:01:28,433
+"Seu personagem está na Bíblia?"
+Não.
+
+38
+00:01:28,467 --> 00:01:30,433
+"Seu personagem é órfão?"
+
+39
+00:01:30,467 --> 00:01:34,300
+O pai dela era conhecido,
+então não.
+
+40
+00:01:34,333 --> 00:01:36,267
+"Seu personagem é europeu?"
+
+41
+00:01:36,300 --> 00:01:40,800
+Ela era do Império Romano,
+mas ela nasceu no Egito,
+
+42
+00:01:40,833 --> 00:01:42,700
+então vou dizer que não.
+
+43
+00:01:43,000 --> 00:01:45,633
+"Seu personagem
+é do leste europeu?" Não.
+
+44
+00:01:45,667 --> 00:01:49,367
+Estamos chegando lá.
+"Seu personagem é egípcio?" É.
+
+45
+00:01:49,400 --> 00:01:52,233
+"Seu personagem
+é obcecado por waffles?" Não.
+
+46
+00:01:52,267 --> 00:01:54,867
+"Seu personagem é uma mulher?"
+É.
+
+47
+00:01:54,900 --> 00:01:57,000
+"Seu personagem conheceu
+Cleópatra?"
+
+48
+00:01:57,033 --> 00:02:00,267
+Elas não viveram na mesma época,
+então não.
+
+49
+00:02:00,300 --> 00:02:03,300
+"Seu personagem era um faraó?"
+Não era.
+
+50
+00:02:03,333 --> 00:02:07,400
+"Seu personagem mora em Utah?"
+Não.
+
+51
+00:02:07,433 --> 00:02:09,000
+"Seu personagem é
+uma rainha?"
+
+52
+00:02:09,033 --> 00:02:11,633
+Ela foi uma grande matemática,
+mas não rainha.
+
+53
+00:02:11,667 --> 00:02:13,433
+"Seu personagem
+foi assassinado?"
+
+54
+00:02:13,467 --> 00:02:16,000
+Ela foi brutalmente
+assassinada.
+
+55
+00:02:16,267 --> 00:02:18,467
+"Seu personagem é uma princesa?"
+Não.
+
+56
+00:02:18,500 --> 00:02:21,300
+"Seu personagem faz feitiços?"
+Não.
+
+57
+00:02:21,333 --> 00:02:24,033
+"Seu personagem é mau?"
+Não, ela era ótima.
+
+58
+00:02:24,067 --> 00:02:25,733
+O gênio conseguiu!
+
+59
+00:02:25,767 --> 00:02:27,967
+Ele encontrou
+a Hipátia de Alexandria.
+
+60
+00:02:28,000 --> 00:02:29,167
+Parabéns, gênio.
+
+61
+00:02:29,200 --> 00:02:31,967
+A árvore de decisão
+é parecida com esse exemplo,
+
+62
+00:02:32,000 --> 00:02:33,565
+então vamos mergulhar nela
+
+63
+00:02:33,598 --> 00:02:35,833
+e descobrir
+como funciona e como é criada.
+

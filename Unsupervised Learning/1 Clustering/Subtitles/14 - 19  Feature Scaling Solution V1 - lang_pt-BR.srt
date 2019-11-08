@@ -1,0 +1,321 @@
+1
+00:00:00,269 --> 00:00:03,833
+Com qualquer modelo de aprendizado
+de máquina baseado em distância,
+
+2
+00:00:03,866 --> 00:00:05,895
+você vai querer
+medir os dados.
+
+3
+00:00:05,928 --> 00:00:09,384
+Se os seus recursos estiverem
+em escalas diferentes,
+
+4
+00:00:09,417 --> 00:00:13,393
+o algoritmo k-means pode resultar
+em clusters totalmente diferentes.
+
+5
+00:00:13,426 --> 00:00:15,984
+Neste notebook, vamos ver
+as formas mais comuns
+
+6
+00:00:16,017 --> 00:00:18,257
+que usamos
+para medir os dados.
+
+7
+00:00:18,673 --> 00:00:21,023
+Primeiro, vamos ler
+as bibliotecas necessárias
+
+8
+00:00:21,056 --> 00:00:24,536
+e criar o nosso conjunto de dados,
+que será armazenado em "DF".
+
+9
+00:00:24,569 --> 00:00:27,992
+A 1ª coisa que devemos fazer
+é observar os dados.
+
+10
+00:00:28,807 --> 00:00:30,034
+Vamos ver o cabeçalho.
+
+11
+00:00:30,067 --> 00:00:33,720
+Parece haver só duas colunas:
+uma para altura e outra para peso.
+
+12
+00:00:34,176 --> 00:00:38,881
+Também podemos
+dar uma olhada em "describe"
+
+13
+00:00:38,914 --> 00:00:41,969
+ou você pode diagramá-los
+uns contra os outros, se quiser.
+
+14
+00:00:42,002 --> 00:00:44,328
+São duas das coisas
+mais comuns que eu faço.
+
+15
+00:00:44,361 --> 00:00:47,216
+Eu também vejo o formato.
+Às vezes, é útil.
+
+16
+00:00:47,737 --> 00:00:50,455
+Parece que temos 200 linhas,
+2 colunas,
+
+17
+00:00:50,488 --> 00:00:52,295
+nenhum valor faltando.
+
+18
+00:00:52,328 --> 00:00:55,519
+Há 2 tipos de métodos de medição
+que são muito populares.
+
+19
+00:00:55,552 --> 00:00:59,305
+Um é o MinMaxScaler
+e o outro é o StandardScaler.
+
+20
+00:00:59,338 --> 00:01:02,296
+O MinMaxScaler
+mede tudo entre 0 e 1,
+
+21
+00:01:02,329 --> 00:01:04,533
+e o StandardScaler mede
+de forma que tudo tenha
+
+22
+00:01:04,567 --> 00:01:07,016
+uma média de 0
+e uma variância de 1.
+
+23
+00:01:07,049 --> 00:01:09,440
+Vamos vê-los em prática.
+
+24
+00:01:10,151 --> 00:01:16,133
+Aqui, note que estamos instanciando
+um "fit" e um "transform"
+
+25
+00:01:16,167 --> 00:01:17,527
+nos nossos dados
+de uma só vez.
+
+26
+00:01:17,560 --> 00:01:20,055
+Estamos armazenando isso
+nesse "df_ss"
+
+27
+00:01:20,088 --> 00:01:24,833
+que significa um DataFrame
+com um StandardScaler.
+
+28
+00:01:25,104 --> 00:01:28,536
+Depois, aqui, estamos tornando
+isso um DataFrame novamente,
+
+29
+00:01:28,569 --> 00:01:31,701
+adicionando as colunas
+e fazendo um gráfico de dispersão
+
+30
+00:01:31,734 --> 00:01:34,071
+do conjunto de dados,
+que fica com essa aparência.
+
+31
+00:01:34,104 --> 00:01:38,128
+Se quisermos, podemos fazer isso
+com o conjunto de dados original.
+
+32
+00:01:39,023 --> 00:01:40,921
+Note que ele fica assim.
+
+33
+00:01:40,954 --> 00:01:42,696
+Parece igual a esse aqui.
+
+34
+00:01:42,729 --> 00:01:45,967
+Agora, vamos fazer a mesma coisa
+usando o MinMaxScaler.
+
+35
+00:01:46,000 --> 00:01:47,798
+Para praticarmos,
+
+36
+00:01:47,831 --> 00:01:52,285
+vamos fazer o mesmo processo,
+
+37
+00:01:52,318 --> 00:01:54,567
+mas com o MinMaxScaler.
+
+38
+00:01:56,392 --> 00:02:02,022
+Em vez do StandardScaler,
+vamos usar o MinMaxScaler
+
+39
+00:02:02,055 --> 00:02:03,873
+e vamos fazer
+um "fit_transform".
+
+40
+00:02:04,415 --> 00:02:06,240
+Vou chamá-lo de "mm".
+
+41
+00:02:06,913 --> 00:02:08,368
+Depois...
+
+42
+00:02:08,401 --> 00:02:10,112
+Como fizemos aqui em cima,
+
+43
+00:02:10,145 --> 00:02:12,272
+vamos transformar isso
+em um DataFrame.
+
+44
+00:02:12,305 --> 00:02:15,328
+Mude os nomes das colunas
+e diagrame os dados.
+
+45
+00:02:17,159 --> 00:02:20,095
+Essas são as colunas.
+E depois...
+
+46
+00:02:20,128 --> 00:02:22,232
+diagrame-as umas
+sobre as outras.
+
+47
+00:02:22,265 --> 00:02:24,176
+Ah, eu não executei
+essa célula.
+
+48
+00:02:24,209 --> 00:02:27,414
+Aqui, note que, quando usamos
+o StandardScaler,
+
+49
+00:02:27,447 --> 00:02:32,407
+ambos são centrados em 0
+entre um intervalo de 3 e -3
+
+50
+00:02:32,440 --> 00:02:37,361
+e de 2 e -2 neste eixo,
+mas passam um pouco além disso.
+
+51
+00:02:37,394 --> 00:02:41,111
+Quando analisamos esse conjunto,
+vemos que ele está entre 0 e 1
+
+52
+00:02:41,144 --> 00:02:43,775
+para cada variável,
+então o MinMaxScaler mede
+
+53
+00:02:43,808 --> 00:02:45,992
+as coisas entre 0 e 1,
+enquanto o StandardScaler
+
+54
+00:02:46,025 --> 00:02:49,503
+tem média de 0
+e desvio padrão de 1,
+
+55
+00:02:49,536 --> 00:02:50,839
+ou variância de 1.
+
+56
+00:02:50,872 --> 00:02:56,824
+Veja que é assim que ele ficaria
+se criássemos 10 clusters diferentes
+
+57
+00:02:56,857 --> 00:02:59,358
+nesse conjunto de dados
+com peso alto.
+
+58
+00:03:00,639 --> 00:03:02,999
+Nessa última parte,
+querem que façamos isso
+
+59
+00:03:03,032 --> 00:03:05,702
+com os conjuntos
+de dados medidos.
+
+60
+00:03:05,735 --> 00:03:10,343
+Este estava usando o comum,
+mas podemos fazer a mesma coisa
+
+61
+00:03:10,376 --> 00:03:12,975
+usando o conjunto
+de dados medido.
+
+62
+00:03:13,008 --> 00:03:14,942
+Um deles chama-se "ss"
+
+63
+00:03:14,975 --> 00:03:19,080
+e o último é o "mm".
+
+64
+00:03:20,015 --> 00:03:23,519
+Nesse caso específico,
+parece que o tamanho não importa.
+
+65
+00:03:23,552 --> 00:03:28,183
+Ao responder, podemos dizer
+como o tamanho não importa muito,
+
+66
+00:03:28,216 --> 00:03:31,575
+mas, em outros casos,
+pode ser que o tamanho
+
+67
+00:03:31,608 --> 00:03:34,000
+mude completamente
+esses clusters.
+

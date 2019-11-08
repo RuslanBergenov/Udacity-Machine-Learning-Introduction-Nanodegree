@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:01,897
+So let's recall a gradient descent does.
+
+2
+00:00:01,897 --> 00:00:05,097
+What it does is it looks at the direction where you descend the
+
+3
+00:00:05,097 --> 00:00:09,213
+most and then it takes a step in that direction.
+
+4
+00:00:09,214 --> 00:00:11,698
+But in Mt. Everest, everything was nice and pretty
+
+5
+00:00:11,698 --> 00:00:14,379
+since that was going to help us go down the mountain.
+
+6
+00:00:14,380 --> 00:00:18,960
+But now, what if we try to do it here in this complicated mountain range.
+
+7
+00:00:18,960 --> 00:00:24,030
+The Himalayans lowest point that we want to go is around here,
+
+8
+00:00:24,030 --> 00:00:26,160
+but if we do gradient descent,
+
+9
+00:00:26,160 --> 00:00:27,960
+we get all the way here.
+
+10
+00:00:27,960 --> 00:00:29,730
+And once we're here,
+
+11
+00:00:29,730 --> 00:00:32,158
+we look around ourselves and there's no direction where
+
+12
+00:00:32,158 --> 00:00:35,240
+we can descend more since we're at a local minimum.
+
+13
+00:00:35,240 --> 00:00:37,539
+We're stuck. In here,
+
+14
+00:00:37,539 --> 00:00:40,243
+gradient descent itself doesn't help us.
+
+15
+00:00:40,243 --> 00:00:42,000
+We need something else.
+

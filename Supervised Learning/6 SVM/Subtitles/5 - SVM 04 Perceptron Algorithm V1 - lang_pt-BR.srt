@@ -1,0 +1,267 @@
+1
+00:00:00,333 --> 00:00:04,233
+Para criar a função do erro,
+vamos lembrar algo que já vimos:
+
+2
+00:00:04,267 --> 00:00:06,000
+o algoritmo perceptron.
+
+3
+00:00:06,033 --> 00:00:08,533
+O algoritmo perceptron
+funciona da seguinte forma:
+
+4
+00:00:08,567 --> 00:00:10,933
+existem pontos de dados
+azuis e vermelhos
+
+5
+00:00:10,967 --> 00:00:14,067
+e nós queremos uma linha
+perfeita que os divida.
+
+6
+00:00:14,100 --> 00:00:17,367
+A linha perfeita tem a equação
+Wx+b=0,
+
+7
+00:00:17,400 --> 00:00:20,667
+onde W e x são vetores
+e o b é um escalar.
+
+8
+00:00:20,700 --> 00:00:25,333
+Então fica assim:
+w1x1+w2x2+b=0.
+
+9
+00:00:25,367 --> 00:00:30,833
+Vamos dizer que a equação
+seja 3x1+4x2+5=0.
+
+10
+00:00:30,867 --> 00:00:33,500
+Queremos punir a linha
+com a função de erro,
+
+11
+00:00:33,533 --> 00:00:37,667
+que mede aproximadamente quantos
+pontos estão mal classificados.
+
+12
+00:00:37,700 --> 00:00:41,100
+Na verdade mede algo perto
+da soma das distâncias
+
+13
+00:00:41,133 --> 00:00:44,467
+dos pontos mal classificados
+em relação ao limite.
+
+14
+00:00:44,500 --> 00:00:46,800
+Podemos separar
+em dois conjuntos,
+
+15
+00:00:46,833 --> 00:00:48,800
+o de pontos vermelhos
+e o de pontos azuis.
+
+16
+00:00:48,833 --> 00:00:51,767
+A função de erro vai punir
+os dois pontos vermelhos
+
+17
+00:00:51,800 --> 00:00:53,367
+acima da linha
+
+18
+00:00:53,400 --> 00:00:56,400
+e os dois pontos azuis
+abaixo da linha.
+
+19
+00:00:56,433 --> 00:01:00,433
+Mas vai puni-los de acordo
+com a distância da linha principal.
+
+20
+00:01:00,467 --> 00:01:02,867
+Metade da função de erro
+vai ficar assim.
+
+21
+00:01:02,900 --> 00:01:05,600
+É a área azul
+acima da linha.
+
+22
+00:01:05,633 --> 00:01:09,867
+Quanto mais entrar na área azul,
+mais o ponto vai ser punido.
+
+23
+00:01:09,900 --> 00:01:13,200
+Significa que o ponto que está
+perto da linha só é punido um pouco
+
+24
+00:01:13,233 --> 00:01:15,900
+e o que está mais longe
+é mais punido.
+
+25
+00:01:15,933 --> 00:01:18,400
+A outra parte do erro
+faz o oposto,
+
+26
+00:01:18,433 --> 00:01:21,533
+punindo os pontos azuis
+na área vermelha.
+
+27
+00:01:21,567 --> 00:01:23,933
+Os pontos perto da linha
+são menos punidos
+
+28
+00:01:23,967 --> 00:01:27,400
+e os pontos longe da linha
+são mais punidos.
+
+29
+00:01:27,433 --> 00:01:29,267
+Vamos usar a matemática.
+
+30
+00:01:29,300 --> 00:01:32,600
+Vamos perguntar
+quanto é o erro de cada ponto.
+
+31
+00:01:32,633 --> 00:01:37,200
+Já temos a equação Wx+b=0,
+
+32
+00:01:37,233 --> 00:01:39,467
+que é uma equação linear.
+
+33
+00:01:39,500 --> 00:01:41,800
+Wx+b aceita
+todos os valores,
+
+34
+00:01:41,833 --> 00:01:46,300
+então o valor é 1
+na linha paralela à linha principal,
+
+35
+00:01:46,333 --> 00:01:50,633
+depois tem o valor 2, 3, 4
+e assim sucessivamente.
+
+36
+00:01:50,667 --> 00:01:52,533
+O mesmo acontece
+do lado negativo,
+
+37
+00:01:52,567 --> 00:01:56,700
+com os valores
+-1, -2, -3, -4, etc.
+
+38
+00:01:56,733 --> 00:02:01,000
+Esse é basicamente o erro.
+É o valor de Wx+b.
+
+39
+00:02:01,033 --> 00:02:03,300
+Como temos números
+negativos,
+
+40
+00:02:03,333 --> 00:02:06,700
+vai ser o valor absoluto
+de Wx+b.
+
+41
+00:02:06,733 --> 00:02:10,667
+Agora vamos calcular os erros
+dos pontos mal classificados.
+
+42
+00:02:10,700 --> 00:02:13,567
+Este ponto, por exemplo,
+tem um erro de 2,5,
+
+43
+00:02:13,600 --> 00:02:16,267
+já que o ponto vermelho
+está na linha 2,5,
+
+44
+00:02:16,300 --> 00:02:18,800
+onde Wx+b=2,5.
+
+45
+00:02:18,833 --> 00:02:21,267
+Este tem um erro de 0,5.
+
+46
+00:02:21,300 --> 00:02:24,067
+Estes pontos aqui
+têm erros de 1 e 2,
+
+47
+00:02:24,100 --> 00:02:28,667
+já que o erro é o valor absoluto
+de Wx+b.
+
+48
+00:02:28,700 --> 00:02:32,300
+Para calcular o erro total
+só precisamos somar.
+
+49
+00:02:32,333 --> 00:02:35,333
+Este modelo nos dá um erro
+de 6.
+
+50
+00:02:35,367 --> 00:02:37,467
+Agora vamos juntar os dois
+
+51
+00:02:37,500 --> 00:02:40,267
+e concluímos que o modelo
+tem um erro de 6.
+
+52
+00:02:40,300 --> 00:02:44,000
+A ideia é minimizar esse erro
+usando o gradiente descendente,
+
+53
+00:02:44,033 --> 00:02:46,467
+para encontrar
+o W e o b ideais
+
+54
+00:02:46,500 --> 00:02:49,033
+que nos deem
+o melhor recorte possível.
+
+55
+00:02:49,067 --> 00:02:50,833
+Esse é
+o algoritmo perceptron.
+

@@ -1,0 +1,72 @@
+1
+00:00:00,000 --> 00:00:02,029
+Here is the outline for the section.
+
+2
+00:00:02,029 --> 00:00:04,535
+In machine learning we have a problem to solve.
+
+3
+00:00:04,535 --> 00:00:08,470
+Normally, the problem corresponds to evaluating some data and making predictions.
+
+4
+00:00:08,470 --> 00:00:11,695
+That problem is represented by this broken car over here.
+
+5
+00:00:11,695 --> 00:00:13,169
+Now, in order to solve it,
+
+6
+00:00:13,169 --> 00:00:14,449
+we have a few tools.
+
+7
+00:00:14,449 --> 00:00:16,289
+These tools are the algorithms.
+
+8
+00:00:16,289 --> 00:00:18,699
+So things like linear or logistic regression,
+
+9
+00:00:18,699 --> 00:00:22,405
+as VMs, neural networks decision trees et cetera.
+
+10
+00:00:22,405 --> 00:00:24,539
+How do we know which tool works best?
+
+11
+00:00:24,539 --> 00:00:27,269
+Well, for that we have a bunch of measurement tools
+
+12
+00:00:27,269 --> 00:00:30,120
+and we use them to evaluate all the algorithms.
+
+13
+00:00:30,120 --> 00:00:32,280
+So once we evaluate the algorithms and
+
+14
+00:00:32,280 --> 00:00:35,590
+their parameters and decide which ones are best for our problem,
+
+15
+00:00:35,590 --> 00:00:37,565
+then we go ahead and solve the problem.
+
+16
+00:00:37,564 --> 00:00:40,664
+In this section, we'll learn the measurement tools.
+
+17
+00:00:40,664 --> 00:00:44,469
+So we'll learn a bunch of metrics and techniques that will tell us when an algorithm
+
+18
+00:00:44,469 --> 00:00:49,369
+is working well with the data and how to tweak them to work best for us.
+

@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:02,669
+Correct. Well, it seems that this data can be
+
+2
+00:00:02,669 --> 00:00:05,564
+nicely separated by a line which is this line over here,
+
+3
+00:00:05,565 --> 00:00:08,580
+and it seems that most students over the line get
+
+4
+00:00:08,580 --> 00:00:12,210
+accepted and most students under the line get rejected.
+
+5
+00:00:12,210 --> 00:00:15,825
+So this line is going to be our model.
+
+6
+00:00:15,824 --> 00:00:18,300
+The model makes a couple of mistakes since there are
+
+7
+00:00:18,300 --> 00:00:22,019
+a few blue points that are under the line and a few red points over the line.
+
+8
+00:00:22,019 --> 00:00:24,169
+But we're not going to care about those.
+
+9
+00:00:24,170 --> 00:00:28,245
+I will say that it's safe to predict that if a point is over the line
+
+10
+00:00:28,245 --> 00:00:33,600
+the student gets accepted and if it's under the line then the student gets rejected.
+
+11
+00:00:33,600 --> 00:00:36,210
+So based on this model we'll look at the new student that we see
+
+12
+00:00:36,210 --> 00:00:39,495
+that they are over here at the point 7:6 which is above the line.
+
+13
+00:00:39,494 --> 00:00:43,224
+So we can assume with some confidence that the student gets accepted.
+
+14
+00:00:43,225 --> 00:00:47,070
+So if you answered yes, that's the correct answer.
+
+15
+00:00:47,070 --> 00:00:48,695
+And now a question arises.
+
+16
+00:00:48,695 --> 00:00:51,475
+The question is, how do we find this line?
+
+17
+00:00:51,475 --> 00:00:53,469
+So we can kind of eyeball it.
+
+18
+00:00:53,469 --> 00:00:55,199
+But the computer can't.
+
+19
+00:00:55,200 --> 00:00:59,745
+We'll dedicate the rest of the session to show you algorithms that will find this line,
+
+20
+00:00:59,744 --> 00:01:01,184
+not only for this example,
+
+21
+00:01:01,185 --> 00:01:04,000
+but for much more general and complicated cases.
+

@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:02,189
+In this project you will apply
+
+2
+00:00:02,189 --> 00:00:03,780
+supervised learning techniques and
+
+3
+00:00:03,779 --> 00:00:07,309
+an analytical mind on data collected for the US census,
+
+4
+00:00:07,309 --> 00:00:09,660
+to help a fictitious charity organization called
+
+5
+00:00:09,660 --> 00:00:14,085
+Charity ML identify people most likely to donate to their course.
+
+6
+00:00:14,085 --> 00:00:18,355
+You will first explore the census data and learn how it is recorded.
+
+7
+00:00:18,355 --> 00:00:21,399
+Next, you will apply a series of transformations and
+
+8
+00:00:21,399 --> 00:00:25,669
+preprocessing techniques to manipulate the data into a workable format.
+
+9
+00:00:25,670 --> 00:00:28,740
+You will then evaluate several supervised learners of
+
+10
+00:00:28,739 --> 00:00:33,109
+your choice on the data and consider which is best suited for the solution.
+
+11
+00:00:33,109 --> 00:00:35,740
+Afterwards, you will optimize them all you've
+
+12
+00:00:35,740 --> 00:00:39,395
+selected and present it as your solution to charity ML.
+
+13
+00:00:39,395 --> 00:00:43,990
+Finally, you will explore the chosen model and its predictions under the hood,
+
+14
+00:00:43,990 --> 00:00:47,815
+to see how well it is performing when considering the data its been giving.
+
+15
+00:00:47,814 --> 00:00:49,759
+I look forward to seeing your work.
+

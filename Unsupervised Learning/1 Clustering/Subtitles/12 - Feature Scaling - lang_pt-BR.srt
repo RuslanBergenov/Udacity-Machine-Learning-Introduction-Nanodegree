@@ -1,0 +1,94 @@
+1
+00:00:00,663 --> 00:00:03,703
+MEDIÇÃO DE RECURSOS
+
+2
+00:00:04,668 --> 00:00:07,166
+Você já viu que,
+na aprendizagem supervisionada,
+
+3
+00:00:07,199 --> 00:00:10,224
+é essencial que você
+meça a sua variável.
+
+4
+00:00:10,257 --> 00:00:14,040
+O k-means é o outro algoritmo
+que usa distâncias
+
+5
+00:00:14,073 --> 00:00:17,231
+para determinar a qual grupo
+um ponto pertence.
+
+6
+00:00:17,264 --> 00:00:21,232
+Então, a medição de recursos é muito
+necessária para esse algoritmo.
+
+7
+00:00:21,265 --> 00:00:24,438
+Há várias medições
+que você pode escolher fazer.
+
+8
+00:00:24,471 --> 00:00:27,295
+Da padronização,
+ou escore padronizado,
+
+9
+00:00:27,328 --> 00:00:30,296
+à normalização,
+ou medição MinMax.
+
+10
+00:00:30,329 --> 00:00:33,814
+Geralmente, usamos a padronização
+com algoritmo de agrupamento,
+
+11
+00:00:33,847 --> 00:00:37,063
+assim como com transformações,
+como PCA e ICA,
+
+12
+00:00:37,096 --> 00:00:39,279
+que você verá
+mais adiante neste curso.
+
+13
+00:00:39,312 --> 00:00:42,376
+Alternativamente,
+usamos a normalização
+
+14
+00:00:42,409 --> 00:00:45,040
+ao medir a coloração
+de uma imagem.
+
+15
+00:00:45,073 --> 00:00:47,222
+Se você não medir
+os seus recursos,
+
+16
+00:00:47,255 --> 00:00:49,560
+os recursos com variância
+muito maior
+
+17
+00:00:49,593 --> 00:00:51,959
+vão dominar a importância
+durante o agrupamento,
+
+18
+00:00:52,447 --> 00:00:55,263
+mesmo que seja apenas
+pela escolha de unidades.
+
+19
+00:00:55,296 --> 00:00:57,199
+Não queremos
+que isso aconteça.
+

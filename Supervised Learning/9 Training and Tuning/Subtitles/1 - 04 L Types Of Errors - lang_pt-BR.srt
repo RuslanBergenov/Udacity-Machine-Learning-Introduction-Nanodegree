@@ -1,0 +1,408 @@
+1
+00:00:00,000 --> 00:00:02,267
+Falemos sobre a vida.
+
+2
+00:00:02,333 --> 00:00:04,467
+Há dois erros
+que às vezes cometemos.
+
+3
+00:00:04,533 --> 00:00:08,667
+Um é tentar matar o Godzila
+com um mata-moscas.
+
+4
+00:00:08,733 --> 00:00:10,533
+Um erro bem ruim.
+
+5
+00:00:10,600 --> 00:00:13,800
+Tentar simplificar demais
+o problema.
+
+6
+00:00:13,867 --> 00:00:16,800
+O outro, tentar matar
+uma mosca com uma bazuca.
+
+7
+00:00:16,867 --> 00:00:20,733
+Também é bem ruim.
+É complicar demais o problema.
+
+8
+00:00:20,800 --> 00:00:25,467
+Em aprendizagem de máquina,
+é fácil cometer esses erros.
+
+9
+00:00:25,533 --> 00:00:29,133
+Quando simplificamos demais,
+chamamos de sub ajuste.
+
+10
+00:00:29,200 --> 00:00:33,800
+Quando complicamos demais,
+chamamos de sobre ajuste.
+
+11
+00:00:33,867 --> 00:00:36,867
+Vamos ver isso
+com mais detalhes.
+
+12
+00:00:36,933 --> 00:00:38,600
+Vejam este problema
+de classificação.
+
+13
+00:00:38,667 --> 00:00:42,533
+Devemos achar uma propriedade
+que separe o conjuto da esquerda
+
+14
+00:00:42,600 --> 00:00:44,733
+do conjunto da direita.
+
+15
+00:00:44,800 --> 00:00:46,200
+A solução parece simples.
+
+16
+00:00:46,267 --> 00:00:49,600
+O da direita é composto por cães,
+e o da esquerda,
+
+17
+00:00:49,667 --> 00:00:51,667
+por coisas
+que não são cães.
+
+18
+00:00:51,733 --> 00:00:53,733
+E se simplificarmos
+demais isto?
+
+19
+00:00:53,800 --> 00:00:56,467
+Se dissermos que o da direita
+é composto por animais,
+
+20
+00:00:56,533 --> 00:00:59,867
+e o da esquerda, por tudo,
+menos animais?
+
+21
+00:00:59,933 --> 00:01:01,800
+Nosso modelo
+é simples demais,
+
+22
+00:01:01,867 --> 00:01:04,000
+e vemos o erro
+no conjunto de treinamento,
+
+23
+00:01:04,067 --> 00:01:07,733
+pois classificou errado
+o gato à esquerda.
+
+24
+00:01:07,800 --> 00:01:11,267
+Esta simplificação
+é chamada de sub ajuste.
+
+25
+00:01:11,333 --> 00:01:15,733
+Ela não funciona bem
+no conjunto de treinamento.
+
+26
+00:01:15,800 --> 00:01:18,800
+Chamamos este erro
+de erro devido a viés.
+
+27
+00:01:18,867 --> 00:01:21,400
+O outro erro
+é complicar demais o modelo.
+
+28
+00:01:21,467 --> 00:01:24,933
+Se em vez de descrevermos
+o da direita como "cães",
+
+29
+00:01:25,000 --> 00:01:28,067
+o descrevermos
+como "cães abanando o rabo",
+
+30
+00:01:28,133 --> 00:01:30,867
+parece funcionar bem,
+
+31
+00:01:30,933 --> 00:01:33,400
+mas nossa intuição nos diz
+que isso não está certo.
+
+32
+00:01:33,467 --> 00:01:36,400
+Isso se confirma
+quando trazemos outro exemplo.
+
+33
+00:01:36,467 --> 00:01:38,600
+Por exemplo,
+este outro cão.
+
+34
+00:01:38,667 --> 00:01:42,867
+Nossa lógica diz que ele pertence
+ao conjunto da direita.
+
+35
+00:01:42,933 --> 00:01:44,600
+Mas como não está
+abanando o rabo,
+
+36
+00:01:44,667 --> 00:01:48,733
+este modelo erroneamente
+o classifica à esquerda.
+
+37
+00:01:48,800 --> 00:01:50,400
+Chamamos este erro
+de sobre ajuste.
+
+38
+00:01:50,467 --> 00:01:53,733
+Significa que o modelo
+é muito específico.
+
+39
+00:01:53,800 --> 00:01:56,800
+Ele funciona bem
+no conjunto de treinamento,
+
+40
+00:01:56,867 --> 00:02:00,867
+mas tende a decorá-lo em vez
+de aprender suas características.
+
+41
+00:02:00,933 --> 00:02:02,867
+Não funcionará bem
+no conjunto de teste.
+
+42
+00:02:02,933 --> 00:02:06,800
+Chamamos este erro
+de erro devido a variância.
+
+43
+00:02:06,867 --> 00:02:10,133
+Fiquemos mais técnicos. No exemplo
+de regressão, vemos sub ajuste assim.
+
+44
+00:02:10,200 --> 00:02:12,067
+Vejamos os pontos
+à esquerda.
+
+45
+00:02:12,133 --> 00:02:16,600
+Parece que o modelo certo para eles
+é uma equação quadrática como esta.
+
+46
+00:02:16,667 --> 00:02:20,267
+Podemos tentar com uma reta,
+mas não dará muito certo,
+
+47
+00:02:20,333 --> 00:02:21,467
+é simples demais.
+
+48
+00:02:21,533 --> 00:02:24,267
+O modelo não dará certo
+no conjunto de treinamento.
+
+49
+00:02:24,333 --> 00:02:26,333
+É um exemplo de sub ajuste.
+
+50
+00:02:26,400 --> 00:02:30,000
+E se, ao invés, tentarmos
+um polinômio de grau alto,
+
+51
+00:02:30,067 --> 00:02:31,067
+como este?
+
+52
+00:02:31,133 --> 00:02:34,333
+É ótimo para o conjunto
+de treinamento, se ajusta perfeitamente,
+
+53
+00:02:34,400 --> 00:02:37,800
+mas parece não ser
+a melhor resposta.
+
+54
+00:02:37,867 --> 00:02:41,200
+Ele decora o conjunto de treinamento
+e não acha boas propriedades
+
+55
+00:02:41,267 --> 00:02:44,000
+que generalizem bem
+para o conjunto de teste.
+
+56
+00:02:44,067 --> 00:02:47,333
+Desempenha bem
+no conjunto de treinamento,
+
+57
+00:02:47,400 --> 00:02:49,067
+mas não o fará
+no conjunto de teste.
+
+58
+00:02:49,133 --> 00:02:51,867
+É um exemplo
+de sobre ajuste.
+
+59
+00:02:51,933 --> 00:02:53,933
+Também vemos sub ajuste
+num modelo de classificação.
+
+60
+00:02:54,000 --> 00:02:56,667
+Os pontos azuis e vermelhos
+parecem bem separados
+
+61
+00:02:56,733 --> 00:02:58,000
+por uma curva quadrática
+como esta.
+
+62
+00:02:58,067 --> 00:03:01,600
+Quando usamos a reta, o modelo
+não se encaixa bem nos pontos,
+
+63
+00:03:01,667 --> 00:03:03,333
+é um sub ajuste.
+
+64
+00:03:03,400 --> 00:03:06,800
+E quando tentamos encaixar
+uma curva complicada,
+
+65
+00:03:06,867 --> 00:03:08,867
+acabamos com um modelo
+complexo demais.
+
+66
+00:03:08,933 --> 00:03:11,200
+E pode não dar certo
+no conjunto de teste.
+
+67
+00:03:11,267 --> 00:03:13,400
+É um sobre ajuste.
+
+68
+00:03:13,467 --> 00:03:15,800
+Um pequeno resumo.
+
+69
+00:03:15,867 --> 00:03:19,067
+Temos os erros devido a alto viés,
+ou sub ajuste.
+
+70
+00:03:19,133 --> 00:03:20,933
+É quando simplificamos
+o problema
+
+71
+00:03:21,000 --> 00:03:24,800
+e o modelo é simples demais
+para a complexidade dos dados.
+
+72
+00:03:24,867 --> 00:03:29,067
+E temos os erros devido
+à alta variância, ou sobre ajuste.
+
+73
+00:03:29,133 --> 00:03:33,800
+É quando complicamos demais
+e nosso modelo é complexo demais
+
+74
+00:03:33,867 --> 00:03:36,200
+e acaba decorando os dados,
+em vez de aprendê-los.
+
+75
+00:03:36,267 --> 00:03:38,733
+No meio,
+temos o modelo bom.
+
+76
+00:03:38,800 --> 00:03:40,800
+Tratando-se de dados
+de treinamento,
+
+77
+00:03:40,867 --> 00:03:44,800
+o modelo de alto viés tende
+a não se encaixar, é simples demais.
+
+78
+00:03:44,867 --> 00:03:47,400
+O modelo de alta variância encaixa
+bem nos dados de treinamento,
+
+79
+00:03:47,467 --> 00:03:48,800
+é programado para isto.
+
+80
+00:03:48,867 --> 00:03:51,667
+O modelo bom tende a encaixar
+bem os dados de treinamento.
+
+81
+00:03:51,733 --> 00:03:53,333
+Tratando-se
+de dados de teste,
+
+82
+00:03:53,400 --> 00:03:56,133
+o modelo de alto viés
+tende a um fraco desempenho.
+
+83
+00:03:56,200 --> 00:03:57,867
+O modelo
+de alta variância também.
+
+84
+00:03:57,933 --> 00:04:00,867
+O modelo bom é o que desempenha bem
+nos dados de teste.
+

@@ -1,0 +1,32 @@
+1
+00:00:00,000 --> 00:00:04,334
+Okay, so let's dive a bit deeper into the art of splitting data in two.
+
+2
+00:00:04,334 --> 00:00:06,404
+Let's look at this dataset over here,
+
+3
+00:00:06,405 --> 00:00:08,070
+and I'm going to draw it twice.
+
+4
+00:00:08,070 --> 00:00:12,105
+And now, I'm going to draw two lines that separate the blue and the red points.
+
+5
+00:00:12,105 --> 00:00:15,030
+Here's one and here's another one.
+
+6
+00:00:15,029 --> 00:00:19,634
+And here's a quiz, which one do you think is the line that better separates the points,
+
+7
+00:00:19,635 --> 00:00:22,200
+the line in the left or the line in the right?
+
+8
+00:00:22,199 --> 00:00:24,129
+Enter your answer below.
+

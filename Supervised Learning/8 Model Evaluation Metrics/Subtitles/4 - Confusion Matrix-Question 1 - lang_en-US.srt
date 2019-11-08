@@ -1,0 +1,309 @@
+1
+00:00:00,389 --> 00:00:03,730
+So after we develop a model,
+we want to find out how good it is.
+
+2
+00:00:03,730 --> 00:00:06,131
+This is a difficult question,
+but in this section,
+
+3
+00:00:06,131 --> 00:00:09,635
+we'll learn a few different metrics
+that will tell us how good our model is.
+
+4
+00:00:09,635 --> 00:00:11,519
+So we're going to look
+at two main examples.
+
+5
+00:00:11,519 --> 00:00:16,381
+The first example is a model that will
+help us detect a particular illness and
+
+6
+00:00:16,382 --> 00:00:19,920
+tell if a patient is healthy or sick.
+
+7
+00:00:19,920 --> 00:00:23,750
+The second example will be a spam
+detector which will help us determine
+
+8
+00:00:23,750 --> 00:00:25,940
+if an email is spam or not.
+
+9
+00:00:25,940 --> 00:00:27,140
+For example, on the left,
+
+10
+00:00:27,140 --> 00:00:30,899
+you have a email from your grandma,
+which you don't want to label as spam.
+
+11
+00:00:30,899 --> 00:00:33,670
+On the right, you have an email
+that is clearly spam and
+
+12
+00:00:33,670 --> 00:00:35,800
+you want to send that
+to the spam folder.
+
+13
+00:00:35,799 --> 00:00:38,239
+So let's look at the model for
+diagnosing an illness.
+
+14
+00:00:38,240 --> 00:00:39,850
+There are four possible cases.
+
+15
+00:00:39,850 --> 00:00:43,990
+When a patient is sick and the model
+correctly diagnoses them as sick, this
+
+16
+00:00:43,990 --> 00:00:47,980
+is a sick patient I will send in for
+further examination or for treatment.
+
+17
+00:00:47,979 --> 00:00:50,239
+This case we'll call a true positive.
+
+18
+00:00:50,240 --> 00:00:53,550
+When a patient is healthy and the model
+correctly diagnoses them as healthy,
+
+19
+00:00:53,549 --> 00:00:55,679
+this is a healthy patient
+that we'll send home.
+
+20
+00:00:55,679 --> 00:00:57,789
+This case we call a true negative.
+
+21
+00:00:57,789 --> 00:01:01,664
+When a patient is sick and the model
+incorrectly diagnoses them as healthy,
+
+22
+00:01:01,664 --> 00:01:02,813
+this is a mistake, and
+
+23
+00:01:02,813 --> 00:01:06,402
+it means we'll be sending a sick
+patient back home with no treatment.
+
+24
+00:01:06,402 --> 00:01:08,040
+This is called a false negative.
+
+25
+00:01:08,040 --> 00:01:09,560
+And finally,
+when a patient is healthy and
+
+26
+00:01:09,560 --> 00:01:13,700
+the model incorrectly diagnoses them
+as sick, this is also a mistake, and it
+
+27
+00:01:13,700 --> 00:01:17,469
+means we'll be sending a healthy person
+for further examination or treatment.
+
+28
+00:01:17,469 --> 00:01:19,579
+This is called a false positive.
+
+29
+00:01:19,579 --> 00:01:21,640
+Now we'll introduce what's
+called a confusion matrix.
+
+30
+00:01:21,640 --> 00:01:24,721
+This is a table that will describe
+the performance of a model.
+
+31
+00:01:24,721 --> 00:01:27,254
+In this model, we have 10,000 patients.
+
+32
+00:01:27,254 --> 00:01:30,670
+1,000 of them are sick and
+have been correctly diagnosed as sick.
+
+33
+00:01:30,670 --> 00:01:32,506
+We call this true positives.
+
+34
+00:01:32,506 --> 00:01:35,799
+200 of them are sick and have been
+incorrectly diagnosed as healthy.
+
+35
+00:01:35,799 --> 00:01:37,525
+So we call them false negatives.
+
+36
+00:01:37,525 --> 00:01:40,938
+800 patients are healthy and
+have been incorrectly diagnosed as sick,
+
+37
+00:01:40,938 --> 00:01:42,699
+we call these false positives.
+
+38
+00:01:42,700 --> 00:01:45,268
+And finally,
+8,000 patients are healthy and
+
+39
+00:01:45,268 --> 00:01:49,460
+have been correctly diagnosed as
+healthy, we call these true negatives.
+
+40
+00:01:49,459 --> 00:01:52,649
+The confusion matrix is simply the table
+that stores these four values.
+
+41
+00:01:52,650 --> 00:01:54,576
+Now let's look at the model for
+detecting spam email.
+
+42
+00:01:54,575 --> 00:01:56,489
+There are four possible cases.
+
+43
+00:01:56,489 --> 00:01:59,309
+When we get a spam email and the
+classifier sends it to our spam folder
+
+44
+00:01:59,310 --> 00:02:01,600
+correctly, which is a true positive.
+
+45
+00:02:01,599 --> 00:02:02,609
+When we get spam email and
+
+46
+00:02:02,609 --> 00:02:06,670
+the classifier incorrectly sends it to
+our inbox, this is a false negative.
+
+47
+00:02:06,670 --> 00:02:09,500
+When we get a good email, for example,
+from our grandma, and the classifier
+
+48
+00:02:09,500 --> 00:02:13,259
+incorrectly sends it to our spam folder,
+this is called a false positive.
+
+49
+00:02:13,259 --> 00:02:14,599
+And finally,
+when we get a good email and
+
+50
+00:02:14,599 --> 00:02:19,109
+the classifier correctly sends it to
+our inbox, which is a true negative.
+
+51
+00:02:19,110 --> 00:02:21,730
+And we can also find the confusion
+matrix for this model.
+
+52
+00:02:21,729 --> 00:02:23,469
+Here we have a pool of 1,000 e-mails.
+
+53
+00:02:23,469 --> 00:02:24,453
+Out of these e-mails,
+
+54
+00:02:24,453 --> 00:02:27,215
+100 spam e-mails have been
+correctly sent to the spam folder.
+
+55
+00:02:27,215 --> 00:02:30,747
+170 spam e-mails have been
+incorrectly sent to the inbox.
+
+56
+00:02:30,747 --> 00:02:34,198
+30 non-spam emails have been
+incorrectly sent to the spam folder.
+
+57
+00:02:34,199 --> 00:02:38,530
+And finally, 700 non-spam e-mails have
+been correctly sent to the inbox.
+
+58
+00:02:38,530 --> 00:02:40,469
+So here is the confusion matrix.
+
+59
+00:02:40,469 --> 00:02:42,680
+Now it's your turn to
+create a confusion matrix.
+
+60
+00:02:42,680 --> 00:02:45,498
+Look at this data where the blue
+points are positive and
+
+61
+00:02:45,497 --> 00:02:47,036
+the red points are negative.
+
+62
+00:02:47,036 --> 00:02:50,816
+The model we've trained is the line that
+separates them, with the positive region
+
+63
+00:02:50,816 --> 00:02:54,210
+being in the top and
+the negative region in the bottom.
+
+64
+00:02:54,210 --> 00:02:57,740
+Now please fill in the following four
+blanks in the confusion matrix for
+
+65
+00:02:57,740 --> 00:03:02,620
+number of true positives,
+true positives, false positives, and
+
+66
+00:03:02,620 --> 00:03:03,430
+false negatives.
+

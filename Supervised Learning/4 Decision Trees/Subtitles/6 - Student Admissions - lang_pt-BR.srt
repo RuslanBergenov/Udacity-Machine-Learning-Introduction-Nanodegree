@@ -1,0 +1,151 @@
+1
+00:00:00,267 --> 00:00:01,967
+Vamos tentar os dois.
+
+2
+00:00:02,000 --> 00:00:05,533
+A melhor linha horizontal
+deve ficar aqui.
+
+3
+00:00:05,567 --> 00:00:08,800
+Ela é razoável,
+mas não separa bem os pontos.
+
+4
+00:00:08,833 --> 00:00:11,933
+Há muitos pontos azuis
+na área vermelha e vice-versa.
+
+5
+00:00:11,967 --> 00:00:13,933
+E uma linha vertical?
+
+6
+00:00:13,967 --> 00:00:16,867
+Parece que o melhor recorte
+é perto do 5.
+
+7
+00:00:16,900 --> 00:00:18,500
+Ela funciona bem.
+
+8
+00:00:18,533 --> 00:00:20,533
+Só há 5 pontos vermelhos
+no lado azul
+
+9
+00:00:20,567 --> 00:00:22,667
+e 5 pontos azuis
+no lado vermelho.
+
+10
+00:00:22,700 --> 00:00:24,333
+Vamos usar essa.
+
+11
+00:00:24,367 --> 00:00:26,667
+A resposta
+é a linha vertical.
+
+12
+00:00:26,700 --> 00:00:30,533
+Então a melhor opção
+para separar os dados é o teste
+
+13
+00:00:30,567 --> 00:00:32,767
+e o melhor limite é 5.
+
+14
+00:00:32,967 --> 00:00:36,367
+Podemos adicionar nossa 1ª anotação
+à árvore de decisão.
+
+15
+00:00:36,400 --> 00:00:37,933
+Ela pergunta:
+
+16
+00:00:37,967 --> 00:00:42,200
+o teste é maior ou igual a 5
+ou menor que 5?
+
+17
+00:00:42,233 --> 00:00:44,200
+Agora podemos fazer mais.
+
+18
+00:00:44,233 --> 00:00:47,633
+Podemos dividir as duas metades
+com uma linha horizontal
+
+19
+00:00:47,667 --> 00:00:49,300
+que é o equivalente a dizer:
+
+20
+00:00:49,333 --> 00:00:54,100
+"vi os testes,
+vamos ver como foram as notas."
+
+21
+00:00:54,133 --> 00:00:58,600
+O lado esquerdo pode ter
+uma linha horizontal na altura 7.
+
+22
+00:00:58,633 --> 00:01:02,067
+Se a pontuação do teste
+for menor que 5,
+
+23
+00:01:02,100 --> 00:01:05,967
+você precisa de 7 ou mais na nota
+para ser aceito.
+
+24
+00:01:06,000 --> 00:01:08,100
+Caso contrário,
+você é rejeitado.
+
+25
+00:01:08,133 --> 00:01:12,133
+O lado direito pode ter
+uma linha horizontal na altura 2.
+
+26
+00:01:12,167 --> 00:01:16,033
+Significa que, se a pontuação
+do teste for maior ou igual a 5,
+
+27
+00:01:16,067 --> 00:01:18,733
+então a nota precisa ser
+igual ou maior que 2
+
+28
+00:01:18,767 --> 00:01:20,000
+para ser aceito.
+
+29
+00:01:20,033 --> 00:01:21,700
+Caso contrário,
+você é rejeitado.
+
+30
+00:01:21,733 --> 00:01:24,267
+Criamos a árvore de decisão
+de forma similar à anterior,
+
+31
+00:01:24,300 --> 00:01:28,000
+mas não temos uma pergunta
+de "sim" ou "não" nas anotações,
+
+32
+00:01:28,033 --> 00:01:30,900
+e sim um limite que recorta
+os valores em duas partes.
+

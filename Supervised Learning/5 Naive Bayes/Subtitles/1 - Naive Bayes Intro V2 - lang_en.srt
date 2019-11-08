@@ -1,0 +1,32 @@
+1
+00:00:00,000 --> 00:00:03,265
+Hello again and welcome to the Naive Bayes section.
+
+2
+00:00:03,265 --> 00:00:06,030
+Naive Bayes is a more probabilistic algorithm which is based
+
+3
+00:00:06,030 --> 00:00:09,096
+on playing with the concept of conditional probability.
+
+4
+00:00:09,096 --> 00:00:13,305
+This algorithm has great benefits such as being easy to implement and very fast to train.
+
+5
+00:00:13,305 --> 00:00:17,655
+We'll be studying one of very interesting applications, natural language processing.
+
+6
+00:00:17,655 --> 00:00:19,080
+In the lectures and in the lab,
+
+7
+00:00:19,080 --> 00:00:20,460
+we'll use it to analyze text,
+
+8
+00:00:20,460 --> 00:00:22,440
+and emails, and speeches.
+

@@ -1,0 +1,52 @@
+1
+00:00:00,000 --> 00:00:08,009
+There are a number of different use cases for PCA.
+
+2
+00:00:08,009 --> 00:00:09,750
+You work through one example,
+
+3
+00:00:09,750 --> 00:00:14,199
+where you reduce the dimensionality of image data to just over 10 features,
+
+4
+00:00:14,199 --> 00:00:19,269
+while still maintaining almost the same accuracy as when all the pixels were kept.
+
+5
+00:00:19,269 --> 00:00:24,629
+PCA can be used anytime you want to reduce the dimensionality of your data or find
+
+6
+00:00:24,629 --> 00:00:30,614
+latent features that might encapsulate a number of other features into a single factor.
+
+7
+00:00:30,614 --> 00:00:35,129
+Other specific situations of this include reducing the dimensionality of
+
+8
+00:00:35,130 --> 00:00:38,790
+high-dimensional microarray data or finding latent features
+
+9
+00:00:38,789 --> 00:00:42,854
+related to survey data that can help find patterns and behavioral habits.
+
+10
+00:00:42,854 --> 00:00:45,059
+As more and more data are created,
+
+11
+00:00:45,060 --> 00:00:47,645
+from YouTube videos, to car sensors,
+
+12
+00:00:47,645 --> 00:00:51,260
+to text messages this technique can help transform data
+
+13
+00:00:51,259 --> 00:00:56,449
+down in a way that helps maximize the information from the original data.
+

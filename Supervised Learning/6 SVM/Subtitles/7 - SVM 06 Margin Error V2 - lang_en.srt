@@ -1,0 +1,336 @@
+1
+00:00:00,000 --> 00:00:02,384
+So now, let's build a margin error.
+
+2
+00:00:02,384 --> 00:00:04,519
+Here's our data set twice,
+
+3
+00:00:04,519 --> 00:00:06,794
+and this is a boundary line.
+
+4
+00:00:06,794 --> 00:00:09,240
+And these are the margins.
+
+5
+00:00:09,240 --> 00:00:13,463
+Now, there's a difference between the model in the left and the model in the right.
+
+6
+00:00:13,462 --> 00:00:15,869
+The model in the left has a very large margin,
+
+7
+00:00:15,869 --> 00:00:19,035
+and the model in the right has a very small margin.
+
+8
+00:00:19,035 --> 00:00:22,304
+Recall that the margin is the distance between the two lines,
+
+9
+00:00:22,304 --> 00:00:24,089
+and we want to turn this margin into
+
+10
+00:00:24,089 --> 00:00:26,711
+an error that we can minimize using gradient descent.
+
+11
+00:00:26,711 --> 00:00:31,155
+We're going to cook up a function that gives us a small error for the large margin case,
+
+12
+00:00:31,155 --> 00:00:34,109
+and a large error for the small margin case.
+
+13
+00:00:34,109 --> 00:00:36,719
+This is because we want to punish small margins,
+
+14
+00:00:36,719 --> 00:00:40,500
+as our goal is to obtain a model that has as large a margin as possible.
+
+15
+00:00:40,500 --> 00:00:42,869
+And you'll be surprised how simple this is.
+
+16
+00:00:42,869 --> 00:00:46,304
+Here, we have our line with the two other boundary lines,
+
+17
+00:00:46,304 --> 00:00:49,769
+and the margin is the distance between the two outside lines.
+
+18
+00:00:49,770 --> 00:00:53,232
+Our equation is aligned wx + b = 0,
+
+19
+00:00:53,231 --> 00:00:57,314
+and the two dotted lines have equations wx + b = 1,
+
+20
+00:00:57,314 --> 00:00:59,669
+and wx + b = -1.
+
+21
+00:00:59,670 --> 00:01:03,120
+That is just the way we pick them and so the margin and we'll see
+
+22
+00:01:03,119 --> 00:01:06,929
+this development in the instructor comments is simply 2 divided by
+
+23
+00:01:06,930 --> 00:01:10,395
+the norm of the vector w. Let's remember that the norm of
+
+24
+00:01:10,394 --> 00:01:14,159
+w is the square root of the sum of the squares of the components of the vector,
+
+25
+00:01:14,159 --> 00:01:16,274
+which are W1 and W2.
+
+26
+00:01:16,275 --> 00:01:18,510
+So for this error, let's find something that
+
+27
+00:01:18,510 --> 00:01:20,579
+gives us a large value of the margin is small,
+
+28
+00:01:20,579 --> 00:01:22,739
+and a small value of the margin is large.
+
+29
+00:01:22,739 --> 00:01:25,628
+Well simple, the norm of w appears in the denominator.
+
+30
+00:01:25,629 --> 00:01:27,165
+So, if we take the norm of w,
+
+31
+00:01:27,165 --> 00:01:30,465
+that grows inversely proportional to the margin. Nice, right?
+
+32
+00:01:30,465 --> 00:01:33,090
+As a matter of fact, since I don't like dealing with square roots,
+
+33
+00:01:33,090 --> 00:01:35,520
+let's take the norm of w squared,
+
+34
+00:01:35,519 --> 00:01:40,859
+which is actually the sum of the squares of the components of the vector w. In this case,
+
+35
+00:01:40,859 --> 00:01:43,394
+it's W1 squared + W2 squared.
+
+36
+00:01:43,394 --> 00:01:47,069
+And as we've seen, since W appears here in the denominator,
+
+37
+00:01:47,069 --> 00:01:52,109
+then a large margin gives us a small error and a small margin gives us a large error.
+
+38
+00:01:52,109 --> 00:01:53,834
+That is exactly what we wanted.
+
+39
+00:01:53,834 --> 00:01:56,234
+So to clarify things, here's an example.
+
+40
+00:01:56,234 --> 00:02:00,075
+Let's say, W is the vector 34 and our bias is one.
+
+41
+00:02:00,075 --> 00:02:05,129
+So our equation of the form w1x1 + w2x2 + b = 0,
+
+42
+00:02:05,129 --> 00:02:10,454
+is going to be 3x1 + 4x2 + 1 = 0,
+
+43
+00:02:10,455 --> 00:02:12,120
+and that's our main line.
+
+44
+00:02:12,120 --> 00:02:14,299
+And here's a line with these two companions,
+
+45
+00:02:14,299 --> 00:02:18,705
+the one that gives the equation 3x1 + 4x2 + 1 = 1,
+
+46
+00:02:18,705 --> 00:02:22,620
+and the one that gives 3x1 + 4x2 + 1 = -1.
+
+47
+00:02:22,620 --> 00:02:25,500
+So now, the error is a norm of w squared,
+
+48
+00:02:25,500 --> 00:02:27,539
+which is 3 squared + 4 squared,
+
+49
+00:02:27,539 --> 00:02:29,804
+which gives us an error of 25.
+
+50
+00:02:29,805 --> 00:02:32,568
+And the margin is two divided by the norm of w,
+
+51
+00:02:32,568 --> 00:02:35,820
+and the norm of w is the square root of 25 which is 5.
+
+52
+00:02:35,819 --> 00:02:39,269
+So, the margin is 2/5 and the error is 25.
+
+53
+00:02:39,270 --> 00:02:43,469
+Let's remember these two numbers: error 25 and margin 2/5.
+
+54
+00:02:43,469 --> 00:02:47,969
+Now, let's look at a very similar example except instead of 341,
+
+55
+00:02:47,969 --> 00:02:50,189
+our weights are going to be 682,
+
+56
+00:02:50,189 --> 00:02:56,969
+so our line is going to have the equation: 6x1 + 8x2 + 2 = 0.
+
+57
+00:02:56,969 --> 00:03:01,425
+And if you notice, that equation is the same as before except multiplied by two.
+
+58
+00:03:01,425 --> 00:03:06,450
+So, it gives us the same boundary line because when 3x1 + 4x2 + 1 = 0,
+
+59
+00:03:06,449 --> 00:03:10,079
+then 6x1 + 8x2 + 2 is also 0.
+
+60
+00:03:10,080 --> 00:03:14,715
+But now our dotted lines are closer to each other because now the value is changed.
+
+61
+00:03:14,715 --> 00:03:18,780
+Before we have 3x1 + 4x2 + 1 = 1.
+
+62
+00:03:18,780 --> 00:03:21,765
+And now, we have the twice of that equals one,
+
+63
+00:03:21,764 --> 00:03:25,049
+which means 3x1 + 4x2 + 1 is actually a half,
+
+64
+00:03:25,050 --> 00:03:26,730
+which means the line is much closer.
+
+65
+00:03:26,729 --> 00:03:28,844
+It's actually half the distance as before,
+
+66
+00:03:28,844 --> 00:03:31,514
+and the same thing happens with the line below.
+
+67
+00:03:31,514 --> 00:03:34,529
+And our error is a square of the norm of this vector,
+
+68
+00:03:34,530 --> 00:03:37,469
+which is 6 squared plus 8 squared, which is 100.
+
+69
+00:03:37,469 --> 00:03:42,150
+And our distance is going to be two over the norm of w, which is 2/10.
+
+70
+00:03:42,150 --> 00:03:43,995
+That is the same as 1/5,
+
+71
+00:03:43,995 --> 00:03:47,284
+so this is smaller than the previous margin of 2/5.
+
+72
+00:03:47,284 --> 00:03:48,939
+This is interesting.
+
+73
+00:03:48,939 --> 00:03:50,949
+Two models give us the same boundary line,
+
+74
+00:03:50,949 --> 00:03:53,724
+but one of them gives us a larger margin than the other one.
+
+75
+00:03:53,724 --> 00:03:55,750
+Here's a summary for our last example.
+
+76
+00:03:55,750 --> 00:03:57,219
+We have our large margin,
+
+77
+00:03:57,219 --> 00:04:01,150
+our margin of 2/5 that gives us a small error of 25,
+
+78
+00:04:01,150 --> 00:04:03,355
+and our small margin of 2/10,
+
+79
+00:04:03,354 --> 00:04:06,819
+which is 1/5 gives us a larger error of 100.
+
+80
+00:04:06,819 --> 00:04:08,919
+So that is precisely the margin error.
+
+81
+00:04:08,919 --> 00:04:11,334
+It's just the norm of the vector w squared.
+
+82
+00:04:11,335 --> 00:04:12,594
+Which if you think about it,
+
+83
+00:04:12,594 --> 00:04:15,400
+it is the exact same error that is given by
+
+84
+00:04:15,400 --> 00:04:20,600
+the regularization term in L2 regularization. Nice, isn't it?
+

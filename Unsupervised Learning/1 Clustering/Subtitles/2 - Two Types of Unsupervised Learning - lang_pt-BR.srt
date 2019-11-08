@@ -1,0 +1,112 @@
+1
+00:00:01,147 --> 00:00:04,388
+DOIS TIPOS DE APRENDIZAGEM
+NÃO SUPERVISIONADA
+
+2
+00:00:05,119 --> 00:00:07,480
+Observe estes pontos.
+
+3
+00:00:07,513 --> 00:00:09,827
+Note que, mesmo sem rótulos,
+
+4
+00:00:09,860 --> 00:00:12,494
+há maneiras
+de agruparmos esses pontos.
+
+5
+00:00:12,695 --> 00:00:16,756
+Neste diagrama específico,
+parece haver 2 grupos.
+
+6
+00:00:17,115 --> 00:00:20,012
+Agora, observe
+este conjunto de pontos.
+
+7
+00:00:20,221 --> 00:00:22,924
+Aqui, parece que os pontos
+deste diagrama
+
+8
+00:00:22,957 --> 00:00:25,227
+podem ser agrupados
+em 3 grupos.
+
+9
+00:00:25,260 --> 00:00:28,634
+Se acrescentarmos
+um ponto aqui,
+
+10
+00:00:28,667 --> 00:00:33,243
+podemos afirmar que ele é parecido
+com esses outros pontos.
+
+11
+00:00:33,276 --> 00:00:37,384
+Da mesma forma,
+se acrescentarmos um ponto aqui,
+
+12
+00:00:37,417 --> 00:00:39,896
+podemos observar
+que ele pertence a esse grupo.
+
+13
+00:00:39,929 --> 00:00:44,015
+A junção de dados dessa maneira
+é conhecida como "agrupamento".
+
+14
+00:00:44,048 --> 00:00:47,944
+Este é o 1º tipo de aprendizagem
+não supervisionada que veremos.
+
+15
+00:00:48,468 --> 00:00:50,561
+Observe estes pontos.
+
+16
+00:00:50,594 --> 00:00:52,398
+Note como
+eles seguem um padrão.
+
+17
+00:00:52,431 --> 00:00:54,680
+Em outro tipo de aprendizagem
+não supervisionada,
+
+18
+00:00:54,713 --> 00:00:58,839
+podemos aplicar padrões ao pontos
+para reduzir a dimensionalidade.
+
+19
+00:00:58,872 --> 00:01:03,135
+Neste caso, podemos reduzir
+de duas dimensões para uma.
+
+20
+00:01:03,168 --> 00:01:05,598
+Este é um 2º tipo de aprendizagem
+não supervisionada
+
+21
+00:01:05,631 --> 00:01:08,256
+chamado "redução
+de dimensionalidade".
+
+22
+00:01:08,289 --> 00:01:10,744
+Ao longo deste curso,
+você vai praticar
+
+23
+00:01:10,777 --> 00:01:14,631
+com esses dois tipos
+de aprendizagem não supervisionada.
+

@@ -1,0 +1,94 @@
+1
+00:00:00,774 --> 00:00:04,419
+QUANDO USAR A PCA?
+
+2
+00:00:05,035 --> 00:00:08,210
+Podemos usar a PCA
+em vários casos.
+
+3
+00:00:08,243 --> 00:00:09,767
+Você trabalhou com um exemplo
+
+4
+00:00:09,800 --> 00:00:12,234
+em que reduziu a dimensionalidade
+dos dados de imagem
+
+5
+00:00:12,267 --> 00:00:14,430
+para apenas 10 recursos,
+
+6
+00:00:14,463 --> 00:00:17,068
+mantendo quase
+a mesma acurácia
+
+7
+00:00:17,101 --> 00:00:19,558
+de quando todos os pixels
+estavam mantidos.
+
+8
+00:00:19,591 --> 00:00:20,977
+PCA pode ser usada
+
+9
+00:00:21,010 --> 00:00:23,965
+sempre que você quiser reduzir
+a dimensionalidade dos seus dados
+
+10
+00:00:23,998 --> 00:00:25,698
+ou encontrar recursos latentes
+
+11
+00:00:25,731 --> 00:00:30,559
+que podem encapsular
+vários recursos em um só fator.
+
+12
+00:00:30,592 --> 00:00:34,870
+Outras situações específicas
+incluem reduzir a dimensionalidade
+
+13
+00:00:34,903 --> 00:00:37,357
+de dados de microarray
+de alta dimensão
+
+14
+00:00:37,390 --> 00:00:40,240
+ou encontrar recursos latentes
+relacionados a dados de pesquisa
+
+15
+00:00:40,273 --> 00:00:43,321
+que podem ajudar a encontrar padrões
+em hábitos de comportamento.
+
+16
+00:00:43,354 --> 00:00:45,120
+À medida que mais dados
+são criados,
+
+17
+00:00:45,153 --> 00:00:47,433
+de vídeos do YouTube
+e sensores de carro
+
+18
+00:00:47,466 --> 00:00:49,213
+a mensagens de texto,
+
+19
+00:00:49,246 --> 00:00:51,815
+esta técnica pode ajudar
+a transformar dados
+
+20
+00:00:51,848 --> 00:00:55,889
+para maximizar as informações
+dos dados originais.
+

@@ -1,0 +1,38 @@
+1
+00:00:00,000 --> 00:00:02,000
+Vamos nos lembrar que exatidão
+é uma proporção entre
+
+2
+00:00:02,000 --> 00:00:06,300
+os pontos corretamente classificados
+e o número total de pontos
+
+3
+00:00:06,300 --> 00:00:08,960
+Notamos que há seis pontos
+corretamente classificados
+
+4
+00:00:08,960 --> 00:00:12,120
+como positivos e cinco 
+como negativos.
+
+5
+00:00:12,120 --> 00:00:15,260
+Somando, temos 11 pontos
+corretamente classificados
+
+6
+00:00:15,260 --> 00:00:18,255
+Como temos 14 pontos ao todo,
+
+7
+00:00:18,260 --> 00:00:22,740
+concluímos que a resposta
+é 11 dividido por 14
+
+8
+00:00:22,740 --> 00:00:26,180
+O que resulta em 78.57%
+

@@ -1,0 +1,171 @@
+1
+00:00:00,500 --> 00:00:02,567
+Isso,
+logaritmo é a resposta,
+
+2
+00:00:02,600 --> 00:00:05,200
+já que satisfaz a identidade
+que diz
+
+3
+00:00:05,233 --> 00:00:08,733
+que o logaritmo de um produto
+é a soma dos logaritmos.
+
+4
+00:00:08,767 --> 00:00:12,667
+O número do produto é a soma
+dos logaritmos dos números.
+
+5
+00:00:12,700 --> 00:00:17,300
+Neste caso o resultado
+é -3,245.
+
+6
+00:00:17,333 --> 00:00:20,533
+Vamos usar o log
+como o logaritmo na base 2
+
+7
+00:00:20,567 --> 00:00:22,900
+e o motivo
+é a teoria da informação.
+
+8
+00:00:22,933 --> 00:00:24,400
+Aqui está o resumo.
+
+9
+00:00:24,433 --> 00:00:27,267
+Temos as três configurações
+de bolas vermelhas e azuis,
+
+10
+00:00:27,300 --> 00:00:30,400
+temos as probabilidades
+de serem vermelhas e azuis
+
+11
+00:00:30,433 --> 00:00:32,533
+e o produto de acordo
+com a sequência,
+
+12
+00:00:32,567 --> 00:00:34,733
+que é a probabilidade
+de vencer o jogo.
+
+13
+00:00:34,767 --> 00:00:37,567
+Na coluna seguinte,
+temos o logaritmo na base 2.
+
+14
+00:00:37,600 --> 00:00:40,500
+Como os números são menores que 1,
+o logaritmo é negativo.
+
+15
+00:00:40,533 --> 00:00:42,833
+Se tirarmos o negativo
+de toda a equação,
+
+16
+00:00:42,867 --> 00:00:44,900
+lidamos com números
+positivos.
+
+17
+00:00:44,933 --> 00:00:47,133
+Na última coluna,
+dividimos por 4,
+
+18
+00:00:47,167 --> 00:00:50,633
+porque a definição da entropia
+é a média dos negativos
+
+19
+00:00:50,667 --> 00:00:54,100
+dos logaritmos das probabilidades
+de escolher as bolas
+
+20
+00:00:54,133 --> 00:00:56,200
+de forma a vencer o jogo.
+
+21
+00:00:56,233 --> 00:00:59,133
+No primeiro balde,
+a entropia é zero.
+
+22
+00:00:59,167 --> 00:01:03,667
+No segundo, é 0,81.
+E, no terceiro, é 1.
+
+23
+00:01:03,700 --> 00:01:06,200
+Essa é a fórmula
+para a entropia.
+
+24
+00:01:06,233 --> 00:01:09,600
+Num caso mais generalizado
+de 5 bolas vermelhas e 3 azuis,
+
+25
+00:01:09,633 --> 00:01:10,833
+temos o seguinte:
+
+26
+00:01:10,867 --> 00:01:14,167
+o negativo da soma
+de 5 vezes o logaritmo
+
+27
+00:01:14,200 --> 00:01:17,700
+da probabilidade de escolher
+a bola vermelha, que é 5/8,
+
+28
+00:01:17,733 --> 00:01:20,000
+e 3 vezes o logaritmo
+da probabilidade
+
+29
+00:01:20,033 --> 00:01:22,633
+de escolher a bola azul,
+que é 3/8.
+
+30
+00:01:22,667 --> 00:01:26,167
+É um número alto porque o conjunto
+tem uma entropia alta.
+
+31
+00:01:26,200 --> 00:01:29,867
+No caso de m bolas vermelhas
+e n azuis, temos esta fórmula.
+
+32
+00:01:29,900 --> 00:01:32,833
+A probabilidade de escolher
+a bola vermelha é m
+
+33
+00:01:32,867 --> 00:01:34,833
+dividido por m + n
+
+34
+00:01:34,867 --> 00:01:38,367
+e para a bola azul
+é n dividido por m + n.
+
+35
+00:01:38,400 --> 00:01:41,700
+É a fórmula geral da entropia
+quando há duas cores de bolas.
+

@@ -1,0 +1,136 @@
+1
+00:00:00,000 --> 00:00:03,299
+Now, accuracy may not always be the best metric to use.
+
+2
+00:00:03,299 --> 00:00:04,904
+Let's look at this example.
+
+3
+00:00:04,905 --> 00:00:07,200
+It consists of detecting credit card fraud.
+
+4
+00:00:07,200 --> 00:00:10,769
+So, we have a bunch of data in the form of credit card transactions,
+
+5
+00:00:10,769 --> 00:00:12,879
+and some of them are good like the ones in the left,
+
+6
+00:00:12,880 --> 00:00:15,630
+and some of them are fraudulent like the ones in the right.
+
+7
+00:00:15,630 --> 00:00:17,160
+So, let's look at numbers.
+
+8
+00:00:17,160 --> 00:00:24,329
+There are 284,335 good transactions and 472 fraudulent transactions.
+
+9
+00:00:24,329 --> 00:00:25,829
+This is actually real data.
+
+10
+00:00:25,829 --> 00:00:28,349
+So, let's try to come up with a model that has great accuracy.
+
+11
+00:00:28,350 --> 00:00:30,975
+So, a model that is correct most of the time.
+
+12
+00:00:30,975 --> 00:00:35,870
+Can you help me think of a model that has over 99 percent accuracy?
+
+13
+00:00:35,869 --> 00:00:39,429
+So here's a model that has over 99 percent accuracy,
+
+14
+00:00:39,429 --> 00:00:42,575
+which means it is correct over 99 percent of the time.
+
+15
+00:00:42,575 --> 00:00:46,304
+The model says, all the transactions are good.
+
+16
+00:00:46,304 --> 00:00:48,320
+Now, what is the accuracy of this model,
+
+17
+00:00:48,320 --> 00:00:51,085
+namely how many times are we correct?
+
+18
+00:00:51,085 --> 00:01:00,350
+Well, we're correct 284,335 times out of 284,887 times.
+
+19
+00:01:00,350 --> 00:01:03,765
+And that is 99.83 percent.
+
+20
+00:01:03,765 --> 00:01:06,239
+So, this model must be pretty good if it's accurate is that high,
+
+21
+00:01:06,239 --> 00:01:07,829
+right? Well, not really.
+
+22
+00:01:07,829 --> 00:01:10,620
+This model is not catching any of the bad ones.
+
+23
+00:01:10,620 --> 00:01:14,265
+And the point of the model is to catch the fraudulent transactions.
+
+24
+00:01:14,265 --> 00:01:15,879
+So let's look at another model.
+
+25
+00:01:15,879 --> 00:01:18,379
+Can we get a model that catches all the bad transactions?
+
+26
+00:01:18,379 --> 00:01:20,924
+Can we think of one? Well, here's one,
+
+27
+00:01:20,924 --> 00:01:24,149
+I'm going to label all transactions fraudulent. So, that's great, right?
+
+28
+00:01:24,150 --> 00:01:27,090
+Now, we're catching all the fraudulent transactions.
+
+29
+00:01:27,090 --> 00:01:28,990
+Now, is that a good model? Well, no.
+
+30
+00:01:28,989 --> 00:01:32,479
+That's also a terrible model since it's accidentally catching all the good ones.
+
+31
+00:01:32,480 --> 00:01:34,109
+So, it's pretty tricky, right?
+
+32
+00:01:34,109 --> 00:01:37,379
+It's pretty tricky to just look at accuracy and use that to evaluate our model
+
+33
+00:01:37,379 --> 00:01:41,244
+because it may completely miss the point when the data is skewed like this one.
+
+34
+00:01:41,245 --> 00:01:46,130
+So, in this section, we'll study some different metrics that can catch this more easily.
+

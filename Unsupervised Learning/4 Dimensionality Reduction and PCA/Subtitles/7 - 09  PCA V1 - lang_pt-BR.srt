@@ -1,0 +1,562 @@
+1
+00:00:00,000 --> 00:00:03,765
+A PCA é geralmente utilizada
+com dados de alta dimensão.
+
+2
+00:00:03,798 --> 00:00:06,845
+Um exemplo de dados
+de alta dimensão são imagens.
+
+3
+00:00:06,878 --> 00:00:11,814
+No exemplo, vamos usar um caso muito
+comum usando dígitos escritos à mão.
+
+4
+00:00:11,847 --> 00:00:16,699
+Um caso clássico de dados de imagem
+é o conjunto de dados MNIST,
+
+5
+00:00:16,732 --> 00:00:19,758
+que teve seu código aberto
+no final dos anos 1990
+
+6
+00:00:19,791 --> 00:00:23,694
+por pesquisadores
+da Microsoft, Google e NYU.
+
+7
+00:00:23,727 --> 00:00:26,148
+Deixei mais links
+sobre esse conjunto de dados
+
+8
+00:00:26,181 --> 00:00:28,590
+na informação abaixo,
+no workbook.
+
+9
+00:00:28,623 --> 00:00:31,405
+Para começar, vamos importar
+as bibliotecas necessárias.
+
+10
+00:00:31,438 --> 00:00:34,130
+Então é importante ler
+o conjunto de dados.
+
+11
+00:00:34,163 --> 00:00:39,092
+No caso, vamos ler 42 mil imagens
+do conjunto de dados de treinamento.
+
+12
+00:00:39,125 --> 00:00:42,850
+O conjunto de dados de teste
+contém 28 mil imagens adicionais
+
+13
+00:00:42,883 --> 00:00:44,616
+que não vamos usar ainda,
+
+14
+00:00:44,649 --> 00:00:47,514
+então podemos olhar para o cabeçalho
+do conjunto de dados.
+
+15
+00:00:47,547 --> 00:00:49,820
+Podemos ver também
+a descrição.
+
+16
+00:00:50,198 --> 00:00:54,599
+Neste caso, podemos ver
+que há uma coluna de etiqueta
+
+17
+00:00:54,632 --> 00:00:56,504
+com os dígitos escritos à mão.
+
+18
+00:00:57,334 --> 00:01:00,760
+Essa é uma imagem de um 1,
+uma imagem de um 0,
+
+19
+00:01:00,793 --> 00:01:03,184
+uma imagem de um 1,
+de um 4.
+
+20
+00:01:03,218 --> 00:01:08,950
+Olhando pelos lados,
+há valores entre 0 e 255
+
+21
+00:01:08,983 --> 00:01:13,066
+para indicar quanta tinta estava
+em um pixel específico da imagem.
+
+22
+00:01:13,099 --> 00:01:17,689
+E, olhando a descrição, parece
+que há valores faltando nos últimos,
+
+23
+00:01:17,722 --> 00:01:20,504
+então vou preencher
+com 0, por enquanto.
+
+24
+00:01:20,537 --> 00:01:23,524
+Parece que ficam em uma parte
+do canto nos pixels.
+
+25
+00:01:23,558 --> 00:01:26,542
+Pelo que sabemos dos dados,
+vamos dividir a etiqueta
+
+26
+00:01:26,575 --> 00:01:29,079
+e colocar as imagens
+em suas próprias matrizes.
+
+27
+00:01:29,431 --> 00:01:31,248
+Aqui eu já tirei a etiqueta.
+
+28
+00:01:31,657 --> 00:01:35,524
+Agora vamos ver como ficam
+as imagens com essa função auxiliar.
+
+29
+00:01:35,558 --> 00:01:39,885
+Pode pegar essa função no ícone
+de notebook abaixo do vídeo.
+
+30
+00:01:40,344 --> 00:01:42,170
+Ao inserir 100, estou dizendo:
+
+31
+00:01:42,203 --> 00:01:44,644
+"Pode me mostrar
+as primeiras 100 imagens?"
+
+32
+00:01:44,677 --> 00:01:49,344
+Se olharmos aqui, há algumas imagens
+nas quais é fácil ver o valor.
+
+33
+00:01:49,377 --> 00:01:54,505
+Isso parece um 1, um 0,
+claramente um 8, um 9.
+
+34
+00:01:54,538 --> 00:01:57,289
+Mas também há outras
+imagens que são assim...
+
+35
+00:01:57,323 --> 00:02:01,790
+Que valor pode ser esse?
+E esse aqui, qual é o valor?
+
+36
+00:02:02,030 --> 00:02:05,101
+Há outra função auxiliar
+que nos permite ver
+
+37
+00:02:05,134 --> 00:02:07,745
+as primeiras 50 imagens
+de qualquer tipo de número.
+
+38
+00:02:07,778 --> 00:02:10,250
+Novamente, pode pegar
+no workbook abaixo.
+
+39
+00:02:10,672 --> 00:02:14,657
+Usando essa função, podemos inserir
+o dígito que queremos ver
+
+40
+00:02:14,690 --> 00:02:19,430
+e ela nos deixa ver as primeiras
+50 imagens desse dígito.
+
+41
+00:02:19,463 --> 00:02:22,240
+Aqui você pode ver
+as 50 primeiras.
+
+42
+00:02:22,273 --> 00:02:26,775
+Esse é o dígito que vimos antes,
+e veja esse aqui.
+
+43
+00:02:26,808 --> 00:02:29,170
+Alguns parecem ser
+bem fáceis de prever
+
+44
+00:02:29,203 --> 00:02:31,469
+usando um algoritmo
+de aprendizado de máquina.
+
+45
+00:02:31,502 --> 00:02:34,186
+Mas outros certamente
+são mais difíceis.
+
+46
+00:02:34,219 --> 00:02:36,634
+Para a primeira tentativa
+de prevê-los,
+
+47
+00:02:36,667 --> 00:02:38,989
+há outra função auxiliar
+que escrevi
+
+48
+00:02:39,023 --> 00:02:42,052
+que permite passá-los por
+um algoritmo de floresta aleatória.
+
+49
+00:02:42,350 --> 00:02:44,569
+Usando a função
+random_forest_classifier,
+
+50
+00:02:44,602 --> 00:02:46,090
+que está no notebook abaixo,
+
+51
+00:02:46,123 --> 00:02:48,677
+você pode ver que ela
+divide seu conjunto de dados
+
+52
+00:02:48,710 --> 00:02:50,489
+em conjuntos
+de treinamento e de teste.
+
+53
+00:02:50,522 --> 00:02:53,123
+Instancia seu
+random_forest_classifier,
+
+54
+00:02:53,156 --> 00:02:57,735
+ajusta seu conjunto de treinamento
+e então prevê no conjunto de teste.
+
+55
+00:02:57,768 --> 00:03:01,295
+E constrói uma matriz de confusão
+dos resultados obtidos.
+
+56
+00:03:01,328 --> 00:03:03,219
+Vamos ver como se sai.
+
+57
+00:03:03,252 --> 00:03:07,496
+Qualquer coisa na linha diagonal
+é basicamente algo onde previmos
+
+58
+00:03:07,529 --> 00:03:12,215
+o mesmo valor que era verdade,
+e os valores fora da diagonal
+
+59
+00:03:12,248 --> 00:03:15,205
+são onde previmos um valor
+que não era verdade.
+
+60
+00:03:15,238 --> 00:03:20,063
+Pode ver que, em quase 94% do tempo,
+conseguimos prever o valor correto
+
+61
+00:03:20,096 --> 00:03:22,795
+usando todos os pixels
+daquelas imagens.
+
+62
+00:03:22,828 --> 00:03:25,973
+Aqui pode ver
+que o azul-escuro indica
+
+63
+00:03:26,006 --> 00:03:28,477
+que há muito menos imagens
+rotuladas errado
+
+64
+00:03:28,510 --> 00:03:30,279
+de cada lado
+fora da diagonal.
+
+65
+00:03:30,479 --> 00:03:34,757
+Esses elementos na diagonal indicam
+que há números muito altos
+
+66
+00:03:34,790 --> 00:03:37,830
+associados com os valores
+sendo previstos corretamente.
+
+67
+00:03:37,863 --> 00:03:41,650
+Então podemos ver que previmos
+muito bem usando todos os pixels,
+
+68
+00:03:41,683 --> 00:03:45,144
+mas me pergunto se podemos usar
+a análise de componentes principais
+
+69
+00:03:45,177 --> 00:03:47,175
+para criar
+um número menor de recursos
+
+70
+00:03:47,208 --> 00:03:50,527
+e, mesmo assim, conseguir prever
+com o mesmo nível de acurácia.
+
+71
+00:03:50,560 --> 00:03:53,160
+Para isso, há
+uma função auxiliar adicional
+
+72
+00:03:53,193 --> 00:03:55,543
+que realiza a PCA
+com seu conjunto de dados.
+
+73
+00:03:55,576 --> 00:03:59,977
+A função do_pca pega
+um certo número de componentes
+
+74
+00:04:00,010 --> 00:04:04,069
+e seu conjunto de dados,
+ajusta a PCA e devolve
+
+75
+00:04:04,102 --> 00:04:06,680
+a X_matrix com esse número
+de recursos reduzidos,
+
+76
+00:04:06,713 --> 00:04:09,230
+e também o modelo PCA
+que você ajustou.
+
+77
+00:04:09,263 --> 00:04:13,674
+Para começar, vamos tentar
+criar 2 recursos adicionais.
+
+78
+00:04:14,165 --> 00:04:18,280
+Vou inserir esses 2 recursos
+e também a X_matrix,
+
+79
+00:04:18,313 --> 00:04:23,904
+que é todos os nossos pixels, e ela
+vai me devolver um objeto PCA.
+
+80
+00:04:24,348 --> 00:04:30,284
+Vou chamá-lo só de "pca", e vai me
+dar uma X_matrix associada com PCA.
+
+81
+00:04:30,692 --> 00:04:36,549
+Usando a função do_pca, você pode
+ver que pega o número de componentes
+
+82
+00:04:36,583 --> 00:04:41,116
+e os dados de input, os recursos
+do seu conjunto de dados
+
+83
+00:04:41,149 --> 00:04:44,082
+e devolve
+o próprio objeto PCA
+
+84
+00:04:44,115 --> 00:04:48,108
+e também o DataFrame
+dos recursos transformados.
+
+85
+00:04:48,341 --> 00:04:49,673
+Usando isso,
+
+86
+00:04:49,706 --> 00:04:55,659
+podemos pedir
+os componentes pca e X_pca
+
+87
+00:04:55,890 --> 00:04:58,152
+e executar a PCA,
+
+88
+00:04:58,185 --> 00:05:01,910
+para devolver 2 componentes,
+
+89
+00:05:01,943 --> 00:05:04,839
+na X_matrix
+do nosso conjunto de dados.
+
+90
+00:05:05,348 --> 00:05:10,003
+No DataFrame que recebemos,
+se olharmos para o componente X_pca,
+
+91
+00:05:10,036 --> 00:05:12,230
+vemos que ele tem
+o mesmo número de linhas,
+
+92
+00:05:12,263 --> 00:05:14,390
+mas apenas duas colunas,
+
+93
+00:05:14,423 --> 00:05:19,024
+não muito diferente do original,
+que tinha o mesmo número de linhas,
+
+94
+00:05:19,057 --> 00:05:24,620
+mas 784 pixels no DataFrame
+para cada imagem.
+
+95
+00:05:24,653 --> 00:05:27,559
+Vamos tentar de novo
+
+96
+00:05:27,592 --> 00:05:31,583
+usando o mesmo algoritmo de
+aprendizado de máquina que acima,
+
+97
+00:05:31,616 --> 00:05:33,470
+o classificador
+de floresta aleatória.
+
+98
+00:05:33,503 --> 00:05:37,895
+Podemos ver como conseguimos prever
+os dígitos com só 2 dos recursos.
+
+99
+00:05:37,928 --> 00:05:39,091
+Vamos tentar.
+
+100
+00:05:39,124 --> 00:05:44,189
+O x que vamos usar é o X_pca,
+e então vamos prever o y.
+
+101
+00:05:44,222 --> 00:05:50,071
+Então você pode ver que funciona
+muito pior do que o exemplo anterior
+
+102
+00:05:50,104 --> 00:05:56,370
+e temos só 35% dos dígitos
+classificados corretamente e,
+
+103
+00:05:56,403 --> 00:05:58,407
+pela matriz que pode ver aqui,
+
+104
+00:05:58,440 --> 00:06:01,810
+somente conseguimos
+prever muito bem os 1,
+
+105
+00:06:01,843 --> 00:06:05,685
+e todo o resto está
+bem ruim, os 7 estão bons.
+
+106
+00:06:05,718 --> 00:06:08,390
+Mas não estamos conseguindo
+muitos recursos com isso.
+
+107
+00:06:08,423 --> 00:06:13,680
+Para ver melhor como os componentes
+separam os dados escritos à mão,
+
+108
+00:06:13,713 --> 00:06:16,439
+vamos usar a função
+plot_components.
+
+109
+00:06:16,472 --> 00:06:20,725
+Um caso ideal seria
+se inseríssemos todos os valores,
+
+110
+00:06:20,758 --> 00:06:23,275
+mas, então, nosso gráfico
+ficaria imenso.
+
+111
+00:06:23,308 --> 00:06:27,957
+Então o que vou fazer é
+só colocar os 100 primeiros,
+
+112
+00:06:28,403 --> 00:06:31,135
+e pode ver aqui que ela faz
+um trabalho muito bom
+
+113
+00:06:31,168 --> 00:06:35,050
+em separar os 0,
+e também separar os 7.
+
+114
+00:06:35,083 --> 00:06:37,314
+Mas todo o resto
+está meio misturado.
+
+115
+00:06:37,347 --> 00:06:42,199
+Isso indica exatamente o que vimos
+na matriz de confusão acima.
+

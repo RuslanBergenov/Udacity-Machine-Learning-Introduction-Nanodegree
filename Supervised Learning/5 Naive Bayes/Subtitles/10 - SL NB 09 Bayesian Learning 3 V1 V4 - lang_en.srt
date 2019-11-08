@@ -1,0 +1,156 @@
+1
+00:00:00,000 --> 00:00:02,730
+So, let's do this calculation a bit more in detail.
+
+2
+00:00:02,730 --> 00:00:05,640
+Since we have eight emails in total and three of them are
+
+3
+00:00:05,639 --> 00:00:09,179
+spam and five of them are non-spam or ham,
+
+4
+00:00:09,179 --> 00:00:15,955
+then our prior probabilities are three over eight for spam and five over eight for ham.
+
+5
+00:00:15,955 --> 00:00:18,829
+So, onto calculate the posteriors.
+
+6
+00:00:18,829 --> 00:00:20,529
+Say we have a spam email,
+
+7
+00:00:20,530 --> 00:00:25,005
+since there are three of them and one contains the word easy and two don't.
+
+8
+00:00:25,004 --> 00:00:28,079
+Then, the probability for containing the word easy is one-third,
+
+9
+00:00:28,079 --> 00:00:32,129
+and for not containing it is two-thirds, if you're spam.
+
+10
+00:00:32,130 --> 00:00:34,615
+And as we had calculated before,
+
+11
+00:00:34,615 --> 00:00:38,340
+the probability of containing the easy if your ham is
+
+12
+00:00:38,340 --> 00:00:42,915
+one-fifth and of not containing it if your ham is four-fifths.
+
+13
+00:00:42,914 --> 00:00:45,280
+Now, by the rule of conditional probability,
+
+14
+00:00:45,280 --> 00:00:49,630
+probability of the email spam containing the word easy is the product of these two,
+
+15
+00:00:49,630 --> 00:00:52,620
+three over eight times one-third, which one-eighth.
+
+16
+00:00:52,619 --> 00:00:55,219
+In a similar way, we calculate the probability of being
+
+17
+00:00:55,219 --> 00:00:58,204
+spam and not containing the word easy, which is one-fourth.
+
+18
+00:00:58,204 --> 00:01:02,054
+And probabilities of being ham containing the word easy is one-eighth,
+
+19
+00:01:02,054 --> 00:01:04,424
+and not containing it is one-half.
+
+20
+00:01:04,424 --> 00:01:06,545
+Now, this is where we apply Bayes' rule.
+
+21
+00:01:06,545 --> 00:01:08,590
+We know that the email contains the word easy,
+
+22
+00:01:08,590 --> 00:01:14,295
+so our entire universe consists of only these two cases: when the is spam or ham.
+
+23
+00:01:14,295 --> 00:01:17,704
+Those two have the same probability, one-eighth of happening.
+
+24
+00:01:17,704 --> 00:01:19,698
+So, once we normalize the probabilities,
+
+25
+00:01:19,698 --> 00:01:22,935
+they both turn into 50 percent.
+
+26
+00:01:22,935 --> 00:01:26,625
+Thus, our two posterior probabilities are 50 percent.
+
+27
+00:01:26,625 --> 00:01:29,034
+For ham emails, we can do the same procedure.
+
+28
+00:01:29,034 --> 00:01:33,114
+Our prior are three over eight and five over eight as before.
+
+29
+00:01:33,114 --> 00:01:36,184
+Our probabilities of containing the word money and not
+
+30
+00:01:36,185 --> 00:01:39,734
+containing it are two-thirds and one-third for the spam emails,
+
+31
+00:01:39,734 --> 00:01:43,015
+and one-fifth and four-fifths for the ham emails.
+
+32
+00:01:43,015 --> 00:01:46,484
+Our products of probabilities are then one-quarter,
+
+33
+00:01:46,484 --> 00:01:49,545
+one-quarter, one-eighth, and one-half.
+
+34
+00:01:49,545 --> 00:01:52,439
+But since the email contains the word money,
+
+35
+00:01:52,439 --> 00:01:54,424
+then we only care about these two.
+
+36
+00:01:54,424 --> 00:01:57,644
+Since one-fourth is twice as much as one-eighth,
+
+37
+00:01:57,644 --> 00:02:03,599
+when we normalize them we get two-thirds or 66.7 percent for spam,
+
+38
+00:02:03,599 --> 00:02:07,379
+and one-third or 33.3 percent for ham.
+
+39
+00:02:07,379 --> 00:02:10,000
+These are the posteriors.
+

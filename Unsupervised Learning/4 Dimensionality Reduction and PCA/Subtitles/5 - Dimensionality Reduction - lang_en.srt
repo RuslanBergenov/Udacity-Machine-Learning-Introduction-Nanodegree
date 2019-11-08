@@ -1,0 +1,108 @@
+1
+00:00:04,610 --> 00:00:09,600
+So far, you've been introduced to the idea of latent features,
+
+2
+00:00:09,599 --> 00:00:12,339
+which are topics or new features
+
+3
+00:00:12,339 --> 00:00:15,804
+that encompass many of the original features in your data set.
+
+4
+00:00:15,804 --> 00:00:20,170
+It would be nice, if we could transform our existing features to
+
+5
+00:00:20,170 --> 00:00:24,620
+best mapped the latent features and retain the most information,
+
+6
+00:00:24,620 --> 00:00:26,920
+rather than just dropping features and
+
+7
+00:00:26,920 --> 00:00:30,205
+losing information that might exist in those drop features.
+
+8
+00:00:30,204 --> 00:00:31,919
+With this in mind,
+
+9
+00:00:31,920 --> 00:00:35,440
+one of the main use cases of principal component analysis,
+
+10
+00:00:35,439 --> 00:00:39,324
+is to reduce the number of features in our dataset in just this way.
+
+11
+00:00:39,325 --> 00:00:42,960
+These new latent features that are created as a mix of
+
+12
+00:00:42,960 --> 00:00:46,725
+the original features are called principal components.
+
+13
+00:00:46,725 --> 00:00:48,630
+So the question is,
+
+14
+00:00:48,630 --> 00:00:53,190
+how do we combine the existing features to retain the most information?
+
+15
+00:00:53,189 --> 00:00:57,644
+To understand this, consider this plot that shows the relationship
+
+16
+00:00:57,645 --> 00:01:02,225
+between the number of rooms in a home and the square footage in a house.
+
+17
+00:01:02,225 --> 00:01:08,070
+In this example, if we were to reduce this two-dimensional data to one dimension,
+
+18
+00:01:08,069 --> 00:01:11,674
+we could do it by shrinking these points into this line.
+
+19
+00:01:11,674 --> 00:01:15,995
+At this point, you might think this looks a lot like regression.
+
+20
+00:01:15,995 --> 00:01:19,680
+Actually the first principal component of a dataset,
+
+21
+00:01:19,680 --> 00:01:23,595
+does have a lot in common with the models you create and regression,
+
+22
+00:01:23,594 --> 00:01:26,750
+but the goal here is not to make a prediction,
+
+23
+00:01:26,750 --> 00:01:29,640
+but to shrink the space that our data lives in.
+
+24
+00:01:29,640 --> 00:01:32,599
+So the ending goal is very different.
+
+25
+00:01:32,599 --> 00:01:37,765
+The goal here is to reduce this two-dimensional data to a single dimension,
+
+26
+00:01:37,765 --> 00:01:39,609
+represented by this line,
+
+27
+00:01:39,609 --> 00:01:44,730
+while the goal and regression is to predict one variable based on another.
+

@@ -1,0 +1,247 @@
+1
+00:00:00,469 --> 00:00:02,866
+A análise
+de componentes independentes
+
+2
+00:00:02,899 --> 00:00:06,606
+é um método similar à PCA
+e à projeção aleatória
+
+3
+00:00:06,639 --> 00:00:09,800
+que usa um conjunto de recursos
+e produz um conjunto diferente,
+
+4
+00:00:09,833 --> 00:00:11,819
+que é útil de alguma maneira.
+
+5
+00:00:11,852 --> 00:00:15,904
+Mas é diferente,
+já que a PCA maximiza a variância
+
+6
+00:00:15,937 --> 00:00:20,303
+e a ICA supõe que os recursos
+são misturas de fontes independentes
+
+7
+00:00:20,336 --> 00:00:23,017
+e tenta isolar
+as fontes independentes
+
+8
+00:00:23,050 --> 00:00:25,045
+que estão misturadas
+no conjunto de dados.
+
+9
+00:00:25,078 --> 00:00:27,545
+O exemplo clássico
+usado para explicar ICA
+
+10
+00:00:27,578 --> 00:00:29,828
+é algo chamado
+"efeito coquetel".
+
+11
+00:00:29,861 --> 00:00:31,989
+Vamos dar uma olhada
+em uma variação disso.
+
+12
+00:00:32,022 --> 00:00:36,150
+Digamos que três amigos
+vão a uma exposição,
+
+13
+00:00:36,183 --> 00:00:37,770
+e lá tem 3 cortinas.
+
+14
+00:00:37,803 --> 00:00:42,134
+Uma delas se abre
+e há uma pessoa tocando piano.
+
+15
+00:00:42,167 --> 00:00:45,213
+Ela toca uma música boa
+no piano.
+
+16
+00:00:45,246 --> 00:00:48,965
+Você também está lá,
+então você acha que é boa.
+
+17
+00:00:48,998 --> 00:00:53,047
+Depois de um tempo,
+outra cortina se abre,
+
+18
+00:00:53,080 --> 00:00:55,874
+e há uma pessoa
+tocando um violoncelo.
+
+19
+00:00:55,907 --> 00:00:58,148
+O piano está sendo tocado,
+e o violoncelo começa,
+
+20
+00:00:58,181 --> 00:01:00,530
+mas as duas pessoas
+estão tocando coisas diferentes.
+
+21
+00:01:00,563 --> 00:01:04,570
+Elas não funcionam juntas.
+Elas não se misturam.
+
+22
+00:01:04,603 --> 00:01:07,549
+E, então,
+a terceira cortina se abre,
+
+23
+00:01:07,582 --> 00:01:14,609
+e há uma TV ligada
+com muito ruído.
+
+24
+00:01:14,642 --> 00:01:16,515
+É uma bagunça.
+
+25
+00:01:16,548 --> 00:01:18,568
+Seus amigos, então, decidem:
+
+26
+00:01:18,601 --> 00:01:23,116
+"Isso é interessante.
+Vamos gravar isso telefone."
+
+27
+00:01:23,149 --> 00:01:26,110
+Eles gravam
+uns 6 segundos de áudio.
+
+28
+00:01:26,143 --> 00:01:31,457
+O amigo mais próximo ao piano
+grava mais o piano,
+
+29
+00:01:31,490 --> 00:01:35,335
+a pessoa mais próxima à TV
+grava mais a TV.
+
+30
+00:01:35,368 --> 00:01:37,611
+Temos essas três gravações,
+
+31
+00:01:37,644 --> 00:01:41,326
+e cada uma tem um nível diferente
+da fonte original,
+
+32
+00:01:41,359 --> 00:01:43,994
+a qual você não tem,
+você não tem essas gravações.
+
+33
+00:01:44,027 --> 00:01:46,715
+A primeira é meio assim...
+
+34
+00:01:50,779 --> 00:01:55,638
+O ruído da TV
+está um pouco baixo,
+
+35
+00:01:55,671 --> 00:01:57,685
+e você consegue ouvir o piano
+e o violoncelo.
+
+36
+00:01:57,718 --> 00:02:00,264
+A segunda tem um pouco mais
+do violoncelo...
+
+37
+00:02:05,929 --> 00:02:07,703
+e a TV está mais alta.
+
+38
+00:02:07,736 --> 00:02:11,775
+Na terceira dá até para ouvir
+um pouco a TV.
+
+39
+00:02:17,636 --> 00:02:21,125
+Se você tem apenas
+essas três gravações,
+
+40
+00:02:21,158 --> 00:02:25,533
+é possível recuperar
+os sinais/dados originais?
+
+41
+00:02:25,566 --> 00:02:26,962
+A resposta é "sim".
+
+42
+00:02:26,995 --> 00:02:31,523
+Esse é um exemplo
+do que a ICA permite que você faça.
+
+43
+00:02:31,556 --> 00:02:35,537
+ICA pegas essas 3 amostras,
+
+44
+00:02:35,570 --> 00:02:38,825
+ou esse conjunto de dados
+meio que de 3 dimensões, e dizemos:
+
+45
+00:02:38,858 --> 00:02:43,528
+"Temos 3 componentes originais.
+Você consegue encontrá-los aqui?"
+
+46
+00:02:43,561 --> 00:02:45,405
+Ela daria o output...
+
+47
+00:02:50,205 --> 00:02:51,344
+do piano.
+
+48
+00:02:51,377 --> 00:02:55,111
+Quando ela está pronta,
+ela é capaz de isolá-los.
+
+49
+00:02:55,144 --> 00:02:57,050
+O segundo output seria...
+
+50
+00:03:03,248 --> 00:03:06,236
+o violoncelo. E depois a TV.
+
+51
+00:03:11,235 --> 00:03:16,563
+Esse problema se chama
+"separação cega de fontes"
+
+52
+00:03:16,596 --> 00:03:19,008
+e é o tipo de problema
+que a ICA resolve.
+

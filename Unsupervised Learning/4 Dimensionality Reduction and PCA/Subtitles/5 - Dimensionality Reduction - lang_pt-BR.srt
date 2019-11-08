@@ -1,0 +1,138 @@
+1
+00:00:00,968 --> 00:00:04,505
+REDUÇÃO DE DIMENSIONALIDADE
+
+2
+00:00:05,663 --> 00:00:09,600
+Até agora, você já conheceu
+a ideia dos recursos latentes,
+
+3
+00:00:09,633 --> 00:00:12,339
+que são tópicos,
+ou novos recursos,
+
+4
+00:00:12,372 --> 00:00:15,804
+que englobam muitos recursos
+originais no seu conjunto de dados.
+
+5
+00:00:16,303 --> 00:00:20,170
+Seria bom poder transformar
+nossos recursos existentes
+
+6
+00:00:20,203 --> 00:00:24,620
+para mapear recursos latentes bem
+e reter o máximo de informação,
+
+7
+00:00:24,653 --> 00:00:26,920
+em vez de apenas
+ignorar recursos
+
+8
+00:00:26,953 --> 00:00:30,205
+e perder a informação
+que pode estar contida neles.
+
+9
+00:00:30,613 --> 00:00:31,919
+Tendo isso em mente,
+
+10
+00:00:31,953 --> 00:00:35,440
+um dos maiores casos de uso
+da análise de componentes principais
+
+11
+00:00:35,473 --> 00:00:39,324
+é reduzir o número de recursos
+no conjunto de dados desta forma.
+
+12
+00:00:39,853 --> 00:00:42,960
+Esses novos recursos latentes
+criados como uma mistura
+
+13
+00:00:42,993 --> 00:00:46,725
+dos recursos originais são
+chamados "componentes principais".
+
+14
+00:00:46,758 --> 00:00:50,898
+A questão é: como combinamos
+os recursos existentes
+
+15
+00:00:50,931 --> 00:00:53,190
+para reter
+o máximo de informação?
+
+16
+00:00:53,223 --> 00:00:57,644
+Para entender isso, considere
+esse gráfico que mostra a relação
+
+17
+00:00:57,678 --> 00:01:02,225
+entre o número de quartos
+e a metragem quadrada de uma casa.
+
+18
+00:01:02,258 --> 00:01:08,070
+No exemplo, se formos reduzir esses
+dados bidimensionais a uma dimensão,
+
+19
+00:01:08,103 --> 00:01:11,674
+poderíamos fazer isso encolhendo
+esses pontos nesta reta.
+
+20
+00:01:12,029 --> 00:01:15,995
+Nesse momento, você pode achar
+que parece muito uma regressão.
+
+21
+00:01:16,028 --> 00:01:19,680
+Na verdade, o primeiro componente
+principal de um conjunto de dados
+
+22
+00:01:19,713 --> 00:01:23,595
+tem sim muito a ver com os modelos
+que você cria em regressão,
+
+23
+00:01:23,628 --> 00:01:26,750
+mas o objetivo aqui
+não é fazer uma predição,
+
+24
+00:01:26,783 --> 00:01:29,640
+mas encolher o espaço
+onde ficam nossos dados.
+
+25
+00:01:29,673 --> 00:01:32,599
+Então o objetivo final
+é bem diferente.
+
+26
+00:01:32,632 --> 00:01:37,765
+O objetivo aqui é reduzir os dados
+bidimensionais a uma única dimensão,
+
+27
+00:01:37,798 --> 00:01:41,524
+representada por essa reta,
+enquanto o objetivo da regressão
+
+28
+00:01:41,557 --> 00:01:44,730
+é prever uma variável
+se baseando em outra.
+

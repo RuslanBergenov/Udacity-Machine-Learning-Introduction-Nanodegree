@@ -1,0 +1,380 @@
+1
+00:00:00,000 --> 00:00:04,467
+Olhemos com cuidado para o gráfico
+que conseguimos embaixo.
+
+2
+00:00:04,501 --> 00:00:07,968
+É chamado de gráfico
+de complexidade do modelo.
+
+3
+00:00:08,000 --> 00:00:11,601
+Note que à esquerda, temos
+um modelo que sub-ajusta,
+
+4
+00:00:11,634 --> 00:00:14,634
+e nos dá altos erros
+no treinamento e no teste.
+
+5
+00:00:14,667 --> 00:00:16,968
+O modelo à direita
+super-ajusta,
+
+6
+00:00:17,000 --> 00:00:19,801
+e nos dá um erro de treinamento
+muito baixo,
+
+7
+00:00:19,834 --> 00:00:21,567
+mas um erro alto de teste.
+
+8
+00:00:21,601 --> 00:00:24,167
+O modelo no meio é certo,
+
+9
+00:00:24,200 --> 00:00:27,901
+e nos dá erros baixos
+de treinamento e de teste.
+
+10
+00:00:27,934 --> 00:00:29,701
+Este é o modelo a escolher.
+
+11
+00:00:29,734 --> 00:00:31,634
+Aqui temos
+uma imagem melhor.
+
+12
+00:00:31,667 --> 00:00:35,667
+No eixo x, temos
+a complexidade do modelo.
+
+13
+00:00:35,701 --> 00:00:38,701
+Vamos de linear, grau 1,
+
+14
+00:00:38,734 --> 00:00:41,634
+até polinomial, grau 4.
+
+15
+00:00:41,667 --> 00:00:45,834
+À esquerda os modelos mostram
+sub-ajuste, ou erro de alto viés.
+
+16
+00:00:45,868 --> 00:00:50,400
+À direita, vemos super-ajuste,
+ou erro de alta variância.
+
+17
+00:00:50,434 --> 00:00:53,767
+E no meio, em torno do valor 2,
+há um ponto feliz
+
+18
+00:00:53,801 --> 00:00:57,300
+onde o ajuste não está
+nem alto nem baixo demais.
+
+19
+00:00:57,334 --> 00:01:01,100
+Assim, decidimos que o melhor
+modelo para os nossos dados
+
+20
+00:01:01,133 --> 00:01:03,701
+é um polinômio de grau 2.
+
+21
+00:01:03,734 --> 00:01:05,567
+Até aí tudo bem, certo?
+
+22
+00:01:05,601 --> 00:01:08,000
+O que está acontecendo?
+O que é isso?
+
+23
+00:01:08,033 --> 00:01:11,300
+Não, o que faremos?
+Quebramos a regra de ouro.
+
+24
+00:01:12,067 --> 00:01:15,033
+Nunca use seus dados de teste
+para treinamento.
+
+25
+00:01:15,067 --> 00:01:17,033
+Cometemos um grande erro.
+
+26
+00:01:17,067 --> 00:01:19,667
+Mas vamos ver...
+o que fizemos aqui?
+
+27
+00:01:19,701 --> 00:01:21,267
+Aqui está o problema.
+
+28
+00:01:21,300 --> 00:01:25,267
+Usamos nossos dados de teste
+para treinar nosso modelo.
+
+29
+00:01:25,300 --> 00:01:28,968
+Não devemos fazer isso
+até o final.
+
+30
+00:01:29,000 --> 00:01:32,200
+Usamos para tomar uma grande
+decisão sobre nosso modelo.
+
+31
+00:01:32,234 --> 00:01:33,868
+Isto é totalmente proibido.
+
+32
+00:01:33,901 --> 00:01:36,367
+Você não pode tocar
+nos dados de teste.
+
+33
+00:01:36,400 --> 00:01:37,767
+Como corrigimos isto?
+
+34
+00:01:37,801 --> 00:01:40,100
+Como tomar uma boa decisão
+sobre nosso modelo
+
+35
+00:01:40,133 --> 00:01:42,501
+sem usar
+os dados de teste?
+
+36
+00:01:42,534 --> 00:01:43,901
+Não entrem em pânico.
+
+37
+00:01:43,934 --> 00:01:47,067
+Corrigimos isto
+quebrando nossos dados ainda mais.
+
+38
+00:01:47,100 --> 00:01:50,367
+Em vez de ter um conjunto
+de treinamento e um de teste,
+
+39
+00:01:50,400 --> 00:01:53,133
+acrescentaremos um conjunto
+de validação cruzada.
+
+40
+00:01:53,167 --> 00:01:54,801
+Agora o conjunto
+de treinamento
+
+41
+00:01:54,834 --> 00:01:57,234
+será usado
+para treinar os parâmetros.
+
+42
+00:01:57,267 --> 00:01:58,634
+O de validação cruzada
+
+43
+00:01:58,667 --> 00:02:01,567
+será usado para tomar
+decisões sobre o modelo,
+
+44
+00:02:01,601 --> 00:02:03,734
+como o grau do polinômio.
+
+45
+00:02:03,767 --> 00:02:08,100
+E o conjunto de teste será usado
+para o teste final do modelo.
+
+46
+00:02:08,133 --> 00:02:09,667
+Nosso gráfico melhorou,
+
+47
+00:02:09,701 --> 00:02:13,167
+com um erro de validação cruzada
+em vez de um de teste.
+
+48
+00:02:13,200 --> 00:02:14,334
+Vamos rever.
+
+49
+00:02:14,367 --> 00:02:16,467
+Aqui, o gráfico
+de complexidade do modelo
+
+50
+00:02:16,501 --> 00:02:18,267
+e também o exemplo.
+
+51
+00:02:18,300 --> 00:02:23,334
+À esquerda, vemos sub-ajuste,
+ou uma simplificação do problema.
+
+52
+00:02:23,367 --> 00:02:27,934
+Isto é ruim no treinamento
+e no conjunto de validação cruzada
+
+53
+00:02:27,968 --> 00:02:31,934
+pois nosso modelo não capta
+a complexidade dos nossos dados.
+
+54
+00:02:31,968 --> 00:02:34,267
+À direita,
+vemos super-ajuste,
+
+55
+00:02:34,300 --> 00:02:36,801
+quando complicamos demais
+o problema.
+
+56
+00:02:36,834 --> 00:02:39,033
+Isto é ótimo
+no conjunto de treinamento,
+
+57
+00:02:39,067 --> 00:02:40,367
+porque estamos decorando,
+
+58
+00:02:40,400 --> 00:02:42,601
+mas ruim no conjunto
+de validação cruzada,
+
+59
+00:02:42,634 --> 00:02:45,667
+pois o modelo
+não generaliza bem.
+
+60
+00:02:45,701 --> 00:02:47,801
+No meio, o modelo perfeito.
+
+61
+00:02:47,834 --> 00:02:51,033
+Bom para o treinamento
+e para o teste.
+
+62
+00:02:51,067 --> 00:02:54,734
+Sub-ajuste é como chegar
+despreparado a um exame.
+
+63
+00:02:54,767 --> 00:02:57,467
+Não importa o quanto tente,
+não vai se dar bem.
+
+64
+00:02:57,501 --> 00:02:59,901
+Super-ajuste é como
+estudar para um exame
+
+65
+00:02:59,934 --> 00:03:02,434
+mas, em vez de tentar
+entender a matéria,
+
+66
+00:03:02,467 --> 00:03:05,367
+você decora o livro,
+palavra por palavra.
+
+67
+00:03:05,400 --> 00:03:08,467
+Você pode repetir tudo,
+mas não saberá responder
+
+68
+00:03:08,501 --> 00:03:10,501
+a novas questões
+sobre os dados.
+
+69
+00:03:10,534 --> 00:03:13,033
+Um bom modelo é como
+estudar para um exame
+
+70
+00:03:13,067 --> 00:03:16,667
+e estar pronto para responder
+a qualquer pergunta sobre a matéria.
+
+71
+00:03:16,701 --> 00:03:19,667
+E aqui, uma imagem geral
+do gráfico de complexidade do modelo.
+
+72
+00:03:19,701 --> 00:03:23,000
+Pode não parecer tão bonito,
+mas verá que, quase sempre,
+
+73
+00:03:23,033 --> 00:03:25,634
+seus modelos exibirão
+um comportamento como este.
+
+74
+00:03:25,667 --> 00:03:27,601
+Sendo o modelo
+mais complexo,
+
+75
+00:03:27,634 --> 00:03:29,667
+o erro de treinamento
+fica cada vez menor
+
+76
+00:03:29,701 --> 00:03:33,934
+e o de teste começa grande,
+diminui e aumenta de novo.
+
+77
+00:03:33,968 --> 00:03:36,467
+À esquerda
+você sub-ajusta.
+
+78
+00:03:36,501 --> 00:03:38,767
+À direita,
+você super-ajusta.
+
+79
+00:03:38,801 --> 00:03:40,334
+E o ponto perfeito é aqui,
+
+80
+00:03:40,367 --> 00:03:42,734
+onde os gráficos
+começam a se distanciar.
+

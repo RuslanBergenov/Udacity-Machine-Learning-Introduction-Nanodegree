@@ -1,0 +1,260 @@
+1
+00:00:00,000 --> 00:00:02,129
+So, let's start from where we left off, which is,
+
+2
+00:00:02,129 --> 00:00:04,795
+we have a complicated network architecture which would be
+
+3
+00:00:04,796 --> 00:00:08,929
+more complicated than we need but we need to live with it.
+
+4
+00:00:08,929 --> 00:00:11,509
+So, let's look at the process of training.
+
+5
+00:00:11,509 --> 00:00:15,929
+We start with random weights in her first epoch and we get a model like this one,
+
+6
+00:00:15,929 --> 00:00:17,885
+which makes lots of mistakes.
+
+7
+00:00:17,885 --> 00:00:22,524
+Now as we train, let's say for 20 epochs we get a pretty good model.
+
+8
+00:00:22,524 --> 00:00:26,085
+But then, let's say we keep going for a 100 epochs,
+
+9
+00:00:26,085 --> 00:00:28,196
+we'll get something that fits the data much better,
+
+10
+00:00:28,196 --> 00:00:30,589
+but we can see that this is starting to over-fit.
+
+11
+00:00:30,588 --> 00:00:32,219
+If we go for even more,
+
+12
+00:00:32,219 --> 00:00:36,325
+say 600 epochs, then the model heavily over-fits.
+
+13
+00:00:36,325 --> 00:00:42,399
+We can see that the blue region is pretty much a bunch of circles around the blue points.
+
+14
+00:00:42,399 --> 00:00:44,390
+This fits the training data really well,
+
+15
+00:00:44,390 --> 00:00:46,590
+but it will generalize horribly.
+
+16
+00:00:46,590 --> 00:00:49,170
+Imagine a new blue point in the blue area.
+
+17
+00:00:49,170 --> 00:00:54,140
+This point will most likely be classified as red unless it's super close to a blue point.
+
+18
+00:00:54,140 --> 00:01:00,445
+So, let's try to evaluate these models by adding a testing set such as these points.
+
+19
+00:01:00,445 --> 00:01:03,060
+Let's make a plot of the error in the training set
+
+20
+00:01:03,060 --> 00:01:06,209
+and the testing set with respect to each epoch.
+
+21
+00:01:06,209 --> 00:01:07,865
+For the first epoch,
+
+22
+00:01:07,864 --> 00:01:09,869
+since the model is completely random,
+
+23
+00:01:09,870 --> 00:01:14,840
+then it badly misclassifies both the training and the testing sets.
+
+24
+00:01:14,840 --> 00:01:18,284
+So, both the training error and the testing error are large.
+
+25
+00:01:18,284 --> 00:01:19,844
+We can plot them over here.
+
+26
+00:01:19,843 --> 00:01:21,493
+For the 20 epoch,
+
+27
+00:01:21,493 --> 00:01:25,152
+we have a much better model which fit the training data pretty well,
+
+28
+00:01:25,152 --> 00:01:27,608
+and it also does well in the testing set.
+
+29
+00:01:27,608 --> 00:01:32,669
+So, both errors are relatively small and we'll plot them over here.
+
+30
+00:01:32,670 --> 00:01:34,417
+For the 100 epoch,
+
+31
+00:01:34,417 --> 00:01:36,358
+we see that we're starting to over-fit.
+
+32
+00:01:36,358 --> 00:01:41,479
+The model fits the data very well but it starts making mistakes in the testing data.
+
+33
+00:01:41,480 --> 00:01:44,316
+We realize that the training error keeps decreasing,
+
+34
+00:01:44,316 --> 00:01:46,838
+but the testing error starts increasing,
+
+35
+00:01:46,837 --> 00:01:48,393
+so, we plot them over here.
+
+36
+00:01:48,394 --> 00:01:51,795
+Now, for the 600 epoch, we're badly over-fitting.
+
+37
+00:01:51,795 --> 00:01:56,189
+We can see that the training error is very tiny because the data fits the training set
+
+38
+00:01:56,188 --> 00:02:00,858
+really well but the model makes tons of mistakes in the testing data.
+
+39
+00:02:00,858 --> 00:02:03,113
+So, the testing error is large.
+
+40
+00:02:03,114 --> 00:02:04,939
+We plot them over here.
+
+41
+00:02:04,938 --> 00:02:09,938
+Now, we draw the curves that connect the training and testing errors.
+
+42
+00:02:09,938 --> 00:02:11,353
+So, in this plot,
+
+43
+00:02:11,354 --> 00:02:15,850
+it is quite clear when we stop under-fitting and start over-fitting,
+
+44
+00:02:15,850 --> 00:02:20,610
+the training curve is always decreasing since as we train the model,
+
+45
+00:02:20,610 --> 00:02:23,569
+we keep fitting the training data better and better.
+
+46
+00:02:23,568 --> 00:02:29,193
+The testing error is large when we're under-fitting because the model is not exact.
+
+47
+00:02:29,193 --> 00:02:33,038
+Then it decreases as the model generalizes well until it gets
+
+48
+00:02:33,038 --> 00:02:37,158
+to a minimum point - the Goldilocks spot.
+
+49
+00:02:37,158 --> 00:02:40,030
+And finally, once we pass that spot,
+
+50
+00:02:40,030 --> 00:02:43,205
+the model starts over-fitting again since it stops
+
+51
+00:02:43,205 --> 00:02:47,530
+generalizing and just starts memorizing the training data.
+
+52
+00:02:47,530 --> 00:02:50,783
+This plot is called the model complexity graph.
+
+53
+00:02:50,783 --> 00:02:53,438
+In the Y-axis, we have a measure of
+
+54
+00:02:53,438 --> 00:02:59,204
+the error and in the X-axis we have a measure of the complexity of the model.
+
+55
+00:02:59,205 --> 00:03:01,960
+In this case, it's the number of epochs.
+
+56
+00:03:01,960 --> 00:03:03,550
+And as you can see,
+
+57
+00:03:03,550 --> 00:03:08,064
+in the left we have high testing and training error, so we're under-fitting.
+
+58
+00:03:08,064 --> 00:03:14,843
+In the right, we have a high testing error and low training error, so we're over-fitting.
+
+59
+00:03:14,843 --> 00:03:16,478
+And somewhere in the middle,
+
+60
+00:03:16,479 --> 00:03:19,335
+we have our happy Goldilocks point.
+
+61
+00:03:19,335 --> 00:03:22,740
+So, this determines the number of epochs we'll be using.
+
+62
+00:03:22,740 --> 00:03:25,314
+So, in summary, what we do is,
+
+63
+00:03:25,313 --> 00:03:31,644
+we degrade in descent until the testing error stops decreasing and starts to increase.
+
+64
+00:03:31,645 --> 00:03:34,044
+At that moment, we stop.
+
+65
+00:03:34,044 --> 00:03:40,090
+This algorithm is called Early Stopping and is widely used to train neural networks.
+

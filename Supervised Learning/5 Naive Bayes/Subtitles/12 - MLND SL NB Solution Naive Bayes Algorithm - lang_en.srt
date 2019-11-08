@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:04,908
+So the way to do this is to actually divide each one by the sum of both.
+
+2
+00:00:04,908 --> 00:00:07,305
+This will make sure that they add to one.
+
+3
+00:00:07,305 --> 00:00:13,265
+For the first one, we have one over 12 divided by one over 12 plus one over 40,
+
+4
+00:00:13,265 --> 00:00:16,245
+which is 10 divided by 13.
+
+5
+00:00:16,245 --> 00:00:20,640
+And for the second one, we have one over 40 divided by one over 12 plus one over 40,
+
+6
+00:00:20,640 --> 00:00:24,270
+which is three over 13. So there we go.
+
+7
+00:00:24,270 --> 00:00:28,215
+The answers are 10 over 13 for spam and three over 13 for ham.
+
+8
+00:00:28,215 --> 00:00:30,210
+So, for this particular email,
+
+9
+00:00:30,210 --> 00:00:33,245
+we conclude that it is very likely to be spam.
+
+10
+00:00:33,245 --> 00:00:35,125
+Now, what happens in general?
+
+11
+00:00:35,125 --> 00:00:37,150
+Well, let's say we have a bunch of words that we use as
+
+12
+00:00:37,150 --> 00:00:39,310
+features to tell if the email is spam or not.
+
+13
+00:00:39,310 --> 00:00:42,235
+Say, easy, money,cheap, et cetera.
+
+14
+00:00:42,235 --> 00:00:47,530
+Our first step is to flip the event and the conditional to get this,
+
+15
+00:00:47,530 --> 00:00:51,010
+then we make the naive assumption to split this into a product of
+
+16
+00:00:51,010 --> 00:00:55,000
+simple factors that we can quickly calculate by looking at our data.
+
+17
+00:00:55,000 --> 00:00:57,430
+We do this both for spam and ham,
+
+18
+00:00:57,430 --> 00:01:00,010
+and we get some values that don't add to one.
+
+19
+00:01:00,010 --> 00:01:02,050
+As a final step, we normalize to get
+
+20
+00:01:02,050 --> 00:01:05,515
+our final probabilities of our email being spam or ham.
+
+21
+00:01:05,515 --> 00:01:09,670
+And that's it. That's how the Naive Bayes algorithm works.
+

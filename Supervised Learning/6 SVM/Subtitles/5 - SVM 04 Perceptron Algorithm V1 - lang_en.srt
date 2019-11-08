@@ -1,0 +1,232 @@
+1
+00:00:00,000 --> 00:00:02,279
+So in order to build this error function,
+
+2
+00:00:02,279 --> 00:00:05,699
+let's recall something we saw before, the perceptron algorithm.
+
+3
+00:00:05,700 --> 00:00:08,115
+The perceptron algorithm works in the following way.
+
+4
+00:00:08,115 --> 00:00:09,660
+You have some data points like this,
+
+5
+00:00:09,660 --> 00:00:13,530
+blue and red, and we want to find a perfect line that splits them.
+
+6
+00:00:13,529 --> 00:00:17,054
+Now, perfect line has equation Wx + b = 0,
+
+7
+00:00:17,054 --> 00:00:20,399
+where W and x are vectors and b is a scalar.
+
+8
+00:00:20,399 --> 00:00:21,869
+So it looks more like this,
+
+9
+00:00:21,870 --> 00:00:25,095
+w1x1 + w2x2 + b = 0.
+
+10
+00:00:25,094 --> 00:00:30,269
+As a quick example, let's say the equation is 3x1 + 4x2 + 5 = 0.
+
+11
+00:00:30,269 --> 00:00:33,295
+So we want to punish this line with some error function,
+
+12
+00:00:33,295 --> 00:00:37,390
+and the error function roughly measures how many points are misclassified.
+
+13
+00:00:37,390 --> 00:00:40,240
+It actually measures something closer to the sum of
+
+14
+00:00:40,240 --> 00:00:43,855
+the distances of these misclassified points to the boundary.
+
+15
+00:00:43,854 --> 00:00:46,419
+So we can split this into two sets,
+
+16
+00:00:46,420 --> 00:00:48,370
+the red points and the blue points,
+
+17
+00:00:48,369 --> 00:00:52,179
+and our error function is going to punish those two red points on the left that are on
+
+18
+00:00:52,179 --> 00:00:56,244
+top of the line and those two blue points on the right that are below the line,
+
+19
+00:00:56,244 --> 00:01:00,299
+but it's going to punish them according to their distance to the main line.
+
+20
+00:01:00,299 --> 00:01:02,479
+So half of our error function will look like this.
+
+21
+00:01:02,479 --> 00:01:05,325
+It's going to be the blue area that is over the line.
+
+22
+00:01:05,325 --> 00:01:07,950
+So the more a red point is into the blue area,
+
+23
+00:01:07,950 --> 00:01:09,480
+the more it gets punished.
+
+24
+00:01:09,480 --> 00:01:12,998
+This means that the point that is close to the line gets punished a little bit,
+
+25
+00:01:12,998 --> 00:01:15,465
+and the point that is far from the line gets punished more.
+
+26
+00:01:15,465 --> 00:01:18,150
+And the other part of the error does the complete opposite.
+
+27
+00:01:18,150 --> 00:01:21,015
+It punishes the blue points that are in the red area.
+
+28
+00:01:21,015 --> 00:01:23,798
+The points that are close to the line don't get punished much,
+
+29
+00:01:23,798 --> 00:01:27,030
+and the ones that are far from the line get punished a lot more.
+
+30
+00:01:27,030 --> 00:01:29,070
+But let's actually put some math here.
+
+31
+00:01:29,069 --> 00:01:32,114
+Let's ask how much is the error at every point.
+
+32
+00:01:32,114 --> 00:01:37,140
+So we have that our equation as we said is Wx + b = 0,
+
+33
+00:01:37,140 --> 00:01:39,010
+which is a linear equation.
+
+34
+00:01:39,010 --> 00:01:42,500
+Now, Wx + b takes all the values, so in particular,
+
+35
+00:01:42,500 --> 00:01:45,680
+it is one of the line that is parallel to the main line and a little bit
+
+36
+00:01:45,680 --> 00:01:50,195
+above and then it takes the value 2, 3, 4 successively.
+
+37
+00:01:50,194 --> 00:01:51,859
+And the same thing on the negative side,
+
+38
+00:01:51,859 --> 00:01:53,162
+it takes the values minus 1,
+
+39
+00:01:53,162 --> 00:01:54,829
+minus 2, minus 3,
+
+40
+00:01:54,829 --> 00:01:56,817
+minus 4 et cetera.
+
+41
+00:01:56,817 --> 00:01:58,474
+And, basically, this is going to be the error.
+
+42
+00:01:58,474 --> 00:02:00,799
+It's going to be the value of Wx + b.
+
+43
+00:02:00,799 --> 00:02:03,125
+Actually, since we have negative numbers,
+
+44
+00:02:03,125 --> 00:02:06,260
+it's going to be the absolute value of Wx + b.
+
+45
+00:02:06,260 --> 00:02:10,115
+So now, let's calculate the errors for the misclassified points.
+
+46
+00:02:10,115 --> 00:02:13,370
+This point, for example, gets an error of 2.5,
+
+47
+00:02:13,370 --> 00:02:16,080
+since the red point lies in 2.5 line,
+
+48
+00:02:16,080 --> 00:02:18,540
+where Wx + b is 2.5.
+
+49
+00:02:18,539 --> 00:02:20,864
+This one has an error of 0.5.
+
+50
+00:02:20,865 --> 00:02:24,420
+And these points over here have errors of one and two since
+
+51
+00:02:24,419 --> 00:02:28,409
+let's remember the error is the absolute value of Wx + b.
+
+52
+00:02:28,409 --> 00:02:32,189
+And then to calculate the whole error that this model gives us, we just add them.
+
+53
+00:02:32,189 --> 00:02:34,919
+So this model gives us an error of six.
+
+54
+00:02:34,919 --> 00:02:37,030
+So now we put these two together,
+
+55
+00:02:37,031 --> 00:02:40,147
+and we conclude that this model has an error of six.
+
+56
+00:02:40,147 --> 00:02:44,039
+And the idea will be to minimize this error using gradient descent in
+
+57
+00:02:44,039 --> 00:02:48,794
+order to find the ideal W and b that give us the best possible cut.
+
+58
+00:02:48,794 --> 00:02:51,489
+And that is the perceptron algorithm.
+

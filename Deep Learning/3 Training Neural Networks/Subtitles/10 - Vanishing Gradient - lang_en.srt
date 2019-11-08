@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:02,430
+Here's another problem that can occur.
+
+2
+00:00:02,430 --> 00:00:05,128
+Let's take a look at the sigmoid function.
+
+3
+00:00:05,128 --> 00:00:08,169
+The curve gets pretty flat on the sides.
+
+4
+00:00:08,169 --> 00:00:13,400
+So, if we calculate the derivative at a point way at the right or way at the left,
+
+5
+00:00:13,400 --> 00:00:17,129
+this derivative is almost zero.
+
+6
+00:00:17,129 --> 00:00:21,730
+This is not good cause a derivative is what tells us in what direction to move.
+
+7
+00:00:21,730 --> 00:00:26,405
+This gets even worse in most linear perceptrons. Check this out.
+
+8
+00:00:26,405 --> 00:00:31,039
+We call that the derivative of the error function with respect to a weight was
+
+9
+00:00:31,039 --> 00:00:34,018
+the product of all the derivatives calculated
+
+10
+00:00:34,018 --> 00:00:37,733
+at the nodes in the corresponding path to the output.
+
+11
+00:00:37,734 --> 00:00:41,588
+All these derivatives are derivatives as a sigmoid function,
+
+12
+00:00:41,588 --> 00:00:47,733
+so they're small and the product of a bunch of small numbers is tiny.
+
+13
+00:00:47,734 --> 00:00:52,189
+This makes the training difficult because basically grading the [inaudible] gives us very,
+
+14
+00:00:52,189 --> 00:00:55,340
+very tiny changes to make on the weights,
+
+15
+00:00:55,340 --> 00:01:01,250
+which means, we make very tiny steps and we'll never be able to descend Mount Everest.
+
+16
+00:01:01,250 --> 00:01:04,000
+So how do we fix it? Well, there are some ways.
+

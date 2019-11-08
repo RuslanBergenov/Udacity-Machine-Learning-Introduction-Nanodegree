@@ -1,0 +1,185 @@
+1
+00:00:00,333 --> 00:00:03,467
+Podemos escolher
+que função de base radial usar.
+
+2
+00:00:03,500 --> 00:00:06,667
+Elas podem ser amplas
+ou estreitas.
+
+3
+00:00:06,700 --> 00:00:08,133
+Como escolhemos?
+
+4
+00:00:08,167 --> 00:00:10,867
+É um hiperparâmetro
+que refinamos
+
+5
+00:00:10,900 --> 00:00:13,633
+e se chama parâmetro gama.
+
+6
+00:00:13,667 --> 00:00:17,700
+Um gama alto gera
+uma curva estreita
+
+7
+00:00:17,733 --> 00:00:21,333
+e um gama baixo
+gera uma curva ampla.
+
+8
+00:00:21,367 --> 00:00:23,567
+Nas dimensões altas,
+é parecido.
+
+9
+00:00:23,600 --> 00:00:26,667
+Um gama alto
+gera montanhas pontudas
+
+10
+00:00:26,700 --> 00:00:30,267
+e um gama baixo gera montanhas
+como a da direita.
+
+11
+00:00:30,300 --> 00:00:33,533
+A escolha do gama
+faz diferença no algoritmo.
+
+12
+00:00:33,567 --> 00:00:36,800
+Imagine olhar os dados de cima
+ou depois da projeção.
+
+13
+00:00:36,833 --> 00:00:40,100
+Se usar montanhas finas,
+os limites vão ser assim,
+
+14
+00:00:40,133 --> 00:00:43,733
+onde muitos pontos têm limites
+que os cercam.
+
+15
+00:00:43,767 --> 00:00:47,702
+Se usar uma montanha larga,
+o limite é como o da direita.
+
+16
+00:00:47,735 --> 00:00:48,883
+Como pode ver,
+
+17
+00:00:48,916 --> 00:00:51,267
+os valores altos do gama
+tendem a fazer sobreajuste
+
+18
+00:00:51,300 --> 00:00:53,467
+e os baixos tendem
+a fazer subajuste.
+
+19
+00:00:53,500 --> 00:00:55,033
+O que é o gama?
+
+20
+00:00:55,067 --> 00:00:58,567
+Vamos definir as funções
+de base radial.
+
+21
+00:00:58,600 --> 00:01:01,233
+Vamos usar a distribuição
+gaussiana.
+
+22
+00:01:01,267 --> 00:01:03,967
+É uma função muito usada
+na estatística
+
+23
+00:01:04,000 --> 00:01:07,600
+com a fórmula y igual a 1
+sobre raiz quadrada de 2 Pi
+
+24
+00:01:07,633 --> 00:01:11,033
+vezes e elevado à potência
+de -x² sobre 2.
+
+25
+00:01:11,067 --> 00:01:13,633
+Quando há uma distribuição
+de mu mínimo
+
+26
+00:01:13,667 --> 00:01:16,733
+no desvio padrão de sigma,
+a fórmula é esta,
+
+27
+00:01:16,767 --> 00:01:21,400
+onde mu é o centro da curva
+e sigma é a largura.
+
+28
+00:01:21,433 --> 00:01:24,533
+Se sigma for alto,
+a curva é ampla.
+
+29
+00:01:24,567 --> 00:01:27,333
+Se sigma for baixo,
+a curva é estreita.
+
+30
+00:01:27,367 --> 00:01:28,833
+Para definir gama,
+
+31
+00:01:28,867 --> 00:01:31,967
+usamos 1 dividido
+por 2 sigma ao quadrado.
+
+32
+00:01:32,000 --> 00:01:34,333
+Se gama for alto,
+sigma é baixo,
+
+33
+00:01:34,367 --> 00:01:37,067
+então a curva é estreita
+e vice-versa.
+
+34
+00:01:37,100 --> 00:01:40,467
+Se gama for baixo, sigma é alto
+e a curva é ampla.
+
+35
+00:01:40,500 --> 00:01:44,200
+No caso da dimensão alta,
+a fórmula fica mais complicada.
+
+36
+00:01:44,233 --> 00:01:46,667
+Se pensarmos no gama
+como um parâmetro
+
+37
+00:01:46,700 --> 00:01:50,400
+associado à largura da curva
+de forma invertida,
+
+38
+00:01:50,433 --> 00:01:54,467
+então entendemos o conceito
+do parâmetro gama e do Kernel RBF.
+

@@ -1,0 +1,24 @@
+1
+00:00:00,562 --> 00:00:02,207
+Bom trabalho com essa aula!
+
+2
+00:00:02,237 --> 00:00:05,786
+Agora, você sabe muito mais
+sobre o funcionamento do k-means.
+
+3
+00:00:05,816 --> 00:00:09,369
+Mas o k-means não é a única forma
+de agruparmos dados.
+
+4
+00:00:09,399 --> 00:00:12,634
+Na próxima aula, o Jay
+vai mostrar alguns outros métodos
+
+5
+00:00:12,664 --> 00:00:14,770
+que você pode usar
+para agrupar os dados.
+

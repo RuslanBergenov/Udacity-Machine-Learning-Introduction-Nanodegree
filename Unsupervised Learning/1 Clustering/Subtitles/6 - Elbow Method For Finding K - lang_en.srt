@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:07,214
+You've now had some practice
+
+2
+00:00:07,214 --> 00:00:09,300
+with identifying the number of clusters in the data
+
+3
+00:00:09,300 --> 00:00:12,530
+set when you can clearly see clusterings of point,
+
+4
+00:00:12,529 --> 00:00:17,884
+as well as when there are some preconceived ideas about how many clusters might exist.
+
+5
+00:00:17,885 --> 00:00:22,365
+But what about when you have no idea how many clusters might be in the data?
+
+6
+00:00:22,364 --> 00:00:26,509
+How might we determine the k in k-means for these cases?
+
+7
+00:00:26,510 --> 00:00:31,100
+For this I would like to introduce a method known as the Elbow Method.
+
+8
+00:00:31,100 --> 00:00:34,679
+The way this works is that for any set of data,
+
+9
+00:00:34,679 --> 00:00:38,189
+we could try fitting k-means with differing numbers of k,
+
+10
+00:00:38,189 --> 00:00:41,250
+then for each value of k we can measure
+
+11
+00:00:41,250 --> 00:00:46,210
+the the average distance of each point from the center point of the cluster.
+
+12
+00:00:46,210 --> 00:00:50,490
+If we kept track of the average distance for each value of k,
+
+13
+00:00:50,490 --> 00:00:52,825
+we could create a plot that looks like this.
+
+14
+00:00:52,825 --> 00:00:58,315
+On the x-axis, you can see that we have the number of clusters or k. On
+
+15
+00:00:58,314 --> 00:01:01,375
+the y-axis we have the average distance of
+
+16
+00:01:01,375 --> 00:01:05,640
+each point from the center of the cluster across all of the clusters.
+
+17
+00:01:05,640 --> 00:01:09,510
+You can see here as the number of clusters increases,
+
+18
+00:01:09,510 --> 00:01:13,859
+the average distance from each point to the center decreases.
+
+19
+00:01:13,859 --> 00:01:16,804
+However, with each additional center,
+
+20
+00:01:16,805 --> 00:01:19,945
+the impact on the average distance is not the same.
+
+21
+00:01:19,944 --> 00:01:21,769
+With small values of k,
+
+22
+00:01:21,769 --> 00:01:25,875
+each additional center greatly decreases the average distance.
+
+23
+00:01:25,875 --> 00:01:30,064
+With larger values of k this makes less and less of an impact.
+
+24
+00:01:30,064 --> 00:01:34,579
+The main point of interest in this plot is what is known as the Elbow.
+
+25
+00:01:34,579 --> 00:01:38,039
+At this point, we have found a number of clusters that
+
+26
+00:01:38,040 --> 00:01:42,695
+significantly reduces the distance from each point to the center of the cluster.
+
+27
+00:01:42,694 --> 00:01:47,879
+At the same time increasing k does not appear to have a substantial impact.
+
+28
+00:01:47,879 --> 00:01:51,449
+Finding the Elbow can be a bit of a judgement call.
+
+29
+00:01:51,450 --> 00:01:54,920
+You're looking for the point when increasing k no
+
+30
+00:01:54,920 --> 00:01:58,335
+longer leads to a large decrease in the distance from the centers.
+
+31
+00:01:58,334 --> 00:02:00,799
+Let's get some practice with this.
+

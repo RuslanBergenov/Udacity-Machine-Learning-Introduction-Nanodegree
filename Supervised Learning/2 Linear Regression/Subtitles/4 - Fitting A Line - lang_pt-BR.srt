@@ -1,0 +1,91 @@
+1
+00:00:00,277 --> 00:00:03,934
+Aqui vai um truque
+para traçar uma linha entre pontos.
+
+2
+00:00:03,984 --> 00:00:07,940
+Digamos que tenhamos pontos
+e desenhemos uma linha aleatória.
+
+3
+00:00:08,797 --> 00:00:10,457
+Perguntaremos aos pontos
+
+4
+00:00:10,507 --> 00:00:12,863
+o que querem
+para o modelo ficar melhor
+
+5
+00:00:12,913 --> 00:00:14,195
+e daremos ouvido a eles.
+
+6
+00:00:14,245 --> 00:00:17,993
+Um de cada vez.
+Vamos perguntar a este ponto
+
+7
+00:00:18,043 --> 00:00:21,071
+o que ele gostaria
+que a linha fizesse.
+
+8
+00:00:21,121 --> 00:00:24,416
+Bem, o ponto gostaria
+que a linha se aproximasse,
+
+9
+00:00:24,466 --> 00:00:27,288
+então damos ouvidos a ele
+e a movemos para mais perto.
+
+10
+00:00:27,338 --> 00:00:30,819
+Questionando todos os pontos,
+eles dizem a mesma coisa,
+
+11
+00:00:30,869 --> 00:00:32,748
+então a movemos
+para perto de todos.
+
+12
+00:00:32,798 --> 00:00:34,216
+Aí perguntamos outra vez
+
+13
+00:00:34,266 --> 00:00:36,794
+e damos outro passo
+para aproximá-los ainda mais.
+
+14
+00:00:36,844 --> 00:00:39,846
+O complicado é o ponto solitário,
+que puxa a linha para baixo.
+
+15
+00:00:39,896 --> 00:00:41,174
+Mas tudo bem.
+
+16
+00:00:41,224 --> 00:00:43,750
+Basicamente, a ideia
+é dar alguns passos
+
+17
+00:00:43,800 --> 00:00:46,331
+para aproximar a linha
+de todos os pontos.
+
+18
+00:00:46,381 --> 00:00:48,346
+E isso é tudo.
+Isso é Regressão Linear.
+
+19
+00:00:48,446 --> 00:00:51,350
+Nos próximos vídeos,
+veremos isso mais a fundo.
+

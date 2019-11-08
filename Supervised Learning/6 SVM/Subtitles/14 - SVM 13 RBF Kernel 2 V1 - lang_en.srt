@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:03,948
+Now, let's see how the kernel method works in higher dimensions.
+
+2
+00:00:03,948 --> 00:00:06,404
+Here, we still want to draw a mountain at every point.
+
+3
+00:00:06,405 --> 00:00:11,535
+In the 3D case, this mountain is a Gaussian paraboloid and it lifts the points like this.
+
+4
+00:00:11,535 --> 00:00:13,995
+Then if you want to separate the point from the rest,
+
+5
+00:00:13,994 --> 00:00:16,019
+we can cut it with a plane.
+
+6
+00:00:16,019 --> 00:00:18,179
+The plane will intersect the paraboloid at
+
+7
+00:00:18,179 --> 00:00:21,750
+a circle and this circle is what will become our boundary.
+
+8
+00:00:21,750 --> 00:00:24,240
+So if we have more points, we'd do the same.
+
+9
+00:00:24,239 --> 00:00:28,229
+We use a similar method than before to find the right weights for the combination of
+
+10
+00:00:28,230 --> 00:00:29,940
+mountains that will bring the majority of
+
+11
+00:00:29,940 --> 00:00:33,300
+the red points up while keeping the majority of the blue points down.
+
+12
+00:00:33,299 --> 00:00:35,404
+And then we cut this with the plane.
+
+13
+00:00:35,405 --> 00:00:36,762
+When we project down,
+
+14
+00:00:36,762 --> 00:00:38,820
+then the intersections of the curve on the plane will
+
+15
+00:00:38,820 --> 00:00:41,030
+give us the boundaries that will split our data.
+

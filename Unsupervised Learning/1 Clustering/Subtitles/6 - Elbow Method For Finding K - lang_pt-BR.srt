@@ -1,0 +1,158 @@
+1
+00:00:00,976 --> 00:00:03,952
+MÉTODO ELBOW
+PARA ENCONTRAR O K
+
+2
+00:00:05,636 --> 00:00:08,729
+Você já praticou como identificar
+o número de clusters
+
+3
+00:00:08,762 --> 00:00:12,584
+em um conjunto de dados em que você
+via agrupamentos de pontos.
+
+4
+00:00:12,617 --> 00:00:15,112
+E também já tendo
+uma ideia preconcebida
+
+5
+00:00:15,145 --> 00:00:17,688
+sobre quantos clusters
+devem existir.
+
+6
+00:00:18,296 --> 00:00:22,353
+Mas e quando não fazemos ideia
+de quantos clusters há nos dados?
+
+7
+00:00:22,728 --> 00:00:26,256
+Como determinamos o "k"
+e o k-means nesses casos?
+
+8
+00:00:27,017 --> 00:00:30,992
+Para isso, quero apresentar
+um método conhecido como "Elbow".
+
+9
+00:00:31,487 --> 00:00:34,552
+Ele funciona permitindo que,
+para cada conjunto de dados,
+
+10
+00:00:34,585 --> 00:00:38,176
+tentemos aplicar k-means
+com diferentes valores de k.
+
+11
+00:00:38,209 --> 00:00:42,593
+Depois, para cada valor de k,
+podemos medir a distância média
+
+12
+00:00:42,626 --> 00:00:46,031
+de cada ponto a partir
+do ponto central do cluster.
+
+13
+00:00:46,567 --> 00:00:50,304
+Se seguirmos a distância média
+para cada valor de "k",
+
+14
+00:00:50,337 --> 00:00:52,865
+podemos criar um diagrama
+como este.
+
+15
+00:00:52,898 --> 00:00:57,920
+No eixo x, note que temos
+o número de clusters, ou "k".
+
+16
+00:00:57,953 --> 00:01:02,159
+No eixo y, temos a distância média
+de cada ponto
+
+17
+00:01:02,192 --> 00:01:05,705
+do centro do cluster
+até todos os clusters.
+
+18
+00:01:05,738 --> 00:01:09,448
+Note que, conforme o número
+de clusters aumenta,
+
+19
+00:01:09,481 --> 00:01:13,711
+a distância média de cada ponto
+até o centro diminui.
+
+20
+00:01:14,423 --> 00:01:18,567
+Contudo, com cada centro adicional,
+o impacto na distância média
+
+21
+00:01:18,600 --> 00:01:20,088
+não é o mesmo.
+
+22
+00:01:20,121 --> 00:01:23,023
+Com valores menores de "k",
+cada centro adicional
+
+23
+00:01:23,056 --> 00:01:25,967
+diminui consideravelmente
+a distância média.
+
+24
+00:01:26,000 --> 00:01:30,174
+Com valores maiores de "k",
+isso causa menos impacto.
+
+25
+00:01:30,207 --> 00:01:34,607
+O que mais nos interessa
+neste diagrama é o elbow.
+
+26
+00:01:34,640 --> 00:01:39,423
+Até aqui, encontramos um número
+de clusters que reduz muito
+
+27
+00:01:39,456 --> 00:01:42,903
+a distância de cada ponto
+até o centro do cluster.
+
+28
+00:01:42,936 --> 00:01:48,088
+Ao mesmo tempo, aumentar o "k"
+parece não causar muito impacto.
+
+29
+00:01:48,121 --> 00:01:51,407
+Encontrar o elbow pode ser
+uma questão de julgamento.
+
+30
+00:01:51,440 --> 00:01:55,671
+Procuramos por um ponto
+em que aumentar o "k" não causa mais
+
+31
+00:01:55,704 --> 00:01:58,423
+uma grande redução na distância
+a partir dos centros.
+
+32
+00:01:58,456 --> 00:02:00,144
+Vamos praticar um pouco.
+

@@ -1,0 +1,114 @@
+1
+00:00:00,701 --> 00:00:04,063
+EXEMPLO
+DE MEDIÇÃO DE RECURSO
+
+2
+00:00:05,025 --> 00:00:06,671
+Considere
+este conjunto de dados.
+
+3
+00:00:06,704 --> 00:00:09,652
+O eixo x representa o tempo
+em minutos
+
+4
+00:00:09,685 --> 00:00:13,619
+que 100 indivíduos levam
+para correr 5km.
+
+5
+00:00:14,020 --> 00:00:17,268
+O eixo y representa a pontuação
+de cada indivíduo
+
+6
+00:00:17,301 --> 00:00:21,332
+em um teste padronizado
+em uma escala de 200 a 800.
+
+7
+00:00:21,645 --> 00:00:24,148
+Note que isso fornece
+2 clusters.
+
+8
+00:00:24,181 --> 00:00:28,492
+Um aparece aqui, no topo,
+para os que pontuaram melhor.
+
+9
+00:00:28,525 --> 00:00:32,132
+O outro aparece aqui,
+para os que pontuaram mal.
+
+10
+00:00:32,165 --> 00:00:37,200
+Contudo, vamos mudar o eixo x
+para representar segundos,
+
+11
+00:00:37,233 --> 00:00:40,652
+e o eixo y para representar
+as pontuações do teste.
+
+12
+00:00:40,685 --> 00:00:42,736
+Assim, temos 2 clusters
+diferentes.
+
+13
+00:00:42,769 --> 00:00:45,061
+Um, para aqueles com tempos
+de corrida mais rápidos
+
+14
+00:00:45,094 --> 00:00:48,116
+e outro para aqueles com tempos
+de corrida mais lentos.
+
+15
+00:00:48,540 --> 00:00:52,284
+Ao usar minutos, a distância
+calculada entre os indivíduos
+
+16
+00:00:52,317 --> 00:00:54,900
+é menor do que quando
+usamos segundos.
+
+17
+00:00:54,933 --> 00:00:58,636
+Da mesma forma, temos distâncias
+maiores entre indivíduos
+
+18
+00:00:58,669 --> 00:01:00,491
+quando usamos
+a pontuação bruta
+
+19
+00:01:00,524 --> 00:01:03,101
+do que quando usamos
+a pontuação padronizada.
+
+20
+00:01:03,134 --> 00:01:06,125
+Esse é só um exemplo de como
+a medição de recursos
+
+21
+00:01:06,158 --> 00:01:09,427
+pode mudar os clusters finais
+determinados por um modelo.
+
+22
+00:01:09,460 --> 00:01:12,460
+Por isso, é importante
+padronizar os dados
+
+23
+00:01:12,493 --> 00:01:13,836
+antes do agrupamento.
+

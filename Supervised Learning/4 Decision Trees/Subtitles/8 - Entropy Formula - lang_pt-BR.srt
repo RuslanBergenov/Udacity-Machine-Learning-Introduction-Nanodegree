@@ -1,0 +1,113 @@
+1
+00:00:00,167 --> 00:00:03,933
+Para criar a fórmula da entropia,
+vamos ver o jogo a seguir.
+
+2
+00:00:03,967 --> 00:00:06,733
+Vamos começar
+com a configuração de bolas
+
+3
+00:00:06,767 --> 00:00:10,000
+vermelha, vermelha,
+vermelha e azul.
+
+4
+00:00:10,033 --> 00:00:12,567
+Vamos colocá-las no balde.
+
+5
+00:00:12,600 --> 00:00:14,933
+Vamos escolher quatro bolas
+
+6
+00:00:14,967 --> 00:00:18,233
+para tentar manter
+a configuração
+
+7
+00:00:18,267 --> 00:00:20,567
+vermelha, vermelha,
+vermelha e azul.
+
+8
+00:00:20,600 --> 00:00:22,933
+Se conseguirmos, vencemos.
+
+9
+00:00:22,967 --> 00:00:25,700
+Vamos supor que a 1ª bola
+escolhida seja vermelha.
+
+10
+00:00:25,733 --> 00:00:28,433
+Registramos a cor
+e devolvemos.
+
+11
+00:00:28,467 --> 00:00:30,767
+Escolhemos a 2ª bola,
+e é vermelha de novo.
+
+12
+00:00:30,800 --> 00:00:33,467
+Novamente registramos a cor
+e devolvemos.
+
+13
+00:00:33,500 --> 00:00:35,700
+Escolhemos a 3ª bola,
+que é vermelha,
+
+14
+00:00:35,733 --> 00:00:38,333
+registramos a cor
+e devolvemos.
+
+15
+00:00:38,367 --> 00:00:41,667
+Escolhemos a mesma bola de novo.
+Não tem problema.
+
+16
+00:00:41,700 --> 00:00:44,767
+Finalmente escolhemos a 4ª bola,
+que é azul.
+
+17
+00:00:44,800 --> 00:00:46,867
+Registramos e devolvemos.
+
+18
+00:00:46,900 --> 00:00:50,367
+Temos três vermelhas e uma azul,
+então ganhamos muito dinheiro.
+
+19
+00:00:50,400 --> 00:00:54,900
+Se tivéssemos escolhido
+vermelho, azul, azul, vermelho,
+
+20
+00:00:54,933 --> 00:00:57,067
+não ganharíamos
+dinheiro nenhum.
+
+21
+00:00:57,100 --> 00:00:58,203
+O jogo é assim.
+
+22
+00:00:58,236 --> 00:01:02,767
+A pergunta é qual dos três baldes
+é melhor para jogar esse jogo
+
+23
+00:01:02,800 --> 00:01:04,500
+e qual é o pior?
+
+24
+00:01:04,533 --> 00:01:05,733
+Responda abaixo.
+

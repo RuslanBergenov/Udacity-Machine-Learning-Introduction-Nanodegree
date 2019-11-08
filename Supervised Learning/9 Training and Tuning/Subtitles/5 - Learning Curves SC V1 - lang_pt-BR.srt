@@ -1,0 +1,487 @@
+1
+00:00:00,165 --> 00:00:02,990
+Nessa seção, vamos aprender
+como diferenciar sobreajuste,
+
+2
+00:00:03,023 --> 00:00:04,820
+subajuste e um bom modelo.
+
+3
+00:00:04,853 --> 00:00:06,815
+Aqui temos nossos dados
+três vezes.
+
+4
+00:00:06,848 --> 00:00:10,464
+Parecem estar bem divididos por uma
+equação quadrática de segundo grau.
+
+5
+00:00:10,497 --> 00:00:13,094
+Vamos tentar encaixar
+três modelos.
+
+6
+00:00:13,127 --> 00:00:15,960
+O primeiro é um modelo linear,
+ou de primeiro grau,
+
+7
+00:00:15,993 --> 00:00:18,795
+que não funciona muito bem,
+já que fica subajustado.
+
+8
+00:00:18,828 --> 00:00:21,080
+Então é um modelo
+com alto viés.
+
+9
+00:00:21,367 --> 00:00:26,235
+O segundo, um modelo quadrático
+de segundo grau, que está certo,
+
+10
+00:00:26,268 --> 00:00:30,157
+e o terceiro, um grau mais alto
+de polinômio de sexto grau
+
+11
+00:00:30,190 --> 00:00:33,646
+que se sobreajusta, então é
+um modelo com alta variância.
+
+12
+00:00:33,679 --> 00:00:37,509
+Agora vamos desenhar algumas curvas
+para diferenciar os modelos.
+
+13
+00:00:37,542 --> 00:00:40,640
+Vamos começar
+com o modelo linear de alto viés.
+
+14
+00:00:40,673 --> 00:00:43,174
+Vamos começar a treinar
+o modelo com poucos pontos
+
+15
+00:00:43,207 --> 00:00:45,460
+e aumentar o número de pontos
+gradativamente.
+
+16
+00:00:45,493 --> 00:00:48,940
+Então, se treinarmos o modelo
+com 4 pontos,
+
+17
+00:00:48,973 --> 00:00:52,474
+podemos encaixar bem
+o conjunto de treinamento.
+
+18
+00:00:52,508 --> 00:00:54,425
+Temos um pequeno
+erro de treinamento,
+
+19
+00:00:54,458 --> 00:00:56,515
+que vamos colocar
+no gráfico da direita.
+
+20
+00:00:56,548 --> 00:00:59,829
+Mas, uma vez que avaliamos
+os dados da validação cruzada,
+
+21
+00:00:59,862 --> 00:01:02,729
+já que treinamos o modelo
+com apenas 4 pontos,
+
+22
+00:01:02,762 --> 00:01:04,437
+ele não pode ser
+um modelo muito bom.
+
+23
+00:01:04,470 --> 00:01:07,348
+Provavelmente tem um erro
+de validação cruzada muito alto.
+
+24
+00:01:07,381 --> 00:01:09,639
+Não mostrarei o conjunto
+de validação cruzada,
+
+25
+00:01:09,672 --> 00:01:12,948
+mas pode imaginar qualquer outro
+subconjunto aleatório desses dados.
+
+26
+00:01:12,981 --> 00:01:15,539
+Vamos colocar o erro
+de validação cruzada aqui.
+
+27
+00:01:15,573 --> 00:01:19,250
+Agora, aumentamos para 8 pontos para
+treinar o modelo linear novamente.
+
+28
+00:01:19,283 --> 00:01:21,131
+O erro de treinamento
+pode aumentar,
+
+29
+00:01:21,164 --> 00:01:23,682
+pois é mais difícil encaixar
+8 pontos do que 4,
+
+30
+00:01:23,715 --> 00:01:27,060
+mas, como temos um modelo melhor
+e usamos mais dados para treiná-lo,
+
+31
+00:01:27,093 --> 00:01:30,240
+talvez o erro de validação cruzada
+tenha diminuído um pouco.
+
+32
+00:01:30,273 --> 00:01:33,984
+Não muito, pois é um modelo linear
+tentando encaixar dados quadráticos.
+
+33
+00:01:34,017 --> 00:01:37,790
+Aqui estão os erros de treinamento
+e validação cruzada no gráfico.
+
+34
+00:01:38,242 --> 00:01:41,435
+Agora aumentamos para 12 pontos
+e treinamos o modelo novamente.
+
+35
+00:01:41,468 --> 00:01:44,394
+Mais uma vez, o erro de treinamento
+pode aumentar um pouco,
+
+36
+00:01:44,427 --> 00:01:46,754
+como há mais dados
+de treinamento para colocar,
+
+37
+00:01:46,787 --> 00:01:49,761
+mas o erro de validação cruzada
+também vai diminuir um pouco
+
+38
+00:01:49,794 --> 00:01:52,351
+já que temos um modelo melhor
+treinado com mais dados,
+
+39
+00:01:52,384 --> 00:01:54,555
+mas, mesmo assim,
+não vai diminuir muito.
+
+40
+00:01:54,588 --> 00:01:57,356
+Parece que, ao aumentarmos
+mais e mais o número de pontos,
+
+41
+00:01:57,389 --> 00:02:00,979
+o erro de treinamento continua
+aumentando e o de testes diminuindo.
+
+42
+00:02:01,012 --> 00:02:02,929
+Então, se desenharmos
+essas duas curvas,
+
+43
+00:02:02,962 --> 00:02:05,530
+elas vão se aproximando
+cada vez mais uma da outra,
+
+44
+00:02:05,563 --> 00:02:07,572
+e talvez possam convergir
+em algum ponto.
+
+45
+00:02:07,605 --> 00:02:09,526
+O ponto em que convergem
+deve ser alto,
+
+46
+00:02:09,559 --> 00:02:12,044
+pois não esperamos
+erros baixos nesses modelos,
+
+47
+00:02:12,077 --> 00:02:13,366
+já que são subajustados.
+
+48
+00:02:14,082 --> 00:02:17,083
+Agora vamos fazer exatamente
+o mesmo com o modelo quadrático,
+
+49
+00:02:17,116 --> 00:02:18,790
+lembrando que esse
+é o modelo bom.
+
+50
+00:02:18,823 --> 00:02:21,250
+Treinando com 4 pontos,
+como antes,
+
+51
+00:02:21,283 --> 00:02:23,287
+podemos ir bem
+no conjunto de treinamento
+
+52
+00:02:23,320 --> 00:02:25,343
+para termos um erro
+de treinamento baixo.
+
+53
+00:02:25,376 --> 00:02:27,780
+Mas já que treinamos
+o modelo em poucos pontos,
+
+54
+00:02:27,813 --> 00:02:30,821
+provavelmente não fomos bem
+no conjunto de validação cruzada,
+
+55
+00:02:30,854 --> 00:02:33,219
+então nosso erro
+em validação cruzada é alto.
+
+56
+00:02:33,252 --> 00:02:36,495
+Agora, se aumentarmos
+para 8 pontos, de novo,
+
+57
+00:02:36,528 --> 00:02:40,349
+o erro de treinamento aumenta, pois
+precisamos encaixar mais pontos.
+
+58
+00:02:40,382 --> 00:02:42,655
+Mas já que nosso modelo
+sabe mais,
+
+59
+00:02:42,688 --> 00:02:47,391
+já que é treinado em mais pontos,
+o erro de validação cruzada diminui
+
+60
+00:02:47,425 --> 00:02:50,895
+e, se aumentarmos para 12 pontos,
+o mesmo acontece novamente.
+
+61
+00:02:50,929 --> 00:02:55,180
+O erro de treinamento aumenta,
+o erro de validação cruzada diminui.
+
+62
+00:02:55,556 --> 00:03:00,935
+Então, como antes, as curvas
+se aproximam cada vez mais.
+
+63
+00:03:00,969 --> 00:03:03,909
+Só que agora elas convergem
+em um ponto mais baixo,
+
+64
+00:03:03,943 --> 00:03:07,225
+já que o modelo é bom
+e esperamos ter um erro baixo.
+
+65
+00:03:07,258 --> 00:03:10,535
+Finalmente, vamos fazer o mesmo
+com o modelo de sexto grau.
+
+66
+00:03:10,569 --> 00:03:13,049
+Lembrando que esse é
+um modelo que se sobreajusta,
+
+67
+00:03:13,083 --> 00:03:15,030
+então vamos treiná-lo
+com 4 pontos.
+
+68
+00:03:15,063 --> 00:03:17,205
+Novamente, é fácil
+encaixar 4 pontos,
+
+69
+00:03:17,238 --> 00:03:19,268
+então temos um erro
+de treinamento baixo.
+
+70
+00:03:19,301 --> 00:03:21,609
+E, como não temos
+muita informação em 4 pontos,
+
+71
+00:03:21,643 --> 00:03:24,949
+é provável que o modelo não vá bem
+no conjunto de validação cruzada,
+
+72
+00:03:24,982 --> 00:03:27,356
+então temos um alto
+erro de validação cruzada.
+
+73
+00:03:27,389 --> 00:03:30,353
+Se aumentarmos o conjunto
+de treinamento para 8 pontos,
+
+74
+00:03:30,386 --> 00:03:32,530
+temos um erro de treinamento
+um pouco maior
+
+75
+00:03:32,563 --> 00:03:36,675
+e um erro de teste
+um pouco menor, como antes.
+
+76
+00:03:36,979 --> 00:03:40,390
+Agora, se aumentarmos o conjunto
+de treinamento para 8 pontos,
+
+77
+00:03:40,423 --> 00:03:43,239
+temos um erro de treinamento
+um pouco maior
+
+78
+00:03:43,272 --> 00:03:46,340
+e um erro de validação cruzada
+um pouco menor.
+
+79
+00:03:46,373 --> 00:03:50,479
+Isso acontece de novo
+para 12 pontos, como vimos antes.
+
+80
+00:03:50,899 --> 00:03:52,989
+Mas, agora, algo
+interessante acontece,
+
+81
+00:03:53,022 --> 00:03:55,502
+o erro de treinamento
+nunca vai ficar alto demais,
+
+82
+00:03:55,535 --> 00:03:57,957
+pois modelos
+que se sobreajustam em geral vão bem
+
+83
+00:03:57,990 --> 00:04:00,657
+no conjunto de treinamento,
+pois se ajustam muito bem.
+
+84
+00:04:00,690 --> 00:04:03,508
+O erro de validação cruzada
+nunca vai ficar baixo demais,
+
+85
+00:04:03,541 --> 00:04:05,823
+já que, como vimos,
+modelos que se sobreajustam
+
+86
+00:04:05,856 --> 00:04:08,425
+não vão muito bem
+no conjunto de validação cruzada.
+
+87
+00:04:08,458 --> 00:04:11,950
+Logo, ao aumentarmos o número de
+pontos, as duas curvas se aproximam,
+
+88
+00:04:11,983 --> 00:04:16,409
+mas não convergem num mesmo ponto,
+sempre há uma distância entre elas.
+
+89
+00:04:16,736 --> 00:04:18,792
+Resumindo, aqui temos nossos
+três modelos:
+
+90
+00:04:18,825 --> 00:04:21,466
+o de viés alto, o bom modelo,
+e o de alta variância.
+
+91
+00:04:21,499 --> 00:04:23,660
+E, no modelo de viés alto,
+ou subajustado,
+
+92
+00:04:23,693 --> 00:04:27,270
+as curvas se aproximam
+e convergem em um ponto alto.
+
+93
+00:04:27,669 --> 00:04:32,089
+No modelo bom as curvas se aproximam
+e convergem em um ponto baixo.
+
+94
+00:04:32,419 --> 00:04:34,727
+E no modelo de alta variação,
+ou sobreajustado,
+
+95
+00:04:34,760 --> 00:04:37,149
+as curvas não se aproximam.
+
+96
+00:04:37,182 --> 00:04:40,879
+A de treinamento continua baixa
+e a de validação cruzada fica alta.
+
+97
+00:04:40,912 --> 00:04:45,644
+Essa é uma forma de diferenciar
+o sobreajuste, subajuste e o certo.
+
+98
+00:04:45,677 --> 00:04:49,939
+Vamos olhar as curvas de aprendizado
+e ver que forma elas tomam.
+

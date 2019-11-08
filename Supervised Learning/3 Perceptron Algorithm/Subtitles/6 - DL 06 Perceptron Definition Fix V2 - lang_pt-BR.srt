@@ -1,0 +1,377 @@
+1
+00:00:00,336 --> 00:00:01,696
+Recapitulando:
+
+2
+00:00:01,730 --> 00:00:04,798
+temos nossos dados,
+que são todos esses alunos.
+
+3
+00:00:05,265 --> 00:00:09,400
+Os azuis foram aceitos
+e os vermelhos, rejeitados.
+
+4
+00:00:09,789 --> 00:00:11,047
+E temos nosso modelo,
+
+5
+00:00:11,081 --> 00:00:15,618
+que consiste na equação
+2*Prova+Notas-18,
+
+6
+00:00:15,652 --> 00:00:18,184
+que dá forma
+a esta linha de fronteira
+
+7
+00:00:18,218 --> 00:00:20,517
+que é o ponto
+onde a pontuação é 0
+
+8
+00:00:20,551 --> 00:00:22,204
+e a uma predição.
+
+9
+00:00:22,238 --> 00:00:26,287
+A predição diz que o aluno é aceito
+se a pontuação for positiva ou 0
+
+10
+00:00:26,321 --> 00:00:28,646
+e rejeitado
+se a pontuação for negativa.
+
+11
+00:00:29,017 --> 00:00:31,242
+Agora vou apresentar
+a noção de preceptron,
+
+12
+00:00:31,276 --> 00:00:33,125
+sustentáculo das redes neurais,
+
+13
+00:00:33,159 --> 00:00:36,341
+a codificação de nossa equação
+em um gráfico pequeno.
+
+14
+00:00:36,375 --> 00:00:38,060
+Nós faremos assim:
+
+15
+00:00:38,466 --> 00:00:40,735
+aqui estão os dados
+e a linha de fronteira,
+
+16
+00:00:40,769 --> 00:00:42,467
+que colocamos dentro de um nó.
+
+17
+00:00:42,501 --> 00:00:44,388
+Agora adicionamos nós
+para os inputs,
+
+18
+00:00:44,422 --> 00:00:47,472
+que, nesse caso,
+são a prova e as notas.
+
+19
+00:00:47,893 --> 00:00:50,296
+Aqui vemos um exemplo
+de prova igual a 7
+
+20
+00:00:50,330 --> 00:00:51,870
+e notas igual a 6.
+
+21
+00:00:52,365 --> 00:00:55,713
+O que o perceptron faz
+é projetar os pontos (7,6)
+
+22
+00:00:55,747 --> 00:00:58,977
+e verificar se eles estão
+na área positiva ou negativa.
+
+23
+00:00:59,011 --> 00:01:02,028
+Se estiverem na área positiva,
+ele retorna "sim".
+
+24
+00:01:02,062 --> 00:01:04,950
+Se estiverem na negativa,
+retorna um "não".
+
+25
+00:01:05,484 --> 00:01:07,217
+Vamos lembrar
+que nossa equação
+
+26
+00:01:07,251 --> 00:01:12,491
+é Pontuação=2*Prova+1*Notas-18.
+
+27
+00:01:12,937 --> 00:01:15,378
+E nossa predição trata-se
+de aceitar o aluno
+
+28
+00:01:15,412 --> 00:01:17,556
+caso o resultado
+seja positivo ou zero
+
+29
+00:01:17,590 --> 00:01:19,931
+e rejeitá-lo
+se a pontuação for negativa.
+
+30
+00:01:20,682 --> 00:01:24,964
+Esses pesos 2, 1 e -18...
+
+31
+00:01:25,479 --> 00:01:27,397
+são o que define
+a equação linear,
+
+32
+00:01:27,431 --> 00:01:29,799
+então vou usá-los
+como rótulos dos gráficos.
+
+33
+00:01:30,422 --> 00:01:34,261
+O 2 e o 1 rotulam as bordas
+vindas de x1 e x2,
+
+34
+00:01:34,295 --> 00:01:38,485
+e a unidade-viés -18
+dá rótulo ao nó.
+
+35
+00:01:38,519 --> 00:01:40,602
+Portanto, ao ver um nó
+com esses rótulos,
+
+36
+00:01:40,636 --> 00:01:43,141
+podemos imaginar
+a equação linear que gera.
+
+37
+00:01:44,089 --> 00:01:45,565
+Outra forma de pegar esse nó
+
+38
+00:01:45,599 --> 00:01:47,924
+é considerando o viés
+como parte do input.
+
+39
+00:01:47,958 --> 00:01:51,610
+Como w1 é multiplicado por x1
+e w2 por x2,
+
+40
+00:01:51,644 --> 00:01:54,476
+é natural pensar
+que B seja multiplicado por 1.
+
+41
+00:01:54,809 --> 00:01:58,075
+Então vamos usar B
+para rotular uma borda que vem de 1.
+
+42
+00:01:58,774 --> 00:02:01,220
+Depois, o que o nó faz
+é multiplicar os valores
+
+43
+00:02:01,254 --> 00:02:02,844
+provenientes
+dos nós de entrada
+
+44
+00:02:02,878 --> 00:02:05,190
+pelos valores
+das bordas correspondentes.
+
+45
+00:02:05,607 --> 00:02:07,486
+Depois soma e verifica
+
+46
+00:02:07,520 --> 00:02:10,338
+se o resultado
+é maior ou igual a zero.
+
+47
+00:02:10,372 --> 00:02:14,364
+Se for, o nó retorna "sim",
+que equivale por 1.
+
+48
+00:02:14,398 --> 00:02:18,199
+Se não, o nó retorna um "não"
+ou um valor de 0.
+
+49
+00:02:18,833 --> 00:02:21,219
+Usaremos as duas notações
+nesta aula,
+
+50
+00:02:21,253 --> 00:02:23,561
+a segunda com mais frequência.
+
+51
+00:02:23,595 --> 00:02:26,671
+Em linhas gerais,
+um nó é assim.
+
+52
+00:02:26,705 --> 00:02:30,275
+Temos nosso nó aqui
+e n inputs não param de chegar
+
+53
+00:02:30,613 --> 00:02:33,994
+com valores de x1, xn e 1...
+
+54
+00:02:34,598 --> 00:02:38,340
+e bordas de peso w1 até wn,
+
+55
+00:02:38,374 --> 00:02:41,338
+e B que corresponde
+à unidade-viés.
+
+56
+00:02:41,932 --> 00:02:45,711
+Depois o nó calcula
+a equação linear Wx+B,
+
+57
+00:02:45,745 --> 00:02:49,011
+que é o somatório
+de i=1 até n...
+
+58
+00:02:49,563 --> 00:02:52,724
+de WiXi+b.
+
+59
+00:02:53,364 --> 00:02:56,096
+Então o nó verifica
+se o valor é de 0 ou mais.
+
+60
+00:02:56,130 --> 00:03:00,725
+Se for, o nó retorna
+o valor de 1 para "sim".
+
+61
+00:03:00,759 --> 00:03:04,905
+Se não,
+retorna um valor de 0, "não".
+
+62
+00:03:05,665 --> 00:03:07,657
+Estamos usando
+uma função implícita
+
+63
+00:03:07,691 --> 00:03:09,488
+chamada "função escalonada".
+
+64
+00:03:10,121 --> 00:03:12,377
+O que essa função faz
+é retornar "1"
+
+65
+00:03:12,411 --> 00:03:14,410
+se o input
+for maior ou igual a 0
+
+66
+00:03:14,444 --> 00:03:16,551
+e 0 se o input
+for negativo.
+
+67
+00:03:17,295 --> 00:03:21,335
+Então, em verdade, os perceptrons
+são uma combinação de nós
+
+68
+00:03:21,369 --> 00:03:23,336
+em que o primeiro nó calcula
+
+69
+00:03:23,370 --> 00:03:25,376
+uma equação linear
+com o peso dos inputs
+
+70
+00:03:25,410 --> 00:03:28,373
+e o segundo aplica
+uma função escalonada ao resultado.
+
+71
+00:03:29,180 --> 00:03:30,532
+Representa-se assim:
+
+72
+00:03:30,566 --> 00:03:33,964
+o sinal de somatória representa
+uma função linear no primeiro nó
+
+73
+00:03:33,998 --> 00:03:37,444
+e o desenho representa
+uma função escalonada no segundo.
+
+74
+00:03:37,478 --> 00:03:39,949
+No futuro,
+usaremos outras funções escalonadas,
+
+75
+00:03:39,983 --> 00:03:42,920
+então é bem útil
+especificar no nó.
+
+76
+00:03:43,334 --> 00:03:46,128
+Como vimos, há duas formas
+de representar perceptrons.
+
+77
+00:03:46,162 --> 00:03:47,887
+A da esquerda
+tem uma unidade de viés
+
+78
+00:03:47,921 --> 00:03:50,500
+que vem de um nó de input
+de valor 1,
+
+79
+00:03:50,534 --> 00:03:54,528
+e a da direita
+tem viés dentro do nó.
+

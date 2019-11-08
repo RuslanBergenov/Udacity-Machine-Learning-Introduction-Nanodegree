@@ -1,0 +1,172 @@
+1
+00:00:00,000 --> 00:00:02,895
+Now, let's look at the second metric, which is recall.
+
+2
+00:00:02,895 --> 00:00:05,009
+Recall is the answer to the following question,
+
+3
+00:00:05,009 --> 00:00:07,500
+out of the points that are labeled positive,
+
+4
+00:00:07,500 --> 00:00:10,529
+how many of them were correctly predicted as positive?
+
+5
+00:00:10,529 --> 00:00:13,949
+So in the medical model, a recall is the answer to the following question,
+
+6
+00:00:13,949 --> 00:00:15,359
+out of the sick patients,
+
+7
+00:00:15,359 --> 00:00:18,044
+how many did we correctly diagnose as sick?
+
+8
+00:00:18,045 --> 00:00:19,590
+So remember, precision was,
+
+9
+00:00:19,589 --> 00:00:21,289
+out of the patients were diagnosed as sick,
+
+10
+00:00:21,289 --> 00:00:22,489
+how many were actually sick?
+
+11
+00:00:22,489 --> 00:00:23,959
+But recall is the opposite;
+
+12
+00:00:23,960 --> 00:00:25,460
+out of the patients that are sick,
+
+13
+00:00:25,460 --> 00:00:28,280
+how many did we correctly diagnose as sick?
+
+14
+00:00:28,280 --> 00:00:30,405
+It can be seen as a reach of the algorithm.
+
+15
+00:00:30,405 --> 00:00:33,435
+How many of the positive points did I manage to catch?
+
+16
+00:00:33,435 --> 00:00:35,480
+The answer is calculated with this row.
+
+17
+00:00:35,479 --> 00:00:37,144
+As we can see,
+
+18
+00:00:37,145 --> 00:00:39,930
+this row catches a critical case labeled by an X,
+
+19
+00:00:39,929 --> 00:00:42,835
+so we can see that recall is important in the medical model.
+
+20
+00:00:42,835 --> 00:00:44,380
+Now to calculate recall,
+
+21
+00:00:44,380 --> 00:00:45,450
+we do the following;
+
+22
+00:00:45,450 --> 00:00:47,265
+from the 1,200 sick patients,
+
+23
+00:00:47,265 --> 00:00:49,304
+how many did we diagnose correctly?
+
+24
+00:00:49,304 --> 00:00:52,319
+That's 1,000 divided by 1,200,
+
+25
+00:00:52,319 --> 00:00:54,565
+which is 83.3 percent.
+
+26
+00:00:54,564 --> 00:00:56,969
+This model better have a higher recall because we're trying to
+
+27
+00:00:56,969 --> 00:00:59,905
+correctly catch as many of the sick people as possible.
+
+28
+00:00:59,905 --> 00:01:01,380
+Now in the email model,
+
+29
+00:01:01,380 --> 00:01:02,760
+the recall is defined similarly.
+
+30
+00:01:02,759 --> 00:01:04,259
+It's calculated as follows;
+
+31
+00:01:04,260 --> 00:01:05,820
+from the spam emails,
+
+32
+00:01:05,819 --> 00:01:09,479
+how many of them do we correctly send to the spam folder?
+
+33
+00:01:09,480 --> 00:01:11,299
+The answer is in this row over here.
+
+34
+00:01:11,299 --> 00:01:17,004
+So we have 100 correctly sent to the spam folder divided by 270 total spam emails.
+
+35
+00:01:17,004 --> 00:01:19,804
+It's a low number. It's 37 percent.
+
+36
+00:01:19,805 --> 00:01:24,190
+But remember, we are worried about avoiding this X over here,
+
+37
+00:01:24,189 --> 00:01:25,719
+since we don't mind if we don't catch
+
+38
+00:01:25,719 --> 00:01:28,599
+all the spam emails as long as the ones we caught are spam.
+
+39
+00:01:28,599 --> 00:01:30,969
+So it's okay that this model has a low recall.
+
+40
+00:01:30,969 --> 00:01:33,750
+Now, let's do a similar exercise as before.
+
+41
+00:01:33,750 --> 00:01:35,590
+In this linear model over here,
+
+42
+00:01:35,590 --> 00:01:37,365
+what is the recall?
+
+43
+00:01:37,364 --> 00:01:39,789
+Enter your answer below.
+

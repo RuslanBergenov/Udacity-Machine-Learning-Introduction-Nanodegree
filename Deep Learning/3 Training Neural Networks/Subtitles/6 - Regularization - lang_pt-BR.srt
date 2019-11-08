@@ -1,0 +1,588 @@
+1
+00:00:00,087 --> 00:00:02,780
+A primeira observação é que
+as duas equações
+
+2
+00:00:02,813 --> 00:00:04,659
+nos dão a mesma linha,
+
+3
+00:00:04,692 --> 00:00:08,682
+a linha com a equação
+x1 + x2 = 0.
+
+4
+00:00:08,715 --> 00:00:09,954
+E o motivo para isto
+
+5
+00:00:09,987 --> 00:00:14,898
+é que a solução 2 é apenas
+um múltiplo escalar da solução 1.
+
+6
+00:00:14,931 --> 00:00:16,052
+Vejamos.
+
+7
+00:00:16,085 --> 00:00:18,805
+Lembre-se de que a predição
+é um sigmoide da função linear.
+
+8
+00:00:18,838 --> 00:00:23,421
+Então, no primeiro caso, para 0.11,
+seria sigmoide de 1 + 1,
+
+9
+00:00:23,454 --> 00:00:27,443
+que é sigmoide de 2,
+que é 0.88.
+
+10
+00:00:27,476 --> 00:00:29,179
+Não é ruim,
+já que o ponto é azul,
+
+11
+00:00:29,212 --> 00:00:31,111
+ou seja, tem rótulo 1.
+
+12
+00:00:31,144 --> 00:00:32,661
+Para o ponto (-1, -1),
+
+13
+00:00:32,694 --> 00:00:36,007
+a predição
+é sigmoide de -1 + (- 1),
+
+14
+00:00:36,040 --> 00:00:38,720
+que é sigmoide de -2,
+
+15
+00:00:38,753 --> 00:00:40,963
+que é 0.12.
+
+16
+00:00:40,996 --> 00:00:42,150
+Também não é ruim,
+
+17
+00:00:42,183 --> 00:00:43,818
+já que o rótulo do ponto
+tem um rótulo zero,
+
+18
+00:00:43,851 --> 00:00:45,399
+já que é vermelho.
+
+19
+00:00:45,432 --> 00:00:47,805
+Agora vamos ver o que acontece
+com o segundo modelo.
+
+20
+00:00:47,838 --> 00:00:50,330
+O ponto (1, 1)
+tem uma predição
+
+21
+00:00:50,363 --> 00:00:53,423
+sigmoide de 10 vezes 1,
+mais 10 vezes 1,
+
+22
+00:00:53,456 --> 00:00:55,781
+que é sigmoide de 20.
+
+23
+00:00:55,814 --> 00:01:01,790
+Isto é 0.9999999979,
+
+24
+00:01:01,823 --> 00:01:04,297
+que é bem próximo de 1,
+
+25
+00:01:04,330 --> 00:01:06,003
+portanto é uma ótima predição.
+
+26
+00:01:06,036 --> 00:01:09,254
+E o ponto (-1, -1)
+tem uma predição
+
+27
+00:01:09,287 --> 00:01:13,974
+sigmoide de 10 vezes -1,
+mais 10 vezes -1,
+
+28
+00:01:14,007 --> 00:01:16,678
+que é sigmoide de -20,
+
+29
+00:01:16,711 --> 00:01:23,128
+e isso é 0.0000000021.
+
+30
+00:01:23,161 --> 00:01:27,197
+Isso é bem perto de zero,
+portanto é uma ótima predição.
+
+31
+00:01:27,230 --> 00:01:29,957
+A resposta do teste
+é o segundo modelo.
+
+32
+00:01:29,990 --> 00:01:32,012
+O segundo modelo
+é super preciso.
+
+33
+00:01:32,045 --> 00:01:33,910
+Ou seja, é melhor, certo?
+
+34
+00:01:33,943 --> 00:01:36,410
+Depois da última aula,
+você deve estar um pouco relutante,
+
+35
+00:01:36,443 --> 00:01:39,127
+já que isso aponta um pouco
+para um sobreajuste.
+
+36
+00:01:39,160 --> 00:01:40,812
+E seu palpite está correto.
+
+37
+00:01:40,845 --> 00:01:43,727
+O problema se sobreajusta,
+mas de uma forma sutil.
+
+38
+00:01:43,760 --> 00:01:45,005
+É isto o que está acontecendo,
+
+39
+00:01:45,038 --> 00:01:47,225
+e este é o motivo
+para o segundo modelo ser melhor,
+
+40
+00:01:47,258 --> 00:01:48,988
+mesmo gerando um grande erro.
+
+41
+00:01:49,021 --> 00:01:51,639
+Quando aplicamos o sigmoide
+a pequenos valores,
+
+42
+00:01:51,672 --> 00:01:54,472
+como x1 + x2.
+
+43
+00:01:54,505 --> 00:01:56,279
+temos a função da esquerda,
+
+44
+00:01:56,312 --> 00:01:59,826
+que tem uma boa inclinação
+no gradiente descendente.
+
+45
+00:01:59,859 --> 00:02:03,522
+Quando multiplicamos
+a função linear por 10
+
+46
+00:02:03,555 --> 00:02:07,978
+e pegamos o sigmoide
+de 10x1 + 10x2,
+
+47
+00:02:08,011 --> 00:02:12,256
+nossas predições ficam bem melhores,
+já que ficam mais próximas de 0 e 1.
+
+48
+00:02:12,289 --> 00:02:14,925
+Mas a função fica
+bem mais íngreme,
+
+49
+00:02:14,958 --> 00:02:17,707
+e fica muito mais difícil de fazer
+um gradiente descendente aqui,
+
+50
+00:02:17,740 --> 00:02:20,984
+já que os derivativos
+estão mais próximos de 0
+
+51
+00:02:21,017 --> 00:02:24,569
+e muito grandes quando chegamos
+ao meio da curva.
+
+52
+00:02:24,602 --> 00:02:25,734
+Portanto,
+
+53
+00:02:25,767 --> 00:02:27,994
+para fazer o gradiente descendente
+corretamente,
+
+54
+00:02:28,027 --> 00:02:30,626
+queremos um modelo
+como o da esquerda
+
+55
+00:02:30,659 --> 00:02:33,487
+mais do que um modelo
+como o da direita.
+
+56
+00:02:33,520 --> 00:02:35,376
+De maneira conceitual,
+
+57
+00:02:35,409 --> 00:02:38,077
+o modelo da direita é
+certeiro demais
+
+58
+00:02:38,110 --> 00:02:41,326
+e dá pouco espaço para aplicar
+o gradiente descendente.
+
+59
+00:02:41,359 --> 00:02:42,640
+Também, como podemos imaginar,
+
+60
+00:02:42,673 --> 00:02:45,718
+os pontos classificados
+incorretamente no modelo da direita
+
+61
+00:02:45,751 --> 00:02:47,705
+gerarão erros maiores,
+
+62
+00:02:47,738 --> 00:02:51,044
+e será difícil afinar o modelo
+para corrigi-los.
+
+63
+00:02:51,077 --> 00:02:53,042
+Isso pode ser resumido
+na citação
+
+64
+00:02:53,075 --> 00:02:58,149
+do famoso filósofo e matemático
+"BertrAIND" Russel.
+
+65
+00:02:58,182 --> 00:03:00,870
+"O problema
+da inteligência artificial
+
+66
+00:03:00,903 --> 00:03:03,955
+é que os modelos ruins
+são tão certos sobre si mesmos
+
+67
+00:03:03,988 --> 00:03:07,165
+e os modelos bons
+estão cheios de dúvidas."
+
+68
+00:03:07,198 --> 00:03:08,641
+A questão é,
+
+69
+00:03:08,674 --> 00:03:12,543
+como prevenir
+este tipo de sobreajuste?
+
+70
+00:03:12,576 --> 00:03:14,152
+Não parece fácil,
+
+71
+00:03:14,185 --> 00:03:16,870
+já que modelos ruins
+geram erros menores.
+
+72
+00:03:16,903 --> 00:03:20,698
+O que devemos fazer é modificar
+um pouco a função de erro.
+
+73
+00:03:20,731 --> 00:03:23,957
+Basicamente,
+queremos punir coeficientes altos.
+
+74
+00:03:23,990 --> 00:03:29,757
+Pegamos a função de erro
+e adicionamos um termo,
+
+75
+00:03:29,790 --> 00:03:32,490
+que será grande
+se os pesos forem grandes.
+
+76
+00:03:32,523 --> 00:03:34,391
+Há duas maneiras
+de se fazer isso.
+
+77
+00:03:34,424 --> 00:03:38,873
+Uma é adicionar as somas
+de valores absolutos dos pesos
+
+78
+00:03:38,906 --> 00:03:41,042
+vezes um lambda constante.
+
+79
+00:03:41,075 --> 00:03:44,530
+Outra é adicionar a soma
+dos quadrados dos pesos
+
+80
+00:03:44,563 --> 00:03:46,703
+vezes essa mesma constante.
+
+81
+00:03:46,736 --> 00:03:48,242
+Como pode ver,
+
+82
+00:03:48,275 --> 00:03:51,852
+as duas serão grandes
+se os pesos forem grandes.
+
+83
+00:03:51,885 --> 00:03:53,093
+O parâmetro lambda nos dirá
+
+84
+00:03:53,126 --> 00:03:56,252
+o quanto queremos
+penalizar os coeficientes.
+
+85
+00:03:56,285 --> 00:03:59,000
+Se lambda for grande,
+nós os penalizaremos bastante.
+
+86
+00:03:59,033 --> 00:04:02,765
+E se lambda for pequeno,
+não os penalizaremos muito.
+
+87
+00:04:02,798 --> 00:04:05,625
+E, finalmente, se decidirmos usar
+os valores absolutos,
+
+88
+00:04:05,658 --> 00:04:08,877
+faremos a regularização L1,
+
+89
+00:04:08,910 --> 00:04:10,895
+e se decidirmos usar
+os quadrados,
+
+90
+00:04:10,928 --> 00:04:13,888
+faremos a regularização L2.
+
+91
+00:04:13,921 --> 00:04:15,178
+Ambos são bem populares,
+
+92
+00:04:15,211 --> 00:04:17,852
+e, dependendo dos objetivos
+ou aplicações,
+
+93
+00:04:17,885 --> 00:04:20,181
+aplicamos um ou outro.
+
+94
+00:04:21,716 --> 00:04:23,383
+Aqui estão
+algumas regras gerais
+
+95
+00:04:23,416 --> 00:04:27,573
+para decidir
+entre as regularizações L1 e L2.
+
+96
+00:04:27,606 --> 00:04:29,522
+Quando aplicamos L1,
+
+97
+00:04:29,555 --> 00:04:32,464
+tendemos a terminar
+com vetores esparsos.
+
+98
+00:04:32,497 --> 00:04:36,185
+Ou seja, pesos pequenos
+tenderão a ir para 0.
+
+99
+00:04:36,218 --> 00:04:38,319
+e quisermos reduzir
+o número de pesos
+
+100
+00:04:38,352 --> 00:04:40,270
+e terminar
+com um conjunto pequeno,
+
+101
+00:04:40,303 --> 00:04:42,245
+poderemos usar L1.
+
+102
+00:04:42,278 --> 00:04:44,285
+Isto também é bom
+para seleção de recursos.
+
+103
+00:04:44,318 --> 00:04:47,502
+Às vezes temos um problema
+com centenas de recursos,
+
+104
+00:04:47,535 --> 00:04:50,308
+e a regularização L1
+nos ajuda a selecionar
+
+105
+00:04:50,341 --> 00:04:52,162
+quais são importantes
+
+106
+00:04:52,195 --> 00:04:55,000
+e transforma o resto em 0.
+
+107
+00:04:55,033 --> 00:04:57,125
+L2, por outro lado,
+
+108
+00:04:57,158 --> 00:04:59,069
+tende a não favorecer
+vetores esparsos,
+
+109
+00:04:59,102 --> 00:05:03,164
+já que tenta manter todos os pesos
+homogeneamente pequenos.
+
+110
+00:05:03,197 --> 00:05:04,949
+Esta normalmente
+gera melhores resultados
+
+111
+00:05:04,982 --> 00:05:06,136
+para o treinamento de modelos
+
+112
+00:05:06,169 --> 00:05:08,259
+e é o que mais usaremos.
+
+113
+00:05:08,292 --> 00:05:09,779
+Agora vamos pensar um pouco.
+
+114
+00:05:09,812 --> 00:05:13,697
+Por que a regularização L1
+produz vetores com pesos esparsos
+
+115
+00:05:13,730 --> 00:05:18,614
+e a regularização L2 produz vetores
+com pesos homogeneamente pequenos?
+
+116
+00:05:18,647 --> 00:05:20,766
+Aqui está uma ideia do porquê.
+
+117
+00:05:20,799 --> 00:05:23,087
+Se pegarmos o vetor (0, 1),
+
+118
+00:05:23,120 --> 00:05:26,576
+as somas dos valores absolutos
+dos pesos serão 1,
+
+119
+00:05:26,609 --> 00:05:30,298
+e as somas dos quadrados
+dos pesos também serão 1.
+
+120
+00:05:30,331 --> 00:05:35,635
+Mas se pegarmos
+o vetor (0.5, 0.5),
+
+121
+00:05:35,668 --> 00:05:39,065
+as somas dos valores absolutos
+dos pesos ainda serão 1,
+
+122
+00:05:39,098 --> 00:05:44,248
+mas as somas dos quadrados
+serão 0.25 + 0.25,
+
+123
+00:05:44,281 --> 00:05:46,344
+que é 0.5.
+
+124
+00:05:46,377 --> 00:05:51,724
+Assim, a regularização L2 preferirá
+o ponto vetorial (0.5, 0.5)
+
+125
+00:05:51,757 --> 00:05:53,854
+em relação ao vetor (1, 0),
+
+126
+00:05:53,887 --> 00:05:56,873
+já que ele produz
+uma soma menor de quadrados.
+
+127
+00:05:56,906 --> 00:05:59,626
+E, por sua vez,
+uma função menor.
+

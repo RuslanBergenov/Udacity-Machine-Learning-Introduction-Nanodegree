@@ -1,0 +1,60 @@
+1
+00:00:05,540 --> 00:00:09,030
+Looking at the next category of machine learning,
+
+2
+00:00:09,029 --> 00:00:12,029
+unsupervised learning creates models for
+
+3
+00:00:12,029 --> 00:00:15,189
+data when there are no preexisting labels to train on.
+
+4
+00:00:15,189 --> 00:00:16,530
+So, in a sense,
+
+5
+00:00:16,530 --> 00:00:18,870
+it can be called unsupervised.
+
+6
+00:00:18,870 --> 00:00:23,530
+It turns out that the applications for these techniques are pretty vast,
+
+7
+00:00:23,530 --> 00:00:27,190
+from reducing a dataset to a fewer number of useful features,
+
+8
+00:00:27,190 --> 00:00:29,170
+to grouping similar items,
+
+9
+00:00:29,170 --> 00:00:31,830
+to building music recommendation systems.
+
+10
+00:00:31,829 --> 00:00:36,409
+The final type of machine learning is known as reinforcement learning,
+
+11
+00:00:36,409 --> 00:00:39,649
+which is used to train algorithms that learn based on taking
+
+12
+00:00:39,649 --> 00:00:43,935
+certain actions and receiving rewards for those actions.
+
+13
+00:00:43,935 --> 00:00:48,500
+The applications of reinforcement learning includes self-driving cars and
+
+14
+00:00:48,500 --> 00:00:53,619
+game-playing agents like the recent agent that beat experts at the game of Go.
+
+15
+00:00:53,619 --> 00:01:00,390
+This map gives a nice overview of the prominent areas of machine learning in use today.
+

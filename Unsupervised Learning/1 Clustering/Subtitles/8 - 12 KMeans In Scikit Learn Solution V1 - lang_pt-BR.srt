@@ -1,0 +1,385 @@
+1
+00:00:00,297 --> 00:00:02,281
+No vídeo anterior
+sobre agrupamento,
+
+2
+00:00:02,314 --> 00:00:04,809
+vimos como podemos simular
+o nosso conjunto de dados
+
+3
+00:00:04,842 --> 00:00:08,521
+e, depois, ajustar os dados
+com o modelo k-means
+
+4
+00:00:08,554 --> 00:00:10,673
+e ver quantos clusters
+aparecem.
+
+5
+00:00:10,706 --> 00:00:14,696
+Na sua vez, você tentou fazer isso
+com números diferentes de clusters.
+
+6
+00:00:14,729 --> 00:00:20,641
+Você deve ter criado um modelo
+com 2 clusters em vez de 4,
+
+7
+00:00:21,192 --> 00:00:22,873
+ajustado
+ao seu conjunto de dados
+
+8
+00:00:22,906 --> 00:00:26,241
+e, por fim, previsto
+o seu conjunto de dados
+
+9
+00:00:26,274 --> 00:00:29,441
+para ver como os dados
+ficariam.
+
+10
+00:00:29,474 --> 00:00:32,713
+Podemos ver que esse seria
+o agrupamento com 2 clusters.
+
+11
+00:00:32,746 --> 00:00:36,041
+Podemos, também, tentar com 7.
+
+12
+00:00:36,440 --> 00:00:40,402
+Esse processo
+deve se tornar repetitivo,
+
+13
+00:00:40,435 --> 00:00:45,209
+de modo que você consiga ver
+como ele pode ser estendido
+
+14
+00:00:45,242 --> 00:00:49,673
+a outros algoritmos, porque
+o processo é igual para todos.
+
+15
+00:00:49,706 --> 00:00:52,064
+É isso que aconteceria
+se tivéssemos 7.
+
+16
+00:00:52,097 --> 00:00:55,816
+Note como as cores estão associadas
+a diferentes clusters no diagrama.
+
+17
+00:00:55,849 --> 00:00:58,392
+Por fim,
+após ajustar o k-means,
+
+18
+00:00:58,425 --> 00:01:00,825
+há um método
+que é aplicado aos dados.
+
+19
+00:01:00,858 --> 00:01:04,817
+O escore é a indicação do quão longe
+os pontos estão dos centroides.
+
+20
+00:01:04,850 --> 00:01:07,992
+Aqui, você deve fazer
+de 1 a 10
+
+21
+00:01:08,025 --> 00:01:10,336
+e monitorar o número
+de centroides.
+
+22
+00:01:10,369 --> 00:01:14,045
+Isso demora um pouco, mas...
+
+23
+00:01:14,078 --> 00:01:18,280
+de 1 a 11
+vai nos dar de 1 a 10.
+
+24
+00:01:18,696 --> 00:01:22,340
+Então, para cada centroide
+no intervalo de 1 a 11,
+
+25
+00:01:22,373 --> 00:01:26,568
+porque isso não é inclusivo,
+e isso é,
+
+26
+00:01:27,160 --> 00:01:29,376
+queremos obter um escore
+para cada modelo.
+
+27
+00:01:29,409 --> 00:01:35,387
+Podemos seguir
+esse mesmo passo a passo.
+
+28
+00:01:36,119 --> 00:01:39,560
+Vamos ajustá-lo
+a um certo número de centros.
+
+29
+00:01:40,713 --> 00:01:42,304
+Não precisamos dos rótulos.
+
+30
+00:01:42,337 --> 00:01:45,200
+O que vamos fazer é executar
+esse método score.
+
+31
+00:01:45,673 --> 00:01:47,209
+Vou só me livrar disso.
+
+32
+00:01:47,242 --> 00:01:52,688
+Nós ajustamos o modelo k-means
+e fazemos o escore dele nos dados.
+
+33
+00:01:53,177 --> 00:01:55,472
+Eu vou criar
+um vetor de escores.
+
+34
+00:01:55,505 --> 00:01:59,129
+Vou chamá-lo de "scores".
+Ele será uma lista.
+
+35
+00:01:59,162 --> 00:02:03,520
+Vou escrever
+"scores.append"
+
+36
+00:02:03,553 --> 00:02:06,992
+e acrescentar
+o modelo scores a isso.
+
+37
+00:02:07,025 --> 00:02:12,457
+Vou fazer isso como uma tupla
+em que monitoro o centro e o escore.
+
+38
+00:02:12,490 --> 00:02:16,152
+Isso vai pegar o centro
+e o modelo score,
+
+39
+00:02:16,185 --> 00:02:19,144
+colocá-los em uma tupla
+e anexá-la a essa lista.
+
+40
+00:02:19,177 --> 00:02:22,839
+Ele nos diz para tentarmos
+criar nosso diagrama de declividade.
+
+41
+00:02:22,872 --> 00:02:24,059
+Eu vou criar:
+
+42
+00:02:24,092 --> 00:02:30,376
+"centers =
+list (range(1:11))",
+
+43
+00:02:30,920 --> 00:02:32,679
+porque eu tenho
+essas duas listas.
+
+44
+00:02:32,712 --> 00:02:35,991
+Eu posso criar
+um simples "plt.plot"
+
+45
+00:02:36,024 --> 00:02:38,264
+e o que quer que esteja
+no eixo x,
+
+46
+00:02:38,297 --> 00:02:41,552
+que é, no nosso caso,
+os centros,
+
+47
+00:02:41,585 --> 00:02:43,993
+e o que quer que esteja
+no eixo y,
+
+48
+00:02:44,026 --> 00:02:45,639
+que são os escores.
+
+49
+00:02:45,672 --> 00:02:47,467
+Isso é suficiente.
+
+50
+00:02:47,944 --> 00:02:52,967
+Depois, escrevemos "plt"
+e podemos dar um título a ele.
+
+51
+00:02:53,000 --> 00:02:55,112
+Vamos chamá-lo
+de "Scree Plot".
+
+52
+00:02:55,145 --> 00:02:56,696
+E...
+
+53
+00:02:57,305 --> 00:03:02,240
+"plt.xlabel", que é o número
+de centros,
+
+54
+00:03:02,273 --> 00:03:08,618
+e, depois, "plt.ylabel",
+que é o escore,
+
+55
+00:03:08,651 --> 00:03:14,297
+ou a distância média
+do centroide.
+
+56
+00:03:14,744 --> 00:03:16,272
+Vamos ver se vai dar erro.
+
+57
+00:03:16,807 --> 00:03:18,030
+E deu.
+
+58
+00:03:18,063 --> 00:03:20,999
+Foi um erro de sintaxe.
+Aqui é uma vírgula.
+
+59
+00:03:21,455 --> 00:03:24,103
+Deve ser um valor absoluto.
+
+60
+00:03:24,136 --> 00:03:26,160
+O Python faz
+uma coisa esquisita...
+
+61
+00:03:27,280 --> 00:03:28,898
+Pronto.
+
+62
+00:03:28,931 --> 00:03:31,599
+O Python faz uma coisa de querer
+que todos os escores,
+
+63
+00:03:31,632 --> 00:03:34,840
+ao ficarem menores,
+sejam piores.
+
+64
+00:03:34,873 --> 00:03:38,064
+Nesse caso, se pegarmos
+o valor absoluto...
+
+65
+00:03:38,097 --> 00:03:42,160
+É meio esquisito, mas esse valor
+absoluto é a distância real,
+
+66
+00:03:42,193 --> 00:03:44,512
+que, antes, era
+o valor negativo disso,
+
+67
+00:03:44,545 --> 00:03:48,567
+e isso por causa do modo
+que o sickit-learn faz os escores.
+
+68
+00:03:48,600 --> 00:03:53,824
+Baseado nisso, note que essa queda
+é o elbow, é onde fica plano.
+
+69
+00:03:53,857 --> 00:03:57,760
+Até o 4 há uma queda substancial
+na distância média.
+
+70
+00:03:57,793 --> 00:04:00,575
+Depois, ela é estabilizada.
+
+71
+00:04:00,608 --> 00:04:02,735
+E, se notarmos isso...
+
+72
+00:04:02,768 --> 00:04:05,800
+Ótimo! Note como eles
+são bem parecidos.
+
+73
+00:04:05,833 --> 00:04:09,184
+Usando o diagrama de declividade,
+quantos grupos você sugere?
+
+74
+00:04:09,217 --> 00:04:12,808
+E, sem nenhuma surpresa,
+vamos sugerir o mesmo número
+
+75
+00:04:12,841 --> 00:04:14,344
+que vimos antes.
+
+76
+00:04:14,377 --> 00:04:17,048
+Isso mesmo. Podemos ver
+que os dados tinham 4 clusters.
+
+77
+00:04:17,081 --> 00:04:18,655
+O Will Ferrell
+está muito feliz.
+
+78
+00:04:18,688 --> 00:04:21,192
+Vemos um grande desnivelamento
+depois de 4 clusters.
+
+79
+00:04:21,225 --> 00:04:24,696
+Essa é só uma célula para você
+escrever a sua resposta.
+
+80
+00:04:24,729 --> 00:04:28,415
+"Eu sugiro 4".
+Ótimo!
+

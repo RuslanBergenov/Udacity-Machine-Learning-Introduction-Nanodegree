@@ -1,0 +1,57 @@
+1
+00:00:01,022 --> 00:00:04,155
+REVISÃO
+
+2
+00:00:04,705 --> 00:00:07,623
+Bom trabalho por ter completado
+a aula sobre PCA.
+
+3
+00:00:07,656 --> 00:00:09,969
+Não é um tópico
+fácil de aprender,
+
+4
+00:00:10,002 --> 00:00:12,574
+então parabéns
+por ter chegado até aqui.
+
+5
+00:00:12,607 --> 00:00:14,490
+Falamos sobre muita coisa
+nesta aula,
+
+6
+00:00:14,523 --> 00:00:17,782
+então deixei uma revisão em texto
+na próxima página para você.
+
+7
+00:00:17,815 --> 00:00:19,303
+Na aula final,
+
+8
+00:00:19,336 --> 00:00:22,214
+você vai aprender sobre análise
+de componentes independentes,
+
+9
+00:00:22,247 --> 00:00:24,407
+ou ICA, com Jay.
+
+10
+00:00:24,440 --> 00:00:28,616
+É outra técnica de aprendizagem
+não supervisionada similar à PCA.
+
+11
+00:00:28,649 --> 00:00:31,589
+Ele vai mostrar
+uma implementação legal da técnica
+
+12
+00:00:31,622 --> 00:00:35,365
+com um piano, um violoncelo
+e uma televisão.
+

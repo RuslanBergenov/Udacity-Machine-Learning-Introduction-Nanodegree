@@ -1,0 +1,136 @@
+1
+00:00:00,000 --> 00:00:03,299
+Okay, now, let's get into a slightly more complicated problem.
+
+2
+00:00:03,299 --> 00:00:07,199
+Let's look at this dataset over here and two possible boundary lines.
+
+3
+00:00:07,200 --> 00:00:10,019
+There's this one here and this one over here.
+
+4
+00:00:10,019 --> 00:00:11,806
+And now I want you to think,
+
+5
+00:00:11,807 --> 00:00:15,044
+which one of these two looks better?
+
+6
+00:00:15,044 --> 00:00:19,649
+So, maybe some of you said the one on the left and some of you said the one on the right.
+
+7
+00:00:19,649 --> 00:00:21,644
+In reality, there's no answer.
+
+8
+00:00:21,644 --> 00:00:24,059
+In some cases, we'll prefer the one on the left
+
+9
+00:00:24,059 --> 00:00:26,789
+and in some cases we'll prefer the one on the right.
+
+10
+00:00:26,789 --> 00:00:28,649
+If it's a medical model, for example,
+
+11
+00:00:28,649 --> 00:00:30,552
+we wouldn't want to make any mistakes,
+
+12
+00:00:30,553 --> 00:00:32,300
+so we'd prefer the one on the right.
+
+13
+00:00:32,299 --> 00:00:33,699
+But maybe in other cases,
+
+14
+00:00:33,700 --> 00:00:35,800
+we'll prefer the one on the left because we're okay making
+
+15
+00:00:35,799 --> 00:00:38,604
+some mistakes as long as we have a well-spaced boundary.
+
+16
+00:00:38,604 --> 00:00:42,009
+So, it depends a lot on the data and the problem that we're approaching,
+
+17
+00:00:42,009 --> 00:00:44,814
+which means that we need some flexibility here.
+
+18
+00:00:44,814 --> 00:00:48,759
+That flexibility is going to be provided by the C parameter.
+
+19
+00:00:48,759 --> 00:00:54,204
+The C parameter is just a constant that attaches itself to the classification error.
+
+20
+00:00:54,204 --> 00:00:58,195
+That means, we multiply the classification error by the constant.
+
+21
+00:00:58,195 --> 00:01:00,160
+So what happens is the following.
+
+22
+00:01:00,159 --> 00:01:01,959
+If we have a very large C,
+
+23
+00:01:01,960 --> 00:01:04,540
+then the error is mostly the classification error,
+
+24
+00:01:04,540 --> 00:01:09,035
+so we're focusing more on correctly classifying our points than in finding a good margin.
+
+25
+00:01:09,034 --> 00:01:10,500
+But if the C is very small,
+
+26
+00:01:10,500 --> 00:01:12,269
+then the error is mostly a margin error,
+
+27
+00:01:12,269 --> 00:01:16,905
+so we're focusing mostly on a large margin than on classifying the points correctly.
+
+28
+00:01:16,905 --> 00:01:19,540
+So, here's a cheat sheet for you to remember.
+
+29
+00:01:19,540 --> 00:01:23,790
+A small C is going to give you a large margin and then make some classification errors,
+
+30
+00:01:23,790 --> 00:01:26,100
+whereas a large C will classify points very
+
+31
+00:01:26,099 --> 00:01:29,280
+well but the payoff will be that it may have a very small margin.
+
+32
+00:01:29,280 --> 00:01:30,945
+And the C is a hyperparameter,
+
+33
+00:01:30,944 --> 00:01:32,369
+and in order to tune it correctly,
+
+34
+00:01:32,370 --> 00:01:35,800
+we'll have to use techniques such as grid search, et cetera.
+

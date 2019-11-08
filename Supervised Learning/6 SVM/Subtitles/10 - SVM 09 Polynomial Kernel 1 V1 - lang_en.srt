@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:01,470
+Okay, so quick recap.
+
+2
+00:00:01,470 --> 00:00:05,075
+Here, we have a very easy classification problem with blue and red points.
+
+3
+00:00:05,075 --> 00:00:07,860
+On our model, we'll just make a cut here.
+
+4
+00:00:07,860 --> 00:00:09,810
+As a matter of fact, the SVM model will make this
+
+5
+00:00:09,810 --> 00:00:12,179
+cut with two lines that maximize this margin,
+
+6
+00:00:12,179 --> 00:00:14,469
+separating the points as much as possible.
+
+7
+00:00:14,470 --> 00:00:16,515
+But let's get a bit more complicated.
+
+8
+00:00:16,515 --> 00:00:18,760
+What about this arrangement of points?
+
+9
+00:00:18,760 --> 00:00:21,470
+All of a sudden, a line won't cut it.
+
+10
+00:00:21,469 --> 00:00:25,854
+What we need is a more complex model. Well, here's an idea.
+
+11
+00:00:25,855 --> 00:00:27,120
+Our points are in a line,
+
+12
+00:00:27,120 --> 00:00:29,065
+but here we see them on a plane.
+
+13
+00:00:29,065 --> 00:00:30,300
+Let's exploit that.
+
+14
+00:00:30,300 --> 00:00:33,179
+Let's switch from a one-dimensional problem, the line,
+
+15
+00:00:33,179 --> 00:00:34,994
+to a two-dimensional problem,
+
+16
+00:00:34,994 --> 00:00:38,849
+the plane, by adding a y axis.
+
+17
+00:00:38,850 --> 00:00:40,315
+And now, let's use a parabola.
+
+18
+00:00:40,314 --> 00:00:43,259
+Let's draw the function y equals x squared.
+
+19
+00:00:43,259 --> 00:00:47,640
+And now, let's lift every point to its corresponding place in the parabola.
+
+20
+00:00:47,640 --> 00:00:50,804
+All of a sudden, our points are nicely separable because now,
+
+21
+00:00:50,804 --> 00:00:52,664
+using the original SVM algorithm,
+
+22
+00:00:52,664 --> 00:00:54,304
+we can find a good cut.
+
+23
+00:00:54,304 --> 00:00:55,905
+Let's say it's this line,
+
+24
+00:00:55,905 --> 00:00:57,975
+the line y equals four.
+
+25
+00:00:57,975 --> 00:00:59,234
+So, now the question is,
+
+26
+00:00:59,234 --> 00:01:02,990
+how do we bring this back to the line and find the boundary there?
+
+27
+00:01:02,990 --> 00:01:07,504
+Well, very simple, our original equation is y equals x squared.
+
+28
+00:01:07,504 --> 00:01:09,909
+Our line is y equals four.
+
+29
+00:01:09,909 --> 00:01:11,414
+How did these two combine?
+
+30
+00:01:11,415 --> 00:01:12,915
+Well, by equating them,
+
+31
+00:01:12,915 --> 00:01:15,445
+we get x squared equals four.
+
+32
+00:01:15,444 --> 00:01:16,994
+That's our new equation.
+
+33
+00:01:16,995 --> 00:01:18,980
+And what is x squared equals four?
+
+34
+00:01:18,980 --> 00:01:21,780
+That factors into two linear polynomials with solutions x
+
+35
+00:01:21,780 --> 00:01:25,234
+equals two and x equals minus two.
+
+36
+00:01:25,234 --> 00:01:27,224
+So, those will make our boundary.
+
+37
+00:01:27,224 --> 00:01:31,250
+And now magic, we bring this down to the line again and we have our x
+
+38
+00:01:31,250 --> 00:01:35,939
+equals two and our x equals minus two as the boundaries for this model.
+
+39
+00:01:35,939 --> 00:01:38,259
+Notice that they split the data really well.
+
+40
+00:01:38,260 --> 00:01:42,230
+The trick is known as the Kernel Trick and it's widely used in Support Vector Machines,
+
+41
+00:01:42,230 --> 00:01:44,450
+as well as many other algorithms in machine learning.
+

@@ -1,0 +1,28 @@
+1
+00:00:04,519 --> 00:00:07,979
+In this lesson, you'll get a high level look
+
+2
+00:00:07,980 --> 00:00:11,130
+at the field of machine learning and how it's evolved.
+
+3
+00:00:11,130 --> 00:00:15,810
+We'll discuss a bit of the history about how machine learning has progressed.
+
+4
+00:00:15,810 --> 00:00:17,670
+At the end of the lesson,
+
+5
+00:00:17,670 --> 00:00:20,400
+we'll discuss some emerging technologies and how we think
+
+6
+00:00:20,399 --> 00:00:25,269
+machine learning applications will change much of how the world works today from health,
+
+7
+00:00:25,269 --> 00:00:28,039
+to transportation, to communication.
+

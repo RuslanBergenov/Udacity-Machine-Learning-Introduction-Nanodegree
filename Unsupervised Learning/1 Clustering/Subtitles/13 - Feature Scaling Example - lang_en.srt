@@ -1,0 +1,76 @@
+1
+00:00:04,160 --> 00:00:06,750
+Consider this dataset.
+
+2
+00:00:06,750 --> 00:00:09,970
+On the x-axis is the amount of time in minutes it
+
+3
+00:00:09,970 --> 00:00:13,750
+takes to run five kilometers for 100 individuals.
+
+4
+00:00:13,750 --> 00:00:21,320
+On the y-axis is each individual score on a standardized test on a scale from 200 to 800.
+
+5
+00:00:21,320 --> 00:00:24,079
+Notice that this provides two clusters,
+
+6
+00:00:24,079 --> 00:00:28,375
+one exists up here at the top for those with higher test scores,
+
+7
+00:00:28,375 --> 00:00:31,925
+and another exists here for those with lower test scores.
+
+8
+00:00:31,925 --> 00:00:37,219
+However, let's say we change the x-axis to represent seconds instead,
+
+9
+00:00:37,219 --> 00:00:40,524
+and the y-axis to represent test scores.
+
+10
+00:00:40,524 --> 00:00:42,810
+Then we have two different clusters,
+
+11
+00:00:42,810 --> 00:00:45,210
+one for those with faster running times,
+
+12
+00:00:45,210 --> 00:00:48,155
+and another set for those with slower running times.
+
+13
+00:00:48,155 --> 00:00:51,450
+When using minutes, the computed distance between
+
+14
+00:00:51,450 --> 00:00:54,840
+individuals is smaller than when using seconds.
+
+15
+00:00:54,840 --> 00:00:58,859
+Similarly, we have larger distances between individuals when
+
+16
+00:00:58,859 --> 00:01:03,090
+using lower test scores rather than standardized test scores.
+
+17
+00:01:03,090 --> 00:01:05,340
+This is just one example of how
+
+18
+00:01:05,340 --> 00:01:09,320
+feature scaling might change the final clusters determined by a model.
+
+19
+00:01:09,319 --> 00:01:14,639
+For this reason, it's important to standardize your data before clustering.
+

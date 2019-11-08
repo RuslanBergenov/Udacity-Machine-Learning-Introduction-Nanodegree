@@ -1,0 +1,240 @@
+1
+00:00:00,000 --> 00:00:03,754
+Now that you've seen how the PCA library works in scikit-learn,
+
+2
+00:00:03,754 --> 00:00:06,574
+and you fit it to the handwritten digits dataset,
+
+3
+00:00:06,575 --> 00:00:09,300
+we should take a closer look at exactly what
+
+4
+00:00:09,300 --> 00:00:12,554
+PCA gives us back and what these different parts mean.
+
+5
+00:00:12,554 --> 00:00:15,394
+Let's pick up where we left off in the last video.
+
+6
+00:00:15,394 --> 00:00:18,030
+Here, I've read in the necessary libraries and
+
+7
+00:00:18,030 --> 00:00:20,785
+split the image data into a label and the features,
+
+8
+00:00:20,785 --> 00:00:22,795
+which are the pixels in the actual image.
+
+9
+00:00:22,795 --> 00:00:24,804
+Let's take a look at the top 30.
+
+10
+00:00:24,804 --> 00:00:28,054
+Now, using the do_PCA function you saw earlier,
+
+11
+00:00:28,054 --> 00:00:29,940
+let's create the PCA model,
+
+12
+00:00:29,940 --> 00:00:32,484
+as well as the X_PCA component.
+
+13
+00:00:32,484 --> 00:00:34,884
+If we look at the PCA model,
+
+14
+00:00:34,884 --> 00:00:39,589
+we can hit dot tab to see a whole bunch of things that are available on this.
+
+15
+00:00:39,590 --> 00:00:42,485
+Some of the things that I usually pay attention to are,
+
+16
+00:00:42,484 --> 00:00:46,460
+so there's explained_variance_ratio, is usually really helpful,
+
+17
+00:00:46,460 --> 00:00:48,674
+and the number of components,
+
+18
+00:00:48,674 --> 00:00:50,334
+the number of features.
+
+19
+00:00:50,335 --> 00:00:53,579
+If you look at your PCA model and put a dot tab,
+
+20
+00:00:53,579 --> 00:00:55,983
+you can see a bunch of things that are available.
+
+21
+00:00:55,984 --> 00:00:59,545
+Let's take a look at what some of these things do for our model.
+
+22
+00:00:59,545 --> 00:01:01,325
+So, in the notebook below,
+
+23
+00:01:01,325 --> 00:01:03,710
+you'll see there's the scree_plot function.
+
+24
+00:01:03,710 --> 00:01:08,500
+This function plots the amount of variance explained by each component.
+
+25
+00:01:08,500 --> 00:01:10,234
+Let's see what this looks like.
+
+26
+00:01:10,234 --> 00:01:12,715
+Notice that we have 15 bars,
+
+27
+00:01:12,715 --> 00:01:15,890
+each associated with one of our principle components.
+
+28
+00:01:15,890 --> 00:01:17,219
+If you remember, up here,
+
+29
+00:01:17,219 --> 00:01:20,250
+we fit 15 principal components.
+
+30
+00:01:20,250 --> 00:01:24,109
+Then, the height of the bar is the amount of variability from
+
+31
+00:01:24,109 --> 00:01:27,814
+the original feature set that's explained by that component.
+
+32
+00:01:27,814 --> 00:01:29,483
+So, for our first component,
+
+33
+00:01:29,483 --> 00:01:32,598
+six percent of the available variability
+
+34
+00:01:32,599 --> 00:01:35,450
+and all of the data is explained by that component.
+
+35
+00:01:35,450 --> 00:01:37,325
+Then, for the second component,
+
+36
+00:01:37,325 --> 00:01:41,645
+4.29 percent of the total variability is explained by that component,
+
+37
+00:01:41,644 --> 00:01:43,424
+and so on and so forth.
+
+38
+00:01:43,424 --> 00:01:46,819
+The total amount of variability explained by all
+
+39
+00:01:46,819 --> 00:01:49,949
+15 of the first component is about 35 percent,
+
+40
+00:01:49,950 --> 00:01:51,620
+which you can see by this line.
+
+41
+00:01:51,620 --> 00:01:55,490
+These principal components can help you understand how many you want to
+
+42
+00:01:55,489 --> 00:01:59,509
+keep because of how much variance in the original data as I explained.
+
+43
+00:01:59,510 --> 00:02:04,385
+This is one way to create a metric for an unsupervised algorithm.
+
+44
+00:02:04,385 --> 00:02:07,609
+This is one way to understand how well
+
+45
+00:02:07,609 --> 00:02:12,574
+unsupervised algorithm is doing at predicting what's happening with your data.
+
+46
+00:02:12,574 --> 00:02:15,169
+The other thing that we should look at is how
+
+47
+00:02:15,169 --> 00:02:18,655
+these components relate back to the original images.
+
+48
+00:02:18,655 --> 00:02:22,925
+The next function that you see in the notebook is called plot_component.
+
+49
+00:02:22,925 --> 00:02:25,850
+What this does is it highlights the pixels
+
+50
+00:02:25,849 --> 00:02:28,894
+in the image that are important for each component.
+
+51
+00:02:28,895 --> 00:02:30,995
+So, if we look at the first component,
+
+52
+00:02:30,995 --> 00:02:33,500
+the zero's component using this function,
+
+53
+00:02:33,500 --> 00:02:37,544
+you can see that it's probably picking out zeros from your dataset.
+
+54
+00:02:37,544 --> 00:02:39,844
+If we look at other components,
+
+55
+00:02:39,844 --> 00:02:43,864
+you can see that this is picking out some other patterns in the images
+
+56
+00:02:43,864 --> 00:02:48,400
+that are related to being able to differentiate them from one another.
+
+57
+00:02:48,400 --> 00:02:51,650
+Essentially, these bright yellow pixels or
+
+58
+00:02:51,650 --> 00:02:55,685
+heavy weights and these darker blue pixels are lighter weights
+
+59
+00:02:55,685 --> 00:02:59,585
+associated with how much that pixel matters
+
+60
+00:02:59,585 --> 00:03:03,070
+for this particular component. Now, it's your turn.
+

@@ -1,0 +1,256 @@
+1
+00:00:00,000 --> 00:00:02,879
+so now that we've learned the absolute trick and the square trick,
+
+2
+00:00:02,879 --> 00:00:04,620
+and how they're used in linear regression,
+
+3
+00:00:04,620 --> 00:00:08,504
+we still want to have some intuition on how these things get figured out.
+
+4
+00:00:08,505 --> 00:00:10,800
+These tricks still seem a little too magical,
+
+5
+00:00:10,800 --> 00:00:14,595
+and we'd like to find their origin so let's do this in a much more formal way.
+
+6
+00:00:14,595 --> 00:00:18,269
+Let's say we have our points on our plan is to develop an algorithm which
+
+7
+00:00:18,269 --> 00:00:21,757
+will find the line that best fits this set of points.
+
+8
+00:00:21,757 --> 00:00:23,509
+And the algorithm works like this,
+
+9
+00:00:23,510 --> 00:00:25,250
+first it will draw a random line,
+
+10
+00:00:25,250 --> 00:00:27,035
+and it'll calculate the error.
+
+11
+00:00:27,035 --> 00:00:32,195
+The error is some measure of how far the points are from the line,
+
+12
+00:00:32,195 --> 00:00:35,960
+in this drawing it looks like it's the sum of these distances but it could
+
+13
+00:00:35,960 --> 00:00:39,417
+be any measure that tells us how far we are from the points.
+
+14
+00:00:39,417 --> 00:00:43,100
+Now we're going to move the line around and see if we can decrease this error.
+
+15
+00:00:43,100 --> 00:00:45,500
+We move in this direction and we see that
+
+16
+00:00:45,500 --> 00:00:49,174
+the error kind of increases so that's not the way to go.
+
+17
+00:00:49,174 --> 00:00:53,881
+So we move in the other direction and see that the error decreased,
+
+18
+00:00:53,881 --> 00:00:56,359
+so we pick this one and stay there.
+
+19
+00:00:56,359 --> 00:01:00,019
+Now we'll repeat the process many times over and over every time
+
+20
+00:01:00,020 --> 00:01:03,680
+descending the error a bit until we get to the perfect line.
+
+21
+00:01:03,679 --> 00:01:04,924
+So to minimize this error,
+
+22
+00:01:04,924 --> 00:01:07,144
+we're going to use something called gradient descent.
+
+23
+00:01:07,144 --> 00:01:09,229
+So let me talk a bit about gradient descent,
+
+24
+00:01:09,230 --> 00:01:11,840
+the way it works is we're standing here on top of a mountain.
+
+25
+00:01:11,840 --> 00:01:16,400
+This is called Mt rainierror as it measures how big our error is,
+
+26
+00:01:16,400 --> 00:01:18,859
+and wanted descend from this mountain in order to
+
+27
+00:01:18,859 --> 00:01:22,234
+descend from this mountain we need to minimize our height.
+
+28
+00:01:22,234 --> 00:01:25,894
+And on the left, we have a problem of fitting the line to the data,
+
+29
+00:01:25,894 --> 00:01:30,844
+which we can do by minimizing the error or the distance from the line to the points.
+
+30
+00:01:30,844 --> 00:01:35,923
+So descending from the mountain is equivalent to getting the line closer to the points.
+
+31
+00:01:35,923 --> 00:01:37,100
+Now, if we wanted to descend from
+
+32
+00:01:37,099 --> 00:01:39,229
+the mountain we would look at the directions where we can walk
+
+33
+00:01:39,230 --> 00:01:43,228
+down and find the one that makes us descend the most.
+
+34
+00:01:43,227 --> 00:01:44,674
+And let's say this is the direction,
+
+35
+00:01:44,674 --> 00:01:46,924
+so we descend a bit in this direction,
+
+36
+00:01:46,924 --> 00:01:51,149
+this is equivalent to getting the line a little bit closer to the points.
+
+37
+00:01:51,150 --> 00:01:53,300
+So now our height is smaller because we're closer to
+
+38
+00:01:53,299 --> 00:01:56,734
+the points since our distance to them is smaller.
+
+39
+00:01:56,734 --> 00:01:59,329
+And again and again we look at what makes us descend the most
+
+40
+00:01:59,329 --> 00:02:02,112
+from the mountain and let's say we get here.
+
+41
+00:02:02,112 --> 00:02:04,909
+Now we're at a point where we're descended from the mountain and on
+
+42
+00:02:04,909 --> 00:02:08,585
+the right we found the line that is very close to our points.
+
+43
+00:02:08,585 --> 00:02:12,500
+Thus, we've solved our problem and that is gradient descent.
+
+44
+00:02:12,500 --> 00:02:15,090
+In a more mathematical way what happens is the following,
+
+45
+00:02:15,090 --> 00:02:17,560
+we have a plot and here's a plot in two dimensions
+
+46
+00:02:17,560 --> 00:02:20,640
+allowing a reality that plot will be in higher dimensions.
+
+47
+00:02:20,639 --> 00:02:24,024
+We have our weights on the x-axis and our error on the y-axis.
+
+48
+00:02:24,025 --> 00:02:27,115
+And we have an error function that looks like this,
+
+49
+00:02:27,115 --> 00:02:30,550
+we're standing over here and the way to descend is to actually take
+
+50
+00:02:30,550 --> 00:02:34,435
+the derivative or gradient of the error function with respect to the weights.
+
+51
+00:02:34,435 --> 00:02:38,409
+This gradient is going to point to a direction where the function increases the most.
+
+52
+00:02:38,409 --> 00:02:41,079
+Therefore, the negative of this gradient is going to point
+
+53
+00:02:41,080 --> 00:02:44,140
+down in the direction where the function decreases the most.
+
+54
+00:02:44,139 --> 00:02:48,864
+So what we do is we take a step in the direction of the negative of that gradient,
+
+55
+00:02:48,865 --> 00:02:52,330
+this means we are taking our weights wi and changing them to
+
+56
+00:02:52,330 --> 00:02:56,500
+wi minus the derivative of the error with respect to wi.
+
+57
+00:02:56,500 --> 00:02:59,080
+In real life we'll be multiplying this derivative by
+
+58
+00:02:59,080 --> 00:03:01,855
+the learning rate since we want to make small steps.
+
+59
+00:03:01,854 --> 00:03:05,844
+This means the error function is decreasing and we're closer to the minimum.
+
+60
+00:03:05,844 --> 00:03:08,439
+If we do this several times we get to
+
+61
+00:03:08,439 --> 00:03:11,514
+either a minimum or a pretty good value where the error is small.
+
+62
+00:03:11,514 --> 00:03:13,539
+Once we get to the point that we've reached
+
+63
+00:03:13,539 --> 00:03:16,179
+a pretty good solution for our linear regression problem,
+
+64
+00:03:16,180 --> 00:03:18,719
+and that's what gradient descent is all about
+

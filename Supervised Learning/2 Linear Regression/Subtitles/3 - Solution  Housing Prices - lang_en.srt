@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:01,500
+Well to help us out,
+
+2
+00:00:01,500 --> 00:00:04,919
+we can see that these points can form a line.
+
+3
+00:00:04,919 --> 00:00:09,089
+And we can draw the line that best fits this data.
+
+4
+00:00:09,089 --> 00:00:13,500
+Now on this line, we can see that our best guess for the price of the house is this point
+
+5
+00:00:13,500 --> 00:00:18,660
+here over the line which corresponds to $120000.
+
+6
+00:00:18,660 --> 00:00:22,685
+So if you said $120000, that is correct.
+
+7
+00:00:22,684 --> 00:00:25,859
+This method is known as linear regression.
+
+8
+00:00:25,859 --> 00:00:28,530
+You can think of linear regression as a painter who would look at
+
+9
+00:00:28,530 --> 00:00:31,914
+your data and draw the best fitting line through it.
+
+10
+00:00:31,914 --> 00:00:34,829
+And you may ask, "How do we find this line?"
+
+11
+00:00:34,829 --> 00:00:37,000
+Well, that's what the rest of the section will be about.
+

@@ -1,0 +1,211 @@
+1
+00:00:00,021 --> 00:00:01,233
+Comecemos com um exemplo:
+
+2
+00:00:01,283 --> 00:00:03,604
+considere um escritório
+com duas pessoas,
+
+3
+00:00:03,654 --> 00:00:05,239
+Alex e Brenda.
+
+4
+00:00:05,289 --> 00:00:07,856
+Os dois estão lá
+pela mesma quantidade de tempo.
+
+5
+00:00:07,906 --> 00:00:11,454
+Certo dia, no escritório,
+vemos alguém passar voando.
+
+6
+00:00:11,504 --> 00:00:14,708
+Não sabemos quem é,
+mas queremos adivinhar.
+
+7
+00:00:14,758 --> 00:00:17,747
+Por ora, com o que sabemos,
+só podemos inferir que,
+
+8
+00:00:17,797 --> 00:00:20,960
+se eles passam o mesmo
+tempo no escritório,
+
+9
+00:00:21,010 --> 00:00:24,343
+a probabilidade de a pessoa
+ser o Alex é 50%
+
+10
+00:00:24,393 --> 00:00:27,744
+e a probabilidade de ser a Brenda
+também é 50%.
+
+11
+00:00:28,307 --> 00:00:30,247
+Vamos buscar mais informações
+
+12
+00:00:30,297 --> 00:00:33,197
+para podermos chutar melhor
+quem era a pessoa.
+
+13
+00:00:33,584 --> 00:00:35,535
+Quando vimos
+a pessoa correndo,
+
+14
+00:00:35,585 --> 00:00:38,186
+notamos que ela usava
+um pulôver vermelho.
+
+15
+00:00:38,563 --> 00:00:40,603
+Vamos usar essa informação.
+
+16
+00:00:40,653 --> 00:00:42,755
+Conhecemos Alex e Brenda
+há algum tempo,
+
+17
+00:00:42,805 --> 00:00:45,546
+e já percebemos que o Alex
+usa pulôver vermelho
+
+18
+00:00:45,596 --> 00:00:46,764
+duas vezes por semana.
+
+19
+00:00:46,814 --> 00:00:49,553
+Já a Brenda usa pulôver vermelho
+três vezes por semana.
+
+20
+00:00:49,603 --> 00:00:52,498
+Não sabemos em quais dias,
+mas a frequência é essa.
+
+21
+00:00:52,548 --> 00:00:55,348
+Quando falamos em semana,
+nos referimos a dias úteis,
+
+22
+00:00:55,398 --> 00:00:57,618
+muito embora
+isso não mude nada.
+
+23
+00:00:57,668 --> 00:00:59,178
+O que faremos agora
+
+24
+00:00:59,228 --> 00:01:03,134
+é usar essa informação
+para dar um palpite melhor.
+
+25
+00:01:03,184 --> 00:01:06,484
+Para começar, como Alex usa
+pulôver vermelho menos que Brenda,
+
+26
+00:01:06,534 --> 00:01:08,689
+é fácil concluir
+que é menos provável
+
+27
+00:01:08,739 --> 00:01:12,175
+que a pessoa seja Alex
+e não Brenda.
+
+28
+00:01:12,225 --> 00:01:13,850
+Mas provável quanto?
+
+29
+00:01:13,900 --> 00:01:17,600
+Bem, digamos que, se virmos
+uma pessoa passar cinco vezes
+
+30
+00:01:17,650 --> 00:01:20,492
+faria sentido crer
+que em duas vezes era o Alex,
+
+31
+00:01:20,542 --> 00:01:22,908
+que usa pulôver vermelho
+duas vezes por semana,
+
+32
+00:01:22,958 --> 00:01:24,708
+e nas outras três vezes
+era a Brenda,
+
+33
+00:01:24,758 --> 00:01:27,394
+que usa três vezes
+por semana.
+
+34
+00:01:27,444 --> 00:01:33,153
+Partindo disso, podemos inferir
+que as probabilidades são 40% e 60%.
+
+35
+00:01:33,641 --> 00:01:35,794
+Usamos a informação
+sobre a cor do pulôver
+
+36
+00:01:35,844 --> 00:01:37,751
+para obter
+melhores probabilidades
+
+37
+00:01:37,801 --> 00:01:40,292
+sobre quem foi
+que passou correndo.
+
+38
+00:01:40,678 --> 00:01:44,518
+Isso é Teorema de Bayes,
+que veremos a fundo a seguir.
+
+39
+00:01:44,568 --> 00:01:47,430
+O palpite inicial que tínhamos,
+de 50% a 50%,
+
+40
+00:01:47,480 --> 00:01:50,459
+chama-se "a priori",
+já que é que podíamos inferir
+
+41
+00:01:50,509 --> 00:01:53,690
+antes da nova informação
+sobre o pulôver vermelho.
+
+42
+00:01:53,740 --> 00:01:55,962
+O palpite final, de 60% a 40%,
+
+43
+00:01:56,012 --> 00:01:57,542
+se chama "a posteriori",
+
+44
+00:01:57,592 --> 00:02:00,849
+já que inferimos posteriormente
+à chegada da nova informação.
+

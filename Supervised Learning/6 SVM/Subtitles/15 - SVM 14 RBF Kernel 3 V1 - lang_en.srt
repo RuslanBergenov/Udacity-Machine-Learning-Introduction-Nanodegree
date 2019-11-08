@@ -1,0 +1,176 @@
+1
+00:00:00,000 --> 00:00:03,234
+Now, note that we can decide what radial basis functions to use.
+
+2
+00:00:03,234 --> 00:00:07,709
+We can use some very wide ones or some very narrow ones. How do we decide?
+
+3
+00:00:07,710 --> 00:00:09,960
+Well, this is a hyper parameter that we tune
+
+4
+00:00:09,960 --> 00:00:13,105
+during training and it is called the gamma parameter.
+
+5
+00:00:13,105 --> 00:00:17,579
+And in a nutshell, a large gamma will move us a narrow curve like the one on the left,
+
+6
+00:00:17,579 --> 00:00:20,954
+and a small gamma would give us a wide curve like this one in the right.
+
+7
+00:00:20,954 --> 00:00:23,369
+In higher dimensions, this is very similar.
+
+8
+00:00:23,370 --> 00:00:26,670
+A large gamma will give us some pointy mountains like the one on the left,
+
+9
+00:00:26,670 --> 00:00:30,060
+and a small one would give us mountains looking like the one in the right.
+
+10
+00:00:30,059 --> 00:00:33,134
+And this choice of gamma actually matters a lot in the algorithm.
+
+11
+00:00:33,134 --> 00:00:36,265
+Picture looking at your data from above or after the projection.
+
+12
+00:00:36,265 --> 00:00:38,039
+If you used a bunch of skinny mountains,
+
+13
+00:00:38,039 --> 00:00:40,049
+then your boundary will look like the one on the left where
+
+14
+00:00:40,049 --> 00:00:43,644
+most points have their own little piece of boundary surrounding them.
+
+15
+00:00:43,645 --> 00:00:44,850
+If you use wider mountains,
+
+16
+00:00:44,850 --> 00:00:47,535
+then you would end up with something like the boundary in the right.
+
+17
+00:00:47,534 --> 00:00:48,929
+And as you can see from the picture,
+
+18
+00:00:48,929 --> 00:00:51,119
+large values of gamma tend to overfit,
+
+19
+00:00:51,119 --> 00:00:53,399
+and small ones tend to underfit.
+
+20
+00:00:53,399 --> 00:00:54,644
+And now, what is Gamma?
+
+21
+00:00:54,645 --> 00:00:58,185
+Well, here's where we define with these radial basis functions are.
+
+22
+00:00:58,185 --> 00:01:01,200
+We'll use the Gaussian or normal distribution for this.
+
+23
+00:01:01,200 --> 00:01:04,920
+The Gaussian is a very well-used function in statistics that has this formula,
+
+24
+00:01:04,920 --> 00:01:07,079
+y equals one over a square root of
+
+25
+00:01:07,079 --> 00:01:10,484
+two pi times E to the power of negative x squared over two.
+
+26
+00:01:10,484 --> 00:01:15,025
+In the general case, when you have a distribution of min mu in standard deviation sigma,
+
+27
+00:01:15,025 --> 00:01:16,385
+the formula is this,
+
+28
+00:01:16,385 --> 00:01:18,840
+where mu is the very center of the curve,
+
+29
+00:01:18,840 --> 00:01:21,105
+and sigma is related to its width.
+
+30
+00:01:21,105 --> 00:01:22,799
+So if sigma is large,
+
+31
+00:01:22,799 --> 00:01:24,329
+then the curve is very wide,
+
+32
+00:01:24,329 --> 00:01:25,370
+and if sigma is small,
+
+33
+00:01:25,370 --> 00:01:27,240
+then the curve is very narrow.
+
+34
+00:01:27,239 --> 00:01:28,439
+So in order to define gamma,
+
+35
+00:01:28,439 --> 00:01:31,694
+we just use one divided by two sigma squared.
+
+36
+00:01:31,694 --> 00:01:33,159
+Notice that if gamma is large,
+
+37
+00:01:33,159 --> 00:01:34,200
+then sigma is small,
+
+38
+00:01:34,200 --> 00:01:36,880
+so the curve is narrow, and vice versa.
+
+39
+00:01:36,879 --> 00:01:40,049
+If gamma is small, then sigma is large and the curve is wide.
+
+40
+00:01:40,049 --> 00:01:41,759
+In the higher dimensional case,
+
+41
+00:01:41,760 --> 00:01:43,905
+this formula becomes a little more complicated.
+
+42
+00:01:43,905 --> 00:01:46,590
+But as long as we think of gamma as some parameter that is
+
+43
+00:01:46,590 --> 00:01:50,135
+associated with the width of the curve in an inverse way,
+
+44
+00:01:50,135 --> 00:01:55,000
+then we are grasping the concept of the gamma parameter and the RBF kernel.
+

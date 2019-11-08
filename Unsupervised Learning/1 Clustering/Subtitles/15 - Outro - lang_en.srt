@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:02,180
+Nice job with this lesson.
+
+2
+00:00:02,180 --> 00:00:05,910
+You now know a lot more about how k-means works,
+
+3
+00:00:05,910 --> 00:00:09,370
+but k-means isn't the only way we can cluster data.
+
+4
+00:00:09,369 --> 00:00:10,734
+In the next lesson,
+
+5
+00:00:10,734 --> 00:00:15,599
+Jay will show you some additional methods you might use to cluster your data.
+

@@ -1,0 +1,264 @@
+1
+00:00:00,000 --> 00:00:02,490
+Well, it seems that the first bucket is the best one,
+
+2
+00:00:02,490 --> 00:00:03,810
+because no matter what we do,
+
+3
+00:00:03,810 --> 00:00:04,980
+we'll always pick red, red,
+
+4
+00:00:04,980 --> 00:00:07,065
+red, red so we'll win every time.
+
+5
+00:00:07,065 --> 00:00:11,040
+We can see that although it's not very easy to win in any of the other two,
+
+6
+00:00:11,039 --> 00:00:12,389
+it's easier to pick red,
+
+7
+00:00:12,390 --> 00:00:13,919
+red, red, blue in the second one,
+
+8
+00:00:13,919 --> 00:00:15,629
+and much harder to get red,
+
+9
+00:00:15,630 --> 00:00:17,595
+red, blue, blue in the third one.
+
+10
+00:00:17,594 --> 00:00:21,193
+Thus, the answers are: the best bucket is the first one,
+
+11
+00:00:21,193 --> 00:00:22,419
+the next one is okay,
+
+12
+00:00:22,420 --> 00:00:24,750
+and the third one is the worst.
+
+13
+00:00:24,750 --> 00:00:26,910
+But by how much more specifically?
+
+14
+00:00:26,910 --> 00:00:28,589
+Let's ask the following question.
+
+15
+00:00:28,589 --> 00:00:32,369
+What is the probability of winning in each of these games?
+
+16
+00:00:32,369 --> 00:00:33,884
+So, let's start by the easy one.
+
+17
+00:00:33,884 --> 00:00:36,039
+How likely is it to winning this game?
+
+18
+00:00:36,039 --> 00:00:38,869
+Well, to get the first ball to be red,
+
+19
+00:00:38,869 --> 00:00:40,909
+the probability is actually one.
+
+20
+00:00:40,909 --> 00:00:43,144
+Same thing for the second one,
+
+21
+00:00:43,145 --> 00:00:46,010
+the third one, and the fourth one.
+
+22
+00:00:46,009 --> 00:00:49,219
+Since we put the ball back after recording each color,
+
+23
+00:00:49,219 --> 00:00:51,649
+then these events are completely independent.
+
+24
+00:00:51,649 --> 00:00:57,004
+So, the probability that they all occur is the product of the four probabilities.
+
+25
+00:00:57,005 --> 00:00:59,090
+This means the probability is one,
+
+26
+00:00:59,090 --> 00:01:01,925
+which matches our intuition that no matter what we do,
+
+27
+00:01:01,924 --> 00:01:04,564
+we'll always pick red, red, red, red.
+
+28
+00:01:04,564 --> 00:01:05,959
+Now let's go to the red,
+
+29
+00:01:05,959 --> 00:01:07,714
+red, red, blue case.
+
+30
+00:01:07,715 --> 00:01:11,465
+What is the probability that the first ball we'd pick is red?
+
+31
+00:01:11,465 --> 00:01:17,810
+Well, it's three over four or 0.75 since there are three red balls, and four in total.
+
+32
+00:01:17,810 --> 00:01:20,045
+Same thing for the second,
+
+33
+00:01:20,045 --> 00:01:21,980
+and the third balls.
+
+34
+00:01:21,980 --> 00:01:25,189
+Now what's the probability of the fourth ball we pick his blue?
+
+35
+00:01:25,189 --> 00:01:29,269
+Well now it's one over four since there's only one blue ball among four.
+
+36
+00:01:29,269 --> 00:01:33,140
+Therefore again, since the events are independent the probability
+
+37
+00:01:33,140 --> 00:01:36,754
+of the four of them happening is the product of the four probabilities,
+
+38
+00:01:36,754 --> 00:01:43,250
+which is 0.75 times 0.75 times 0.75 times 0.25.
+
+39
+00:01:43,250 --> 00:01:47,694
+This is 0.105 or around ten 10 percent probability of winning here.
+
+40
+00:01:47,694 --> 00:01:51,422
+And for the last one, well the chances here of getting a red ball are 50 percent,
+
+41
+00:01:51,423 --> 00:01:53,805
+since there are two red balls and two blue balls.
+
+42
+00:01:53,805 --> 00:01:56,745
+And the chance of getting a blue ball are the same.
+
+43
+00:01:56,745 --> 00:02:00,480
+Thus, the chance of these balls being red, red, blue,
+
+44
+00:02:00,480 --> 00:02:02,219
+and blue is the product,
+
+45
+00:02:02,219 --> 00:02:07,859
+which is 0.0625 or roughly six percent for winning in this game.
+
+46
+00:02:07,859 --> 00:02:10,080
+We summarize these results in the table over here,
+
+47
+00:02:10,080 --> 00:02:12,930
+where the first column has a probability of a ball being red,
+
+48
+00:02:12,930 --> 00:02:15,224
+the second one off the ball being blue,
+
+49
+00:02:15,224 --> 00:02:18,539
+and the last one we highlight the probability of winning.
+
+50
+00:02:18,539 --> 00:02:21,449
+Now products are confusing mainly for two reasons.
+
+51
+00:02:21,449 --> 00:02:23,189
+The first one is that if we have,
+
+52
+00:02:23,189 --> 00:02:24,560
+say a a thousand balls.
+
+53
+00:02:24,560 --> 00:02:28,205
+Now, we take the product of a thousand numbers all between zero and one.
+
+54
+00:02:28,205 --> 00:02:29,990
+This could be very tiny.
+
+55
+00:02:29,990 --> 00:02:32,090
+The other reason is that a small change in one of
+
+56
+00:02:32,090 --> 00:02:34,729
+the factors could drastically alter their product.
+
+57
+00:02:34,729 --> 00:02:36,739
+We want something more manageable.
+
+58
+00:02:36,740 --> 00:02:38,495
+And what's better than products?
+
+59
+00:02:38,495 --> 00:02:40,189
+Let's ask our friend here.
+
+60
+00:02:40,189 --> 00:02:42,050
+Yes, he is right.
+
+61
+00:02:42,050 --> 00:02:43,895
+Sums are better than products.
+
+62
+00:02:43,895 --> 00:02:46,909
+And now we just need to turn the products into sums.
+
+63
+00:02:46,909 --> 00:02:49,579
+Would any of the following functions be able to help us?
+
+64
+00:02:49,580 --> 00:02:51,365
+The options are sine,
+
+65
+00:02:51,365 --> 00:02:54,770
+cosine, logarithm, or exponential.
+
+66
+00:02:54,770 --> 00:02:56,400
+Enter your answer below.
+

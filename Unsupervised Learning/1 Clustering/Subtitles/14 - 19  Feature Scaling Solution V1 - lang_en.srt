@@ -1,0 +1,256 @@
+1
+00:00:00,000 --> 00:00:03,930
+It turns out that with any distance-based machine learning model,
+
+2
+00:00:03,930 --> 00:00:05,860
+you're going to want to scale your data.
+
+3
+00:00:05,860 --> 00:00:09,330
+If the features that you have are on completely different scales,
+
+4
+00:00:09,330 --> 00:00:13,285
+you're k-means algorithm could come up with completely different clusters.
+
+5
+00:00:13,285 --> 00:00:14,699
+In this notebook, we will look at
+
+6
+00:00:14,699 --> 00:00:18,309
+the most common ways that people use to scale their data.
+
+7
+00:00:18,309 --> 00:00:22,589
+First, let's read in the necessary libraries and create our dataset,
+
+8
+00:00:22,589 --> 00:00:24,434
+which is going to be stored in DF.
+
+9
+00:00:24,434 --> 00:00:27,824
+The first thing that they want us to do is just take a look at the data.
+
+10
+00:00:27,824 --> 00:00:29,864
+So, let's look at a header.
+
+11
+00:00:29,864 --> 00:00:31,669
+It looks like there's just two columns,
+
+12
+00:00:31,670 --> 00:00:33,785
+one for height and one for weight.
+
+13
+00:00:33,784 --> 00:00:36,934
+We could also take a quick look at
+
+14
+00:00:36,935 --> 00:00:41,630
+describe or plot them against one another if we wanted to.
+
+15
+00:00:41,630 --> 00:00:44,125
+These are two of the most common things that I do.
+
+16
+00:00:44,125 --> 00:00:47,335
+Also, looking at the shape, it's sometimes useful.
+
+17
+00:00:47,335 --> 00:00:49,350
+So, it looks like we have 200 rows,
+
+18
+00:00:49,350 --> 00:00:52,285
+two columns, no missing values.
+
+19
+00:00:52,284 --> 00:00:55,459
+There's two types of scaling methods that are extremely popular.
+
+20
+00:00:55,460 --> 00:00:59,314
+One is called the MinMaxScaler and the other is called the StandardScaler.
+
+21
+00:00:59,314 --> 00:01:02,219
+The MinMaxScaler scales everything between zero and one,
+
+22
+00:01:02,219 --> 00:01:06,894
+where the StandardScaler scales everything to have a mean of zero and a variance of one.
+
+23
+00:01:06,894 --> 00:01:09,644
+Let's take a look at both of these and practice.
+
+24
+00:01:09,644 --> 00:01:12,589
+So here, you can see that, basically,
+
+25
+00:01:12,590 --> 00:01:17,520
+we're doing in instantiate a fit and a transform on our data all in one step.
+
+26
+00:01:17,519 --> 00:01:19,795
+We're storing that in this df_ss,
+
+27
+00:01:19,795 --> 00:01:24,820
+to stand for data frame with a standard scalar, feature scaling.
+
+28
+00:01:24,819 --> 00:01:28,625
+Then, what's happening here is we're just turning that back into a Data Frame,
+
+29
+00:01:28,625 --> 00:01:30,114
+adding on the columns,
+
+30
+00:01:30,114 --> 00:01:34,099
+and then doing a quick scatter plot of the dataset. So, it looks like this.
+
+31
+00:01:34,099 --> 00:01:38,434
+If we wanted to, we could actually do this with the original data set,
+
+32
+00:01:38,435 --> 00:01:40,750
+and so you can see it looks like this,
+
+33
+00:01:40,750 --> 00:01:42,920
+it looks pretty much the same here and
+
+34
+00:01:42,920 --> 00:01:45,900
+now they want us to do the same thing using the MinMaxScaler.
+
+35
+00:01:45,900 --> 00:01:47,900
+So, to get some practice ourselves,
+
+36
+00:01:47,900 --> 00:01:52,250
+let's go ahead and we're going to basically do the same process,
+
+37
+00:01:52,250 --> 00:01:54,685
+but we're doing it with the MinMaxScaler.
+
+38
+00:01:54,685 --> 00:01:58,195
+So, instead of the StandardScaler,
+
+39
+00:01:58,194 --> 00:02:04,069
+let's use MinMaxScaler and then we'll do a fit transform.
+
+40
+00:02:04,069 --> 00:02:10,084
+I'll call this MM and then similar to up here,
+
+41
+00:02:10,085 --> 00:02:12,465
+we just want to turn that into a data frame.
+
+42
+00:02:12,465 --> 00:02:15,504
+Change the column names and plot the data.
+
+43
+00:02:15,504 --> 00:02:22,280
+So, this to be the columns and then plot them against one another.
+
+44
+00:02:22,280 --> 00:02:24,004
+Oh, I didn't run the cell.
+
+45
+00:02:24,004 --> 00:02:27,500
+So here, you can see when we use the StandardScaler,
+
+46
+00:02:27,500 --> 00:02:31,115
+they're both centered on zero and they're basically between the range of
+
+47
+00:02:31,115 --> 00:02:34,710
+three and negative three and negative two and two on this axis,
+
+48
+00:02:34,710 --> 00:02:37,270
+but a little bit to go, a little bit beyond that,
+
+49
+00:02:37,270 --> 00:02:38,939
+and then when we look at this dataset,
+
+50
+00:02:38,939 --> 00:02:42,164
+you can see that it's between zero and one for each variable.
+
+51
+00:02:42,164 --> 00:02:45,049
+So, the MinMaxScaler scales things between zero and one,
+
+52
+00:02:45,050 --> 00:02:51,260
+where the StandardScaler has mean zero standard deviation of one or variance of one.
+
+53
+00:02:51,259 --> 00:02:54,579
+So, you can see that this is what it looks like if we were to create
+
+54
+00:02:54,580 --> 00:03:00,070
+10 different clusters in this height weight dataset.
+
+55
+00:03:00,069 --> 00:03:05,209
+In this last part, they just want us to do this with the scale datasets.
+
+56
+00:03:05,210 --> 00:03:08,900
+So, this one was using just the regular one,
+
+57
+00:03:08,900 --> 00:03:12,105
+but we could do the same thing using the scale dataset.
+
+58
+00:03:12,104 --> 00:03:19,604
+So, one of them is called SS and the last one is MM,
+
+59
+00:03:19,604 --> 00:03:21,514
+and in this particular case,
+
+60
+00:03:21,514 --> 00:03:23,474
+it doesn't look like the scaling matters.
+
+61
+00:03:23,474 --> 00:03:24,810
+So, in our response,
+
+62
+00:03:24,810 --> 00:03:28,314
+we could write about how in this case the scaling didn't matter so much,
+
+63
+00:03:28,314 --> 00:03:29,805
+but in other instances,
+
+64
+00:03:29,805 --> 00:03:34,129
+it could be the case that the scaling would completely change these clusters.
+

@@ -1,0 +1,60 @@
+1
+00:00:03,799 --> 00:00:07,214
+You've already seen in supervised learning,
+
+2
+00:00:07,214 --> 00:00:10,244
+that it's imperative for you to scale your variables.
+
+3
+00:00:10,244 --> 00:00:13,199
+K-means is another algorithm that uses
+
+4
+00:00:13,199 --> 00:00:17,339
+distances to determine which group a point belongs to.
+
+5
+00:00:17,339 --> 00:00:21,184
+So feature scaling is absolutely necessary for this algorithm.
+
+6
+00:00:21,184 --> 00:00:24,279
+There are number of scalings you might choose to do.
+
+7
+00:00:24,280 --> 00:00:30,130
+From standardizing, or Z-score scaling to normalizing, or min-max scaling.
+
+8
+00:00:30,129 --> 00:00:33,060
+We usually use standardizing with clustering
+
+9
+00:00:33,060 --> 00:00:36,950
+algorithms as well as with transformations like PCA and ICA,
+
+10
+00:00:36,950 --> 00:00:39,130
+which you'll see later on in this course.
+
+11
+00:00:39,130 --> 00:00:44,844
+Alternatively, we use normalizing when scaling the coloring of an image.
+
+12
+00:00:44,844 --> 00:00:47,199
+If you do not scale your features,
+
+13
+00:00:47,200 --> 00:00:52,234
+the features with much larger variance will dominate the importance in clustering.
+
+14
+00:00:52,234 --> 00:00:55,104
+Even if it's just because of the choice of units,
+
+15
+00:00:55,104 --> 00:00:57,909
+you do not want this to happen.
+

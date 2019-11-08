@@ -1,0 +1,33 @@
+1
+00:00:00,100 --> 00:00:01,400
+Meus parabéns!
+
+2
+00:00:01,434 --> 00:00:04,000
+Você aprendeu a treinar
+modelos, a testá-los,
+
+3
+00:00:04,033 --> 00:00:06,934
+a usar métricas para avaliar
+a qualidade dos modelos
+
+4
+00:00:06,968 --> 00:00:10,400
+e a ajustar os parâmetros
+para melhorar o modelo.
+
+5
+00:00:10,434 --> 00:00:12,968
+Agora você está pronto
+para ver o projeto,
+
+6
+00:00:13,000 --> 00:00:15,367
+no qual você colocará
+o conhecimento em prática.
+
+7
+00:00:15,400 --> 00:00:16,667
+Boa sorte.
+

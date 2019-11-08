@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:03,270
+Good ahead and make any changes to your profile that you need to.
+
+2
+00:00:03,270 --> 00:00:05,160
+I provided a checklist that you can use to
+
+3
+00:00:05,160 --> 00:00:07,610
+keep track of any improvements that you need to make.
+
+4
+00:00:07,610 --> 00:00:13,160
+When you're done, mark this checkbox over here and we can continue on to read these.
+

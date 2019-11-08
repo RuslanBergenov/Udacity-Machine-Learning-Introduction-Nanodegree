@@ -1,0 +1,116 @@
+1
+00:00:00,000 --> 00:00:03,290
+So, now we can calculate the weights of all our weak learners.
+
+2
+00:00:03,290 --> 00:00:05,064
+Let's remember that in the first one,
+
+3
+00:00:05,065 --> 00:00:08,370
+the sum of weights of the correctly classified points is seven,
+
+4
+00:00:08,369 --> 00:00:10,779
+and the sum of incorrect ones is three.
+
+5
+00:00:10,779 --> 00:00:17,119
+Therefore, the weight is natural logarithm of seven divided by three, which is 0.84.
+
+6
+00:00:17,120 --> 00:00:19,019
+For the second one, the sum of weights of
+
+7
+00:00:19,019 --> 00:00:24,164
+the correctly classified points is 11 and for the incorrect ones it's three.
+
+8
+00:00:24,164 --> 00:00:30,009
+So, the weight is natural logarithm of 11 over three which is 1.3.
+
+9
+00:00:30,010 --> 00:00:31,825
+Finally, for the third one,
+
+10
+00:00:31,824 --> 00:00:36,375
+the sum of correct weights is 19 and for the incorrect ones it's three again.
+
+11
+00:00:36,375 --> 00:00:42,740
+So, the weight is natural logarithm of 19 divided by three or 1.84.
+
+12
+00:00:42,740 --> 00:00:46,260
+It sounds like the weights are increasing but don't get the wrong idea.
+
+13
+00:00:46,259 --> 00:00:48,314
+That only happens in this example.
+
+14
+00:00:48,314 --> 00:00:51,134
+In general, they will not necessarily be increasing.
+
+15
+00:00:51,134 --> 00:00:53,390
+So, now we have our three weak learners with
+
+16
+00:00:53,390 --> 00:00:57,289
+their corresponding weights of 0.84,1.3, and 1.84.
+
+17
+00:00:57,289 --> 00:01:01,920
+To combine them, basically,
+
+18
+00:01:01,920 --> 00:01:06,385
+we make them vote except we weight the vote by the corresponding weight.
+
+19
+00:01:06,385 --> 00:01:08,359
+So, for the positive area,
+
+20
+00:01:08,359 --> 00:01:10,734
+we'll add the weight and for the negative area,
+
+21
+00:01:10,734 --> 00:01:13,385
+we'll subtract the weight. So, let's do it.
+
+22
+00:01:13,385 --> 00:01:17,810
+We take the first model and add the positives and negatives of the weight to each region.
+
+23
+00:01:17,810 --> 00:01:22,125
+Then, we do the same thing with the second model and finally,
+
+24
+00:01:22,125 --> 00:01:27,715
+with the third model, and we calculate the sums which gives us these values.
+
+25
+00:01:27,715 --> 00:01:30,930
+Finally, when the value is positive, then we say blue,
+
+26
+00:01:30,930 --> 00:01:34,085
+and when it is negative, we say red. That's it.
+
+27
+00:01:34,084 --> 00:01:38,884
+That's the combination of our weak learners and we can see how it forms a strong learner.
+
+28
+00:01:38,885 --> 00:01:41,815
+We can see that this model fits the data pretty well.
+
+29
+00:01:41,814 --> 00:01:44,129
+That's it, that's ADABOOST.
+

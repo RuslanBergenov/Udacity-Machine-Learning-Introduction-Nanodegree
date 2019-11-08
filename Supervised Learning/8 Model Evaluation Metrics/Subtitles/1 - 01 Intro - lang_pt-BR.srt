@@ -1,0 +1,59 @@
+1
+00:00:00,400 --> 00:00:04,467
+Olá. bem-vindo ao módulo
+de avaliação e validação.
+
+2
+00:00:04,533 --> 00:00:07,533
+Eu me chamo Luis Serrano,
+eu sou instrutor da Udacity.
+
+3
+00:00:07,600 --> 00:00:10,133
+Nesta seção nós focaremos
+em duas questões.
+
+4
+00:00:10,200 --> 00:00:13,933
+A primeira é:
+como está indo o seu modelo?
+
+5
+00:00:14,000 --> 00:00:16,067
+Após treinarmos o módulo
+de aprendizado,
+
+6
+00:00:16,133 --> 00:00:19,000
+nós queremos saber se o módulo
+é bom ou não.
+
+7
+00:00:18,067 --> 00:00:20,867
+Nós aprenderemos métricas
+que nos informam
+
+8
+00:00:20,933 --> 00:00:22,933
+se ele é bom ou não.
+
+9
+00:00:22,000 --> 00:00:25,067
+A segunda pergunta é se,
+uma vez descoberto isso,
+
+10
+00:00:25,133 --> 00:00:27,667
+como nós melhoramos
+a partir das métricas?
+
+11
+00:00:27,733 --> 00:00:30,933
+Vamos aprender
+a avaliar, validar
+
+12
+00:00:30,000 --> 00:00:32,467
+e melhorar os módulos
+de aprendizado.
+

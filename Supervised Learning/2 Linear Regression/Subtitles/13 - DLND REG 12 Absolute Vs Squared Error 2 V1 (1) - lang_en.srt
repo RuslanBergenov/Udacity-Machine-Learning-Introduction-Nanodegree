@@ -1,0 +1,48 @@
+1
+00:00:00,000 --> 00:00:01,565
+Well that was a tricky quiz.
+
+2
+00:00:01,565 --> 00:00:02,685
+If you said the same,
+
+3
+00:00:02,685 --> 00:00:04,620
+then you were correct because as you can see,
+
+4
+00:00:04,620 --> 00:00:08,714
+moving this line up and down actually keeps the mean absolute error the same.
+
+5
+00:00:08,714 --> 00:00:11,250
+You can convince yourself by looking at the picture and
+
+6
+00:00:11,250 --> 00:00:13,570
+checking that as you move a line up and down,
+
+7
+00:00:13,570 --> 00:00:16,379
+you're adding a segment to two of the errors and
+
+8
+00:00:16,379 --> 00:00:19,899
+removing a segment of equal length to the other two errors.
+
+9
+00:00:19,899 --> 00:00:22,969
+Now, let's repeat the quiz but with the mean squared error.
+
+10
+00:00:22,969 --> 00:00:25,529
+The question is, which one of these three lines A,
+
+11
+00:00:25,530 --> 00:00:28,490
+B, and C would give us a smaller mean squared error?
+
+12
+00:00:28,489 --> 00:00:30,399
+Enter your answer below.
+

@@ -1,0 +1,56 @@
+1
+00:00:00,000 --> 00:00:03,475
+Now let me show you a subtle way of overfitting a model.
+
+2
+00:00:03,475 --> 00:00:07,120
+Let's look at the simplest data set in the world, two points,
+
+3
+00:00:07,120 --> 00:00:12,359
+the point one one which is blue and the point minus one minus one which is red.
+
+4
+00:00:12,359 --> 00:00:15,189
+Now we want to separate them with a line.
+
+5
+00:00:15,189 --> 00:00:18,010
+I'll give you two equations and you tell me which one
+
+6
+00:00:18,010 --> 00:00:21,679
+gives a smaller error and that's going to be the quiz.
+
+7
+00:00:21,678 --> 00:00:26,009
+Equation one is x1 plus x2.
+
+8
+00:00:26,010 --> 00:00:31,454
+That means w1 equals w2 is one and the bias b is zero.
+
+9
+00:00:31,454 --> 00:00:35,673
+And then equation two is 10x1 plus 10x2.
+
+10
+00:00:35,673 --> 00:00:41,314
+So that means w1 equals w2 equals 10 and the bias b equals zero.
+
+11
+00:00:41,314 --> 00:00:43,179
+Now the question is,
+
+12
+00:00:43,179 --> 00:00:46,925
+which prediction gives a smaller error?
+
+13
+00:00:46,924 --> 00:00:49,239
+This is not an easy question but I want you to think about
+
+14
+00:00:49,240 --> 00:00:52,000
+it and maybe make some calculations, if necessary.
+

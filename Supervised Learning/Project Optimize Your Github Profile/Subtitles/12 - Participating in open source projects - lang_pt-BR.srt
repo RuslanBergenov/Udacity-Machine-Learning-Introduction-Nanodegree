@@ -1,0 +1,29 @@
+1
+00:00:00,341 --> 00:00:01,571
+Como programador,
+
+2
+00:00:01,634 --> 00:00:04,198
+você trabalhará muito 
+em um código compartilhado com outras pessoas.
+
+3
+00:00:04,277 --> 00:00:06,758
+Os empregadores querem ver
+se você sabe colaborar.
+
+4
+00:00:06,853 --> 00:00:08,810
+Ao contribuir 
+com projetos de código aberto,
+
+5
+00:00:08,810 --> 00:00:11,246
+você pode demonstrar 
+quão bem trabalha com os outros.
+
+6
+00:00:11,373 --> 00:00:14,420
+Isso também mostrará que você é prestativo 
+e adora trabalhar com código.
+

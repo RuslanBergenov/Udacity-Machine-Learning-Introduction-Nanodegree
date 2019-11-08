@@ -1,0 +1,56 @@
+1
+00:00:00,000 --> 00:00:01,600
+Vejamos.
+
+2
+00:00:01,667 --> 00:00:06,867
+Positivos verdadeiros são os pontos
+positivos classificados como tal.
+
+3
+00:00:06,933 --> 00:00:10,467
+São os 6 pontos azuis aqui.
+
+4
+00:00:10,533 --> 00:00:15,067
+Negativos verdadeiros são os pontos
+negativos classificados como tal.
+
+5
+00:00:15,133 --> 00:00:19,533
+São os 5 pontos vermelhos
+negativos, aqui.
+
+6
+00:00:19,600 --> 00:00:21,667
+Falsos positivos
+são os pontos negativos
+
+7
+00:00:21,733 --> 00:00:24,800
+incorretamente
+classificados.
+
+8
+00:00:24,867 --> 00:00:26,133
+Esses dois pontos aqui.
+
+9
+00:00:26,200 --> 00:00:31,000
+E os falsos negativos
+são os pontos positivos
+
+10
+00:00:31,067 --> 00:00:34,200
+classificados incorretamente
+como negativos.
+
+11
+00:00:34,267 --> 00:00:36,467
+Só este ponto azul aqui.
+
+12
+00:00:36,533 --> 00:00:38,133
+É isso,
+essa é a matriz de confusão.
+

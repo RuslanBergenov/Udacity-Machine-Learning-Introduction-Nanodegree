@@ -1,0 +1,545 @@
+1
+00:00:00,102 --> 00:00:01,757
+Vamos falar sobre a vida.
+
+2
+00:00:01,790 --> 00:00:04,442
+Na vida,
+podemos cometer dois erros.
+
+3
+00:00:04,475 --> 00:00:08,282
+Um é tentar matar o Godzilla
+com um mata-moscas.
+
+4
+00:00:08,315 --> 00:00:12,144
+O outro é tentar matar uma mosca
+com uma bazuca.
+
+5
+00:00:12,177 --> 00:00:15,605
+Qual é o problema de tentar matar
+o Godzilla com um mata-moscas?
+
+6
+00:00:15,638 --> 00:00:18,439
+Simplificarmos excessivamente
+o problema.
+
+7
+00:00:18,472 --> 00:00:20,775
+Estamos usando
+uma solução simples demais
+
+8
+00:00:20,808 --> 00:00:22,672
+que não resolverá a questão.
+
+9
+00:00:22,705 --> 00:00:25,649
+Em aprendizado de máquina,
+isto é chamado "subajuste".
+
+10
+00:00:25,682 --> 00:00:29,616
+E qual é o problema de tentar matar
+uma mosca com uma bazuca?
+
+11
+00:00:29,649 --> 00:00:30,889
+É complicado demais,
+
+12
+00:00:30,922 --> 00:00:34,217
+e nos levará a soluções ruins
+e a uma complexidade excessiva,
+
+13
+00:00:34,250 --> 00:00:37,247
+quando podemos usar
+uma solução bem mais simples.
+
+14
+00:00:37,280 --> 00:00:40,213
+Em aprendizado de máquina,
+isto é chamado "sobreajuste".
+
+15
+00:00:40,246 --> 00:00:42,545
+Vamos ver
+como o sobreajuste e o subajuste
+
+16
+00:00:42,578 --> 00:00:44,884
+aparecem em um problema
+de classificação.
+
+17
+00:00:44,917 --> 00:00:46,929
+Digamos que temos
+os dados a seguir
+
+18
+00:00:46,962 --> 00:00:48,968
+e precisamos classificá-los.
+
+19
+00:00:49,001 --> 00:00:52,351
+Qual é a regra
+que vai resolver isto aqui?
+
+20
+00:00:52,384 --> 00:00:54,263
+Parece um problema fácil,
+certo?
+
+21
+00:00:54,296 --> 00:00:59,716
+Os da direita são cachorros,
+e os da esquerda não são cachorros.
+
+22
+00:00:59,749 --> 00:01:02,154
+E se usarmos a regra a seguir?
+
+23
+00:01:02,187 --> 00:01:05,254
+Dizemos que os da direita
+são animais
+
+24
+00:01:05,287 --> 00:01:08,285
+e os da esquerda
+não são animais.
+
+25
+00:01:08,318 --> 00:01:10,485
+Essa solução não é muito boa,
+certo?
+
+26
+00:01:10,518 --> 00:01:11,709
+Qual é o problema?
+
+27
+00:01:11,742 --> 00:01:13,211
+É simples demais.
+
+28
+00:01:13,244 --> 00:01:15,515
+Não organiza o conjunto de dados
+corretamente.
+
+29
+00:01:15,548 --> 00:01:16,713
+Percebe?
+
+30
+00:01:16,746 --> 00:01:19,398
+Classificou incorretamente
+este gato aqui,
+
+31
+00:01:19,431 --> 00:01:21,093
+já que gato é um animal.
+
+32
+00:01:21,126 --> 00:01:23,004
+Isto é um subajuste.
+
+33
+00:01:23,037 --> 00:01:26,434
+É como tentar matar o Godzilla
+com um mata-moscas.
+
+34
+00:01:26,467 --> 00:01:28,582
+Às vezes, vamos nos referir
+ao sobreajuste como um erro
+
+35
+00:01:28,615 --> 00:01:30,247
+por conta do viés.
+
+36
+00:01:30,280 --> 00:01:32,750
+E quanto a próxima regra?
+
+37
+00:01:32,783 --> 00:01:34,902
+Dizemos que os da direita
+
+38
+00:01:34,935 --> 00:01:38,150
+são cachorros amarelos,
+laranja ou cinza,
+
+39
+00:01:38,183 --> 00:01:42,212
+e os da esquerda não são
+cachorros amarelos,
+
+40
+00:01:42,245 --> 00:01:44,072
+laranja ou cinza.
+
+41
+00:01:44,105 --> 00:01:46,565
+Tecnicamente, está correto
+
+42
+00:01:46,598 --> 00:01:49,137
+porque classifica
+corretamente os dados.
+
+43
+00:01:49,170 --> 00:01:51,512
+Dá uma sensação de termos sido
+específicos demais,
+
+44
+00:01:51,545 --> 00:01:53,568
+já que dizer "cachorros"
+e "não cachorros"
+
+45
+00:01:53,601 --> 00:01:55,751
+resolveria a questão.
+
+46
+00:01:55,784 --> 00:01:58,018
+Mas este problema é
+mais conceitual, certo?
+
+47
+00:01:58,051 --> 00:02:01,038
+Como podemos ver
+o problema aqui?
+
+48
+00:02:01,071 --> 00:02:05,211
+Uma maneira de ver
+é introduzindo um conjunto teste.
+
+49
+00:02:05,244 --> 00:02:08,114
+Se o conjunto teste é
+este cachorro aqui,
+
+50
+00:02:08,147 --> 00:02:10,171
+podemos imaginar
+que um bom classificador
+
+51
+00:02:10,204 --> 00:02:13,041
+o colocaria à direita
+com os outros cachorros.
+
+52
+00:02:13,074 --> 00:02:15,731
+Mas este classificador
+o colocará à esquerda,
+
+53
+00:02:15,764 --> 00:02:19,926
+já que o cachorro não é amarelo,
+laranja ou cinza.
+
+54
+00:02:19,959 --> 00:02:22,014
+O problema aqui,
+como foi dito,
+
+55
+00:02:22,047 --> 00:02:25,235
+é que o classificador
+é específico demais.
+
+56
+00:02:25,268 --> 00:02:27,031
+Servirá bem aos dados,
+
+57
+00:02:27,064 --> 00:02:29,545
+mas não os generalizará.
+
+58
+00:02:29,578 --> 00:02:31,198
+Isto é um sobreajuste.
+
+59
+00:02:31,231 --> 00:02:35,362
+É como tentar matar uma mosca
+com uma bazuca.
+
+60
+00:02:35,395 --> 00:02:37,781
+Às vezes, vamos nos referir
+ao sobreajuste como um erro
+
+61
+00:02:37,814 --> 00:02:39,655
+por conta de variância.
+
+62
+00:02:39,688 --> 00:02:42,440
+Gosto de pensar
+no subajuste e no sobreajuste
+
+63
+00:02:42,473 --> 00:02:44,684
+como se eu estivesse
+estudando para uma prova.
+
+64
+00:02:44,717 --> 00:02:46,404
+O subajuste é como
+se eu não estudasse o bastante
+
+65
+00:02:46,437 --> 00:02:48,059
+e fosse mal na prova.
+
+66
+00:02:48,092 --> 00:02:52,107
+Um bom modelo é estudar bem
+e ir bem na prova.
+
+67
+00:02:52,140 --> 00:02:54,183
+O sobreajuste é como se,
+em vez de estudar,
+
+68
+00:02:54,216 --> 00:02:57,192
+memorizássemos o livro
+palavra por palavra.
+
+69
+00:02:57,225 --> 00:03:00,223
+Poderemos regurgitar
+qualquer questão do livro,
+
+70
+00:03:00,256 --> 00:03:02,300
+mas não generalizaremos
+o bastante
+
+71
+00:03:02,333 --> 00:03:05,043
+para responder
+as questões da prova.
+
+72
+00:03:05,076 --> 00:03:08,202
+Mas agora vamos ver
+como seria isso em redes neurais.
+
+73
+00:03:08,235 --> 00:03:10,210
+Digamos que estes dados,
+onde, novamente,
+
+74
+00:03:10,243 --> 00:03:12,253
+os pontos azuis
+têm rótulo positivo
+
+75
+00:03:12,286 --> 00:03:14,294
+e os pontos vermelhos
+têm rótulo negativo.
+
+76
+00:03:14,327 --> 00:03:18,046
+E aqui temos 3 ursinhos.
+
+77
+00:03:18,079 --> 00:03:22,497
+No meio, temos um bom modelo,
+que serve bem aos dados.
+
+78
+00:03:22,530 --> 00:03:24,729
+À esquerda, temos um modelo
+que se subajusta,
+
+79
+00:03:24,762 --> 00:03:26,504
+já que é simples demais.
+
+80
+00:03:26,537 --> 00:03:28,121
+Ele tenta servir aos dados
+com a linha,
+
+81
+00:03:28,154 --> 00:03:30,573
+mas os dados
+são mais complicados do que isso.
+
+82
+00:03:30,606 --> 00:03:32,830
+E à direita, temos um modelo
+que se sobreajusta,
+
+83
+00:03:32,863 --> 00:03:36,692
+já que tenta servir aos dados
+com uma curva complicada demais.
+
+84
+00:03:36,763 --> 00:03:40,480
+Veja que o modelo da direita
+serve muito bem aos dados,
+
+85
+00:03:40,513 --> 00:03:42,604
+já que não comete nenhum erro,
+
+86
+00:03:42,637 --> 00:03:46,477
+enquanto o do meio
+comete este erro aqui.
+
+87
+00:03:46,510 --> 00:03:50,906
+Mas podemos ver que o modelo do meio
+deverá generalizar melhor.
+
+88
+00:03:50,939 --> 00:03:54,686
+O modelo do meio vê
+este ponto como ruído,
+
+89
+00:03:54,719 --> 00:03:57,397
+enquanto o da direita
+fica confuso com ele
+
+90
+00:03:57,430 --> 00:03:59,491
+e tenta alimentá-lo
+bem demais.
+
+91
+00:03:59,524 --> 00:04:02,649
+O modelo do meio será
+provavelmente uma rede neural
+
+92
+00:04:02,682 --> 00:04:04,541
+com uma arquitetura
+um pouquinho mais complexa,
+
+93
+00:04:04,574 --> 00:04:05,882
+como esta aqui.
+
+94
+00:04:05,915 --> 00:04:09,837
+O da esquerda terá provavelmente
+uma arquitetura simples demais.
+
+95
+00:04:09,870 --> 00:04:11,008
+Aqui, por exemplo,
+
+96
+00:04:11,041 --> 00:04:13,352
+a rede neural inteira é
+só um perceptron,
+
+97
+00:04:13,385 --> 00:04:15,476
+já que o modelo é linear.
+
+98
+00:04:15,509 --> 00:04:16,904
+O modelo da direita
+será provavelmente
+
+99
+00:04:16,937 --> 00:04:18,794
+uma rede neural
+altamente complexa,
+
+100
+00:04:18,827 --> 00:04:21,558
+com mais camadas e pesos
+do que precisamos.
+
+101
+00:04:21,591 --> 00:04:23,100
+Tenho uma má notícia.
+
+102
+00:04:23,133 --> 00:04:25,546
+É muito difícil encontrar
+a arquitetura certa
+
+103
+00:04:25,579 --> 00:04:27,197
+para uma rede neural.
+
+104
+00:04:27,230 --> 00:04:31,917
+Sempre vamos acabar
+com uma arquitetura simples demais,
+
+105
+00:04:31,950 --> 00:04:33,572
+como a da esquerda,
+
+106
+00:04:33,605 --> 00:04:36,931
+ou uma complicada demais,
+como a da direita.
+
+107
+00:04:36,964 --> 00:04:39,508
+A questão é: o que fazer?
+
+108
+00:04:39,541 --> 00:04:43,552
+É como tentar caber em calças.
+
+109
+00:04:43,585 --> 00:04:45,425
+Se não encontramos
+nosso tamanho,
+
+110
+00:04:45,458 --> 00:04:49,510
+tentamos o maior ou o menor?
+
+111
+00:04:49,543 --> 00:04:52,817
+Parece menos pior escolher
+as calças um pouco maiores
+
+112
+00:04:52,850 --> 00:04:54,171
+e tentar achar um cinto
+
+113
+00:04:54,204 --> 00:04:56,653
+ou algo que as ajude
+a vestirem melhor.
+
+114
+00:04:56,686 --> 00:04:58,703
+E é isso o que vamos fazer.
+
+115
+00:04:58,736 --> 00:05:02,650
+Vamos pecar pelo lado
+com modelos complicados demais
+
+116
+00:05:02,683 --> 00:05:06,506
+e vamos aplicar certas técnicas
+para prevenir o sobreajuste.
+

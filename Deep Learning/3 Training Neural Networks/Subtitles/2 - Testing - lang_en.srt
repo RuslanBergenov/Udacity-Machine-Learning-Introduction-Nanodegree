@@ -1,0 +1,112 @@
+1
+00:00:00,000 --> 00:00:03,819
+So let's look at the following data form by blue and red points,
+
+2
+00:00:03,819 --> 00:00:06,628
+and the following two classification models
+
+3
+00:00:06,628 --> 00:00:10,105
+which separates the blue points from the red points.
+
+4
+00:00:10,105 --> 00:00:13,905
+The question is which of these two models is better?
+
+5
+00:00:13,904 --> 00:00:16,689
+Well, it seems like the one on the left is simpler since it's
+
+6
+00:00:16,690 --> 00:00:21,980
+a line and the one on the right is more complicated since it's a complex curve.
+
+7
+00:00:21,980 --> 00:00:25,250
+Now the one in the right makes no mistakes.
+
+8
+00:00:25,250 --> 00:00:28,149
+It correctly separates all the points,
+
+9
+00:00:28,149 --> 00:00:32,515
+on the other hand, the one in the left does make some mistakes.
+
+10
+00:00:32,515 --> 00:00:36,429
+So we're inclined to think that the one in the right is better.
+
+11
+00:00:36,429 --> 00:00:39,420
+In order to really find out which one is better,
+
+12
+00:00:39,420 --> 00:00:42,774
+we introduce the concept of training and testing sets.
+
+13
+00:00:42,774 --> 00:00:48,344
+We'll denote them as follows: the solid color points are the training set,
+
+14
+00:00:48,344 --> 00:00:52,414
+and the points with the white inside are the testing set.
+
+15
+00:00:52,414 --> 00:00:54,670
+And what we'll do is we'll train our models in
+
+16
+00:00:54,670 --> 00:00:59,298
+the training set without looking at the testing set,
+
+17
+00:00:59,298 --> 00:01:03,810
+and then we'll evaluate the results on that testing to see how we did.
+
+18
+00:01:03,810 --> 00:01:05,260
+So according to this,
+
+19
+00:01:05,260 --> 00:01:07,209
+we trained the linear model and
+
+20
+00:01:07,209 --> 00:01:12,534
+the complex model on the training set to obtain these two boundaries.
+
+21
+00:01:12,534 --> 00:01:17,530
+Now we reintroduce the testing set and we can see that the model in
+
+22
+00:01:17,530 --> 00:01:23,379
+the left made one mistake while the model in the right made two mistakes.
+
+23
+00:01:23,379 --> 00:01:26,594
+So in the end, the simple model was better.
+
+24
+00:01:26,593 --> 00:01:29,193
+Does that match our intuition?.
+
+25
+00:01:29,194 --> 00:01:32,980
+Well, it does, because in machine learning that's what we're going to do.
+
+26
+00:01:32,980 --> 00:01:36,099
+Whenever we can choose between a simple model that does
+
+27
+00:01:36,099 --> 00:01:40,655
+the job and a complicated model that may do the job a little bit better,
+
+28
+00:01:40,655 --> 00:01:43,000
+we always try to go for the simpler model.
+

@@ -1,0 +1,56 @@
+1
+00:00:00,000 --> 00:00:03,560
+Welcome to this course on unsupervised learning. I'm Josh.
+
+2
+00:00:03,560 --> 00:00:04,349
+And I'm Jay.
+
+3
+00:00:04,349 --> 00:00:07,764
+Were both really excited to be working with you through this course.
+
+4
+00:00:07,764 --> 00:00:11,169
+Unsupervised learning is one of the three main branches of machine learning.
+
+5
+00:00:11,169 --> 00:00:13,115
+In contrast to supervised learning,
+
+6
+00:00:13,115 --> 00:00:15,914
+where you have a label or a value that you're trying to predict,
+
+7
+00:00:15,914 --> 00:00:18,299
+in unsupervised learning, you are interested in
+
+8
+00:00:18,300 --> 00:00:20,820
+grouping data together that don't have labels.
+
+9
+00:00:20,820 --> 00:00:24,254
+In this course, you will learn some common techniques that are used for
+
+10
+00:00:24,254 --> 00:00:28,169
+unsupervised learning as well as how to implement them using scikit-learn.
+
+11
+00:00:28,170 --> 00:00:32,010
+Jay and I both really enjoy teaching others about technology,
+
+12
+00:00:32,009 --> 00:00:33,864
+machine learning, and programming.
+
+13
+00:00:33,865 --> 00:00:36,990
+So we're very excited to be joining you in this course.
+
+14
+00:00:36,990 --> 00:00:38,640
+Let's get started.
+

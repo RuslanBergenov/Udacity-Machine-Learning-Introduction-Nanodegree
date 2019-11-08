@@ -1,0 +1,52 @@
+1
+00:00:00,000 --> 00:00:02,819
+The question of what learning rate to use is pretty much
+
+2
+00:00:02,819 --> 00:00:06,343
+a research question itself but here's a general rule.
+
+3
+00:00:06,344 --> 00:00:12,028
+If your learning rate is too big then you're taking huge steps which could be fast at
+
+4
+00:00:12,028 --> 00:00:14,730
+the beginning but you may miss the minimum and keep
+
+5
+00:00:14,730 --> 00:00:18,120
+going which will make your model pretty chaotic.
+
+6
+00:00:18,120 --> 00:00:20,640
+If you have a small learning rate you will make
+
+7
+00:00:20,640 --> 00:00:25,079
+steady steps and have a better chance of arriving to your local minimum.
+
+8
+00:00:25,079 --> 00:00:28,769
+This may make your model very slow, but in general,
+
+9
+00:00:28,768 --> 00:00:32,298
+a good rule of thumb is if your model's not working,
+
+10
+00:00:32,298 --> 00:00:34,935
+decrease the learning rate.
+
+11
+00:00:34,935 --> 00:00:37,100
+The best learning rates are those which
+
+12
+00:00:37,100 --> 00:00:40,710
+decrease as the model is getting closer to a solution.
+
+13
+00:00:40,710 --> 00:00:43,298
+We'll see that Keras has some options to let us do this.
+

@@ -1,0 +1,256 @@
+1
+00:00:00,054 --> 00:00:02,768
+Olá. Bem-vindo a essa seção
+de aprendizado por agrupamento.
+
+2
+00:00:02,818 --> 00:00:05,846
+Nesta seção, veremos
+como pegar vários modelos
+
+3
+00:00:05,896 --> 00:00:08,506
+e uni-los para obter
+um modelo melhor.
+
+4
+00:00:08,556 --> 00:00:11,181
+Aprendemos dois dos métodos
+de agrupamento mais populares,
+
+5
+00:00:11,231 --> 00:00:13,653
+"Bagging" e "Boosting".
+
+6
+00:00:14,089 --> 00:00:16,629
+E "bagging" não vem
+de "bagagem".
+
+7
+00:00:16,679 --> 00:00:19,199
+É acrônimo
+de "bootstrap aggregating".
+
+8
+00:00:19,249 --> 00:00:20,355
+Eis a premissa.
+
+9
+00:00:20,405 --> 00:00:22,180
+Digamos que tenhamos
+que fazer uma prova.
+
+10
+00:00:22,230 --> 00:00:24,171
+De verdadeiro ou falso,
+para facilitar.
+
+11
+00:00:24,221 --> 00:00:27,111
+Não estamos superconfortáveis
+para fazer a prova.
+
+12
+00:00:27,161 --> 00:00:29,052
+Queremos uma ajudinha
+dos amigos.
+
+13
+00:00:29,102 --> 00:00:30,826
+Aqui estão eles.
+
+14
+00:00:30,876 --> 00:00:34,557
+No primeiro método, Bagging,
+o que faremos é o seguinte:
+
+15
+00:00:34,607 --> 00:00:38,431
+cada um dos amigos
+responderá a prova em separado.
+
+16
+00:00:38,481 --> 00:00:41,174
+No final, combinamos tudo.
+
+17
+00:00:41,224 --> 00:00:43,919
+Como combinamos?
+Há várias formas.
+
+18
+00:00:43,969 --> 00:00:46,734
+Por exemplo: se as respostas
+da prova forem valores,
+
+19
+00:00:46,784 --> 00:00:48,601
+podemos fazer a média
+das respostas.
+
+20
+00:00:48,651 --> 00:00:51,696
+Como são perguntas binárias,
+vamos considerar votar.
+
+21
+00:00:52,064 --> 00:00:56,645
+Para cada pergunta, verificamos
+qual alternativa foi mais escolhida
+
+22
+00:00:56,695 --> 00:00:58,195
+e respondemos aquilo.
+
+23
+00:00:58,245 --> 00:01:01,421
+Assim, combinamos nossos amigos
+em um amigão gênio
+
+24
+00:01:01,471 --> 00:01:03,652
+que esperamos
+que se saia melhor na prova.
+
+25
+00:01:03,702 --> 00:01:04,874
+O Boosting é parecido,
+
+26
+00:01:04,924 --> 00:01:08,393
+mas tenta aproveitar melhor
+as competências dos amigos.
+
+27
+00:01:08,443 --> 00:01:10,379
+Digamos que escolhemos
+nosso primeiro amigo
+
+28
+00:01:10,429 --> 00:01:13,482
+e ele fez a prova.
+Esse amigo é filósofo,
+
+29
+00:01:13,532 --> 00:01:16,407
+então respondeu certo
+tudo de filosofia,
+
+30
+00:01:16,457 --> 00:01:18,914
+mas não foi muito bem
+em ciências.
+
+31
+00:01:18,964 --> 00:01:21,145
+Escolhemos entre os amigos
+alguém que possa ajudar
+
+32
+00:01:21,195 --> 00:01:23,574
+e, surpresa,
+temos uma amiga cientista.
+
+33
+00:01:23,624 --> 00:01:27,144
+Nós a colocamos para fazer a prova
+e resolver as questões de ciência.
+
+34
+00:01:27,194 --> 00:01:29,465
+Digamos que ela não saiba nada
+de esportes,
+
+35
+00:01:29,515 --> 00:01:31,168
+nem nosso primeiro amigo.
+
+36
+00:01:31,218 --> 00:01:33,652
+Vamos que as respostas
+estão erradas
+
+37
+00:01:33,702 --> 00:01:36,897
+e chamamos nossa amiga esportista
+para responder às perguntas.
+
+38
+00:01:36,947 --> 00:01:39,280
+Fazemos o mesmo
+com a amiga matemática,
+
+39
+00:01:39,330 --> 00:01:42,038
+o amigo músico e etc.
+
+40
+00:01:42,088 --> 00:01:46,125
+No final, teremos combinado
+um amigo superinteligente
+
+41
+00:01:46,175 --> 00:01:48,204
+que irá muito bem na prova.
+
+42
+00:01:48,254 --> 00:01:50,224
+Esse método se chama Boosting.
+
+43
+00:01:50,274 --> 00:01:51,615
+Aqui vão algumas notações.
+
+44
+00:01:51,665 --> 00:01:54,757
+Nesta seção, chamaremos
+nossos amigos de aprendizes fracos
+
+45
+00:01:54,807 --> 00:01:57,804
+e o superamigo resultante
+de aprendiz forte.
+
+46
+00:01:58,381 --> 00:02:00,800
+Esses aprendizes fracos
+não são necessariamente fracos,
+
+47
+00:02:00,850 --> 00:02:02,645
+mas nós os chamamos assim
+
+48
+00:02:02,695 --> 00:02:05,214
+pois os juntamos
+para criar um forte.
+
+49
+00:02:05,264 --> 00:02:07,059
+Em geral, é isso que fazemos.
+
+50
+00:02:07,109 --> 00:02:09,641
+Temos uma série de modelos
+
+51
+00:02:09,691 --> 00:02:11,332
+e os agrupamos
+para criar um melhor.
+
+52
+00:02:11,382 --> 00:02:14,715
+Esses modelos não precisam
+necessariamente ser ótimos.
+
+53
+00:02:14,765 --> 00:02:16,721
+A bem da verdade,
+só precisam...
+
+54
+00:02:16,771 --> 00:02:19,400
+ser um pouco melhores
+do que o acaso.
+

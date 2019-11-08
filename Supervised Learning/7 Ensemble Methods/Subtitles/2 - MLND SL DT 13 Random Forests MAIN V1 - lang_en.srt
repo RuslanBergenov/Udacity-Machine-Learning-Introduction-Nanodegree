@@ -1,0 +1,128 @@
+1
+00:00:00,000 --> 00:00:02,294
+Now, here's a potential problem with Decision Trees.
+
+2
+00:00:02,294 --> 00:00:05,549
+Let's say we have a humungous table with lots and lots of columns.
+
+3
+00:00:05,549 --> 00:00:08,580
+So, we create our Decision Tree and let's say it looks like this.
+
+4
+00:00:08,580 --> 00:00:11,339
+This is not a realistic tree, though, just an example.
+
+5
+00:00:11,339 --> 00:00:13,619
+And we end up with answers like the following.
+
+6
+00:00:13,619 --> 00:00:17,160
+If a client is male between 15 and 25 in the US,
+
+7
+00:00:17,160 --> 00:00:18,359
+on Android, in school,
+
+8
+00:00:18,359 --> 00:00:20,925
+likes tennis, pizza, but does not like long walks on the beach,
+
+9
+00:00:20,925 --> 00:00:23,255
+then they're likely to download Pokemon Go.
+
+10
+00:00:23,254 --> 00:00:27,144
+This is not good. This almost looks like the tree just memorized the data.
+
+11
+00:00:27,144 --> 00:00:31,195
+It's overfitting. Decision Trees tend to overfit a lot.
+
+12
+00:00:31,195 --> 00:00:34,420
+In the continuous case, this can also happen and it looks like this.
+
+13
+00:00:34,420 --> 00:00:37,179
+The Decision Tree has many nodes which end up giving us
+
+14
+00:00:37,179 --> 00:00:41,304
+a complicated boundary that pretty much borders every point with a small square.
+
+15
+00:00:41,304 --> 00:00:45,009
+This is also overfitting as it doesn't generalize well to the data.
+
+16
+00:00:45,009 --> 00:00:49,164
+So, how do we solve this? In the simplest possible way. Take a look at this.
+
+17
+00:00:49,164 --> 00:00:51,310
+Let's take our data and say,
+
+18
+00:00:51,310 --> 00:00:53,245
+pick some of the columns randomly.
+
+19
+00:00:53,244 --> 00:00:55,929
+Build a Decision Tree in those columns.
+
+20
+00:00:55,929 --> 00:00:58,269
+Now, pick some other columns randomly and build
+
+21
+00:00:58,270 --> 00:01:01,175
+a Decision Tree in those, and do it again.
+
+22
+00:01:01,174 --> 00:01:03,754
+And now, just let the trees vote.
+
+23
+00:01:03,755 --> 00:01:05,629
+When we have a new data point,
+
+24
+00:01:05,629 --> 00:01:07,414
+say this person over here,
+
+25
+00:01:07,415 --> 00:01:12,620
+we just let all the trees make a prediction and pick the one that appears the most.
+
+26
+00:01:12,620 --> 00:01:15,410
+For example, these trees decided that
+
+27
+00:01:15,409 --> 00:01:18,935
+this person will download Snapchat, WhatsApp, and WhatsApp.
+
+28
+00:01:18,935 --> 00:01:22,129
+So, the ensemble of trees will recommend WhatsApp.
+
+29
+00:01:22,129 --> 00:01:25,670
+Since we used a bunch of trees on randomly picked columns,
+
+30
+00:01:25,670 --> 00:01:28,280
+this is called a random forest.
+
+31
+00:01:28,280 --> 00:01:31,159
+There are better ways to pick the columns than randomly and we'll
+
+32
+00:01:31,159 --> 00:01:34,269
+see this in the ensemble methods section of this Nanodegree.
+

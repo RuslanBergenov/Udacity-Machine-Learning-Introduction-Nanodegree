@@ -1,0 +1,27 @@
+1
+00:00:00,333 --> 00:00:04,033
+Agora que aprendemos o erro
+de classificação e o de margem,
+
+2
+00:00:04,067 --> 00:00:05,900
+só precisamos juntá-los.
+
+3
+00:00:06,300 --> 00:00:08,900
+O erro MVS oficial vai ser
+
+4
+00:00:08,933 --> 00:00:11,633
+o erro de classificação
+mais o erro de margem.
+
+5
+00:00:11,667 --> 00:00:13,400
+Como minimizamos isso?
+
+6
+00:00:13,433 --> 00:00:16,633
+Usando o gradiente descendente,
+como fizemos antes.
+

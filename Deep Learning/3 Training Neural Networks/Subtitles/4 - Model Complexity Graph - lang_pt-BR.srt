@@ -1,0 +1,370 @@
+1
+00:00:00,300 --> 00:00:05,901
+Agora nós temos uma arquitetura
+que será mais complexa
+
+2
+00:00:05,935 --> 00:00:08,934
+do que o necessário,
+mas precisamos lidar com ela.
+
+3
+00:00:08,968 --> 00:00:11,267
+Vejamos o processo
+de treinamento.
+
+4
+00:00:11,301 --> 00:00:14,501
+Começamos com pesos
+aleatórios na primeira epoch
+
+5
+00:00:14,535 --> 00:00:17,834
+e obtivemos este modelo,
+que comete muitos erros.
+
+6
+00:00:17,868 --> 00:00:22,801
+Após treinar por 20 epochs,
+nós temos um bom modelo.
+
+7
+00:00:22,835 --> 00:00:26,133
+Mas imagine que a gente
+siga em frente por 100 epochs.
+
+8
+00:00:26,167 --> 00:00:28,200
+Nós teremos algo
+mais adequado aos dados,
+
+9
+00:00:28,234 --> 00:00:30,901
+mas vemos que está começando
+a ter um superajuste.
+
+10
+00:00:30,935 --> 00:00:34,167
+Se continuarmos,
+por 600 epochs,
+
+11
+00:00:34,201 --> 00:00:36,434
+então o modelo terá
+um grande superajuste.
+
+12
+00:00:36,468 --> 00:00:38,334
+Vemos que a região azul
+
+13
+00:00:38,368 --> 00:00:42,200
+é um monte de círculos
+em volta dos pontos azuis.
+
+14
+00:00:42,234 --> 00:00:44,400
+Isso se encaixa
+com os dados de treinamento,
+
+15
+00:00:44,434 --> 00:00:46,334
+mas generalizará mal.
+
+16
+00:00:46,368 --> 00:00:49,100
+Imagine um novo
+ponto azul na área azul,
+
+17
+00:00:49,134 --> 00:00:51,801
+ele será classificado
+como vermelho,
+
+18
+00:00:51,835 --> 00:00:54,434
+a menos que esteja muito perto
+de um ponto azul.
+
+19
+00:00:54,468 --> 00:00:58,567
+Vamos avaliar os modelos
+adicionando um conjunto de teste
+
+20
+00:00:58,601 --> 00:01:00,434
+como estes pontos.
+
+21
+00:01:00,468 --> 00:01:03,033
+Vamos mostrar os erros
+no conjunto de treinamento
+
+22
+00:01:03,067 --> 00:01:06,334
+e no conjunto de teste
+em respeito a cada epoch.
+
+23
+00:01:06,368 --> 00:01:09,934
+Para a primeira epoch,
+como o modelo é aleatório,
+
+24
+00:01:09,968 --> 00:01:14,834
+ele classifica mal os conjuntos
+de treinamento e de teste.
+
+25
+00:01:14,868 --> 00:01:18,367
+Os erros de treinamento
+e de teste são grandes.
+
+26
+00:01:18,401 --> 00:01:20,133
+Nós podemos colocá-los aqui.
+
+27
+00:01:20,167 --> 00:01:22,767
+Na 20ª epoch, nós temos
+um modelo bem melhor,
+
+28
+00:01:22,801 --> 00:01:25,200
+que se ajusta bem ao modelo
+
+29
+00:01:25,234 --> 00:01:27,734
+e se sai bem
+no conjunto de teste.
+
+30
+00:01:27,768 --> 00:01:30,901
+Ambos os erros são
+relativamente pequenos.
+
+31
+00:01:30,935 --> 00:01:32,868
+Nós os colocamos aqui.
+
+32
+00:01:32,902 --> 00:01:36,501
+Na 100ª epoch,
+nós começamos a superajustar.
+
+33
+00:01:36,535 --> 00:01:38,367
+O modelo se ajusta aos dados,
+
+34
+00:01:38,401 --> 00:01:41,367
+mas comete erros
+no conjunto de teste.
+
+35
+00:01:41,401 --> 00:01:44,133
+O erro de treinamento
+continua caindo,
+
+36
+00:01:44,167 --> 00:01:46,701
+mas o erro de teste
+começa a aumentar,
+
+37
+00:01:46,735 --> 00:01:48,400
+então nós os colocamos aqui.
+
+38
+00:01:48,434 --> 00:01:51,901
+Na 600ª epoch,
+nós superajustamos muito.
+
+39
+00:01:51,935 --> 00:01:54,200
+O erro de treinamento
+é minúsculo,
+
+40
+00:01:54,234 --> 00:01:57,300
+pois os dados se ajustam
+ao treinamento muito bem,
+
+41
+00:01:57,334 --> 00:02:00,634
+mas o modelo comete
+muitos erros nos dados de teste.
+
+42
+00:02:00,668 --> 00:02:03,033
+Então o erro
+de teste é grande.
+
+43
+00:02:03,067 --> 00:02:04,901
+Nós os colocamos aqui.
+
+44
+00:02:04,935 --> 00:02:06,601
+Agora nós desenhamos
+as curvas
+
+45
+00:02:06,635 --> 00:02:10,033
+que conectam os erros
+de treinamento e de teste.
+
+46
+00:02:10,067 --> 00:02:13,968
+Neste gráfico, fica claro
+quando paramos de subajustar
+
+47
+00:02:14,002 --> 00:02:15,901
+e começamos a superajustar.
+
+48
+00:02:15,935 --> 00:02:18,400
+A curva de treinamento
+continuou a diminuir,
+
+49
+00:02:18,434 --> 00:02:20,701
+pois, conforme
+treinamos o modelo,
+
+50
+00:02:20,735 --> 00:02:23,901
+nós continuamos ajustando
+os dados de treinamento melhor.
+
+51
+00:02:23,935 --> 00:02:27,000
+O erro de teste fica maior
+quando subajustamos,
+
+52
+00:02:27,034 --> 00:02:29,434
+pois o modelo não é exato.
+
+53
+00:02:29,468 --> 00:02:32,300
+Ele diminui enquanto o modelo
+generaliza bem
+
+54
+00:02:32,334 --> 00:02:34,701
+até ele chegar
+a um ponto mínimo,
+
+55
+00:02:34,735 --> 00:02:36,968
+o ponto da perfeição.
+
+56
+00:02:37,002 --> 00:02:40,067
+Por fim,
+após passarmos por esse ponto,
+
+57
+00:02:40,101 --> 00:02:42,267
+o modelo começa
+a superajustar novamente,
+
+58
+00:02:42,301 --> 00:02:44,167
+pois ele para de generalizar
+
+59
+00:02:44,201 --> 00:02:47,234
+e começa a memorizar
+os dados de treinamento.
+
+60
+00:02:47,268 --> 00:02:51,067
+Este modelo é chamado de gráfico
+de complexidade de modelo.
+
+61
+00:02:51,101 --> 00:02:54,834
+No eixo Y,
+temos a medida do erro,
+
+62
+00:02:54,868 --> 00:02:59,100
+e, no eixo X,
+da complexidade do modelo,
+
+63
+00:02:59,134 --> 00:03:02,234
+que, neste caso,
+é a quantidade de epochs.
+
+64
+00:03:02,268 --> 00:03:03,601
+Como podemos ver,
+
+65
+00:03:03,635 --> 00:03:06,667
+à esquerda, temos erros
+de teste e de treinamento altos,
+
+66
+00:03:06,701 --> 00:03:08,300
+então nós subajustamos.
+
+67
+00:03:08,334 --> 00:03:11,267
+À direita,
+temos erros de teste alto
+
+68
+00:03:11,301 --> 00:03:14,968
+e erros de treinamento baixo,
+então nós superajustamos.
+
+69
+00:03:15,002 --> 00:03:16,667
+Em algum lugar no meio,
+
+70
+00:03:16,701 --> 00:03:19,000
+temos o ponto da perfeição.
+
+71
+00:03:19,034 --> 00:03:22,834
+Isso determina a quantidade
+de epochs que usaremos.
+
+72
+00:03:22,868 --> 00:03:25,300
+Em suma, o que fazemos
+
+73
+00:03:25,334 --> 00:03:27,467
+é usar o gradiente
+descendente
+
+74
+00:03:27,501 --> 00:03:29,801
+até que o que erro de teste
+pare de diminuir
+
+75
+00:03:29,835 --> 00:03:31,567
+e comece a aumentar.
+
+76
+00:03:31,601 --> 00:03:34,267
+Nesse ponto, nós paramos.
+
+77
+00:03:34,301 --> 00:03:37,334
+Este algoritmo é chamado
+de parada precoce
+
+78
+00:03:37,368 --> 00:03:40,000
+e é muito utilizado
+para treinar redes neurais.
+

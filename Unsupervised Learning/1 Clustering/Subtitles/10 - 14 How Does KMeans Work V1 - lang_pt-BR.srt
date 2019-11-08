@@ -1,0 +1,237 @@
+1
+00:00:00,346 --> 00:00:04,885
+Este é um ótimo recurso para mostrar
+como o algoritmo k-means funciona.
+
+2
+00:00:04,918 --> 00:00:08,438
+Vamos analisar dois exemplos
+e ver o que acontece
+
+3
+00:00:08,471 --> 00:00:10,182
+com diferentes
+conjuntos de dados
+
+4
+00:00:10,215 --> 00:00:12,226
+e diferentes
+números de clusters.
+
+5
+00:00:12,259 --> 00:00:16,221
+Para começar, vamos escolher
+um conjunto de dados.
+
+6
+00:00:16,611 --> 00:00:19,517
+Vamos escolher
+essa mistura de gaussianas.
+
+7
+00:00:19,550 --> 00:00:22,374
+Digamos que adicionemos
+um centroide aqui.
+
+8
+00:00:22,407 --> 00:00:24,510
+O que este algoritmo nos diz
+
+9
+00:00:24,543 --> 00:00:29,005
+é que todos os pontos pertencem
+a esse algoritmo no início.
+
+10
+00:00:29,038 --> 00:00:32,766
+Podemos ter outro ponto aqui
+e um 3º ponto aqui.
+
+11
+00:00:32,799 --> 00:00:36,846
+Podemos executar o algoritmo
+clicando em "Go".
+
+12
+00:00:36,879 --> 00:00:39,166
+Note que a primeira coisa
+que acontece
+
+13
+00:00:39,199 --> 00:00:42,821
+é que cada centroide é atribuído
+a um certo número de pontos.
+
+14
+00:00:43,261 --> 00:00:46,421
+Se atualizarmos os centroides,
+eles se movem para o centro
+
+15
+00:00:46,454 --> 00:00:47,702
+de seus grupos.
+
+16
+00:00:47,735 --> 00:00:51,126
+E, se redistribuirmos
+os pontos,
+
+17
+00:00:51,159 --> 00:00:54,294
+note que, nesse caso,
+nenhum deles foi atualizado,
+
+18
+00:00:54,726 --> 00:00:56,310
+que os centroides
+não se moveram
+
+19
+00:00:56,343 --> 00:01:00,758
+e que o que aconteceu
+é que o algoritmo está pronto,
+
+20
+00:01:00,791 --> 00:01:05,629
+já que os centroides permaneceram
+estáticos por duas iterações.
+
+21
+00:01:05,662 --> 00:01:08,718
+Agora, vamos recomeçar
+
+22
+00:01:09,365 --> 00:01:12,245
+e escolher a mistura
+de gaussianas de novo,
+
+23
+00:01:12,278 --> 00:01:16,053
+mas com dois pontos
+aqui embaixo
+
+24
+00:01:16,086 --> 00:01:17,821
+e talvez um aqui em cima.
+
+25
+00:01:17,854 --> 00:01:22,022
+Nós achamos que há 3 clusters.
+Vamos executar o algoritmo.
+
+26
+00:01:22,493 --> 00:01:25,878
+A 1ª coisa que acontece
+é a atribuição dos centroides.
+
+27
+00:01:26,405 --> 00:01:30,085
+Nós os atualizamos
+e redistribuímos os pontos.
+
+28
+00:01:30,573 --> 00:01:33,790
+Nós atualizamos os centroides
+e note que, de novo,
+
+29
+00:01:33,823 --> 00:01:35,806
+terminamos
+com os mesmos clusters.
+
+30
+00:01:35,839 --> 00:01:37,787
+Isso deve dar uma ideia
+
+31
+00:01:37,820 --> 00:01:42,213
+de como o algoritmo k-means
+funciona pelos bastidores.
+
+32
+00:01:42,246 --> 00:01:46,806
+Ele procura os pontos mais próximos
+do centroide, atualiza o centroide,
+
+33
+00:01:46,839 --> 00:01:49,658
+observa os pontos mais próximos
+da nova posição,
+
+34
+00:01:49,691 --> 00:01:52,067
+atualiza o centroide de novo
+e continua fazendo isso
+
+35
+00:01:52,100 --> 00:01:53,933
+até o centroide
+parar de se mover.
+
+36
+00:01:53,966 --> 00:01:57,628
+Vamos ver o que pode acontecer
+se algo der errado.
+
+37
+00:01:57,661 --> 00:02:01,021
+Vamos usar o modelo
+de mistura de gaussianas de novo.
+
+38
+00:02:01,054 --> 00:02:03,494
+Nós temos
+dois centroides assim.
+
+39
+00:02:03,527 --> 00:02:06,652
+Vamos executar
+o algoritmo de agrupamento
+
+40
+00:02:07,342 --> 00:02:08,631
+até que ele esteja pronto.
+
+41
+00:02:08,892 --> 00:02:10,453
+Ele termina assim.
+
+42
+00:02:10,486 --> 00:02:14,884
+Mas, se recomeçarmos com exatamente
+o mesmo conjunto de dados
+
+43
+00:02:15,343 --> 00:02:17,267
+e colocarmos
+um centroide aqui,
+
+44
+00:02:17,300 --> 00:02:22,400
+bem aqui em baixo,
+e outro centroide aqui em cima,
+
+45
+00:02:22,433 --> 00:02:24,165
+agora, ao executar
+o algoritmo,
+
+46
+00:02:24,198 --> 00:02:27,885
+obtemos um agrupamento
+diferente.
+
+47
+00:02:27,918 --> 00:02:31,445
+Nesse caso, nem sempre
+os agrupamentos serão iguais.
+
+48
+00:02:31,478 --> 00:02:34,262
+E qual é o melhor agrupamento?
+
+49
+00:02:34,295 --> 00:02:36,885
+Vamos explorar isso
+nos próximos vídeos.
+

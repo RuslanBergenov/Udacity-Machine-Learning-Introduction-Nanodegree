@@ -1,0 +1,184 @@
+1
+00:00:00,000 --> 00:00:04,995
+Now, we finally have all the tools for describing the perceptron algorithm.
+
+2
+00:00:04,995 --> 00:00:06,410
+We start with the random equation,
+
+3
+00:00:06,410 --> 00:00:07,895
+which will determine some line,
+
+4
+00:00:07,894 --> 00:00:11,494
+and two regions, the positive and the negative region.
+
+5
+00:00:11,494 --> 00:00:14,804
+Now, we'll move this line around to get a better and better fit.
+
+6
+00:00:14,804 --> 00:00:17,265
+So, we ask all the points how they're doing.
+
+7
+00:00:17,265 --> 00:00:20,964
+The four correctly classified points say, "I'm good."
+
+8
+00:00:20,964 --> 00:00:25,890
+And the two incorrectly classified points say, "Come closer."
+
+9
+00:00:25,890 --> 00:00:28,088
+So, let's listen to the point in the right,
+
+10
+00:00:28,088 --> 00:00:31,484
+and apply the trick to make the line closer to this point.
+
+11
+00:00:31,484 --> 00:00:34,704
+So, here it is. Now, this point is good.
+
+12
+00:00:34,704 --> 00:00:36,869
+Now, let's listen to the point in the left.
+
+13
+00:00:36,869 --> 00:00:38,349
+The points says, "Come closer."
+
+14
+00:00:38,350 --> 00:00:39,770
+We apply the trick,
+
+15
+00:00:39,770 --> 00:00:41,685
+and now the line goes closer to it,
+
+16
+00:00:41,685 --> 00:00:45,094
+and it actually goes over it classifying correctly.
+
+17
+00:00:45,094 --> 00:00:48,484
+Now, every point is correctly classified and happy.
+
+18
+00:00:48,484 --> 00:00:52,670
+So, let's actually write the pseudocode for this perceptron algorithm.
+
+19
+00:00:52,670 --> 00:00:53,780
+We start with random weights,
+
+20
+00:00:53,780 --> 00:00:55,640
+w1 up to wn and b.
+
+21
+00:00:55,640 --> 00:00:57,774
+This gives us the question wx plus b,
+
+22
+00:00:57,774 --> 00:01:02,004
+the line, and the positive and negative areas.
+
+23
+00:01:02,005 --> 00:01:05,822
+Now, for every misclassified point with coordinates x1 up to xn,
+
+24
+00:01:05,822 --> 00:01:07,740
+we do the following.
+
+25
+00:01:07,739 --> 00:01:09,184
+If the prediction was zero,
+
+26
+00:01:09,185 --> 00:01:12,879
+which means the point is a positive point in the negative area,
+
+27
+00:01:12,879 --> 00:01:16,490
+then we'll update the weights as follows: for i equals 1 to n,
+
+28
+00:01:16,489 --> 00:01:21,049
+we change wi, to wi plus alpha times xi,
+
+29
+00:01:21,049 --> 00:01:23,664
+where alpha is the learning rate.
+
+30
+00:01:23,665 --> 00:01:26,060
+In this case, we're using 0.1.
+
+31
+00:01:26,060 --> 00:01:28,659
+Sometimes, we use 0.01 etc.
+
+32
+00:01:28,659 --> 00:01:33,840
+It depends. Then we also change the bi as unit to b plus alpha.
+
+33
+00:01:33,840 --> 00:01:38,024
+That moves the line closer to the misclassified point.
+
+34
+00:01:38,024 --> 00:01:39,700
+Now, if the prediction was one,
+
+35
+00:01:39,700 --> 00:01:42,415
+which means a point is a negative point in the positive area,
+
+36
+00:01:42,415 --> 00:01:44,650
+then we'll update the weights in a similar way,
+
+37
+00:01:44,650 --> 00:01:46,950
+except we subtract instead of adding.
+
+38
+00:01:46,950 --> 00:01:50,545
+This means for i equals 1, change wi,
+
+39
+00:01:50,545 --> 00:01:53,299
+to wi minus alpha xi,
+
+40
+00:01:53,299 --> 00:01:57,995
+and change the bi as unit b to b minus alpha.
+
+41
+00:01:57,995 --> 00:02:01,770
+And now, the line moves closer to our misclassified point.
+
+42
+00:02:01,769 --> 00:02:05,024
+And now, we just repeat this step until we get no errors,
+
+43
+00:02:05,025 --> 00:02:07,425
+or until we have a number of error that is small.
+
+44
+00:02:07,424 --> 00:02:08,564
+Or simply we can just say,
+
+45
+00:02:08,564 --> 00:02:11,520
+do the step a thousand times and stop.
+
+46
+00:02:11,520 --> 00:02:14,000
+We'll see what are our options later in the class.
+

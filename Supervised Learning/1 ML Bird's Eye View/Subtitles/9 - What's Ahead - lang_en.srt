@@ -1,0 +1,52 @@
+1
+00:00:00,830 --> 00:00:10,119
+This lesson provided some more context as to the current state of machine learning,
+
+2
+00:00:10,119 --> 00:00:14,619
+and how it's evolved from the fields of statistics, and computer science.
+
+3
+00:00:14,619 --> 00:00:18,804
+You got to look at three branches of machine learning: supervised learning,
+
+4
+00:00:18,804 --> 00:00:21,964
+unsupervised learning, and reinforcement learning.
+
+5
+00:00:21,964 --> 00:00:24,120
+We also discussed at a high level
+
+6
+00:00:24,120 --> 00:00:27,245
+scikit-learn as a library in Python for machine learning,
+
+7
+00:00:27,245 --> 00:00:31,385
+and deep learning, as a popular technique currently leading the way.
+
+8
+00:00:31,385 --> 00:00:35,039
+You will get more experience with both of these in the material ahead.
+
+9
+00:00:35,039 --> 00:00:39,189
+Finally, we looked at the ethical challenges ahead of us in the field.
+
+10
+00:00:39,189 --> 00:00:41,390
+Now that you have an overview of the field,
+
+11
+00:00:41,390 --> 00:00:43,465
+it's time to dive more into the details.
+
+12
+00:00:43,465 --> 00:00:45,740
+First, Release will be showing you how
+
+13
+00:00:45,740 --> 00:00:50,870
+the most popular supervised learning techniques work. Let's get started.
+

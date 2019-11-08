@@ -1,0 +1,312 @@
+1
+00:00:00,000 --> 00:00:02,129
+So, here's our first trick that we will align
+
+2
+00:00:02,129 --> 00:00:04,734
+closer to a point that we're going to use in a linear regression.
+
+3
+00:00:04,735 --> 00:00:07,620
+It's called the absolute trick and it works like this,
+
+4
+00:00:07,620 --> 00:00:09,224
+we start with a point,
+
+5
+00:00:09,224 --> 00:00:14,919
+and a line, and the idea is that the point wants the line to come closer to it.
+
+6
+00:00:14,919 --> 00:00:16,949
+So, let's put some numbers here,
+
+7
+00:00:16,949 --> 00:00:19,379
+the point has coordinates p comma q,
+
+8
+00:00:19,379 --> 00:00:23,179
+where p is a horizontal coordinate and q is the vertical coordinate.
+
+9
+00:00:23,179 --> 00:00:27,870
+The line has equation y equals w_1x plus w_2.
+
+10
+00:00:27,870 --> 00:00:32,215
+In here w_1 is the slope and w_2 is the y-intercept.
+
+11
+00:00:32,215 --> 00:00:35,010
+So, an easy way to move the line closer to the point
+
+12
+00:00:35,009 --> 00:00:37,649
+pq is to just add one to the y-intercept,
+
+13
+00:00:37,649 --> 00:00:39,649
+and then there is, the line moves up.
+
+14
+00:00:39,649 --> 00:00:41,729
+Now let's add something to the slope two to
+
+15
+00:00:41,729 --> 00:00:43,909
+make the line rotating the direction of the point.
+
+16
+00:00:43,909 --> 00:00:47,489
+This is going to look a little strange but it's going to make sense very soon.
+
+17
+00:00:47,490 --> 00:00:50,219
+So, this distance over here is p because it's
+
+18
+00:00:50,219 --> 00:00:53,409
+the horizontal distance from the y-axis to the point.
+
+19
+00:00:53,409 --> 00:00:55,904
+So let's just add that, let's add p to the slope,
+
+20
+00:00:55,905 --> 00:00:58,859
+and now our new slope is w_1 plus p,
+
+21
+00:00:58,859 --> 00:01:01,320
+and that rotates the line in this direction.
+
+22
+00:01:01,320 --> 00:01:07,939
+Now our new equation is y equals w_1 plus p times x plus w_2 plus one,
+
+23
+00:01:07,939 --> 00:01:10,230
+and that's pretty much what the absolute trick is about.
+
+24
+00:01:10,230 --> 00:01:11,875
+Notice some subtleties though,
+
+25
+00:01:11,875 --> 00:01:13,980
+notice that we moved the line a little too much,
+
+26
+00:01:13,980 --> 00:01:16,650
+and we actually went over the point and kept going,
+
+27
+00:01:16,650 --> 00:01:18,420
+we don't want this, in general in
+
+28
+00:01:18,420 --> 00:01:21,480
+machine learning we never want to take big steps like this.
+
+29
+00:01:21,480 --> 00:01:24,475
+Instead what we want to do is take tiny steps.
+
+30
+00:01:24,474 --> 00:01:26,849
+So, in order to take a tiny step we'll just do
+
+31
+00:01:26,849 --> 00:01:31,004
+the exact same thing we did except we multiply everything by a small number.
+
+32
+00:01:31,004 --> 00:01:34,875
+So let's take a small number called the learning rate, let's say alpha,
+
+33
+00:01:34,875 --> 00:01:39,340
+and instead of adding one to the y-intercept and p to the slope,
+
+34
+00:01:39,340 --> 00:01:43,710
+we will add alpha times one to the y-intercept,
+
+35
+00:01:43,709 --> 00:01:46,064
+and alpha times p to the slope.
+
+36
+00:01:46,064 --> 00:01:49,349
+Now the line moves up by a little bit and rotates a little bit,
+
+37
+00:01:49,349 --> 00:01:51,674
+so we don't have that risk of going too far.
+
+38
+00:01:51,674 --> 00:01:58,424
+Our new equation is going to be w_1 plus p times alpha times x plus w_2 plus alpha.
+
+39
+00:01:58,424 --> 00:02:03,625
+So our new slope is w_1 plus p times alpha and our new y-intercept is w_2 plus alpha.
+
+40
+00:02:03,625 --> 00:02:06,060
+So we're doing better but there's still a little subtlety.
+
+41
+00:02:06,060 --> 00:02:09,560
+What happens if the point is not on top of the line but underneath the line?
+
+42
+00:02:09,560 --> 00:02:13,590
+Well, same thing except now instead of adding we just subtract to get
+
+43
+00:02:13,590 --> 00:02:19,969
+our new equation w_1 minus b times alpha times x plus w_2 minus alpha.
+
+44
+00:02:19,969 --> 00:02:24,419
+The reason is if we subtract alpha to the y-intercept the line moves down instead of up
+
+45
+00:02:24,419 --> 00:02:28,919
+and if we subtract p times alpha to the slope the line rotates in this direction instead.
+
+46
+00:02:28,919 --> 00:02:30,579
+Something more interesting is this,
+
+47
+00:02:30,580 --> 00:02:32,690
+and that will explain the reason p is there.
+
+48
+00:02:32,689 --> 00:02:36,509
+If the point is not on the right of the y-axis but on the left of it,
+
+49
+00:02:36,509 --> 00:02:40,378
+than we still add one to the y-intercept because we need the line to move up,
+
+50
+00:02:40,378 --> 00:02:43,289
+but the fact that now we're adding p to the slope and p is now
+
+51
+00:02:43,289 --> 00:02:47,004
+a negative number means that our line now rotates in this direction,
+
+52
+00:02:47,004 --> 00:02:49,240
+so that's a reason for p to be there.
+
+53
+00:02:49,240 --> 00:02:52,280
+Another reason for p to be there is this, check this out.
+
+54
+00:02:52,280 --> 00:02:54,914
+If this distance is small then p is small,
+
+55
+00:02:54,914 --> 00:02:57,504
+so we're adding a small number to the slope.
+
+56
+00:02:57,504 --> 00:02:59,990
+Now, if the distance is large then p is
+
+57
+00:02:59,990 --> 00:03:02,240
+large so we're adding a large number to the slope.
+
+58
+00:03:02,240 --> 00:03:04,580
+It makes sense that if the point is really
+
+59
+00:03:04,580 --> 00:03:07,490
+close to the y-axis we want to increase the slope by a little bit.
+
+60
+00:03:07,490 --> 00:03:10,265
+Whereas if it's far want to move it by a lot more.
+
+61
+00:03:10,264 --> 00:03:12,824
+So, let's do an example to make this more clear.
+
+62
+00:03:12,824 --> 00:03:17,185
+Let's say we have the point 5 comma 15 and the line y equals 2_x plus three,
+
+63
+00:03:17,185 --> 00:03:20,890
+so this means the distance from the point to the y-axis is five,
+
+64
+00:03:20,889 --> 00:03:23,875
+now let's say our learning rate is 0.1.
+
+65
+00:03:23,875 --> 00:03:26,699
+So, we're adding 0.1 times one to
+
+66
+00:03:26,699 --> 00:03:30,269
+the y-intercept and that moves the line up by a little bit.
+
+67
+00:03:30,270 --> 00:03:33,555
+Also we are taking five multiplying it by 0.1
+
+68
+00:03:33,555 --> 00:03:36,935
+and adding that to the slope which makes the line move in this direction,
+
+69
+00:03:36,935 --> 00:03:42,979
+this means our new equation is y equals 2.5 x plus 3.1.
+
+70
+00:03:42,979 --> 00:03:45,599
+Now, check out what happens if the point is in the left,
+
+71
+00:03:45,599 --> 00:03:49,694
+we're still adding 0.1 to the y-intercept to move the line up,
+
+72
+00:03:49,694 --> 00:03:53,025
+but now to the slope we're going to add the product of
+
+73
+00:03:53,025 --> 00:03:57,000
+0.1 and minus five, that's minus 0.5.
+
+74
+00:03:57,000 --> 00:04:03,199
+This means our new equation is going to be 1.5 x plus 3.1.
+
+75
+00:04:03,199 --> 00:04:05,349
+As you can see the slope moved in
+
+76
+00:04:05,349 --> 00:04:08,159
+a different direction which made it go closer to the point.
+
+77
+00:04:08,159 --> 00:04:10,145
+So that's it, that's the absolute trick,
+
+78
+00:04:10,145 --> 00:04:13,320
+and we're going to use it extensively in linear regression.
+

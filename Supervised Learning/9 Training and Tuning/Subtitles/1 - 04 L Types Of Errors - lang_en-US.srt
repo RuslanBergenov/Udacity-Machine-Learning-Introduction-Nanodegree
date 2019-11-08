@@ -1,0 +1,401 @@
+1
+00:00:00,150 --> 00:00:01,690
+So let's talk about life.
+
+2
+00:00:01,690 --> 00:00:04,445
+There are two errors that
+sometimes we make in life.
+
+3
+00:00:04,445 --> 00:00:08,019
+One is trying to kill
+Godzilla with a flyswatter.
+
+4
+00:00:08,019 --> 00:00:09,959
+That's a pretty bad error to make.
+
+5
+00:00:09,960 --> 00:00:13,260
+It's oversimplifying the problem
+we're trying to solve.
+
+6
+00:00:13,259 --> 00:00:15,960
+The other one is to try to
+kill a fly with a bazooka.
+
+7
+00:00:15,960 --> 00:00:17,269
+That's also pretty bad.
+
+8
+00:00:17,269 --> 00:00:20,579
+It's overcomplicating the problem
+we're trying to solve.
+
+9
+00:00:20,579 --> 00:00:25,139
+In machine learning, these two types
+of errors are very easy to make.
+
+10
+00:00:25,140 --> 00:00:28,929
+When we oversimplify the problem,
+we call this underfitting.
+
+11
+00:00:28,929 --> 00:00:33,090
+And when we overcomplicate the problem,
+we call it overfitting.
+
+12
+00:00:33,090 --> 00:00:36,175
+So let's look at underfitting and
+overfitting in a bit more detail.
+
+13
+00:00:36,174 --> 00:00:38,484
+Let's look at this
+classification problem.
+
+14
+00:00:38,484 --> 00:00:42,015
+We need to find a property that
+separates the set on the left
+
+15
+00:00:42,015 --> 00:00:43,994
+from the set on the right.
+
+16
+00:00:43,994 --> 00:00:45,744
+It seems like the solution is easy.
+
+17
+00:00:45,744 --> 00:00:47,784
+The set on the right is made of dogs,
+and
+
+18
+00:00:47,784 --> 00:00:51,214
+the set on the left is made
+of things that are not dogs.
+
+19
+00:00:51,215 --> 00:00:53,015
+But what if we oversimplify this?
+
+20
+00:00:53,015 --> 00:00:56,314
+What if we say the set on
+the right is made of animals, and
+
+21
+00:00:56,314 --> 00:00:58,724
+the set on the left is made
+of everything but animals?
+
+22
+00:00:58,725 --> 00:01:00,770
+Then our model is is a bit too simple.
+
+23
+00:01:00,770 --> 00:01:04,542
+And we can see that it already makes
+a mistake on the training set,
+
+24
+00:01:04,542 --> 00:01:07,433
+since it misclassified
+this cat on the left side.
+
+25
+00:01:07,433 --> 00:01:10,566
+This oversimplification
+is called underfitting.
+
+26
+00:01:10,566 --> 00:01:14,920
+One characteristic of it is that it
+doesn't do well on the training set.
+
+27
+00:01:14,920 --> 00:01:18,519
+We call this type of error
+an error due to bias.
+
+28
+00:01:18,519 --> 00:01:21,629
+The other mistake we can make
+is to overcomplicate the model.
+
+29
+00:01:21,629 --> 00:01:25,479
+If instead of describing the set on
+the right as dogs, we describe it as
+
+30
+00:01:25,480 --> 00:01:28,920
+dogs that are wagging their tail,
+then this seems to do the job well in
+
+31
+00:01:28,920 --> 00:01:33,439
+training set, but somehow our intuition
+is telling us that this is not right.
+
+32
+00:01:33,439 --> 00:01:35,890
+This can be confirmed when
+you bring out a new instance.
+
+33
+00:01:35,890 --> 00:01:38,469
+For example, this dog over here.
+
+34
+00:01:38,469 --> 00:01:42,129
+Our logic tells us this dog should
+belong to the set on the right.
+
+35
+00:01:42,129 --> 00:01:44,381
+But since the dog is
+not wagging its tail,
+
+36
+00:01:44,381 --> 00:01:47,868
+then this model mistakenly classifies
+it in the set on the left.
+
+37
+00:01:47,868 --> 00:01:52,920
+This error is called overfitting,
+this means the model is too specific.
+
+38
+00:01:52,920 --> 00:01:57,070
+One characteristic of it is that it
+does well in the training set but
+
+39
+00:01:57,069 --> 00:02:00,639
+it tends to memorize it instead of
+learning the characteristics of it, so
+
+40
+00:02:00,640 --> 00:02:02,980
+it will not do well on the testing set.
+
+41
+00:02:02,980 --> 00:02:05,890
+We call this type of error
+an error due to variance.
+
+42
+00:02:05,890 --> 00:02:07,079
+Let's get more technical.
+
+43
+00:02:07,079 --> 00:02:10,210
+In our regression example,
+we can see underfitting as follows.
+
+44
+00:02:10,210 --> 00:02:12,170
+Let's look at the points on the left.
+
+45
+00:02:12,169 --> 00:02:13,659
+It seems like the correct model for
+
+46
+00:02:13,659 --> 00:02:16,310
+this point is a quadratic
+equation like this one.
+
+47
+00:02:16,310 --> 00:02:19,259
+We could try to model it as a line,
+but this won't work too well,
+
+48
+00:02:19,259 --> 00:02:21,019
+since it's too simple.
+
+49
+00:02:21,020 --> 00:02:23,540
+The model won't do well
+in our training set.
+
+50
+00:02:23,539 --> 00:02:25,849
+This is an example of underfitting.
+
+51
+00:02:25,849 --> 00:02:29,469
+Now, what if instead we try to
+fit a polynomial of large degree
+
+52
+00:02:29,469 --> 00:02:30,349
+like this one?
+
+53
+00:02:30,349 --> 00:02:34,289
+This polynomial does great in
+the training set, fits it perfectly, but
+
+54
+00:02:34,289 --> 00:02:36,979
+somehow it seems like
+it's not the best answer.
+
+55
+00:02:36,979 --> 00:02:40,679
+It memorizes the training set and
+it fails to find good properties of
+
+56
+00:02:40,680 --> 00:02:43,819
+the training set that will
+generalize well to the testing set.
+
+57
+00:02:43,819 --> 00:02:46,550
+So even though it performs
+well in the training set,
+
+58
+00:02:46,550 --> 00:02:48,795
+it will perform poorly
+on the testing set.
+
+59
+00:02:48,795 --> 00:02:50,919
+This is an example of overfitting.
+
+60
+00:02:50,919 --> 00:02:53,459
+We can see underfitting in
+a classification model as well.
+
+61
+00:02:53,460 --> 00:02:53,820
+The red and
+
+62
+00:02:53,819 --> 00:02:57,989
+blue points seems to be nicely separated
+by a quadratic curve like this one.
+
+63
+00:02:57,990 --> 00:03:01,320
+When we try to use a line, the model
+doesn't fit the points properly, and
+
+64
+00:03:01,319 --> 00:03:02,668
+it underfits.
+
+65
+00:03:02,668 --> 00:03:05,830
+And when we try to fit in a curve
+that is very complicated,
+
+66
+00:03:05,830 --> 00:03:08,570
+we end up with a model
+that is too complex.
+
+67
+00:03:08,569 --> 00:03:11,099
+And this may not do well
+in the testing set.
+
+68
+00:03:11,099 --> 00:03:13,340
+Thus it overfits.
+
+69
+00:03:13,340 --> 00:03:14,700
+So here's a small summary.
+
+70
+00:03:14,699 --> 00:03:18,539
+On one side, we get the errors due
+to high bias, or underfitting.
+
+71
+00:03:18,539 --> 00:03:20,329
+This is where we
+oversimplify the problem and
+
+72
+00:03:20,330 --> 00:03:23,890
+our model is too simple to capture
+the complexity of our data.
+
+73
+00:03:23,889 --> 00:03:28,509
+On the other side, we get the errors
+due to high variance or overfitting.
+
+74
+00:03:28,509 --> 00:03:32,850
+This is when we overcomplicate the
+problem and our model is too complex and
+
+75
+00:03:32,850 --> 00:03:35,937
+ends up memorizing our data
+instead of learning it.
+
+76
+00:03:35,937 --> 00:03:38,401
+Then in the middle,
+we've got the good model.
+
+77
+00:03:38,401 --> 00:03:40,022
+When it comes to the training data,
+
+78
+00:03:40,022 --> 00:03:43,849
+the high bias model tends to not fit it
+well since it's just too simple a model.
+
+79
+00:03:43,849 --> 00:03:46,840
+The high variance model tends to
+fit the training data really well
+
+80
+00:03:46,840 --> 00:03:48,259
+since it's designed for it.
+
+81
+00:03:48,259 --> 00:03:51,219
+Finally, the good model tends
+to fit the training data well.
+
+82
+00:03:51,219 --> 00:03:53,250
+Now, when it comes to the testing data,
+
+83
+00:03:53,250 --> 00:03:56,050
+the high bias model
+tends to perform poorly.
+
+84
+00:03:56,050 --> 00:03:58,027
+And so does the high variance model.
+
+85
+00:03:58,026 --> 00:04:00,829
+The good model is the one that
+performs well in the testing data.
+

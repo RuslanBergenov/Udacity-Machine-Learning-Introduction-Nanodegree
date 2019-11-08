@@ -1,0 +1,118 @@
+1
+00:00:01,175 --> 00:00:03,954
+ALTERANDO K
+
+2
+00:00:04,396 --> 00:00:07,260
+O "k" e o k-means têm relação
+com a quantidade de clusters
+
+3
+00:00:07,293 --> 00:00:09,425
+em que você quer
+dividir os seus dados.
+
+4
+00:00:09,458 --> 00:00:14,218
+Em um caso como este, a melhor
+opção parece ser 3 clusters.
+
+5
+00:00:14,251 --> 00:00:17,362
+Por outro lado, se tivermos
+este conjunto de pontos,
+
+6
+00:00:17,395 --> 00:00:19,578
+separá-los em 3 clusters
+não parece certo.
+
+7
+00:00:19,611 --> 00:00:23,218
+Neste caso, 2 clusters
+parecem fazer mais sentido.
+
+8
+00:00:23,746 --> 00:00:27,274
+Quando temos muitos dados
+em muitas dimensões,
+
+9
+00:00:27,307 --> 00:00:30,113
+como decidimos
+quantos centros escolher?
+
+10
+00:00:30,586 --> 00:00:35,523
+Na prática, escolher o k
+é uma mistura de arte e ciência.
+
+11
+00:00:35,556 --> 00:00:40,098
+Às vezes, os pesquisadores querem
+escolher um valor específico para k
+
+12
+00:00:40,131 --> 00:00:43,058
+baseado em ideias preconcebidas
+sobre um assunto.
+
+13
+00:00:43,425 --> 00:00:46,546
+Um exemplo é o que acontece
+aqui na Udacity.
+
+14
+00:00:46,579 --> 00:00:50,098
+Acreditamos que os estudantes
+se dividam em 3 categorias:
+
+15
+00:00:50,131 --> 00:00:52,001
+estudantes que são novatos
+em um campo,
+
+16
+00:00:52,034 --> 00:00:54,554
+estudantes que querem
+aprimorar suas carreiras
+
+17
+00:00:54,587 --> 00:00:57,361
+ou estudantes
+que estão mudando de carreira.
+
+18
+00:00:57,394 --> 00:01:00,705
+Então faz sentido
+usar o k-means com k=3
+
+19
+00:01:00,738 --> 00:01:03,058
+para ver se nossos dados
+sustentam essa ideia
+
+20
+00:01:03,091 --> 00:01:07,104
+de que há 3 tipos de estudantes,
+ou 3 clusters de estudantes.
+
+21
+00:01:07,754 --> 00:01:11,546
+Às vezes, não temos uma ideia
+de quantos clusters deve haver
+
+22
+00:01:11,579 --> 00:01:13,378
+antes de coletarmos os dados.
+
+23
+00:01:13,411 --> 00:01:16,826
+Para esses casos, veremos
+outro método que pode ser usado
+
+24
+00:01:16,859 --> 00:01:19,594
+para encontrar o número
+de clusters em um conjunto de dados.
+

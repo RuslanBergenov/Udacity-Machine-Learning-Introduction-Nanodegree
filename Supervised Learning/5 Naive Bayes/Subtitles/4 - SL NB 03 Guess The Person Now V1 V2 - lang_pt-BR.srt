@@ -1,0 +1,494 @@
+1
+00:00:00,141 --> 00:00:02,445
+O Teorema de Bayes
+pode ser mais complexo.
+
+2
+00:00:02,495 --> 00:00:04,165
+Vamos ver um pequeno exemplo.
+
+3
+00:00:04,215 --> 00:00:07,928
+Agora, vamos mexer um pouco
+com a probabilidade a priori.
+
+4
+00:00:07,978 --> 00:00:10,542
+Muito bem, Alex e Brenda
+estavam no escritório
+
+5
+00:00:10,592 --> 00:00:12,967
+e vimos alguém passar rápido.
+
+6
+00:00:13,017 --> 00:00:14,985
+Não sabemos quem era.
+
+7
+00:00:15,035 --> 00:00:17,103
+Digamos que,
+analisando a rotina dos dois,
+
+8
+00:00:17,153 --> 00:00:19,748
+notamos que Alex
+trabalha do escritório
+
+9
+00:00:19,798 --> 00:00:21,318
+a maior parte do tempo.
+
+10
+00:00:21,368 --> 00:00:23,826
+Ele aparece
+três vezes por semana.
+
+11
+00:00:23,876 --> 00:00:25,735
+Já Brenda
+viaja muito a trabalho,
+
+12
+00:00:25,785 --> 00:00:28,835
+então acaba só vindo ao escritório
+uma vez por semana.
+
+13
+00:00:28,885 --> 00:00:32,269
+A princípio, sem saber nada
+sobre o pulôver vermelho,
+
+14
+00:00:32,319 --> 00:00:36,027
+só sabemos que é três vezes
+mais provável ver Alex
+
+15
+00:00:36,077 --> 00:00:37,555
+do que ver Brenda.
+
+16
+00:00:37,887 --> 00:00:40,524
+Portanto,
+nossas probabilidades a priori
+
+17
+00:00:40,574 --> 00:00:45,322
+são 0,75 para Alex
+e 0,25 para Brenda.
+
+18
+00:00:45,667 --> 00:00:48,495
+Digamos que isso ocorreu
+por todas as semanas.
+
+19
+00:00:49,051 --> 00:00:50,588
+Mas agora entra a informação
+
+20
+00:00:50,638 --> 00:00:53,823
+de que a pessoa vestia
+um pulôver vermelho.
+
+21
+00:00:53,873 --> 00:00:55,917
+Aqui,
+a regra permanece a mesma.
+
+22
+00:00:55,967 --> 00:00:58,664
+Alex usa o pulôver
+duas vezes por semana,
+
+23
+00:00:58,714 --> 00:01:00,945
+e Brenda usa três.
+
+24
+00:01:01,876 --> 00:01:03,820
+Inocentemente,
+seríamos levados a crer
+
+25
+00:01:03,870 --> 00:01:09,348
+que as verdadeiras probabilidades
+não são exatamente 0,75 ou 0,25,
+
+26
+00:01:09,398 --> 00:01:11,775
+já que Brenda usa o pulôver
+mais do que Alex,
+
+27
+00:01:11,825 --> 00:01:14,186
+então os números
+deveriam ser mais próximos.
+
+28
+00:01:14,799 --> 00:01:16,248
+Vamos calcular.
+
+29
+00:01:16,669 --> 00:01:17,951
+Faremos assim:
+
+30
+00:01:18,001 --> 00:01:21,105
+vamos pensar nas colunas
+como semanas.
+
+31
+00:01:21,155 --> 00:01:24,208
+Agora, para cada semana
+de cinco dias de trabalho,
+
+32
+00:01:24,258 --> 00:01:27,775
+Alex usa vermelho duas vezes
+e Brenda, três.
+
+33
+00:01:28,138 --> 00:01:30,641
+Então pintamos os dias
+em que eles usaram vermelho.
+
+34
+00:01:30,691 --> 00:01:33,213
+Como sabemos que a pessoa
+estava de vermelho,
+
+35
+00:01:33,263 --> 00:01:35,560
+deixamos para lá
+os dias em que eles não usaram.
+
+36
+00:01:35,610 --> 00:01:38,704
+Agora temos nove vezes
+em que alguém usou vermelho.
+
+37
+00:01:38,754 --> 00:01:41,859
+Em seis delas foi o Alex,
+nas outras três foi a Brenda.
+
+38
+00:01:42,371 --> 00:01:46,600
+Portanto, dentre as nove vezes
+em que alguém usou vermelho,
+
+39
+00:01:46,650 --> 00:01:48,460
+em 2/3 das vezes
+era o Alex
+
+40
+00:01:48,510 --> 00:01:50,654
+e em 1/3 era a Brenda.
+
+41
+00:01:50,704 --> 00:01:53,323
+Consequentemente,
+nossas probabilidades a posteriori
+
+42
+00:01:53,373 --> 00:01:58,025
+são 2/3, ou 0,67,
+para o Alex,
+
+43
+00:01:58,075 --> 00:02:01,351
+e 1/3, ou 0,33,
+para a Brenda.
+
+44
+00:02:01,401 --> 00:02:03,048
+Parece que fizemos mágica.
+
+45
+00:02:03,098 --> 00:02:05,542
+Vamos repetir
+de uma forma mais matemática.
+
+46
+00:02:05,592 --> 00:02:08,272
+Vimos uma pessoa
+e inicialmente só sabíamos
+
+47
+00:02:08,322 --> 00:02:12,177
+que Alex
+tinha 75% de probabilidade
+
+48
+00:02:12,227 --> 00:02:16,670
+e Brenda tinha 25%,
+visto que Alex vai ao escritório
+
+49
+00:02:16,720 --> 00:02:19,315
+três vezes por semana
+e Brenda só uma.
+
+50
+00:02:19,365 --> 00:02:21,294
+É aí que entra
+uma nova informação:
+
+51
+00:02:21,344 --> 00:02:24,240
+a pessoa usava
+pulôver vermelho
+
+52
+00:02:24,290 --> 00:02:29,259
+e os dados mostram que Alex
+usa vermelho duas vezes por semana.
+
+53
+00:02:29,309 --> 00:02:31,154
+Agora olhamos para Alex.
+
+54
+00:02:31,204 --> 00:02:33,738
+Qual é a probabilidade
+de ele estar usando vermelho?
+
+55
+00:02:33,788 --> 00:02:35,436
+Como a semana
+tem cinco dias úteis,
+
+56
+00:02:35,486 --> 00:02:40,654
+a probabilidade de ele usar vermelho
+é de 2/5, ou 0,4.
+
+57
+00:02:41,325 --> 00:02:45,476
+E a probabilidade de não usar
+é o complemento, 0,6.
+
+58
+00:02:46,152 --> 00:02:47,422
+A mesma coisa para Brenda.
+
+59
+00:02:47,472 --> 00:02:49,571
+Se ela usa vermelho
+três vezes por semana,
+
+60
+00:02:49,621 --> 00:02:53,926
+a probabilidade de ela estar
+de vermelho hoje é 0,6
+
+61
+00:02:53,976 --> 00:02:58,164
+e a probabilidade de não estar
+é 0,4.
+
+62
+00:02:58,808 --> 00:03:00,818
+Segundo a fórmula
+da probabilidade condicional,
+
+63
+00:03:00,868 --> 00:03:02,736
+a probabilidade
+de os dois ocorrerem
+
+64
+00:03:02,786 --> 00:03:06,037
+é o produto
+das probabilidades p de Alex
+
+65
+00:03:06,087 --> 00:03:08,007
+vezes p de Alex
+dado vermelho.
+
+66
+00:03:08,057 --> 00:03:11,169
+Assim, a probabilidade
+de a pessoa que vimos ser Alex
+
+67
+00:03:11,219 --> 00:03:16,617
+e estar de vermelho
+é precisamente 0,75*0,4.
+
+68
+00:03:17,178 --> 00:03:19,239
+Multiplicamos
+e pomos o resultado aqui.
+
+69
+00:03:19,789 --> 00:03:21,931
+As outras probabilidades
+são calculadas igual.
+
+70
+00:03:21,981 --> 00:03:25,474
+A probabilidade de ser o Alex
+e ele não estar de vermelho
+
+71
+00:03:25,524 --> 00:03:28,045
+é 0,75*0,6.
+
+72
+00:03:28,485 --> 00:03:31,439
+A probabilidade de ser a Brenda
+e de estar de vermelho
+
+73
+00:03:31,489 --> 00:03:33,364
+é o produto
+dessas probabilidades,
+
+74
+00:03:33,414 --> 00:03:36,684
+0,25*0,6. Por fim,
+
+75
+00:03:36,734 --> 00:03:39,341
+a probabilidade de ser a Brenda
+e de não estar de vermelho
+
+76
+00:03:39,391 --> 00:03:42,235
+é 0,25*0,4.
+
+77
+00:03:42,285 --> 00:03:45,287
+É aqui que a mágica bayesiana
+acontece. Preparado?
+
+78
+00:03:45,337 --> 00:03:47,344
+Temos quatro hipóteses,
+
+79
+00:03:47,394 --> 00:03:50,193
+e você pode verificar
+que a soma delas é 1.
+
+80
+00:03:50,243 --> 00:03:52,134
+Mas sabemos de uma coisa:
+
+81
+00:03:52,184 --> 00:03:55,040
+a pessoa que vimos
+usava vermelho.
+
+82
+00:03:55,090 --> 00:03:57,704
+Portanto,
+dessas quatro hipóteses,
+
+83
+00:03:57,754 --> 00:03:59,507
+apenas duas são plausíveis,
+
+84
+00:03:59,557 --> 00:04:02,445
+as duas em que a pessoa
+está de vermelho.
+
+85
+00:04:02,495 --> 00:04:04,514
+Então vamos deixar
+as outras duas para lá.
+
+86
+00:04:04,564 --> 00:04:08,434
+Como nosso novo universo
+só contém essas duas hipóteses,
+
+87
+00:04:08,484 --> 00:04:10,845
+as probabilidades
+deveriam ser maiores.
+
+88
+00:04:10,895 --> 00:04:15,234
+Mas a proporção continua a mesma
+entre uma e outra.
+
+89
+00:04:15,284 --> 00:04:18,113
+Isso significa
+que temos que normalizá-las,
+
+90
+00:04:18,163 --> 00:04:22,593
+ou seja, dividi-las por algo
+para somadas darem 1.
+
+91
+00:04:22,643 --> 00:04:25,755
+O divisor a ser usado
+é a soma dos dois.
+
+92
+00:04:25,805 --> 00:04:28,328
+Então a nova probabilidade
+de a pessoa ser o Alex
+
+93
+00:04:28,378 --> 00:04:30,148
+é a de cima,
+
+94
+00:04:30,198 --> 00:04:33,422
+ou seja, 0,75*0,4,
+
+95
+00:04:33,472 --> 00:04:35,531
+dividida pela soma das duas,
+
+96
+00:04:35,581 --> 00:04:40,858
+ou seja,
+0,75*0,4+0,25*0,6.
+
+97
+00:04:40,908 --> 00:04:45,291
+Isso dá 2/3, ou 0,67.
+
+98
+00:04:45,341 --> 00:04:46,772
+Agora vemos que o complemento
+
+99
+00:04:46,822 --> 00:04:49,076
+é a probabilidade
+de a pessoa ser a Brenda,
+
+100
+00:04:49,126 --> 00:04:52,446
+que é 1/3, ou 0,33.
+
+101
+00:04:52,496 --> 00:04:56,673
+Pegando a probabilidade da Brenda
+e dividindo pela soma das duas,
+
+102
+00:04:56,723 --> 00:05:00,228
+vemos que dá 1/3,
+como desejado.
+
+103
+00:05:00,278 --> 00:05:01,486
+E é isso.
+
+104
+00:05:01,536 --> 00:05:04,157
+Este é o Teorema de Bayes
+em seu auge.
+

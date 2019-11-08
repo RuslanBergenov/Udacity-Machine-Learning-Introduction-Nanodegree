@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:03,870
+So, here's another way to solve a local minimum problem.
+
+2
+00:00:03,870 --> 00:00:07,230
+The idea is to walk a bit fast with momentum and
+
+3
+00:00:07,230 --> 00:00:10,618
+determination in a way that if you get stuck in a local minimum,
+
+4
+00:00:10,618 --> 00:00:16,559
+you can, sort of, power through and get over the hump to look for a lower minimum.
+
+5
+00:00:16,559 --> 00:00:20,310
+So let's look at what normal gradient descent does.
+
+6
+00:00:20,309 --> 00:00:23,729
+It gets us all the way here. No problem.
+
+7
+00:00:23,730 --> 00:00:29,065
+Now, we want to go over the hump but by now the gradient is zero or too small,
+
+8
+00:00:29,065 --> 00:00:31,454
+so it won't give us a good step.
+
+9
+00:00:31,454 --> 00:00:33,270
+What if we look at the previous ones?
+
+10
+00:00:33,270 --> 00:00:37,109
+What about say the average of the last few steps.
+
+11
+00:00:37,109 --> 00:00:39,270
+If we take the average, this will takes us in
+
+12
+00:00:39,270 --> 00:00:43,435
+direction and push us a bit towards the hump.
+
+13
+00:00:43,435 --> 00:00:46,530
+Now the average seems a bit drastic since the step we made 10
+
+14
+00:00:46,530 --> 00:00:50,484
+steps ago is much less relevant than the step we last made.
+
+15
+00:00:50,484 --> 00:00:52,170
+So, we can say, for example,
+
+16
+00:00:52,170 --> 00:00:54,394
+the average of the last three or four steps.
+
+17
+00:00:54,393 --> 00:00:57,509
+Even better, we can weight each step so that
+
+18
+00:00:57,509 --> 00:01:02,420
+the previous step matters a lot and the steps before that matter less and less.
+
+19
+00:01:02,420 --> 00:01:05,849
+Here is where we introduce momentum.
+
+20
+00:01:05,849 --> 00:01:10,260
+Momentum is a constant beta between 0 and 1 that
+
+21
+00:01:10,260 --> 00:01:16,230
+attaches to the steps as follows: the previous step gets multiplied by 1,
+
+22
+00:01:16,230 --> 00:01:20,140
+the one before, by beta, the one before,
+
+23
+00:01:20,140 --> 00:01:22,849
+by beta squared, the one before,
+
+24
+00:01:22,849 --> 00:01:25,950
+by beta cubed, etc.
+
+25
+00:01:25,950 --> 00:01:28,530
+In this way, the steps that happened a long time
+
+26
+00:01:28,530 --> 00:01:32,079
+ago will matter less than the ones that happened recently.
+
+27
+00:01:32,078 --> 00:01:34,393
+We can see that that gets us over the hump.
+
+28
+00:01:34,394 --> 00:01:37,454
+But now, once we get to the global minimum,
+
+29
+00:01:37,453 --> 00:01:41,723
+it'll still be pushing us away a bit but not as much.
+
+30
+00:01:41,724 --> 00:01:43,847
+This may seem vague, but the algorithms that
+
+31
+00:01:43,846 --> 00:01:46,669
+use momentum seem to work really well in practice.
+

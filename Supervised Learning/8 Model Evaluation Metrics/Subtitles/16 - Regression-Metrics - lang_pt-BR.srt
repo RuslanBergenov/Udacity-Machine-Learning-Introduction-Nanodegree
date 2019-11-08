@@ -1,0 +1,254 @@
+1
+00:00:00,000 --> 00:00:02,333
+Vamos estudar métricas
+que podemos usar
+
+2
+00:00:02,400 --> 00:00:04,133
+para avaliar
+modelos de regressão.
+
+3
+00:00:04,200 --> 00:00:07,867
+A primeira chama-se
+erro absoluto médio.
+
+4
+00:00:07,933 --> 00:00:11,600
+No exemplo há pontos, e desenhamos
+uma reta que se ajusta a eles.
+
+5
+00:00:11,667 --> 00:00:13,800
+Queremos ver
+se a reta é ruim.
+
+6
+00:00:13,867 --> 00:00:17,200
+Uma boa maneira é somar
+os valores absolutos
+
+7
+00:00:17,267 --> 00:00:19,600
+das distâncias
+dos pontos à reta.
+
+8
+00:00:19,667 --> 00:00:22,333
+É bem fácil calcular este erro
+em sklearn.
+
+9
+00:00:22,400 --> 00:00:26,600
+Criamos um objeto classificador
+de regressão linear
+
+10
+00:00:26,667 --> 00:00:28,000
+chamado de classificador.
+
+11
+00:00:28,067 --> 00:00:31,333
+E usamos a função
+para ajustar a reta.
+
+12
+00:00:31,400 --> 00:00:35,867
+Podemos chamar os pontos de y,
+e as previsões feitas pelo modelo
+
+13
+00:00:35,933 --> 00:00:38,067
+de classifier.predict(x).
+
+14
+00:00:38,133 --> 00:00:39,867
+Chamaremos isso
+de suposições.
+
+15
+00:00:39,933 --> 00:00:43,067
+Finalmente, o erro absoluto médio
+é calculado
+
+16
+00:00:43,133 --> 00:00:45,667
+com a função
+de erro absoluto médio.
+
+17
+00:00:45,733 --> 00:00:49,267
+O problema é que essa função
+não é diferenciável.
+
+18
+00:00:49,333 --> 00:00:53,467
+Pode não ser bom se usarmos métodos
+como a descida do gradiente.
+
+19
+00:00:53,533 --> 00:00:58,067
+Para resolver isso, usamos
+o mais comum erro quadrático médio.
+
+20
+00:00:58,133 --> 00:01:01,600
+Nesta métrica, somamos
+os quadrados das distâncias
+
+21
+00:01:01,667 --> 00:01:03,333
+entre os pontos e a reta.
+
+22
+00:01:03,400 --> 00:01:06,667
+Também é fácil
+calculá-lo em sklearn.
+
+23
+00:01:06,733 --> 00:01:11,333
+Só que agora usaremos a função
+mean_squared_error.
+
+24
+00:01:11,400 --> 00:01:14,333
+Vamos ver uma métrica de regressão
+bem comum, a nota R2.
+
+25
+00:01:14,400 --> 00:01:18,667
+É baseada em comparar nosso modelo
+ao modelo mais simples possível.
+
+26
+00:01:18,733 --> 00:01:19,867
+Pensemos.
+
+27
+00:01:19,933 --> 00:01:24,467
+Qual o modelo mais simples possível
+que se ajusta a um grupo de pontos?
+
+28
+00:01:24,533 --> 00:01:28,133
+Um bem simples é apenas tirar
+a média de todos os valores
+
+29
+00:01:28,200 --> 00:01:30,067
+e desenhar
+uma reta horizontal.
+
+30
+00:01:30,133 --> 00:01:33,733
+Calculamos o erro quadrático médio
+para este modelo.
+
+31
+00:01:33,800 --> 00:01:36,400
+Esperamos que
+o erro quadrático médio aqui
+
+32
+00:01:36,467 --> 00:01:40,533
+seja maior do que o erro para
+um modelo de regressão linear.
+
+33
+00:01:40,600 --> 00:01:42,867
+A pergunta é:
+maior, quanto?
+
+34
+00:01:42,933 --> 00:01:45,667
+Podemos dividir o erro
+do modelo de regressão linear
+
+35
+00:01:45,733 --> 00:01:48,733
+pelo erro
+do modelo simples,
+
+36
+00:01:48,800 --> 00:01:53,333
+e subtrair o resultado de 1,
+o que chamamos de nota R2.
+
+37
+00:01:53,400 --> 00:01:57,133
+Se o modelo não for muito bom,
+os dois erros devem ser parecidos
+
+38
+00:01:57,200 --> 00:02:01,000
+e esta quantidade aqui
+deve ser perto de 1.
+
+39
+00:02:01,067 --> 00:02:04,533
+Toda a nota R2
+deve ser perto de 0.
+
+40
+00:02:04,600 --> 00:02:06,600
+Se o modelo for bom,
+
+41
+00:02:06,667 --> 00:02:09,333
+o erro quadrático médio
+do modelo de regressão linear
+
+42
+00:02:09,400 --> 00:02:13,800
+deve ser bem menor do que
+o do modelo simples.
+
+43
+00:02:13,867 --> 00:02:16,133
+Por isso,
+esta razão deve ser pequena,
+
+44
+00:02:16,200 --> 00:02:19,533
+e a nota R2
+deve ser bem perto de 1.
+
+45
+00:02:19,600 --> 00:02:23,333
+Concluindo, se a nota R2
+for perto de 1, o modelo é bom.
+
+46
+00:02:23,400 --> 00:02:26,800
+E se for perto de 0,
+ele não é muito melhor
+
+47
+00:02:26,867 --> 00:02:30,067
+do que apenas um palpite
+da média dos valores dos pontos.
+
+48
+00:02:30,133 --> 00:02:32,800
+É muito simples calcular
+a nota R2 em sklearn
+
+49
+00:02:32,867 --> 00:02:34,600
+com a função r2_score.
+
+50
+00:02:34,667 --> 00:02:37,267
+Um pequeno exemplo
+onde calculamos a nota R2
+
+51
+00:02:37,333 --> 00:02:40,000
+entre os valores
+verdadeiros em azul,
+
+52
+00:02:40,067 --> 00:02:41,867
+e o valores previstos
+em verde.
+

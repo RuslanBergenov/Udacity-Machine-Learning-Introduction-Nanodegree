@@ -1,0 +1,308 @@
+1
+00:00:00,000 --> 00:00:03,665
+Now, here's where the word naive comes in Naive Bayes.
+
+2
+00:00:03,665 --> 00:00:06,765
+We're going to make a pretty naive assumption here.
+
+3
+00:00:06,765 --> 00:00:09,505
+Let's look at the probability of two events happening together,
+
+4
+00:00:09,505 --> 00:00:11,600
+so P of A and B.
+
+5
+00:00:11,600 --> 00:00:15,090
+We can also read this a P of A intersection B.
+
+6
+00:00:15,090 --> 00:00:19,935
+And we're going to say that this is the product of P of A and P of B.
+
+7
+00:00:19,935 --> 00:00:22,770
+Now, this only happens when the two events are independent.
+
+8
+00:00:22,770 --> 00:00:25,735
+If they're not, then this is not true.
+
+9
+00:00:25,735 --> 00:00:28,260
+For example, if A is the event of it being hot
+
+10
+00:00:28,260 --> 00:00:31,395
+outside and B is the event of it being cold outside,
+
+11
+00:00:31,395 --> 00:00:34,050
+then they both have a positive probability.
+
+12
+00:00:34,050 --> 00:00:38,190
+But now, what's the probability of both events happening at the same time?
+
+13
+00:00:38,190 --> 00:00:42,570
+This will be zero, since it can't be hot and cold at the same time.
+
+14
+00:00:42,570 --> 00:00:45,060
+So, this formula doesn't follow because the events of
+
+15
+00:00:45,060 --> 00:00:48,540
+being hot and being cold are dependent on each other.
+
+16
+00:00:48,540 --> 00:00:52,360
+But in a Naive Bayes, we will assume that our probabilities are independent.
+
+17
+00:00:52,360 --> 00:00:55,070
+This, as we said, is a false and naive assumption,
+
+18
+00:00:55,070 --> 00:00:59,675
+but in practice, it works very well and it makes our algorithm very fast.
+
+19
+00:00:59,675 --> 00:01:03,000
+Another formula I will use is a formula for conditional probability.
+
+20
+00:01:03,000 --> 00:01:06,024
+These are two ways of writing P of A intersection B.
+
+21
+00:01:06,024 --> 00:01:08,775
+And this is the basis for our base theorem.
+
+22
+00:01:08,775 --> 00:01:12,665
+But the trick we'll use here is to forget about P of B.
+
+23
+00:01:12,665 --> 00:01:14,935
+And now, we don't have these being equal.
+
+24
+00:01:14,935 --> 00:01:20,865
+But we have P of A given B to be proportional to P of B given A times P of A.
+
+25
+00:01:20,865 --> 00:01:23,230
+This will work very well because in the practice,
+
+26
+00:01:23,230 --> 00:01:24,385
+P of B will cancel out,
+
+27
+00:01:24,385 --> 00:01:27,738
+so the fact that these two are proportional is very useful.
+
+28
+00:01:27,738 --> 00:01:29,315
+And now, here's what we want.
+
+29
+00:01:29,315 --> 00:01:32,175
+We have an email that contains the words easy and money,
+
+30
+00:01:32,175 --> 00:01:34,125
+and we want to know if it is spam.
+
+31
+00:01:34,125 --> 00:01:37,170
+So we want this, the probability of the email being
+
+32
+00:01:37,170 --> 00:01:41,020
+spam given that it contains the words easy and money.
+
+33
+00:01:41,020 --> 00:01:45,600
+We'll start by using a conditional probability rule that we just reviewed to write it as
+
+34
+00:01:45,600 --> 00:01:47,970
+a product of the probability that the email
+
+35
+00:01:47,970 --> 00:01:51,400
+contains the words easy and money given that it is spam,
+
+36
+00:01:51,400 --> 00:01:54,555
+times the probability of the email being spam.
+
+37
+00:01:54,555 --> 00:01:57,660
+In this formula, A represents being
+
+38
+00:01:57,660 --> 00:02:02,670
+spam and B represents containing the words easy and money.
+
+39
+00:02:02,670 --> 00:02:05,235
+Now, we are ready to use our naive assumption.
+
+40
+00:02:05,235 --> 00:02:08,280
+This first factor over here is a probability of the email
+
+41
+00:02:08,280 --> 00:02:11,775
+containing the words easy and money given that it is spam.
+
+42
+00:02:11,775 --> 00:02:13,950
+We can write it as a probability of
+
+43
+00:02:13,950 --> 00:02:16,790
+the email containing the word easy given that it is spam,
+
+44
+00:02:16,790 --> 00:02:21,455
+times the probability of the email containing the word money given that it is spam.
+
+45
+00:02:21,455 --> 00:02:24,725
+Again, huge naive assumptions as these may be dependent.
+
+46
+00:02:24,725 --> 00:02:27,750
+It could be that containing the word easy actually makes it more likely that
+
+47
+00:02:27,750 --> 00:02:31,075
+the email contains the word money. But that's okay.
+
+48
+00:02:31,075 --> 00:02:33,120
+In many cases, this assumption won't affect
+
+49
+00:02:33,120 --> 00:02:36,550
+the results and it will make our calculations much easier.
+
+50
+00:02:36,550 --> 00:02:39,940
+And this is the heart of the Naive Bayes algorithm.
+
+51
+00:02:39,940 --> 00:02:43,040
+And now, we do the same thing for hand emails.
+
+52
+00:02:43,040 --> 00:02:46,575
+We have both probabilities written as a product of factors.
+
+53
+00:02:46,575 --> 00:02:48,540
+But what are these factors?
+
+54
+00:02:48,540 --> 00:02:52,435
+Well, we've calculated them before based on our data.
+
+55
+00:02:52,435 --> 00:02:56,040
+The first one P of containing the word easy given that it is spam,
+
+56
+00:02:56,040 --> 00:03:00,940
+is one-third since there are three spam emails and one of them contains the word easy.
+
+57
+00:03:00,940 --> 00:03:03,420
+For P of containing money given spam,
+
+58
+00:03:03,420 --> 00:03:04,770
+that's two-thirds since there are
+
+59
+00:03:04,770 --> 00:03:07,995
+three spam emails and two of them contain the word money.
+
+60
+00:03:07,995 --> 00:03:09,970
+And P of spam is very simple.
+
+61
+00:03:09,970 --> 00:03:14,410
+It's three over eight since there are eight emails and only three of them are spam.
+
+62
+00:03:14,410 --> 00:03:17,580
+We do a similar calculation for the bottom one and get one-fifth,
+
+63
+00:03:17,580 --> 00:03:20,550
+one-fifth, and five over eight.
+
+64
+00:03:20,550 --> 00:03:23,760
+Now we multiply them and we get that the probability of spam given
+
+65
+00:03:23,760 --> 00:03:27,390
+that it contains the word easy and money is proportional to one over 12.
+
+66
+00:03:27,390 --> 00:03:31,240
+And for ham, it's proportional to one over 40.
+
+67
+00:03:31,240 --> 00:03:33,846
+Now remember that these values are not the actual probabilities,
+
+68
+00:03:33,846 --> 00:03:36,210
+they are proportional to the actual probabilities.
+
+69
+00:03:36,210 --> 00:03:40,515
+So what do we do to get the actual probabilities? Here's the magic.
+
+70
+00:03:40,515 --> 00:03:43,405
+We know that an email has to be either spam or ham,
+
+71
+00:03:43,405 --> 00:03:45,545
+so these two should add to one.
+
+72
+00:03:45,545 --> 00:03:48,000
+So we need to normalize them, namely,
+
+73
+00:03:48,000 --> 00:03:50,760
+multiply them both by the same factor so that they are still
+
+74
+00:03:50,760 --> 00:03:55,155
+proportional to one over 12 and one over 40, but they add to one.
+
+75
+00:03:55,155 --> 00:03:59,910
+Let's try that in a quiz. Can you find two numbers that add to one and that they are
+
+76
+00:03:59,910 --> 00:04:04,445
+in the same proportion to each other as one over 12 and one over 40?
+
+77
+00:04:04,445 --> 00:04:06,000
+Enter your answer below.
+

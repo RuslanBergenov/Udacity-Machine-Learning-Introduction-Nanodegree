@@ -1,0 +1,412 @@
+1
+00:00:00,000 --> 00:00:04,852
+Well the first observation is that both equations give us the same line,
+
+2
+00:00:04,852 --> 00:00:07,500
+the line with equation X1+X2=0.
+
+3
+00:00:07,500 --> 00:00:10,664
+And the reason for this is that solution
+
+4
+00:00:10,664 --> 00:00:15,839
+two is really just a scalar multiple of solution one. So let's see.
+
+5
+00:00:15,839 --> 00:00:18,929
+Recall that the prediction is a sigmoid of the linear function.
+
+6
+00:00:18,929 --> 00:00:20,579
+So in the first case, for the 0.11,
+
+7
+00:00:20,579 --> 00:00:22,788
+it would be sigmoid of 1+1,
+
+8
+00:00:22,789 --> 00:00:27,600
+which is sigmoid of 2, which is 0.88.
+
+9
+00:00:27,600 --> 00:00:29,370
+This is not bad since the point is blue,
+
+10
+00:00:29,370 --> 00:00:31,268
+so it has a label of one.
+
+11
+00:00:31,268 --> 00:00:32,460
+For the point (-1, -1),
+
+12
+00:00:32,460 --> 00:00:35,880
+the prediction is sigmoid of -1+-1,
+
+13
+00:00:35,880 --> 00:00:40,304
+which is sigmoid of -2, which is 0.12.
+
+14
+00:00:40,304 --> 00:00:45,359
+It's also not best since a point label has a label of zero since it's red.
+
+15
+00:00:45,359 --> 00:00:48,009
+Now let's see what happens with the second model.
+
+16
+00:00:48,009 --> 00:00:51,335
+The point (1, 1) has a prediction sigmoid
+
+17
+00:00:51,335 --> 00:00:55,469
+of 10 times 1 plus 10 times 1 which is sigmoid of 20.
+
+18
+00:00:55,469 --> 00:01:01,920
+This is a 0.9999999979,
+
+19
+00:01:01,920 --> 00:01:04,109
+which is really close to 1,
+
+20
+00:01:04,109 --> 00:01:06,015
+so it's a great prediction.
+
+21
+00:01:06,015 --> 00:01:08,400
+And the point (-1, -1) has
+
+22
+00:01:08,400 --> 00:01:13,350
+prediction sigmoid of 10 times negative one plus 10 times negative one,
+
+23
+00:01:13,349 --> 00:01:16,837
+which is sigmoid of minus 20,
+
+24
+00:01:16,837 --> 00:01:23,409
+and that is 0.0000000021.
+
+25
+00:01:23,409 --> 00:01:27,256
+That's a really, really close to zero so it's a great prediction.
+
+26
+00:01:27,256 --> 00:01:30,143
+So the answer to the quiz is the second model,
+
+27
+00:01:30,143 --> 00:01:32,150
+the second model is super accurate.
+
+28
+00:01:32,150 --> 00:01:33,765
+This means it's better, right?
+
+29
+00:01:33,765 --> 00:01:35,909
+Well after the last section you may be a bit
+
+30
+00:01:35,909 --> 00:01:38,909
+reluctant since this hint's a bit towards overfitting.
+
+31
+00:01:38,909 --> 00:01:40,954
+And your hunch is correct.
+
+32
+00:01:40,954 --> 00:01:43,814
+The problem is overfitting but in a subtle way.
+
+33
+00:01:43,814 --> 00:01:46,259
+Here's what's happening and here's why the first model is
+
+34
+00:01:46,260 --> 00:01:49,206
+better even if it gives a larger error.
+
+35
+00:01:49,206 --> 00:01:54,150
+When we apply sigmoid to small values such as X1+X2,
+
+36
+00:01:54,150 --> 00:01:59,484
+we get the function on the left which has a nice slope to the gradient descent.
+
+37
+00:01:59,484 --> 00:02:07,594
+When we multiply the linear function by 10 and take sigmoid of 10X1+10X2,
+
+38
+00:02:07,594 --> 00:02:11,919
+our predictions are much better since they're closer to zero and one.
+
+39
+00:02:11,919 --> 00:02:17,737
+But the function becomes much steeper and it's much harder to do great descent here.
+
+40
+00:02:17,737 --> 00:02:19,960
+Since the derivatives are mostly close to
+
+41
+00:02:19,960 --> 00:02:24,960
+zero and then very large when we get to the middle of the curve.
+
+42
+00:02:24,960 --> 00:02:27,939
+Therefore, in order to do gradient descent properly,
+
+43
+00:02:27,939 --> 00:02:33,585
+we want a model like the one in the left more than a model like the one in the right.
+
+44
+00:02:33,585 --> 00:02:35,200
+In a conceptual way,
+
+45
+00:02:35,199 --> 00:02:37,259
+the model in the right is too
+
+46
+00:02:37,259 --> 00:02:41,454
+certain and it gives little room for applying gradient descent.
+
+47
+00:02:41,455 --> 00:02:42,550
+Also as we can imagine,
+
+48
+00:02:42,550 --> 00:02:45,910
+the points that are classified incorrectly in the model in the right,
+
+49
+00:02:45,909 --> 00:02:51,250
+will generate large errors and it will be hard to tune the model to correct them.
+
+50
+00:02:51,250 --> 00:02:53,379
+These can be summarized in the quote by
+
+51
+00:02:53,379 --> 00:02:58,264
+the famous philosopher and mathematician BertrAIND Russell.
+
+52
+00:02:58,264 --> 00:03:00,819
+The whole problem with artificial intelligence,
+
+53
+00:03:00,819 --> 00:03:04,194
+is that bad models are so certain of themselves,
+
+54
+00:03:04,194 --> 00:03:07,634
+and good models are so full of doubts.
+
+55
+00:03:07,634 --> 00:03:08,764
+Now the question is,
+
+56
+00:03:08,764 --> 00:03:12,422
+how do we prevent this type of overfitting from happening?
+
+57
+00:03:12,423 --> 00:03:16,775
+This seems to not be easy since the bad model gives smaller errors.
+
+58
+00:03:16,775 --> 00:03:20,865
+Well, all we have to do is we have to tweak the error function a bit.
+
+59
+00:03:20,865 --> 00:03:24,250
+Basically we want to punish high coefficients.
+
+60
+00:03:24,250 --> 00:03:25,969
+So what we do is we take
+
+61
+00:03:25,969 --> 00:03:32,164
+the old error function and add a term which is big when the weights are big.
+
+62
+00:03:32,164 --> 00:03:34,569
+There are two ways to do this.
+
+63
+00:03:34,569 --> 00:03:40,935
+One way is to add the sums of absolute values of the weights times a constant lambda.
+
+64
+00:03:40,935 --> 00:03:46,490
+The other one is to add the sum of the squares of the weights times that same constant.
+
+65
+00:03:46,490 --> 00:03:52,082
+As you can see, these two are large if the weights are large.
+
+66
+00:03:52,082 --> 00:03:56,430
+The lambda parameter will tell us how much we want to penalize the coefficients.
+
+67
+00:03:56,430 --> 00:03:57,467
+If lambda is large,
+
+68
+00:03:57,467 --> 00:03:59,085
+we penalized them a lot.
+
+69
+00:03:59,085 --> 00:04:02,875
+And if lambda is small then we don't penalize them much.
+
+70
+00:04:02,875 --> 00:04:05,775
+And finally, if we decide to go for the absolute values,
+
+71
+00:04:05,775 --> 00:04:09,138
+we're doing L1 regularization,
+
+72
+00:04:09,138 --> 00:04:10,944
+and if we decide to go for the squares,
+
+73
+00:04:10,944 --> 00:04:13,969
+then we're doing L2 regularization.
+
+74
+00:04:13,969 --> 00:04:15,294
+Both are very popular,
+
+75
+00:04:15,294 --> 00:04:18,069
+and depending on our goals or application,
+
+76
+00:04:18,069 --> 00:04:20,724
+we'll be applying one or the other.
+
+77
+00:04:20,725 --> 00:04:27,185
+Here are some general guidelines for deciding between L1 and L2 regularization.
+
+78
+00:04:27,185 --> 00:04:32,634
+When we apply L1, we tend to end up with sparse vectors.
+
+79
+00:04:32,634 --> 00:04:36,449
+That means, small weights will tend to go to zero.
+
+80
+00:04:36,449 --> 00:04:40,449
+So if we want to reduce the number of weights and end up with a small set,
+
+81
+00:04:40,449 --> 00:04:41,944
+we can use L1.
+
+82
+00:04:41,944 --> 00:04:44,550
+This is also good for feature selections and
+
+83
+00:04:44,550 --> 00:04:47,550
+sometimes we have a problem with hundreds of features,
+
+84
+00:04:47,550 --> 00:04:52,379
+and L1 regularization will help us select which ones are important,
+
+85
+00:04:52,379 --> 00:04:55,129
+and it will turn the rest into zeroes.
+
+86
+00:04:55,129 --> 00:04:56,939
+L2 on the other hand,
+
+87
+00:04:56,939 --> 00:04:59,519
+tends not to favor sparse vectors since it
+
+88
+00:04:59,519 --> 00:05:02,894
+tries to maintain all the weights homogeneously small.
+
+89
+00:05:02,894 --> 00:05:06,329
+This one normally gives better results for training models so
+
+90
+00:05:06,329 --> 00:05:09,854
+it's the one we'll use the most. Now let's think a bit.
+
+91
+00:05:09,855 --> 00:05:13,710
+Why would L1 regularization produce vectors with sparse weights,
+
+92
+00:05:13,709 --> 00:05:18,495
+and L2 regularization will produce vectors with small homogeneous weights?
+
+93
+00:05:18,495 --> 00:05:20,545
+Well, here's an idea of why.
+
+94
+00:05:20,545 --> 00:05:23,030
+If we take the vector (1, 0),
+
+95
+00:05:23,029 --> 00:05:26,384
+the sums of the absolute values of the weights are one,
+
+96
+00:05:26,384 --> 00:05:30,267
+and the sums of the squares of the weights are also one.
+
+97
+00:05:30,267 --> 00:05:35,187
+But if we take the vector (0.5, 0.5),
+
+98
+00:05:35,187 --> 00:05:39,298
+the sums of the absolute values of the weights is still one,
+
+99
+00:05:39,298 --> 00:05:46,024
+but the sums of the squares is 0.25+0.25, which is 0.5.
+
+100
+00:05:46,024 --> 00:05:51,245
+Thus, L2 regularization will prefer the vector point (0.5,
+
+101
+00:05:51,245 --> 00:05:53,599
+0.5) over the vector (1, 0),
+
+102
+00:05:53,600 --> 00:05:57,020
+since this one produces a smaller sum of squares.
+
+103
+00:05:57,019 --> 00:06:00,000
+And in turn, a smaller function.
+

@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:02,700
+So by now we've learned how to build
+
+2
+00:00:02,700 --> 00:00:06,375
+a deep neural network and how to train it to fit our data.
+
+3
+00:00:06,375 --> 00:00:08,460
+Sometimes however, we go out there and train on
+
+4
+00:00:08,460 --> 00:00:11,550
+ourselves and find out that nothing works as planned.
+
+5
+00:00:11,550 --> 00:00:14,814
+Why? Because there are many things that can fail.
+
+6
+00:00:14,814 --> 00:00:16,786
+Our architecture can be poorly chosen,
+
+7
+00:00:16,786 --> 00:00:18,089
+our data can be noisy,
+
+8
+00:00:18,088 --> 00:00:21,823
+our model could maybe be taking years to run and we need it to run faster.
+
+9
+00:00:21,824 --> 00:00:24,120
+We need to learn ways to optimize
+
+10
+00:00:24,120 --> 00:00:27,059
+the training of our models and this is what we'll do next.
+

@@ -1,0 +1,67 @@
+1
+00:00:00,400 --> 00:00:01,439
+So let's see.
+
+2
+00:00:01,439 --> 00:00:04,439
+The true positives are the points
+that are positive and
+
+3
+00:00:04,440 --> 00:00:07,150
+the model correctly labels as positive.
+
+4
+00:00:07,150 --> 00:00:09,890
+These are the six blue points over here.
+
+5
+00:00:09,890 --> 00:00:12,870
+The true negatives are the points
+that are negative and
+
+6
+00:00:12,869 --> 00:00:15,160
+the model correctly labels as negative.
+
+7
+00:00:15,160 --> 00:00:17,803
+These are the five negative
+red points over here.
+
+8
+00:00:17,803 --> 00:00:20,996
+And the false positives
+are the points that are negative, but
+
+9
+00:00:20,996 --> 00:00:23,960
+the model incorrectly
+labels as positive.
+
+10
+00:00:23,960 --> 00:00:26,230
+These are these two
+red points over here.
+
+11
+00:00:26,230 --> 00:00:30,271
+And finally, the false negatives
+are the points that are positive but
+
+12
+00:00:30,271 --> 00:00:32,475
+the modeling says negative.
+
+13
+00:00:32,475 --> 00:00:35,939
+That's just this blue point over here.
+
+14
+00:00:35,939 --> 00:00:36,960
+So there we go.
+
+15
+00:00:36,960 --> 00:00:38,160
+That's the confusion matrix.
+

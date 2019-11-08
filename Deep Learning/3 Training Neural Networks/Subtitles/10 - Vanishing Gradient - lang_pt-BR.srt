@@ -1,0 +1,104 @@
+1
+00:00:00,200 --> 00:00:02,370
+Vejamos outro problema
+que pode acontecer.
+
+2
+00:00:02,404 --> 00:00:04,901
+Observe a função sigmoide.
+
+3
+00:00:04,935 --> 00:00:08,300
+A curva se achata
+nas laterais.
+
+4
+00:00:08,334 --> 00:00:11,100
+Se calcularmos
+os derivativos de um ponto
+
+5
+00:00:11,134 --> 00:00:13,734
+à direita ou à esquerda,
+
+6
+00:00:13,768 --> 00:00:16,868
+o derivativo será
+quase zero.
+
+7
+00:00:16,902 --> 00:00:19,601
+Isso não é bom,
+pois o derivativo nos informa
+
+8
+00:00:19,635 --> 00:00:22,033
+a direção a ser seguida.
+
+9
+00:00:22,067 --> 00:00:24,901
+Isso é ainda pior
+nos perceptrons multilineares.
+
+10
+00:00:24,935 --> 00:00:26,133
+Veja só.
+
+11
+00:00:26,167 --> 00:00:30,501
+O derivativo da função de erro
+em respeito ao peso
+
+12
+00:00:30,535 --> 00:00:35,167
+era o produto de todos
+derivativos calculados nos nós
+
+13
+00:00:35,201 --> 00:00:37,767
+no caminho correspondente
+à saída.
+
+14
+00:00:37,801 --> 00:00:41,367
+Todos os derivativos são
+como uma função sigmoide,
+
+15
+00:00:41,401 --> 00:00:43,000
+então eles são pequenos,
+
+16
+00:00:43,034 --> 00:00:45,801
+e o produto de um monte
+de valores pequenos
+
+17
+00:00:45,835 --> 00:00:47,501
+é minúsculo.
+
+18
+00:00:47,535 --> 00:00:50,901
+Isso dificulta o treinamento,
+pois o gradiente descendente
+
+19
+00:00:50,935 --> 00:00:55,400
+nos dá alterações minúsculas
+a serem feitas nos pesos,
+
+20
+00:00:55,434 --> 00:00:57,834
+assim, nós daremos
+passos minúsculos
+
+21
+00:00:57,868 --> 00:01:01,133
+e jamais conseguiremos
+descer do Monte Errorest.
+
+22
+00:01:01,167 --> 00:01:04,199
+Como consertamos isso?
+Existem algumas maneiras.
+

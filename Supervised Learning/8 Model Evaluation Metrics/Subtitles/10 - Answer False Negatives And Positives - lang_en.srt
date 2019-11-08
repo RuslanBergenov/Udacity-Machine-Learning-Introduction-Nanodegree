@@ -1,0 +1,136 @@
+1
+00:00:00,000 --> 00:00:01,590
+So for the medical model,
+
+2
+00:00:01,590 --> 00:00:05,429
+it seems that we'd much rather misdiagnose a healthy person as sick and send them for
+
+3
+00:00:05,429 --> 00:00:07,769
+more tests than misdiagnose a
+
+4
+00:00:07,769 --> 00:00:10,619
+sick person as healthy and send them home without treatment.
+
+5
+00:00:10,619 --> 00:00:14,204
+In this case, a false positive is much worse than a false negative.
+
+6
+00:00:14,205 --> 00:00:15,750
+So the rule of this model is,
+
+7
+00:00:15,750 --> 00:00:17,835
+I want to find all the sick people.
+
+8
+00:00:17,835 --> 00:00:20,700
+I'm okay if I accidentally bring some more that are sick,
+
+9
+00:00:20,699 --> 00:00:22,619
+but I need to find all the sick people.
+
+10
+00:00:22,620 --> 00:00:25,695
+For the spam email model, let's see.
+
+11
+00:00:25,695 --> 00:00:29,160
+A false negative means a spam email made its way into your inbox,
+
+12
+00:00:29,160 --> 00:00:30,554
+and all you had to do is delete it.
+
+13
+00:00:30,554 --> 00:00:32,204
+So it's a bit of an inconvenience.
+
+14
+00:00:32,204 --> 00:00:34,500
+On the other hand, what's a false positive?
+
+15
+00:00:34,500 --> 00:00:39,390
+Your grandma, the poor lady learned to type an email only to tell you she bake cookies,
+
+16
+00:00:39,390 --> 00:00:41,490
+and you delete it. That's terrible.
+
+17
+00:00:41,490 --> 00:00:45,510
+So here, we want to punish false positives more than false negatives.
+
+18
+00:00:45,509 --> 00:00:47,369
+So this model basically says,
+
+19
+00:00:47,369 --> 00:00:51,659
+"I don't really care if I find all the spam emails but one thing is for sure,
+
+20
+00:00:51,659 --> 00:00:53,444
+if I say that an email is spam,
+
+21
+00:00:53,445 --> 00:00:55,020
+it better be a spam."
+
+22
+00:00:55,020 --> 00:00:58,965
+So as we can see, the medical model and the email model are fundamentally different.
+
+23
+00:00:58,965 --> 00:01:03,570
+The medical model as we saw is okay with false positives but not with false negatives,
+
+24
+00:01:03,570 --> 00:01:05,189
+since we're okay misdiagnosing
+
+25
+00:01:05,189 --> 00:01:08,129
+some patients as sick as long as we find all the sick people.
+
+26
+00:01:08,129 --> 00:01:10,349
+The email model on the other hand is okay with
+
+27
+00:01:10,349 --> 00:01:12,419
+false negatives but not with false positives,
+
+28
+00:01:12,420 --> 00:01:17,280
+since we don't necessarily need to find all the spam emails but one thing is for sure,
+
+29
+00:01:17,280 --> 00:01:20,685
+that if we do label something as spam, it better be spam.
+
+30
+00:01:20,685 --> 00:01:24,135
+For this, we introduced two metrics, precision and recall.
+
+31
+00:01:24,135 --> 00:01:27,885
+They will measure the exact things that we want, namely,
+
+32
+00:01:27,885 --> 00:01:29,190
+the medical model needs to be
+
+33
+00:01:29,189 --> 00:01:33,899
+a high recall model and the email model needs to be high precision model.
+
+34
+00:01:33,900 --> 00:01:37,900
+We'll talk about them more in detail in the next couple of videos.
+

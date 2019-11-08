@@ -1,0 +1,192 @@
+1
+00:00:00,126 --> 00:00:02,823
+Boosting, como vimos antes,
+é um pouco mais elaborado.
+
+2
+00:00:02,873 --> 00:00:05,747
+Há algumas formas de fazer,
+mas uma das mais populares
+
+3
+00:00:05,797 --> 00:00:07,915
+é o algoritmo AdaBoost,
+
+4
+00:00:07,965 --> 00:00:11,263
+descoberto por Freund e Schapire
+em 1996.
+
+5
+00:00:11,313 --> 00:00:12,626
+E eis a essência dele,
+
+6
+00:00:12,676 --> 00:00:16,131
+embora eu vá desenvolver
+a parte matemática logo mais.
+
+7
+00:00:16,181 --> 00:00:18,570
+Devo dizer que,
+se procurar na literatura,
+
+8
+00:00:18,620 --> 00:00:20,280
+pode achar discrepante.
+
+9
+00:00:20,330 --> 00:00:22,611
+Mas prometo que,
+exceto por trivialidades,
+
+10
+00:00:22,661 --> 00:00:24,837
+como multiplicar os pesos
+por uma constante,
+
+11
+00:00:24,887 --> 00:00:26,569
+o que não vai mudar
+o resultado,
+
+12
+00:00:26,619 --> 00:00:29,749
+o que vou mostrar
+é o exato algoritmo AdaBoost.
+
+13
+00:00:29,799 --> 00:00:31,017
+A ideia é a seguinte:
+
+14
+00:00:31,067 --> 00:00:33,834
+ajustar o primeiro aprendiz
+para maximizar a precisão,
+
+15
+00:00:33,884 --> 00:00:36,359
+ou, em outras palavras,
+minimizar o número de erros.
+
+16
+00:00:36,857 --> 00:00:40,541
+Há alternativas boas, mas não dá
+para deixar menos de três erros.
+
+17
+00:00:40,591 --> 00:00:43,016
+Então vamos ajustar.
+Este é o modelo.
+
+18
+00:00:43,066 --> 00:00:44,797
+Vamos nos lembrar dele
+para depois.
+
+19
+00:00:44,847 --> 00:00:47,593
+O segundo aprendiz
+precisa consertar os erros
+
+20
+00:00:47,643 --> 00:00:48,870
+que este cometeu,
+
+21
+00:00:48,920 --> 00:00:52,434
+então eu pego os pontos
+classificados incorretamente
+
+22
+00:00:52,484 --> 00:00:54,887
+e os torno maiores.
+Em outras palavras,
+
+23
+00:00:54,937 --> 00:00:58,322
+puniremos mais o modelo
+se ele perder estes pontos.
+
+24
+00:00:58,372 --> 00:01:01,348
+O aprendiz da semana que vem
+precisa se focar mais neles.
+
+25
+00:01:01,398 --> 00:01:03,329
+O aprendiz da segunda semana
+escolherá este,
+
+26
+00:01:03,379 --> 00:01:05,701
+que classifica corretamente
+estes pontos.
+
+27
+00:01:05,751 --> 00:01:07,761
+Nos lembraremos dele
+para depois.
+
+28
+00:01:07,811 --> 00:01:11,294
+De novo, punimos os pontos
+classificados incorretamente
+
+29
+00:01:11,344 --> 00:01:13,584
+aumentando-os aqui.
+
+30
+00:01:13,634 --> 00:01:15,898
+O aprendiz de terceira semana
+é este,
+
+31
+00:01:15,948 --> 00:01:19,412
+que fará de tudo para classificar
+os pontos gordos corretamente.
+
+32
+00:01:19,462 --> 00:01:20,925
+Vamos nos lembrar dele.
+
+33
+00:01:20,975 --> 00:01:24,059
+Podemos continuar nesta,
+mas digamos que três vezes baste.
+
+34
+00:01:24,109 --> 00:01:26,280
+Agora queremos combinar
+estes modelos.
+
+35
+00:01:26,786 --> 00:01:28,887
+Vou aprofundar
+sobre a combinação,
+
+36
+00:01:28,937 --> 00:01:32,588
+mas, por ora, imagine
+que os faremos votar como antes.
+
+37
+00:01:32,638 --> 00:01:34,620
+O modelo resultante é este,
+
+38
+00:01:34,670 --> 00:01:38,689
+que, ao ajustarmos aos dados,
+percebemos que encaixa certinho.
+
+39
+00:01:38,739 --> 00:01:41,336
+Como eu falei,
+fui um tanto quanto superficial.
+
+40
+00:01:41,386 --> 00:01:44,067
+Serei mais específico
+nos vídeos seguintes.
+

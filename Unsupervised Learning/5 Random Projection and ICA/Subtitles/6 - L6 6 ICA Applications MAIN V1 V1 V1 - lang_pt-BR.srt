@@ -1,0 +1,271 @@
+1
+00:00:00,205 --> 00:00:02,252
+Em termos de aplicações,
+
+2
+00:00:02,285 --> 00:00:06,025
+a ICA é muito usada
+em imagiologia médica.
+
+3
+00:00:06,058 --> 00:00:11,395
+Este é um exemplo de exame cerebral
+chamado EEG ou MEG,
+
+4
+00:00:11,428 --> 00:00:15,984
+em que cada um desses sensores
+detecta sinais elétricos
+
+5
+00:00:16,017 --> 00:00:17,666
+ou, em um exame similar,
+
+6
+00:00:17,699 --> 00:00:19,874
+sinais magnéticos
+dentro do cérebro.
+
+7
+00:00:19,907 --> 00:00:22,635
+Cada um deles é
+um sensor elétrico
+
+8
+00:00:22,668 --> 00:00:25,144
+e cada um deles
+produz essas leituras,
+
+9
+00:00:25,177 --> 00:00:29,798
+que são misturas de coisas
+acontecendo dentro do cérebro.
+
+10
+00:00:29,831 --> 00:00:32,670
+A ICA pode ser usada
+
+11
+00:00:32,703 --> 00:00:37,216
+quando essas são leituras iniciais
+desses dados.
+
+12
+00:00:37,249 --> 00:00:40,008
+ICA é um algoritmo
+que é capaz de olhar para eles
+
+13
+00:00:40,041 --> 00:00:42,458
+e encontrar
+os componentes independentes
+
+14
+00:00:42,491 --> 00:00:46,297
+dentro do cérebro que geraram
+essas leituras misturadas,
+
+15
+00:00:46,330 --> 00:00:50,147
+porque um sinal elétrico será gerado
+em uma parte do cérebro
+
+16
+00:00:50,180 --> 00:00:52,376
+bem difícil de decifrar,
+
+17
+00:00:52,409 --> 00:00:57,732
+uma vez que o crânio separa
+os sensores dos locais em si.
+
+18
+00:00:57,765 --> 00:01:01,222
+A ICA é bastante usada
+em situações como essa.
+
+19
+00:01:01,255 --> 00:01:04,496
+É também usada em fMRIs
+do mesmo jeito
+
+20
+00:01:04,529 --> 00:01:06,189
+que muitos exames cerebrais.
+
+21
+00:01:06,222 --> 00:01:08,501
+Esses são os componentes
+independentes
+
+22
+00:01:08,534 --> 00:01:12,323
+que podem isolar sinais separados
+vindos do cérebro.
+
+23
+00:01:12,356 --> 00:01:16,710
+Houve tentativas de usar ICA
+com dados financeiros.
+
+24
+00:01:16,743 --> 00:01:19,382
+Não sei se é algo
+muito popular,
+
+25
+00:01:19,415 --> 00:01:21,846
+mas é interessante
+de se ver, acho.
+
+26
+00:01:21,879 --> 00:01:25,268
+Este trabalho
+tenta aplicar ICA
+
+27
+00:01:25,301 --> 00:01:29,252
+em um modelo
+de fator financeiro.
+
+28
+00:01:29,285 --> 00:01:33,414
+Esses dados são
+sinais de ações,
+
+29
+00:01:33,447 --> 00:01:38,391
+e ela tenta isolar o que fez
+as ações subirem e descerem,
+
+30
+00:01:38,424 --> 00:01:40,037
+quais são os componentes.
+
+31
+00:01:40,070 --> 00:01:44,028
+E muitos desses trabalhos
+que tentam usar ICA em finanças...
+
+32
+00:01:44,061 --> 00:01:47,333
+A economia é um sistema
+muito complexo,
+
+33
+00:01:47,366 --> 00:01:51,831
+raramente geraria resultados
+com valores reais.
+
+34
+00:01:51,864 --> 00:01:55,230
+Seria interessante de olhar,
+acho.
+
+35
+00:01:55,263 --> 00:01:58,387
+Há um outro
+para dados financeiros também.
+
+36
+00:01:58,420 --> 00:02:02,780
+Esse conjunto de dados
+são 5 lojas,
+
+37
+00:02:02,813 --> 00:02:05,024
+e esse é
+o fluxo de caixa delas.
+
+38
+00:02:05,057 --> 00:02:07,614
+É uma rede de lojas
+de algum tipo.
+
+39
+00:02:07,647 --> 00:02:11,998
+Esse é o fluxo de caixa
+de mais de 140 semanas.
+
+40
+00:02:12,031 --> 00:02:15,293
+Vemos picos que sobem
+e descem.
+
+41
+00:02:15,326 --> 00:02:17,675
+Para que fique mais claro,
+vamos decompô-los.
+
+42
+00:02:17,708 --> 00:02:19,610
+Este é o primeiro ano,
+
+43
+00:02:19,643 --> 00:02:21,528
+este é o segundo ano,
+
+44
+00:02:21,561 --> 00:02:24,415
+e este é a parte do terceiro ano
+que está disponível.
+
+45
+00:02:24,448 --> 00:02:29,301
+Podemos ver uma queda aqui,
+um pico e uma queda.
+
+46
+00:02:29,334 --> 00:02:32,568
+Deve ser na época do Natal,
+acredito.
+
+47
+00:02:32,601 --> 00:02:37,246
+Se fizermos assim,
+obteremos esses 4 componentes.
+
+48
+00:02:37,279 --> 00:02:42,602
+Eles devem dar uma indicação
+de como as coisas estão acontecendo.
+
+49
+00:02:42,635 --> 00:02:47,422
+O primeiro componente
+captura esse pico
+
+50
+00:02:47,455 --> 00:02:49,617
+e essa queda no Natal,
+por exemplo.
+
+51
+00:02:49,650 --> 00:02:54,496
+Este quarto captura
+o mês do verão,
+
+52
+00:02:54,529 --> 00:02:57,003
+parece ter uma queda aqui.
+
+53
+00:02:57,036 --> 00:03:00,818
+É mais uma coisa
+que achei interessante de olhar.
+
+54
+00:03:00,851 --> 00:03:05,461
+Não há muitas aplicações
+da ICA em dados financeiros,
+
+55
+00:03:05,494 --> 00:03:07,174
+mas eles podem ser
+intrigantes.
+
+56
+00:03:07,207 --> 00:03:09,495
+Os links dos trabalhos
+estão no texto abaixo.
+

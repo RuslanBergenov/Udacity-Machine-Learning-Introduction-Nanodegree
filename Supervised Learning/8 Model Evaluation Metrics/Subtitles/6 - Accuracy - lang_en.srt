@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:03,270
+Now, we'll study one of the ways to measure how good a model is,
+
+2
+00:00:03,270 --> 00:00:04,695
+called that the accuracy.
+
+3
+00:00:04,695 --> 00:00:06,820
+The accuracy is the answer to the question,
+
+4
+00:00:06,820 --> 00:00:10,335
+"Out of all the patients, how many did we classify correctly?"
+
+5
+00:00:10,335 --> 00:00:13,500
+The answer is, the ratio between the number of
+
+6
+00:00:13,500 --> 00:00:17,350
+correctly classified points and the number of total points.
+
+7
+00:00:17,350 --> 00:00:21,570
+In this example, we can see that we have correctly classified 9,000 patients,
+
+8
+00:00:21,570 --> 00:00:25,350
+which is a sum of 1,000 healthy and 8,000 sequence.
+
+9
+00:00:25,350 --> 00:00:31,040
+So, the accuracy is this number divided by the total number of patients, which is 10,000.
+
+10
+00:00:31,040 --> 00:00:33,585
+This gives us an accuracy of 90%.
+
+11
+00:00:33,585 --> 00:00:38,780
+Accuracy can easily be calculated as you can learn by using the accuracy score function.
+
+12
+00:00:38,780 --> 00:00:42,795
+Now, let's see how much is the accuracy of the spam detector model?
+
+13
+00:00:42,795 --> 00:00:44,100
+This is the answer to the question,
+
+14
+00:00:44,100 --> 00:00:47,165
+"Out of all the emails, how many did we classify correctly?"
+
+15
+00:00:47,165 --> 00:00:51,789
+Since we have correctly classified 800 out of the 1,000 emails,
+
+16
+00:00:51,789 --> 00:00:54,770
+then the answer is 80%.
+
+17
+00:00:54,770 --> 00:00:56,660
+Now, let's test your knowledge.
+
+18
+00:00:56,660 --> 00:00:59,230
+In this model, what is the accuracy?
+
+19
+00:00:59,230 --> 00:01:00,846
+Please write the numbers of percentage.
+
+20
+00:01:00,846 --> 00:01:02,930
+So, a number between 0 and 100.
+
+21
+00:01:02,930 --> 00:01:05,320
+This number can have decimals.
+

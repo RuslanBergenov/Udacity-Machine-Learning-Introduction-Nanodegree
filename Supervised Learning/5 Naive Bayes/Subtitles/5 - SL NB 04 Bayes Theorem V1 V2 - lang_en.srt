@@ -1,0 +1,144 @@
+1
+00:00:00,000 --> 00:00:02,790
+So, let's look at a formal version of Bayes Theorem.
+
+2
+00:00:02,790 --> 00:00:04,935
+Initially, we start with an event,
+
+3
+00:00:04,934 --> 00:00:06,959
+and this event could be A or B.
+
+4
+00:00:06,960 --> 00:00:09,414
+The probabilities for each are here,
+
+5
+00:00:09,414 --> 00:00:12,029
+P of A, and P of B.
+
+6
+00:00:12,029 --> 00:00:14,339
+Now, we observe a third event,
+
+7
+00:00:14,339 --> 00:00:20,129
+and that event can either happen or not happen both for A and for
+
+8
+00:00:20,129 --> 00:00:26,804
+B. R is going to help us find more exact probabilities for A and B in the following way.
+
+9
+00:00:26,804 --> 00:00:31,864
+Let's say we can calculate the probability of R given A,
+
+10
+00:00:31,864 --> 00:00:37,479
+and also, of R complement which is node R given A.
+
+11
+00:00:37,479 --> 00:00:40,169
+And similarly for R given B,
+
+12
+00:00:40,170 --> 00:00:42,270
+and R complement given B.
+
+13
+00:00:42,270 --> 00:00:45,645
+Now, our set of scenarios are these four,
+
+14
+00:00:45,645 --> 00:00:48,585
+R n A, R complement n A,
+
+15
+00:00:48,585 --> 00:00:52,064
+R n B, and R complement n B.
+
+16
+00:00:52,064 --> 00:00:54,634
+But since we know R occurred,
+
+17
+00:00:54,634 --> 00:00:57,929
+then we know that the second and the fourth events are not possible.
+
+18
+00:00:57,929 --> 00:01:01,719
+So, our new universe consists of the two events,
+
+19
+00:01:01,719 --> 00:01:05,250
+R n A and R n B.
+
+20
+00:01:05,250 --> 00:01:10,454
+We calculate the probability for A n R or equivalently A intersection R,
+
+21
+00:01:10,454 --> 00:01:12,640
+and by the Law of Conditional Probability,
+
+22
+00:01:12,640 --> 00:01:15,885
+this is P of A times B of R given A.
+
+23
+00:01:15,885 --> 00:01:20,280
+Similarly, for B intersection R. Now,
+
+24
+00:01:20,280 --> 00:01:23,219
+since these probabilities do not add to one,
+
+25
+00:01:23,219 --> 00:01:26,099
+we just divide them both by their sum so
+
+26
+00:01:26,099 --> 00:01:29,684
+that the new normalized probabilities now do add to one.
+
+27
+00:01:29,685 --> 00:01:34,394
+Thus, we get the following formulas for P of A given R,
+
+28
+00:01:34,394 --> 00:01:37,920
+and P of B given R. These are
+
+29
+00:01:37,920 --> 00:01:43,530
+our new and improved probabilities for A and B after we know that R occurred.
+
+30
+00:01:43,530 --> 00:01:48,180
+Again, P of A and P of B are called the prior probabilities which is,
+
+31
+00:01:48,180 --> 00:01:50,970
+what we knew before we knew that R occurred.
+
+32
+00:01:50,969 --> 00:01:53,849
+P of A given R and P of B given R,
+
+33
+00:01:53,849 --> 00:01:56,309
+are posterior probabilities which is,
+
+34
+00:01:56,310 --> 00:01:59,775
+what we inferred after we knew that R occurred.
+
+35
+00:01:59,775 --> 00:02:01,500
+And here it is,
+
+36
+00:02:01,500 --> 00:02:03,599
+the formula for Bayes Theorem..
+

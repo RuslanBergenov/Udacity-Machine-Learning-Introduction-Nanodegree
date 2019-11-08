@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:03,095
+One way to solve this is to use random restarts,
+
+2
+00:00:03,095 --> 00:00:05,009
+and this is just very simple.
+
+3
+00:00:05,009 --> 00:00:10,574
+We start from a few different random places and do gradient descend from all of them.
+
+4
+00:00:10,573 --> 00:00:13,964
+This increases the probability that we'll get to the global minimum,
+
+5
+00:00:13,964 --> 00:00:17,000
+or at least a pretty good local minimum.
+

@@ -1,0 +1,490 @@
+1
+00:00:00,000 --> 00:00:04,600
+Vamos usar muito os conceitos
+de regressão e classificação.
+
+2
+00:00:04,667 --> 00:00:06,400
+Vamos lembrar das definições.
+
+3
+00:00:06,467 --> 00:00:09,400
+Um modelo de regressão
+é um que prevê um valor,
+
+4
+00:00:09,467 --> 00:00:11,533
+como 4, -3, ou 6,7.
+
+5
+00:00:11,600 --> 00:00:14,000
+No gráfico da esquerda,
+desenhamos uma reta
+
+6
+00:00:14,067 --> 00:00:15,867
+que mais se aproxima
+dos dados.
+
+7
+00:00:15,933 --> 00:00:18,733
+Tendo um novo valor
+no eixo x,
+
+8
+00:00:18,800 --> 00:00:21,600
+o aproximamos com o valor
+correspondente de y na reta.
+
+9
+00:00:21,667 --> 00:00:25,467
+Em problemas de classificação
+determinamos um estado,
+
+10
+00:00:25,533 --> 00:00:26,867
+como positivo ou negativo.
+
+11
+00:00:26,933 --> 00:00:28,867
+Ou sim e não.
+
+12
+00:00:28,933 --> 00:00:30,467
+Ou cachorro e gato.
+
+13
+00:00:30,533 --> 00:00:34,467
+No gráfico da direita, temos pontos azuis
+rotulados como positivos
+
+14
+00:00:34,533 --> 00:00:36,667
+e pontos vermelhos
+rotulados como negativos.
+
+15
+00:00:36,733 --> 00:00:38,000
+Desenhamos uma reta
+que os separa.
+
+16
+00:00:38,067 --> 00:00:41,667
+Tendo um novo valor no plano,
+adivinhamos seu estado
+
+17
+00:00:41,733 --> 00:00:44,133
+com base em qual região
+ele se encontra.
+
+18
+00:00:44,200 --> 00:00:47,333
+Em resumo: regressão
+retorna um número
+
+19
+00:00:47,400 --> 00:00:49,933
+e classificação
+retorna um estado.
+
+20
+00:00:50,000 --> 00:00:51,933
+Agora que você
+tem um modelo,
+
+21
+00:00:52,000 --> 00:00:55,400
+como pode se convencer
+de que o modelo é bom?
+
+22
+00:00:55,467 --> 00:00:57,200
+Você faz testes.
+
+23
+00:00:57,267 --> 00:01:00,333
+Vamos ver esta figura.
+Um pequeno exemplo de regressão.
+
+24
+00:01:00,400 --> 00:01:02,000
+Os dados são
+os pontos cinza.
+
+25
+00:01:02,067 --> 00:01:05,400
+Treinamos dois modelos
+para se encaixar nos dados.
+
+26
+00:01:05,467 --> 00:01:07,867
+Um é uma reta
+e o outro é uma curva.
+
+27
+00:01:07,933 --> 00:01:12,000
+A pergunta é
+qual modelo é melhor.
+
+28
+00:01:12,067 --> 00:01:14,400
+O da direita se encaixa
+perfeitamente nos dados,
+
+29
+00:01:14,467 --> 00:01:16,067
+e o da esquerda não.
+
+30
+00:01:16,133 --> 00:01:17,867
+Ficamos tentados a dizer
+que é o da direita.
+
+31
+00:01:17,933 --> 00:01:22,333
+Para ver se o encaixe é bom,
+pegamos um novo ponto. Este ponto vermelho.
+
+32
+00:01:22,400 --> 00:01:26,467
+Ele está bem aproximado
+pelo modelo da esquerda.
+
+33
+00:01:26,533 --> 00:01:29,333
+Mas tem uma aproximação ruim
+no modelo da direita.
+
+34
+00:01:29,400 --> 00:01:33,933
+Talvez o da esquerda seja
+melhor do que o da direita.
+
+35
+00:01:34,000 --> 00:01:38,200
+O que o torna melhor é que,
+mesmo não sendo perfeito nos dados,
+
+36
+00:01:38,267 --> 00:01:40,533
+ele generaliza melhor
+do que o da direita.
+
+37
+00:01:40,600 --> 00:01:43,400
+O modelo da direita tenta
+encaixar bem demais,
+
+38
+00:01:43,467 --> 00:01:44,867
+e acaba decorando os dados.
+
+39
+00:01:44,933 --> 00:01:49,733
+Isto se chama super ajuste.
+Vamos aprender sobre isto depois.
+
+40
+00:01:49,800 --> 00:01:53,867
+Agora a pergunta é: como encontrar
+um modelo que generalize bem?
+
+41
+00:01:53,933 --> 00:01:56,867
+É aqui que introduzimos
+o conceito de teste.
+
+42
+00:01:56,933 --> 00:02:00,400
+O que vamos fazer é dividir
+os dados em dois conjuntos.
+
+43
+00:02:00,467 --> 00:02:03,667
+O conjunto de treinamento
+e o conjunto de teste.
+
+44
+00:02:03,733 --> 00:02:07,067
+Nesta figura, o conjunto de treinamento
+são os pontos cinza
+
+45
+00:02:07,133 --> 00:02:09,800
+e o conjunto de teste
+são os brancos.
+
+46
+00:02:09,867 --> 00:02:12,667
+Agora vamos fazer
+o que o nome sugere.
+
+47
+00:02:12,733 --> 00:02:15,267
+Usamos o conjunto de treinamento
+para treinar o modelo
+
+48
+00:02:15,333 --> 00:02:18,800
+e testamos o resultado
+com o conjunto de teste.
+
+49
+00:02:18,867 --> 00:02:20,467
+Aqui temos
+duas cópias deles,
+
+50
+00:02:20,533 --> 00:02:24,200
+os de treinamento são cinza
+e os de teste são brancos.
+
+51
+00:02:24,267 --> 00:02:28,400
+Podemos ver dois modelos
+treinados com os dados.
+
+52
+00:02:28,467 --> 00:02:32,000
+O da direita parece ser
+melhor do que o da esquerda.
+
+53
+00:02:32,067 --> 00:02:34,000
+Mas depois de testar
+no conjunto de teste,
+
+54
+00:02:34,067 --> 00:02:35,400
+os pontos brancos,
+
+55
+00:02:35,467 --> 00:02:38,133
+vemos que o da esquerda
+é muito melhor,
+
+56
+00:02:38,200 --> 00:02:40,933
+porque os erros em vermelho
+são muito menores.
+
+57
+00:02:41,000 --> 00:02:43,000
+Concluímos que
+o modelo da esquerda é melhor.
+
+58
+00:02:43,067 --> 00:02:46,400
+É um pouco pior
+no conjunto de treinamento,
+
+59
+00:02:46,467 --> 00:02:48,133
+mas é bem melhor
+no conjunto de teste.
+
+60
+00:02:48,200 --> 00:02:51,533
+Podemos fazer o mesmo
+em um problema de classificação,
+
+61
+00:02:51,600 --> 00:02:52,600
+como este.
+
+62
+00:02:52,667 --> 00:02:55,200
+Treinamos dois modelos
+de classificação
+
+63
+00:02:55,267 --> 00:02:57,600
+para separar os pontos
+azuis positivos
+
+64
+00:02:57,667 --> 00:02:58,800
+dos vermelhos negativos.
+
+65
+00:02:58,867 --> 00:03:02,600
+O da esquerda está bom,
+pois só comete alguns erros.
+
+66
+00:03:02,667 --> 00:03:06,800
+O da direita é ótimo,
+porque separa todos os pontos.
+
+67
+00:03:06,867 --> 00:03:10,067
+Mas a intuição nos diz que
+o da esquerda pode ser melhor,
+
+68
+00:03:10,133 --> 00:03:11,733
+porque é mais geral.
+
+69
+00:03:11,800 --> 00:03:13,800
+Enquanto isso,
+o modelo da esquerda
+
+70
+00:03:13,867 --> 00:03:15,267
+trata os pontos diferentes
+como ruído,
+
+71
+00:03:15,333 --> 00:03:19,400
+e tenta encaixar de uma forma
+mais simples e mais geral.
+
+72
+00:03:19,467 --> 00:03:20,933
+Para escolher
+um bom modelo,
+
+73
+00:03:21,000 --> 00:03:23,800
+separamos pontos
+para ser o conjunto de teste.
+
+74
+00:03:23,867 --> 00:03:27,333
+O conjunto de treinamento
+são os pontos cheios
+
+75
+00:03:27,400 --> 00:03:30,467
+e o de teste são os vazios.
+
+76
+00:03:30,533 --> 00:03:32,533
+Agora treinamos
+os dois modelos.
+
+77
+00:03:32,600 --> 00:03:35,267
+Veja que os dois modelos
+encaixam bem no treinamento,
+
+78
+00:03:35,333 --> 00:03:38,467
+mas quando colocamos
+o conjunto de teste,
+
+79
+00:03:38,533 --> 00:03:40,800
+o modelo da esquerda
+comete só um erro,
+
+80
+00:03:40,867 --> 00:03:44,267
+e o da direita comete dois.
+
+81
+00:03:44,333 --> 00:03:48,000
+Testando, concluímos que
+o modelo da esquerda é melhor.
+
+82
+00:03:48,067 --> 00:03:50,867
+Fazer isso no sklearn
+é muito simples.
+
+83
+00:03:50,933 --> 00:03:54,200
+A função train_test_split
+do pacote de seleção de modelo.
+
+84
+00:03:54,267 --> 00:03:57,467
+Primeiro, importamos
+train_test_split.
+
+85
+00:03:57,533 --> 00:04:01,133
+Essa função recebe
+os seguintes parâmetros:
+
+86
+00:04:01,200 --> 00:04:02,667
+A entrada,
+
+87
+00:04:02,733 --> 00:04:04,867
+a saída,
+
+88
+00:04:04,933 --> 00:04:07,667
+e o percentual dos dados
+que queremos como teste.
+
+89
+00:04:07,733 --> 00:04:11,067
+Por exemplo, se for 0,25,
+
+90
+00:04:11,133 --> 00:04:14,267
+25% dos dados
+serão usados como teste.
+
+91
+00:04:14,333 --> 00:04:17,467
+Neste exemplo,
+temos 16 pontos,
+
+92
+00:04:17,533 --> 00:04:19,133
+então 4 serão
+dados de teste,
+
+93
+00:04:19,200 --> 00:04:22,867
+e os outros 12 serão
+dados de treinamento.
+
+94
+00:04:22,933 --> 00:04:25,533
+Existe uma regra de ouro
+que nunca devemos quebrar.
+
+95
+00:04:25,600 --> 00:04:27,867
+A regra diz que não devemos
+
+96
+00:04:27,933 --> 00:04:30,200
+usar os dados de teste
+para o treinamento.
+
+97
+00:04:30,267 --> 00:04:32,400
+Isso é muito importante.
+
+98
+00:04:32,467 --> 00:04:35,333
+Quando selecionamos dados de teste,
+devemos separá-los
+
+99
+00:04:35,400 --> 00:04:38,400
+e não olhar para eles
+até o final.
+
+100
+00:04:38,467 --> 00:04:41,267
+Não devemos usá-los
+para treinar o algoritmo.
+
+101
+00:04:41,333 --> 00:04:44,533
+Essa regra é bem fácil
+de quebrar acidentalmente,
+
+102
+00:04:44,600 --> 00:04:45,667
+você verá em breve.
+

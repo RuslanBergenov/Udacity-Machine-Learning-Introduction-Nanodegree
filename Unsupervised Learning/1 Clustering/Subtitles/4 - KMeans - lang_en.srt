@@ -1,0 +1,80 @@
+1
+00:00:04,820 --> 00:00:09,660
+To see how the k-means algorithm works, consider this dataset.
+
+2
+00:00:09,660 --> 00:00:13,870
+On the x-axis, is the distance I travel on any given day,
+
+3
+00:00:13,869 --> 00:00:17,355
+and on the y-axis is how awesome the place I went was.
+
+4
+00:00:17,355 --> 00:00:22,300
+This cluster of points that are all the same distance are when I go to work.
+
+5
+00:00:22,300 --> 00:00:25,350
+Some days, I get to build awesome content,
+
+6
+00:00:25,350 --> 00:00:29,050
+which is fun, so these points represent those days.
+
+7
+00:00:29,050 --> 00:00:33,670
+Other days, I see students struggling with content and that bums me out,
+
+8
+00:00:33,670 --> 00:00:35,950
+so those days aren't as much fun.
+
+9
+00:00:35,950 --> 00:00:38,440
+My parents live pretty far away,
+
+10
+00:00:38,439 --> 00:00:40,679
+which is represented by this distance.
+
+11
+00:00:40,679 --> 00:00:42,530
+I really like getting to see them,
+
+12
+00:00:42,530 --> 00:00:46,064
+so this cluster here represents the times when I get to see them.
+
+13
+00:00:46,064 --> 00:00:48,304
+You can see that overall,
+
+14
+00:00:48,304 --> 00:00:50,270
+being at my parents is pretty awesome,
+
+15
+00:00:50,270 --> 00:00:52,020
+but it doesn't happen very often.
+
+16
+00:00:52,020 --> 00:00:56,400
+The clustering of these groups is what k-means does when it looks at data.
+
+17
+00:00:56,399 --> 00:00:58,274
+In the k-means algorithm,
+
+18
+00:00:58,274 --> 00:01:02,424
+we group the points closest to one another together into k groups.
+
+19
+00:01:02,424 --> 00:01:05,254
+Here, k might be two clusters.
+
+20
+00:01:05,254 --> 00:01:10,859
+One, to represent traveling to work and a second to represent visiting family.
+

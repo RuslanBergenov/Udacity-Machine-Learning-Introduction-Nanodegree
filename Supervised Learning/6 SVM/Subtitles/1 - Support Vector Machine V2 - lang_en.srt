@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:03,476
+Hello again and welcome to the support vector machine section.
+
+2
+00:00:03,476 --> 00:00:06,000
+Support vector machines are a very powerful algorithm
+
+3
+00:00:06,000 --> 00:00:09,030
+for classification that not only aims to classify the data,
+
+4
+00:00:09,030 --> 00:00:12,315
+but it also aims to find the best possible boundary, namely,
+
+5
+00:00:12,315 --> 00:00:16,200
+the one that maintains the largest distance from the points. Let's see how it works.
+

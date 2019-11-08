@@ -1,0 +1,165 @@
+1
+00:00:00,267 --> 00:00:03,533
+Agora vamos lidar
+com um problema mais complicado.
+
+2
+00:00:03,567 --> 00:00:05,500
+Vamos analisar o conjunto
+de dados
+
+3
+00:00:05,533 --> 00:00:07,500
+e duas linhas limite
+possíveis.
+
+4
+00:00:07,533 --> 00:00:10,333
+Temos esta aqui e esta aqui.
+
+5
+00:00:10,367 --> 00:00:14,567
+Quero que pense
+qual das duas parece melhor.
+
+6
+00:00:16,067 --> 00:00:19,900
+Vocês podem ter escolhido
+a da esquerda ou da direita.
+
+7
+00:00:19,933 --> 00:00:21,933
+Na verdade, não há resposta.
+
+8
+00:00:21,967 --> 00:00:24,267
+Às vezes vamos preferir
+a da esquerda
+
+9
+00:00:24,300 --> 00:00:27,333
+e outras vezes vamos preferir
+a da direita.
+
+10
+00:00:27,367 --> 00:00:30,600
+Se for um modelo médico,
+não queremos cometer erros,
+
+11
+00:00:30,633 --> 00:00:32,667
+então preferimos
+a da direita.
+
+12
+00:00:32,700 --> 00:00:35,000
+Mas podemos preferir
+a da esquerda
+
+13
+00:00:35,033 --> 00:00:38,900
+porque podemos cometer erros
+se o limite for espaçado.
+
+14
+00:00:38,933 --> 00:00:41,998
+Depende dos dados e do problema
+que abordamos,
+
+15
+00:00:42,031 --> 00:00:45,000
+o que significa que precisamos
+de flexibilidade.
+
+16
+00:00:45,167 --> 00:00:48,600
+A flexibilidade é proporcionada
+pelo parâmetro C.
+
+17
+00:00:49,400 --> 00:00:51,500
+O parâmetro C
+é uma constante
+
+18
+00:00:51,533 --> 00:00:54,600
+que se anexa
+ao erro de classificação.
+
+19
+00:00:54,633 --> 00:00:58,500
+Então multiplicamos o erro
+de classificação pela constante.
+
+20
+00:00:58,533 --> 00:01:01,867
+O que acontece é o seguinte:
+se C for muito alto,
+
+21
+00:01:01,900 --> 00:01:04,558
+o erro é majoritariamente
+de classificação,
+
+22
+00:01:04,591 --> 00:01:07,407
+então vamos nos concentrar
+em classificar bem os pontos
+
+23
+00:01:07,440 --> 00:01:09,279
+em vez de achar
+uma boa margem.
+
+24
+00:01:09,312 --> 00:01:12,360
+Se C for baixo, o erro
+é majoritariamente de margem,
+
+25
+00:01:12,393 --> 00:01:13,738
+então vamos nos concentrar
+
+26
+00:01:13,771 --> 00:01:17,000
+na margem grande
+em vez de classificar bem os pontos.
+
+27
+00:01:17,233 --> 00:01:19,533
+Aqui vai um macete
+para você guardar.
+
+28
+00:01:19,567 --> 00:01:21,767
+O C baixo
+dá uma margem grande
+
+29
+00:01:21,800 --> 00:01:24,200
+e pode cometer
+erros de classificação.
+
+30
+00:01:24,233 --> 00:01:26,667
+O C baixo classifica bem
+os pontos,
+
+31
+00:01:26,700 --> 00:01:29,600
+mas a margem
+pode ser muito pequena.
+
+32
+00:01:29,633 --> 00:01:31,133
+O C é um hiperparâmetro.
+
+33
+00:01:31,167 --> 00:01:32,700
+Para ajustá-lo corretamente,
+
+34
+00:01:32,733 --> 00:01:35,100
+vamos usar técnicas
+como grid search etc.
+

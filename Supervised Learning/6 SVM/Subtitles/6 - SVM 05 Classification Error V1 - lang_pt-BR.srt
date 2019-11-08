@@ -1,0 +1,205 @@
+1
+00:00:00,333 --> 00:00:03,633
+Vamos fazer o que fizemos
+com o algoritmo perceptron,
+
+2
+00:00:03,667 --> 00:00:07,167
+só que agora vamos fazer
+com o algoritmo MVS.
+
+3
+00:00:07,200 --> 00:00:09,767
+Temos um conjunto
+de pontos azuis e vermelhos
+
+4
+00:00:09,800 --> 00:00:11,667
+e uma linha que os separa.
+
+5
+00:00:11,700 --> 00:00:16,600
+E lembre-se:
+a equação da linha é Wx+b=0.
+
+6
+00:00:16,633 --> 00:00:19,200
+Mas agora queremos a linha
+
+7
+00:00:19,233 --> 00:00:22,200
+com as duas linhas a mais
+que criam a margem.
+
+8
+00:00:22,233 --> 00:00:26,133
+As equações dessas linhas
+vão ser Wx+b=1
+
+9
+00:00:26,167 --> 00:00:28,900
+e Wx+b=-1.
+
+10
+00:00:28,933 --> 00:00:33,033
+Ainda queremos punir os pontos
+que estão mal classificados,
+
+11
+00:00:33,067 --> 00:00:36,767
+mas vamos considerar esta região
+como pontos mal classificados,
+
+12
+00:00:36,800 --> 00:00:40,300
+já que não queremos nada
+entre estas linhas.
+
+13
+00:00:40,333 --> 00:00:42,100
+Vamos nos lembrar disso.
+
+14
+00:00:42,133 --> 00:00:44,833
+Mais uma vez,
+vamos dividir o erro em dois.
+
+15
+00:00:44,867 --> 00:00:46,567
+Temos o erro azul,
+
+16
+00:00:46,600 --> 00:00:49,100
+que agora começa
+da linha de baixo
+
+17
+00:00:49,133 --> 00:00:51,900
+porque queremos punir
+os pontos no limite também.
+
+18
+00:00:51,933 --> 00:00:54,567
+E o erro vermelho
+começa na linha de cima
+
+19
+00:00:54,600 --> 00:00:57,533
+porque queremos punir
+os pontos no limite.
+
+20
+00:00:57,567 --> 00:00:59,667
+Vamos separar
+como fizemos antes.
+
+21
+00:00:59,700 --> 00:01:02,433
+O erro azul
+começa na linha de baixo
+
+22
+00:01:02,467 --> 00:01:05,000
+e o erro vermelho
+começa na linha de cima.
+
+23
+00:01:05,033 --> 00:01:07,233
+Vamos fazer algo parecido.
+
+24
+00:01:07,267 --> 00:01:10,067
+Vamos analisar os valores
+de Wx+b.
+
+25
+00:01:10,100 --> 00:01:13,733
+Na linha principal,
+o valor de Wx+b é zero.
+
+26
+00:01:13,767 --> 00:01:17,500
+Ao subirmos,
+vai ser 1, 2, 3, 4 etc.
+
+27
+00:01:17,533 --> 00:01:22,000
+Ao descermos,
+vai ser -1,-2,-3 etc.
+
+28
+00:01:22,033 --> 00:01:25,467
+Para criarmos o erro,
+pegamos o valor absoluto
+
+29
+00:01:25,500 --> 00:01:27,967
+e traduzimos por 1.
+
+30
+00:01:28,000 --> 00:01:32,500
+O erro azul vai começar com zero
+na linha limite de baixo
+
+31
+00:01:32,533 --> 00:01:37,467
+e aumentar
+para 1, 2, 3, 4 etc.
+
+32
+00:01:37,500 --> 00:01:41,300
+O erro vermelho vai ser zero
+na linha limite de cima
+
+33
+00:01:41,333 --> 00:01:46,033
+e aumentar na direção oposta,
+com 1, 2, 3, 4 etc.
+
+34
+00:01:46,067 --> 00:01:47,309
+Então, como vemos,
+
+35
+00:01:47,342 --> 00:01:50,067
+há três pontos vermelhos
+de erro azul.
+
+36
+00:01:50,100 --> 00:01:52,767
+Repare que dois deles
+estão na margem.
+
+37
+00:01:52,800 --> 00:01:55,633
+E há três pontos azuis
+que são erros.
+
+38
+00:01:55,667 --> 00:01:59,700
+Os erros são os valores do lado,
+então é 3,5 aqui,
+
+39
+00:01:59,733 --> 00:02:03,200
+1,5 aqui e 0,5 aqui.
+
+40
+00:02:03,233 --> 00:02:08,567
+Os erros da direita
+são 2, 3 e 0,3.
+
+41
+00:02:08,600 --> 00:02:12,467
+Agora somamos os valores
+para obter o erro.
+
+42
+00:02:12,500 --> 00:02:15,667
+O erro aqui é 10,8.
+
+43
+00:02:15,700 --> 00:02:20,000
+Este é o erro de classificação
+de máquinas de vetores de suporte.
+

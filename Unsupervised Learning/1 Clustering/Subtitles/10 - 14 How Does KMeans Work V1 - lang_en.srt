@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:04,754
+This is a great resource for showing how the k-means algorithm works.
+
+2
+00:00:04,754 --> 00:00:07,960
+Let's take a look at a couple of examples and see what might
+
+3
+00:00:07,960 --> 00:00:12,144
+happen with different sets of data and different numbers of clusters.
+
+4
+00:00:12,144 --> 00:00:16,559
+To begin, let's go ahead and choose a set of data.
+
+5
+00:00:16,559 --> 00:00:19,504
+Maybe we choose something like this Gaussian mixture.
+
+6
+00:00:19,504 --> 00:00:22,399
+Imagine we put a centroid here.
+
+7
+00:00:22,399 --> 00:00:25,659
+What this algorithm is telling us is basically all of
+
+8
+00:00:25,660 --> 00:00:29,170
+the points belong to this algorithm at the beginning,
+
+9
+00:00:29,170 --> 00:00:32,695
+and maybe we have another point here and a third point Here.
+
+10
+00:00:32,695 --> 00:00:35,000
+Then we could run the algorithm.
+
+11
+00:00:35,000 --> 00:00:36,744
+If we say "Go",
+
+12
+00:00:36,744 --> 00:00:39,640
+you can see that the first thing that happens is
+
+13
+00:00:39,640 --> 00:00:43,035
+each centroid is assigned to a certain number of points,
+
+14
+00:00:43,034 --> 00:00:45,304
+and then if we update the centroids,
+
+15
+00:00:45,304 --> 00:00:48,104
+they move to the center of that grouping.
+
+16
+00:00:48,104 --> 00:00:51,224
+If we reassign the points,
+
+17
+00:00:51,225 --> 00:00:54,520
+you can see in this case, none of them updated,
+
+18
+00:00:54,520 --> 00:00:59,859
+the centroids didn't move and what happens is the algorithm's
+
+19
+00:00:59,859 --> 00:01:05,539
+done at that point because the centroid stayed static for two iterations.
+
+20
+00:01:05,540 --> 00:01:12,250
+Now, if we restart and we choose the Gaussian mixture again,
+
+21
+00:01:12,250 --> 00:01:16,989
+but let's say we have two points that are down here and maybe one that's
+
+22
+00:01:16,989 --> 00:01:22,399
+up here and so we think there's three clusters and we run the algorithm like this.
+
+23
+00:01:22,400 --> 00:01:25,120
+The first thing that happens is all of our centroids are
+
+24
+00:01:25,120 --> 00:01:28,630
+assigned and then we update them and then we
+
+25
+00:01:28,629 --> 00:01:31,329
+reassign the points and then we update
+
+26
+00:01:31,329 --> 00:01:35,719
+the centroids and you can see again we end up with the same clusters.
+
+27
+00:01:35,719 --> 00:01:40,150
+This should give you some intuition behind how the k-means algorithm actually
+
+28
+00:01:40,150 --> 00:01:45,410
+works behind the scenes where it's finding the points that are closest to the centroid,
+
+29
+00:01:45,409 --> 00:01:49,989
+updating the centroid, looking at the points that are closest in its new position,
+
+30
+00:01:49,989 --> 00:01:54,119
+updating the centroid and doing that until the centroid no longer moves.
+
+31
+00:01:54,120 --> 00:01:58,230
+But let's see what might happen if something goes wrong.
+
+32
+00:01:58,230 --> 00:02:01,180
+Let's do the Gaussian mixture model again.
+
+33
+00:02:01,180 --> 00:02:03,180
+We have two centroids that look like this,
+
+34
+00:02:03,180 --> 00:02:10,310
+and we perform the clustering algorithm until it's done and it ends up like this.
+
+35
+00:02:10,310 --> 00:02:15,090
+But then if we restart and we have that exact same set of data,
+
+36
+00:02:15,090 --> 00:02:17,365
+and maybe we put one here,
+
+37
+00:02:17,365 --> 00:02:22,335
+we add a centroid down here and we add a centroid up here,
+
+38
+00:02:22,335 --> 00:02:27,705
+now running the algorithm shows that we get a different grouping.
+
+39
+00:02:27,705 --> 00:02:30,630
+It's not the case that the groupings will always end up the
+
+40
+00:02:30,629 --> 00:02:34,085
+same and which grouping is actually the best.
+
+41
+00:02:34,085 --> 00:02:37,270
+This is something that we'll explore in the next concepts.
+

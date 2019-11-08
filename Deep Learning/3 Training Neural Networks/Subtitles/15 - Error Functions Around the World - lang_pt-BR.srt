@@ -1,0 +1,70 @@
+1
+00:00:00,267 --> 00:00:02,867
+Neste curso nós falamos
+de algumas funções de erro,
+
+2
+00:00:02,901 --> 00:00:07,200
+mas existem muitas funções
+de erros que não mencionamos,
+
+3
+00:00:07,234 --> 00:00:09,467
+pois não tivemos tempo
+de falar sobre elas.
+
+4
+00:00:09,501 --> 00:00:12,633
+Aqui estão elas.
+Estas foram as que você viu:
+
+5
+00:00:12,667 --> 00:00:17,067
+o Monte Errorest
+e o Monte Kilimanjerror.
+
+6
+00:00:17,101 --> 00:00:20,900
+As que você não viu:
+o Monte Reinerror,
+
+7
+00:00:20,934 --> 00:00:22,900
+que torce pelo Seahawks.
+
+8
+00:00:22,934 --> 00:00:27,000
+Da Itália, temos
+o Monte Ves-oops-vius,
+
+9
+00:00:27,034 --> 00:00:30,267
+e, o meu predileto,
+da Islândia,
+
+10
+00:00:30,301 --> 00:00:33,633
+temos o Eyjafvillajökull,
+
+11
+00:00:33,667 --> 00:00:39,433
+o famoso vulcão que parou
+todos os voos europeus em 2012.
+
+12
+00:00:39,467 --> 00:00:42,367
+Eu peguei o nome original,
+
+13
+00:00:42,401 --> 00:00:45,733
+que é Eyjafjallajokull,
+
+14
+00:00:45,767 --> 00:00:49,967
+e troquei o nome de "Jalla"
+para "Villa",
+
+15
+00:00:50,001 --> 00:00:52,600
+que é o islandês para erro.
+

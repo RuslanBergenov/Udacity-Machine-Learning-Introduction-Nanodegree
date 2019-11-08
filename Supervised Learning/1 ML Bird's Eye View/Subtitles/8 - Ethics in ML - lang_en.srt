@@ -1,0 +1,64 @@
+1
+00:00:05,150 --> 00:00:11,455
+Machine Learning Models have the power to summarize data efficiently and intelligently.
+
+2
+00:00:11,455 --> 00:00:16,719
+Unfortunately, since the data in our world often holds errors and biases,
+
+3
+00:00:16,719 --> 00:00:20,539
+the models we build will hold the same errors and biases.
+
+4
+00:00:20,539 --> 00:00:24,219
+As an example, imagine you want to build a model to predict
+
+5
+00:00:24,219 --> 00:00:28,109
+who the best candidate is for a job based on existing data.
+
+6
+00:00:28,109 --> 00:00:33,765
+If there were biases and historical hiring patterns based on gender, race, age,
+
+7
+00:00:33,765 --> 00:00:36,140
+economic status et cetera,
+
+8
+00:00:36,140 --> 00:00:41,870
+these biases are going to be held by any predictive model you build based on these data.
+
+9
+00:00:41,869 --> 00:00:45,299
+Unfortunately, the bias held by humans will
+
+10
+00:00:45,299 --> 00:00:49,744
+transfer to computers so long as humans are the creators of the data.
+
+11
+00:00:49,744 --> 00:00:54,149
+Images, text, speech, and video are
+
+12
+00:00:54,149 --> 00:00:59,254
+all data being ingested by computers in today's world to make data-based decisions.
+
+13
+00:00:59,255 --> 00:01:01,880
+But humans generate these data.
+
+14
+00:01:01,880 --> 00:01:05,609
+The potential biases in the data created as a result of
+
+15
+00:01:05,609 --> 00:01:10,265
+our human biases should always be on your mind when building your models.
+
+16
+00:01:10,265 --> 00:01:18,599
+Real-world validation of your models is even more important than statistical validation.
+

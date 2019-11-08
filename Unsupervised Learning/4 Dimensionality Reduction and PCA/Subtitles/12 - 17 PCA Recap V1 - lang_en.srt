@@ -1,0 +1,64 @@
+1
+00:00:03,950 --> 00:00:07,410
+In this lesson, we introduced a new type of
+
+2
+00:00:07,410 --> 00:00:11,015
+unsupervised learning that doesn't involve clustering your data,
+
+3
+00:00:11,015 --> 00:00:13,385
+but rather transforming it.
+
+4
+00:00:13,384 --> 00:00:15,990
+You learned about PCA as a method to find
+
+5
+00:00:15,990 --> 00:00:18,835
+the directions of maximum variance in your data.
+
+6
+00:00:18,835 --> 00:00:20,844
+These are called Principal Components.
+
+7
+00:00:20,844 --> 00:00:25,589
+You applied this technique to handwritten digits using scikit-learn to reduce
+
+8
+00:00:25,589 --> 00:00:27,989
+the dimensionality of the images while still
+
+9
+00:00:27,989 --> 00:00:30,899
+being able to predict what number was written.
+
+10
+00:00:30,899 --> 00:00:35,984
+Finally, we discussed the importance of this technique in other applications.
+
+11
+00:00:35,984 --> 00:00:38,375
+Before moving on to the next lesson,
+
+12
+00:00:38,375 --> 00:00:40,594
+you'll do one more example of PCA,
+
+13
+00:00:40,594 --> 00:00:44,765
+where you can try this technique out on a dataset about different vehicles.
+
+14
+00:00:44,765 --> 00:00:48,579
+Though the dataset isn't really large enough to warrant the use of PCA,
+
+15
+00:00:48,579 --> 00:00:51,304
+the goal is more to get additional practice
+
+16
+00:00:51,304 --> 00:00:55,840
+before implementing this technique in the project. Enjoy.
+

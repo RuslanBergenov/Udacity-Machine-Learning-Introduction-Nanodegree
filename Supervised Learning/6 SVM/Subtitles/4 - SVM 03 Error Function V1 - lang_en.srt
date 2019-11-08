@@ -1,0 +1,136 @@
+1
+00:00:00,000 --> 00:00:02,556
+So, let's recall what classification means.
+
+2
+00:00:02,556 --> 00:00:06,060
+Classification means we have some blue points and some red points,
+
+3
+00:00:06,059 --> 00:00:09,279
+and we want to find a boundary that separates them.
+
+4
+00:00:09,279 --> 00:00:10,899
+So now, we want a little more.
+
+5
+00:00:10,900 --> 00:00:15,000
+We actually want the boundary to be as far away from the points as possible.
+
+6
+00:00:15,000 --> 00:00:18,149
+So, what we do is we add these other two boundaries
+
+7
+00:00:18,149 --> 00:00:21,649
+that you can see as equidistant parallel lines to the main line,
+
+8
+00:00:21,649 --> 00:00:26,234
+and we'll try to maximize the distance between these two or the margin,
+
+9
+00:00:26,234 --> 00:00:28,289
+but this set is very nicely separable.
+
+10
+00:00:28,289 --> 00:00:30,820
+Let's look at one that is slightly more complicated.
+
+11
+00:00:30,820 --> 00:00:32,865
+Let's look at this set over here.
+
+12
+00:00:32,865 --> 00:00:35,160
+So again, a normal classification algorithm
+
+13
+00:00:35,159 --> 00:00:37,854
+would just find a boundary that splits these points,
+
+14
+00:00:37,854 --> 00:00:39,554
+but we want a bit more.
+
+15
+00:00:39,554 --> 00:00:43,344
+We want a boundary with a margin as wide as possible.
+
+16
+00:00:43,344 --> 00:00:46,649
+So, let's think. There are two ways to measure this model.
+
+17
+00:00:46,649 --> 00:00:49,004
+One is by how many points it misclassifies,
+
+18
+00:00:49,005 --> 00:00:52,109
+and the other one is by how wide the margin is.
+
+19
+00:00:52,109 --> 00:00:54,015
+So, what are the misclassified points?
+
+20
+00:00:54,015 --> 00:00:56,280
+Well, there is this red point in the blue area,
+
+21
+00:00:56,280 --> 00:00:58,590
+and there is this blue point in the red area,
+
+22
+00:00:58,590 --> 00:01:02,270
+but we also want no points in this margin over here.
+
+23
+00:01:02,270 --> 00:01:04,170
+So, let's actually punish this points,
+
+24
+00:01:04,170 --> 00:01:07,185
+which means, we'll make them part of our classification error.
+
+25
+00:01:07,185 --> 00:01:11,055
+So, the yellow circle show you exactly where the classification error is.
+
+26
+00:01:11,055 --> 00:01:12,925
+And now, we have the margin error,
+
+27
+00:01:12,924 --> 00:01:14,204
+so let's look at this margin.
+
+28
+00:01:14,204 --> 00:01:17,549
+And basically, we want this margin to be as wide as possible.
+
+29
+00:01:17,549 --> 00:01:19,304
+We want to include this in the error,
+
+30
+00:01:19,305 --> 00:01:20,935
+and we'll see how to do this later.
+
+31
+00:01:20,935 --> 00:01:24,090
+But in a nutshell, our new error for this algorithm
+
+32
+00:01:24,090 --> 00:01:27,450
+is going to be a classification error plus a margin error.
+
+33
+00:01:27,450 --> 00:01:29,909
+And minimizing this error is what's going to give us
+
+34
+00:01:29,909 --> 00:01:32,420
+the algorithm for support vector machine.
+

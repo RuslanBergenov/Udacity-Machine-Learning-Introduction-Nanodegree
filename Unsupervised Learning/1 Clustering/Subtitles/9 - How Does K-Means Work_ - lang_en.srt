@@ -1,0 +1,112 @@
+1
+00:00:03,830 --> 00:00:08,655
+You now have seen in the main ideas associated and working with k-means.
+
+2
+00:00:08,654 --> 00:00:12,389
+From understanding clustering as an unsupervised approach,
+
+3
+00:00:12,390 --> 00:00:14,690
+to choosing the appropriate number of clusters.
+
+4
+00:00:14,689 --> 00:00:17,640
+But how do we actually build an algorithm that
+
+5
+00:00:17,640 --> 00:00:21,425
+figures out where the cluster centers are for these clusters?
+
+6
+00:00:21,425 --> 00:00:24,275
+Let's take a closer look at how this works.
+
+7
+00:00:24,274 --> 00:00:26,570
+Let's use this plot as an example,
+
+8
+00:00:26,570 --> 00:00:30,304
+and go step-by-step through how the k-means algorithm works.
+
+9
+00:00:30,304 --> 00:00:31,739
+When we start out,
+
+10
+00:00:31,739 --> 00:00:35,234
+we just have clusters of points with no groupings.
+
+11
+00:00:35,234 --> 00:00:39,629
+We start k-means by randomly placing k points onto our plot,
+
+12
+00:00:39,630 --> 00:00:43,020
+where k is the number of clusters you want to end up with.
+
+13
+00:00:43,020 --> 00:00:46,210
+We call each of these k points a centroid.
+
+14
+00:00:46,210 --> 00:00:49,049
+They're just randomly placed amongst the data,
+
+15
+00:00:49,049 --> 00:00:50,644
+so we need to move them.
+
+16
+00:00:50,645 --> 00:00:55,835
+The way we do this is to assign each point in our dataset to the closest centroid.
+
+17
+00:00:55,835 --> 00:00:59,299
+Now that we know which points belong in each group,
+
+18
+00:00:59,299 --> 00:01:01,924
+we move the centroid to the center of these points.
+
+19
+00:01:01,924 --> 00:01:04,189
+Once the centroid has moved,
+
+20
+00:01:04,189 --> 00:01:07,609
+points may be closer to the centroid of a different group.
+
+21
+00:01:07,609 --> 00:01:12,500
+Now, we will calculate the distance from each point to each centroid,
+
+22
+00:01:12,500 --> 00:01:15,819
+and again assign each point to the closest centroid.
+
+23
+00:01:15,819 --> 00:01:18,125
+With this new assignment of points,
+
+24
+00:01:18,125 --> 00:01:20,379
+we will again want to move the centroids to
+
+25
+00:01:20,379 --> 00:01:22,984
+the middle of the group of the points assigned to it.
+
+26
+00:01:22,984 --> 00:01:27,379
+This process will continue until the centroids no longer move.
+
+27
+00:01:27,379 --> 00:01:29,039
+This ends our search.
+
+28
+00:01:29,040 --> 00:01:33,840
+Here we have these k groups of clusters as our final results.
+

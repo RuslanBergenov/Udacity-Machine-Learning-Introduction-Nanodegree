@@ -1,0 +1,119 @@
+1
+00:00:00,300 --> 00:00:03,449
+Now we'll study one of the ways
+to measure how good a model is,
+
+2
+00:00:03,450 --> 00:00:04,810
+called the accuracy.
+
+3
+00:00:04,809 --> 00:00:05,833
+The accuracy is the answer
+to the question.
+
+4
+00:00:05,833 --> 00:00:10,410
+Out of all the patients,
+how many did we classify correctly?
+
+5
+00:00:10,410 --> 00:00:15,519
+The answer is, the ratio between the
+number of correctly classified points
+
+6
+00:00:15,519 --> 00:00:17,489
+and the number of total points.
+
+7
+00:00:17,489 --> 00:00:21,649
+In this example, we can see that we
+have correctly classified ,patients,
+
+8
+00:00:21,649 --> 00:00:25,409
+which is the sum of 1,000 healthy and
+8,000 sick ones.
+
+9
+00:00:25,410 --> 00:00:27,140
+So the accuracy is this number,
+
+10
+00:00:27,140 --> 00:00:30,960
+divided by the total number of patients,
+which is 10,000.
+
+11
+00:00:30,960 --> 00:00:32,707
+This gives us an accuracy of 90%.
+
+12
+00:00:32,707 --> 00:00:37,546
+Accuracy can easily be calculated in
+sklearn by using the accuracy score
+
+13
+00:00:37,546 --> 00:00:38,939
+function.
+
+14
+00:00:38,939 --> 00:00:42,799
+Now let's see, how much is the accuracy
+of the spam detector model?
+
+15
+00:00:42,799 --> 00:00:45,140
+This is the answer to the question,
+out of all the e-mails,
+
+16
+00:00:45,140 --> 00:00:47,390
+how many did we classify correctly?
+
+17
+00:00:47,390 --> 00:00:52,608
+Since we have correctly classified
+800 out of the 1,000 emails,
+
+18
+00:00:52,607 --> 00:00:54,579
+then the answer is 80%.
+
+19
+00:00:54,579 --> 00:00:57,939
+Now let's calculate the accuracy for
+the spam detector model.
+
+20
+00:00:57,939 --> 00:01:01,129
+This is the answer to the question,
+out of all the e-mails,
+
+21
+00:01:01,130 --> 00:01:03,780
+how many did we classify correctly?
+
+22
+00:01:03,780 --> 00:01:10,200
+Since we have correctly classified 800
+out of 1,000, then the answer is 80%.
+
+23
+00:01:10,200 --> 00:01:12,359
+Now let's test your knowledge.
+
+24
+00:01:12,359 --> 00:01:14,700
+In this model, what is the accuracy?
+
+25
+00:01:14,700 --> 00:01:18,420
+Please write the number as a percentage,
+so a number between 0 and 100.
+
+26
+00:01:18,420 --> 00:01:19,840
+This number can have decimals.
+

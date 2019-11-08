@@ -1,0 +1,68 @@
+1
+00:00:04,519 --> 00:00:08,369
+One of the most popular clustering algorithms in
+
+2
+00:00:08,369 --> 00:00:11,719
+all of machine learning is known as the K-means algorithm.
+
+3
+00:00:11,720 --> 00:00:14,730
+This algorithm is used to cluster books,
+
+4
+00:00:14,730 --> 00:00:20,539
+and articles that are similar which has helped to identify otherwise anonymous authors.
+
+5
+00:00:20,539 --> 00:00:24,434
+It's also used to cluster similar movies and music
+
+6
+00:00:24,434 --> 00:00:28,899
+for the purpose of recommending new items on Netflix or Spotify.
+
+7
+00:00:28,899 --> 00:00:32,210
+Another very common use case of K-means is to
+
+8
+00:00:32,210 --> 00:00:35,535
+cluster the behaviors of customers to better understand,
+
+9
+00:00:35,534 --> 00:00:37,489
+similar groups of purchasers,
+
+10
+00:00:37,490 --> 00:00:40,130
+and identify the best approach for recommending
+
+11
+00:00:40,130 --> 00:00:43,130
+new items based on their purchasing habits.
+
+12
+00:00:43,130 --> 00:00:45,980
+Using K-means to group similar customers,
+
+13
+00:00:45,979 --> 00:00:48,839
+is done by advertising platforms from Google,
+
+14
+00:00:48,840 --> 00:00:50,930
+to Facebook, to Amazon.
+
+15
+00:00:50,929 --> 00:00:55,369
+Maybe someday, it will even be a part of the education space where we're
+
+16
+00:00:55,369 --> 00:01:00,039
+develop learning strategies based on clustering different types of learners.
+
+17
+00:01:00,039 --> 00:01:06,560
+With that, let's take a closer look at how K-means works and put it to use on a data set.
+

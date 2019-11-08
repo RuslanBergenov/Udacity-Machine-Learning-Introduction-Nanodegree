@@ -1,0 +1,78 @@
+1
+00:00:00,300 --> 00:00:03,601
+Vou mostrar uma maneira
+de superajustar um modelo.
+
+2
+00:00:03,635 --> 00:00:07,267
+Vejamos o conjunto de dados mais
+simples de todos, dois pontos.
+
+3
+00:00:07,301 --> 00:00:09,200
+O ponto 1,1, que é azul,
+
+4
+00:00:09,234 --> 00:00:12,400
+e o menos um, menos um,
+que é vermelho.
+
+5
+00:00:12,434 --> 00:00:15,167
+Eu quero separá-los
+com uma linha.
+
+6
+00:00:15,201 --> 00:00:16,734
+Eu darei duas equações
+
+7
+00:00:16,768 --> 00:00:20,000
+e você dirá qual apresenta
+o menor erro.
+
+8
+00:00:20,034 --> 00:00:21,734
+Este será o questionário.
+
+9
+00:00:21,768 --> 00:00:23,834
+A primeira equação
+
+10
+00:00:23,868 --> 00:00:25,934
+é X1 mais X2,
+
+11
+00:00:25,968 --> 00:00:31,200
+assim W1 igual a W2 é um,
+e o viés B é zero.
+
+12
+00:00:31,801 --> 00:00:35,701
+A segunda é 10X1 mais 10X2.
+
+13
+00:00:35,735 --> 00:00:39,067
+Assim W1 igual a W2
+é igual a 10,
+
+14
+00:00:39,101 --> 00:00:43,234
+e a viés B é igual a zero.
+A pergunta é:
+
+15
+00:00:43,268 --> 00:00:46,734
+qual previsão exibe
+o menor erro?
+
+16
+00:00:46,768 --> 00:00:50,701
+Isso não é fácil, mas pense
+e faça alguns cálculos
+
+17
+00:00:50,735 --> 00:00:52,100
+se for necessário.
+

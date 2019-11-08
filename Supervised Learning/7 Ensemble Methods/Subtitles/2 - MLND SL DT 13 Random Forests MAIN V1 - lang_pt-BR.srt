@@ -1,0 +1,165 @@
+1
+00:00:00,200 --> 00:00:02,633
+Vamos ver os problemas
+das árvores de decisão.
+
+2
+00:00:02,667 --> 00:00:05,800
+Imagine que temos uma tabela
+com muitas colunas
+
+3
+00:00:05,833 --> 00:00:08,767
+e que criamos
+uma árvore de decisão assim.
+
+4
+00:00:08,933 --> 00:00:11,567
+Não é uma árvore real,
+é só um exemplo.
+
+5
+00:00:11,600 --> 00:00:13,900
+A resposta é a seguinte.
+
+6
+00:00:13,933 --> 00:00:16,600
+Se o cliente for homem,
+com idade entre 15 e 25 anos,
+
+7
+00:00:16,633 --> 00:00:19,367
+nos EUA, com Android, na escola,
+que gosta de tênis, pizza,
+
+8
+00:00:19,400 --> 00:00:23,500
+mas não gosta de andar na praia,
+é provável que baixe o Pokémon GO.
+
+9
+00:00:23,533 --> 00:00:24,544
+Não é bom.
+
+10
+00:00:24,577 --> 00:00:27,433
+Parece que a árvore
+memorizou os dados.
+
+11
+00:00:27,467 --> 00:00:29,000
+É um sobreajuste.
+
+12
+00:00:29,033 --> 00:00:31,600
+As árvores de decisão
+fazem muito sobreajustes.
+
+13
+00:00:31,633 --> 00:00:34,667
+No caso do contínuo,
+fica assim.
+
+14
+00:00:34,700 --> 00:00:36,633
+A árvore de decisão
+tem muitas anotações,
+
+15
+00:00:36,667 --> 00:00:39,000
+nos dando uma divisão
+complicada,
+
+16
+00:00:39,033 --> 00:00:41,700
+que envolve cada ponto
+com um quadrado.
+
+17
+00:00:41,733 --> 00:00:45,333
+Também é um sobreajuste
+porque não generaliza bem.
+
+18
+00:00:45,367 --> 00:00:48,067
+Como resolvemos isso?
+De uma maneira muito simples.
+
+19
+00:00:48,100 --> 00:00:49,567
+Veja só.
+
+20
+00:00:49,600 --> 00:00:53,533
+Vamos escolher algumas colunas
+aleatoriamente.
+
+21
+00:00:53,733 --> 00:00:56,300
+Vamos criar uma árvore de decisão
+com essas colunas.
+
+22
+00:00:56,333 --> 00:00:59,900
+Escolha mais colunas
+e crie uma árvore de decisão.
+
+23
+00:00:59,933 --> 00:01:01,633
+Faça isso de novo.
+
+24
+00:01:01,667 --> 00:01:04,133
+Agora deixe as árvores
+votarem.
+
+25
+00:01:04,167 --> 00:01:07,633
+Com um novo ponto de dados,
+como esta pessoa,
+
+26
+00:01:07,667 --> 00:01:10,500
+vamos deixar as árvores
+fazerem as previsões
+
+27
+00:01:10,533 --> 00:01:12,967
+e escolher
+o que aparece mais.
+
+28
+00:01:13,000 --> 00:01:16,200
+Por exemplo, as árvores decidiram
+que essa pessoa
+
+29
+00:01:16,233 --> 00:01:19,300
+vai baixar o Snapchat,
+o WhatsApp e o WhatsApp.
+
+30
+00:01:19,333 --> 00:01:22,500
+Então o conjunto de árvores
+vai recomendar o WhatsApp.
+
+31
+00:01:22,533 --> 00:01:25,867
+Como usamos várias árvores
+com colunas aleatórias,
+
+32
+00:01:25,900 --> 00:01:28,698
+isso se chama
+floresta aleatória.
+
+33
+00:01:28,731 --> 00:01:31,015
+Há modos melhores de escolher
+do que aleatoriamente.
+
+34
+00:01:31,048 --> 00:01:33,833
+Vamos ver isso
+em outra sessão do programa.
+

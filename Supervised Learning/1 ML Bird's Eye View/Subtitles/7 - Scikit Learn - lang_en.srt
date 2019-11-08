@@ -1,0 +1,48 @@
+1
+00:00:01,219 --> 00:00:07,330
+If you're interested in
+
+2
+00:00:07,330 --> 00:00:10,990
+solving machine learning questions that fall into either supervised,
+
+3
+00:00:10,990 --> 00:00:14,679
+or unsupervised learning, the most popular open-source
+
+4
+00:00:14,679 --> 00:00:18,855
+library in the world for solving these problems is scikit-learn.
+
+5
+00:00:18,855 --> 00:00:23,289
+Scikit-learn, provides any data scientist the ability to use
+
+6
+00:00:23,289 --> 00:00:28,928
+the most advanced techniques in supervised and unsupervised machine learning easily,
+
+7
+00:00:28,928 --> 00:00:31,329
+and for a variety of situations.
+
+8
+00:00:31,329 --> 00:00:34,629
+You can expect that scikit-learn will continue to
+
+9
+00:00:34,630 --> 00:00:37,695
+be used for machine learning in both industry,
+
+10
+00:00:37,695 --> 00:00:40,835
+and academia for the foreseeable future.
+
+11
+00:00:40,835 --> 00:00:42,579
+In the following lessons,
+
+12
+00:00:42,579 --> 00:00:47,489
+you will get comfortable solving a range of problems using this library.
+

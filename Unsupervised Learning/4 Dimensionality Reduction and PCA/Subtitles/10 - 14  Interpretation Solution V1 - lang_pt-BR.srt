@@ -1,0 +1,419 @@
+1
+00:00:00,194 --> 00:00:03,398
+No último vídeo, você viu dois
+dos aspectos mais importantes
+
+2
+00:00:03,431 --> 00:00:05,045
+dos componentes principais.
+
+3
+00:00:05,078 --> 00:00:07,112
+O primeiro foi a quantidade
+de variabilidade
+
+4
+00:00:07,145 --> 00:00:08,830
+capturada por cada componente,
+
+5
+00:00:08,863 --> 00:00:10,982
+que vimos
+no diagrama de declividade.
+
+6
+00:00:11,015 --> 00:00:14,306
+O segundo foram
+os componentes em si.
+
+7
+00:00:14,339 --> 00:00:15,463
+Neste notebook,
+
+8
+00:00:15,496 --> 00:00:18,416
+você terá a oportunidade
+de explorá-los um pouco mais.
+
+9
+00:00:18,449 --> 00:00:21,892
+Vamos dar uma olhada
+nas bibliotecas e nos nossos dados.
+
+10
+00:00:21,925 --> 00:00:23,911
+Aqui estão
+as 30 imagens principais.
+
+11
+00:00:23,944 --> 00:00:27,141
+Agora vamos realizar a PCA
+na matriz X
+
+12
+00:00:27,174 --> 00:00:31,123
+usando a função de PCA
+que usamos nos vídeos anteriores.
+
+13
+00:00:31,156 --> 00:00:34,597
+Lembre-se, isso vai retornar
+o próprio modelo PCA,
+
+14
+00:00:34,630 --> 00:00:37,971
+assim como a matriz
+dos recursos reduzidos.
+
+15
+00:00:38,004 --> 00:00:41,105
+Neste caso, vamos usar
+10 componentes principais.
+
+16
+00:00:41,138 --> 00:00:42,970
+Queremos passar a matriz X,
+
+17
+00:00:43,003 --> 00:00:45,624
+que é basicamente
+as imagens em si.
+
+18
+00:00:45,657 --> 00:00:48,156
+Agora vamos tentar criar
+um diagrama de declividade
+
+19
+00:00:48,189 --> 00:00:50,811
+usando o modelo
+que acabamos de criar.
+
+20
+00:00:50,844 --> 00:00:53,096
+Lembre-se,
+cada uma dessas barras representa
+
+21
+00:00:53,129 --> 00:00:55,852
+o valor de variabilidade
+capturado por cada componente.
+
+22
+00:00:55,885 --> 00:00:58,102
+O primeiro componente
+captura este valor,
+
+23
+00:00:58,135 --> 00:01:00,802
+o segundo, este valor,
+e assim por diante.
+
+24
+00:01:00,835 --> 00:01:03,353
+A linha representa
+o valor total de variabilidade
+
+25
+00:01:03,386 --> 00:01:06,074
+capturado em um certo nível
+de componentes.
+
+26
+00:01:06,107 --> 00:01:08,127
+Assim, ao final
+de 10 componentes,
+
+27
+00:01:08,160 --> 00:01:11,676
+temos em torno de 30%
+da variabilidade original dos dados
+
+28
+00:01:11,709 --> 00:01:14,602
+que foi capturada
+por esses 10 componentes.
+
+29
+00:01:14,635 --> 00:01:19,196
+Usando isso, podemos preencher
+o dicionário abaixo, 10,42.
+
+30
+00:01:19,229 --> 00:01:21,944
+Esse parece ser o mais complicado.
+Já vou voltar para ele.
+
+31
+00:01:21,977 --> 00:01:23,928
+O primeiro componente
+sempre terá
+
+32
+00:01:23,961 --> 00:01:26,507
+o maior valor
+de variabilidade explicado.
+
+33
+00:01:26,540 --> 00:01:28,308
+E isso é verdade.
+
+34
+00:01:28,341 --> 00:01:32,048
+Os componentes principais
+sempre vão tentar capturar
+
+35
+00:01:32,081 --> 00:01:35,330
+o maior valor de variabilidade
+restante no conjunto de dados.
+
+36
+00:01:35,363 --> 00:01:38,769
+E, portanto, o primeiro componente
+sempre vai capturar mais,
+
+37
+00:01:38,802 --> 00:01:40,649
+o segundo vai ser
+o segundo a capturar mais,
+
+38
+00:01:40,682 --> 00:01:42,062
+e assim por diante.
+
+39
+00:01:42,095 --> 00:01:43,878
+Você nunca verá
+um componente posterior
+
+40
+00:01:43,911 --> 00:01:46,767
+capturando mais variabilidade
+que um componente anterior.
+
+41
+00:01:46,800 --> 00:01:49,118
+"O valor total
+de variabilidade dos dados
+
+42
+00:01:49,151 --> 00:01:50,785
+explicado
+pelo primeiro componente."
+
+43
+00:01:50,818 --> 00:01:55,092
+O primeiro componente
+parece explicar 6,13%.
+
+44
+00:01:55,125 --> 00:01:57,697
+Parece ser a opção C.
+
+45
+00:01:57,730 --> 00:02:00,801
+"A soma da variabilidade
+explicada por todos os componentes
+
+46
+00:02:00,834 --> 00:02:02,415
+pode ser maior que 100%."
+
+47
+00:02:02,448 --> 00:02:06,551
+Você nunca obterá uma soma
+do valor de variabilidade
+
+48
+00:02:06,584 --> 00:02:10,810
+explicado por todos os componentes
+maior que 100%.
+
+49
+00:02:10,843 --> 00:02:12,248
+O maior valor de variabilidade
+
+50
+00:02:12,281 --> 00:02:14,246
+que os componentes principais
+podem explicar
+
+51
+00:02:14,279 --> 00:02:18,324
+é o valor total de variabilidade
+dos dados iniciais.
+
+52
+00:02:18,357 --> 00:02:20,723
+Portanto, 100%.
+
+53
+00:02:20,756 --> 00:02:23,310
+Então esta afirmação aqui
+é falsa.
+
+54
+00:02:23,343 --> 00:02:27,519
+Esse 10,42 deve ser
+o valor total de variabilidade
+
+55
+00:02:27,552 --> 00:02:29,981
+explicado pelos dois primeiros
+componentes.
+
+56
+00:02:30,014 --> 00:02:33,455
+Se virmos 6,13 e 4,29,
+
+57
+00:02:33,488 --> 00:02:37,122
+se somarmos os dois,
+obteremos 10,42.
+
+58
+00:02:37,155 --> 00:02:39,446
+Parece que deu certo,
+
+59
+00:02:39,479 --> 00:02:44,300
+e reforçamos as ideias
+que acabamos de conhecer.
+
+60
+00:02:44,333 --> 00:02:47,473
+Agora utilize a função
+plot_component de helper_functions
+
+61
+00:02:47,506 --> 00:02:49,347
+para dar uma olhada
+em cada componente.
+
+62
+00:02:49,380 --> 00:02:53,502
+Utilize os resultados para ajudar
+na questão 5 aqui embaixo.
+
+63
+00:02:53,535 --> 00:02:56,544
+Ela tem dois argumentos,
+se você se lembra do vídeo.
+
+64
+00:02:56,577 --> 00:02:58,959
+O primeiro é o próprio modelo,
+
+65
+00:02:58,992 --> 00:03:01,955
+e o segundo é o componente
+que queremos diagramar.
+
+66
+00:03:01,988 --> 00:03:03,866
+Ao diagramar
+o primeiro componente,
+
+67
+00:03:03,899 --> 00:03:06,602
+você pode ver que está
+mostrando basicamente um 0.
+
+68
+00:03:06,635 --> 00:03:11,965
+Esse componente parece
+que vai ajudar a identificar um 0.
+
+69
+00:03:11,998 --> 00:03:15,504
+Se temos 10 componentes
+e os indexamos de 0 a 9,
+
+70
+00:03:15,537 --> 00:03:18,700
+quer dizer que 0
+é o componente.
+
+71
+00:03:18,733 --> 00:03:22,186
+E qual componente
+parece identificar um 3?
+
+72
+00:03:22,219 --> 00:03:24,867
+Vamos dar uma olhada
+nesses outros.
+
+73
+00:03:24,900 --> 00:03:27,174
+Isso não parece um 3.
+
+74
+00:03:27,207 --> 00:03:30,051
+Essa aqui também
+não parece um 3.
+
+75
+00:03:30,715 --> 00:03:33,144
+Aí está!
+O quarto componente.
+
+76
+00:03:33,177 --> 00:03:35,113
+Lembre-se de que eles
+estão indexados em 0,
+
+77
+00:03:35,146 --> 00:03:38,821
+mas isso parece bastante um 3.
+
+78
+00:03:38,854 --> 00:03:40,052
+Legal.
+
+79
+00:03:40,085 --> 00:03:42,386
+Com o notebook,
+tivemos a oportunidade
+
+80
+00:03:42,419 --> 00:03:44,692
+de dar uma olhada
+nas partes principais da PCA,
+
+81
+00:03:44,725 --> 00:03:47,004
+no valor de variância explicado
+por cada componente,
+
+82
+00:03:47,037 --> 00:03:48,925
+que também é chamado
+de "autovalor",
+
+83
+00:03:48,958 --> 00:03:50,887
+e nos componentes principais
+em si,
+
+84
+00:03:50,920 --> 00:03:55,077
+que nos dão um peso para cada pixel
+das imagens originais
+
+85
+00:03:55,110 --> 00:03:57,809
+e quanto eles pesam
+em cada componente principal
+
+86
+00:03:57,842 --> 00:04:00,615
+que obtemos de volta
+com os resultados finais.
+
+87
+00:04:00,648 --> 00:04:03,595
+Estes componentes principais
+são conhecidos como "autovetores".
+

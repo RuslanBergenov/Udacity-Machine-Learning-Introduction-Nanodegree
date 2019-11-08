@@ -1,0 +1,240 @@
+1
+00:00:00,000 --> 00:00:02,705
+Here's another way to prevent overfitting.
+
+2
+00:00:02,705 --> 00:00:04,448
+So, let's say this is you,
+
+3
+00:00:04,448 --> 00:00:07,589
+and one day you decide to practice sports.
+
+4
+00:00:07,589 --> 00:00:09,823
+So, on Monday you play tennis,
+
+5
+00:00:09,823 --> 00:00:11,759
+on Tuesday you lift weights,
+
+6
+00:00:11,759 --> 00:00:14,070
+on Wednesday you play American football,
+
+7
+00:00:14,070 --> 00:00:16,245
+on Thursday you play baseball,
+
+8
+00:00:16,245 --> 00:00:18,344
+on Friday you play basketball,
+
+9
+00:00:18,344 --> 00:00:20,644
+and on Saturday you play ping pong.
+
+10
+00:00:20,643 --> 00:00:22,648
+Now, after a week you've kind of
+
+11
+00:00:22,649 --> 00:00:25,739
+noticed that you've done most of them with your dominant hand.
+
+12
+00:00:25,739 --> 00:00:31,254
+So, you're developing a large muscle on that arm but not on the other arm.
+
+13
+00:00:31,254 --> 00:00:33,265
+This is disappointing.
+
+14
+00:00:33,265 --> 00:00:34,793
+So, what can you do?
+
+15
+00:00:34,793 --> 00:00:36,839
+Well, let's spice it up on the next week.
+
+16
+00:00:36,840 --> 00:00:39,630
+What we'll do is on Monday we'll tie
+
+17
+00:00:39,630 --> 00:00:44,054
+our right hand behind our back and try to play tennis with the left hand.
+
+18
+00:00:44,054 --> 00:00:46,770
+On Tuesday, we'll tie our left hand
+
+19
+00:00:46,770 --> 00:00:50,500
+behind your back and try to lift weights with the right hand.
+
+20
+00:00:50,500 --> 00:00:52,243
+Then on Wednesday again,
+
+21
+00:00:52,243 --> 00:00:56,250
+we'll tie our right hand and play American football with the left one.
+
+22
+00:00:56,250 --> 00:01:00,850
+On Thursday we'll take it easy and play baseball with both hands, that's fine.
+
+23
+00:01:00,850 --> 00:01:05,500
+Then, on Friday we'll tie both hands behind our back and try to play basketball.
+
+24
+00:01:05,500 --> 00:01:06,875
+That won't work out too well.
+
+25
+00:01:06,875 --> 00:01:09,409
+But it's OK. It's the training process.
+
+26
+00:01:09,409 --> 00:01:10,995
+And then on Saturday again,
+
+27
+00:01:10,995 --> 00:01:15,635
+we tie our left hand behind our back and play ping pong with the right.
+
+28
+00:01:15,635 --> 00:01:21,314
+After a week, we see that we've developed both of our biceps. Pretty good job.
+
+29
+00:01:21,313 --> 00:01:25,029
+This is something that happens a lot when we train neural networks.
+
+30
+00:01:25,030 --> 00:01:26,858
+Sometimes one part of the network has
+
+31
+00:01:26,858 --> 00:01:30,578
+very large weights and it ends up dominating all the training,
+
+32
+00:01:30,578 --> 00:01:33,369
+while another part of the network doesn't
+
+33
+00:01:33,370 --> 00:01:36,504
+really play much of a role so it doesn't get trained.
+
+34
+00:01:36,504 --> 00:01:39,359
+So, what we'll do to solve this is sometimes during training,
+
+35
+00:01:39,358 --> 00:01:43,084
+we'll turn this part off and let the rest of the network train.
+
+36
+00:01:43,084 --> 00:01:46,343
+More thoroughly, what we do is as we go through the epochs,
+
+37
+00:01:46,343 --> 00:01:49,673
+we randomly turn off some of the nodes and say,
+
+38
+00:01:49,674 --> 00:01:52,129
+you shall not pass through here.
+
+39
+00:01:52,129 --> 00:01:54,609
+In that case, the other nodes have to pick up
+
+40
+00:01:54,608 --> 00:01:57,905
+the slack and take more part in the training.
+
+41
+00:01:57,905 --> 00:02:03,549
+So, for example, in the first epoch we're not allowed to use this node.
+
+42
+00:02:03,549 --> 00:02:08,664
+So, we do our feat forward and our back propagation passes without using it.
+
+43
+00:02:08,663 --> 00:02:10,655
+In the second epoch,
+
+44
+00:02:10,655 --> 00:02:13,503
+we can't use these two nodes.
+
+45
+00:02:13,503 --> 00:02:16,204
+Again, we do our feet forward and back prop.
+
+46
+00:02:16,205 --> 00:02:20,965
+And in the third epoch we can't use these nodes over here.
+
+47
+00:02:20,965 --> 00:02:25,289
+So, again, we do forward and back prop.
+
+48
+00:02:25,288 --> 00:02:27,309
+And finally in last epoch,
+
+49
+00:02:27,310 --> 00:02:29,818
+we can't use these two nodes over here.
+
+50
+00:02:29,818 --> 00:02:31,598
+So, we continue like that.
+
+51
+00:02:31,598 --> 00:02:36,158
+What we'll do to drop the nodes is we'll give the algorithm a parameter.
+
+52
+00:02:36,158 --> 00:02:42,218
+This parameter is the probability that each node gets dropped at a particular epoch.
+
+53
+00:02:42,218 --> 00:02:46,358
+For example, if we give it a 0.2 it means each epoch,
+
+54
+00:02:46,359 --> 00:02:51,264
+each node gets turned off with a probability of 20 percent.
+
+55
+00:02:51,264 --> 00:02:53,770
+Notice that some nodes may get turned off more than
+
+56
+00:02:53,770 --> 00:02:56,810
+others and some others may never get turned off.
+
+57
+00:02:56,810 --> 00:03:00,068
+And this is OK since we're doing it over and over and over.
+
+58
+00:03:00,068 --> 00:03:03,209
+On average each node will get the same treatment.
+
+59
+00:03:03,210 --> 00:03:05,560
+This method is called dropout and it's really
+
+60
+00:03:05,560 --> 00:03:08,259
+really common and useful to train neural networks.
+

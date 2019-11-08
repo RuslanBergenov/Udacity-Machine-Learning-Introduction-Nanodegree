@@ -1,0 +1,48 @@
+1
+00:00:00,000 --> 00:00:03,835
+Hi, and welcome to the small evaluation and validation section.
+
+2
+00:00:03,835 --> 00:00:06,839
+My name is Luis Serrano and I'm an instructor here at Udacity.
+
+3
+00:00:06,839 --> 00:00:09,705
+In this section, we'll focus on two questions.
+
+4
+00:00:09,705 --> 00:00:11,039
+The first question is,
+
+5
+00:00:11,039 --> 00:00:13,479
+how well is my model doing?
+
+6
+00:00:13,480 --> 00:00:16,310
+So, let's say we've trained our machine learning model and the question is,
+
+7
+00:00:16,309 --> 00:00:17,894
+is this model good or not?
+
+8
+00:00:17,894 --> 00:00:22,015
+So, we're going to learn metrics to tell us if it is good or not.
+
+9
+00:00:22,015 --> 00:00:24,615
+And the second question is, once we figure that out,
+
+10
+00:00:24,614 --> 00:00:26,894
+how do we improve it based on these metrics?
+
+11
+00:00:26,894 --> 00:00:29,594
+Let's dive right in and learn to evaluate,
+
+12
+00:00:29,594 --> 00:00:32,000
+validate, and improve our machine learning models.
+

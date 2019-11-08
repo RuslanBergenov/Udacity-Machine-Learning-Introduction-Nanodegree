@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:02,609
+In the last video, we saw an example of Bayes theorem.
+
+2
+00:00:02,609 --> 00:00:06,334
+But here's the main idea fit and it's a very powerful theorem.
+
+3
+00:00:06,334 --> 00:00:11,835
+What it does is it switches from what we know to what we infer.
+
+4
+00:00:11,835 --> 00:00:14,850
+What we know in this case is the probability that Alex
+
+5
+00:00:14,849 --> 00:00:18,434
+wears red and the probability that Brenda wears red.
+
+6
+00:00:18,434 --> 00:00:20,369
+And what we infer is the opposite,
+
+7
+00:00:20,370 --> 00:00:22,575
+is the probability that someone wearing red is
+
+8
+00:00:22,574 --> 00:00:25,724
+Alex or that someone wearing red is Brenda.
+
+9
+00:00:25,725 --> 00:00:29,700
+In other words, initially we know the probability of an event A.
+
+10
+00:00:29,699 --> 00:00:31,408
+And to give us more information,
+
+11
+00:00:31,408 --> 00:00:35,265
+we introduce a new event R which is related to A.
+
+12
+00:00:35,265 --> 00:00:37,770
+We know the probability of R given A.
+
+13
+00:00:37,770 --> 00:00:40,290
+What Bayes' theorem does is from these two,
+
+14
+00:00:40,289 --> 00:00:44,039
+it infers the probability of A given R. This
+
+15
+00:00:44,039 --> 00:00:49,530
+is the new probability of A once we know that the event R has occurred
+

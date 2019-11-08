@@ -1,0 +1,573 @@
+1
+00:00:00,633 --> 00:00:02,467
+Não foi
+um questionário fácil.
+
+2
+00:00:02,500 --> 00:00:06,667
+Para mostrar a resposta,
+vamos calcular as três equações,
+
+3
+00:00:06,700 --> 00:00:10,200
+x+y, x vezes y e x²+y²
+
+4
+00:00:10,233 --> 00:00:12,267
+em cada um dos oito pontos.
+
+5
+00:00:12,433 --> 00:00:16,333
+Temos os oito pontos,
+-3,-3, 3,-3 etc,
+
+6
+00:00:16,367 --> 00:00:18,100
+até chegar a 1,1.
+
+7
+00:00:18,133 --> 00:00:20,900
+Quatro são vermelhos
+e quatro são azuis.
+
+8
+00:00:21,100 --> 00:00:23,267
+Vamos calcular x+y.
+
+9
+00:00:23,300 --> 00:00:27,667
+No 1º ponto,
+a soma das coordenadas é -6.
+
+10
+00:00:28,067 --> 00:00:31,167
+No 2º ponto, é 3-3,
+que é igual a zero.
+
+11
+00:00:31,200 --> 00:00:34,933
+Vamos até o 1+1,
+que é igual a 2.
+
+12
+00:00:34,967 --> 00:00:37,567
+Vamos ver os valores
+na linha.
+
+13
+00:00:37,600 --> 00:00:40,767
+Os pontos azuis
+estão em 0, 2 e -2.
+
+14
+00:00:40,800 --> 00:00:44,067
+Os pontos vermelhos
+estão em 0, 6 e -6.
+
+15
+00:00:44,100 --> 00:00:46,933
+Não existe um lugar certo
+para recortar
+
+16
+00:00:46,967 --> 00:00:50,667
+que separe os pontos vermelhos
+dos azuis.
+
+17
+00:00:50,900 --> 00:00:52,567
+Poderíamos ter adivinhado,
+
+18
+00:00:52,600 --> 00:00:54,767
+porque x+y é uma equação
+linear
+
+19
+00:00:54,800 --> 00:00:57,300
+e já estabelecemos
+que equações lineares
+
+20
+00:00:57,333 --> 00:00:59,300
+não separam esses pontos.
+
+21
+00:00:59,333 --> 00:01:02,267
+Uma linha não vai conseguir
+recortar os dados.
+
+22
+00:01:02,300 --> 00:01:05,100
+Vamos tentar o x vezes y,
+que não é linear,
+
+23
+00:01:05,133 --> 00:01:06,633
+então há esperança.
+
+24
+00:01:06,667 --> 00:01:09,000
+Então x vezes y
+tem os seguintes valores:
+
+25
+00:01:09,033 --> 00:01:11,267
+-3x-3=9,
+
+26
+00:01:11,300 --> 00:01:14,500
+3x-3=-9 etc...
+
+27
+00:01:14,533 --> 00:01:17,467
+Até chegar a 1x1=1.
+
+28
+00:01:17,700 --> 00:01:21,367
+Os pontos azuis
+ficam em 1 e -1.
+
+29
+00:01:21,400 --> 00:01:23,800
+Os pontos vermelhos
+ficam em 9 e -9.
+
+30
+00:01:23,833 --> 00:01:25,600
+Ainda não há separação.
+
+31
+00:01:25,633 --> 00:01:27,700
+Não dá para recortar
+de maneira
+
+32
+00:01:27,733 --> 00:01:30,267
+que os pontos vermelhos
+fiquem de um lado
+
+33
+00:01:30,300 --> 00:01:32,500
+e os azuis fiquem de outro.
+
+34
+00:01:32,533 --> 00:01:35,000
+Então x vezes y
+também não funciona.
+
+35
+00:01:35,033 --> 00:01:38,167
+Vamos tentar com x²+y².
+
+36
+00:01:38,400 --> 00:01:43,100
+Com -3,-3,
+temos -3²+-3², que dá 18.
+
+37
+00:01:43,333 --> 00:01:46,367
+Os outros valores
+são 18, 18 e 18.
+
+38
+00:01:46,400 --> 00:01:47,900
+E 2 para os azuis,
+
+39
+00:01:47,933 --> 00:01:50,867
+já que 1²+1² é igual a 2.
+
+40
+00:01:50,900 --> 00:01:52,200
+Na linha de números,
+
+41
+00:01:52,233 --> 00:01:54,267
+todos os pontos azuis
+estão no 2
+
+42
+00:01:54,300 --> 00:01:56,700
+e os pontos vermelhos
+estão no 18.
+
+43
+00:01:56,733 --> 00:01:58,667
+Agora podemos recortar
+em duas partes.
+
+44
+00:01:58,700 --> 00:02:01,567
+Se desenharmos
+uma linha vertical no 10...
+
+45
+00:02:01,600 --> 00:02:05,033
+Pode ser em qualquer lugar,
+mas o melhor é no meio, que é 10.
+
+46
+00:02:05,067 --> 00:02:07,467
+Conseguimos separar
+os pontos.
+
+47
+00:02:07,500 --> 00:02:10,533
+Então x²+y² é a função
+que vence.
+
+48
+00:02:10,567 --> 00:02:15,533
+Então, basicamente,
+para os pontos azuis, x²+y²=2.
+
+49
+00:02:15,567 --> 00:02:19,333
+Para os pontos vermelhos,
+x²+y²=18.
+
+50
+00:02:19,367 --> 00:02:21,467
+Como dividimos 2 e 18?
+
+51
+00:02:21,500 --> 00:02:24,067
+Com o 10, que fica no meio.
+
+52
+00:02:24,100 --> 00:02:29,533
+A equação mágica é x²+y²=10.
+Vamos decorá-la.
+
+53
+00:02:29,833 --> 00:02:33,933
+Agora vamos para o círculo.
+Qual é a equação do círculo?
+
+54
+00:02:33,967 --> 00:02:36,567
+É x²+y²=10.
+
+55
+00:02:36,600 --> 00:02:40,400
+É o círculo que separa
+os pontos vermelhos dos azuis.
+
+56
+00:02:40,433 --> 00:02:42,367
+Vamos voltar para o prédio,
+
+57
+00:02:42,400 --> 00:02:45,933
+já que disse que o método
+do círculo e o do prédio são iguais.
+
+58
+00:02:45,967 --> 00:02:47,867
+Vou mostrar o motivo.
+
+59
+00:02:47,900 --> 00:02:51,067
+Do lado esquerdo,
+temos um mundo plano.
+
+60
+00:02:51,100 --> 00:02:53,367
+Do lado direito,
+temos um mundo tridimensional,
+
+61
+00:02:53,400 --> 00:02:55,400
+que é um prédio
+com vários andares.
+
+62
+00:02:55,433 --> 00:02:57,633
+O novo eixo é z.
+
+63
+00:02:57,667 --> 00:03:01,200
+Temos z=18,
+que é o 18º andar,
+
+64
+00:03:01,233 --> 00:03:03,900
+e z=2, que é o 2º andar.
+
+65
+00:03:03,933 --> 00:03:07,800
+Os pontos azuis estão no 2º andar
+e os vermelhos estão no 18º andar.
+
+66
+00:03:07,833 --> 00:03:09,200
+Como separá-los?
+
+67
+00:03:09,233 --> 00:03:12,567
+Com um plano no meio,
+no 10º andar.
+
+68
+00:03:12,600 --> 00:03:15,300
+É o que a MVS faz
+em três dimensões.
+
+69
+00:03:15,333 --> 00:03:17,567
+Ela cria
+o melhor plano separador
+
+70
+00:03:17,600 --> 00:03:20,500
+com o algoritmo
+que aprendemos anteriormente.
+
+71
+00:03:20,533 --> 00:03:23,067
+Mas como fazemos um círculo?
+
+72
+00:03:23,100 --> 00:03:26,500
+Se consideramos que z=x²+y²,
+
+73
+00:03:26,533 --> 00:03:28,433
+temos este paraboloide.
+
+74
+00:03:28,467 --> 00:03:32,433
+O paraboloide cruza cada plano
+com um círculo.
+
+75
+00:03:32,467 --> 00:03:35,100
+O círculo de baixo
+contém os pontos azuis
+
+76
+00:03:35,133 --> 00:03:37,667
+e o de cima
+contém os pontos vermelhos.
+
+77
+00:03:37,700 --> 00:03:43,700
+O círculo do meio está aqui,
+com a equação x²+y²=10,
+
+78
+00:03:43,733 --> 00:03:46,600
+já que os dois valores
+são z.
+
+79
+00:03:46,633 --> 00:03:49,533
+É por isso que os métodos
+do círculo e do prédio são iguais
+
+80
+00:03:49,567 --> 00:03:52,867
+e são o método de Kernel
+para MVS.
+
+81
+00:03:53,900 --> 00:03:55,733
+Vamos resumir.
+
+82
+00:03:55,767 --> 00:03:59,433
+Estamos num mundo bidimensional
+com um conjunto de pontos
+
+83
+00:03:59,467 --> 00:04:01,800
+que não podem
+ser separados de forma linear.
+
+84
+00:04:01,833 --> 00:04:04,767
+Então encaixamos os dados
+num mundo de cinco dimensões
+
+85
+00:04:04,800 --> 00:04:06,633
+ao pegar o ponto x,y
+
+86
+00:04:06,667 --> 00:04:12,300
+e mandar para x,y,x²,xy,y².
+
+87
+00:04:12,633 --> 00:04:14,600
+Como exemplo, o ponto 2,3
+
+88
+00:04:14,633 --> 00:04:18,000
+vai ser mandando
+para o ponto 2,3,4,6,9.
+
+89
+00:04:18,033 --> 00:04:20,067
+Os dados estão
+numa dimensão mais alta,
+
+90
+00:04:20,100 --> 00:04:24,900
+então tivemos sorte de separá-los
+num hiperplano de quatro dimensões.
+
+91
+00:04:24,933 --> 00:04:27,833
+Vamos projetar isso
+no mundo bidimensional
+
+92
+00:04:27,867 --> 00:04:32,067
+e temos um polinômio de grau 2
+que separa os dados.
+
+93
+00:04:32,100 --> 00:04:34,067
+É um Kernel polinomial.
+
+94
+00:04:34,100 --> 00:04:38,033
+Kernel significa um conjunto
+de funções que nos ajuda.
+
+95
+00:04:38,067 --> 00:04:40,867
+Vamos ver
+dois conjuntos de dados.
+
+96
+00:04:40,900 --> 00:04:43,467
+O Kernel linear
+é uma mala de ferramentas,
+
+97
+00:04:43,500 --> 00:04:46,833
+que são as variáveis x e y.
+
+98
+00:04:46,867 --> 00:04:50,000
+Temos as funções
+de combinações lineares
+
+99
+00:04:50,033 --> 00:04:51,500
+das duas variáveis,
+
+100
+00:04:51,533 --> 00:04:54,900
+então podemos criar 2x-y=1.
+
+101
+00:04:55,500 --> 00:04:58,833
+Ou 5x-2y=3.
+
+102
+00:04:59,267 --> 00:05:01,667
+Ou x+y=4.
+
+103
+00:05:01,700 --> 00:05:03,267
+Qualquer linha.
+
+104
+00:05:03,800 --> 00:05:06,133
+Se usarmos
+um Kernel polinomial,
+
+105
+00:05:06,167 --> 00:05:08,067
+temos outras ferramentas.
+
+106
+00:05:08,100 --> 00:05:10,100
+Ainda temos x e y,
+
+107
+00:05:10,133 --> 00:05:13,667
+mas também temos
+x², xy e y².
+
+108
+00:05:14,000 --> 00:05:16,467
+Temos mais opções
+para criar funções
+
+109
+00:05:16,500 --> 00:05:18,267
+e separar os dados.
+
+110
+00:05:18,500 --> 00:05:22,433
+Podemos criar círculos
+como x²+y²=1.
+
+111
+00:05:22,633 --> 00:05:26,000
+Ou hipérboles, como xy=1.
+
+112
+00:05:26,033 --> 00:05:29,167
+Só desenhei metade da hipérbole,
+mas tudo bem.
+
+113
+00:05:29,200 --> 00:05:32,767
+Podemos criar parábolas,
+como esta de y=x².
+
+114
+00:05:32,800 --> 00:05:36,833
+Podemos criar mais funções
+e mais limites.
+
+115
+00:05:37,067 --> 00:05:39,567
+O algoritmo
+é o mesmo de antes.
+
+116
+00:05:39,600 --> 00:05:41,967
+Só acrescentamos dimensões
+aos dados,
+
+117
+00:05:42,000 --> 00:05:44,067
+encontramos uma dimensão
+mais alta,
+
+118
+00:05:44,100 --> 00:05:46,633
+projetamos para baixo
+e temos as curvas.
+
+119
+00:05:46,800 --> 00:05:49,400
+Com polinômios mais altos
+como este,
+
+120
+00:05:49,433 --> 00:05:53,467
+podemos usar um Kernel polinomial
+de um grau mais alto, como o 3,
+
+121
+00:05:53,500 --> 00:05:56,400
+que também inclui
+os monômios de grau 3.
+
+122
+00:05:56,433 --> 00:05:59,900
+O grau de um Kernel polinomial
+é um hiperparâmetro
+
+123
+00:05:59,933 --> 00:06:02,600
+que podemos treinar para achar
+o melhor modelo possível.
+

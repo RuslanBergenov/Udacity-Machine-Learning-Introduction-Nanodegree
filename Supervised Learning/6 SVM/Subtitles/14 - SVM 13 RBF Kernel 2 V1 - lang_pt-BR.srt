@@ -1,0 +1,74 @@
+1
+00:00:00,400 --> 00:00:03,967
+Vamos ver como o método de Kernel
+funciona em dimensões altas.
+
+2
+00:00:04,000 --> 00:00:06,800
+Queremos desenhar
+uma montanha em cada ponto.
+
+3
+00:00:06,833 --> 00:00:09,900
+No caso do 3D, esta montanha
+é um paraboloide gaussiano
+
+4
+00:00:09,933 --> 00:00:11,767
+e levanta os pontos assim.
+
+5
+00:00:11,800 --> 00:00:14,367
+Se quisermos separar
+o ponto do resto,
+
+6
+00:00:14,400 --> 00:00:16,200
+podemos recortar
+com um plano.
+
+7
+00:00:16,233 --> 00:00:19,033
+O plano cruza o paraboloide
+no círculo,
+
+8
+00:00:19,067 --> 00:00:21,833
+que vai se tornar
+nosso limite.
+
+9
+00:00:21,867 --> 00:00:24,433
+Se tivermos mais pontos,
+fazemos o mesmo.
+
+10
+00:00:24,467 --> 00:00:27,267
+Usamos um método parecido
+para achar os pesos certos
+
+11
+00:00:27,300 --> 00:00:31,033
+da combinação de montanhas
+que levante os pontos vermelhos
+
+12
+00:00:31,067 --> 00:00:33,700
+e mantenha os pontos azuis
+embaixo.
+
+13
+00:00:33,733 --> 00:00:35,933
+Depois recortamos
+com um plano.
+
+14
+00:00:35,967 --> 00:00:38,900
+Na projeção,
+as interseções da curva no plano
+
+15
+00:00:38,933 --> 00:00:41,100
+são os limites
+que separam os dados.
+

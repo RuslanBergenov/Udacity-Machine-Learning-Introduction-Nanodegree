@@ -1,0 +1,324 @@
+1
+00:00:00,000 --> 00:00:01,544
+In the last video,
+
+2
+00:00:01,544 --> 00:00:04,724
+you saw two of the main aspects of principal components.
+
+3
+00:00:04,724 --> 00:00:08,765
+The first was the amount of variability captured by each component,
+
+4
+00:00:08,765 --> 00:00:10,794
+which we saw with the scree plot.
+
+5
+00:00:10,794 --> 00:00:14,144
+The second was the actual components themselves.
+
+6
+00:00:14,144 --> 00:00:18,439
+In this notebook, you'll get a chance to explore these a little bit more yourself.
+
+7
+00:00:18,440 --> 00:00:21,665
+Let's read in the necessary libraries, as well as our data.
+
+8
+00:00:21,664 --> 00:00:23,799
+Here are the top 30 images.
+
+9
+00:00:23,800 --> 00:00:27,210
+Now, let's perform PCA on our X matrix
+
+10
+00:00:27,210 --> 00:00:31,144
+using the do_pca function we've been using in the previous videos.
+
+11
+00:00:31,144 --> 00:00:34,695
+Remember, this will return back the PCA model itself,
+
+12
+00:00:34,695 --> 00:00:37,774
+as well as the matrix of the reduced features.
+
+13
+00:00:37,774 --> 00:00:41,030
+In this case, we'll use 10 principal components.
+
+14
+00:00:41,030 --> 00:00:43,064
+We'll want to pass it our X matrix,
+
+15
+00:00:43,064 --> 00:00:45,474
+which is basically the images themselves.
+
+16
+00:00:45,475 --> 00:00:50,725
+Now, let's try creating a scree plot using the model that we just created.
+
+17
+00:00:50,725 --> 00:00:53,240
+Remember, each of these bars represents
+
+18
+00:00:53,240 --> 00:00:55,950
+the amount of variability captured by each component.
+
+19
+00:00:55,950 --> 00:00:58,165
+So, the first component captures this amount,
+
+20
+00:00:58,164 --> 00:01:00,670
+the second, this amount, and so forth.
+
+21
+00:01:00,670 --> 00:01:03,140
+The line represents the total amount of
+
+22
+00:01:03,140 --> 00:01:06,099
+variability captured at a certain level of components.
+
+23
+00:01:06,099 --> 00:01:08,329
+So, by the end of 10 components,
+
+24
+00:01:08,329 --> 00:01:11,209
+we have about 30 percent of the original variability in
+
+25
+00:01:11,209 --> 00:01:14,544
+the data that's being captured by those 10 components.
+
+26
+00:01:14,545 --> 00:01:19,004
+Using this, we can fill in the dictionary below 10.42.
+
+27
+00:01:19,004 --> 00:01:21,834
+This one seems like the trickiest one. I'll come back to it.
+
+28
+00:01:21,834 --> 00:01:26,209
+The first component will always have the most amount of variability explained.
+
+29
+00:01:26,209 --> 00:01:27,854
+That's actually true.
+
+30
+00:01:27,855 --> 00:01:31,340
+It's always the case that the principal components will
+
+31
+00:01:31,340 --> 00:01:35,454
+look to capture the most amount of variability remaining in the dataset.
+
+32
+00:01:35,454 --> 00:01:38,989
+Therefore, the first component will always capture the most,
+
+33
+00:01:38,989 --> 00:01:40,849
+the second will capture the second most,
+
+34
+00:01:40,849 --> 00:01:42,079
+and so on and so forth.
+
+35
+00:01:42,079 --> 00:01:45,500
+You'll never see a later component that captures more variability than
+
+36
+00:01:45,500 --> 00:01:47,689
+an earlier component of the total amount of
+
+37
+00:01:47,689 --> 00:01:50,644
+variability in the data explained by the first component.
+
+38
+00:01:50,644 --> 00:01:54,879
+So, the first component looks like it explains 6.13 percent.
+
+39
+00:01:54,879 --> 00:01:58,519
+So, that looks like answer c. Then the sum
+
+40
+00:01:58,519 --> 00:02:02,299
+of the variability explained by all the components can be greater than 100 percent.
+
+41
+00:02:02,299 --> 00:02:06,170
+So, will never be the case that you will get a sum of the amount of
+
+42
+00:02:06,170 --> 00:02:10,800
+variability explained by all the components greater than 100 percent.
+
+43
+00:02:10,800 --> 00:02:14,719
+The most amount of variability that the principal components can explain is
+
+44
+00:02:14,719 --> 00:02:18,490
+just the total amount of variability that the data had to begin with.
+
+45
+00:02:18,490 --> 00:02:20,600
+So, therefore, only 100 percent.
+
+46
+00:02:20,599 --> 00:02:23,264
+So, this statement here is false.
+
+47
+00:02:23,264 --> 00:02:26,089
+Then, this 10.42 must be
+
+48
+00:02:26,090 --> 00:02:29,939
+the total amount of variability that's explained by the first two components.
+
+49
+00:02:29,939 --> 00:02:32,310
+So, if we see 6.13,
+
+50
+00:02:32,310 --> 00:02:35,094
+4.29, if we add those two together,
+
+51
+00:02:35,094 --> 00:02:37,159
+we get the 10.42.
+
+52
+00:02:37,159 --> 00:02:40,609
+It looks like that turned out okay and we get a little bit of
+
+53
+00:02:40,610 --> 00:02:44,225
+a reinforcer of the ideas that we just found.
+
+54
+00:02:44,224 --> 00:02:46,489
+Now use the plot_component function from
+
+55
+00:02:46,490 --> 00:02:49,344
+the helper_functions to look at each of the components.
+
+56
+00:02:49,344 --> 00:02:53,219
+Use the results to assist with question five, down here.
+
+57
+00:02:53,219 --> 00:02:54,990
+This takes two arguments,
+
+58
+00:02:54,990 --> 00:02:56,435
+if you remember from the video.
+
+59
+00:02:56,435 --> 00:02:59,064
+The first is the actual model,
+
+60
+00:02:59,064 --> 00:03:01,930
+and then the second is the component that we want to plot.
+
+61
+00:03:01,930 --> 00:03:03,694
+By plotting the first component,
+
+62
+00:03:03,694 --> 00:03:06,509
+you can see that it's pulling out, essentially is zero.
+
+63
+00:03:06,509 --> 00:03:11,875
+So, this component looks like it will assist in identifying zero.
+
+64
+00:03:11,875 --> 00:03:15,645
+If we have 10 components and we're indexing them from zero to nine,
+
+65
+00:03:15,645 --> 00:03:18,395
+this means that the zero is the component.
+
+66
+00:03:18,395 --> 00:03:22,290
+Then it says, which component looks like it's identifying a three?
+
+67
+00:03:22,289 --> 00:03:24,544
+So, let's look at a couple of these other ones.
+
+68
+00:03:24,544 --> 00:03:27,214
+So, that one doesn't look like a three.
+
+69
+00:03:27,215 --> 00:03:30,474
+That one doesn't really look like a three to me either.
+
+70
+00:03:30,474 --> 00:03:32,979
+Oh! There we go. The fourth component.
+
+71
+00:03:32,979 --> 00:03:35,000
+So, remember these are indexed at zero,
+
+72
+00:03:35,000 --> 00:03:38,534
+but this looks a lot like a three.
+
+73
+00:03:38,534 --> 00:03:41,125
+Cool. Then from the notebook,
+
+74
+00:03:41,125 --> 00:03:44,724
+we've had an opportunity to look at these two major parts of PCA,
+
+75
+00:03:44,724 --> 00:03:47,120
+the amount of variance explained by each component,
+
+76
+00:03:47,120 --> 00:03:48,974
+which is also called an eigenvalue,
+
+77
+00:03:48,974 --> 00:03:50,979
+and the principle components themselves,
+
+78
+00:03:50,979 --> 00:03:55,819
+which give us a weight for each of the pixels in the original images and how much they
+
+79
+00:03:55,819 --> 00:03:58,189
+weigh into the individual principal components we
+
+80
+00:03:58,189 --> 00:04:00,914
+get back at the end of our results, right?
+
+81
+00:04:00,914 --> 00:04:03,729
+These principal components are known as eigenvectors.
+

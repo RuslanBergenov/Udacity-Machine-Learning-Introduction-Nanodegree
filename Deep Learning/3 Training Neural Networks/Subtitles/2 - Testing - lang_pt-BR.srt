@@ -1,0 +1,157 @@
+1
+00:00:00,334 --> 00:00:03,901
+Vejamos os dados formados
+pelos pontos azuis e vermelhos
+
+2
+00:00:03,935 --> 00:00:06,701
+e os dois modelos
+de classificação,
+
+3
+00:00:06,735 --> 00:00:10,334
+que separam os pontos
+azuis dos vermelhos.
+
+4
+00:00:10,368 --> 00:00:14,033
+Qual desses dois modelos
+é o melhor?
+
+5
+00:00:14,067 --> 00:00:17,701
+Parece que o da esquerda
+é mais simples, pois é uma linha,
+
+6
+00:00:17,735 --> 00:00:21,601
+e o da direita é complicado,
+pois é uma curva complexa.
+
+7
+00:00:22,400 --> 00:00:25,300
+O da direita
+não comete erros,
+
+8
+00:00:25,334 --> 00:00:28,367
+ele separa
+os pontos corretamente.
+
+9
+00:00:28,401 --> 00:00:32,100
+Por outro lado, o da esquerda
+comete alguns erros.
+
+10
+00:00:32,934 --> 00:00:36,801
+Nós pensamos que o da direita
+é o melhor.
+
+11
+00:00:36,835 --> 00:00:39,334
+Para descobrir
+qual realmente é melhor,
+
+12
+00:00:39,368 --> 00:00:42,801
+nós usamos o treinamento
+e o teste de conjuntos.
+
+13
+00:00:42,835 --> 00:00:45,167
+Eles serão
+da seguinte forma:
+
+14
+00:00:45,201 --> 00:00:48,634
+os pontos de cores sólidas
+são o conjunto de treinamento,
+
+15
+00:00:48,668 --> 00:00:51,601
+e o ponto em branco
+são o conjunto de teste.
+
+16
+00:00:52,300 --> 00:00:55,934
+Nós treinamos os modelos
+no conjunto de treinamento
+
+17
+00:00:55,968 --> 00:00:59,667
+sem observar
+o conjunto de teste,
+
+18
+00:00:59,701 --> 00:01:02,634
+e avaliamos os resultados
+no conjunto de teste
+
+19
+00:01:02,668 --> 00:01:04,133
+para ver como nos saímos.
+
+20
+00:01:04,167 --> 00:01:06,968
+De acordo com isto,
+nós treinamos o modelo linear
+
+21
+00:01:07,002 --> 00:01:10,100
+e o complexo
+no conjunto de treinamento
+
+22
+00:01:10,134 --> 00:01:12,400
+para obter
+estes dois limites.
+
+23
+00:01:12,434 --> 00:01:15,901
+Agora nós trazemos
+o conjunto de teste
+
+24
+00:01:15,935 --> 00:01:20,133
+e vemos que o modelo à esquerda
+cometeu um erro,
+
+25
+00:01:20,167 --> 00:01:23,267
+enquanto o da direita
+cometeu dois erros.
+
+26
+00:01:23,301 --> 00:01:25,767
+Vemos que o modelo
+mais simples foi o melhor.
+
+27
+00:01:26,567 --> 00:01:29,200
+Foi isso que você intuiu?
+
+28
+00:01:29,234 --> 00:01:31,601
+Eu acho que sim,
+pois é isso que faremos
+
+29
+00:01:31,635 --> 00:01:33,334
+no aprendizado de máquina.
+
+30
+00:01:33,368 --> 00:01:36,934
+Quando pudermos escolher entre
+um modelo simples, que funciona,
+
+31
+00:01:36,968 --> 00:01:40,434
+e um complicado,
+que se sai um pouco melhor,
+
+32
+00:01:40,468 --> 00:01:42,970
+nós sempre tentaremos
+optar pelo mais simples.
+

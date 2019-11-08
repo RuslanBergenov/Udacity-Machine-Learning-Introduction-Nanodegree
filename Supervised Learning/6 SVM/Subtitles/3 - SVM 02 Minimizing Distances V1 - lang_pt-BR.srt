@@ -1,0 +1,67 @@
+1
+00:00:00,133 --> 00:00:03,667
+Se escolheu a linha da esquerda,
+acertou, pois, como pode ver,
+
+2
+00:00:03,700 --> 00:00:07,333
+a linha amarela tem um bom espaço
+entre os pontos azuis e vermelhos,
+
+3
+00:00:07,367 --> 00:00:09,133
+mas a linha verde, não.
+
+4
+00:00:09,167 --> 00:00:12,467
+Está perto demais
+de alguns pontos.
+
+5
+00:00:12,500 --> 00:00:14,933
+E como podemos ver isso?
+Podemos ver a distância
+
+6
+00:00:14,967 --> 00:00:17,333
+dos pontos mais próximos
+de uma linha
+
+7
+00:00:17,367 --> 00:00:21,267
+e comparamos à distância
+dos pontos da outra linha.
+
+8
+00:00:21,300 --> 00:00:23,667
+O ponto mais próximo
+da linha amarela é este
+
+9
+00:00:23,700 --> 00:00:26,400
+e o da verde é este aqui.
+
+10
+00:00:26,433 --> 00:00:30,067
+Depois vemos que ponto
+está mais distante da linha.
+
+11
+00:00:30,100 --> 00:00:33,933
+Comparamos as duas distâncias
+e vemos que a da esquerda é maior,
+
+12
+00:00:33,967 --> 00:00:35,900
+então essa linha vence.
+
+13
+00:00:35,933 --> 00:00:38,133
+Em resumo,
+é assim que a MVS funciona,
+
+14
+00:00:38,167 --> 00:00:41,467
+mas vou mostrar o algoritmo
+com mais detalhes.
+

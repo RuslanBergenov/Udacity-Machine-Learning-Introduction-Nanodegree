@@ -1,0 +1,647 @@
+1
+00:00:00,000 --> 00:00:02,340
+No vídeo anterior,
+você viu um exemplo
+
+2
+00:00:02,373 --> 00:00:05,293
+sobre trabalhar
+com dados de dígitos do MNIST.
+
+3
+00:00:05,326 --> 00:00:08,080
+Pode encontrar um link
+para esse conjunto de dados aqui.
+
+4
+00:00:08,113 --> 00:00:11,155
+Primeiro, é importante carregar
+as bibliotecas necessárias.
+
+5
+00:00:11,188 --> 00:00:13,750
+Então, vamos trabalhar
+com um número de questões.
+
+6
+00:00:13,783 --> 00:00:16,915
+A primeira é perceber
+que há várias coisas
+
+7
+00:00:16,948 --> 00:00:19,251
+carregadas da biblioteca
+de funções auxiliares.
+
+8
+00:00:19,284 --> 00:00:24,210
+São essencialmente várias funções
+que você viu no vídeo anterior,
+
+9
+00:00:24,243 --> 00:00:27,629
+bem como coisas adicionais
+que veremos neste notebook.
+
+10
+00:00:28,155 --> 00:00:31,554
+A primeira coisa a fazer é usar
+pandas para ler o conjunto de dados.
+
+11
+00:00:31,587 --> 00:00:34,335
+Como pode ver,
+está neste link aqui.
+
+12
+00:00:34,368 --> 00:00:40,481
+Você também pode ver os dados usando
+head, tail, describe, info etc.,
+
+13
+00:00:40,514 --> 00:00:43,071
+para ver como são
+e se familiarizar.
+
+14
+00:00:43,104 --> 00:00:46,075
+Como no vídeo anterior,
+vamos criar um vetor chamado y,
+
+15
+00:00:46,108 --> 00:00:50,508
+que tem a etiqueta, e guardar
+todos os outros pixels em x.
+
+16
+00:00:50,741 --> 00:00:54,324
+Também vou fazer
+um fillna com 0,
+
+17
+00:00:54,357 --> 00:00:57,640
+como vimos no outro vídeo.
+Ótimo.
+
+18
+00:00:57,673 --> 00:00:59,564
+Parece que se ajusta.
+
+19
+00:00:59,597 --> 00:01:02,741
+Agora use a função
+show_images_by_digit
+
+20
+00:01:02,774 --> 00:01:08,170
+da função auxiliar para ver
+os 1, 2, 3, ou qualquer outro valor.
+
+21
+00:01:08,590 --> 00:01:12,034
+Executar isso deve mostrar
+todos os 2 do conjunto de dados.
+
+22
+00:01:12,067 --> 00:01:15,155
+Se mudarmos isso,
+podemos ver os 1.
+
+23
+00:01:15,188 --> 00:01:19,030
+Também poderíamos ver os 8.
+
+24
+00:01:19,063 --> 00:01:21,780
+Agora que já tivemos
+a chance de olhar os dados,
+
+25
+00:01:21,813 --> 00:01:24,164
+vamos tentar usar esse processo
+em quatro passos
+
+26
+00:01:24,197 --> 00:01:28,284
+para encaixar um modelo
+e classificá-lo ao prever dígitos.
+
+27
+00:01:28,603 --> 00:01:33,015
+O modelo usado no vídeo anterior
+foi através dessa função aqui.
+
+28
+00:01:33,048 --> 00:01:35,060
+A fit_random_
+forest_classifier.
+
+29
+00:01:35,093 --> 00:01:38,954
+Mas também pode tentar a grid search
+e achar um modelo melhor.
+
+30
+00:01:38,987 --> 00:01:41,696
+Precisamos fazer um inplace=True
+para ter certeza
+
+31
+00:01:41,729 --> 00:01:44,084
+de que o conjunto de dados
+ficou certo.
+
+32
+00:01:46,173 --> 00:01:49,774
+Aqui você pode ver um exemplo
+de como nosso modelo executa bem.
+
+33
+00:01:49,808 --> 00:01:53,680
+Novamente, em torno de 94%,
+como viu no vídeo anterior.
+
+34
+00:01:54,175 --> 00:01:58,380
+O objetivo desta aula
+é analisar a PCA.
+
+35
+00:01:58,413 --> 00:02:01,879
+Para replicar o processo
+que você viu no vídeo anterior,
+
+36
+00:02:01,912 --> 00:02:05,334
+você pode usar a função
+do_PCA que foi criada.
+
+37
+00:02:05,367 --> 00:02:08,699
+Se a executarmos,
+você pode ver que pega dois inputs,
+
+38
+00:02:08,732 --> 00:02:10,936
+o número de componentes
+e o conjunto de dados
+
+39
+00:02:10,969 --> 00:02:14,224
+que você quer mover
+para um número de componentes menor.
+
+40
+00:02:14,257 --> 00:02:18,086
+Então o output é o modelo PCA
+e também o conjunto de dados
+
+41
+00:02:18,119 --> 00:02:21,275
+criado com a criação
+de um número menor de recursos.
+
+42
+00:02:21,623 --> 00:02:23,870
+Ele pega
+o número de recursos.
+
+43
+00:02:23,903 --> 00:02:27,230
+Criei um modelo usando apenas
+dois recursos no vídeo anterior,
+
+44
+00:02:27,263 --> 00:02:30,090
+mas você pode tentar
+algo com mais, se quiser.
+
+45
+00:02:30,123 --> 00:02:34,717
+Vamos inserir a nossa matriz X,
+e as duas coisas que recebemos
+
+46
+00:02:34,750 --> 00:02:40,359
+são o objeto PCA
+e a X_matrix.
+
+47
+00:02:40,757 --> 00:02:46,280
+Temos nosso objeto PCA e o conjunto
+de recursos reduzido a 2.
+
+48
+00:02:46,313 --> 00:02:50,205
+A próxima coisa a fazer é ajustar
+um random_forest_classifier.
+
+49
+00:02:50,238 --> 00:02:53,850
+Essa foi uma das funções
+criadas no vídeo anterior.
+
+50
+00:02:53,883 --> 00:02:58,880
+Pode ver que pega um x e y e imprime
+a matriz de confusão e a acurácia.
+
+51
+00:02:58,913 --> 00:03:02,560
+Neste caso, você pode ver
+que não funciona muito bem.
+
+52
+00:03:02,593 --> 00:03:06,319
+Pelo menos não comparado ao modelo
+que usa todos os recursos.
+
+53
+00:03:06,352 --> 00:03:09,762
+Na próxima parte, queremos ver se
+conseguimos achar um número reduzido
+
+54
+00:03:09,795 --> 00:03:13,314
+de recursos que ainda permita
+uma acurácia maior do que 90%.
+
+55
+00:03:13,347 --> 00:03:18,094
+Então vamos usar 4 recursos.
+
+56
+00:03:18,127 --> 00:03:22,544
+Digamos que comece em...
+Bom, sabemos que 2, não.
+
+57
+00:03:22,577 --> 00:03:27,234
+Talvez 3,
+talvez cheguemos a 15.
+
+58
+00:03:27,268 --> 00:03:29,425
+Perdão, pulei o número 7.
+
+59
+00:03:29,458 --> 00:03:30,904
+A próxima coisa a fazer
+
+60
+00:03:30,937 --> 00:03:34,328
+é usar a função plot_components
+que viu no vídeo
+
+61
+00:03:34,361 --> 00:03:36,125
+para ver se a separação
+funciona bem.
+
+62
+00:03:36,158 --> 00:03:38,210
+Então é exatamente
+o que vimos antes.
+
+63
+00:03:38,243 --> 00:03:40,224
+Agora vamos
+um pouco mais longe.
+
+64
+00:03:40,257 --> 00:03:43,745
+Neste caso, queremos ver
+se conseguimos uma separação melhor.
+
+65
+00:03:43,778 --> 00:03:47,360
+Especificamente, queremos conseguir
+mais de 90% de acurácia,
+
+66
+00:03:47,393 --> 00:03:51,900
+um número menor de recursos
+do que usar todos os 700.
+
+67
+00:03:51,933 --> 00:03:55,110
+Primeiro vamos começar
+com um intervalo de 3 a 15.
+
+68
+00:03:55,143 --> 00:03:57,790
+Sempre podemos aumentar
+se quisermos.
+
+69
+00:03:57,823 --> 00:04:03,074
+Vou passar isso
+para a do_PCA.
+
+70
+00:04:03,107 --> 00:04:06,454
+A do_pca, na verdade,
+é uma função daqui.
+
+71
+00:04:06,487 --> 00:04:10,740
+A parte boa é que não
+vai somente imprimir a acurácia,
+
+72
+00:04:10,940 --> 00:04:12,230
+mas também
+devolver a acurácia.
+
+73
+00:04:12,263 --> 00:04:15,166
+Sabemos disso porque está
+perto da parte de fora aqui.
+
+74
+00:04:15,843 --> 00:04:19,240
+Para cada número
+de recursos entre 3 e 15,
+
+75
+00:04:19,273 --> 00:04:23,555
+queremos executar o algoritmo
+do_PCA, que, então, vai devolver
+
+76
+00:04:23,588 --> 00:04:28,925
+PCA e a X_matrix.
+
+77
+00:04:28,958 --> 00:04:32,626
+Então o que vamos fazer é executar
+o random_forest_classifier,
+
+78
+00:04:32,659 --> 00:04:34,239
+que é essa parte.
+
+79
+00:04:34,272 --> 00:04:37,560
+O random_forest_classifier
+de floresta aleatória usa o x e o y.
+
+80
+00:04:37,593 --> 00:04:40,375
+Então, x_PCA e y.
+
+81
+00:04:40,408 --> 00:04:44,589
+Eles devolvem a acurácia.
+
+82
+00:04:44,622 --> 00:04:46,900
+Logo, podemos ver
+que devolve a acurácia
+
+83
+00:04:46,933 --> 00:04:51,054
+por causa desta parte aqui
+sendo devolvida no output.
+
+84
+00:04:51,088 --> 00:04:56,209
+O que eu vou fazer é criar
+uma lista vazia chamada "ACCS"
+
+85
+00:04:56,242 --> 00:04:59,831
+e depois adicionar
+àquela lista
+
+86
+00:04:59,864 --> 00:05:03,944
+a acurácia de cada modelo.
+
+87
+00:05:03,977 --> 00:05:07,575
+Então vou criar também
+
+88
+00:05:07,608 --> 00:05:13,099
+recursos num fora do loop,
+como uma lista.
+
+89
+00:05:13,132 --> 00:05:15,515
+Isso vai criar vários desses.
+
+90
+00:05:16,389 --> 00:05:18,475
+Isso é o que acontece
+com 3 recursos.
+
+91
+00:05:18,508 --> 00:05:21,416
+Pode ver que a acurácia é
+em torno de 54%.
+
+92
+00:05:21,449 --> 00:05:25,925
+Então, com 4 recursos,
+temos uma acurácia de 67%.
+
+93
+00:05:25,958 --> 00:05:30,235
+Com 5 recursos,
+temos aproximadamente 72%.
+
+94
+00:05:30,268 --> 00:05:36,030
+Em torno de 6,
+chegamos perto de 80%.
+
+95
+00:05:36,063 --> 00:05:38,304
+Pode ver que estamos
+começando a nivelar.
+
+96
+00:05:38,338 --> 00:05:44,310
+Então temos 84, 85, 86,
+e parece que terminou de executar.
+
+97
+00:05:44,343 --> 00:05:49,129
+Com 14 recursos,
+temos quase 88%.
+
+98
+00:05:49,162 --> 00:05:53,120
+Parece que precisamos
+aumentar um pouco.
+
+99
+00:05:53,153 --> 00:05:56,708
+O que vou fazer
+é começar em 15
+
+100
+00:05:56,741 --> 00:06:02,160
+e aumentar até 20 recursos.
+
+101
+00:06:02,193 --> 00:06:07,335
+Com 15, temos 90.
+Estamos bem perto.
+
+102
+00:06:07,368 --> 00:06:10,404
+Mas, provavelmente, seria
+mais inteligente inserir uma quebra.
+
+103
+00:06:10,437 --> 00:06:14,959
+Onde quebramos é
+a acurácia do modelo,
+
+104
+00:06:14,992 --> 00:06:19,439
+então guardamos a acurácia
+e adicionamos depois.
+
+105
+00:06:19,472 --> 00:06:21,319
+Então dizemos que
+
+106
+00:06:21,352 --> 00:06:26,850
+acc é igual a isso
+e adicionamos a acurácia e, depois,
+
+107
+00:06:26,883 --> 00:06:32,685
+quebramos se a acurácia
+for maior do que 0,9.
+
+108
+00:06:32,718 --> 00:06:35,591
+Essa provavelmente seria
+a melhor forma de fazer
+
+109
+00:06:35,624 --> 00:06:37,905
+e, então, executar
+a partir de 15.
+
+110
+00:06:37,938 --> 00:06:40,281
+Agora podemos fazer até 100.
+
+111
+00:06:40,481 --> 00:06:42,669
+Mas, provavelmente, é melhor
+começar em 20.
+
+112
+00:06:42,703 --> 00:06:45,080
+Essa parte aqui
+não significa nada agora.
+
+113
+00:06:45,113 --> 00:06:49,539
+Então, em 20, temos
+uma acurácia em torno de 90.
+
+114
+00:06:49,573 --> 00:06:52,435
+Está abaixando novamente.
+Muito bem.
+
+115
+00:06:52,468 --> 00:06:58,459
+Agora, se inserirmos uma célula
+embaixo, podemos imprimir.
+
+116
+00:06:59,250 --> 00:07:01,649
+Vamos olhar para o CCS.
+
+117
+00:07:01,682 --> 00:07:05,975
+Há 11 deles.
+Pode ver que fizemos 11.
+
+118
+00:07:06,008 --> 00:07:07,500
+Ou seja, de 20 a 30.
+
+119
+00:07:07,533 --> 00:07:12,379
+Basicamente, uma vez que tínhamos
+30 recursos, foi o bastante
+
+120
+00:07:12,412 --> 00:07:15,336
+para entender os dígitos
+bem o suficiente
+
+121
+00:07:15,369 --> 00:07:17,801
+para prever com uma acurácia
+maior do que 90%.
+
+122
+00:07:18,001 --> 00:07:23,395
+O que é uma redução enorme dos mais
+de 700 recursos que tínhamos.
+
+123
+00:07:23,428 --> 00:07:27,894
+É possível que os recursos extras
+contribuam para o sobreajuste.
+
+124
+00:07:27,927 --> 00:07:29,828
+Isso pergunta se você
+tem provas
+
+125
+00:07:29,861 --> 00:07:32,124
+de que isso acontece
+nesse conjunto de dados,
+
+126
+00:07:32,157 --> 00:07:35,315
+no arquivo de solução encontrado
+neste notebook.
+
+127
+00:07:35,348 --> 00:07:39,769
+A faixa é bem grande.
+
+128
+00:07:39,802 --> 00:07:42,964
+A sugestão é ver somente
+abaixo de 100 componentes.
+
+129
+00:07:42,997 --> 00:07:47,204
+Logo, o que podemos fazer é
+executar para 100 componentes,
+
+130
+00:07:47,237 --> 00:07:49,921
+inserir a acurácia
+de um número de componentes
+
+131
+00:07:49,954 --> 00:07:52,280
+e ver se começa
+a baixar ou não.
+
+132
+00:07:52,313 --> 00:07:54,137
+Ou ver se nosso modelo
+se ajusta bem.
+
+133
+00:07:54,170 --> 00:07:57,000
+Mas, essencialmente, parecem
+os mesmos processos aqui.
+

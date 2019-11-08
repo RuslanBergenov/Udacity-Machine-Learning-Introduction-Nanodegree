@@ -1,0 +1,179 @@
+1
+00:00:00,300 --> 00:00:03,667
+Isso! A primeira maneira de dividir
+não ajuda em nada.
+
+2
+00:00:03,700 --> 00:00:06,400
+Temos dois conjuntos parecidos
+de pontos
+
+3
+00:00:06,433 --> 00:00:08,600
+e não descobrimos nada
+sobre os dados.
+
+4
+00:00:08,633 --> 00:00:10,133
+A 2ª opção foi razoável.
+
+5
+00:00:10,167 --> 00:00:14,967
+Conseguimos dividir quase todos
+os pontos azuis e vermelhos.
+
+6
+00:00:15,000 --> 00:00:17,333
+Agora sabemos um pouco mais.
+
+7
+00:00:17,367 --> 00:00:18,933
+A 3ª opção é fantástica.
+
+8
+00:00:18,967 --> 00:00:23,300
+Ela separou totalmente
+os pontos azuis e vermelhos.
+
+9
+00:00:23,333 --> 00:00:25,300
+Agora sabemos muito
+sobre os dados.
+
+10
+00:00:25,333 --> 00:00:29,100
+Vamos aprender a calcular
+o ganho de informações.
+
+11
+00:00:29,133 --> 00:00:32,833
+A 1ª divisão é zero,
+a 2ª divisão é 0,28
+
+12
+00:00:32,867 --> 00:00:34,733
+e a 3ª divisão é 1.
+
+13
+00:00:34,767 --> 00:00:37,133
+A fórmula do ganho de informações
+é simples.
+
+14
+00:00:37,167 --> 00:00:40,367
+É só uma mudança de entropia.
+Vou ser mais específico.
+
+15
+00:00:40,400 --> 00:00:42,667
+Para cada anotação
+na árvore de decisão,
+
+16
+00:00:42,700 --> 00:00:46,267
+podemos calcular a entropia
+dos dados na anotação pai
+
+17
+00:00:46,300 --> 00:00:49,833
+e depois calculamos a entropia
+dos dois filhos.
+
+18
+00:00:50,000 --> 00:00:52,433
+O ganho de informações
+é a diferença
+
+19
+00:00:52,467 --> 00:00:54,633
+entre a entropia do pai
+
+20
+00:00:54,667 --> 00:00:57,167
+e a média da entropia
+dos filhos.
+
+21
+00:00:57,200 --> 00:01:01,733
+No 1º exemplo,
+a entropia do pai é 1.
+
+22
+00:01:01,767 --> 00:01:04,600
+A entropia de cada filho
+é 0,72,
+
+23
+00:01:04,633 --> 00:01:08,867
+então a média da entropia
+dos filhos é 0,72.
+
+24
+00:01:08,900 --> 00:01:14,333
+A mudança de entropia
+é 1 menos 0,72, que dá 0,28.
+
+25
+00:01:14,367 --> 00:01:18,300
+Neste exemplo,
+a entropia dos dois filhos é 1,
+
+26
+00:01:18,333 --> 00:01:22,500
+então a mudança de entropia
+é 1 menos 1, que dá zero.
+
+27
+00:01:22,533 --> 00:01:25,733
+É uma divisão péssima
+porque não recebemos informações.
+
+28
+00:01:25,767 --> 00:01:29,233
+Finalmente, neste exemplo,
+a entropia dos filhos é zero.
+
+29
+00:01:29,267 --> 00:01:33,900
+Um conjunto com os pontos
+da mesma cor tem entropia zero.
+
+30
+00:01:33,933 --> 00:01:37,467
+O ganho de informações
+é 1 menos zero, que dá 1.
+
+31
+00:01:37,500 --> 00:01:41,233
+Essa divisão nos deu
+o maior ganho de informações.
+
+32
+00:01:41,267 --> 00:01:44,700
+É a melhor divisão
+porque recortou os dados
+
+33
+00:01:44,733 --> 00:01:47,300
+em pontos azuis
+e pontos vermelhos.
+
+34
+00:01:47,333 --> 00:01:48,667
+Aqui está o resumo.
+
+35
+00:01:48,700 --> 00:01:51,467
+Os três recortes com o valor
+de ganho de informações.
+
+36
+00:01:51,500 --> 00:01:54,633
+Se a árvore tivesse que escolher,
+seria o 3º recorte,
+
+37
+00:01:54,667 --> 00:01:57,733
+que é o que nos dá o maior
+ganho de informações.
+

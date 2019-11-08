@@ -1,0 +1,613 @@
+1
+00:00:00,000 --> 00:00:02,716
+Oi, eu sou o Jay,
+e nesta aula,
+
+2
+00:00:02,749 --> 00:00:05,731
+vou falar sobre
+redução de dimensionalidade.
+
+3
+00:00:05,764 --> 00:00:07,836
+O primeiro método
+sobre o qual vamos falar
+
+4
+00:00:07,869 --> 00:00:09,239
+é a projeção aleatória,
+
+5
+00:00:09,272 --> 00:00:11,688
+um método poderoso
+de redução de dimensionalidade
+
+6
+00:00:11,721 --> 00:00:14,461
+computacionalmente
+mais eficiente que a PCA.
+
+7
+00:00:14,494 --> 00:00:16,762
+É usada em casos
+em que o conjunto de dados
+
+8
+00:00:16,795 --> 00:00:20,626
+tem dimensões demais
+para a PCA computar diretamente.
+
+9
+00:00:20,659 --> 00:00:22,538
+Digamos que seu aplicativo
+esteja rodando
+
+10
+00:00:22,571 --> 00:00:25,191
+em um sistema com recursos
+computacionais limitados,
+
+11
+00:00:25,224 --> 00:00:27,423
+ou você acha que a PCA
+é muito exigente
+
+12
+00:00:27,456 --> 00:00:29,407
+para uma situação específica.
+
+13
+00:00:29,440 --> 00:00:31,640
+Assim como a PCA,
+é preciso um conjunto de dados.
+
+14
+00:00:31,673 --> 00:00:33,251
+Digamos que seja este aqui,
+
+15
+00:00:33,284 --> 00:00:35,824
+com d dimensões,
+digamos, 1.000,
+
+16
+00:00:35,857 --> 00:00:39,084
+e um certo número
+de amostras ou linhas, digamos, N.
+
+17
+00:00:39,117 --> 00:00:40,321
+Essas são as colunas.
+
+18
+00:00:40,354 --> 00:00:44,813
+Ela pega nosso conjunto de dados
+e produz uma transformação
+
+19
+00:00:44,846 --> 00:00:47,777
+com um número
+bem menor de colunas.
+
+20
+00:00:47,810 --> 00:00:50,418
+Certo, digamos que seja 50,
+por exemplo,
+
+21
+00:00:50,451 --> 00:00:52,174
+mas com o mesmo número
+de amostras,
+
+22
+00:00:52,207 --> 00:00:54,164
+com cada coluna daqui
+capturando informações
+
+23
+00:00:54,197 --> 00:00:55,993
+de múltiplas colunas de lá.
+
+24
+00:00:56,026 --> 00:00:58,600
+Vamos dar uma olhada
+em um exemplo super simplificado
+
+25
+00:00:58,633 --> 00:01:02,944
+de redução das dimensões
+de 2 dimensões para 1 dimensão.
+
+26
+00:01:02,977 --> 00:01:05,562
+A PCA vai tentar
+maximizar a variância.
+
+27
+00:01:05,595 --> 00:01:09,307
+Ela encontra o vetor ou a direção
+que maximiza a variância
+
+28
+00:01:09,340 --> 00:01:11,385
+para perder o menor
+número de informações
+
+29
+00:01:11,418 --> 00:01:14,289
+ao projetar os dados
+de 1 dimensão para 2.
+
+30
+00:01:14,322 --> 00:01:16,426
+A linha ficaria
+mais ou menos assim,
+
+31
+00:01:16,459 --> 00:01:17,996
+e essas seriam as projeções.
+
+32
+00:01:18,029 --> 00:01:21,721
+Em 1 dimensão,
+o conjunto de dados ficaria assim.
+
+33
+00:01:21,754 --> 00:01:23,052
+Projeção aleatória.
+
+34
+00:01:23,085 --> 00:01:26,738
+Esse cálculo que a PCA fez,
+se tratando de muitas dimensões,
+
+35
+00:01:26,771 --> 00:01:28,460
+consome um certo número
+de recursos.
+
+36
+00:01:28,493 --> 00:01:29,876
+Projeção aleatória é
+
+37
+00:01:29,909 --> 00:01:33,231
+escolher uma linha, qualquer linha,
+e fazer uma projeção disso,
+
+38
+00:01:33,264 --> 00:01:35,395
+e esse é
+o seu conjunto de dados.
+
+39
+00:01:35,428 --> 00:01:37,770
+Mesmo não fazendo
+muito sentido
+
+40
+00:01:37,803 --> 00:01:40,734
+nesta situação super simplificada
+de 2 dimensões para 1,
+
+41
+00:01:40,767 --> 00:01:42,190
+isso realmente funciona
+
+42
+00:01:42,223 --> 00:01:44,580
+e funciona muito bem
+com dimensões maiores,
+
+43
+00:01:44,613 --> 00:01:47,108
+funciona em alta performance.
+
+44
+00:01:47,141 --> 00:01:49,503
+A premissa básica
+em projeções aleatórias
+
+45
+00:01:49,536 --> 00:01:52,643
+é simplesmente reduzir o número
+de dimensões do conjunto de dados
+
+46
+00:01:52,676 --> 00:01:56,727
+multiplicando-as
+por uma matriz aleatória como essa.
+
+47
+00:01:56,760 --> 00:01:58,272
+Então d...
+
+48
+00:01:58,305 --> 00:02:03,614
+Teríamos d no conjunto de dados,
+mas computaríamos k ou outro valor.
+
+49
+00:02:03,647 --> 00:02:05,253
+Há um jeito de computar
+
+50
+00:02:05,286 --> 00:02:08,173
+o que seria uma estimativa
+conservadora ou boa para k.
+
+51
+00:02:08,206 --> 00:02:10,677
+Esse seria
+o conjunto de dados resultante.
+
+52
+00:02:10,710 --> 00:02:12,502
+A multiplicação
+por uma matriz aleatória
+
+53
+00:02:12,535 --> 00:02:14,874
+é uma projeção aleatória
+de certa forma.
+
+54
+00:02:14,907 --> 00:02:17,183
+Vamos dar uma olhada
+em um exemplo concreto.
+
+55
+00:02:17,216 --> 00:02:18,974
+Digamos que este
+é o conjunto de dados,
+
+56
+00:02:19,007 --> 00:02:23,326
+e ele tem 12.000 dimensões,
+que é o nosso d,
+
+57
+00:02:23,359 --> 00:02:26,565
+e 1.500 linhas, ou amostras.
+
+58
+00:02:26,598 --> 00:02:29,052
+Se dermos isso à scikit-learn
+e dissermos:
+
+59
+00:02:29,085 --> 00:02:31,494
+"Scikit-learn, você pode fazer
+uma projeção aleatória
+
+60
+00:02:31,527 --> 00:02:34,308
+deste conjunto de dados
+apenas usando seus valores padrão?"
+
+61
+00:02:34,341 --> 00:02:36,139
+Ela vai retornar
+este conjunto de dados,
+
+62
+00:02:36,172 --> 00:02:39,616
+com 6.200 dimensões
+
+63
+00:02:39,649 --> 00:02:42,430
+e o mesmo número
+de amostras, obviamente.
+
+64
+00:02:42,463 --> 00:02:46,650
+Como sabemos se está funcionando
+e de onde k está vindo?
+
+65
+00:02:46,683 --> 00:02:49,351
+O alicerce teórico
+para a projeção aleatória
+
+66
+00:02:49,384 --> 00:02:52,734
+é uma ideia chamada
+"lema de Johnson-Lindenstrauss",
+
+67
+00:02:52,767 --> 00:02:55,183
+que afirma
+que um conjunto de dados
+
+68
+00:02:55,216 --> 00:02:57,841
+com N pontos e um espaço
+de grandes dimensões,
+
+69
+00:02:57,874 --> 00:03:00,651
+ou seja, este conjunto de dados,
+N pontos,
+
+70
+00:03:00,684 --> 00:03:03,580
+espaço de grandes dimensões -
+12.000 é bem grande -,
+
+71
+00:03:03,613 --> 00:03:05,179
+pode ser mapeado.
+
+72
+00:03:05,212 --> 00:03:07,030
+Multiplicando
+por uma matriz aleatória,
+
+73
+00:03:07,063 --> 00:03:09,389
+reduzindo para uma dimensão
+bem menor,
+
+74
+00:03:09,422 --> 00:03:12,770
+que é este conjunto de dados,
+de certa forma.
+
+75
+00:03:12,803 --> 00:03:14,731
+É por isso que é
+tão importante para nós.
+
+76
+00:03:14,764 --> 00:03:17,782
+Isso pode ser feito para preservar
+as distâncias entre os pontos
+
+77
+00:03:17,815 --> 00:03:19,316
+em um alto grau.
+
+78
+00:03:19,349 --> 00:03:22,735
+Então a distância
+entre cada par de pontos
+
+79
+00:03:22,768 --> 00:03:24,036
+neste conjunto de dados,
+
+80
+00:03:24,069 --> 00:03:26,990
+depois da projeção,
+está preservada, de certa forma.
+
+81
+00:03:27,023 --> 00:03:28,267
+Isso é muito importante
+
+82
+00:03:28,300 --> 00:03:30,876
+porque, em muitas aprendizagens
+supervisionadas
+
+83
+00:03:30,909 --> 00:03:32,534
+e não supervisionadas,
+
+84
+00:03:32,567 --> 00:03:35,008
+os algoritmos se importam
+com a distância entre os pontos.
+
+85
+00:03:35,041 --> 00:03:37,000
+Temos uma certa garantia
+
+86
+00:03:37,033 --> 00:03:39,833
+de que as distâncias
+ficarão um pouco distorcidas,
+
+87
+00:03:39,866 --> 00:03:42,155
+mas elas podem
+ser preservadas.
+
+88
+00:03:42,188 --> 00:03:45,594
+Como podem ser preservadas?
+Que tipo de garantia nós temos?
+
+89
+00:03:45,627 --> 00:03:48,454
+Vamos usar um rápido exemplo
+e calculá-lo.
+
+90
+00:03:48,487 --> 00:03:52,055
+Vamos pegar
+estas suas linhas aqui,
+
+91
+00:03:52,088 --> 00:03:53,914
+esta aqui e esta aqui,
+
+92
+00:03:53,947 --> 00:03:55,962
+os primeiros 2 pontos
+do conjunto de dados.
+
+93
+00:03:55,995 --> 00:03:58,442
+E estes são os valores deles
+depois da projeção.
+
+94
+00:03:58,475 --> 00:04:00,009
+As mesmas amostras,
+
+95
+00:04:00,042 --> 00:04:02,121
+mas um nível diferente
+de dimensionalidade.
+
+96
+00:04:02,154 --> 00:04:06,508
+O lema de Johnson-Lindenstrauss
+nos diz que a distância
+
+97
+00:04:06,541 --> 00:04:11,321
+entre 2 pontos na projeção quadrada
+está um pouco espremida.
+
+98
+00:04:11,354 --> 00:04:14,639
+É maior que a distância
+entre 2 pontos
+
+99
+00:04:14,672 --> 00:04:17,197
+do conjunto de dados
+original quadrado
+
+100
+00:04:17,230 --> 00:04:19,263
+vezes 1 menos epsilon.
+
+101
+00:04:19,296 --> 00:04:22,693
+Epsilon é o nível de erro
+que permitimos
+
+102
+00:04:22,726 --> 00:04:24,948
+que a projeção aleatória tenha
+na projeção.
+
+103
+00:04:24,981 --> 00:04:29,141
+A distância entre 2 pontos
+nos dados projetados
+
+104
+00:04:29,174 --> 00:04:31,740
+será maior que 1 menos epsilon
+
+105
+00:04:31,773 --> 00:04:33,947
+vezes o quadrado da distância
+dos 2 pontos
+
+106
+00:04:33,980 --> 00:04:35,699
+no conjunto de dados original
+
+107
+00:04:35,732 --> 00:04:39,482
+e será menor que 1 mais epsilon
+dessa distância quadrada.
+
+108
+00:04:39,515 --> 00:04:41,342
+Eu calculei esses números.
+
+109
+00:04:41,375 --> 00:04:45,795
+A distância entre os 2 pontos
+é 125,6.
+
+110
+00:04:45,828 --> 00:04:47,884
+Colocamos isso aqui.
+
+111
+00:04:47,917 --> 00:04:50,558
+Epsilon, o valor padrão,
+então não mudamos nada.
+
+112
+00:04:50,591 --> 00:04:53,648
+O valor padrão
+na scikit-learn é 0,1.
+
+113
+00:04:53,681 --> 00:04:56,318
+Ele pode ter
+qualquer valor de 0 a 1.
+
+114
+00:04:56,351 --> 00:04:58,368
+Fazendo desse jeito,
+
+115
+00:04:58,401 --> 00:05:01,836
+a distância entre os 2 pontos
+é 125,8.
+
+116
+00:05:01,869 --> 00:05:07,623
+A distância aqui será maior
+que 0,9 vezes esta distância
+
+117
+00:05:07,656 --> 00:05:11,788
+e maior que 1,1 vezes
+esta distância quadrada.
+
+118
+00:05:11,821 --> 00:05:15,262
+Você pode ver que epsilon
+é como um fígado.
+
+119
+00:05:15,295 --> 00:05:18,460
+Entra no cálculo de quantas colunas
+foram produzidas
+
+120
+00:05:18,493 --> 00:05:21,234
+e é o nível de erro
+que permitimos
+
+121
+00:05:21,267 --> 00:05:25,371
+que a distorção tenha
+nesta redução de dimensionalidade.
+
+122
+00:05:25,404 --> 00:05:27,597
+Essa garantia
+preserva a distância
+
+123
+00:05:27,630 --> 00:05:30,643
+entre qualquer par de pontos
+do conjunto de dados.
+
+124
+00:05:30,676 --> 00:05:32,752
+Não é apenas 1 e 2,
+
+125
+00:05:32,785 --> 00:05:34,783
+é 1 e qualquer outro ponto
+
+126
+00:05:34,816 --> 00:05:36,445
+e 2 e qualquer outro ponto.
+
+127
+00:05:36,478 --> 00:05:38,161
+A garantia está lá.
+
+128
+00:05:38,194 --> 00:05:40,686
+O epsilon é apenas um input
+dentro da função
+
+129
+00:05:40,719 --> 00:05:44,666
+para preservar as distâncias
+neste grau.
+

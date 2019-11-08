@@ -1,0 +1,121 @@
+1
+00:00:00,000 --> 00:00:05,267
+Agora vamos ver uma das formas
+de medir se um modelo é bom, chamada precisão.
+
+2
+00:00:05,333 --> 00:00:07,600
+É a resposta à pergunta:
+
+3
+00:00:07,667 --> 00:00:10,800
+"De todos os pacientes,
+quantos classificamos bem?"
+
+4
+00:00:10,867 --> 00:00:12,667
+A resposta é:
+
+5
+00:00:12,733 --> 00:00:15,933
+a razão entre o nº de pontos
+classificados corretamente
+
+6
+00:00:16,000 --> 00:00:17,867
+e o nº total de pontos.
+
+7
+00:00:17,933 --> 00:00:22,267
+Neste exemplo, classificamos bem
+9 mil pacientes,
+
+8
+00:00:22,333 --> 00:00:25,867
+a soma de mil saudáveis
+e 8 mil doentes.
+
+9
+00:00:25,933 --> 00:00:31,267
+A precisão é este número, dividido
+pelo número total de pacientes, 10 mil.
+
+10
+00:00:31,333 --> 00:00:34,267
+Isso nos dá
+uma precisão de 90%.
+
+11
+00:00:34,333 --> 00:00:36,867
+Calcula-se facilmente
+a precisão em sklearn,
+
+12
+00:00:36,933 --> 00:00:39,467
+com a função accuracy_score.
+
+13
+00:00:39,533 --> 00:00:43,267
+Vejamos de quanto é a precisão
+do modelo detector de spam.
+
+14
+00:00:43,333 --> 00:00:44,467
+É a resposta à pergunta:
+
+15
+00:00:44,533 --> 00:00:47,733
+"De todos os e-mails,
+quantos classificamos bem?"
+
+16
+00:00:47,800 --> 00:00:52,467
+Como classificamos bem
+800 de mil,
+
+17
+00:00:52,533 --> 00:00:55,000
+a resposta é 80%.
+
+18
+00:00:55,067 --> 00:00:59,133
+Vamos calcular a precisão
+do modelo detector de spam.
+
+19
+00:00:59,200 --> 00:01:00,467
+É a resposta à pergunta:
+
+20
+00:01:00,533 --> 00:01:04,133
+"De todos os e-mails,
+quantos classificamos bem?"
+
+21
+00:01:04,200 --> 00:01:07,867
+Como classificamos bem
+800 de mil,
+
+22
+00:01:07,933 --> 00:01:10,867
+a resposta é 80%.
+
+23
+00:01:10,933 --> 00:01:12,667
+Vamos testar
+seu conhecimento.
+
+24
+00:01:12,733 --> 00:01:15,467
+Neste modelo,
+qual é a precisão?
+
+25
+00:01:15,533 --> 00:01:19,000
+Escreva o número em porcentagem,
+um número entre 0 e 100.
+
+26
+00:01:19,067 --> 00:01:20,533
+O número pode ter decimais.
+

@@ -1,0 +1,86 @@
+1
+00:00:00,234 --> 00:00:04,701
+Saber qual taxa de aprendizado
+usar é muito desafiador,
+
+2
+00:00:04,735 --> 00:00:06,334
+mas eis uma regra geral:
+
+3
+00:00:06,368 --> 00:00:08,834
+se sua taxa de aprendizado
+for muito alta,
+
+4
+00:00:08,868 --> 00:00:10,934
+então você está dando
+grandes passos,
+
+5
+00:00:10,968 --> 00:00:12,767
+que podem ser
+rápidos no início,
+
+6
+00:00:12,801 --> 00:00:15,634
+mas você perderá o mínimo
+e continuará seguindo.
+
+7
+00:00:15,668 --> 00:00:18,100
+Isso deixará o seu modelo
+muito caótico.
+
+8
+00:00:18,134 --> 00:00:20,067
+Se sua taxa de aprendizado
+for baixa,
+
+9
+00:00:20,101 --> 00:00:22,534
+você dará passos firmes
+e terá mais chance
+
+10
+00:00:22,568 --> 00:00:25,000
+de chegar ao mínimo local.
+
+11
+00:00:25,034 --> 00:00:27,567
+Isso pode deixar
+o seu modelo muito lento,
+
+12
+00:00:27,601 --> 00:00:28,801
+mas, em geral,
+
+13
+00:00:28,835 --> 00:00:30,434
+uma dica é pensar
+
+14
+00:00:30,468 --> 00:00:32,534
+que se seu modelo
+não estiver funcionando,
+
+15
+00:00:32,568 --> 00:00:34,133
+diminua
+a taxa de aprendizado.
+
+16
+00:00:34,868 --> 00:00:37,734
+As melhores taxas
+de aprendizado diminuem
+
+17
+00:00:37,768 --> 00:00:40,667
+conforme o modelo
+se aproxima da solução.
+
+18
+00:00:40,701 --> 00:00:43,400
+Veremos que o Keras
+possui opções para isso.
+

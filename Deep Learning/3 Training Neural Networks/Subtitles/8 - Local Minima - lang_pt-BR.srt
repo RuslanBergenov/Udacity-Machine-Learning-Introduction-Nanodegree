@@ -1,0 +1,71 @@
+1
+00:00:00,367 --> 00:00:03,000
+Vamos rever o que o gradiente
+descendente faz.
+
+2
+00:00:03,034 --> 00:00:06,300
+Ele observa a direção
+que desce mais
+
+3
+00:00:06,334 --> 00:00:09,167
+e dá um passo nessa direção.
+
+4
+00:00:09,201 --> 00:00:11,701
+No Monte Errorest,
+tudo era perfeito,
+
+5
+00:00:11,735 --> 00:00:14,467
+pois isso ia nos ajudar
+a descer a montanha,
+
+6
+00:00:14,501 --> 00:00:18,667
+mas e se tivéssemos que lidar
+com esta montanha complexa?
+
+7
+00:00:18,701 --> 00:00:21,434
+Os Hima-AI-ans.
+
+8
+00:00:21,468 --> 00:00:24,434
+O ponto mais baixo que queremos
+alcançar é por aqui,
+
+9
+00:00:24,468 --> 00:00:26,267
+mas com o gradiente
+descendente,
+
+10
+00:00:26,301 --> 00:00:28,601
+nós chegamos até aqui.
+
+11
+00:00:28,635 --> 00:00:33,300
+Ao chegar aqui não há
+lugar para descer mais,
+
+12
+00:00:33,334 --> 00:00:35,133
+pois estamos
+no mínimo local.
+
+13
+00:00:35,167 --> 00:00:36,667
+Nós estamos presos.
+
+14
+00:00:36,701 --> 00:00:40,200
+O gradiente descendente
+não nos ajuda aqui.
+
+15
+00:00:40,234 --> 00:00:41,834
+Nós precisamos
+de algo diferente.
+

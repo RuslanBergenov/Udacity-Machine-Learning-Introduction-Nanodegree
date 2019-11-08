@@ -1,0 +1,281 @@
+1
+00:00:00,200 --> 00:00:02,500
+Para avançarmos,
+
+2
+00:00:02,533 --> 00:00:05,800
+precisamos aprender
+um conceito chamado entropia.
+
+3
+00:00:05,833 --> 00:00:07,600
+A entropia vem da física.
+
+4
+00:00:07,633 --> 00:00:08,900
+Para explicá-la,
+
+5
+00:00:08,933 --> 00:00:11,667
+vamos usar o exemplo
+dos três estados da água.
+
+6
+00:00:11,700 --> 00:00:15,433
+O estado sólido, que é o gelo,
+o líquido e o gasoso,
+
+7
+00:00:15,467 --> 00:00:17,133
+que é o vapor.
+
+8
+00:00:17,167 --> 00:00:20,800
+Vamos pensar nas partículas
+no gelo, na água e no vapor.
+
+9
+00:00:20,833 --> 00:00:22,467
+O gelo é rígido,
+
+10
+00:00:22,500 --> 00:00:25,300
+então as partículas
+não têm para onde ir.
+
+11
+00:00:25,333 --> 00:00:27,267
+Elas ficam onde estão.
+
+12
+00:00:27,300 --> 00:00:31,400
+A água é menos rígida
+e as partículas se movimentam.
+
+13
+00:00:31,433 --> 00:00:33,700
+O vapor está
+do outro lado do espectro.
+
+14
+00:00:33,733 --> 00:00:37,833
+A partícula tem muitas
+possibilidades de movimento.
+
+15
+00:00:37,867 --> 00:00:40,133
+A entropia mede isso.
+
+16
+00:00:40,167 --> 00:00:43,967
+Quanta liberdade tem a partícula
+para se movimentar?
+
+17
+00:00:44,000 --> 00:00:46,333
+A entropia do gelo é baixa,
+
+18
+00:00:46,367 --> 00:00:48,733
+a entropia da água líquida
+é média
+
+19
+00:00:48,767 --> 00:00:51,400
+e a entropia do vapor
+é alta.
+
+20
+00:00:51,433 --> 00:00:53,900
+A noção de entropia funciona
+com a probabilidade.
+
+21
+00:00:53,933 --> 00:00:57,700
+Vamos analisar as bolas
+dentro dos baldes.
+
+22
+00:00:57,733 --> 00:01:00,200
+O primeiro balde
+tem quatro bolas vermelhas.
+
+23
+00:01:00,233 --> 00:01:02,800
+O segundo tem três vermelhas
+e uma azul.
+
+24
+00:01:02,833 --> 00:01:05,400
+O terceiro tem duas vermelhas
+e duas azuis.
+
+25
+00:01:05,433 --> 00:01:09,567
+Digamos que as bolas de cada cor
+sejam indistinguíveis.
+
+26
+00:01:09,600 --> 00:01:13,033
+A entropia é medida
+pelo movimento das bolas
+
+27
+00:01:13,067 --> 00:01:14,733
+numa linha.
+
+28
+00:01:14,767 --> 00:01:17,133
+Vemos que o 1º balde
+é rígido.
+
+29
+00:01:17,167 --> 00:01:21,067
+Não importa a organização,
+o estado é sempre o mesmo.
+
+30
+00:01:21,100 --> 00:01:22,597
+Então a entropia é baixa.
+
+31
+00:01:22,630 --> 00:01:25,533
+No 2º balde, podemos organizar
+as bolas de quatro maneiras.
+
+32
+00:01:25,566 --> 00:01:27,633
+Então a entropia é média.
+
+33
+00:01:27,667 --> 00:01:30,400
+No 3º balde,
+temos seis maneiras de organizar,
+
+34
+00:01:30,433 --> 00:01:32,133
+então a entropia é alta.
+
+35
+00:01:32,167 --> 00:01:33,811
+Não é a definição exata
+de entropia,
+
+36
+00:01:33,844 --> 00:01:35,220
+mas nos dá uma ideia.
+
+37
+00:01:35,253 --> 00:01:38,200
+Quanto mais rígido
+e homogêneo,
+
+38
+00:01:38,233 --> 00:01:41,667
+menos entropia vai ter
+e vice-versa.
+
+39
+00:01:41,700 --> 00:01:44,067
+Podemos usar
+o conhecimento também.
+
+40
+00:01:44,100 --> 00:01:46,767
+Se escolhermos uma bola qualquer
+de cada balde,
+
+41
+00:01:46,800 --> 00:01:49,667
+quanto sabemos
+sobre a cor da bola?
+
+42
+00:01:49,700 --> 00:01:52,333
+No 1º balde,
+sabemos que a bola é vermelha.
+
+43
+00:01:52,367 --> 00:01:54,300
+Então o conhecimento é alto.
+
+44
+00:01:54,333 --> 00:01:56,867
+No 2º balde,
+é muito provável que seja vermelha
+
+45
+00:01:56,900 --> 00:01:59,133
+e pouco provável
+que seja azul.
+
+46
+00:01:59,167 --> 00:02:02,133
+Se apostarmos na vermelha,
+vamos acertar quase sempre.
+
+47
+00:02:02,167 --> 00:02:04,667
+Então temos
+um conhecimento médio.
+
+48
+00:02:04,700 --> 00:02:08,500
+No 3º balde, sabemos menos.
+A probabilidade é a mesma.
+
+49
+00:02:08,533 --> 00:02:10,933
+Então o conhecimento
+é baixo.
+
+50
+00:02:10,967 --> 00:02:13,933
+O conhecimento e a entropia
+são opostos.
+
+51
+00:02:13,967 --> 00:02:17,633
+Quanto mais conhecimento,
+menos entropia e vice-versa.
+
+52
+00:02:17,667 --> 00:02:21,000
+Então o 1º balde
+tem uma entropia baixa,
+
+53
+00:02:21,033 --> 00:02:23,133
+o 2º balde
+tem uma entropia média
+
+54
+00:02:23,167 --> 00:02:25,233
+e o 3º balde
+tem uma entropia alta.
+
+55
+00:02:25,267 --> 00:02:29,233
+Quando digo que são opostos,
+não quero dizer que são inversos.
+
+56
+00:02:29,267 --> 00:02:32,500
+É o significado coloquial
+da palavra.
+
+57
+00:02:32,533 --> 00:02:36,633
+Quando um é grande,
+o outro é pequeno e vice-versa.
+
+58
+00:02:36,667 --> 00:02:39,700
+Nos próximos vídeos vamos criar
+uma fórmula para a entropia
+
+59
+00:02:39,733 --> 00:02:43,533
+que nos dê valores baixos,
+médios e altos para os baldes.
+

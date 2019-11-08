@@ -1,0 +1,187 @@
+1
+00:00:00,233 --> 00:00:01,540
+Vamos recapitular.
+
+2
+00:00:01,573 --> 00:00:03,812
+Temos um problema
+de classificação fácil
+
+3
+00:00:03,845 --> 00:00:05,333
+com pontos azuis
+e vermelhos.
+
+4
+00:00:05,367 --> 00:00:07,500
+Vamos fazer um recorte aqui.
+
+5
+00:00:07,867 --> 00:00:11,000
+O modelo MVS vai fazer
+um recorte com duas linhas
+
+6
+00:00:11,033 --> 00:00:14,767
+para maximizar a margem, separando
+os pontos o máximo possível.
+
+7
+00:00:14,800 --> 00:00:16,833
+Mas vamos complicar
+um pouco mais.
+
+8
+00:00:16,867 --> 00:00:19,033
+E esta organização
+de pontos?
+
+9
+00:00:19,067 --> 00:00:21,967
+Não dá para recortar
+com uma linha.
+
+10
+00:00:22,000 --> 00:00:24,800
+Precisamos de um modelo
+mais complexo.
+
+11
+00:00:24,833 --> 00:00:25,837
+Tenho uma ideia.
+
+12
+00:00:25,870 --> 00:00:29,233
+Os pontos estão numa linha,
+mas estão num plano.
+
+13
+00:00:29,267 --> 00:00:30,700
+Vamos explorar isso.
+
+14
+00:00:30,733 --> 00:00:33,533
+Vamos trocar o problema
+unidimensional, a linha,
+
+15
+00:00:33,567 --> 00:00:36,133
+por um problema bidimensional,
+o plano,
+
+16
+00:00:36,167 --> 00:00:38,800
+ao acrescentar o eixo y.
+
+17
+00:00:38,833 --> 00:00:40,567
+Vamos usar uma parábola.
+
+18
+00:00:40,600 --> 00:00:43,267
+Vamos escrever
+a função y=x².
+
+19
+00:00:43,300 --> 00:00:47,633
+Vamos levar os pontos ao lugar
+correspondente na parábola.
+
+20
+00:00:47,667 --> 00:00:50,067
+Agora os pontos estão
+separáveis
+
+21
+00:00:50,100 --> 00:00:52,800
+porque,
+com o algoritmo MVS original,
+
+22
+00:00:52,833 --> 00:00:54,833
+podemos encontrar
+um bom recorte.
+
+23
+00:00:54,867 --> 00:00:58,100
+Vamos dizer
+que é a linha y=4.
+
+24
+00:00:58,133 --> 00:01:01,367
+Agora a questão é:
+como trazemos de volta para a linha
+
+25
+00:01:01,400 --> 00:01:03,467
+e encontramos o limite?
+
+26
+00:01:03,500 --> 00:01:04,524
+É muito simples.
+
+27
+00:01:04,557 --> 00:01:07,800
+A equação original é y=x².
+
+28
+00:01:07,833 --> 00:01:10,000
+A linha é y=4.
+
+29
+00:01:10,033 --> 00:01:11,800
+Como elas se unem?
+
+30
+00:01:11,833 --> 00:01:15,300
+Se equacionarmos, fica x²=4.
+
+31
+00:01:15,533 --> 00:01:17,300
+É a nova equação.
+
+32
+00:01:17,333 --> 00:01:19,300
+O que é x²=4?
+
+33
+00:01:19,333 --> 00:01:21,367
+São dois polinômios
+lineares,
+
+34
+00:01:21,400 --> 00:01:25,333
+com as soluções x=2 e x=-2.
+
+35
+00:01:25,367 --> 00:01:27,600
+São o nosso limite.
+
+36
+00:01:27,800 --> 00:01:30,667
+Agora trazemos de volta
+para a linha
+
+37
+00:01:30,700 --> 00:01:35,967
+e temos o x=2 e o x=-2
+como limites para o modelo.
+
+38
+00:01:36,000 --> 00:01:38,333
+Eles separam bem os dados.
+
+39
+00:01:38,367 --> 00:01:39,877
+É o truque do Kernel.
+
+40
+00:01:39,910 --> 00:01:42,260
+É muito usado em máquinas
+de vetores de suporte,
+
+41
+00:01:42,293 --> 00:01:44,765
+assim como em outros algoritmos
+de aprendizado de máquina.
+

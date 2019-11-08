@@ -1,0 +1,88 @@
+1
+00:00:03,470 --> 00:00:09,060
+The K in K-means relates to how many clusters you want to split your data into.
+
+2
+00:00:09,060 --> 00:00:10,985
+So in a case like this,
+
+3
+00:00:10,984 --> 00:00:14,074
+three clusters looks like it probably works best.
+
+4
+00:00:14,074 --> 00:00:17,434
+Alternatively, if we had this set of points,
+
+5
+00:00:17,434 --> 00:00:19,579
+three clusters doesn't seem right.
+
+6
+00:00:19,579 --> 00:00:23,474
+In this case, two clusters looks like it makes more sense.
+
+7
+00:00:23,475 --> 00:00:27,350
+When we have lots of data in a large number of dimensions,
+
+8
+00:00:27,350 --> 00:00:30,195
+how do we decide how many centers to choose?
+
+9
+00:00:30,195 --> 00:00:35,484
+Choosing K in practice is often a mix of art and science.
+
+10
+00:00:35,484 --> 00:00:38,600
+Sometimes, researchers are interested in choosing
+
+11
+00:00:38,600 --> 00:00:43,030
+a specific K value based on preconceived ideas about a topic.
+
+12
+00:00:43,030 --> 00:00:46,355
+One example of this happens right here at Eudacity,
+
+13
+00:00:46,354 --> 00:00:50,084
+we believe that students generally fall into one of three categories;
+
+14
+00:00:50,085 --> 00:00:51,980
+students who are new to a field,
+
+15
+00:00:51,979 --> 00:00:54,669
+students who are interested in scaling up their careers,
+
+16
+00:00:54,670 --> 00:00:56,960
+or students who are changing careers.
+
+17
+00:00:56,960 --> 00:01:01,640
+So, it makes sense to use K-means with K equal to three to see if our data
+
+18
+00:01:01,640 --> 00:01:07,254
+supports this idea of three types of students or three clusters of students.
+
+19
+00:01:07,254 --> 00:01:09,949
+Sometimes, we don't have an idea of
+
+20
+00:01:09,950 --> 00:01:13,210
+how many clusters there should be before we collect data.
+
+21
+00:01:13,209 --> 00:01:16,094
+For these cases, we'll look at another method
+
+22
+00:01:16,094 --> 00:01:19,640
+that can be used to find the number of clusters in a dataset
+

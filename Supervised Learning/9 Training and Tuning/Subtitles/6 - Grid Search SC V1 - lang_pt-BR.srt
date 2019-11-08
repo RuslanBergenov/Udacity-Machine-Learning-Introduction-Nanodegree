@@ -1,0 +1,250 @@
+1
+00:00:00,000 --> 00:00:02,979
+Aqui vai um resumo do que fazemos
+no aprendizado de máquina.
+
+2
+00:00:03,012 --> 00:00:05,978
+Primeiro, treinamos modelos
+com nossos dados de treinamento,
+
+3
+00:00:06,011 --> 00:00:09,454
+aí usamos dados de validação cruzada
+para escolher o melhor modelo
+
+4
+00:00:09,487 --> 00:00:11,614
+e finalmente testamos
+com os dados de teste
+
+5
+00:00:11,647 --> 00:00:13,276
+para verificar
+se o modelo é bom.
+
+6
+00:00:13,309 --> 00:00:16,774
+Aqui vai o exemplo do treinamento
+de um modelo de regressão logística.
+
+7
+00:00:16,807 --> 00:00:18,409
+Digamos que existem
+4 candidatos.
+
+8
+00:00:18,442 --> 00:00:21,858
+Treinamos um modelo
+de primeiro grau, que é uma reta,
+
+9
+00:00:21,891 --> 00:00:24,275
+e um de segundo,
+terceiro e quarto graus.
+
+10
+00:00:24,308 --> 00:00:26,927
+Usamos os dados de treinamento
+para descobrir a curva
+
+11
+00:00:26,960 --> 00:00:29,219
+e os coeficientes
+dos polinômios etc.
+
+12
+00:00:29,252 --> 00:00:32,134
+Então usamos os dados
+de validação cruzada para calcular
+
+13
+00:00:32,167 --> 00:00:34,634
+o F1 score
+de todos esses modelos
+
+14
+00:00:34,667 --> 00:00:38,364
+e escolhemos o modelo
+com o f1 score mais alto.
+
+15
+00:00:38,397 --> 00:00:42,465
+Por fim, usamos os dados de teste
+para verificar se o modelo é bom.
+
+16
+00:00:42,498 --> 00:00:46,460
+Os parâmetros do algoritmo no caso
+são os coeficientes do polinômio,
+
+17
+00:00:46,493 --> 00:00:50,259
+mas o grau do polinômio
+é um parâmetro importante.
+
+18
+00:00:50,292 --> 00:00:52,460
+Vamos chamar esses
+de "hiperparâmetros".
+
+19
+00:00:52,767 --> 00:00:55,841
+Vejamos outro exemplo. Pense
+em treinar uma árvore de decisão.
+
+20
+00:00:55,874 --> 00:00:57,395
+Quais são os hiperparâmetros?
+
+21
+00:00:57,428 --> 00:00:58,784
+Um deles é a profundidade.
+
+22
+00:00:58,817 --> 00:01:02,725
+Digamos que temos um
+de profundidade 1, 2, 3 e 4.
+
+23
+00:01:02,758 --> 00:01:05,916
+Usamos os dados de treinamento
+para treinar várias árvores
+
+24
+00:01:05,949 --> 00:01:09,430
+de profundidade 1, 2, 3 e 4.
+
+25
+00:01:09,463 --> 00:01:13,415
+Os parâmetros aqui são
+os limites nas folhas, nós etc.
+
+26
+00:01:13,448 --> 00:01:16,380
+Pegamos o f1 score
+e calculamos
+
+27
+00:01:16,413 --> 00:01:19,989
+no conjunto de validação cruzada
+de cada um desses modelos.
+
+28
+00:01:20,022 --> 00:01:23,939
+então escolhemos o melhor e,
+por fim, com o conjunto de testes,
+
+29
+00:01:23,972 --> 00:01:25,590
+verificamos se o modelo é bom.
+
+30
+00:01:25,623 --> 00:01:28,310
+O que acontece se tivermos
+mais de um hiperparâmetro?
+
+31
+00:01:28,343 --> 00:01:30,674
+Aqui só temos um,
+a profundidade.
+
+32
+00:01:31,069 --> 00:01:33,897
+E se estamos treinando uma
+máquina de vetores de suporte?
+
+33
+00:01:33,930 --> 00:01:36,659
+Em uma MVS, temos alguns
+hiperparâmetros como o Kernel,
+
+34
+00:01:36,692 --> 00:01:39,013
+que pode ser linear ou
+polinomial, por exemplo.
+
+35
+00:01:39,046 --> 00:01:42,530
+E também temos o parâmetro gama,
+que, se for pequeno, nos dá
+
+36
+00:01:42,563 --> 00:01:46,704
+soluções como essa e, se for grande,
+nos dá soluções como essa.
+
+37
+00:01:46,737 --> 00:01:50,561
+Como escolhemos a melhor
+combinação entre Kernel e gama?
+
+38
+00:01:52,456 --> 00:01:55,588
+De forma simples. Chama-se
+"grid search" e é literalmente isso,
+
+39
+00:01:55,621 --> 00:01:58,840
+criar uma tabela com todas as
+possibilidades e escolher a melhor.
+
+40
+00:01:58,873 --> 00:02:01,549
+As colunas são os Kernels
+diferentes que podemos usar,
+
+41
+00:02:01,582 --> 00:02:05,454
+linear e polinomial, e as linhas são
+os valores diferentes de gama.
+
+42
+00:02:05,487 --> 00:02:08,600
+Recomenda-se pegar alguns valores
+que crescem exponencialmente,
+
+43
+00:02:08,633 --> 00:02:12,959
+como 0,1; 1; 10;
+100; 1.000 etc.
+
+44
+00:02:12,993 --> 00:02:15,760
+Repetindo, usamos o conjunto
+de treinamento para treinar
+
+45
+00:02:15,793 --> 00:02:18,081
+vários modelos lineares
+e modelos polinomiais
+
+46
+00:02:18,114 --> 00:02:19,633
+com valores diferentes
+de gama.
+
+47
+00:02:19,666 --> 00:02:21,827
+Então usamos o conjunto
+de validação cruzada
+
+48
+00:02:21,860 --> 00:02:24,318
+para calcular o f1 score
+de todos os modelos,
+
+49
+00:02:24,351 --> 00:02:27,977
+e simplesmente escolhemos
+o que tiver o f1 score mais alto.
+
+50
+00:02:28,010 --> 00:02:31,360
+Finalmente, usamos
+o conjunto de testes para verificar
+
+51
+00:02:31,393 --> 00:02:34,117
+se o que fizemos ficou bom.
+

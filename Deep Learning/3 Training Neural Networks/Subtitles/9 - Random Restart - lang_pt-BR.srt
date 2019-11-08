@@ -1,0 +1,29 @@
+1
+00:00:00,334 --> 00:00:03,000
+Uma forma de solução é
+usar a reinício aleatório,
+
+2
+00:00:03,033 --> 00:00:04,901
+e isso é muito simples.
+
+3
+00:00:04,934 --> 00:00:07,868
+Começamos com alguns
+lugares aleatórios
+
+4
+00:00:07,901 --> 00:00:10,501
+e fazemos o gradiente
+descendente deles.
+
+5
+00:00:10,534 --> 00:00:14,000
+Isso aumenta a probabilidade
+de chegar ao mínimo global,
+
+6
+00:00:14,033 --> 00:00:16,801
+ou pelo menos
+ao mínimo local.
+

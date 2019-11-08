@@ -1,0 +1,163 @@
+1
+00:00:00,667 --> 00:00:04,801
+A melhor maneira de consertar
+é mudando a função de ativação.
+
+2
+00:00:04,834 --> 00:00:07,868
+Temos outra,
+a hiperbólica tangente,
+
+3
+00:00:07,901 --> 00:00:10,400
+que tem a seguinte fórmula:
+
+4
+00:00:10,434 --> 00:00:13,000
+e elevado a x
+menos e elevado a -x
+
+5
+00:00:13,033 --> 00:00:16,634
+dividido por e elevado a x
+mais e elevado a -x.
+
+6
+00:00:16,667 --> 00:00:18,501
+É parecida com a sigmoide,
+
+7
+00:00:18,534 --> 00:00:23,167
+mas, como o raio é entre -1 e 1,
+os derivativos são maiores.
+
+8
+00:00:23,200 --> 00:00:27,968
+Essa pequena diferença levou
+a grandes avanços nas redes neurais.
+
+9
+00:00:28,000 --> 00:00:32,000
+Outra função de ativação
+é a unidade linear retificada,
+
+10
+00:00:32,033 --> 00:00:33,534
+ou ReLu.
+
+11
+00:00:33,767 --> 00:00:35,834
+É uma função muito simples.
+
+12
+00:00:36,066 --> 00:00:39,267
+Só diz que, se o valor
+for positivo,
+
+13
+00:00:39,300 --> 00:00:41,234
+ela retorna o mesmo valor.
+
+14
+00:00:41,267 --> 00:00:44,033
+Se for negativo,
+ela retorna zero.
+
+15
+00:00:44,334 --> 00:00:48,667
+Outra maneira de ver isso
+é o máximo entre x e zero.
+
+16
+00:00:49,033 --> 00:00:50,834
+Essa função é muito usada
+
+17
+00:00:50,868 --> 00:00:53,901
+e aprimora o treinamento
+de forma significativa
+
+18
+00:00:53,934 --> 00:00:56,067
+sem sacrificar muito
+a precisão,
+
+19
+00:00:56,100 --> 00:00:59,934
+já que o derivativo é 1
+se o número for positivo.
+
+20
+00:00:59,968 --> 00:01:03,400
+É fascinante que uma função
+que mal quebra a linearidade
+
+21
+00:01:03,434 --> 00:01:06,567
+gere soluções
+não lineares complexas.
+
+22
+00:01:06,601 --> 00:01:10,200
+Com funções de ativação melhores,
+ao multiplicarmos os derivativos
+
+23
+00:01:10,234 --> 00:01:13,067
+para obter o derivativo
+de qualquer peso,
+
+24
+00:01:13,100 --> 00:01:16,400
+os produtos vão ser números
+um pouco mais altos,
+
+25
+00:01:16,434 --> 00:01:19,033
+aumentando o derivativo,
+
+26
+00:01:19,067 --> 00:01:21,801
+nos permitindo fazer
+o gradiente descendente.
+
+27
+00:01:21,834 --> 00:01:25,634
+Vamos representar a ReLu
+com a imagem da sua função.
+
+28
+00:01:25,667 --> 00:01:28,100
+Aqui temos uma percepção
+de multicamadas,
+
+29
+00:01:28,133 --> 00:01:30,901
+com várias ReLus
+de ativação.
+
+30
+00:01:30,934 --> 00:01:34,133
+A última unidade
+é uma sigmoide,
+
+31
+00:01:34,167 --> 00:01:38,767
+já que a saída final precisa
+ser uma probabilidade entre 0 e 1.
+
+32
+00:01:38,801 --> 00:01:41,334
+Se deixarmos
+a unidade final ser uma ReLu,
+
+33
+00:01:41,367 --> 00:01:45,467
+podemos ter modelos de regressão,
+o valor preditivo.
+
+34
+00:01:45,501 --> 00:01:49,267
+Vai ser útil na sessão
+da rede neural do Nanodegree.
+

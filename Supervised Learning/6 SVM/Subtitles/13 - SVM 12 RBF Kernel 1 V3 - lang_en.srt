@@ -1,0 +1,356 @@
+1
+00:00:00,000 --> 00:00:02,700
+In this section, we'll learn a different kernel called
+
+2
+00:00:02,700 --> 00:00:06,450
+the RBF or radial basis functions kernel.
+
+3
+00:00:06,450 --> 00:00:09,195
+So again, we have our points that we want to separate, and again,
+
+4
+00:00:09,195 --> 00:00:13,019
+there is an old line that will separate them. So here's an idea.
+
+5
+00:00:13,019 --> 00:00:17,469
+Let's draw this little mountain range over here which is pretty conveniently drawn.
+
+6
+00:00:17,469 --> 00:00:18,980
+Now, let's move every point to
+
+7
+00:00:18,980 --> 00:00:22,274
+its corresponding point in the mountain range. And what a coincidence.
+
+8
+00:00:22,274 --> 00:00:24,419
+The red points end up in highlands,
+
+9
+00:00:24,420 --> 00:00:26,815
+whereas the blue points end up in the valleys.
+
+10
+00:00:26,815 --> 00:00:29,586
+And now, we're again in a two dimensional land,
+
+11
+00:00:29,586 --> 00:00:31,175
+and the points are separable.
+
+12
+00:00:31,175 --> 00:00:33,384
+Here's a line that will cut them.
+
+13
+00:00:33,384 --> 00:00:38,079
+And what we do is we look at where the line intersects the mountain range,
+
+14
+00:00:38,079 --> 00:00:42,259
+we project everything down to the original line and now, we have our boundaries.
+
+15
+00:00:42,259 --> 00:00:44,274
+They're given by these vertical cuts.
+
+16
+00:00:44,274 --> 00:00:49,640
+Magic. Now, that mountain range was a bit suspicious, a little too convenient.
+
+17
+00:00:49,640 --> 00:00:53,070
+The question is, how do we build a mountain range that will tend to locate
+
+18
+00:00:53,070 --> 00:00:57,960
+the red points in highlands and the blue points in lowlands? Well, here's a technique.
+
+19
+00:00:57,960 --> 00:01:01,325
+Let's actually below a mountain on top of every point.
+
+20
+00:01:01,325 --> 00:01:04,605
+The technical term for these mountings is radial basis functions,
+
+21
+00:01:04,605 --> 00:01:06,780
+and we'll see their formulas later.
+
+22
+00:01:06,780 --> 00:01:08,739
+So, we built some functions that looked like this,
+
+23
+00:01:08,739 --> 00:01:11,349
+and now, let's consider combining these functions.
+
+24
+00:01:11,349 --> 00:01:16,765
+How would we do it to build a range that helps us separate the blue and the red points?
+
+25
+00:01:16,765 --> 00:01:18,599
+Here's an idea. Let's flip the middle one,
+
+26
+00:01:18,599 --> 00:01:21,794
+or multiply it by minus one, and now,
+
+27
+00:01:21,795 --> 00:01:23,579
+add the three of them, and by adding,
+
+28
+00:01:23,579 --> 00:01:25,500
+I literally mean the way you add functions,
+
+29
+00:01:25,500 --> 00:01:27,885
+so at every point, just add the three heights.
+
+30
+00:01:27,885 --> 00:01:30,045
+If we add them, we get the following function.
+
+31
+00:01:30,045 --> 00:01:35,025
+And now, we move the points up or down to the corresponding point in the mountain range.
+
+32
+00:01:35,025 --> 00:01:39,145
+After we do this, now we can easily draw a line that splits the points in two.
+
+33
+00:01:39,144 --> 00:01:40,829
+We proceed to draw this line.
+
+34
+00:01:40,829 --> 00:01:42,679
+Let's say at height 0.5.
+
+35
+00:01:42,680 --> 00:01:46,820
+This line will intersect the mountain range at these points.
+
+36
+00:01:46,819 --> 00:01:48,744
+So, when we project down to the line,
+
+37
+00:01:48,745 --> 00:01:51,530
+we get these cuts over here which are our model.
+
+38
+00:01:51,530 --> 00:01:55,805
+Notice that these cuts separate the blue points from the red points as we wanted.
+
+39
+00:01:55,805 --> 00:01:57,265
+Now, we can go even farther.
+
+40
+00:01:57,265 --> 00:02:00,415
+Before, we just added and subtracted these functions, but now,
+
+41
+00:02:00,415 --> 00:02:04,220
+we can actually multiply them by any constants that we want.
+
+42
+00:02:04,219 --> 00:02:05,439
+We can do, for example,
+
+43
+00:02:05,439 --> 00:02:11,754
+two times this one minus four times this one plus one times this one,
+
+44
+00:02:11,754 --> 00:02:15,579
+and let's say the sum is this.
+
+45
+00:02:15,580 --> 00:02:19,835
+And the line that cuts this is at height minus one.
+
+46
+00:02:19,835 --> 00:02:23,724
+Great. Now, we associate this model with the weights two,
+
+47
+00:02:23,724 --> 00:02:26,810
+minus four, one, and minus one.
+
+48
+00:02:26,810 --> 00:02:29,705
+And now, the question is how do we find this weight.
+
+49
+00:02:29,705 --> 00:02:33,755
+Well, here's a way to do it. Here are three mountings or functions.
+
+50
+00:02:33,754 --> 00:02:35,769
+One on top of each point.
+
+51
+00:02:35,770 --> 00:02:37,370
+Now, under each point,
+
+52
+00:02:37,370 --> 00:02:40,175
+let's record the value of the function at every point,
+
+53
+00:02:40,175 --> 00:02:43,505
+so literally, how tall is the mountain at that point?
+
+54
+00:02:43,504 --> 00:02:46,534
+For the first point, we have that the green mountain has a height one,
+
+55
+00:02:46,534 --> 00:02:49,840
+since we constructed the mountain precisely to peak at that point.
+
+56
+00:02:49,840 --> 00:02:51,733
+The other two heights that are small.
+
+57
+00:02:51,733 --> 00:02:54,640
+Since the yellow one, the brown mountains are pretty low at this point.
+
+58
+00:02:54,639 --> 00:02:57,794
+So let's say, there are 0.08 And 0.02.
+
+59
+00:02:57,794 --> 00:03:02,234
+Then we do the same thing with the second point and with the third point.
+
+60
+00:03:02,235 --> 00:03:05,515
+Notice that each point will have one value of one on their vector of heights,
+
+61
+00:03:05,514 --> 00:03:09,834
+since the height of the mountain corresponding to that point is one by construction.
+
+62
+00:03:09,835 --> 00:03:13,250
+In general, the other values will be small but we may have some close
+
+63
+00:03:13,250 --> 00:03:16,625
+by points that will give us high values. This doesn't matter.
+
+64
+00:03:16,625 --> 00:03:18,025
+Now the question is,
+
+65
+00:03:18,025 --> 00:03:20,995
+how do we find the right linear combination of green, yellow,
+
+66
+00:03:20,995 --> 00:03:25,430
+and brown functions which will be able to separate the blue and the red points?
+
+67
+00:03:25,430 --> 00:03:27,420
+Well, here's where the magic happens.
+
+68
+00:03:27,419 --> 00:03:30,039
+Let's take this three height vectors and just plot them in
+
+69
+00:03:30,039 --> 00:03:33,289
+a three dimensional space. Here they are.
+
+70
+00:03:33,289 --> 00:03:35,870
+Notice that they're very close to being the three basis vectors,
+
+71
+00:03:35,870 --> 00:03:39,569
+since they have a one in each of the coordinates and almost zero on the other two.
+
+72
+00:03:39,569 --> 00:03:40,959
+As I stated before,
+
+73
+00:03:40,960 --> 00:03:42,593
+this isn't always the case,
+
+74
+00:03:42,592 --> 00:03:46,634
+but this doesn't matter as long as it gives us a set of points that we can separate.
+
+75
+00:03:46,634 --> 00:03:49,030
+And since we have as many dimensions as points,
+
+76
+00:03:49,030 --> 00:03:51,219
+then this space is very highly dimensional,
+
+77
+00:03:51,219 --> 00:03:54,419
+so chances are we'll be able to separate our points well.
+
+78
+00:03:54,419 --> 00:03:58,014
+So, with some luck in the application of our known SVM algorithm,
+
+79
+00:03:58,014 --> 00:04:02,214
+let's say we're able to separate these red and blue points with this plane over here.
+
+80
+00:04:02,215 --> 00:04:08,965
+A plane with equation say, 2x - 4y + 1z = -1.
+
+81
+00:04:08,965 --> 00:04:10,689
+So, let's remember this equation.
+
+82
+00:04:10,689 --> 00:04:12,854
+This is going to be a useful equation.
+
+83
+00:04:12,854 --> 00:04:14,544
+And the reason it's useful is the following.
+
+84
+00:04:14,544 --> 00:04:17,500
+If we take the constants of the equation off the plane,
+
+85
+00:04:17,500 --> 00:04:20,095
+then they become the constants of our model,
+
+86
+00:04:20,095 --> 00:04:23,635
+namely our mountain range consist of finding two times this mountain
+
+87
+00:04:23,634 --> 00:04:28,154
+minus four times this other one plus one times this other one.
+
+88
+00:04:28,154 --> 00:04:31,204
+And the line that separates this points,
+
+89
+00:04:31,204 --> 00:04:35,000
+the line at height minus one for the constant term. Magic.
+

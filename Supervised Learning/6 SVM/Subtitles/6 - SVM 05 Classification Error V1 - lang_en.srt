@@ -1,0 +1,168 @@
+1
+00:00:00,000 --> 00:00:02,310
+Okay, let's do the same thing we did for
+
+2
+00:00:02,310 --> 00:00:06,894
+the perception algorithm except now we're going to do it with this SVM algorithm.
+
+3
+00:00:06,894 --> 00:00:08,830
+So, we start by looking at this set of points:
+
+4
+00:00:08,830 --> 00:00:11,289
+blue and red and the line that separates them.
+
+5
+00:00:11,289 --> 00:00:16,535
+And let's recall that the equation of the line is Wx + b = 0.
+
+6
+00:00:16,535 --> 00:00:18,420
+But now we don't just want the line.
+
+7
+00:00:18,420 --> 00:00:21,715
+We want the line with two extra lines that create the margin.
+
+8
+00:00:21,714 --> 00:00:28,545
+And the equations for these lines are going to be Wx + b = 1 and Wx + b = -1.
+
+9
+00:00:28,545 --> 00:00:32,789
+So, let's recall that we still want to punish the points that are incorrectly classified.
+
+10
+00:00:32,789 --> 00:00:36,089
+But now, we're going to think of this region as points that are incorrectly
+
+11
+00:00:36,090 --> 00:00:40,215
+classified since we don't want anything in between these two lines.
+
+12
+00:00:40,215 --> 00:00:44,131
+So, let's remember that and once again let's split the error in two.
+
+13
+00:00:44,131 --> 00:00:47,490
+So, we have the blue error except that now the blue error will
+
+14
+00:00:47,490 --> 00:00:51,615
+start from the bottom line because we want to punish the points in the boundary too.
+
+15
+00:00:51,615 --> 00:00:53,730
+And our new red error is going to start in
+
+16
+00:00:53,729 --> 00:00:57,149
+the top line because again we really want to punish the points in the boundary.
+
+17
+00:00:57,149 --> 00:00:59,747
+So, let's split them like we did before and as I said,
+
+18
+00:00:59,747 --> 00:01:03,089
+the blue error starts from the bottom line and the red error
+
+19
+00:01:03,090 --> 00:01:07,034
+starts from the top line and we're going to do something very similar.
+
+20
+00:01:07,034 --> 00:01:09,644
+We look at the values of Wx + b.
+
+21
+00:01:09,644 --> 00:01:13,325
+So, in the main line the value of Wx + b = 0.
+
+22
+00:01:13,325 --> 00:01:15,450
+And as we go up, it's going to be one, two, three, four, et cetera.
+
+23
+00:01:15,450 --> 00:01:18,164
+And as we go down,
+
+24
+00:01:18,164 --> 00:01:19,710
+it's going to be minus one, minus two,
+
+25
+00:01:19,709 --> 00:01:22,199
+minus three, et cetera..
+
+26
+00:01:22,200 --> 00:01:23,625
+So, in order to build the error,
+
+27
+00:01:23,625 --> 00:01:27,665
+we just take the absolute value of this and translated by one.
+
+28
+00:01:27,665 --> 00:01:30,720
+So the blue error is going to start at zero on
+
+29
+00:01:30,719 --> 00:01:36,484
+the bottom boundary line and then increase by one to get one, two, three, four,
+
+30
+00:01:36,484 --> 00:01:38,069
+et cetera.. And similarly,
+
+31
+00:01:38,069 --> 00:01:39,854
+the red error is going to be zero on
+
+32
+00:01:39,855 --> 00:01:43,758
+top boundary line and then increase linearly in the opposite direction one,
+
+33
+00:01:43,757 --> 00:01:45,789
+two, three, four, et cetera.
+
+34
+00:01:45,790 --> 00:01:48,810
+So, as we can see, there are three red points that give us
+
+35
+00:01:48,810 --> 00:01:52,320
+a blue error and notice that two of them are inside the margin,
+
+36
+00:01:52,319 --> 00:01:55,519
+and there are three blue points that give us an error.
+
+37
+00:01:55,519 --> 00:01:59,159
+These errors are given by the value on the side so it's 3.5 here,
+
+38
+00:01:59,159 --> 00:02:03,000
+1.5 here and 0.5 here.
+
+39
+00:02:03,000 --> 00:02:08,465
+And the errors on the right are two, three and 0.3.
+
+40
+00:02:08,465 --> 00:02:12,099
+So, what we do is we just add these values and obtain the error.
+
+41
+00:02:12,099 --> 00:02:16,644
+So, the error here would be 10.8 and in a nutshell,
+
+42
+00:02:16,645 --> 00:02:20,810
+that is a classification error for support vector machines.
+

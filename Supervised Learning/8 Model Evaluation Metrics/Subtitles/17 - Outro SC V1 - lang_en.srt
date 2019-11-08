@@ -1,0 +1,80 @@
+1
+00:00:00,000 --> 00:00:02,690
+So to summarize, this is how I see machine learning.
+
+2
+00:00:02,690 --> 00:00:05,810
+We have a problem to solve which is represented by this broken car over
+
+3
+00:00:05,809 --> 00:00:10,695
+here and we have some tools to fix it which are the algorithms of machine learning.
+
+4
+00:00:10,695 --> 00:00:13,140
+Finally, you have some measurement tools,
+
+5
+00:00:13,140 --> 00:00:16,160
+which we then use to measure each tool's performance.
+
+6
+00:00:16,160 --> 00:00:19,210
+Then you pick the best tool to fix your car.
+
+7
+00:00:19,210 --> 00:00:21,269
+To be more specific in machine learning you have
+
+8
+00:00:21,269 --> 00:00:24,204
+a problem which is some data you need to classify.
+
+9
+00:00:24,204 --> 00:00:27,079
+You also have a bunch of algorithms things like neural networks,
+
+10
+00:00:27,079 --> 00:00:30,820
+logistic regression, polynomial regression as VMs, decision trees,
+
+11
+00:00:30,820 --> 00:00:33,844
+random forests et cetera and we have a bunch of metrics,
+
+12
+00:00:33,844 --> 00:00:35,765
+things like model complexity graphs,
+
+13
+00:00:35,765 --> 00:00:38,954
+accuracy precision, recall, F1 score,
+
+14
+00:00:38,954 --> 00:00:40,759
+learning curves et cetera.
+
+15
+00:00:40,759 --> 00:00:44,649
+What you do, is you use these ones to test your models,
+
+16
+00:00:44,649 --> 00:00:49,519
+see how they're doing, pick the best one and that's what you use to model your data.
+
+17
+00:00:49,520 --> 00:00:51,405
+Then when you have a new point,
+
+18
+00:00:51,405 --> 00:00:54,465
+you can predict it's label based on that model.
+
+19
+00:00:54,465 --> 00:00:56,450
+That's it. That's how you test,
+
+20
+00:00:56,450 --> 00:00:58,540
+evaluate and validate models.
+

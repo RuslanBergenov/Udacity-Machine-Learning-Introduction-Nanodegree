@@ -1,0 +1,238 @@
+1
+00:00:00,280 --> 00:00:04,129
+Now we'll study metrics that we can
+use to evaluate regression models.
+
+2
+00:00:04,129 --> 00:00:06,960
+The first one is called
+mean absolute error.
+
+3
+00:00:06,960 --> 00:00:08,779
+In this example we have some points and
+
+4
+00:00:08,779 --> 00:00:11,489
+we have drawn a line
+that fits these points.
+
+5
+00:00:11,490 --> 00:00:13,830
+Now we would like to check
+how bad is this line?
+
+6
+00:00:13,830 --> 00:00:16,600
+A good way to do this is to
+just add the absolute values
+
+7
+00:00:16,600 --> 00:00:19,330
+of the distances from
+the points to the line.
+
+8
+00:00:19,329 --> 00:00:22,250
+Mean absolute error is very
+easy to calculate in Sklearn.
+
+9
+00:00:22,250 --> 00:00:26,314
+What we do in this example is to create
+a linear regression classifier object,
+
+10
+00:00:26,314 --> 00:00:27,910
+called classifier.
+
+11
+00:00:27,910 --> 00:00:30,750
+Then we use the function
+to fit the line.
+
+12
+00:00:30,750 --> 00:00:32,770
+Now we can refer to the points as y, and
+
+13
+00:00:32,770 --> 00:00:37,740
+to the predictions made by
+the model as classifier.predict(X).
+
+14
+00:00:37,740 --> 00:00:39,300
+We will call this guesses.
+
+15
+00:00:39,299 --> 00:00:43,250
+And finally, the mean absolute
+error is just calculated
+
+16
+00:00:43,250 --> 00:00:45,149
+with the mean absolute error function.
+
+17
+00:00:45,149 --> 00:00:46,670
+The mean absolute error has a problem,
+
+18
+00:00:46,670 --> 00:00:49,649
+which is that the absolute value
+function is not differentiable.
+
+19
+00:00:49,649 --> 00:00:53,170
+And this may not be good if we want to
+use methods such as grading dissent.
+
+20
+00:00:53,170 --> 00:00:57,870
+To solve this problem, we use
+the more common mean squared error.
+
+21
+00:00:57,869 --> 00:01:02,039
+For this metric, we add the squares of
+the distances between the points and
+
+22
+00:01:02,039 --> 00:01:03,320
+the line.
+
+23
+00:01:03,320 --> 00:01:06,500
+Mean square error is also very
+easy to calculate in Sklearn,
+
+24
+00:01:06,500 --> 00:01:09,560
+except now we will use
+the mean_squared_error function.
+
+25
+00:01:10,849 --> 00:01:14,500
+Now we will learn a very common
+regression metric called R2 Score.
+
+26
+00:01:14,500 --> 00:01:18,250
+R2 Score is based on comparing our
+model to the simplest possible model.
+
+27
+00:01:18,250 --> 00:01:19,359
+So let's think,
+
+28
+00:01:19,359 --> 00:01:23,789
+what is the simplest possible
+model that fits a bunch of points?
+
+29
+00:01:23,790 --> 00:01:27,920
+Well, a pretty simple one is just to
+take the average of all the values and
+
+30
+00:01:27,920 --> 00:01:29,930
+draw a horizontal line through them.
+
+31
+00:01:29,930 --> 00:01:32,410
+And then we can calculate the mean
+squared error for this model.
+
+32
+00:01:32,409 --> 00:01:34,689
+We would hope that
+the mean squared error for
+
+33
+00:01:34,689 --> 00:01:39,539
+the simple model is larger than
+the error for a linear regression model.
+
+34
+00:01:39,540 --> 00:01:41,859
+The question is, how much larger?
+
+35
+00:01:41,859 --> 00:01:43,780
+Well, we can divide the error for
+
+36
+00:01:43,780 --> 00:01:48,670
+the linear regression model by
+the error for the simple model, and
+
+37
+00:01:48,670 --> 00:01:52,689
+then subtract the result from 1,
+and we will call this the R2 score.
+
+38
+00:01:52,689 --> 00:01:57,319
+If the model is not very good, then
+the two errors should be similar and
+
+39
+00:01:57,319 --> 00:02:01,109
+this quantity here
+should be close to one.
+
+40
+00:02:01,109 --> 00:02:04,099
+So the whole R2 score
+should be close to 0.
+
+41
+00:02:04,099 --> 00:02:08,310
+If the model is good, then the mean
+squared error for the linear regression
+
+42
+00:02:08,310 --> 00:02:12,849
+model should be a lot smaller than the
+mean squared error for the simple model.
+
+43
+00:02:12,849 --> 00:02:15,719
+Therefore this ratio shift is small, and
+
+44
+00:02:15,719 --> 00:02:19,229
+then the R2 square should
+be very close to 1.
+
+45
+00:02:19,229 --> 00:02:22,869
+In conclusion, if the R2 score is
+close to 1, then the model is good.
+
+46
+00:02:22,870 --> 00:02:25,770
+And if it's close to zero,
+then the model is not much
+
+47
+00:02:25,770 --> 00:02:29,250
+better than just guessing the average
+of the values of the points.
+
+48
+00:02:29,250 --> 00:02:34,435
+R2 score is very simple to calculate
+in Sklearn with the R2 score function.
+
+49
+00:02:34,435 --> 00:02:37,699
+Here's a small example where we
+calculated the R2 score between
+
+50
+00:02:37,699 --> 00:02:40,799
+the true values in blue, and
+the predicted values in green.
+

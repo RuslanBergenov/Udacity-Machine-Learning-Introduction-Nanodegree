@@ -1,0 +1,190 @@
+1
+00:00:00,200 --> 00:00:03,660
+Now that we know what types of errors
+we can make when training a model,
+
+2
+00:00:03,660 --> 00:00:05,790
+in this section,
+we'll learn how to detect them.
+
+3
+00:00:05,790 --> 00:00:09,720
+So let's recall the types of errors
+learned in the last section.
+
+4
+00:00:09,720 --> 00:00:12,330
+Here we can see our data on
+the model which fits it properly,
+
+5
+00:00:12,330 --> 00:00:14,699
+which is a curve, or
+a polynomial of degree 2.
+
+6
+00:00:14,699 --> 00:00:17,179
+It seems to fit our data well,
+and it will generalize well.
+
+7
+00:00:18,179 --> 00:00:19,429
+Then there's the high bias,
+
+8
+00:00:19,429 --> 00:00:22,800
+or underfitting error,
+obtained when we oversimplify our model.
+
+9
+00:00:22,800 --> 00:00:26,039
+In this case, it's trying to fit a line,
+or a polynomial degree 1,
+
+10
+00:00:26,039 --> 00:00:27,399
+through our data.
+
+11
+00:00:27,399 --> 00:00:29,629
+This model won't fit our data well.
+
+12
+00:00:29,629 --> 00:00:30,910
+And then there's the high variance,
+
+13
+00:00:30,910 --> 00:00:34,320
+or overfitting error, obtained
+when we overcomplicate our model.
+
+14
+00:00:34,320 --> 00:00:38,270
+In this case, it's trying to fit a
+polynomial of degree 6 through our data.
+
+15
+00:00:38,270 --> 00:00:40,460
+This model will fit our data perfectly,
+but
+
+16
+00:00:40,460 --> 00:00:43,670
+it won't generalize well
+to the testing set.
+
+17
+00:00:43,670 --> 00:00:45,460
+So let's study the three models.
+
+18
+00:00:45,460 --> 00:00:49,640
+A linear model of degree 1,
+a quadratic model of degree 2, and
+
+19
+00:00:49,640 --> 00:00:51,530
+a polynomial model of degree 6.
+
+20
+00:00:51,530 --> 00:00:55,539
+Let's first split our data into
+training and testing sets.
+
+21
+00:00:55,539 --> 00:00:58,350
+So the set of points with a colored
+center are the training set, and
+
+22
+00:00:58,350 --> 00:01:01,560
+the set of points with the white
+center are the testing set.
+
+23
+00:01:01,560 --> 00:01:03,870
+The linear model gives
+us this line over here.
+
+24
+00:01:03,869 --> 00:01:08,459
+Now how are we doing in terms of
+the training set and the testing set?
+
+25
+00:01:08,459 --> 00:01:11,879
+Well, we count the number of training
+errors, and we count three of them.
+
+26
+00:01:11,879 --> 00:01:14,349
+So we conclude that
+the training error is three.
+
+27
+00:01:14,349 --> 00:01:17,439
+As for testing errors,
+we also have three.
+
+28
+00:01:17,439 --> 00:01:20,980
+So we conclude that the testing
+error is also three.
+
+29
+00:01:20,980 --> 00:01:24,790
+We graph the training and
+testing error in this graph over here.
+
+30
+00:01:24,790 --> 00:01:27,680
+Now let's repeat this process,
+but in the quadratic model.
+
+31
+00:01:27,680 --> 00:01:30,220
+This model gives us
+a parabola over here.
+
+32
+00:01:30,219 --> 00:01:31,959
+What is our training error?
+
+33
+00:01:31,959 --> 00:01:35,959
+It's one, because we've misclassified
+one of the training points.
+
+34
+00:01:35,959 --> 00:01:39,979
+The testing error is also one since
+we misclassified one testing point.
+
+35
+00:01:39,980 --> 00:01:44,630
+Thus, this model gave us a training
+error of one and a testing error of one.
+
+36
+00:01:44,629 --> 00:01:47,000
+We again plot them in the graph below.
+
+37
+00:01:47,000 --> 00:01:50,890
+Now we again repeat this process
+with the polynomial of degree six.
+
+38
+00:01:50,890 --> 00:01:52,180
+The model gives us this curve.
+
+39
+00:01:53,209 --> 00:01:54,890
+Now your turn to shine.
+
+40
+00:01:54,890 --> 00:01:57,510
+What are the training and
+testing errors for this model?
+

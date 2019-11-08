@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:03,803
+Vejamos. Temos três SPAMs
+e um contém "fácil",
+
+2
+00:00:03,853 --> 00:00:06,925
+o que significa que a probabilidade
+de um e-mail conter "fácil",
+
+3
+00:00:06,975 --> 00:00:09,946
+dado que é SPAM, é de 1/3.
+
+4
+00:00:10,550 --> 00:00:13,710
+Como dois dos três SPAMs
+contêm a palavra "grana",
+
+5
+00:00:13,760 --> 00:00:15,797
+a probabilidade de um e-mail
+conter "grana",
+
+6
+00:00:15,847 --> 00:00:18,425
+dado que é SPAM, é 2/3.
+
+7
+00:00:18,757 --> 00:00:20,912
+De forma similar,
+como há cinco e-mails legítimos
+
+8
+00:00:20,962 --> 00:00:23,323
+e só um deles
+contém a palavra "fácil",
+
+9
+00:00:23,373 --> 00:00:26,116
+a probabilidade de um e-mail
+conter a palavra "fácil",
+
+10
+00:00:26,166 --> 00:00:29,100
+considerando que seja legítimo,
+é 1/5.
+
+11
+00:00:29,150 --> 00:00:31,138
+E o mesmo
+para a palavra "grana".
+
+12
+00:00:31,188 --> 00:00:33,627
+A essência do aprendizado bayesiano
+é o seguinte:
+
+13
+00:00:33,677 --> 00:00:37,351
+saímos do que é sabido,
+que é a p de "fácil" dado SPAM
+
+14
+00:00:37,401 --> 00:00:39,880
+e o de "grana" dado SPAM,
+
+15
+00:00:39,930 --> 00:00:41,904
+para o que é inferido,
+
+16
+00:00:41,954 --> 00:00:46,275
+que é p de SPAM
+dado que contém "fácil",
+
+17
+00:00:46,325 --> 00:00:47,492
+1/2,
+
+18
+00:00:47,542 --> 00:00:50,227
+visto que há dois e-mails
+contendo a palavra "fácil"
+
+19
+00:00:50,277 --> 00:00:52,407
+e apenas um é SPAM,
+
+20
+00:00:52,858 --> 00:00:56,776
+e p de SPAM
+dado que contém "grana",
+
+21
+00:00:56,826 --> 00:01:01,085
+que é 2/3, visto que três e-mails
+contêm a palavra "grana"
+
+22
+00:01:01,135 --> 00:01:03,700
+e dois deles são SPAM.
+

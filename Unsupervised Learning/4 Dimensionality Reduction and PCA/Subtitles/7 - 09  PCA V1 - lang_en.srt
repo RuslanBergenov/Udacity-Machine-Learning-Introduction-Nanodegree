@@ -1,0 +1,440 @@
+1
+00:00:00,000 --> 00:00:03,765
+PCA is commonly used with high-dimensional data.
+
+2
+00:00:03,765 --> 00:00:06,845
+One type of high-dimensional data is images.
+
+3
+00:00:06,844 --> 00:00:11,814
+In this example, we'll look at a very common case using handwritten digit.
+
+4
+00:00:11,814 --> 00:00:17,434
+A classic example of image data is the MNIST dataset which was
+
+5
+00:00:17,434 --> 00:00:23,839
+open sourced in the late 1990s by researchers across Microsoft, Google and NYU.
+
+6
+00:00:23,839 --> 00:00:28,524
+I've linked more about this dataset in the information below, in the workbook.
+
+7
+00:00:28,524 --> 00:00:31,174
+To get started, let's import the libraries we'll need,
+
+8
+00:00:31,175 --> 00:00:34,130
+then it's important for us to read in the dataset.
+
+9
+00:00:34,130 --> 00:00:39,130
+In this case, we'll read in 42 thousand images which are in the training dataset.
+
+10
+00:00:39,130 --> 00:00:40,880
+The test dataset contains
+
+11
+00:00:40,880 --> 00:00:44,520
+an additional 28 thousand images that we won't work with quite yet,
+
+12
+00:00:44,520 --> 00:00:47,085
+then we could look at the header of the dataset.
+
+13
+00:00:47,085 --> 00:00:49,820
+We also might look at the description.
+
+14
+00:00:49,820 --> 00:00:56,280
+So in this case, we can see that there's a label column with the handwritten digits.
+
+15
+00:00:56,280 --> 00:01:00,760
+So, this is a image of a one this is an image of a zero,
+
+16
+00:01:00,759 --> 00:01:03,184
+an image of a one, an image of a four.
+
+17
+00:01:03,185 --> 00:01:05,504
+Then as you look through the sides,
+
+18
+00:01:05,504 --> 00:01:09,589
+there are values between zero and 255 to indicate
+
+19
+00:01:09,590 --> 00:01:14,600
+how much ink was in a particular pixel of the image and looking at the description,
+
+20
+00:01:14,599 --> 00:01:17,689
+it looks like there's some missing values in these last ones.
+
+21
+00:01:17,689 --> 00:01:20,504
+So, I'm just going to fill those with zero for now.
+
+22
+00:01:20,504 --> 00:01:23,524
+It looks like they're in some corner part of the pixels.
+
+23
+00:01:23,525 --> 00:01:25,190
+Given what we know about the data,
+
+24
+00:01:25,189 --> 00:01:29,079
+let's split the label off and put the images in their own matrix.
+
+25
+00:01:29,079 --> 00:01:31,459
+So here I've pulled off the label.
+
+26
+00:01:31,459 --> 00:01:35,524
+Now let's take a look at what the images look like with this little helper function.
+
+27
+00:01:35,525 --> 00:01:39,885
+You can get this helper function from the notebook pin below this video.
+
+28
+00:01:39,885 --> 00:01:42,170
+By passing in 100, I'm saying,
+
+29
+00:01:42,170 --> 00:01:44,644
+can you show me the first 100 images?
+
+30
+00:01:44,644 --> 00:01:46,219
+If we look at this,
+
+31
+00:01:46,219 --> 00:01:49,344
+there are some images that are really easy to see what values they are.
+
+32
+00:01:49,344 --> 00:01:50,885
+This looks like a one,
+
+33
+00:01:50,885 --> 00:01:54,505
+a zero, clearly an eight a nine.
+
+34
+00:01:54,504 --> 00:01:57,289
+But then there are other images that look like this,
+
+35
+00:01:57,290 --> 00:02:01,790
+what value might this be and what about this one here, what's this value?
+
+36
+00:02:01,790 --> 00:02:04,640
+There's another helper function that allow us to
+
+37
+00:02:04,640 --> 00:02:07,745
+look at the first 50 images of any type of number.
+
+38
+00:02:07,745 --> 00:02:10,250
+Again, you can grab this in the workbook below.
+
+39
+00:02:10,250 --> 00:02:12,379
+So using this function,
+
+40
+00:02:12,379 --> 00:02:15,590
+we can pass in the digit that we want to see and they will allow
+
+41
+00:02:15,590 --> 00:02:19,430
+us to take a look at the first 50 images of that particular digit.
+
+42
+00:02:19,430 --> 00:02:22,240
+So here, you can see the first 50 ones.
+
+43
+00:02:22,240 --> 00:02:26,775
+That's what this digit that we saw earlier actually is and look at this one here.
+
+44
+00:02:26,775 --> 00:02:28,969
+Some of these look like they'll be pretty easy to
+
+45
+00:02:28,969 --> 00:02:31,074
+predict using a machine-learning algorithm.
+
+46
+00:02:31,074 --> 00:02:34,219
+But others of them are certainly more difficult.
+
+47
+00:02:34,219 --> 00:02:36,634
+To take a first pass at predicting these.
+
+48
+00:02:36,634 --> 00:02:38,989
+There's another helper function that I wrote that'll
+
+49
+00:02:38,990 --> 00:02:41,920
+allow you to pass these to a random forest algorithm.
+
+50
+00:02:41,919 --> 00:02:44,569
+Using the random_forest_classifier function,
+
+51
+00:02:44,569 --> 00:02:46,090
+that's in the notebook below.
+
+52
+00:02:46,090 --> 00:02:50,189
+You can see that it's splitting your dataset into training and test sets.
+
+53
+00:02:50,189 --> 00:02:53,859
+Instantiating your RandomForestClassifier, fitting it to
+
+54
+00:02:53,860 --> 00:02:57,735
+the training dataset and then predicting on the test dataset.
+
+55
+00:02:57,735 --> 00:03:01,295
+Then it's building a confusion_matrix of the following results.
+
+56
+00:03:01,294 --> 00:03:03,219
+Let's take a look at how well it does.
+
+57
+00:03:03,219 --> 00:03:06,080
+So, anything along the diagonal is basically
+
+58
+00:03:06,080 --> 00:03:09,705
+something where we predicted the same value that was actually true,
+
+59
+00:03:09,705 --> 00:03:12,215
+and any of these values in the off-diagonal,
+
+60
+00:03:12,215 --> 00:03:15,205
+is something where we predicted a value that wasn't true.
+
+61
+00:03:15,205 --> 00:03:18,210
+You can see that almost 94% of the time,
+
+62
+00:03:18,210 --> 00:03:22,795
+we can predict the value correctly using all of the pixels in those images.
+
+63
+00:03:22,794 --> 00:03:26,269
+Here you can see that the dark blue indicates there are
+
+64
+00:03:26,270 --> 00:03:30,425
+very few images that were mislabeled on either side of the off-diagonal.
+
+65
+00:03:30,425 --> 00:03:33,740
+These elements along the diagonal indicate that there are
+
+66
+00:03:33,740 --> 00:03:37,830
+really high numbers associated with the values being correctly predicted.
+
+67
+00:03:37,830 --> 00:03:41,650
+So we can see that we can predict really well by using all the pixels,
+
+68
+00:03:41,650 --> 00:03:45,670
+but I wonder if we can use principal component analysis to create
+
+69
+00:03:45,669 --> 00:03:50,464
+a fewer number of features and still be able to predict with the same level of accuracy.
+
+70
+00:03:50,465 --> 00:03:55,375
+To do this, there's an additional helper function that performs PCA with your dataset.
+
+71
+00:03:55,375 --> 00:04:01,150
+So the do_pca function takes certain number of components and your dataset,
+
+72
+00:04:01,150 --> 00:04:03,580
+it fits the PCA and then gives you
+
+73
+00:04:03,580 --> 00:04:06,680
+back the X Matrix with that reduced number of features,
+
+74
+00:04:06,680 --> 00:04:09,230
+as well as the PCA model that you fit.
+
+75
+00:04:09,229 --> 00:04:13,674
+To begin with, let's try creating just two additional features.
+
+76
+00:04:13,675 --> 00:04:18,280
+So I'll pass in the two features as well as the X Matrix,
+
+77
+00:04:18,279 --> 00:04:23,904
+which is all of our pixels and then it'll give me back a PCA object.
+
+78
+00:04:23,904 --> 00:04:30,284
+So I'll call this just pca and it'll give me an X Matrix associated with RPCA.
+
+79
+00:04:30,285 --> 00:04:33,655
+So using the do_pca function,
+
+80
+00:04:33,654 --> 00:04:36,549
+you can see that it takes a number of components,
+
+81
+00:04:36,550 --> 00:04:39,375
+as well as the input data,
+
+82
+00:04:39,375 --> 00:04:43,550
+the features of your dataset and then what it returns is the PCA object
+
+83
+00:04:43,550 --> 00:04:48,100
+itself as well as a DataFrame of the transformed features.
+
+84
+00:04:48,100 --> 00:04:53,490
+So, using this, we can do give me back the pca and
+
+85
+00:04:53,490 --> 00:04:59,280
+the X_pca components and perform PCA on.
+
+86
+00:04:59,279 --> 00:05:04,839
+Let's say we want two components back and perform it on the X Matrix of our dataset.
+
+87
+00:05:04,839 --> 00:05:07,304
+So, the DataFrame that we get back,
+
+88
+00:05:07,305 --> 00:05:12,230
+if we look at the X_pca component is the same number of rows.
+
+89
+00:05:12,230 --> 00:05:14,390
+But you can see that it only has two columns,
+
+90
+00:05:14,389 --> 00:05:19,024
+which is a lot different than the original which had the same number of rows
+
+91
+00:05:19,024 --> 00:05:24,620
+but 784 pixels in the DataFrame for each image.
+
+92
+00:05:24,620 --> 00:05:31,670
+So let's try again using the same machine-learning algorithm we did up here,
+
+93
+00:05:31,670 --> 00:05:33,160
+the random forest classifier,
+
+94
+00:05:33,160 --> 00:05:37,895
+we can see how well we're able to predict the digits with only two of the features.
+
+95
+00:05:37,894 --> 00:05:44,189
+Let's try this. So, the X that we'll use is the X_pca and then we'll predict y.
+
+96
+00:05:44,189 --> 00:05:46,644
+Cool, so you can see that it performs
+
+97
+00:05:46,644 --> 00:05:51,279
+much worse than the previous example where we only get
+
+98
+00:05:51,279 --> 00:05:58,309
+35% of the digits correctly classified and via the matrix you can see down here.
+
+99
+00:05:58,310 --> 00:06:01,240
+Really, the only thing we're predicting very well at all is
+
+100
+00:06:01,240 --> 00:06:05,685
+the ones and everything else is pretty bad, sevens are okay.
+
+101
+00:06:05,685 --> 00:06:08,225
+But we're not getting a lot of features from this.
+
+102
+00:06:08,225 --> 00:06:13,680
+In order to better see how the components are separating out the handwritten digits,
+
+103
+00:06:13,680 --> 00:06:16,439
+let's use the plot_components function.
+
+104
+00:06:16,439 --> 00:06:20,725
+So, an ideal case would be if we plotted all the values,
+
+105
+00:06:20,725 --> 00:06:23,275
+but then our plot would be pretty overwhelming.
+
+106
+00:06:23,274 --> 00:06:30,019
+So what I'm gonna do is just take the first 100 and you can see here,
+
+107
+00:06:30,019 --> 00:06:32,889
+that it does a pretty good job of separating out those zeros,
+
+108
+00:06:32,889 --> 00:06:34,949
+as well as separating out the sevens.
+
+109
+00:06:34,949 --> 00:06:37,314
+But everything else is kind of clumped together,
+
+110
+00:06:37,314 --> 00:06:42,199
+this is an indication of exactly what we saw in this confusion matrix up here.
+

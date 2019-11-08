@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:02,924
+Well, consider this. If you're in the wrong area,
+
+2
+00:00:02,924 --> 00:00:05,115
+you would like the line to go over you,
+
+3
+00:00:05,115 --> 00:00:06,509
+in order to be in the right area.
+
+4
+00:00:06,509 --> 00:00:08,929
+Thus, the points just come closer!
+
+5
+00:00:08,929 --> 00:00:12,000
+So the line can move towards it and eventually classify it correctly.
+

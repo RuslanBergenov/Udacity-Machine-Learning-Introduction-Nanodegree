@@ -1,0 +1,132 @@
+1
+00:00:00,000 --> 00:00:03,060
+So here's something very interesting about perceptrons and it's that
+
+2
+00:00:03,060 --> 00:00:06,490
+some logical operators can be represented as perceptrons.
+
+3
+00:00:06,490 --> 00:00:11,250
+Here, for example, we have the AND operator and how does that work?
+
+4
+00:00:11,250 --> 00:00:15,554
+The AND operator takes two inputs and it returns an output.
+
+5
+00:00:15,554 --> 00:00:18,448
+The inputs can be true or false but the output is
+
+6
+00:00:18,449 --> 00:00:21,835
+only true if both of the inputs are true.
+
+7
+00:00:21,835 --> 00:00:26,219
+So for instance, if the inputs are true and true then the output is true.
+
+8
+00:00:26,219 --> 00:00:31,065
+If the inputs are true and false then the output is false.
+
+9
+00:00:31,065 --> 00:00:36,564
+If the inputs are false and true then the output is false.
+
+10
+00:00:36,564 --> 00:00:42,090
+And finally, if the inputs are false and false then the output is false.
+
+11
+00:00:42,090 --> 00:00:44,134
+Now, how do we turn this into a perceptron?
+
+12
+00:00:44,134 --> 00:00:48,420
+Well, the first step is to turn this table of true/false into a table of zeros and
+
+13
+00:00:48,420 --> 00:00:54,395
+ones where the one corresponds to true and the zero corresponds to false.
+
+14
+00:00:54,395 --> 00:00:58,045
+And now we draw this perceptron over here which works just as before.
+
+15
+00:00:58,045 --> 00:01:01,259
+It has a line defined by weights and a bias and it has a positive area
+
+16
+00:01:01,259 --> 00:01:05,203
+which is colored blue and a negative area which is colored red.
+
+17
+00:01:05,203 --> 00:01:07,184
+And what this perceptron is going to do is it will
+
+18
+00:01:07,185 --> 00:01:09,129
+plot each point and if the point falls in
+
+19
+00:01:09,129 --> 00:01:10,620
+the positive area then it returns a
+
+20
+00:01:10,620 --> 00:01:14,599
+one and if it falls in the negative area then it returns a zero.
+
+21
+00:01:14,599 --> 00:01:17,650
+So let's try it. The one one gets plotted in
+
+22
+00:01:17,650 --> 00:01:21,390
+the positive area so the perceptron returns a one.
+
+23
+00:01:21,390 --> 00:01:27,465
+The one zero gets plotted in the negative area so the perceptron returns a zero.
+
+24
+00:01:27,465 --> 00:01:34,319
+The zero one gets plotted in the negative area so the perceptron returns a zero.
+
+25
+00:01:34,319 --> 00:01:37,030
+And finally, the zero zero also gets plotted
+
+26
+00:01:37,030 --> 00:01:41,730
+in the negative area so the perceptron returns a zero.
+
+27
+00:01:41,730 --> 00:01:44,495
+Other logical operators can also be turned into perceptrons.
+
+28
+00:01:44,495 --> 00:01:46,750
+For example, here is the OR operator which
+
+29
+00:01:46,750 --> 00:01:50,280
+returns true if any of its two inputs are true.
+
+30
+00:01:50,280 --> 00:01:54,608
+That gets turned to this table which gets turned into this perceptron which is very
+
+31
+00:01:54,608 --> 00:01:59,828
+similar as the one before except the line has different weights and a different bias.
+
+32
+00:01:59,828 --> 00:02:03,154
+What are the weights and bias for the AND and the OR perceptron?
+
+33
+00:02:03,155 --> 00:02:06,000
+You'll have the chance to play with them in the quiz below.
+

@@ -1,0 +1,98 @@
+1
+00:00:00,979 --> 00:00:04,362
+CASOS DE USO DO K-MEANS
+
+2
+00:00:05,365 --> 00:00:07,819
+Um dos algoritmos
+de agrupamento mais populares
+
+3
+00:00:07,852 --> 00:00:11,745
+no aprendizado de máquina
+é o algoritmo k-means.
+
+4
+00:00:11,778 --> 00:00:16,562
+Este algoritmo é usado para agrupar
+livros e artigos semelhantes,
+
+5
+00:00:16,595 --> 00:00:20,842
+o que ajuda a identificar
+autores anônimos.
+
+6
+00:00:20,875 --> 00:00:24,498
+Ele também é usado para agrupar
+filmes e músicas semelhantes
+
+7
+00:00:24,531 --> 00:00:28,646
+com o objetivo de recomendar novos
+itens na Netflix ou no Spotify.
+
+8
+00:00:29,202 --> 00:00:31,769
+Outro caso comum
+de uso do k-means
+
+9
+00:00:31,802 --> 00:00:35,381
+é agrupar o comportamento
+de clientes para entender melhor
+
+10
+00:00:35,414 --> 00:00:37,514
+grupos de compradores
+semelhantes,
+
+11
+00:00:37,547 --> 00:00:41,050
+identificando a melhor abordagem
+para recomendar novos itens
+
+12
+00:00:41,083 --> 00:00:43,106
+baseando-se
+nos hábitos de compra deles.
+
+13
+00:00:43,514 --> 00:00:45,786
+O uso do k-means para agrupar
+clientes semelhantes
+
+14
+00:00:45,819 --> 00:00:48,610
+é feito por plataformas
+de publicidade desde o Google
+
+15
+00:00:48,643 --> 00:00:50,978
+ao Facebook e à Amazon.
+
+16
+00:00:51,011 --> 00:00:54,664
+Talvez, um dia, ele seja usado
+no âmbito educacional,
+
+17
+00:00:54,697 --> 00:00:57,063
+em que desenvolveríamos
+estratégias de aprendizagem
+
+18
+00:00:57,096 --> 00:01:00,225
+baseadas no agrupamento
+de diferentes tipos de aprendizes.
+
+19
+00:01:00,258 --> 00:01:03,889
+Dito isso, vamos analisar
+como o k-means funciona
+
+20
+00:01:03,922 --> 00:01:05,769
+e aplicá-lo em um conjunto
+de dados.
+

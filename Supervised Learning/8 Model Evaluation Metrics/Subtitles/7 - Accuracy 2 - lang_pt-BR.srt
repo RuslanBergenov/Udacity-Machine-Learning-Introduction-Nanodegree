@@ -1,0 +1,38 @@
+1
+00:00:00,000 --> 00:00:03,100
+A precisão é a proporção
+entre os pontos classificados
+
+2
+00:00:03,133 --> 00:00:06,100
+corretamente
+e o total de pontos.
+
+3
+00:00:06,133 --> 00:00:09,133
+Vemos seis pontos
+classificados como positivos
+
+4
+00:00:09,167 --> 00:00:11,434
+e cinco como negativos.
+
+5
+00:00:11,467 --> 00:00:14,467
+Temos 11 pontos
+classificados corretamente.
+
+6
+00:00:14,501 --> 00:00:17,434
+Como há 14 pontos no total,
+
+7
+00:00:17,467 --> 00:00:22,200
+nós concluímos que a resposta
+é igual a 11 dividido por 14,
+
+8
+00:00:22,234 --> 00:00:25,400
+que fornece
+o valor de 78.57%.
+

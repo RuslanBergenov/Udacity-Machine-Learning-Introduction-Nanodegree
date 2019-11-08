@@ -1,0 +1,422 @@
+1
+00:00:00,333 --> 00:00:02,767
+Agora vamos aprender
+um Kernel diferente
+
+2
+00:00:02,800 --> 00:00:06,500
+chamado Kernel RBF,
+ou função de base radial.
+
+3
+00:00:06,533 --> 00:00:09,000
+Temos os pontos
+que queremos separar
+
+4
+00:00:09,033 --> 00:00:11,933
+e nenhuma linha
+que os separe.
+
+5
+00:00:11,967 --> 00:00:14,700
+Então eis uma ideia:
+vamos desenhar uma cordilheira
+
+6
+00:00:14,733 --> 00:00:17,367
+de forma conveniente.
+
+7
+00:00:17,400 --> 00:00:21,367
+Vamos levar todos os pontos
+para seus lugares correspondentes.
+
+8
+00:00:21,400 --> 00:00:22,700
+Que coincidência!
+
+9
+00:00:22,733 --> 00:00:24,800
+Os pontos vermelhos
+estão nos topos
+
+10
+00:00:24,833 --> 00:00:27,367
+e os pontos azuis
+estão nos vales.
+
+11
+00:00:27,400 --> 00:00:31,567
+Estamos num plano bidimensional
+e os pontos são separáveis.
+
+12
+00:00:31,600 --> 00:00:34,067
+Aqui está a linha
+que os recorta.
+
+13
+00:00:34,100 --> 00:00:38,133
+Vamos ver onde a linha cruza
+a cordilheira,
+
+14
+00:00:38,167 --> 00:00:41,100
+projetamos de volta
+para a linha original
+
+15
+00:00:41,133 --> 00:00:44,478
+e temos nossos limites,
+que são os recortes verticais.
+
+16
+00:00:44,511 --> 00:00:45,590
+É mágica!
+
+17
+00:00:45,767 --> 00:00:49,633
+Essa cordilheira
+era conveniente demais.
+
+18
+00:00:49,667 --> 00:00:52,033
+Como criamos uma cordilheira
+
+19
+00:00:52,067 --> 00:00:54,567
+que deixe os pontos vermelhos
+no topo
+
+20
+00:00:54,600 --> 00:00:56,915
+e os pontos azuis no fundo?
+
+21
+00:00:56,948 --> 00:00:58,100
+Esta é a técnica.
+
+22
+00:00:58,133 --> 00:01:01,400
+Vamos criar uma montanha
+em cima de cada ponto.
+
+23
+00:01:01,433 --> 00:01:04,900
+O termo técnico dessas montanhas
+é função de base radial.
+
+24
+00:01:04,933 --> 00:01:06,967
+Vamos ver as fórmulas
+depois.
+
+25
+00:01:07,000 --> 00:01:11,633
+Criamos essas funções,
+agora vamos uni-las.
+
+26
+00:01:11,667 --> 00:01:13,833
+Como vamos criar
+uma cordilheira
+
+27
+00:01:13,867 --> 00:01:16,675
+que separe os pontos azuis
+dos vermelhos?
+
+28
+00:01:16,708 --> 00:01:21,167
+Tenho uma ideia. Vamos inverter
+a do meio, ou multiplicar por -1.
+
+29
+00:01:21,200 --> 00:01:22,850
+Agora vamos somar as três.
+
+30
+00:01:22,883 --> 00:01:25,636
+Estou me referindo ao modo
+como somamos funções,
+
+31
+00:01:25,669 --> 00:01:28,200
+então é só somar as alturas
+de cada ponto.
+
+32
+00:01:28,233 --> 00:01:30,233
+Temos esta função
+
+33
+00:01:30,267 --> 00:01:35,233
+e podemos levar os pontos
+para os lugares correspondentes.
+
+34
+00:01:35,500 --> 00:01:39,633
+Agora podemos desenhar a linha
+que separa os pontos.
+
+35
+00:01:39,667 --> 00:01:43,067
+Vamos desenhar
+na altura 0,5.
+
+36
+00:01:43,100 --> 00:01:46,833
+A linha cruza a cordilheira
+nestes pontos.
+
+37
+00:01:46,867 --> 00:01:48,814
+Quando projetamos na linha,
+
+38
+00:01:48,847 --> 00:01:51,867
+temos estes recortes,
+que são o modelo.
+
+39
+00:01:51,900 --> 00:01:55,800
+Os recortes separam
+os pontos azuis dos vermelhos.
+
+40
+00:01:55,833 --> 00:01:57,633
+Podemos ir além.
+
+41
+00:01:57,667 --> 00:02:00,200
+Antes só somamos e subtraímos
+as funções,
+
+42
+00:02:00,233 --> 00:02:04,367
+mas podemos multiplicar
+por qualquer constante.
+
+43
+00:02:04,400 --> 00:02:09,033
+Podemos fazer 2 vezes esta
+menos 4 vezes esta
+
+44
+00:02:09,700 --> 00:02:12,167
+mais 1 vez esta.
+
+45
+00:02:12,200 --> 00:02:15,100
+Vamos supor
+que a soma seja esta.
+
+46
+00:02:16,900 --> 00:02:21,467
+A linha que recorta
+está na altura -1. Ótimo.
+
+47
+00:02:21,500 --> 00:02:26,633
+Agora associamos o modelo
+com os pesos 2, -4, 1 e -1.
+
+48
+00:02:26,667 --> 00:02:30,076
+Agora a pergunta é:
+como encontramos esses pesos?
+
+49
+00:02:30,109 --> 00:02:31,400
+Vou mostrar.
+
+50
+00:02:31,600 --> 00:02:34,067
+Aqui estão as três montanhas
+ou funções,
+
+51
+00:02:34,100 --> 00:02:36,300
+uma acima de cada ponto.
+
+52
+00:02:36,333 --> 00:02:40,400
+Embaixo de cada ponto,
+vamos registrar o valor da função.
+
+53
+00:02:40,433 --> 00:02:43,933
+Qual é a altura de cada montanha
+no ponto?
+
+54
+00:02:43,967 --> 00:02:46,967
+No 1º ponto temos
+a montanha verde na altura 1,
+
+55
+00:02:47,000 --> 00:02:50,567
+já que criamos a montanha
+com esse pico.
+
+56
+00:02:50,600 --> 00:02:54,900
+As alturas das montanhas
+amarela e marrom são baixas.
+
+57
+00:02:54,933 --> 00:02:58,133
+Vamos supor
+que sejam 0,08 e 0,02.
+
+58
+00:02:58,167 --> 00:03:02,300
+Fazemos o mesmo com o 2º ponto
+e com o 3º ponto.
+
+59
+00:03:02,333 --> 00:03:05,667
+Cada ponto tem um valor 1
+no vetor de altura,
+
+60
+00:03:05,700 --> 00:03:10,200
+já que a altura da montanha
+correspondente ao ponto é 1.
+
+61
+00:03:10,233 --> 00:03:12,040
+No geral,
+os outros valores serão baixos,
+
+62
+00:03:12,073 --> 00:03:15,900
+mas temos pontos próximos
+com valores altos.
+
+63
+00:03:15,933 --> 00:03:17,367
+Mas não importa.
+
+64
+00:03:17,400 --> 00:03:20,333
+Então como achamos
+a combinação linear certa
+
+65
+00:03:20,367 --> 00:03:22,767
+das funções verde,
+amarela e marrom
+
+66
+00:03:22,800 --> 00:03:25,767
+que separe os pontos
+azuis dos vermelhos?
+
+67
+00:03:25,800 --> 00:03:27,633
+É aqui que a magia acontece.
+
+68
+00:03:27,667 --> 00:03:29,700
+Vamos colocar
+os vetores de altura
+
+69
+00:03:29,733 --> 00:03:32,074
+num espaço tridimensional.
+
+70
+00:03:32,107 --> 00:03:33,259
+Aqui estão.
+
+71
+00:03:33,292 --> 00:03:36,133
+Eles estão próximos de ser
+os vetores de base,
+
+72
+00:03:36,167 --> 00:03:40,100
+já que têm uma coordenada de 1
+e duas de quase zero.
+
+73
+00:03:40,133 --> 00:03:42,767
+Como eu disse antes,
+não é sempre o caso,
+
+74
+00:03:42,800 --> 00:03:47,033
+mas o que importa é ter
+um conjunto de pontos separáveis.
+
+75
+00:03:47,067 --> 00:03:49,533
+Como temos dimensões
+e pontos iguais,
+
+76
+00:03:49,567 --> 00:03:51,433
+o espaço
+tem uma dimensão alta,
+
+77
+00:03:51,467 --> 00:03:54,567
+então vamos separar bem
+os pontos.
+
+78
+00:03:54,600 --> 00:03:58,533
+Com sorte na aplicação
+do algoritmo MVS que conhecemos,
+
+79
+00:03:58,567 --> 00:04:02,533
+vamos separar os pontos
+com este plano.
+
+80
+00:04:02,567 --> 00:04:08,433
+O plano tem a equação
+2x-4y+1z=-1.
+
+81
+00:04:08,967 --> 00:04:13,033
+Vamos decorar essa equação.
+Vai ser útil.
+
+82
+00:04:13,067 --> 00:04:14,550
+A razão para isso é que,
+
+83
+00:04:14,583 --> 00:04:17,700
+se pegarmos as constantes
+da equação do plano,
+
+84
+00:04:17,733 --> 00:04:20,467
+elas se tornam as constantes
+do nosso modelo.
+
+85
+00:04:20,500 --> 00:04:23,833
+A cordilheira
+é 2 vezes esta montanha
+
+86
+00:04:23,867 --> 00:04:28,000
+menos 4 vezes esta outra
+mais 1 vez esta aqui.
+
+87
+00:04:28,667 --> 00:04:31,767
+A linha que separa
+esses pontos
+
+88
+00:04:31,800 --> 00:04:35,033
+é a linha na altura -1
+do termo constante. Mágica!
+

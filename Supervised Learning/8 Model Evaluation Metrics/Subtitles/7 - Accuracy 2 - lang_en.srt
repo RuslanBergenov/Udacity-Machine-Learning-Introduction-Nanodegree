@@ -1,0 +1,32 @@
+1
+00:00:00,000 --> 00:00:02,370
+Well, let's remember that accuracy is a ratio between
+
+2
+00:00:02,370 --> 00:00:06,340
+the correctly classified points and the total number of points.
+
+3
+00:00:06,340 --> 00:00:09,030
+We notice that there are six points correctly classified as
+
+4
+00:00:09,030 --> 00:00:12,310
+positive and five correctly classified as negative.
+
+5
+00:00:12,310 --> 00:00:15,420
+These add to 11 correctly classified points.
+
+6
+00:00:15,420 --> 00:00:18,385
+Since the total number of points is 14,
+
+7
+00:00:18,385 --> 00:00:22,815
+we conclude that the answer is equal to 11 divided by 14,
+
+8
+00:00:22,815 --> 00:00:26,140
+which gives an answer of 78.57
+

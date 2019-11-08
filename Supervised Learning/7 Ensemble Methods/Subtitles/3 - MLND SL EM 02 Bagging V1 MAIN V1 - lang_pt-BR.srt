@@ -1,0 +1,209 @@
+1
+00:00:00,050 --> 00:00:01,324
+Começamos com o Bagging.
+
+2
+00:00:01,374 --> 00:00:04,462
+Eis os nossos dados em forma
+de pontos vermelhos e azuis.
+
+3
+00:00:04,512 --> 00:00:07,097
+Para simplificar,
+diremos que os aprendizes fracos
+
+4
+00:00:07,147 --> 00:00:09,073
+serão o aprendiz
+mais simples possível:
+
+5
+00:00:09,123 --> 00:00:11,667
+uma árvore de decisão
+de um nó só.
+
+6
+00:00:11,717 --> 00:00:14,630
+Todas são ou linhas horizontais,
+ou verticais
+
+7
+00:00:14,680 --> 00:00:16,715
+que dizem:
+"Deste lado, tudo é positivo,
+
+8
+00:00:16,765 --> 00:00:18,782
+daquele é negativo."
+
+9
+00:00:18,832 --> 00:00:21,327
+Voltando aos dados,
+façamos o seguinte.
+
+10
+00:00:21,377 --> 00:00:23,404
+Como nossos dados
+podem ser muitos,
+
+11
+00:00:23,454 --> 00:00:26,004
+em geral, não queremos
+treinar muitos modelos
+
+12
+00:00:26,054 --> 00:00:27,380
+com o mesmo conjunto.
+
+13
+00:00:27,430 --> 00:00:29,499
+Isso seria muito caro.
+
+14
+00:00:29,549 --> 00:00:32,057
+Em vez disso,
+usaremos subconjuntos dele
+
+15
+00:00:32,107 --> 00:00:35,787
+e treinaremos um aprendiz fraco
+em cada subconjunto.
+
+16
+00:00:35,837 --> 00:00:39,014
+Depois vemos
+como combinar esses aprendizes.
+
+17
+00:00:39,064 --> 00:00:41,156
+Aqui está
+o primeiro subconjunto de dados,
+
+18
+00:00:41,206 --> 00:00:44,323
+e o primeiro aprendiz
+é este aqui.
+
+19
+00:00:44,373 --> 00:00:46,221
+Nós nos lembraremos dele.
+
+20
+00:00:46,271 --> 00:00:48,373
+Aqui está
+nosso segundo subconjunto
+
+21
+00:00:48,423 --> 00:00:49,915
+e nosso segundo aprendiz.
+
+22
+00:00:49,965 --> 00:00:52,824
+Se parece que estou dando sorte
+com meus dados e aprendizes,
+
+23
+00:00:52,874 --> 00:00:53,889
+estou, sim.
+
+24
+00:00:53,939 --> 00:00:55,624
+Esses aprendizes
+podem ser péssimos,
+
+25
+00:00:55,674 --> 00:00:57,006
+mas, com dados abundantes,
+
+26
+00:00:57,056 --> 00:00:58,596
+escolher
+um subconjunto aleatório
+
+27
+00:00:58,646 --> 00:01:00,902
+normalmente nos dá
+uma boa intuição sobre os dados.
+
+28
+00:01:00,952 --> 00:01:03,079
+Fora que agiliza o processo.
+
+29
+00:01:03,129 --> 00:01:06,507
+Por fim, nosso terceiro subconjunto
+e nosso terceiro aprendiz.
+
+30
+00:01:06,557 --> 00:01:09,041
+Perceba que nunca particiono
+os dados.
+
+31
+00:01:09,091 --> 00:01:12,599
+Temos toda a liberdade
+de repetir pontos nos subconjuntos,
+
+32
+00:01:12,649 --> 00:01:15,422
+e até a ignorar alguns pontos.
+
+33
+00:01:15,472 --> 00:01:19,178
+A cada passo,
+escolhemos um subconjunto aleatório.
+
+34
+00:01:19,228 --> 00:01:21,340
+E agora temos aprendizes
+de três semanas.
+
+35
+00:01:21,390 --> 00:01:24,090
+Como combiná-los?
+Que tal votando?
+
+36
+00:01:24,457 --> 00:01:27,352
+Nós os sobrepomos aos dados
+e dizemos:
+
+37
+00:01:27,402 --> 00:01:30,095
+se dois ou mais disserem "azul",
+então azul.
+
+38
+00:01:30,145 --> 00:01:33,142
+E se dois ou mais
+disserem "vermelho", vermelho.
+
+39
+00:01:33,192 --> 00:01:34,574
+Com um número par de modelos,
+
+40
+00:01:34,624 --> 00:01:37,041
+podemos desfazer empates
+como quisermos.
+
+41
+00:01:37,091 --> 00:01:39,177
+Embora,
+com tantos pontos e modelos,
+
+42
+00:01:39,227 --> 00:01:42,450
+seja difícil imaginar um empate.
+Mas acontece.
+
+43
+00:01:42,500 --> 00:01:46,118
+E voilà. Isto é o que obtemos
+após os modelos votarem.
+
+44
+00:01:46,168 --> 00:01:48,665
+É isso.
+Esse é o algoritmo Bagging.
+

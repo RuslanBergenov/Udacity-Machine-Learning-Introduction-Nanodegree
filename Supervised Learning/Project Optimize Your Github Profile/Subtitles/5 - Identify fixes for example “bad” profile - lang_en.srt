@@ -1,0 +1,19 @@
+1
+00:00:00,200 --> 00:00:00,927
+Welcome back.
+
+2
+00:00:00,927 --> 00:00:04,750
+In the instructor's notes you'll
+find a link to a GitHub profile.
+
+3
+00:00:04,750 --> 00:00:08,029
+Imagine yourself as a recruiter
+looking at this profile.
+
+4
+00:00:08,029 --> 00:00:12,120
+Identify parts that could be improved
+and mark them with the check boxes.
+

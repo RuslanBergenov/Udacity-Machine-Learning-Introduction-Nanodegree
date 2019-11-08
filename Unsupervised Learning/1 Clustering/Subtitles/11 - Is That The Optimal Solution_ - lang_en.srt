@@ -1,0 +1,100 @@
+1
+00:00:00,000 --> 00:00:05,500
+From what you now
+
+2
+00:00:05,500 --> 00:00:10,330
+know about how the k-means algorithm works we should chat about a couple of things.
+
+3
+00:00:10,330 --> 00:00:14,179
+There are two areas of concern that still need to be considered.
+
+4
+00:00:14,179 --> 00:00:16,370
+First, you might be thinking,
+
+5
+00:00:16,370 --> 00:00:19,480
+" Do the random starting points of the algorithm matter?"
+
+6
+00:00:19,480 --> 00:00:21,830
+And the answer to that is yes.
+
+7
+00:00:21,829 --> 00:00:25,539
+Second, can we be sure that the ending results of
+
+8
+00:00:25,539 --> 00:00:29,320
+the clusters will be the same no matter where the starting points are?
+
+9
+00:00:29,320 --> 00:00:31,260
+And the answer to that is no.
+
+10
+00:00:31,260 --> 00:00:34,929
+Unfortunately, depending on the random starting points,
+
+11
+00:00:34,929 --> 00:00:37,750
+there might be different ending results for the clusters.
+
+12
+00:00:37,750 --> 00:00:40,890
+Since we're not guaranteed that any set of starting
+
+13
+00:00:40,890 --> 00:00:44,100
+values will end up with the same grouping of the data,
+
+14
+00:00:44,100 --> 00:00:48,870
+a common way to make sure we actually find the best clustering of the data,
+
+15
+00:00:48,869 --> 00:00:54,119
+is to run the k-means algorithm many times each with different starting points.
+
+16
+00:00:54,119 --> 00:00:57,079
+Actually, scikit-learn does this for you.
+
+17
+00:00:57,079 --> 00:01:01,570
+The random starting points should be substantially different from one another.
+
+18
+00:01:01,570 --> 00:01:06,704
+We don't want to have starting points that are almost the exact same in each attempt.
+
+19
+00:01:06,704 --> 00:01:11,664
+If we still end up with the same groupings for each run of K-means,
+
+20
+00:01:11,665 --> 00:01:16,025
+that's great, because we can feel confident about that grouping.
+
+21
+00:01:16,025 --> 00:01:20,130
+Alternatively, if we have groupings that differ when we change
+
+22
+00:01:20,129 --> 00:01:25,064
+the starting points we want to make sure that we choose the best grouping.
+
+23
+00:01:25,064 --> 00:01:28,920
+The best grouping for a set number of clusters k,
+
+24
+00:01:28,920 --> 00:01:32,234
+is defined as the grouping or the average distance
+
+25
+00:01:32,234 --> 00:01:36,359
+from the points to the centroids, is the smallest
+

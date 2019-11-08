@@ -1,0 +1,88 @@
+1
+00:00:04,280 --> 00:00:07,380
+Take a look at these points here.
+
+2
+00:00:07,379 --> 00:00:09,750
+You can see that even without labels,
+
+3
+00:00:09,750 --> 00:00:12,500
+there are ways that we might group these points together.
+
+4
+00:00:12,500 --> 00:00:14,484
+In this particular plot,
+
+5
+00:00:14,484 --> 00:00:16,730
+it appears that there are two groups.
+
+6
+00:00:16,730 --> 00:00:19,969
+Now, look at this set of points here.
+
+7
+00:00:19,969 --> 00:00:25,184
+Here, it appears that the points in this plot can be grouped into three groups.
+
+8
+00:00:25,184 --> 00:00:28,500
+If we were to add a new point say here,
+
+9
+00:00:28,500 --> 00:00:32,969
+we could easily say that it is similar to the rest of these points.
+
+10
+00:00:32,969 --> 00:00:37,250
+Similarly, if we were to add a point say here,
+
+11
+00:00:37,250 --> 00:00:39,719
+we could see that it belongs to this group.
+
+12
+00:00:39,719 --> 00:00:43,950
+Grouping data together in this way is known as clustering.
+
+13
+00:00:43,950 --> 00:00:48,135
+This is the first type of unsupervised machine learning that we'll look at.
+
+14
+00:00:48,134 --> 00:00:50,349
+Take a look at these points here,
+
+15
+00:00:50,350 --> 00:00:52,450
+notice how they follow a pattern.
+
+16
+00:00:52,450 --> 00:00:54,640
+Another type of unsupervised learning,
+
+17
+00:00:54,640 --> 00:00:58,734
+we can use patterns in our points to reduce the dimensionality.
+
+18
+00:00:58,734 --> 00:01:00,115
+So in this case,
+
+19
+00:01:00,115 --> 00:01:03,090
+we could reduce from two dimensions to one.
+
+20
+00:01:03,090 --> 00:01:08,215
+This is a second type of unsupervised learning called dimensionality reduction.
+
+21
+00:01:08,215 --> 00:01:11,260
+Throughout this course, you will get some practice with
+
+22
+00:01:11,260 --> 00:01:15,390
+each of these two types of unsupervised learning.
+

@@ -1,0 +1,92 @@
+1
+00:00:00,000 --> 00:00:02,879
+Now, let's look at an interesting application of Bayes Theorem.
+
+2
+00:00:02,879 --> 00:00:06,554
+Let's say we're not feeling very well and we go to the doctor,
+
+3
+00:00:06,554 --> 00:00:09,844
+the doctor says there's a terrible disease going on,
+
+4
+00:00:09,845 --> 00:00:11,669
+I'll administer a test for you.
+
+5
+00:00:11,669 --> 00:00:16,094
+Moreover, she says that the test has 99 percent accuracy.
+
+6
+00:00:16,094 --> 00:00:20,070
+More specifically, she says that for every 100 patients that are sick,
+
+7
+00:00:20,070 --> 00:00:25,115
+the test correctly diagnosis 99 of them and for every 100 patients that are healthy,
+
+8
+00:00:25,114 --> 00:00:27,984
+the test correctly diagnosis 99 of them.
+
+9
+00:00:27,984 --> 00:00:31,994
+If we want to be tactical, these are actually called sensitivity and specificity.
+
+10
+00:00:31,995 --> 00:00:33,884
+Then while we're waiting for our test,
+
+11
+00:00:33,884 --> 00:00:36,699
+we researched the Internet and find that on average,
+
+12
+00:00:36,700 --> 00:00:40,585
+one of every 10,000 people suffers from the disease.
+
+13
+00:00:40,585 --> 00:00:42,929
+The next day the doctor calls with terrible news.
+
+14
+00:00:42,929 --> 00:00:45,784
+She says that we have tested positive for the disease,
+
+15
+00:00:45,784 --> 00:00:47,259
+so now we're panicking.
+
+16
+00:00:47,259 --> 00:00:50,579
+But before panicking, let's turn to math and actually
+
+17
+00:00:50,579 --> 00:00:54,439
+calculate what is the probability of being sick. So here's a quiz.
+
+18
+00:00:54,439 --> 00:00:59,195
+Given the two pieces of information that the test has 99 percent accuracy,
+
+19
+00:00:59,195 --> 00:01:02,549
+and that one out of every 10,000 people have the disease,
+
+20
+00:01:02,549 --> 00:01:06,344
+what do you think the probability is that we're sick?
+
+21
+00:01:06,344 --> 00:01:10,094
+Is it from 0-20 percent, from 20-40,
+
+22
+00:01:10,094 --> 00:01:14,435
+40-60, 60-80, or 80-100?
+
+23
+00:01:14,435 --> 00:01:17,070
+Take your guess and enter it below.
+

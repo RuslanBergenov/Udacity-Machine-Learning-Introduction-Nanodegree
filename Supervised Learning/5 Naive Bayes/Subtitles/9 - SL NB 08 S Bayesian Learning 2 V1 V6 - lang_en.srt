@@ -1,0 +1,68 @@
+1
+00:00:00,000 --> 00:00:01,500
+So let's see. We have
+
+2
+00:00:01,500 --> 00:00:04,500
+three spam emails and one of them contains the word 'easy,' which means
+
+3
+00:00:04,500 --> 00:00:10,245
+the probability of an email containing the word 'easy' given that it's spam is one-third.
+
+4
+00:00:10,244 --> 00:00:14,160
+Since two out of the three three spam emails containing the word 'money,' then
+
+5
+00:00:14,160 --> 00:00:18,675
+the probability of an email containing the word money given that it's spam is two-thirds.
+
+6
+00:00:18,675 --> 00:00:21,240
+And similarly, since there are five ham emails
+
+7
+00:00:21,239 --> 00:00:23,849
+and one of them contains the word 'easy,' then
+
+8
+00:00:23,850 --> 00:00:29,070
+the probability of an email containing the word 'easy' given that it is ham is one-fifth.
+
+9
+00:00:29,070 --> 00:00:31,094
+And same thing for the word 'money.'
+
+10
+00:00:31,094 --> 00:00:33,750
+And the main gist of Bayesian learning is the following,
+
+11
+00:00:33,750 --> 00:00:35,130
+we go from what's known,
+
+12
+00:00:35,130 --> 00:00:40,140
+which is P of 'easy' given spam and P of 'money' given spam,
+
+13
+00:00:40,140 --> 00:00:43,695
+to what's inferred, which is P of
+
+14
+00:00:43,695 --> 00:00:47,609
+spam given that it contains the word 'easy,' which is one-half,
+
+15
+00:00:47,609 --> 00:00:52,590
+since there are two emails containing the word 'easy' and only one of them is spam.
+
+16
+00:00:52,590 --> 00:00:58,229
+And P of spam given that it contains the word 'money,' which is two-thirds
+
+17
+00:00:58,228 --> 00:01:03,869
+since there are three emails containing the word 'money' and two of them are spam.
+

@@ -1,0 +1,388 @@
+1
+00:00:00,000 --> 00:00:01,970
+So, if you go onto the next page,
+
+2
+00:00:01,970 --> 00:00:05,009
+you'll notice that there's a notebook available called Changing
+
+3
+00:00:05,009 --> 00:00:08,219
+K. What I like to do when I'm in the classroom,
+
+4
+00:00:08,220 --> 00:00:11,679
+is actually open this up into a new tab.
+
+5
+00:00:11,679 --> 00:00:13,589
+If you move it into a new tab,
+
+6
+00:00:13,589 --> 00:00:15,984
+you'll see that it opens that up behind the scenes.
+
+7
+00:00:15,984 --> 00:00:17,579
+But the notebook that we were on,
+
+8
+00:00:17,579 --> 00:00:19,554
+is this Changing K notebook.
+
+9
+00:00:19,554 --> 00:00:22,280
+In this notebook, what we're going to take a look at,
+
+10
+00:00:22,280 --> 00:00:26,250
+is fitting the k means algorithm to a set of data points.
+
+11
+00:00:26,250 --> 00:00:28,379
+In this case, the first thing we should do,
+
+12
+00:00:28,379 --> 00:00:30,484
+is import our necessary libraries.
+
+13
+00:00:30,484 --> 00:00:33,644
+Then, once we have our libraries read in,
+
+14
+00:00:33,645 --> 00:00:35,575
+let's take a look at the first question.
+
+15
+00:00:35,575 --> 00:00:36,780
+The first question says,
+
+16
+00:00:36,780 --> 00:00:41,160
+we want to simulate data and we're going to use this helpers to file to do it.
+
+17
+00:00:41,159 --> 00:00:42,869
+So, the first thing they want us to do,
+
+18
+00:00:42,869 --> 00:00:44,699
+is actually read the documentation.
+
+19
+00:00:44,700 --> 00:00:47,780
+So, that we understand how to use this function.
+
+20
+00:00:47,780 --> 00:00:50,340
+So, if we just run that cell,
+
+21
+00:00:50,340 --> 00:00:52,060
+you'll notice that it tells us,
+
+22
+00:00:52,060 --> 00:00:54,425
+basically, there's the simulate data function.
+
+23
+00:00:54,424 --> 00:00:58,759
+It'll simulate N points with the features as whatever
+
+24
+00:00:58,759 --> 00:01:03,119
+this is listed as and the number of centroids that were used to create the data.
+
+25
+00:01:03,119 --> 00:01:04,480
+As this part here.
+
+26
+00:01:04,480 --> 00:01:06,490
+So, this is a really useful function,
+
+27
+00:01:06,489 --> 00:01:09,274
+to be able to just quickly simulate the data we want.
+
+28
+00:01:09,275 --> 00:01:11,035
+In this particular example,
+
+29
+00:01:11,034 --> 00:01:12,554
+we want 200 points,
+
+30
+00:01:12,555 --> 00:01:14,690
+five features and four centers.
+
+31
+00:01:14,689 --> 00:01:18,105
+So, let's go ahead and create that dataset.
+
+32
+00:01:18,105 --> 00:01:23,320
+So, 200 points, five features and four centers,
+
+33
+00:01:23,319 --> 00:01:25,864
+this should be h. Cool.
+
+34
+00:01:25,864 --> 00:01:28,074
+So, looks like we're good to continue.
+
+35
+00:01:28,075 --> 00:01:31,109
+Don't forget that h, because you're reading it in from that helper file.
+
+36
+00:01:31,109 --> 00:01:34,715
+So, because we fit this model with four centers,
+
+37
+00:01:34,715 --> 00:01:37,180
+it asks, "What should the value of K be?"
+
+38
+00:01:37,180 --> 00:01:39,125
+The value of K should be four.
+
+39
+00:01:39,125 --> 00:01:42,055
+If we run that cell, it tells us, "Yeah, that's right".
+
+40
+00:01:42,055 --> 00:01:43,655
+Then, the next thing we want to do,
+
+41
+00:01:43,655 --> 00:01:47,269
+is actually run the KMeans algorithm on our dataset,
+
+42
+00:01:47,269 --> 00:01:50,804
+to see what it looks like if we have four centroids.
+
+43
+00:01:50,805 --> 00:01:54,960
+So, this gives us a little glimpse at what that process should look like.
+
+44
+00:01:54,959 --> 00:01:57,304
+First, we should instantiate our model,
+
+45
+00:01:57,305 --> 00:01:59,045
+then, we fit it to the data.
+
+46
+00:01:59,045 --> 00:02:01,579
+Then, we predict the labels for our data and then,
+
+47
+00:02:01,579 --> 00:02:03,584
+this last step down here that you can see,
+
+48
+00:02:03,584 --> 00:02:04,724
+is where we plot the data.
+
+49
+00:02:04,724 --> 00:02:06,879
+So, here, we need to instantiate, then,
+
+50
+00:02:06,879 --> 00:02:09,439
+we fit, we predict and then,
+
+51
+00:02:09,439 --> 00:02:10,710
+we'll get a plot for our data.
+
+52
+00:02:10,710 --> 00:02:13,340
+This is the basic process that you should follow with
+
+53
+00:02:13,340 --> 00:02:16,259
+any of the unsupervised algorithms that you'll see.
+
+54
+00:02:16,259 --> 00:02:17,750
+The first thing that we might do,
+
+55
+00:02:17,750 --> 00:02:19,490
+is actually look at the documentation.
+
+56
+00:02:19,490 --> 00:02:21,475
+You can see that I read it in here,
+
+57
+00:02:21,474 --> 00:02:25,305
+but a quick Google search should bring you to the KMeans documentation.
+
+58
+00:02:25,305 --> 00:02:29,000
+So, you can see we're importing from the sklearn.cluster library,
+
+59
+00:02:29,000 --> 00:02:30,905
+we're importing this module.
+
+60
+00:02:30,905 --> 00:02:37,069
+Essentially, KMeans will take the number of clusters and a whole bunch of other things,
+
+61
+00:02:37,069 --> 00:02:39,209
+which we don't really have to mess around with.
+
+62
+00:02:39,210 --> 00:02:40,760
+The main thing that we should see is,
+
+63
+00:02:40,759 --> 00:02:43,524
+that we want to take KMeans with four centroids.
+
+64
+00:02:43,525 --> 00:02:48,629
+So, if we go back here and we fit the KMeans algorithm,
+
+65
+00:02:48,629 --> 00:02:50,789
+by passing four here and then,
+
+66
+00:02:50,789 --> 00:02:54,009
+the next thing we should do is fit the model.
+
+67
+00:02:54,090 --> 00:02:56,409
+If you look at the documentation,
+
+68
+00:02:56,409 --> 00:03:00,109
+you can also find all the methods that are available on this.
+
+69
+00:03:00,110 --> 00:03:02,880
+So, you can see they have KMeans.
+
+70
+00:03:02,879 --> 00:03:04,490
+Here's where they use a predict,
+
+71
+00:03:04,490 --> 00:03:06,175
+they would get different labels,
+
+72
+00:03:06,175 --> 00:03:08,780
+there's a fit predict, there's a fit.
+
+73
+00:03:08,780 --> 00:03:10,969
+So, there's a bunch of things in the documentation.
+
+74
+00:03:10,969 --> 00:03:13,080
+I'm just going to show you how this works quick.
+
+75
+00:03:13,080 --> 00:03:14,990
+Once, you've done this a couple of times,
+
+76
+00:03:14,990 --> 00:03:16,340
+it becomes pretty natural.
+
+77
+00:03:16,340 --> 00:03:20,490
+So, we want to fit to our dataset.
+
+78
+00:03:21,039 --> 00:03:23,074
+Then, what we want to do,
+
+79
+00:03:23,074 --> 00:03:25,109
+is predict the labels.
+
+80
+00:03:25,110 --> 00:03:27,370
+Again, you could do this all in one step,
+
+81
+00:03:27,370 --> 00:03:30,914
+if you want it to, using that fit predict.
+
+82
+00:03:30,914 --> 00:03:35,150
+This is called kmeans_4 and this I
+
+83
+00:03:35,150 --> 00:03:39,344
+should actually use the model that I created, so model_4.
+
+84
+00:03:39,344 --> 00:03:41,840
+Right. So, I fit that model,
+
+85
+00:03:41,840 --> 00:03:43,444
+I store it here and then,
+
+86
+00:03:43,444 --> 00:03:45,409
+I use that model to predict our data.
+
+87
+00:03:45,409 --> 00:03:49,789
+So, I instantiate, I fit that model on the data.
+
+88
+00:03:49,789 --> 00:03:52,870
+Then, I take that model and I use it to predict on the dataset.
+
+89
+00:03:52,870 --> 00:03:54,355
+So, this is the usual process.
+
+90
+00:03:54,354 --> 00:03:59,840
+Instantiate, use that instantiate model to fit to your data and then,
+
+91
+00:03:59,840 --> 00:04:03,140
+use the model that you create there to predict on your dataset.
+
+92
+00:04:03,139 --> 00:04:08,129
+So, here you can see each of the colors as what our models predicted,
+
+93
+00:04:08,129 --> 00:04:10,090
+what cluster those points belong to.
+
+94
+00:04:10,090 --> 00:04:11,330
+In the next page,
+
+95
+00:04:11,330 --> 00:04:12,570
+you'll do this on your own.
+
+96
+00:04:12,569 --> 00:04:14,930
+You'll see what it looks like, if you create it without
+
+97
+00:04:14,930 --> 00:04:17,870
+four but with different numbers of clusters.
+

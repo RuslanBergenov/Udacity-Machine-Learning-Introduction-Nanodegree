@@ -1,0 +1,68 @@
+1
+00:00:00,000 --> 00:00:02,620
+So, if you said the line on the left, you are correct.
+
+2
+00:00:02,620 --> 00:00:03,690
+Because as you can see,
+
+3
+00:00:03,690 --> 00:00:05,429
+the yellow line is pretty well-spaced
+
+4
+00:00:05,429 --> 00:00:07,469
+between the blue points and the red points, whereas,
+
+5
+00:00:07,469 --> 00:00:08,789
+the green line is not,
+
+6
+00:00:08,789 --> 00:00:12,309
+because it's a little too close to some of the points on both sides.
+
+7
+00:00:12,310 --> 00:00:14,370
+And how can we see this? Well, we look at
+
+8
+00:00:14,369 --> 00:00:16,500
+all the distances between the closest point to one
+
+9
+00:00:16,500 --> 00:00:18,059
+of the lines and compare them to
+
+10
+00:00:18,059 --> 00:00:20,939
+the distances between the closest points to the other line.
+
+11
+00:00:20,940 --> 00:00:23,429
+So, the closest point to the yellow line is this one and
+
+12
+00:00:23,429 --> 00:00:26,039
+the closest point to the green line is this one over here.
+
+13
+00:00:26,039 --> 00:00:29,804
+And then, we check, which one of these closest points is actually farther from the line?
+
+14
+00:00:29,804 --> 00:00:32,399
+So, we compare these two distances and we see
+
+15
+00:00:32,399 --> 00:00:35,475
+that the one on the left is bigger, so that line wins.
+
+16
+00:00:35,475 --> 00:00:37,995
+In a nutshell, this is how an SVM works.
+
+17
+00:00:37,994 --> 00:00:41,390
+But throughout this lesson, I'll be showing you this algorithm in more detail.
+

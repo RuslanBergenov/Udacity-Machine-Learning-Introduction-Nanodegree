@@ -1,0 +1,159 @@
+1
+00:00:00,333 --> 00:00:02,800
+Vamos relembrar
+o que é a classificação.
+
+2
+00:00:02,833 --> 00:00:06,333
+Quer dizer que temos
+alguns pontos azuis e vermelhos
+
+3
+00:00:06,367 --> 00:00:09,333
+e queremos um limite
+que os separe.
+
+4
+00:00:09,367 --> 00:00:11,133
+Agora queremos mais.
+
+5
+00:00:11,167 --> 00:00:15,367
+Queremos que o limite esteja
+o mais longe possível dos pontos,
+
+6
+00:00:15,400 --> 00:00:18,267
+então acrescentamos
+outros dois limites,
+
+7
+00:00:18,300 --> 00:00:21,967
+que são linhas paralelas
+equidistantes da linha principal.
+
+8
+00:00:22,000 --> 00:00:25,011
+Vamos tentar maximizar
+a distância entre as duas,
+
+9
+00:00:25,044 --> 00:00:26,455
+ou a margem.
+
+10
+00:00:26,488 --> 00:00:28,227
+Este conjunto
+é tranquilo de separar.
+
+11
+00:00:28,260 --> 00:00:31,067
+Vamos ver
+um mais complicado.
+
+12
+00:00:31,100 --> 00:00:33,000
+Este conjunto aqui.
+
+13
+00:00:33,033 --> 00:00:36,433
+Repetindo: um algoritmo
+de classificação encontra um limite
+
+14
+00:00:36,467 --> 00:00:38,233
+que divide os pontos.
+
+15
+00:00:38,267 --> 00:00:39,900
+Mas queremos mais.
+
+16
+00:00:39,933 --> 00:00:43,600
+Queremos um limite
+com a maior margem possível.
+
+17
+00:00:43,633 --> 00:00:46,667
+Vamos pensar. Existem duas maneiras
+de medir esse modelo.
+
+18
+00:00:46,700 --> 00:00:49,400
+Uma é quantos pontos
+estão mal classificados
+
+19
+00:00:49,433 --> 00:00:52,133
+e a outra é a largura
+da margem.
+
+20
+00:00:52,167 --> 00:00:54,700
+Quais são os pontos
+mal classificados?
+
+21
+00:00:54,733 --> 00:00:56,667
+Temos um ponto vermelho
+na área azul
+
+22
+00:00:56,700 --> 00:00:59,133
+e um ponto azul
+na área vermelha.
+
+23
+00:00:59,167 --> 00:01:02,233
+Mas também não queremos pontos
+na margem,
+
+24
+00:01:02,267 --> 00:01:04,367
+então vamos puni-los.
+
+25
+00:01:04,400 --> 00:01:07,567
+Significa que eles farão parte
+do erro de classificação.
+
+26
+00:01:07,600 --> 00:01:11,400
+O círculo amarelo mostra
+exatamente onde está o erro.
+
+27
+00:01:11,433 --> 00:01:13,300
+Agora temos o erro
+de margem.
+
+28
+00:01:13,333 --> 00:01:17,733
+Queremos que ela seja
+a maior possível.
+
+29
+00:01:17,767 --> 00:01:21,267
+Vamos incluir isso no erro.
+Vamos ver isso depois.
+
+30
+00:01:21,300 --> 00:01:24,400
+Mas, resumindo,
+o novo erro para o algoritmo
+
+31
+00:01:24,433 --> 00:01:27,733
+é um erro de classificação
+mais um erro de margem.
+
+32
+00:01:27,767 --> 00:01:30,500
+Minimizar esse erro
+vai nos dar o algoritmo
+
+33
+00:01:30,533 --> 00:01:32,467
+da máquina de vetores
+de suporte.
+

@@ -1,0 +1,152 @@
+1
+00:00:00,950 --> 00:00:04,302
+SERÁ QUE ESSA
+É A SOLUÇÃO ÓTIMA?
+
+2
+00:00:04,813 --> 00:00:08,180
+Com o que você já sabe
+sobre o funcionamento do k-means,
+
+3
+00:00:08,213 --> 00:00:10,422
+precisamos conversar
+sobre algumas coisas.
+
+4
+00:00:10,455 --> 00:00:14,165
+Há duas áreas importantes que ainda
+precisam ser consideradas.
+
+5
+00:00:14,549 --> 00:00:16,501
+Primeiro,
+você deve estar pensando:
+
+6
+00:00:16,534 --> 00:00:19,566
+"Os pontos iniciais aleatórios
+do algoritmo importam?"
+
+7
+00:00:19,599 --> 00:00:21,581
+A resposta para isso é "sim".
+
+8
+00:00:22,349 --> 00:00:26,078
+Segundo: podemos ter certeza de que
+o resultado final dos clusters
+
+9
+00:00:26,111 --> 00:00:29,573
+será o mesmo independentemente
+de onde os pontos iniciais estejam?
+
+10
+00:00:29,606 --> 00:00:31,437
+A resposta para isso é "não".
+
+11
+00:00:31,470 --> 00:00:34,838
+Infelizmente, dependendo
+dos pontos iniciais aleatórios,
+
+12
+00:00:34,871 --> 00:00:37,718
+os grupos podem apresentar
+resultados finais diferentes.
+
+13
+00:00:38,094 --> 00:00:41,357
+Como não garantimos que qualquer
+conjunto de valores iniciais
+
+14
+00:00:41,390 --> 00:00:43,838
+vai resultar no mesmo
+agrupamento dos dados,
+
+15
+00:00:43,871 --> 00:00:46,461
+uma maneira comum
+de garantir que achemos
+
+16
+00:00:46,494 --> 00:00:48,621
+o melhor agrupamento
+para os dados
+
+17
+00:00:48,654 --> 00:00:51,933
+é executar o algoritmo k-means
+várias vezes,
+
+18
+00:00:51,966 --> 00:00:54,309
+cada uma
+com pontos iniciais diferentes.
+
+19
+00:00:54,342 --> 00:00:56,998
+Na verdade, o scikit-learn
+faz isso por você.
+
+20
+00:00:57,519 --> 00:01:01,621
+Os pontos iniciais aleatórios devem
+ser muito diferentes uns dos outros.
+
+21
+00:01:01,654 --> 00:01:05,701
+Não queremos pontos iniciais
+que sejam quase idênticos
+
+22
+00:01:05,734 --> 00:01:06,901
+em cada tentativa.
+
+23
+00:01:06,934 --> 00:01:09,542
+Se ainda terminarmos
+com os mesmos agrupamentos
+
+24
+00:01:09,575 --> 00:01:13,036
+para cada execução do k-means,
+isso é ótimo!
+
+25
+00:01:13,069 --> 00:01:15,965
+Assim, podemos ter confiança
+nesse agrupamento.
+
+26
+00:01:16,405 --> 00:01:19,533
+Por outro lado, se tivermos
+agrupamentos distintos
+
+27
+00:01:19,566 --> 00:01:21,429
+ao alterarmos
+os pontos iniciais,
+
+28
+00:01:21,462 --> 00:01:25,141
+precisamos ter certeza de que vamos
+escolher o melhor agrupamento.
+
+29
+00:01:25,174 --> 00:01:28,605
+O melhor agrupamento
+para um número "k" de clusters
+
+30
+00:01:28,638 --> 00:01:32,077
+é definido como o agrupamento
+onde a distância média
+
+31
+00:01:32,110 --> 00:01:35,789
+dos pontos aos centroides
+é a menor.
+

@@ -1,0 +1,360 @@
+1
+00:00:00,000 --> 00:00:01,710
+So, let's talk about life.
+
+2
+00:00:01,710 --> 00:00:04,650
+In life, there are two mistakes one can make.
+
+3
+00:00:04,650 --> 00:00:08,330
+One is to try to kill Godzilla using a flyswatter.
+
+4
+00:00:08,330 --> 00:00:12,330
+The other one is to try to kill a fly using a bazooka.
+
+5
+00:00:12,330 --> 00:00:16,125
+What's the problem with trying to kill Godzilla with a flyswatter?
+
+6
+00:00:16,125 --> 00:00:18,114
+That we're oversimplifying the problem.
+
+7
+00:00:18,114 --> 00:00:22,379
+We're trying a solution that is too simple and won't do the job.
+
+8
+00:00:22,379 --> 00:00:25,539
+In machine learning, this is called underfitting.
+
+9
+00:00:25,539 --> 00:00:29,442
+And what's the problem with trying to kill a fly with a bazooka?
+
+10
+00:00:29,443 --> 00:00:32,850
+It's overly complicated and it will lead to bad solutions and
+
+11
+00:00:32,850 --> 00:00:37,840
+extra complexity when we can use a much simpler solution instead.
+
+12
+00:00:37,840 --> 00:00:41,160
+In machine learning, this is called overfitting Let's look at how
+
+13
+00:00:41,159 --> 00:00:45,049
+overfitting and underfitting can occur in a classification problem.
+
+14
+00:00:45,049 --> 00:00:46,875
+Let's say we have the following data,
+
+15
+00:00:46,875 --> 00:00:49,259
+and we need to classify it.
+
+16
+00:00:49,259 --> 00:00:52,324
+So what is the rule that will do the job here?
+
+17
+00:00:52,325 --> 00:00:54,435
+Seems like an easy problem, right?
+
+18
+00:00:54,435 --> 00:00:59,820
+The ones in the right are dogs while the ones in the left are anything but dogs.
+
+19
+00:00:59,820 --> 00:01:02,310
+Now what if we use the following rule?
+
+20
+00:01:02,310 --> 00:01:04,394
+We say that the ones in the right are
+
+21
+00:01:04,394 --> 00:01:08,280
+animals and the ones in the left are anything but animals.
+
+22
+00:01:08,280 --> 00:01:10,644
+Well, that solution is not too good, right?
+
+23
+00:01:10,644 --> 00:01:11,819
+What is the problem?
+
+24
+00:01:11,819 --> 00:01:15,729
+It's too simple. It doesn't even get the whole data set right.
+
+25
+00:01:15,730 --> 00:01:21,270
+See? It misclassified this cat over here since the cat is an animal.
+
+26
+00:01:21,269 --> 00:01:23,170
+This is underfitting.
+
+27
+00:01:23,170 --> 00:01:26,200
+It's like trying to kill Godzilla with a flyswatter.
+
+28
+00:01:26,200 --> 00:01:30,174
+Sometimes, we'll refer to it as error due to bias.
+
+29
+00:01:30,174 --> 00:01:32,769
+Now, what about the following rule?
+
+30
+00:01:32,769 --> 00:01:37,185
+We'll say that the ones in the right are dogs that are yellow, orange,
+
+31
+00:01:37,185 --> 00:01:43,900
+or grey, and the ones in the left are anything but dogs that are yellow, orange, or grey.
+
+32
+00:01:43,900 --> 00:01:49,285
+Well, technically, this is correct as it classifies the data correctly.
+
+33
+00:01:49,284 --> 00:01:51,924
+There is a feeling that we went too specific since
+
+34
+00:01:51,924 --> 00:01:55,390
+just saying dogs and not dogs would have done the job.
+
+35
+00:01:55,390 --> 00:01:58,087
+But this problem is more conceptual, right?
+
+36
+00:01:58,087 --> 00:02:00,605
+How can we see the problem here?
+
+37
+00:02:00,605 --> 00:02:05,512
+Well, one way to see this is by introducing a testing set.
+
+38
+00:02:05,512 --> 00:02:08,159
+If our testing set is this dog over here,
+
+39
+00:02:08,159 --> 00:02:12,805
+then we'd imagine that a good classifier would put it on the right with the other dogs.
+
+40
+00:02:12,805 --> 00:02:19,599
+But this classifier will put it on the left since the dog is not yellow, orange, or grey.
+
+41
+00:02:19,599 --> 00:02:21,984
+So, the problem here, as we said,
+
+42
+00:02:21,985 --> 00:02:25,105
+is that the classifier is too specific.
+
+43
+00:02:25,104 --> 00:02:29,519
+It will fit the data well but it will fail to generalize.
+
+44
+00:02:29,520 --> 00:02:31,390
+This is overfitting.
+
+45
+00:02:31,389 --> 00:02:35,009
+It's like trying to kill a fly with a bazooka.
+
+46
+00:02:35,009 --> 00:02:39,264
+Sometimes, we'll refer to overfitting as error due to variance.
+
+47
+00:02:39,264 --> 00:02:44,489
+The way I like to picture underfitting and overfitting is when studying for an exam.
+
+48
+00:02:44,490 --> 00:02:47,665
+Underfitting, it's like not studying enough and failing.
+
+49
+00:02:47,664 --> 00:02:52,179
+A good model is like studying well and doing well in the exam.
+
+50
+00:02:52,180 --> 00:02:54,254
+Overfitting is like instead of studying,
+
+51
+00:02:54,254 --> 00:02:57,359
+we memorize the entire textbook word by word.
+
+52
+00:02:57,360 --> 00:03:00,750
+We may be able to regurgitate any questions in the textbook but we won't
+
+53
+00:03:00,750 --> 00:03:05,125
+be able to generalize properly and answer the questions in the test.
+
+54
+00:03:05,125 --> 00:03:08,324
+But now, let's see how this would look like in neural networks.
+
+55
+00:03:08,324 --> 00:03:10,334
+So let's say this data where, again,
+
+56
+00:03:10,335 --> 00:03:14,099
+the blue points are labeled positive and the red points are labeled negative.
+
+57
+00:03:14,099 --> 00:03:18,219
+And here, we have the three little bears.
+
+58
+00:03:18,219 --> 00:03:22,504
+In the middle, we have a good model which fits the data well.
+
+59
+00:03:22,504 --> 00:03:26,424
+On the left, we have a model that underfits since it's too simple.
+
+60
+00:03:26,425 --> 00:03:30,788
+It tries to fit the data with the line but the data is more complicated than that.
+
+61
+00:03:30,788 --> 00:03:33,270
+And on the right, we have a model that overfits since it
+
+62
+00:03:33,270 --> 00:03:36,870
+tries to fit the data with an overly complicated curve.
+
+63
+00:03:36,870 --> 00:03:42,465
+Notice that the model in the right fits the data really well since it makes no mistakes,
+
+64
+00:03:42,465 --> 00:03:46,344
+whereas the one in the middle makes this mistake over here.
+
+65
+00:03:46,344 --> 00:03:50,789
+But we can see that the model in the middle will probably generalize better.
+
+66
+00:03:50,789 --> 00:03:54,584
+The model in the middle looks at this point as noise
+
+67
+00:03:54,585 --> 00:03:59,564
+while the one in the right gets confused by it and tries to feed it too well.
+
+68
+00:03:59,564 --> 00:04:01,859
+Now the model in the middle will probably be
+
+69
+00:04:01,860 --> 00:04:05,685
+a neural network with a slightly complex architecture like this one.
+
+70
+00:04:05,685 --> 00:04:10,284
+The one in the left will probably be an overly simplistic architecture.
+
+71
+00:04:10,284 --> 00:04:12,210
+Here, for example, the entire neural network is
+
+72
+00:04:12,210 --> 00:04:15,366
+just one preceptors since the model is linear.
+
+73
+00:04:15,366 --> 00:04:17,160
+The model in the right is probably
+
+74
+00:04:17,160 --> 00:04:21,790
+a highly complex neural network with more layers and weights than we need.
+
+75
+00:04:21,790 --> 00:04:23,250
+Now here's the bad news.
+
+76
+00:04:23,250 --> 00:04:27,274
+It's really hard to find the right architecture for a neural network.
+
+77
+00:04:27,274 --> 00:04:29,250
+We're always going to end either with
+
+78
+00:04:29,250 --> 00:04:32,730
+an overly simplistic architecture like the one in
+
+79
+00:04:32,730 --> 00:04:37,110
+the left or an overly complicated one like the one in the right.
+
+80
+00:04:37,110 --> 00:04:39,270
+Now the question is, what do we do?
+
+81
+00:04:39,269 --> 00:04:43,519
+Well, this is like trying to fit in a pair of pants.
+
+82
+00:04:43,519 --> 00:04:45,389
+If we can't find our size,
+
+83
+00:04:45,389 --> 00:04:49,435
+do we go for bigger pants or smaller pants?
+
+84
+00:04:49,435 --> 00:04:51,540
+Well, it seems like it's less bad to go for
+
+85
+00:04:51,540 --> 00:04:53,610
+a slightly bigger pants and then try to get
+
+86
+00:04:53,610 --> 00:04:56,918
+a belt or something that will make them fit better,
+
+87
+00:04:56,918 --> 00:04:58,574
+and that's what we're going to do.
+
+88
+00:04:58,574 --> 00:05:00,509
+We'll err on the side of
+
+89
+00:05:00,509 --> 00:05:03,389
+an overly complicated models and then we'll
+
+90
+00:05:03,389 --> 00:05:07,000
+apply certain techniques to prevent overfitting on it.
+

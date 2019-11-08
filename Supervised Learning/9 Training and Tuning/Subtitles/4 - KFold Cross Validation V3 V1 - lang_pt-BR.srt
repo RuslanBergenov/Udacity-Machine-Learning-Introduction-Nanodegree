@@ -1,0 +1,129 @@
+1
+00:00:00,000 --> 00:00:03,588
+Para terminar aprenderemos um método
+muito útil de reciclar nossos dados
+
+2
+00:00:03,655 --> 00:00:05,760
+chamado
+"validação cruzada k-fold".
+
+3
+00:00:05,825 --> 00:00:09,259
+Como aprendemos, fazemos os testes
+separando nossos dados
+
+4
+00:00:09,325 --> 00:00:11,490
+entre o conjunto
+de treinamento e de teste,
+
+5
+00:00:11,556 --> 00:00:14,642
+mas nem sempre isso é ideal,
+já que jogamos fora alguns dados
+
+6
+00:00:14,708 --> 00:00:17,104
+que podem ser úteis
+para criar nosso algoritmo.
+
+7
+00:00:17,170 --> 00:00:19,944
+Há algo que possamos fazer
+para não jogar os dados fora,
+
+8
+00:00:20,010 --> 00:00:21,739
+mas, ao mesmo tempo,
+não trapacear?
+
+9
+00:00:21,836 --> 00:00:26,211
+Há uma solução,
+e é a validação cruzada k-fold.
+
+10
+00:00:26,696 --> 00:00:31,042
+O que fazemos na k-fold
+é dividir os dados em buckets k.
+
+11
+00:00:31,108 --> 00:00:33,102
+Nesse caso k é 4.
+
+12
+00:00:33,168 --> 00:00:35,541
+Então treinamos
+o modelo k vezes,
+
+13
+00:00:35,608 --> 00:00:39,402
+cada vez usando um bucket diferente
+como conjunto de testes,
+
+14
+00:00:39,468 --> 00:00:42,819
+e o resto dos pontos
+como conjunto de treinamento.
+
+15
+00:00:42,885 --> 00:00:46,227
+Então tiramos uma média do resultado
+para ter um modelo final.
+
+16
+00:00:46,293 --> 00:00:49,171
+O comando para fazer isso
+no sklearn é bem simples:
+
+17
+00:00:49,237 --> 00:00:52,471
+só precisamos criar
+um objeto k-fold
+
+18
+00:00:52,537 --> 00:00:54,806
+onde os parâmetros
+são o tamanho dos dados
+
+19
+00:00:54,840 --> 00:00:56,648
+e o tamanho
+do conjunto de testes.
+
+20
+00:00:56,715 --> 00:00:58,930
+É sempre recomendável
+aleatorizar nossos dados
+
+21
+00:00:58,964 --> 00:01:00,826
+para não haver
+nenhuma chance de viés.
+
+22
+00:01:00,860 --> 00:01:03,235
+Aqui ainda estamos dividindo
+os dados em buckets,
+
+23
+00:01:03,301 --> 00:01:05,812
+porém são escolhidos
+aleatoriamente e não em ordem.
+
+24
+00:01:05,879 --> 00:01:08,513
+Também é fácil fazer
+a aleatorização no sklearn,
+
+25
+00:01:08,579 --> 00:01:10,690
+colocando o parâmetro shuffle
+para "true"
+
+26
+00:01:10,757 --> 00:01:13,267
+quando inicializamos
+nosso objeto k-fold.
+

@@ -1,0 +1,192 @@
+1
+00:00:00,000 --> 00:00:02,649
+So, here's a summary of what we do in machine learning.
+
+2
+00:00:02,649 --> 00:00:05,879
+First we train a bunch of models with our training data,
+
+3
+00:00:05,879 --> 00:00:09,539
+then we use a cross-validation data to pick the best of these models,
+
+4
+00:00:09,539 --> 00:00:13,229
+and finally, we test it with the testing data to make sure our model is good.
+
+5
+00:00:13,230 --> 00:00:16,225
+Here's an example of training a logistic regression model.
+
+6
+00:00:16,225 --> 00:00:18,150
+Let's say we have four candidates.
+
+7
+00:00:18,149 --> 00:00:20,064
+We train a model of degree one,
+
+8
+00:00:20,065 --> 00:00:24,215
+which is a line and one of degree two, three, and four.
+
+9
+00:00:24,214 --> 00:00:26,300
+We train them with the training data to find
+
+10
+00:00:26,300 --> 00:00:29,219
+the slope and the coefficients of the polynomials et cetera.
+
+11
+00:00:29,219 --> 00:00:32,134
+Then we use the cross-validation data to calculate say,
+
+12
+00:00:32,134 --> 00:00:34,634
+the F1 score of all these models.
+
+13
+00:00:34,634 --> 00:00:38,364
+Then we pick the model with the highest F1 score.
+
+14
+00:00:38,365 --> 00:00:42,465
+As a final step, we use our testing data to make sure our model is good.
+
+15
+00:00:42,465 --> 00:00:46,460
+The parameters of the algorithm in this case are the coefficients of
+
+16
+00:00:46,460 --> 00:00:50,259
+the polynomial but the degree of the polynomial is like a matter parameter.
+
+17
+00:00:50,259 --> 00:00:52,460
+We call those hyperparameters.
+
+18
+00:00:52,460 --> 00:00:55,664
+Let's see another example. Let's say we're training a decision tree.
+
+19
+00:00:55,664 --> 00:00:57,329
+What are the hyperparameters?
+
+20
+00:00:57,329 --> 00:00:58,784
+Well, one of them is depth.
+
+21
+00:00:58,784 --> 00:01:00,699
+Let's say we have one of depth one,
+
+22
+00:01:00,700 --> 00:01:02,725
+two, three, and four.
+
+23
+00:01:02,725 --> 00:01:06,855
+We use the training data to train a bunch of trees of depth one,
+
+24
+00:01:06,855 --> 00:01:09,430
+two, three, and four.
+
+25
+00:01:09,430 --> 00:01:13,415
+The parameters here are the thresholds in the leaves and the nodes et cetera.
+
+26
+00:01:13,415 --> 00:01:16,380
+Then we take the F1 score and calculate it on
+
+27
+00:01:16,379 --> 00:01:19,989
+the cross-validation set on each of these models,
+
+28
+00:01:19,989 --> 00:01:23,939
+then we pick the one that did the best and finally with the testing set,
+
+29
+00:01:23,939 --> 00:01:25,590
+we make sure this model is good.
+
+30
+00:01:25,590 --> 00:01:28,310
+What happens if we have more than one hyperparameter?
+
+31
+00:01:28,310 --> 00:01:30,674
+Here we only have one which is depth.
+
+32
+00:01:30,674 --> 00:01:33,435
+What if we're training a support vector machine?
+
+33
+00:01:33,435 --> 00:01:35,900
+In an SVM, we have some hyperparameters like
+
+34
+00:01:35,900 --> 00:01:38,815
+the kernel which can be linear or polynomial for example,
+
+35
+00:01:38,814 --> 00:01:42,530
+and we also have the gamma parameter which if it's small gives us solutions
+
+36
+00:01:42,530 --> 00:01:46,704
+like this and if it's large it gives us solutions like that.
+
+37
+00:01:46,704 --> 00:01:53,329
+How do we pick the best combination between kernel and gamma? Well, very simple.
+
+38
+00:01:53,329 --> 00:01:55,489
+It's called grid search and it literally just says,
+
+39
+00:01:55,489 --> 00:01:58,609
+make a table with all the possibilities and pick the best one.
+
+40
+00:01:58,609 --> 00:02:01,120
+Our columns here are the different kernels we can use;
+
+41
+00:02:01,120 --> 00:02:05,454
+linear and polynomial and our rows are the different values of gamma.
+
+42
+00:02:05,454 --> 00:02:09,694
+It's recommended to take a few values that grow exponentially such as 0.1,
+
+43
+00:02:09,694 --> 00:02:12,959
+1, 10,100,1000 et cetera.
+
+44
+00:02:12,960 --> 00:02:15,960
+Again, we use a training set to train a bunch of
+
+45
+00:02:15,960 --> 00:02:19,650
+linear models and polynomial models with different values of gamma,
+
+46
+00:02:19,650 --> 00:02:23,400
+then we use the cross-validation set to calculate the F1 score in all of
+
+47
+00:02:23,400 --> 00:02:28,120
+these models and then we simply pick the one with the highest F1 score.
+
+48
+00:02:28,120 --> 00:02:33,550
+Finally, we use the testing set to make sure that what we did was good.
+

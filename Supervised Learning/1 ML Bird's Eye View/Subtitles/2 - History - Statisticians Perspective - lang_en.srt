@@ -1,0 +1,96 @@
+1
+00:00:00,000 --> 00:00:07,315
+Current uses of machine learning
+
+2
+00:00:07,315 --> 00:00:10,205
+come from the combination of two perspectives.
+
+3
+00:00:10,205 --> 00:00:15,705
+One is the perspective of statisticians and the second is that of computer scientists.
+
+4
+00:00:15,705 --> 00:00:19,964
+The statisticians perspective has evolved from understanding data.
+
+5
+00:00:19,964 --> 00:00:25,850
+The field of data analysis was originally a field of mathematics based on questions like,
+
+6
+00:00:25,850 --> 00:00:29,285
+how do we better understand the mechanisms that create data?
+
+7
+00:00:29,285 --> 00:00:34,810
+From these questions, probability-based models were used to model the world around us.
+
+8
+00:00:34,810 --> 00:00:39,890
+For example, there's a distribution to model expected scores on a test,
+
+9
+00:00:39,890 --> 00:00:42,530
+number of daily incidence on a stretch of road,
+
+10
+00:00:42,530 --> 00:00:45,505
+or how frequently words show up in a body of text.
+
+11
+00:00:45,505 --> 00:00:48,365
+The derivation of distributions like these were
+
+12
+00:00:48,365 --> 00:00:51,679
+breakthroughs for mechanisms that could create data in the real world.
+
+13
+00:00:51,679 --> 00:00:54,755
+These mathematical functions were used to describe
+
+14
+00:00:54,755 --> 00:00:57,980
+essentially all aspects of our daily lives.
+
+15
+00:00:57,979 --> 00:00:59,529
+But as it turns out,
+
+16
+00:00:59,530 --> 00:01:01,795
+these models are an over-simplification
+
+17
+00:01:01,795 --> 00:01:04,680
+of the complexities that exists in the real world.
+
+18
+00:01:04,680 --> 00:01:09,560
+Often, the probability-based models that were created for a situation did not
+
+19
+00:01:09,560 --> 00:01:14,980
+do a very good job of simulating the actual data observed in the world.
+
+20
+00:01:14,980 --> 00:01:16,924
+In the next video,
+
+21
+00:01:16,924 --> 00:01:18,780
+you will see a different perspective,
+
+22
+00:01:18,780 --> 00:01:20,519
+that of a computer scientist.
+
+23
+00:01:20,519 --> 00:01:24,899
+The combination of the computer scientist and statistician viewpoints results
+
+24
+00:01:24,900 --> 00:01:28,450
+in the diverse techniques used in machine learning today.
+

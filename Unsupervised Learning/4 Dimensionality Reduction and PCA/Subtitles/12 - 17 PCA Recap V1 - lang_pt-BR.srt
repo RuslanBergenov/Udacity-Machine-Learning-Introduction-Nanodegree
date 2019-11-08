@@ -1,0 +1,96 @@
+1
+00:00:00,904 --> 00:00:04,393
+REVISÃO SOBRE PCA
+
+2
+00:00:04,624 --> 00:00:07,180
+Nesta aula, introduzimos
+um novo tipo
+
+3
+00:00:07,213 --> 00:00:09,023
+de aprendizagem
+não supervisionada
+
+4
+00:00:09,056 --> 00:00:11,262
+que não implica
+em agrupar dados,
+
+5
+00:00:11,295 --> 00:00:13,673
+mas transformá-los.
+
+6
+00:00:13,706 --> 00:00:15,631
+Você aprendeu a PCA
+como um método
+
+7
+00:00:15,664 --> 00:00:18,885
+para encontrar as direções
+de variância máxima dos seus dados.
+
+8
+00:00:18,918 --> 00:00:21,401
+Eles são chamados
+de "componentes principais".
+
+9
+00:00:21,434 --> 00:00:23,821
+Você aplicou esta técnica
+em dígitos escritos à mão
+
+10
+00:00:23,854 --> 00:00:27,439
+usando a scikit-learn para reduzir
+a dimensionalidade das imagens,
+
+11
+00:00:27,472 --> 00:00:31,161
+ainda assim conseguindo predizer
+que número foi escrito.
+
+12
+00:00:31,194 --> 00:00:36,275
+Por fim, discutimos a importância
+desta técnica em outras aplicações.
+
+13
+00:00:36,308 --> 00:00:38,379
+Antes de seguirmos
+para a próxima aula,
+
+14
+00:00:38,412 --> 00:00:40,590
+você vai fazer
+mais um exemplo de PCA,
+
+15
+00:00:40,623 --> 00:00:43,063
+em que você testa a técnica
+em um conjunto de dados
+
+16
+00:00:43,096 --> 00:00:44,995
+sobre diferentes veículos.
+
+17
+00:00:45,028 --> 00:00:48,817
+Apesar do conjunto de dados
+não ser muito grande para PCA,
+
+18
+00:00:48,850 --> 00:00:51,118
+o objetivo é ganhar
+mais prática
+
+19
+00:00:51,151 --> 00:00:54,058
+antes de implementar
+esta técnica no projeto.
+
+20
+00:00:54,091 --> 00:00:55,278
+Divirta-se.
+

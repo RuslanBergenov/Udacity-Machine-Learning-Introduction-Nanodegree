@@ -1,0 +1,140 @@
+1
+00:00:00,000 --> 00:00:03,000
+So let's define the precision metric as follows.
+
+2
+00:00:03,000 --> 00:00:05,660
+Here's the confusion matrix of the medical model,
+
+3
+00:00:05,660 --> 00:00:09,120
+and we've added a red X in the spot that we really want to avoid,
+
+4
+00:00:09,119 --> 00:00:10,514
+which is the false negatives.
+
+5
+00:00:10,515 --> 00:00:12,605
+So precision will be the answer to the question,
+
+6
+00:00:12,605 --> 00:00:15,570
+out of all the points predicted to be positive,
+
+7
+00:00:15,570 --> 00:00:18,820
+how many of them were actually positive?
+
+8
+00:00:18,820 --> 00:00:22,030
+In this case, the question translates to,
+
+9
+00:00:22,030 --> 00:00:25,400
+out of all the patients that we diagnosed as sick,
+
+10
+00:00:25,399 --> 00:00:27,849
+how many were actually sick?
+
+11
+00:00:27,850 --> 00:00:30,600
+So precision is this column because this column are
+
+12
+00:00:30,600 --> 00:00:33,204
+the sick patients that we diagnose as sick.
+
+13
+00:00:33,204 --> 00:00:35,728
+So it is 1,000 that were correct,
+
+14
+00:00:35,728 --> 00:00:41,714
+divided by 1,800, which is the total number of patients diagnosed as sick.
+
+15
+00:00:41,715 --> 00:00:44,555
+This number is 55.7 percent.
+
+16
+00:00:44,554 --> 00:00:47,429
+It's not a high number because this is not a very precise model.
+
+17
+00:00:47,429 --> 00:00:52,454
+But, again, this is okay because what we're doing is avoiding this red X.
+
+18
+00:00:52,454 --> 00:00:54,784
+Now let's look at the spam email model.
+
+19
+00:00:54,784 --> 00:00:56,339
+What is this precision?
+
+20
+00:00:56,340 --> 00:00:57,920
+Now, we know that in this model,
+
+21
+00:00:57,920 --> 00:01:02,900
+precision is very important because the red X that we're avoiding is in this column.
+
+22
+00:01:02,899 --> 00:01:07,069
+The red X is the non-spam email that were accidentally sent to the spam folder.
+
+23
+00:01:07,069 --> 00:01:10,409
+So those 30 errors are really bad and we want to avoid them.
+
+24
+00:01:10,409 --> 00:01:12,244
+So, again, precision says,
+
+25
+00:01:12,245 --> 00:01:14,300
+''Out of all the emails sent to the spam folder,
+
+26
+00:01:14,299 --> 00:01:16,489
+how many of them were actually spam?"
+
+27
+00:01:16,489 --> 00:01:19,409
+So we have 100 which are correct,
+
+28
+00:01:19,409 --> 00:01:24,179
+divided by 130 which is all the ones we've sent to the spam folder.
+
+29
+00:01:24,180 --> 00:01:28,230
+This number is 76.9 percent, which is higher.
+
+30
+00:01:28,230 --> 00:01:31,049
+This is better since this model needs high precision,
+
+31
+00:01:31,049 --> 00:01:32,864
+so the number better be big.
+
+32
+00:01:32,864 --> 00:01:34,579
+Now, let's do an exercise.
+
+33
+00:01:34,579 --> 00:01:36,734
+Let's go to a linear model over here.
+
+34
+00:01:36,734 --> 00:01:39,290
+What is the precision of this linear model?
+
+35
+00:01:39,290 --> 00:01:41,830
+Enter your answer below.
+

@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:03,150
+Hi, again. Look through your recent commit messages,
+
+2
+00:00:03,150 --> 00:00:04,650
+if think about the formatting.
+
+3
+00:00:04,650 --> 00:00:07,655
+How can you make the messages more clear and helpful?
+
+4
+00:00:07,655 --> 00:00:12,775
+Think about how you would format them using the guide in the previous reading section.
+
+5
+00:00:12,775 --> 00:00:14,340
+Just mark this checkbox,
+
+6
+00:00:14,340 --> 00:00:16,520
+when you're ready to move on.
+

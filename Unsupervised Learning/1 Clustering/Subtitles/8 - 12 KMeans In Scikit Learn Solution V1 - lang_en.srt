@@ -1,0 +1,292 @@
+1
+00:00:00,000 --> 00:00:02,549
+So in the previous screen cast for clustering,
+
+2
+00:00:02,549 --> 00:00:06,269
+you saw how we could simulate our dataset and then fit
+
+3
+00:00:06,269 --> 00:00:10,509
+our data with the kmeans model and see how many cluster show up.
+
+4
+00:00:10,509 --> 00:00:11,844
+Then when it was your turn,
+
+5
+00:00:11,845 --> 00:00:14,545
+you tried this with different numbers of clusters.
+
+6
+00:00:14,544 --> 00:00:20,934
+So, you might have created a model with two clusters instead of four,
+
+7
+00:00:20,934 --> 00:00:25,259
+fit that to your dataset and finally predicted
+
+8
+00:00:25,260 --> 00:00:29,350
+on your dataset to see what your data would look like.
+
+9
+00:00:29,350 --> 00:00:32,750
+You can see this is what it would group into if there were two clusters.
+
+10
+00:00:32,750 --> 00:00:36,125
+Then again, you could try it with seven.
+
+11
+00:00:36,125 --> 00:00:42,140
+This process will hopefully become repetitive in a way that helps you
+
+12
+00:00:42,140 --> 00:00:45,439
+see how it can be extended to
+
+13
+00:00:45,439 --> 00:00:49,780
+other algorithms as well because it's the same process you go through for all of them.
+
+14
+00:00:49,780 --> 00:00:52,070
+Then, this is what it would look like if we had seven.
+
+15
+00:00:52,070 --> 00:00:55,740
+So, you can see how the colors are associated with the different clusters in this plot.
+
+16
+00:00:55,740 --> 00:00:58,405
+Then finally, once you fit kmeans,
+
+17
+00:00:58,405 --> 00:01:00,814
+there's a score method which takes the data.
+
+18
+00:01:00,814 --> 00:01:04,739
+The score is an indication of how far the points are from the centroids.
+
+19
+00:01:04,739 --> 00:01:07,990
+So, here they want you to do it for 1-10,
+
+20
+00:01:07,989 --> 00:01:10,354
+and keep track of the number of centroids.
+
+21
+00:01:10,355 --> 00:01:13,325
+So, this one takes a little bit,
+
+22
+00:01:13,325 --> 00:01:18,520
+but 1-11 will give us one through 10.
+
+23
+00:01:18,519 --> 00:01:22,699
+So, four each centroid and range 1-11,
+
+24
+00:01:22,700 --> 00:01:26,790
+because this is not inclusive and this is.
+
+25
+00:01:26,790 --> 00:01:31,370
+We want to obtain a score for each model and basically we can follow
+
+26
+00:01:31,370 --> 00:01:39,550
+this same step procedure and we want to fit it with a certain number of centers.
+
+27
+00:01:39,549 --> 00:01:42,280
+You don't actually want the labels,
+
+28
+00:01:42,280 --> 00:01:45,364
+what they want us to do is run the score method.
+
+29
+00:01:45,364 --> 00:01:47,334
+I'm just going to get rid of these.
+
+30
+00:01:47,334 --> 00:01:52,839
+So, we fit the kmeans model and then we score it on the data.
+
+31
+00:01:52,840 --> 00:01:55,299
+I'm going to create a vector of scores.
+
+32
+00:01:55,299 --> 00:01:57,784
+So, I'm just going to call this scores,
+
+33
+00:01:57,784 --> 00:02:01,229
+it'll just be a list and I'll do
+
+34
+00:02:01,230 --> 00:02:08,868
+scores.append and I'll just append the model scores into this and I'll do it as a tuple,
+
+35
+00:02:08,868 --> 00:02:12,479
+where I keep track of the center and the score.
+
+36
+00:02:12,479 --> 00:02:16,134
+So, this should take the center and the model score,
+
+37
+00:02:16,134 --> 00:02:19,254
+put it into a tuple and then attach it into that list.
+
+38
+00:02:19,254 --> 00:02:22,754
+Then it says, "Try creating your own scree plot."
+
+39
+00:02:22,754 --> 00:02:25,104
+I'm just going to create centers,
+
+40
+00:02:25,104 --> 00:02:30,984
+equals, list, range 1-11.
+
+41
+00:02:30,985 --> 00:02:34,015
+Then I have those two lists and I can just do a simple
+
+42
+00:02:34,014 --> 00:02:38,239
+plt.plot and then whatever's on the x axis,
+
+43
+00:02:38,240 --> 00:02:40,670
+which is in our case,
+
+44
+00:02:40,669 --> 00:02:45,768
+the centers and then whatever's on the y-axis which should be the scores.
+
+45
+00:02:45,769 --> 00:02:50,814
+I think that should do it. Then we want plt,
+
+46
+00:02:50,814 --> 00:02:56,884
+we could put a title on this and call it scree plot and
+
+47
+00:02:56,884 --> 00:03:05,899
+plt.x label which is the number of centers and then plt.y label,
+
+48
+00:03:06,419 --> 00:03:14,324
+it's the score or the average distance from centroid.
+
+49
+00:03:14,324 --> 00:03:17,849
+Let's see if this breaks, oh, and it did.
+
+50
+00:03:17,849 --> 00:03:21,025
+That's like an R syntax thing, it's a comma.
+
+51
+00:03:21,025 --> 00:03:24,230
+It should actually be like the absolute value.
+
+52
+00:03:24,229 --> 00:03:28,569
+Python does some weird stuff where, yeah, there we go.
+
+53
+00:03:28,569 --> 00:03:31,729
+So, Python does some weird things where they want all the scores,
+
+54
+00:03:31,729 --> 00:03:34,949
+as they get lower to be worse.
+
+55
+00:03:34,949 --> 00:03:36,709
+So in this case,
+
+56
+00:03:36,710 --> 00:03:38,275
+if we take the absolute value,
+
+57
+00:03:38,275 --> 00:03:39,760
+which was a strange thing.
+
+58
+00:03:39,759 --> 00:03:42,219
+But this absolute value is the actual distance,
+
+59
+00:03:42,219 --> 00:03:44,830
+where before it was like the negative of that and that's
+
+60
+00:03:44,830 --> 00:03:48,180
+just because of the way that scikit-learn does scores.
+
+61
+00:03:48,180 --> 00:03:49,680
+So based on this,
+
+62
+00:03:49,680 --> 00:03:53,920
+you can see that down here is actually the elbow that's where it flattens out.
+
+63
+00:03:53,919 --> 00:03:56,649
+So, up until four there's substantial drops and
+
+64
+00:03:56,650 --> 00:04:00,450
+the average distance and then it flattens out pretty substantially.
+
+65
+00:04:00,449 --> 00:04:02,554
+If we look at this,
+
+66
+00:04:02,555 --> 00:04:05,810
+cool, and you can see that they look pretty close to the same.
+
+67
+00:04:05,810 --> 00:04:08,819
+Using this scree plot how many clusters would you suggest?
+
+68
+00:04:08,819 --> 00:04:14,099
+Maybe unsurprisingly we would suggest the same number as what we saw before.
+
+69
+00:04:14,099 --> 00:04:16,860
+So that's right, we can see the data was four clusters,
+
+70
+00:04:16,860 --> 00:04:18,495
+oh, pharaoh is very happy.
+
+71
+00:04:18,495 --> 00:04:21,204
+We can see a strong leveling off after four clusters.
+
+72
+00:04:21,204 --> 00:04:24,805
+Then this is just a cell for you to write your answer.
+
+73
+00:04:24,805 --> 00:04:29,129
+I would suggest four, great.
+

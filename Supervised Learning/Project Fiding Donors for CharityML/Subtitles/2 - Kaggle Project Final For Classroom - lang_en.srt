@@ -1,0 +1,180 @@
+1
+00:00:00,000 --> 00:00:03,345
+So, with Kaggle, you can actually set up your own competitions?
+
+2
+00:00:03,345 --> 00:00:04,080
+Yes. Absolutely.
+
+3
+00:00:04,080 --> 00:00:07,200
+We're going to set up a competition for students to be able to
+
+4
+00:00:07,200 --> 00:00:10,544
+share their work through Kaggle and just get them onto the Kaggle platform.
+
+5
+00:00:10,544 --> 00:00:12,269
+How can they go about doing that?
+
+6
+00:00:12,269 --> 00:00:13,799
+How easy is that process?
+
+7
+00:00:13,800 --> 00:00:16,230
+How easy is it to get integrated into the community?
+
+8
+00:00:16,230 --> 00:00:18,870
+Yeah. I'm going to, answer it backwards.
+
+9
+00:00:18,870 --> 00:00:22,260
+So, getting integrated into the community, pretty straightforward.
+
+10
+00:00:22,260 --> 00:00:24,330
+People are fairly welcoming.
+
+11
+00:00:24,329 --> 00:00:27,149
+You can just write your Kernel,
+
+12
+00:00:27,149 --> 00:00:29,070
+make it public, and post on the forums,
+
+13
+00:00:29,070 --> 00:00:31,170
+you know, can I get some feedback? What do you guys think?
+
+14
+00:00:31,170 --> 00:00:33,195
+Here's my approach to this problem, what would you do?
+
+15
+00:00:33,195 --> 00:00:35,750
+And people tend to be pretty responsive and interested,
+
+16
+00:00:35,750 --> 00:00:38,810
+because it's a large community and people are really excited about data science.
+
+17
+00:00:38,810 --> 00:00:40,530
+Do you know how large the community is?
+
+18
+00:00:40,530 --> 00:00:44,045
+We definitely have over a million registered users.
+
+19
+00:00:44,045 --> 00:00:44,645
+Okay.
+
+20
+00:00:44,645 --> 00:00:45,455
+Yeah.
+
+21
+00:00:45,454 --> 00:00:47,539
+That great. I mean that's a huge community.
+
+22
+00:00:47,539 --> 00:00:49,884
+Yeah. No, it is. And it feels vibrant.
+
+23
+00:00:49,884 --> 00:00:50,640
+Yeah.
+
+24
+00:00:50,640 --> 00:00:52,000
+We also have something called In-class.
+
+25
+00:00:52,000 --> 00:00:54,515
+Which is a way that you can set up your own competitions.
+
+26
+00:00:54,515 --> 00:00:58,365
+So, you would pick a data set,
+
+27
+00:00:58,365 --> 00:01:00,980
+and then you split it
+
+28
+00:01:00,979 --> 00:01:03,559
+into testing and training just like you would. So, no one would see.
+
+29
+00:01:03,560 --> 00:01:05,240
+So, testing and training for people to see,
+
+30
+00:01:05,239 --> 00:01:08,454
+and then a third validation set that nobody would see. So, it would be hidden.
+
+31
+00:01:08,454 --> 00:01:12,125
+And then you would give people access to it and they would train their models,
+
+32
+00:01:12,125 --> 00:01:18,519
+and then upload their answer file for the, you know, the-
+
+33
+00:01:18,519 --> 00:01:20,099
+What they think should happen. Yeah. Right.
+
+34
+00:01:20,099 --> 00:01:23,729
+Yeah exactly. Then you'd validate it against the specific,
+
+35
+00:01:23,730 --> 00:01:26,260
+the secret, validation data set
+
+36
+00:01:26,260 --> 00:01:29,329
+and then ranking based on whatever sort of metric you're using.
+
+37
+00:01:29,329 --> 00:01:31,409
+So, if you were just looking at,
+
+38
+00:01:31,489 --> 00:01:34,909
+you probably wouldn't use like raw percent correct.
+
+39
+00:01:34,909 --> 00:01:36,079
+You could if you wanted to, right.
+
+40
+00:01:36,079 --> 00:01:38,250
+If it was sort of a problem that made sense there.
+
+41
+00:01:38,250 --> 00:01:40,650
+But I've seen people use these for obviously,
+
+42
+00:01:40,650 --> 00:01:42,555
+In-class, hence the name.
+
+43
+00:01:42,555 --> 00:01:47,330
+But also, if you just like, when you do a hackathon or just a project for some friends,
+
+44
+00:01:47,329 --> 00:01:48,935
+or like a little friendly competition.
+
+45
+00:01:48,935 --> 00:01:50,640
+Yeah, cool.
+

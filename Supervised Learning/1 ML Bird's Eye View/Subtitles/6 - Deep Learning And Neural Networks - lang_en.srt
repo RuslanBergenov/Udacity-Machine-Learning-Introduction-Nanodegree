@@ -1,0 +1,108 @@
+1
+00:00:00,000 --> 00:00:06,940
+If you've been following
+
+2
+00:00:06,940 --> 00:00:10,630
+the headlines related to artificial intelligence and machine learning,
+
+3
+00:00:10,630 --> 00:00:13,260
+you probably have heard of deep learning.
+
+4
+00:00:13,259 --> 00:00:15,070
+Deep learning has beaten
+
+5
+00:00:15,070 --> 00:00:19,524
+essentially all other machine-learning algorithms in its ability to predict,
+
+6
+00:00:19,524 --> 00:00:22,534
+and it can actually be used for supervised,
+
+7
+00:00:22,535 --> 00:00:25,734
+unsupervised, and reinforcement learning.
+
+8
+00:00:25,734 --> 00:00:27,673
+From a historical perspective,
+
+9
+00:00:27,673 --> 00:00:30,579
+the growth of this technique makes a lot of sense.
+
+10
+00:00:30,579 --> 00:00:35,349
+Over time, we've cared less and less about how we make predictions,
+
+11
+00:00:35,350 --> 00:00:38,620
+and now we care more about the accuracy of our predictions.
+
+12
+00:00:38,619 --> 00:00:42,979
+This connects well to the advancement of deep learning where we rarely
+
+13
+00:00:42,979 --> 00:00:48,254
+understand all of how or why our model make certain predictions.
+
+14
+00:00:48,255 --> 00:00:53,145
+Unfortunately, deep learning is not the solution to every problem.
+
+15
+00:00:53,145 --> 00:00:56,225
+It has three major barriers to entry.
+
+16
+00:00:56,225 --> 00:00:59,480
+First, you must have enough data.
+
+17
+00:00:59,479 --> 00:01:02,774
+Deep learning requires a lot of data.
+
+18
+00:01:02,774 --> 00:01:06,019
+Second, you must have the computing power.
+
+19
+00:01:06,019 --> 00:01:10,459
+In order to reach superhuman performance in the game of Go,
+
+20
+00:01:10,459 --> 00:01:18,514
+Google's DeepMind AlphaGo required 1,202 CPUs and 176 GPUs.
+
+21
+00:01:18,515 --> 00:01:24,265
+Third, you probably won't understand why certain decisions were being made,
+
+22
+00:01:24,265 --> 00:01:27,939
+given the complexity and flexibility of these algorithms.
+
+23
+00:01:27,939 --> 00:01:30,299
+For these reasons, not every
+
+24
+00:01:30,299 --> 00:01:33,869
+application of machine learning is one that requires deep learning.
+
+25
+00:01:33,870 --> 00:01:37,655
+You'll be getting some practice using deep learning in this program.
+
+26
+00:01:37,655 --> 00:01:42,599
+However, we have an entire deep learning nanodegree program available on the subject.
+
+27
+00:01:42,599 --> 00:01:46,489
+So, it's not the primary focus of this program.
+

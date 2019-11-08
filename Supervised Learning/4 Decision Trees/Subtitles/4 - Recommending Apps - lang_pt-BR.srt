@@ -1,0 +1,167 @@
+1
+00:00:00,367 --> 00:00:03,667
+Vamos ver o que acontece
+se dividirmos por sexo.
+
+2
+00:00:03,700 --> 00:00:04,905
+Ao fazer isso,
+
+3
+00:00:04,938 --> 00:00:07,700
+vemos que as mulheres baixaram
+o WhatsApp e o Pokémon GO
+
+4
+00:00:07,733 --> 00:00:10,767
+e os homens baixaram
+o Snapchat e o Pokémon GO.
+
+5
+00:00:10,800 --> 00:00:13,600
+Nos diz alguma coisa,
+mas não muita.
+
+6
+00:00:13,633 --> 00:00:15,733
+Por outro lado,
+se dividirmos por ocupação,
+
+7
+00:00:15,767 --> 00:00:18,400
+vemos que os estudantes
+baixaram o Pokémon GO
+
+8
+00:00:18,433 --> 00:00:21,267
+e as pessoas que trabalham
+baixaram outros aplicativos.
+
+9
+00:00:21,300 --> 00:00:23,033
+É uma informação boa.
+
+10
+00:00:23,067 --> 00:00:27,400
+Quando surgir um estudante,
+vamos recomendar o Pokémon GO.
+
+11
+00:00:27,433 --> 00:00:30,800
+Então a ocupação é melhor
+para prever que aplicativo
+
+12
+00:00:30,833 --> 00:00:32,733
+os usuários vão baixar.
+
+13
+00:00:32,767 --> 00:00:34,933
+Vamos tomar essa decisão.
+
+14
+00:00:34,967 --> 00:00:37,767
+Vamos criar
+uma anotação que diz
+
+15
+00:00:37,800 --> 00:00:42,000
+que vamos recomendar o Pokémon GO
+para todos que estão na escola.
+
+16
+00:00:42,033 --> 00:00:44,767
+Para os que trabalham,
+vamos ver.
+
+17
+00:00:45,000 --> 00:00:46,522
+Tirando os estudantes,
+
+18
+00:00:46,555 --> 00:00:48,100
+vamos analisar
+as pessoas que trabalham
+
+19
+00:00:48,133 --> 00:00:51,233
+e a divisão entre os sexos
+vai nos ajudar,
+
+20
+00:00:51,267 --> 00:00:53,667
+porque as mulheres baixaram
+o WhatsApp
+
+21
+00:00:53,700 --> 00:00:55,900
+e os homens baixaram
+o Snapchat.
+
+22
+00:00:55,933 --> 00:00:58,867
+Então vamos adicionar
+mais uma anotação.
+
+23
+00:00:58,900 --> 00:01:01,333
+A nova anotação diz que,
+se você trabalha,
+
+24
+00:01:01,367 --> 00:01:02,833
+vamos pedir o sexo.
+
+25
+00:01:02,867 --> 00:01:05,067
+Se for feminino,
+vamos recomendar o WhatsApp.
+
+26
+00:01:05,100 --> 00:01:07,833
+Se for masculino,
+vamos recomendar o Snapchat.
+
+27
+00:01:07,867 --> 00:01:09,933
+Pronto. Um breve resumo.
+
+28
+00:01:09,967 --> 00:01:13,067
+Se for estudante,
+vamos recomendar o Pokémon GO.
+
+29
+00:01:13,100 --> 00:01:15,433
+Se for alguém que trabalha,
+vamos pedir o sexo.
+
+30
+00:01:15,467 --> 00:01:18,233
+Se for mulher,
+vamos recomendar o WhatsApp.
+
+31
+00:01:18,267 --> 00:01:20,967
+Se for homem,
+vamos recomendar o Snapchat.
+
+32
+00:01:22,733 --> 00:01:24,561
+Agora o que precisamos
+definir é
+
+33
+00:01:24,594 --> 00:01:27,267
+como fazer o computador
+avaliar as duas opções
+
+34
+00:01:27,300 --> 00:01:31,500
+e entender que a ocupação
+é a melhor opção para dividir.
+
+35
+00:01:31,533 --> 00:01:32,667
+Vamos aprender.
+

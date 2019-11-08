@@ -1,0 +1,38 @@
+1
+00:00:00,467 --> 00:00:04,633
+Vamos nos aprofundar na arte
+de dividir os dados em duas partes.
+
+2
+00:00:04,667 --> 00:00:06,633
+Vamos analisar
+este conjunto de dados.
+
+3
+00:00:06,667 --> 00:00:08,433
+Vou desenhar duas vezes.
+
+4
+00:00:08,467 --> 00:00:12,433
+Vou desenhar duas linhas que separem
+os pontos azuis e vermelhos.
+
+5
+00:00:12,467 --> 00:00:15,400
+Aqui está uma
+e aqui está a outra.
+
+6
+00:00:15,433 --> 00:00:19,867
+E uma pergunta: qual linha você acha
+que separa melhor os pontos?
+
+7
+00:00:19,900 --> 00:00:22,533
+A linha da esquerda
+ou da direita?
+
+8
+00:00:22,567 --> 00:00:23,667
+Responda abaixo.
+

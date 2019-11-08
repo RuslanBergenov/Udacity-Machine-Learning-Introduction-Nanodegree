@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:04,049
+Congratulations. Now you have to learn how to train models, how to test them,
+
+2
+00:00:04,049 --> 00:00:06,904
+how to use certain metrics to evaluate how good these models are,
+
+3
+00:00:06,905 --> 00:00:10,554
+and, finally, how to tune the parameters to improve your model.
+
+4
+00:00:10,554 --> 00:00:13,199
+Now you are ready to get your hands on the project where you
+
+5
+00:00:13,199 --> 00:00:16,000
+can put all of this knowledge in practice. Good luck.
+

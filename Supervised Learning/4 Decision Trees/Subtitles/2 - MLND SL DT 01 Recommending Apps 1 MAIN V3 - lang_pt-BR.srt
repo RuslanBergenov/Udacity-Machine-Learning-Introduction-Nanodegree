@@ -1,0 +1,115 @@
+1
+00:00:00,433 --> 00:00:02,053
+Vamos começar
+com um exemplo.
+
+2
+00:00:02,086 --> 00:00:05,000
+Digamos que temos que escrever
+o mecanismo de recomendação
+
+3
+00:00:05,033 --> 00:00:07,567
+da App Store
+ou do Google Play.
+
+4
+00:00:07,600 --> 00:00:09,833
+Nossa função é recomendar
+o aplicativo
+
+5
+00:00:09,867 --> 00:00:11,900
+que a pessoa
+vai querer baixar.
+
+6
+00:00:11,933 --> 00:00:14,233
+Vamos fazer isso
+usando dados prévios.
+
+7
+00:00:14,267 --> 00:00:17,267
+Eles são uma tabela
+com seis pessoas, uma em cada linha,
+
+8
+00:00:17,300 --> 00:00:20,167
+as colunas são o sexo,
+masculino ou feminino,
+
+9
+00:00:20,200 --> 00:00:22,633
+a ocupação,
+trabalho ou estudo,
+
+10
+00:00:22,667 --> 00:00:24,467
+e o aplicativo que baixaram.
+
+11
+00:00:24,500 --> 00:00:28,367
+As opções são Pokémon GO,
+WhatsApp e Snapchat.
+
+12
+00:00:28,400 --> 00:00:31,233
+O modelo que vamos criar vai usar
+as duas primeiras colunas
+
+13
+00:00:31,267 --> 00:00:32,867
+para adivinhar a terceira.
+
+14
+00:00:32,900 --> 00:00:37,100
+Vamos começar com questionários
+para testar nossa intuição.
+
+15
+00:00:37,133 --> 00:00:38,667
+Vamos ao primeiro.
+
+16
+00:00:38,700 --> 00:00:41,033
+Se temos uma mulher
+que trabalha num escritório,
+
+17
+00:00:41,067 --> 00:00:43,000
+que aplicativo
+devemos recomendar?
+
+18
+00:00:43,033 --> 00:00:46,667
+Pokémon GO, WhatsApp
+ou Snapchat?
+
+19
+00:00:46,700 --> 00:00:48,133
+Vamos ao segundo.
+
+20
+00:00:48,167 --> 00:00:50,300
+Se temos um homem
+que trabalha numa fábrica,
+
+21
+00:00:50,333 --> 00:00:52,233
+que aplicativo
+devemos recomendar?
+
+22
+00:00:52,267 --> 00:00:54,533
+E se temos uma menina
+no ensino médio,
+
+23
+00:00:54,567 --> 00:00:56,333
+que aplicativo
+devemos recomendar?
+
+24
+00:00:56,367 --> 00:00:57,467
+Responda abaixo.
+

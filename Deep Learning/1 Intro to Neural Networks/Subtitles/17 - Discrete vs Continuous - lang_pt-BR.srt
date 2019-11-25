@@ -1,0 +1,35 @@
+1
+00:00:00,133 --> 00:00:02,267
+Na última seção,
+nós vimos a diferença
+
+2
+00:00:02,301 --> 00:00:05,334
+entre funções de erros
+discretos e contínuos
+
+3
+00:00:05,368 --> 00:00:08,767
+e descobrimos que, para usarmos
+gradiente descendente,
+
+4
+00:00:08,801 --> 00:00:11,267
+nós precisamos
+de uma função de erro contínuo.
+
+5
+00:00:11,301 --> 00:00:13,534
+Para isso, nós também
+precisamos mudar
+
+6
+00:00:13,568 --> 00:00:16,634
+de previsões discretas
+para previsões contínuas.
+
+7
+00:00:16,668 --> 00:00:18,434
+Eu vou mostrar
+o que eu quero dizer.
+

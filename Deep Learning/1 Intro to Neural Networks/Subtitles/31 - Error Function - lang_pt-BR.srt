@@ -1,0 +1,353 @@
+1
+00:00:00,300 --> 00:00:02,634
+Este é um bom momento
+para recapitularmos
+
+2
+00:00:02,667 --> 00:00:04,167
+as últimas lições.
+
+3
+00:00:04,200 --> 00:00:06,901
+Aqui nós temos dois modelos,
+o ruim, à esquerda,
+
+4
+00:00:06,934 --> 00:00:08,801
+e o bom, à direita.
+
+5
+00:00:08,834 --> 00:00:11,734
+Para cada um nós calculamos
+a entropia cruzada,
+
+6
+00:00:11,767 --> 00:00:15,767
+que é a soma dos negativos
+dos logaritmos
+
+7
+00:00:15,801 --> 00:00:19,100
+das probabilidades de os pontos
+serem da cor que são.
+
+8
+00:00:19,133 --> 00:00:22,167
+Nós concluímos que o da direita
+é melhor,
+
+9
+00:00:22,200 --> 00:00:25,601
+pois a entropia cruzada
+é bem menor.
+
+10
+00:00:25,634 --> 00:00:29,267
+Vamos calcular a fórmula
+da função de erro.
+
+11
+00:00:29,300 --> 00:00:31,501
+Vamos dividir em dois casos,
+
+12
+00:00:31,534 --> 00:00:34,067
+o primeiro
+sendo Y igual a um.
+
+13
+00:00:34,100 --> 00:00:36,701
+Quando o ponto for azul,
+
+14
+00:00:36,734 --> 00:00:39,868
+o modelo nos diz que
+a probabilidade de ser azul
+
+15
+00:00:39,901 --> 00:00:42,133
+é a previsão de Y^.
+
+16
+00:00:42,167 --> 00:00:47,434
+Para estes dois pontos,
+as probabilidades são 0,6 e 0,2.
+
+17
+00:00:48,400 --> 00:00:50,734
+Como podemos ver,
+o ponto na área azul
+
+18
+00:00:50,767 --> 00:00:52,801
+tem maior probabilidade
+de ser azul
+
+19
+00:00:52,834 --> 00:00:55,367
+do que o ponto
+da área vermelha.
+
+20
+00:00:55,400 --> 00:01:00,634
+O erro é o logaritmo negativo
+desta probabilidade.
+
+21
+00:01:00,667 --> 00:01:04,501
+Ele é precisamente
+menos logaritmo de Y^.
+
+22
+00:01:04,534 --> 00:01:07,567
+Na figura, é menos
+logaritmo de 0,6
+
+23
+00:01:07,601 --> 00:01:10,133
+e menos logaritmo de 0,2.
+
+24
+00:01:10,167 --> 00:01:13,834
+Se Y for igual a zero,
+o ponto é vermelho,
+
+25
+00:01:13,868 --> 00:01:18,033
+precisamos da probabilidade
+de ele ser vermelho.
+
+26
+00:01:18,067 --> 00:01:19,801
+A probabilidade
+de ele ser vermelho
+
+27
+00:01:19,834 --> 00:01:23,100
+é um menos a probabilidade
+de o ponto ser azul,
+
+28
+00:01:23,133 --> 00:01:27,934
+que é precisamente
+um menos a previsão Y^.
+
+29
+00:01:27,968 --> 00:01:30,934
+O erro é precisamente
+o logaritmo negativo
+
+30
+00:01:30,968 --> 00:01:32,234
+desta probabilidade,
+
+31
+00:01:32,267 --> 00:01:36,234
+que é logaritmo negativo
+de um menos Y^.
+
+32
+00:01:36,267 --> 00:01:39,367
+Neste caso, nós temos
+logaritmo negativo 0,1
+
+33
+00:01:39,400 --> 00:01:42,033
+e logaritmo negativo 0,7.
+
+34
+00:01:42,067 --> 00:01:45,234
+Nós concluímos que o erro
+é um logaritmo negativo de Y^
+
+35
+00:01:45,267 --> 00:01:46,834
+se o ponto for azul
+
+36
+00:01:46,868 --> 00:01:49,234
+e logaritmo negativo
+de um menos Y^
+
+37
+00:01:49,267 --> 00:01:50,667
+se o ponto for vermelho.
+
+38
+00:01:50,701 --> 00:01:53,767
+Nós podemos resumir
+as duas fórmulas em uma.
+
+39
+00:01:53,801 --> 00:01:59,167
+Erro é igual a um menos Y vezes
+logaritmo de um menos Y^ negativo
+
+40
+00:01:59,200 --> 00:02:02,133
+menos Y vezes
+logaritmo de Y^.
+
+41
+00:02:02,167 --> 00:02:03,834
+Por que esta fórmula
+funciona?
+
+42
+00:02:03,868 --> 00:02:07,067
+Porque se o ponto for azul,
+então Y é igual a um,
+
+43
+00:02:07,100 --> 00:02:09,567
+assim um menos Y
+será igual a zero,
+
+44
+00:02:09,601 --> 00:02:11,701
+tornando
+o primeiro termo zero
+
+45
+00:02:11,734 --> 00:02:16,334
+e o segundo,
+um logaritmo de Y^.
+
+46
+00:02:16,367 --> 00:02:20,234
+O ponto também é vermelho,
+então é Y igual a zero.
+
+47
+00:02:20,267 --> 00:02:22,501
+O segundo termo da fórmula
+é zero
+
+48
+00:02:22,534 --> 00:02:26,834
+e o primeiro é o logaritmo
+de um menos Y^.
+
+49
+00:02:27,567 --> 00:02:30,567
+A fórmula para a função de erro
+é a soma
+
+50
+00:02:30,601 --> 00:02:33,100
+de todas as funções de erro
+dos pontos,
+
+51
+00:02:33,133 --> 00:02:35,067
+que é esta soma aqui.
+
+52
+00:02:35,968 --> 00:02:38,868
+Será este 4,8
+que temos aqui.
+
+53
+00:02:38,901 --> 00:02:42,567
+Por convenção, nós consideramos
+a média e não a soma,
+
+54
+00:02:42,601 --> 00:02:45,033
+que é onde dividimos
+por N aqui.
+
+55
+00:02:45,868 --> 00:02:49,033
+Isso transforma
+o 4,8 em 1,2.
+
+56
+00:02:49,067 --> 00:02:50,267
+De agora em diante,
+
+57
+00:02:50,300 --> 00:02:53,067
+nós utilizaremos esta fórmula
+como nossa função de erro.
+
+58
+00:02:53,100 --> 00:02:57,334
+Agora, como o Y^ é dado
+pela sigmoide da função linear
+
+59
+00:02:57,367 --> 00:02:59,033
+WX mais B,
+
+60
+00:02:59,067 --> 00:03:03,001
+a fórmula total do erro
+será em termos de W e B,
+
+61
+00:03:03,033 --> 00:03:04,834
+que são os pesos do modelo,
+
+62
+00:03:04,868 --> 00:03:07,934
+que é a soma que vemos aqui.
+
+63
+00:03:08,868 --> 00:03:13,801
+Neste caso, YI é um rótulo
+do ponto X sobrescrito I.
+
+64
+00:03:14,467 --> 00:03:17,400
+Após calcularmos,
+a meta é minimizá-lo.
+
+65
+00:03:17,434 --> 00:03:18,968
+É isso que faremos a seguir.
+
+66
+00:03:19,000 --> 00:03:23,133
+Nós fizemos uma classificação
+binária dos problemas.
+
+67
+00:03:23,167 --> 00:03:25,701
+Se fosse um problema
+de classificação multiclasse,
+
+68
+00:03:25,734 --> 00:03:29,634
+o erro seria dado
+pela entropia multiclasse.
+
+69
+00:03:29,667 --> 00:03:31,267
+A fórmula é dada aqui,
+
+70
+00:03:31,300 --> 00:03:33,100
+na qual,
+para cada ponto de dados,
+
+71
+00:03:33,133 --> 00:03:36,567
+pegamos o produto do rótulo
+vezes o logaritmo da previsão
+
+72
+00:03:36,601 --> 00:03:38,968
+e fazemos a média
+de todos os valores.
+
+73
+00:03:39,000 --> 00:03:41,367
+Este é um ótimo exercício
+para você se convencer
+
+74
+00:03:41,400 --> 00:03:44,567
+de que os dois são iguais,
+mesmo se houver só duas classes.
+

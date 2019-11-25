@@ -1,0 +1,39 @@
+1
+00:00:00,334 --> 00:00:03,167
+Nós vimos conjuntos de dados
+que podem ser separados
+
+2
+00:00:03,201 --> 00:00:05,667
+por uma linha,
+como esta aqui,
+
+3
+00:00:05,701 --> 00:00:08,868
+mas o mundo real
+é muito mais complexo.
+
+4
+00:00:08,902 --> 00:00:12,267
+É aqui que as redes neurais
+mostram o potencial.
+
+5
+00:00:12,301 --> 00:00:14,667
+Nos próximos vídeos,
+veremos como lidar
+
+6
+00:00:14,701 --> 00:00:16,634
+com conjuntos de dados
+mais complicados,
+
+7
+00:00:16,668 --> 00:00:18,701
+que exigem
+limites não lineares
+
+8
+00:00:18,735 --> 00:00:20,300
+tais como este aqui.
+

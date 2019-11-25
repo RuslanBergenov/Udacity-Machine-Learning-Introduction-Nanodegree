@@ -1,0 +1,64 @@
+1
+00:00:00,300 --> 00:00:02,033
+Nós estamos progredindo.
+
+2
+00:00:02,067 --> 00:00:05,067
+Concluímos que a probabilidade
+é importante,
+
+3
+00:00:05,100 --> 00:00:06,667
+e que um modelo melhor
+
+4
+00:00:06,701 --> 00:00:08,734
+nos dará melhor
+probabilidade.
+
+5
+00:00:08,767 --> 00:00:10,567
+A pergunta é a seguinte:
+
+6
+00:00:10,601 --> 00:00:12,934
+como maximizamos
+a probabilidade?
+
+7
+00:00:12,968 --> 00:00:16,100
+Nós estamos falando
+sobre uma função de erro
+
+8
+00:00:16,133 --> 00:00:18,100
+e como minimizar esta função
+
+9
+00:00:18,133 --> 00:00:20,567
+nos dá a melhor
+solução possível.
+
+10
+00:00:20,804 --> 00:00:23,033
+As duas coisas
+podem estar conectadas?
+
+11
+00:00:23,067 --> 00:00:26,434
+Podemos ter uma função de erro
+da probabilidade?
+
+12
+00:00:26,468 --> 00:00:29,267
+Maximizar a probabilidade
+
+13
+00:00:29,301 --> 00:00:32,434
+é o mesmo que minimizar
+a função de erro?
+
+14
+00:00:32,760 --> 00:00:34,097
+Talvez.
+

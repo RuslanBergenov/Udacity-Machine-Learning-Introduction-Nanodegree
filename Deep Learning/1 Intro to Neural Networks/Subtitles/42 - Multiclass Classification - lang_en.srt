@@ -1,0 +1,92 @@
+1
+00:00:00,000 --> 00:00:02,640
+We briefly mentioned multi-class classification
+
+2
+00:00:02,640 --> 00:00:05,439
+in the last video but let me be more specific.
+
+3
+00:00:05,440 --> 00:00:07,469
+It seems that neural networks work really well when
+
+4
+00:00:07,469 --> 00:00:10,278
+the problem consist on classifying two classes.
+
+5
+00:00:10,278 --> 00:00:13,800
+For example, if the model predicts a probability of receiving
+
+6
+00:00:13,800 --> 00:00:18,625
+a gift or not then the answer just comes as the output of the neural network.
+
+7
+00:00:18,625 --> 00:00:20,588
+But what happens if we have more classes?
+
+8
+00:00:20,588 --> 00:00:23,643
+Say, we want the model to tell us if an image is a duck,
+
+9
+00:00:23,643 --> 00:00:26,849
+a beaver, or a walrus.
+
+10
+00:00:26,850 --> 00:00:30,695
+Well, one thing we can do is create a neural network to predict if the image is a duck,
+
+11
+00:00:30,695 --> 00:00:33,990
+then another neural network to predict if the image is a beaver,
+
+12
+00:00:33,990 --> 00:00:37,408
+and a third neural network to predict if the image is a walrus.
+
+13
+00:00:37,408 --> 00:00:42,548
+Then we can just use SoftMax or pick the answer that gives us the highest probability.
+
+14
+00:00:42,548 --> 00:00:45,073
+But this seems like overkill, right?
+
+15
+00:00:45,073 --> 00:00:48,280
+The first layers of the neural network should be enough to tell us things about
+
+16
+00:00:48,280 --> 00:00:52,545
+the image and maybe just the last layer should tell us which animal it is.
+
+17
+00:00:52,545 --> 00:00:56,448
+As a matter of fact, as you'll see in the CNN section,
+
+18
+00:00:56,448 --> 00:00:58,594
+this is exactly the case.
+
+19
+00:00:58,594 --> 00:01:02,719
+So what we need here is to add more nodes in the output layer and each one of
+
+20
+00:01:02,719 --> 00:01:07,730
+the nodes will give us the probability that the image is each of the animals.
+
+21
+00:01:07,730 --> 00:01:11,569
+Now, we take the scores and apply the SoftMax function that was previously
+
+22
+00:01:11,569 --> 00:01:15,989
+defined to obtain well-defined probabilities.
+
+23
+00:01:15,989 --> 00:01:20,000
+This is how we get neural networks to do multi-class classification.
+

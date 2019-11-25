@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:02,959
+So far we have models that give us an answer of
+
+2
+00:00:02,959 --> 00:00:07,099
+yes/no or the probability of a label being positive or negative.
+
+3
+00:00:07,099 --> 00:00:08,605
+What if we have more classes?
+
+4
+00:00:08,605 --> 00:00:11,300
+What if we want our model to tell us if something is red,
+
+5
+00:00:11,300 --> 00:00:14,160
+blue, yellow or dog, cat, bird?
+
+6
+00:00:14,160 --> 00:00:16,250
+In this video I'll show you what to do.
+

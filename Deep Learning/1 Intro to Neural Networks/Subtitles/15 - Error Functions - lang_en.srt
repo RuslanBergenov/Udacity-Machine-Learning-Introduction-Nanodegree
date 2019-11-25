@@ -1,0 +1,32 @@
+1
+00:00:00,000 --> 00:00:04,708
+So the way we'll solve our problems from now on is with the help of an error function.
+
+2
+00:00:04,708 --> 00:00:09,419
+An error function is simply something that tells us how far we are from the solution.
+
+3
+00:00:09,419 --> 00:00:14,175
+For example, if I'm here and my goal is to get to this plant,
+
+4
+00:00:14,175 --> 00:00:18,114
+an error function will just tell me the distance from the plant.
+
+5
+00:00:18,114 --> 00:00:20,655
+My approach would then be to look around myself,
+
+6
+00:00:20,655 --> 00:00:25,730
+check in which direction I can take a step to get closer to the plant,
+
+7
+00:00:25,730 --> 00:00:28,875
+take that step and then repeat.
+
+8
+00:00:28,875 --> 00:00:33,000
+Here the error is simply the distance from the plant.
+

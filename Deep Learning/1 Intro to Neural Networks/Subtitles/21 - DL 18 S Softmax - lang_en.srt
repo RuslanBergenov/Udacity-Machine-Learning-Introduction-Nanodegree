@@ -1,0 +1,132 @@
+1
+00:00:00,000 --> 00:00:02,174
+So, if you said exponential, you are correct.
+
+2
+00:00:02,174 --> 00:00:06,115
+Because this is a function that returns a positive number for every input.
+
+3
+00:00:06,115 --> 00:00:09,839
+E to the X is always a positive number.
+
+4
+00:00:09,839 --> 00:00:12,119
+So, what we're going to do is exactly what we did before,
+
+5
+00:00:12,119 --> 00:00:15,089
+except, applying it to the X to the scores.
+
+6
+00:00:15,089 --> 00:00:16,589
+So, instead of 2,1, 0,
+
+7
+00:00:16,589 --> 00:00:18,210
+we have E to the 2,
+
+8
+00:00:18,210 --> 00:00:20,130
+E to the 1 and E to the 0.
+
+9
+00:00:20,129 --> 00:00:25,774
+So, that 2 becomes E to the 2 divided by E to the two plus E to the 1 plus E to the 0.
+
+10
+00:00:25,774 --> 00:00:28,094
+And, similarly for 1 and 0.
+
+11
+00:00:28,094 --> 00:00:35,295
+So, the probabilities we obtain now are as 0.67, 0.24 and 0.09.
+
+12
+00:00:35,295 --> 00:00:36,910
+This clearly add to 1.
+
+13
+00:00:36,909 --> 00:00:39,869
+And, also notice that since the exponential function is increasing,
+
+14
+00:00:39,869 --> 00:00:43,009
+then the duck has a higher probability than the beaver.
+
+15
+00:00:43,009 --> 00:00:45,974
+And this one has a higher probability than the walrus.
+
+16
+00:00:45,975 --> 00:00:51,289
+This function is called the Softmax function and it's defined formally like this.
+
+17
+00:00:51,289 --> 00:00:56,054
+Let's say we have N classes and a linear model that gives us the following scores.
+
+18
+00:00:56,054 --> 00:00:59,005
+Z1, Z2, up to ZN.
+
+19
+00:00:59,005 --> 00:01:01,560
+Each score for each of the classes.
+
+20
+00:01:01,560 --> 00:01:04,379
+What we do to turn them into probabilities is to say
+
+21
+00:01:04,379 --> 00:01:07,769
+the probability that the object is in class I is going to be
+
+22
+00:01:07,769 --> 00:01:11,339
+E to the power of the ZI divided by
+
+23
+00:01:11,340 --> 00:01:15,210
+the sum of E to the power of Z1 plus all the way to E to the power ZN.
+
+24
+00:01:15,209 --> 00:01:19,405
+That's how we turn scores into probabilities.
+
+25
+00:01:19,405 --> 00:01:20,695
+So, here's a question for you.
+
+26
+00:01:20,694 --> 00:01:21,839
+When we had two classes,
+
+27
+00:01:21,840 --> 00:01:24,234
+we applied the sigmoid function to the scores.
+
+28
+00:01:24,234 --> 00:01:27,929
+Now, that we have more classes we apply the softmax function to the scores.
+
+29
+00:01:27,930 --> 00:01:30,420
+The question is, is the softmax function
+
+30
+00:01:30,420 --> 00:01:33,424
+for N equals to the same as the sigmoid function?
+
+31
+00:01:33,424 --> 00:01:35,789
+I'll let you think about it. The answer is actually,
+
+32
+00:01:35,790 --> 00:01:37,245
+yes, but it's not super trivial why.
+
+33
+00:01:37,245 --> 00:01:39,000
+And, it's a nice thing to remember.
+

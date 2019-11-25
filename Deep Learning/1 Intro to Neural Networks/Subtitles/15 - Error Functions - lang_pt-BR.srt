@@ -1,0 +1,51 @@
+1
+00:00:00,467 --> 00:00:04,734
+Nós resolveremos os problemas
+com uma função de erro.
+
+2
+00:00:04,768 --> 00:00:07,033
+Ela é algo que nos informa
+
+3
+00:00:07,067 --> 00:00:09,267
+a distância que estamos
+da solução.
+
+4
+00:00:09,301 --> 00:00:11,901
+Por exemplo,
+se eu estiver aqui
+
+5
+00:00:11,935 --> 00:00:14,501
+e minha meta é
+chegar até a planta,
+
+6
+00:00:14,535 --> 00:00:17,968
+uma função de erro
+informará a distância da planta.
+
+7
+00:00:18,002 --> 00:00:20,834
+Eu deverei olhar em volta
+
+8
+00:00:20,868 --> 00:00:23,534
+para ver em qual direção
+eu devo seguir
+
+9
+00:00:23,568 --> 00:00:25,300
+para me aproximar da planta.
+
+10
+00:00:26,000 --> 00:00:29,267
+Eu dou o passo e repito.
+
+11
+00:00:29,301 --> 00:00:32,868
+Aqui o erro é simplesmente
+a distância da planta.
+

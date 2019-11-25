@@ -1,0 +1,80 @@
+1
+00:00:00,000 --> 00:00:02,919
+So before we start calculating derivatives,
+
+2
+00:00:02,919 --> 00:00:04,980
+let's do a refresher on the chain rule which
+
+3
+00:00:04,980 --> 00:00:08,080
+is the main technique we'll use to calculate them.
+
+4
+00:00:08,080 --> 00:00:12,390
+The chain rule says, if you have a variable x on a function f that you
+
+5
+00:00:12,390 --> 00:00:17,824
+apply to x to get f of x, which we're gonna call A,
+
+6
+00:00:17,824 --> 00:00:19,809
+and then another function g,
+
+7
+00:00:19,809 --> 00:00:23,604
+which you apply to f of x to get g of f of x,
+
+8
+00:00:23,605 --> 00:00:26,760
+which we're gonna call B, the chain rule says,
+
+9
+00:00:26,760 --> 00:00:32,920
+if you want to find the partial derivative of B with respect to x,
+
+10
+00:00:32,920 --> 00:00:36,685
+that's just a partial derivative of B with respect to
+
+11
+00:00:36,685 --> 00:00:41,704
+A times the partial derivative of A with respect to x.
+
+12
+00:00:41,704 --> 00:00:43,184
+So it literally says,
+
+13
+00:00:43,185 --> 00:00:47,605
+when composing functions, that derivatives just multiply,
+
+14
+00:00:47,604 --> 00:00:50,344
+and that's gonna be super useful for us because
+
+15
+00:00:50,344 --> 00:00:55,185
+feed forwarding is literally composing a bunch of functions,
+
+16
+00:00:55,185 --> 00:01:00,554
+and back propagation is literally taking the derivative at each piece,
+
+17
+00:01:00,554 --> 00:01:03,344
+and since taking the derivative of a composition
+
+18
+00:01:03,344 --> 00:01:06,756
+is the same as multiplying the partial derivatives,
+
+19
+00:01:06,756 --> 00:01:10,290
+then all we're gonna do is multiply a bunch of
+
+20
+00:01:10,290 --> 00:01:14,130
+partial derivatives to get what we want. Pretty simple, right?
+

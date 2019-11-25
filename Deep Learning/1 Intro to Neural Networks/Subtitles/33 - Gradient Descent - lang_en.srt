@@ -1,0 +1,184 @@
+1
+00:00:00,000 --> 00:00:03,714
+So let's study gradient descent in more mathematical detail.
+
+2
+00:00:03,714 --> 00:00:07,799
+Our function is a function of the weights and it can be graph like this.
+
+3
+00:00:07,799 --> 00:00:10,199
+It's got a mathematical structure so it's not Mt.
+
+4
+00:00:10,199 --> 00:00:13,639
+Everest anymore, it's more of a mount Math-Er-Horn.
+
+5
+00:00:13,640 --> 00:00:17,830
+So we're standing somewhere in Mount Math-Er-Horn and we need to go down.
+
+6
+00:00:17,829 --> 00:00:25,544
+So now the inputs of the functions are W1 and W2 and the error function is given by
+
+7
+00:00:25,545 --> 00:00:29,470
+E. Then the gradient of E is given by
+
+8
+00:00:29,469 --> 00:00:35,924
+the vector sum of the partial derivatives of E with respect to W1 and W2.
+
+9
+00:00:35,924 --> 00:00:39,289
+This gradient actually tells us the direction we want to
+
+10
+00:00:39,289 --> 00:00:42,879
+move if we want to increase the error function the most.
+
+11
+00:00:42,880 --> 00:00:45,679
+Thus, if we take the negative of the gradient,
+
+12
+00:00:45,679 --> 00:00:48,884
+this will tell us how to decrease the error function the most.
+
+13
+00:00:48,884 --> 00:00:51,536
+And this is precisely what we'll do.
+
+14
+00:00:51,536 --> 00:00:52,882
+At the point we're standing,
+
+15
+00:00:52,881 --> 00:00:58,634
+we'll take the negative of the gradient of the error function at that point.
+
+16
+00:00:58,634 --> 00:01:01,254
+Then we take a step in that direction.
+
+17
+00:01:01,255 --> 00:01:02,650
+Once we take a step,
+
+18
+00:01:02,649 --> 00:01:04,575
+we'll be in a lower position.
+
+19
+00:01:04,575 --> 00:01:07,525
+So we do it again, and again,
+
+20
+00:01:07,525 --> 00:01:12,902
+and again, until we are able to get to the bottom of the mountain.
+
+21
+00:01:12,902 --> 00:01:15,219
+So this is how we calculate the gradient.
+
+22
+00:01:15,219 --> 00:01:19,724
+We start with our initial prediction Y had equals sigmoid of W Expo's B.
+
+23
+00:01:19,724 --> 00:01:22,089
+And let's say this prediction is bad because
+
+24
+00:01:22,090 --> 00:01:25,250
+the error is large since we're high up in the mountain.
+
+25
+00:01:25,250 --> 00:01:26,765
+The prediction looks like this,
+
+26
+00:01:26,765 --> 00:01:32,930
+Y had equal sigmoid of W 1 x 1 plus all the way to WnXn plus b.
+
+27
+00:01:32,930 --> 00:01:37,025
+Now the error function is given by the formula we saw before.
+
+28
+00:01:37,025 --> 00:01:40,505
+But what matters here is the gradient of the error function.
+
+29
+00:01:40,504 --> 00:01:44,899
+The gradient of the error function is precisely the vector formed by
+
+30
+00:01:44,900 --> 00:01:50,170
+the partial derivative of the error function with respect to the weights and the bias.
+
+31
+00:01:50,170 --> 00:01:54,189
+Now, we take a step in the direction of the negative of the gradient.
+
+32
+00:01:54,189 --> 00:01:57,530
+As before, we don't want to make any dramatic changes,
+
+33
+00:01:57,530 --> 00:02:00,230
+so we'll introduce a smaller learning rate alpha.
+
+34
+00:02:00,230 --> 00:02:02,630
+For example, 0.1.
+
+35
+00:02:02,629 --> 00:02:05,935
+And we'll multiply the gradient by that number.
+
+36
+00:02:05,935 --> 00:02:09,140
+Now taking the step is exactly the same thing as
+
+37
+00:02:09,139 --> 00:02:12,204
+updating the weights and the bias as follows.
+
+38
+00:02:12,205 --> 00:02:15,625
+The weight Wi will now become Wi prime.
+
+39
+00:02:15,625 --> 00:02:21,562
+Given by Wi minus alpha times the partial derivative of the error,
+
+40
+00:02:21,562 --> 00:02:23,880
+with respect to Wi.
+
+41
+00:02:23,879 --> 00:02:28,495
+And the bias will now become b prime given by b minus
+
+42
+00:02:28,495 --> 00:02:33,545
+alpha times partial derivative of the error with respect to b.
+
+43
+00:02:33,544 --> 00:02:37,889
+Now this will take us to a prediction with a lower error function.
+
+44
+00:02:37,889 --> 00:02:43,214
+So, we can conclude that the prediction we have now with weights W prime b prime,
+
+45
+00:02:43,215 --> 00:02:48,055
+is better than the one we had before with weights W and b.
+
+46
+00:02:48,055 --> 00:02:51,000
+This is precisely the gradient descent step.
+

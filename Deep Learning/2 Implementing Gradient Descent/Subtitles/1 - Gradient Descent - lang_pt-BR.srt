@@ -1,0 +1,106 @@
+1
+00:00:00,000 --> 00:00:03,000
+Antes de continuar
+com os algoritmos,
+
+2
+00:00:03,033 --> 00:00:04,968
+vamos fazer um comentário.
+
+3
+00:00:05,000 --> 00:00:07,701
+Se estivermos
+no topo de uma montanha,
+
+4
+00:00:07,734 --> 00:00:09,033
+o monte Erroreste,
+
+5
+00:00:09,067 --> 00:00:11,734
+e o objetivo for chegar
+ao pé da montanha.
+
+6
+00:00:11,767 --> 00:00:13,934
+Que estratégia
+podemos usar?
+
+7
+00:00:13,968 --> 00:00:16,100
+Podemos fazer
+passo a passo.
+
+8
+00:00:16,133 --> 00:00:18,968
+Vamos olhar
+em todas as direções
+
+9
+00:00:19,000 --> 00:00:22,667
+e descobrir qual direção
+nos faz descer mais.
+
+10
+00:00:22,701 --> 00:00:25,801
+Neste caso, é para cá.
+
+11
+00:00:25,834 --> 00:00:29,033
+Damos um passo
+naquela direção.
+
+12
+00:00:29,067 --> 00:00:31,033
+Depois recomeçamos
+o processo.
+
+13
+00:00:31,067 --> 00:00:34,767
+Olhamos em volta e vemos
+em qual direção descemos mais
+
+14
+00:00:34,801 --> 00:00:37,567
+e damos um passo
+naquela direção.
+
+15
+00:00:38,567 --> 00:00:42,601
+Continuamos o processo
+até descer a montanha.
+
+16
+00:00:42,634 --> 00:00:45,467
+Este algoritmo se chama
+descida do gradiente.
+
+17
+00:00:45,501 --> 00:00:48,400
+Vamos usá-lo muito
+em aprendizagem de máquina.
+
+18
+00:00:48,434 --> 00:00:51,901
+Pense na montanha como
+o problema que queremos resolver
+
+19
+00:00:51,934 --> 00:00:55,133
+e o pé da montanha
+como a solução.
+
+20
+00:00:55,167 --> 00:00:57,400
+O processo
+para resolver o problema
+
+21
+00:00:57,434 --> 00:01:00,067
+é dar pequenos passos
+na direção certa
+
+22
+00:01:00,100 --> 00:01:02,100
+que nos leva à solução.
+

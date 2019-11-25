@@ -1,0 +1,228 @@
+1
+00:00:00,000 --> 00:00:03,632
+So this is a good time for a quick recap of the last couple of lessons.
+
+2
+00:00:03,632 --> 00:00:05,640
+Here we have two models.
+
+3
+00:00:05,639 --> 00:00:08,934
+The bad model on the left and the good model on the right.
+
+4
+00:00:08,935 --> 00:00:13,440
+And for each one of those we calculate the cross entropy which is the sum of
+
+5
+00:00:13,439 --> 00:00:19,259
+the negatives of the logarithms off the probabilities of the points being their colors.
+
+6
+00:00:19,260 --> 00:00:22,170
+And we conclude that the one on the right is better
+
+7
+00:00:22,170 --> 00:00:25,860
+because a cross entropy is much smaller.
+
+8
+00:00:25,859 --> 00:00:29,269
+So let's actually calculate the formula for the error function.
+
+9
+00:00:29,269 --> 00:00:31,559
+Let's split into two cases.
+
+10
+00:00:31,559 --> 00:00:34,269
+The first case being when y=1.
+
+11
+00:00:34,270 --> 00:00:36,130
+So when the point is blue to begin with,
+
+12
+00:00:36,130 --> 00:00:42,480
+the model tells us that the probability of being blue is the prediction y_hat.
+
+13
+00:00:42,479 --> 00:00:47,849
+So for these two points the probabilities are 0.6 and 0.2.
+
+14
+00:00:47,850 --> 00:00:50,910
+As we can see the point in the blue area has
+
+15
+00:00:50,909 --> 00:00:55,000
+more probability of being blue than the point in the red area.
+
+16
+00:00:55,000 --> 00:01:00,500
+And our error is simply the negative logarithm of this probability.
+
+17
+00:01:00,500 --> 00:01:04,010
+So it's precisely minus logarithm of y_hat.
+
+18
+00:01:04,010 --> 00:01:09,665
+In the figure it's minus logarithm of 0.6. and minus logarithm of 0.2.
+
+19
+00:01:09,665 --> 00:01:13,745
+Now if y=0, so when the point is red,
+
+20
+00:01:13,745 --> 00:01:17,585
+then we need to calculate the probability of the point being red.
+
+21
+00:01:17,584 --> 00:01:22,339
+The probability of the point being red is one minus the probability of the point being
+
+22
+00:01:22,340 --> 00:01:27,750
+blue which is precisely 1 minus the prediction y_hat.
+
+23
+00:01:27,750 --> 00:01:30,890
+So the error is precisely the negative logarithm of
+
+24
+00:01:30,890 --> 00:01:35,870
+this probability which is negative logarithm of 1 - y_hat.
+
+25
+00:01:35,870 --> 00:01:42,040
+In this case we get negative logarithm 0.1 and negative logarithm 0.7.
+
+26
+00:01:42,040 --> 00:01:46,605
+So we conclude that the error is a negative logarithm of y_hat if the point is blue.
+
+27
+00:01:46,605 --> 00:01:50,635
+And negative logarithm of one - y_hat the point is red.
+
+28
+00:01:50,635 --> 00:01:53,625
+We can summarize these two formulas into this one.
+
+29
+00:01:53,625 --> 00:02:02,159
+Error = - (1-y)(ln( 1- y_hat)) - y ln(y_hat).
+
+30
+00:02:02,159 --> 00:02:03,759
+Why does this formula work?
+
+31
+00:02:03,760 --> 00:02:05,730
+Well because if the point is blue,
+
+32
+00:02:05,730 --> 00:02:10,664
+then y=1 which means 1-y=0 which makes the first term
+
+33
+00:02:10,664 --> 00:02:16,495
+0 and the second term is simply logarithm of y_hat.
+
+34
+00:02:16,495 --> 00:02:20,219
+Similarly, if the point is red then y=0.
+
+35
+00:02:20,219 --> 00:02:27,680
+So the second term of the formula is 0 and the first one is logarithm of 1- y_hat.
+
+36
+00:02:27,680 --> 00:02:31,145
+Now the formula for the error function is simply the sum over
+
+37
+00:02:31,145 --> 00:02:35,510
+all the error functions of points which is precisely the summation here.
+
+38
+00:02:35,509 --> 00:02:38,564
+That's going to be this 4.8 we have over here.
+
+39
+00:02:38,564 --> 00:02:41,469
+Now by convention we'll actually consider the average,
+
+40
+00:02:41,469 --> 00:02:45,330
+not the sum which is where we are dividing by n over here.
+
+41
+00:02:45,330 --> 00:02:49,050
+This will turn the 4.8 into a 1.2.
+
+42
+00:02:49,050 --> 00:02:53,330
+From now on we'll use this formula as our error function.
+
+43
+00:02:53,330 --> 00:02:58,860
+And now since y_hat is given by the sigmoid of the linear function wx + b,
+
+44
+00:02:58,860 --> 00:03:01,890
+then the total formula for the error is actually in terms
+
+45
+00:03:01,889 --> 00:03:05,094
+of w and b which are the weights of the model.
+
+46
+00:03:05,094 --> 00:03:08,219
+And it's simply the summation we see here.
+
+47
+00:03:08,219 --> 00:03:14,449
+In this case y_i is just the label of the point x_superscript_i.
+
+48
+00:03:14,449 --> 00:03:17,364
+So now that we've calculated it our goal is to minimize it.
+
+49
+00:03:17,365 --> 00:03:18,975
+And that's what we'll do next.
+
+50
+00:03:18,974 --> 00:03:20,293
+And just a small aside,
+
+51
+00:03:20,294 --> 00:03:23,210
+what we did is for binary classification problems.
+
+52
+00:03:23,210 --> 00:03:25,670
+If we have a multiclass classification problem then
+
+53
+00:03:25,669 --> 00:03:28,490
+the error is now given by the multiclass entropy.
+
+54
+00:03:28,491 --> 00:03:33,380
+This formula is given here where for every data point we take the product
+
+55
+00:03:33,379 --> 00:03:39,139
+of the label times the logarithm of the prediction and then we average all these values.
+
+56
+00:03:39,139 --> 00:03:41,539
+And again it's a nice exercise to convince yourself that
+
+57
+00:03:41,539 --> 00:03:45,000
+the two are the same when there are just two classes.
+

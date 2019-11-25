@@ -1,0 +1,306 @@
+1
+00:00:00,300 --> 00:00:02,050
+Isso é quando tínhamos
+duas classes,
+
+2
+00:00:02,100 --> 00:00:05,050
+vulgo "ganhar presente"
+e "não ganhar presente".
+
+3
+00:00:05,100 --> 00:00:07,100
+O que acontece
+se tivermos mais classes?
+
+4
+00:00:07,550 --> 00:00:08,750
+Vamos ver.
+
+5
+00:00:09,150 --> 00:00:12,150
+Temos um problema parecido.
+Ainda temos três portas.
+
+6
+00:00:12,200 --> 00:00:14,650
+E ainda não é
+o problema de Monty Hall.
+
+7
+00:00:14,700 --> 00:00:16,800
+Em cada porta
+pode haver um animal.
+
+8
+00:00:16,850 --> 00:00:18,850
+O animal
+pode ser de três espécies.
+
+9
+00:00:18,900 --> 00:00:23,000
+Pode ser um pato,
+um castor ou uma morsa.
+
+10
+00:00:23,400 --> 00:00:26,000
+Vejamos esta tabela
+de probabilidades.
+
+11
+00:00:26,050 --> 00:00:28,450
+De acordo
+com a primeira coluna,
+
+12
+00:00:28,500 --> 00:00:30,100
+atrás da primeira porta
+
+13
+00:00:30,150 --> 00:00:33,150
+a probabilidade
+de achar um pato é 0.7,
+
+14
+00:00:33,200 --> 00:00:35,900
+a probabilidade
+de achar um castor é 0.2
+
+15
+00:00:35,950 --> 00:00:39,150
+e a probabilidade
+de achar uma morsa é 0.1.
+
+16
+00:00:39,200 --> 00:00:42,850
+Perceba que a soma dos números
+de cada coluna precisa dar 1,
+
+17
+00:00:42,900 --> 00:00:45,900
+pois sempre há algum animal
+em cada porta.
+
+18
+00:00:45,950 --> 00:00:49,700
+A soma das linhas não precisa
+dar 1, como você pode ver.
+
+19
+00:00:49,750 --> 00:00:52,250
+Poderíamos simplesmente
+ter patos em todas as portas,
+
+20
+00:00:52,300 --> 00:00:53,650
+sem problema nenhum.
+
+21
+00:00:53,700 --> 00:00:55,500
+Então vamos ver
+uma hipótese amostral.
+
+22
+00:00:55,550 --> 00:00:57,000
+Digamos que temos três portas:
+
+23
+00:00:57,050 --> 00:00:59,750
+na primeira há um pato,
+
+24
+00:00:59,800 --> 00:01:04,950
+na segunda há uma morsa
+e na terceira também.
+
+25
+00:01:05,000 --> 00:01:07,950
+Lembre-se que as probabilidades
+são dadas pela tabela.
+
+26
+00:01:08,000 --> 00:01:11,650
+Pato na primeira porta
+tem 0.7 de probabilidade,
+
+27
+00:01:11,700 --> 00:01:15,000
+morsa na segunda porta
+tem 0.3 de probabilidade
+
+28
+00:01:15,050 --> 00:01:18,550
+e morsa na terceira porta
+tem 0.4 de probabilidade.
+
+29
+00:01:18,600 --> 00:01:20,700
+Então a probabilidade
+de obter esse conjunto
+
+30
+00:01:20,750 --> 00:01:23,400
+é o produto das probabilidades
+dos três eventos,
+
+31
+00:01:23,450 --> 00:01:25,450
+que são independentes:
+
+32
+00:01:25,500 --> 00:01:29,050
+neste caso, dá 0.084.
+
+33
+00:01:29,100 --> 00:01:32,200
+E, como aprendemos,
+a entropia cruzada aqui
+
+34
+00:01:32,250 --> 00:01:36,850
+é dada pela soma dos negativos
+dos logaritmos das probabilidades.
+
+35
+00:01:36,900 --> 00:01:40,550
+Então a primeira é -log0.7,
+
+36
+00:01:40,600 --> 00:01:43,500
+a segunda é -log0.3
+
+37
+00:01:43,550 --> 00:01:46,600
+e a terceira é -log0.4.
+
+38
+00:01:47,000 --> 00:01:49,750
+A entropia cruzada
+é a soma destes três,
+
+39
+00:01:49,800 --> 00:01:52,050
+e dá 2.48.
+
+40
+00:01:52,600 --> 00:01:55,600
+Mas queremos uma fórmula,
+então vamos adicionar variáveis:
+
+41
+00:01:55,650 --> 00:01:59,700
+p11 é a probabilidade
+de haver pato na porta 1,
+
+42
+00:01:59,750 --> 00:02:03,250
+p12 é a probabilidade
+de haver pato na porta 2
+
+43
+00:02:03,300 --> 00:02:04,500
+e assim por diante.
+
+44
+00:02:04,850 --> 00:02:08,050
+Vamos dizer
+que a variável indicadora y1j
+
+45
+00:02:08,100 --> 00:02:11,200
+será 1 se houver um pato
+na porta j,
+
+46
+00:02:11,250 --> 00:02:14,800
+y2j será 1 se houver um castor
+na porta j,
+
+47
+00:02:14,850 --> 00:02:18,600
+e y3j será 1 se houver uma morsa
+na porta j.
+
+48
+00:02:19,350 --> 00:02:21,850
+Caso contrário,
+essas variáveis são 0.
+
+49
+00:02:21,900 --> 00:02:23,950
+Então a fórmula
+da entropia cruzada
+
+50
+00:02:24,000 --> 00:02:28,600
+é o negativo do somatório
+de i=1...n
+
+51
+00:02:28,650 --> 00:02:31,200
+vezes o somatório
+de y=j...m
+
+52
+00:02:31,250 --> 00:02:35,450
+vezes yij vezes log(pij).
+
+53
+00:02:35,850 --> 00:02:38,550
+Neste caso,
+m é o número de classes.
+
+54
+00:02:38,950 --> 00:02:42,100
+Essa fórmula funciona
+porque yij ser 0.1
+
+55
+00:02:42,150 --> 00:02:44,850
+assegura que só estamos
+adicionando os logs
+
+56
+00:02:44,900 --> 00:02:48,650
+das probabilidades dos eventos
+que efetivamente aconteceram.
+
+57
+00:02:48,700 --> 00:02:53,500
+E, voilà, esta é a fórmula
+da entropia cruzada em mais classes.
+
+58
+00:02:53,550 --> 00:02:56,000
+Deixo uma pergunta:
+visto que temos a fórmula
+
+59
+00:02:56,050 --> 00:02:59,750
+da entropia cruzada
+para duas classes e para m classes,
+
+60
+00:02:59,800 --> 00:03:01,400
+essas fórmulas
+parecem diferentes,
+
+61
+00:03:01,450 --> 00:03:04,050
+mas será que são as mesmas
+para m=2?
+
+62
+00:03:04,100 --> 00:03:05,500
+Obviamente, a resposta é sim,
+
+63
+00:03:05,550 --> 00:03:07,600
+mas é um bom exercício
+desenvolvê-las
+
+64
+00:03:07,650 --> 00:03:10,800
+e se convencer
+de que elas são as mesmas.
+

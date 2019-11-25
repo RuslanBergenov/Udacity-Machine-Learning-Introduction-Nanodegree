@@ -1,0 +1,348 @@
+1
+00:00:00,000 --> 00:00:04,309
+So now we're finally ready to get our hands into training a neural network.
+
+2
+00:00:04,309 --> 00:00:06,449
+So let's quickly recall feedforward.
+
+3
+00:00:06,450 --> 00:00:10,469
+We have our perceptron with a point coming in labeled positive.
+
+4
+00:00:10,470 --> 00:00:15,050
+And our equation w1x1 + w2x2 + b,
+
+5
+00:00:15,050 --> 00:00:19,804
+where w1 and w2 are the weights and b is the bias.
+
+6
+00:00:19,804 --> 00:00:21,009
+Now, what the perceptron does is,
+
+7
+00:00:21,010 --> 00:00:25,405
+it plots a point and returns a probability that the point is blue.
+
+8
+00:00:25,405 --> 00:00:29,345
+Which in this case is small since the point is in the red area.
+
+9
+00:00:29,344 --> 00:00:32,070
+Thus, this is a bad perceptron since it
+
+10
+00:00:32,070 --> 00:00:36,164
+predicts that the point is red when the point is really blue.
+
+11
+00:00:36,164 --> 00:00:39,609
+And now let's recall what we did in the gradient descent algorithm.
+
+12
+00:00:39,609 --> 00:00:42,284
+We did this thing called Backpropagation.
+
+13
+00:00:42,284 --> 00:00:44,879
+We went in the opposite direction.
+
+14
+00:00:44,880 --> 00:00:48,885
+We asked the point, "What do you want the model to do for you?"
+
+15
+00:00:48,884 --> 00:00:50,829
+And the point says, "Well,
+
+16
+00:00:50,829 --> 00:00:55,204
+I am misclassified so I want this boundary to come closer to me."
+
+17
+00:00:55,204 --> 00:00:59,894
+And we saw that the line got closer to it by updating the weights.
+
+18
+00:00:59,895 --> 00:01:01,625
+Namely, in this case,
+
+19
+00:01:01,625 --> 00:01:07,239
+let's say that it tells the weight w1 to go lower and the weight w2 to go higher.
+
+20
+00:01:07,239 --> 00:01:08,694
+And this is just an illustration,
+
+21
+00:01:08,694 --> 00:01:10,379
+it's not meant to be exact.
+
+22
+00:01:10,379 --> 00:01:12,045
+So we obtain new weights,
+
+23
+00:01:12,045 --> 00:01:19,490
+w1' and w2' which define a new line which is now closer to the point.
+
+24
+00:01:19,489 --> 00:01:22,170
+So what we're doing is like descending from
+
+25
+00:01:22,170 --> 00:01:23,780
+Mt. Errorest, right?
+
+26
+00:01:23,780 --> 00:01:29,864
+The height is going to be the error function E(W) and we calculate the gradient
+
+27
+00:01:29,864 --> 00:01:32,679
+of the error function which is exactly
+
+28
+00:01:32,680 --> 00:01:35,857
+like asking the point what does is it want the model to do.
+
+29
+00:01:35,856 --> 00:01:40,340
+And as we take the step down the direction of the negative of the gradient,
+
+30
+00:01:40,340 --> 00:01:43,969
+we decrease the error to come down the mountain.
+
+31
+00:01:43,969 --> 00:01:45,304
+This gives us a new error,
+
+32
+00:01:45,305 --> 00:01:49,932
+E(W') and a new model W' with a smaller error,
+
+33
+00:01:49,932 --> 00:01:53,480
+which means we get a new line closer to the point.
+
+34
+00:01:53,480 --> 00:01:58,130
+We continue doing this process in order to minimize the error.
+
+35
+00:01:58,129 --> 00:01:59,890
+So that was for a single perceptron.
+
+36
+00:01:59,890 --> 00:02:02,760
+Now, what do we do for multi-layer perceptrons?
+
+37
+00:02:02,760 --> 00:02:06,745
+Well, we still do the same process of reducing the error by descending from the mountain,
+
+38
+00:02:06,745 --> 00:02:11,055
+except now, since the error function is more complicated then it's not
+
+39
+00:02:11,055 --> 00:02:12,775
+Mt. Errorest, now it's
+
+40
+00:02:12,775 --> 00:02:15,789
+Mt. Kilimanjerror. But same thing,
+
+41
+00:02:15,788 --> 00:02:19,554
+we calculate the error function and its gradient.
+
+42
+00:02:19,555 --> 00:02:25,290
+We then walk in the direction of the negative of the gradient in order to find
+
+43
+00:02:25,289 --> 00:02:28,644
+a new model W' with a smaller error
+
+44
+00:02:28,645 --> 00:02:32,719
+E(W') which will give us a better prediction.
+
+45
+00:02:32,719 --> 00:02:36,895
+And we continue doing this process in order to minimize the error.
+
+46
+00:02:36,895 --> 00:02:40,149
+So let's look again at what feedforward does in a multi-layer perceptron.
+
+47
+00:02:40,149 --> 00:02:45,990
+The point comes in with coordinates (x1, x2) and label y = 1.
+
+48
+00:02:45,990 --> 00:02:50,570
+It gets plotted in the linear models corresponding to the hidden layer.
+
+49
+00:02:50,569 --> 00:02:54,019
+And then, as this layer gets combined the point gets
+
+50
+00:02:54,020 --> 00:02:58,280
+plotted in the resulting non-linear model in the output layer.
+
+51
+00:02:58,280 --> 00:03:01,400
+And the probability that the point is blue is obtained by
+
+52
+00:03:01,400 --> 00:03:05,060
+the position of this point in the final model.
+
+53
+00:03:05,060 --> 00:03:07,189
+Now, pay close attention because this is
+
+54
+00:03:07,189 --> 00:03:11,094
+the key for training neural networks, it's Backpropagation.
+
+55
+00:03:11,094 --> 00:03:13,849
+We'll do as before, we'll check the error.
+
+56
+00:03:13,849 --> 00:03:16,159
+So this model is not good because it predicts that
+
+57
+00:03:16,159 --> 00:03:19,365
+the point will be red when in reality the point is blue.
+
+58
+00:03:19,365 --> 00:03:21,320
+So we'll ask the point,
+
+59
+00:03:21,319 --> 00:03:26,579
+"What do you want this model to do in order for you to be better classified?"
+
+60
+00:03:26,580 --> 00:03:31,615
+And the point says, "I kind of want this blue region to come closer to me."
+
+61
+00:03:31,615 --> 00:03:35,195
+Now, what does it mean for the region to come closer to it?
+
+62
+00:03:35,194 --> 00:03:39,049
+Well, let's look at the two linear models in the hidden layer.
+
+63
+00:03:39,050 --> 00:03:42,735
+Which one of these two models is doing better?
+
+64
+00:03:42,735 --> 00:03:45,740
+Well, it seems like the top one is badly misclassifying
+
+65
+00:03:45,740 --> 00:03:50,230
+the point whereas the bottom one is classifying it correctly.
+
+66
+00:03:50,229 --> 00:03:55,454
+So we kind of want to listen to the bottom one more and to the top one less.
+
+67
+00:03:55,455 --> 00:03:58,880
+So what we want to do is to reduce the weight coming from
+
+68
+00:03:58,879 --> 00:04:02,519
+the top model and increase the weight coming from the bottom model.
+
+69
+00:04:02,520 --> 00:04:05,909
+So now our final model will look a lot
+
+70
+00:04:05,909 --> 00:04:10,034
+more like the bottom model than like the top model.
+
+71
+00:04:10,034 --> 00:04:12,014
+But we can do even more.
+
+72
+00:04:12,014 --> 00:04:15,464
+We can actually go to the linear models and ask the point,
+
+73
+00:04:15,465 --> 00:04:20,250
+"What can these models do to classify you better?"
+
+74
+00:04:20,250 --> 00:04:22,139
+And the point will say, "Well,
+
+75
+00:04:22,139 --> 00:04:24,832
+the top model is misclassifying me,
+
+76
+00:04:24,833 --> 00:04:28,635
+so I kind of want this line to move closer to me.
+
+77
+00:04:28,634 --> 00:04:33,084
+And the second model is correctly classifying me,
+
+78
+00:04:33,084 --> 00:04:37,370
+so I want this line to move farther away from me."
+
+79
+00:04:37,370 --> 00:04:41,670
+And so this change in the model will actually update the weights.
+
+80
+00:04:41,670 --> 00:04:46,000
+Let's say, it'll increase these two and decrease these two.
+
+81
+00:04:46,000 --> 00:04:50,735
+So now after we update all the weights we have better predictions at
+
+82
+00:04:50,735 --> 00:04:53,569
+all the models in the hidden layer and
+
+83
+00:04:53,569 --> 00:04:57,589
+also a better prediction at the model in the output layer.
+
+84
+00:04:57,589 --> 00:05:02,125
+Notice that in this video we intentionally left the bias unit away for clarity.
+
+85
+00:05:02,125 --> 00:05:06,649
+In reality, when you update the weights we're also updating the bias unit.
+
+86
+00:05:06,649 --> 00:05:08,659
+If you're the kind of person who likes formality,
+
+87
+00:05:08,660 --> 00:05:12,070
+don't worry, we'll calculate these gradients in detail soon.
+

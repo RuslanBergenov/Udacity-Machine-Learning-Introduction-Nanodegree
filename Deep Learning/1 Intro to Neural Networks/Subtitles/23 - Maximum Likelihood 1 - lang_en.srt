@@ -1,0 +1,80 @@
+1
+00:00:00,000 --> 00:00:02,859
+So we're still in our quest for an algorithm that will help
+
+2
+00:00:02,859 --> 00:00:05,525
+us pick the best model that separates our data.
+
+3
+00:00:05,525 --> 00:00:09,984
+Well, since we're dealing with probabilities then let's use them in our favor.
+
+4
+00:00:09,984 --> 00:00:12,894
+Let's say I'm a student and I have two models.
+
+5
+00:00:12,894 --> 00:00:16,300
+One that tells me that my probability of getting accepted is
+
+6
+00:00:16,300 --> 00:00:20,859
+80% and one that tells me the probability is 55%.
+
+7
+00:00:20,859 --> 00:00:22,855
+Which model looks more accurate?
+
+8
+00:00:22,855 --> 00:00:24,879
+Well, if I got accepted then I'd say
+
+9
+00:00:24,879 --> 00:00:28,210
+the better model is probably the one that says 80%.
+
+10
+00:00:28,210 --> 00:00:29,679
+What if I didn't get accepted?
+
+11
+00:00:29,678 --> 00:00:33,983
+Then the more accurate model is more likely the one that says 55 percent.
+
+12
+00:00:33,984 --> 00:00:37,469
+But I'm just one person. What if it was me and a friend?
+
+13
+00:00:37,469 --> 00:00:40,789
+Well, the best model would more likely be the one that
+
+14
+00:00:40,789 --> 00:00:44,506
+gives the higher probabilities to the events that happened to us,
+
+15
+00:00:44,506 --> 00:00:47,085
+whether it's acceptance or rejection.
+
+16
+00:00:47,085 --> 00:00:49,149
+This sounds pretty intuitive.
+
+17
+00:00:49,149 --> 00:00:52,310
+The method is called maximum likelihood.
+
+18
+00:00:52,310 --> 00:00:58,353
+What we do is we pick the model that gives the existing labels the highest probability.
+
+19
+00:00:58,353 --> 00:01:00,259
+Thus, by maximizing the probability,
+
+20
+00:01:00,259 --> 00:01:02,000
+we can pick the best possible model.
+

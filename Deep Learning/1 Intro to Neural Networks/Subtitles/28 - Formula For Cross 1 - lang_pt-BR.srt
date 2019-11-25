@@ -1,0 +1,50 @@
+1
+00:00:00,334 --> 00:00:03,400
+A entropia cruzada
+pode ser algo importante.
+
+2
+00:00:03,434 --> 00:00:05,834
+Ela diz o seguinte:
+
+3
+00:00:05,868 --> 00:00:07,467
+se eu tiver um monte
+de eventos
+
+4
+00:00:07,501 --> 00:00:09,067
+e um monte
+de probabilidades,
+
+5
+00:00:09,100 --> 00:00:11,400
+qual é a chance
+de os eventos acontecerem
+
+6
+00:00:11,434 --> 00:00:13,133
+baseado nas probabilidades?
+
+7
+00:00:13,167 --> 00:00:14,701
+Se a chance for grande,
+
+8
+00:00:14,734 --> 00:00:16,801
+então teremos uma entropia
+cruzada baixa.
+
+9
+00:00:16,834 --> 00:00:18,200
+Se a chance for baixa,
+
+10
+00:00:18,234 --> 00:00:20,200
+teremos uma entropia
+cruzada alta.
+
+11
+00:00:20,234 --> 00:00:21,601
+Vamos explicar.
+

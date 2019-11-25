@@ -1,0 +1,452 @@
+1
+00:00:00,000 --> 00:00:02,669
+Here is obvious realization of the error function.
+
+2
+00:00:02,669 --> 00:00:04,139
+We're standing on top a mountain,
+
+3
+00:00:04,139 --> 00:00:06,870
+Mount Errorest and I want to descend
+
+4
+00:00:06,870 --> 00:00:10,095
+but it's not that easy because it's cloudy and the mountain is very big,
+
+5
+00:00:10,095 --> 00:00:12,425
+so we can't really see the big picture.
+
+6
+00:00:12,425 --> 00:00:15,080
+What we'll do to go down is we'll look around us and we
+
+7
+00:00:15,080 --> 00:00:18,234
+consider all the possible directions in which we can walk.
+
+8
+00:00:18,234 --> 00:00:21,429
+Then we pick a direction that makes us descend the most.
+
+9
+00:00:21,428 --> 00:00:23,669
+Let's say it's this one over here.
+
+10
+00:00:23,670 --> 00:00:26,100
+So we take a step in that direction.
+
+11
+00:00:26,100 --> 00:00:28,789
+Thus, we've decreased the height.
+
+12
+00:00:28,789 --> 00:00:33,560
+Once we take the step and we start the process again and again always decreasing
+
+13
+00:00:33,560 --> 00:00:39,210
+the height until we go all the way down the mountain, minimizing the height.
+
+14
+00:00:39,210 --> 00:00:43,558
+In this case the key metric that we use to solve the problem is the height.
+
+15
+00:00:43,558 --> 00:00:45,533
+We'll call the height the error.
+
+16
+00:00:45,533 --> 00:00:48,129
+The error is what's telling us how badly we're doing at
+
+17
+00:00:48,130 --> 00:00:51,234
+the moment and how far we are from an ideal solution.
+
+18
+00:00:51,234 --> 00:00:54,490
+And if we constantly take steps to decrease the error then
+
+19
+00:00:54,490 --> 00:00:57,715
+we'll eventually solve our problem, descending from Mt.
+
+20
+00:00:57,715 --> 00:00:59,399
+Errorest.
+
+21
+00:00:59,399 --> 00:01:00,655
+Some of you may be thinking,
+
+22
+00:01:00,655 --> 00:01:03,085
+wait, that doesn't necessarily solve the problem.
+
+23
+00:01:03,085 --> 00:01:04,329
+What if I get stuck in a valley,
+
+24
+00:01:04,328 --> 00:01:06,968
+a local minimum, but that's not the bottom of the mountain.
+
+25
+00:01:06,968 --> 00:01:09,068
+This happens a lot in machine learning and we'll
+
+26
+00:01:09,069 --> 00:01:11,870
+see different ways to solve it later in this Nanodegree.
+
+27
+00:01:11,870 --> 00:01:14,259
+It's also worth noting that many times
+
+28
+00:01:14,259 --> 00:01:18,129
+a local minimum will give us a pretty good solution to a problem.
+
+29
+00:01:18,129 --> 00:01:20,734
+This method, which we'll study in more detail later,
+
+30
+00:01:20,733 --> 00:01:23,280
+is called gradient descent.
+
+31
+00:01:23,280 --> 00:01:25,424
+So let's try that approach to solve a problem.
+
+32
+00:01:25,424 --> 00:01:27,239
+What would be a good error function here?
+
+33
+00:01:27,239 --> 00:01:30,634
+What would be a good way to tell the computer how badly it's doing?
+
+34
+00:01:30,634 --> 00:01:33,864
+Well, here's our line with our positive and negative area.
+
+35
+00:01:33,864 --> 00:01:38,385
+And the question is how do we tell the computer how far it is from a perfect solution?
+
+36
+00:01:38,385 --> 00:01:40,885
+Well, maybe we can count the number mistakes.
+
+37
+00:01:40,885 --> 00:01:42,180
+There are two mistakes here.
+
+38
+00:01:42,180 --> 00:01:44,810
+So that's our height. That's our error.
+
+39
+00:01:44,810 --> 00:01:46,920
+So just as we did to descend from the mountain,
+
+40
+00:01:46,920 --> 00:01:49,409
+we look around all the directions in which we can move
+
+41
+00:01:49,409 --> 00:01:52,665
+the line in order to decrease our error.
+
+42
+00:01:52,665 --> 00:01:54,305
+So let's say we move in this direction.
+
+43
+00:01:54,305 --> 00:01:58,260
+We'll decrease the number of errors to one and then if we're moving in that direction,
+
+44
+00:01:58,260 --> 00:02:00,810
+we'll decrease the number of errors to zero.
+
+45
+00:02:00,810 --> 00:02:04,049
+And then we're done, right? Well, almost.
+
+46
+00:02:04,049 --> 00:02:06,030
+There's a small problem with that approach.
+
+47
+00:02:06,030 --> 00:02:10,995
+In our algorithms we'll be taking very small steps and the reason for that is calculus,
+
+48
+00:02:10,995 --> 00:02:14,990
+because our tiny steps will be calculated by derivatives.
+
+49
+00:02:14,990 --> 00:02:17,610
+So what happens if we take very small steps here?
+
+50
+00:02:17,610 --> 00:02:23,631
+We start with two errors and then move a tiny amount and we're still at two errors.
+
+51
+00:02:23,631 --> 00:02:26,574
+Then move a tiny amount again and we're still two errors.
+
+52
+00:02:26,574 --> 00:02:30,784
+Another tiny amount and we're still at two and again and again.
+
+53
+00:02:30,783 --> 00:02:32,875
+So not much we can do here.
+
+54
+00:02:32,875 --> 00:02:35,150
+This is equivalent to using gradient descent to try to
+
+55
+00:02:35,150 --> 00:02:37,900
+descend from an Aztec pyramid with flat steps.
+
+56
+00:02:37,900 --> 00:02:39,949
+If we're standing here in the second floor,
+
+57
+00:02:39,949 --> 00:02:42,609
+for the two errors and we look around ourselves,
+
+58
+00:02:42,609 --> 00:02:46,909
+we'll always see two errors and we'll get confused and not know what to do.
+
+59
+00:02:46,908 --> 00:02:48,644
+On the other hand in Mt.
+
+60
+00:02:48,645 --> 00:02:51,960
+Errorest we can detect very small variations in height and we can
+
+61
+00:02:51,960 --> 00:02:56,224
+figure out in what direction it can decrease the most.
+
+62
+00:02:56,223 --> 00:03:00,449
+In math terms this means that in order for us to do gradient descent
+
+63
+00:03:00,449 --> 00:03:04,818
+our error function can not be discrete, it should be continuous.
+
+64
+00:03:04,818 --> 00:03:06,375
+Mt. Errorest is continuous since
+
+65
+00:03:06,375 --> 00:03:09,680
+small variations in our position will translate to small variations in
+
+66
+00:03:09,680 --> 00:03:12,115
+the height but the Aztec pyramid does not
+
+67
+00:03:12,115 --> 00:03:15,699
+since the high jumps from two to one and then from one to zero.
+
+68
+00:03:15,699 --> 00:03:18,009
+As a matter of fact, our error function needs
+
+69
+00:03:18,008 --> 00:03:20,549
+to be differentiable, but we'll see that later.
+
+70
+00:03:20,550 --> 00:03:22,825
+So, what we need to do here is to construct
+
+71
+00:03:22,824 --> 00:03:26,484
+an error function that is continuous and we'll do this as follows.
+
+72
+00:03:26,485 --> 00:03:30,590
+So here are six points with four of them correctly classified,
+
+73
+00:03:30,590 --> 00:03:33,360
+that's two blue and two red,
+
+74
+00:03:33,360 --> 00:03:35,900
+and two of them incorrectly classified,
+
+75
+00:03:35,900 --> 00:03:40,710
+that is this red point at the very left and this blue point at the very right.
+
+76
+00:03:40,710 --> 00:03:44,074
+The error function is going to assign a large penalty to
+
+77
+00:03:44,074 --> 00:03:46,469
+the two incorrectly classified points and
+
+78
+00:03:46,468 --> 00:03:50,150
+small penalties to the four correctly classified points.
+
+79
+00:03:50,150 --> 00:03:54,004
+Here we are representing the size of the point as the penalty.
+
+80
+00:03:54,003 --> 00:03:57,560
+The penalty is roughly the distance from the boundary when the point is
+
+81
+00:03:57,560 --> 00:04:02,938
+misclassified and almost zero when the point is correctly classified.
+
+82
+00:04:02,938 --> 00:04:06,405
+We'll learn the formula for the error later in the class.
+
+83
+00:04:06,405 --> 00:04:10,729
+So, now we obtain the total error by adding all the errors from the corresponding points.
+
+84
+00:04:10,729 --> 00:04:11,990
+Here we have a large number so it is
+
+85
+00:04:11,990 --> 00:04:15,240
+two misclassified points add a large amount to the error.
+
+86
+00:04:15,240 --> 00:04:19,509
+And the idea now is to move the line around in order to decrease these error.
+
+87
+00:04:19,509 --> 00:04:23,509
+But now we can do it because we can make very tiny changes to the parameters of
+
+88
+00:04:23,509 --> 00:04:28,129
+the line which will amount to very tiny changes in the error function.
+
+89
+00:04:28,129 --> 00:04:29,149
+So, if you move the line,
+
+90
+00:04:29,149 --> 00:04:30,288
+say, in this direction,
+
+91
+00:04:30,288 --> 00:04:33,365
+we can see that some errors decrease, some slightly increase,
+
+92
+00:04:33,365 --> 00:04:35,389
+but in general when we consider the sum,
+
+93
+00:04:35,389 --> 00:04:39,050
+the sum gets smaller and we can see that because we've now
+
+94
+00:04:39,050 --> 00:04:43,360
+correctly classified the two points that were misclassified before.
+
+95
+00:04:43,360 --> 00:04:46,774
+So once we are able to build an error function with this property,
+
+96
+00:04:46,774 --> 00:04:51,240
+we can now use gradient descent to solve our problem.
+
+97
+00:04:51,240 --> 00:04:52,995
+So here's the full picture.
+
+98
+00:04:52,995 --> 00:04:54,345
+Here we are at the summit of Mt.
+
+99
+00:04:54,345 --> 00:04:57,810
+Errorest. We're quite high up because our error is large.
+
+100
+00:04:57,810 --> 00:05:03,639
+As you can see the error is the height which is the sum of the blue and red areas.
+
+101
+00:05:03,639 --> 00:05:07,889
+We explore around to see what direction brings us down the most, or equivalently,
+
+102
+00:05:07,889 --> 00:05:11,764
+what direction can we move the line to reduce the error the most,
+
+103
+00:05:11,764 --> 00:05:14,629
+and we take a step in that direction.
+
+104
+00:05:14,629 --> 00:05:18,838
+So in the mountain we go down one step and in the graph we've reduced the error a
+
+105
+00:05:18,838 --> 00:05:22,684
+bit by correctly classifying one of the points. And now we do it again.
+
+106
+00:05:22,684 --> 00:05:24,014
+We calculate the error,
+
+107
+00:05:24,014 --> 00:05:27,959
+we look around ourselves to see in what direction we descend the most,
+
+108
+00:05:27,959 --> 00:05:32,365
+we take a step in that direction and that brings us down the mountain.
+
+109
+00:05:32,365 --> 00:05:35,430
+So on the left we have reduced the height and successfully
+
+110
+00:05:35,430 --> 00:05:38,250
+descended from the mountain and on the right we have
+
+111
+00:05:38,250 --> 00:05:45,430
+reduced the error to its minimum possible value and successfully classified our points.
+
+112
+00:05:45,430 --> 00:05:49,093
+Now the question is, how do we define this error function?
+
+113
+00:05:49,093 --> 00:05:50,420
+That's what we'll do next.
+

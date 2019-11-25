@@ -1,0 +1,86 @@
+1
+00:00:00,267 --> 00:00:02,701
+Você deve estar se perguntando
+por que os objetos
+
+2
+00:00:02,735 --> 00:00:04,100
+se chamam redes neurais.
+
+3
+00:00:04,134 --> 00:00:08,801
+Isso é porque os perceptrons
+parecem neurônios.
+
+4
+00:00:08,835 --> 00:00:11,567
+À esquerda, temos um perceptron
+com quatro entradas,
+
+5
+00:00:11,601 --> 00:00:14,634
+os números um, zero,
+quatro e menos dois.
+
+6
+00:00:14,668 --> 00:00:18,000
+O perceptron efetua
+algumas equações na entrada
+
+7
+00:00:18,034 --> 00:00:20,167
+e decide retornar
+um ou zero.
+
+8
+00:00:20,968 --> 00:00:22,868
+De forma parecida,
+os neurônios
+
+9
+00:00:22,902 --> 00:00:25,100
+lidam com entradas
+vindas dos dendritos,
+
+10
+00:00:25,134 --> 00:00:27,100
+que são impulsos nervosos.
+
+11
+00:00:27,134 --> 00:00:30,467
+Os neurônios fazem algo
+com os impulsos nervosos
+
+12
+00:00:30,501 --> 00:00:33,467
+e decidem se fornecerão
+um impulso nervoso ou não
+
+13
+00:00:33,501 --> 00:00:35,367
+pelo axônio.
+
+14
+00:00:35,401 --> 00:00:38,000
+Nós criaremos
+rede neurais nesta lição
+
+15
+00:00:38,034 --> 00:00:39,868
+concatenando
+estas percepções,
+
+16
+00:00:39,902 --> 00:00:41,968
+então nós imitaremos
+as conexões cerebrais
+
+17
+00:00:42,002 --> 00:00:43,834
+pegando a saída de um
+
+18
+00:00:43,868 --> 00:00:46,033
+e utilizando como entrada
+do outro.
+

@@ -1,0 +1,220 @@
+1
+00:00:00,000 --> 00:00:02,250
+Correct. The answer is logarithm,
+
+2
+00:00:02,250 --> 00:00:06,389
+because logarithm has this very nice identity that says that the logarithm of
+
+3
+00:00:06,389 --> 00:00:11,929
+the product A times B is the sum of the logarithms of A and B.
+
+4
+00:00:11,929 --> 00:00:13,294
+So this is what we do.
+
+5
+00:00:13,294 --> 00:00:17,559
+We take our products and we take the logarithms,
+
+6
+00:00:17,559 --> 00:00:21,854
+so now we get a sum of the logarithms of the factors.
+
+7
+00:00:21,855 --> 00:00:28,219
+So the ln(0.6*0.2*0.1*0.7) is equal to
+
+8
+00:00:28,219 --> 00:00:35,700
+ln(0.6) + ln(0.2) + ln(0.1) + ln(0.7) etc. Now from now until the end of class,
+
+9
+00:00:35,700 --> 00:00:40,040
+we'll be taking the natural logarithm which is base e instead of 10.
+
+10
+00:00:40,039 --> 00:00:41,759
+Nothing different happens with base 10.
+
+11
+00:00:41,759 --> 00:00:44,945
+Everything works the same as everything gets scaled by the same factor.
+
+12
+00:00:44,945 --> 00:00:46,770
+So it's just more for convention.
+
+13
+00:00:46,770 --> 00:00:51,330
+We can calculate those values and get minus 0.51, minus 1.61,
+
+14
+00:00:51,329 --> 00:00:58,164
+minus 0.23 etc. Notice that they are all negative numbers and that actually makes sense.
+
+15
+00:00:58,164 --> 00:01:01,560
+This is because the logarithm of a number between 0 and 1 is always
+
+16
+00:01:01,560 --> 00:01:05,594
+a negative number since the logarithm of one is zero.
+
+17
+00:01:05,594 --> 00:01:07,789
+So it actually makes sense to think of the negative of
+
+18
+00:01:07,790 --> 00:01:11,260
+the logarithm of the probabilities and we'll get positive numbers.
+
+19
+00:01:11,260 --> 00:01:15,740
+So that's what we'll do. We'll take the negative of the logarithm of the probabilities.
+
+20
+00:01:15,739 --> 00:01:18,905
+That sums up negatives of logarithms of the probabilities,
+
+21
+00:01:18,905 --> 00:01:23,180
+we'll call the cross entropy which is a very important concept in the class.
+
+22
+00:01:23,180 --> 00:01:25,385
+If we calculate the cross entropies,
+
+23
+00:01:25,385 --> 00:01:30,255
+we see that the bad model on left has a cross entropy 4.8 which is high.
+
+24
+00:01:30,254 --> 00:01:35,229
+Whereas the good model on the right has a cross entropy of 1.2 which is low.
+
+25
+00:01:35,230 --> 00:01:37,454
+This actually happens all the time.
+
+26
+00:01:37,454 --> 00:01:38,810
+A good model will give us
+
+27
+00:01:38,810 --> 00:01:43,185
+a low cross entropy and a bad model will give us a high cross entropy.
+
+28
+00:01:43,185 --> 00:01:44,629
+The reason for this is simply that
+
+29
+00:01:44,629 --> 00:01:47,390
+a good model gives us a high probability and the negative
+
+30
+00:01:47,390 --> 00:01:52,599
+of the logarithm of a large number is a small number and vice versa.
+
+31
+00:01:52,599 --> 00:01:55,250
+This method is actually much more powerful than we think.
+
+32
+00:01:55,250 --> 00:01:59,180
+If we calculate the probabilities and pair the points with the corresponding logarithms,
+
+33
+00:01:59,180 --> 00:02:01,470
+we actually get an error for each point.
+
+34
+00:02:01,469 --> 00:02:06,539
+So again, here we have probabilities for both models and the products of them.
+
+35
+00:02:06,540 --> 00:02:09,944
+Now, we take the negative of the logarithms which gives us sum of
+
+36
+00:02:09,944 --> 00:02:15,319
+logarithms and if we pair each logarithm with the point where it came from,
+
+37
+00:02:15,319 --> 00:02:17,859
+we actually get a value for each point.
+
+38
+00:02:17,860 --> 00:02:19,565
+And if we calculate the values,
+
+39
+00:02:19,564 --> 00:02:22,185
+we get this. Check it out.
+
+40
+00:02:22,185 --> 00:02:24,319
+If we look carefully at the values we can see that
+
+41
+00:02:24,319 --> 00:02:26,430
+the points that are mis-classified has like
+
+42
+00:02:26,430 --> 00:02:31,295
+values like 2.3 for this point or 1.6 one for this point,
+
+43
+00:02:31,294 --> 00:02:36,544
+whereas the points that are correctly classified have small values.
+
+44
+00:02:36,544 --> 00:02:38,719
+And the reason for this is again is that
+
+45
+00:02:38,719 --> 00:02:42,604
+a correctly classified point will have a probability that as close to 1,
+
+46
+00:02:42,604 --> 00:02:44,989
+which when we take the negative of the logarithm,
+
+47
+00:02:44,990 --> 00:02:46,915
+we'll get a small value.
+
+48
+00:02:46,914 --> 00:02:51,215
+Thus we can think of the negatives of these logarithms as errors at each point.
+
+49
+00:02:51,215 --> 00:02:53,539
+Points that are correctly classified will have
+
+50
+00:02:53,539 --> 00:02:57,594
+small errors and points that are mis-classified will have large errors.
+
+51
+00:02:57,594 --> 00:03:02,530
+And now we've concluded that our cross entropy will tell us if a model is good or bad.
+
+52
+00:03:02,530 --> 00:03:06,800
+So now our goal has changed from maximizing a probability to minimizing
+
+53
+00:03:06,800 --> 00:03:12,580
+a cross entropy in order to get from the model in left to the model in the right.
+
+54
+00:03:12,580 --> 00:03:14,655
+And that error function that we're looking for,
+
+55
+00:03:14,655 --> 00:03:17,000
+that was precisely the cross entropy.
+

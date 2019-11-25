@@ -1,0 +1,392 @@
+1
+00:00:00,400 --> 00:00:03,533
+A previsão é
+o que o algoritmo fornece.
+
+2
+00:00:03,567 --> 00:00:06,267
+Uma resposta discreta
+responderia sim ou não.
+
+3
+00:00:06,301 --> 00:00:08,200
+A resposta contínua
+seria um número,
+
+4
+00:00:08,234 --> 00:00:11,167
+normalmente entre zero e um,
+considerada uma probabilidade.
+
+5
+00:00:11,967 --> 00:00:15,300
+No exemplo, nós temos
+aceitos, em azul,
+
+6
+00:00:15,334 --> 00:00:16,800
+e rejeitados, em vermelho.
+
+7
+00:00:16,834 --> 00:00:18,600
+O algoritmo discreto
+
+8
+00:00:18,634 --> 00:00:21,000
+nos dirá se o aluno
+foi aceito ou rejeitado
+
+9
+00:00:21,034 --> 00:00:23,667
+retornando um zero
+para os rejeitados
+
+10
+00:00:23,701 --> 00:00:25,867
+e um para os aceitos.
+
+11
+00:00:25,901 --> 00:00:27,200
+Por outro lado,
+
+12
+00:00:27,234 --> 00:00:29,833
+quanto mais longe o ponto
+estiver da linha preta,
+
+13
+00:00:29,867 --> 00:00:32,200
+mais drásticas serão
+as probabilidades.
+
+14
+00:00:32,933 --> 00:00:36,300
+Os pontos no meio da área azul
+têm alta probabilidade,
+
+15
+00:00:36,334 --> 00:00:40,333
+tal como este ponto com 85%
+de probabilidade de ser azul.
+
+16
+00:00:40,367 --> 00:00:42,167
+Os pontos no meio
+da região vermelha
+
+17
+00:00:42,201 --> 00:00:44,067
+têm baixa probabilidade.
+
+18
+00:00:44,101 --> 00:00:47,967
+Como este ponto com 20%
+de probabilidade de ser azul.
+
+19
+00:00:48,633 --> 00:00:53,433
+Os pontos sobre a linha têm 50%
+de probabilidade de serem azuis.
+
+20
+00:00:53,467 --> 00:00:57,667
+A probabilidade é uma função
+da distância da linha.
+
+21
+00:00:57,701 --> 00:01:00,300
+Para mudarmos de discreta
+para contínua
+
+22
+00:01:00,334 --> 00:01:02,667
+precisamos alterar
+a função de ativação
+
+23
+00:01:02,701 --> 00:01:05,267
+da função step à esquerda
+
+24
+00:01:05,301 --> 00:01:07,467
+para a função sigmoide
+à direita.
+
+25
+00:01:08,167 --> 00:01:12,667
+A função sigmoide fornece
+valores próximos a um
+
+26
+00:01:12,701 --> 00:01:15,467
+a partir de muitos
+valores positivos.
+
+27
+00:01:15,501 --> 00:01:17,400
+Para muitos
+valores negativos,
+
+28
+00:01:17,434 --> 00:01:19,900
+ela nos dá valores
+próximos a zero.
+
+29
+00:01:19,934 --> 00:01:22,067
+Para os valores
+próximos a zero,
+
+30
+00:01:22,101 --> 00:01:24,800
+ela nos dá valores
+próximos a 0,5.
+
+31
+00:01:25,533 --> 00:01:28,200
+A fórmula é sigmoide X
+
+32
+00:01:28,234 --> 00:01:32,700
+igual a um dividido por 1
+mais E sobre menos X.
+
+33
+00:01:32,734 --> 00:01:35,533
+Antes o modelo era uma linha
+
+34
+00:01:35,567 --> 00:01:38,233
+com regiões
+positivas e negativas.
+
+35
+00:01:38,267 --> 00:01:40,700
+Agora ele é
+um espaço de probabilidades.
+
+36
+00:01:40,734 --> 00:01:42,300
+Para cada ponto no plano
+
+37
+00:01:42,334 --> 00:01:44,700
+temos uma probabilidade
+de que o rótulo do ponto
+
+38
+00:01:44,734 --> 00:01:46,233
+será um
+para os pontos azuis,
+
+39
+00:01:46,267 --> 00:01:47,933
+e zero para os vermelhos.
+
+40
+00:01:47,967 --> 00:01:50,567
+Por exemplo,
+para este ponto,
+
+41
+00:01:50,601 --> 00:01:53,167
+a probabilidade de ser azul
+é de 50%,
+
+42
+00:01:53,201 --> 00:01:55,167
+e de ser vermelho, 50%.
+
+43
+00:01:56,267 --> 00:02:00,733
+Este ponto tem probabilidade
+de 40% de ser azul
+
+44
+00:02:00,767 --> 00:02:02,633
+e 60% de ser vermelho.
+
+45
+00:02:03,633 --> 00:02:06,367
+Para este aqui,
+30% de ser azul
+
+46
+00:02:06,401 --> 00:02:08,833
+e 70% de ser vermelho.
+
+47
+00:02:08,867 --> 00:02:11,733
+Para este ponto aqui,
+80% de ser azul
+
+48
+00:02:11,767 --> 00:02:13,600
+e 20% de ser vermelho.
+
+49
+00:02:14,367 --> 00:02:17,367
+Para obtermos este espaço
+de probabilidade é muito simples.
+
+50
+00:02:17,401 --> 00:02:20,300
+Nós combinamos a função
+linear WX mais B
+
+51
+00:02:20,334 --> 00:02:22,633
+com a função sigmoide.
+
+52
+00:02:22,667 --> 00:02:25,600
+À esquerda, temos as linhas
+que representam os pontos
+
+53
+00:02:25,634 --> 00:02:28,733
+dos quais WX mais B
+é igual a zero, um,
+
+54
+00:02:28,767 --> 00:02:32,133
+dois, menos um,
+menos dois, etc.
+
+55
+00:02:33,033 --> 00:02:35,033
+Uma vez aplicada
+a função sigmoide
+
+56
+00:02:35,067 --> 00:02:36,833
+para os valores do plano,
+
+57
+00:02:36,867 --> 00:02:40,867
+nós obtemos valores
+de zero a um para cada ponto.
+
+58
+00:02:40,901 --> 00:02:43,933
+Os valores são probabilidades
+de o ponto ser azul.
+
+59
+00:02:43,967 --> 00:02:46,300
+Esta probabilidade
+é uma previsão
+
+60
+00:02:46,334 --> 00:02:50,433
+do modelo Y^ do sigmoide
+de WX mais B.
+
+61
+00:02:50,467 --> 00:02:55,167
+Vemos as linhas nas quais
+a previsão é de 0,5, 0,6, 0,7
+
+62
+00:02:55,201 --> 00:02:57,833
+0,4, 0,3 etc.
+
+63
+00:02:58,567 --> 00:02:59,833
+Como você pode ver,
+
+64
+00:02:59,867 --> 00:03:01,700
+conforme entramos mais
+na área azul,
+
+65
+00:03:01,734 --> 00:03:04,933
+a sigmoide de WX mais B
+chega mais próxima de um.
+
+66
+00:03:04,967 --> 00:03:07,967
+Conforme seguimos
+para a área vermelha,
+
+67
+00:03:08,001 --> 00:03:11,367
+a sigmoide de WX mais B
+fica mais próxima de zero.
+
+68
+00:03:11,401 --> 00:03:13,433
+Na linha principal,
+
+69
+00:03:13,467 --> 00:03:15,233
+WX mais B é igual a zero,
+
+70
+00:03:15,267 --> 00:03:19,400
+então a sigmoide de WX mais B
+é exatamente 0,5.
+
+71
+00:03:19,434 --> 00:03:21,267
+À esquerda,
+temos o perceptron,
+
+72
+00:03:21,301 --> 00:03:24,433
+no qual a função de ativação
+era uma função step.
+
+73
+00:03:24,467 --> 00:03:26,733
+À direita, temos
+nosso novo perceptron,
+
+74
+00:03:26,767 --> 00:03:29,467
+no qual a função de ativação
+é uma função sigmoide.
+
+75
+00:03:30,233 --> 00:03:33,067
+Ele pega as entradas
+
+76
+00:03:33,101 --> 00:03:36,100
+as multiplica
+pelos pesos e limites
+
+77
+00:03:36,134 --> 00:03:38,100
+e adiciona os resultados
+
+78
+00:03:38,134 --> 00:03:40,665
+para aplicar
+a função sigmoide.
+
+79
+00:03:41,367 --> 00:03:44,400
+Em vez de retornar
+um e zero como antes,
+
+80
+00:03:44,434 --> 00:03:46,600
+ele retorna valores
+entre zero e um,
+
+81
+00:03:46,634 --> 00:03:50,300
+como 0,99 ou 0,67.
+
+82
+00:03:50,334 --> 00:03:53,267
+Antes nós dizíamos
+que o aluno foi aceito ou não,
+
+83
+00:03:53,301 --> 00:03:58,000
+agora ele diz a probabilidade
+de ele ser aceito.
+

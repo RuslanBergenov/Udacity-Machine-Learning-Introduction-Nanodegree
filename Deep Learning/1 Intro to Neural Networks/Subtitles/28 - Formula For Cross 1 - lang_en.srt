@@ -1,0 +1,28 @@
+1
+00:00:00,000 --> 00:00:03,310
+So this cross entropy, it looks like kind of a big deal.
+
+2
+00:00:03,310 --> 00:00:05,879
+Cross entropy really says the following.
+
+3
+00:00:05,879 --> 00:00:09,105
+If I have a bunch of events and a bunch of probabilities,
+
+4
+00:00:09,105 --> 00:00:13,350
+how likely is it that those events happen based on the probabilities?
+
+5
+00:00:13,349 --> 00:00:14,759
+If it's very likely,
+
+6
+00:00:14,759 --> 00:00:16,684
+then we have a small cross entropy.
+
+7
+00:00:16,684 --> 00:00:21,299
+If it's unlikely, then we have a large cross entropy. Let's elaborate.
+

@@ -1,0 +1,137 @@
+1
+00:00:00,250 --> 00:00:01,550
+Como vimos até agora,
+
+2
+00:00:01,600 --> 00:00:03,500
+todos os nossos algoritmos
+são numéricos.
+
+3
+00:00:03,550 --> 00:00:05,550
+Ou seja,
+precisamos inserir números,
+
+4
+00:00:05,600 --> 00:00:08,900
+como a pontuação em uma prova
+ou notas.
+
+5
+00:00:08,950 --> 00:00:12,000
+Mas os dados de input
+nem sempre parecerão números.
+
+6
+00:00:12,400 --> 00:00:13,950
+Às vezes é assim:
+
+7
+00:00:14,000 --> 00:00:15,700
+digamos que o dado de input
+
+8
+00:00:15,750 --> 00:00:18,450
+seja o recebimento ou não
+de um presente.
+
+9
+00:00:18,500 --> 00:00:21,600
+Como transformamos isso
+em número? Moleza.
+
+10
+00:00:21,650 --> 00:00:24,800
+Se você recebeu, diremos
+que a variável de input 1.
+
+11
+00:00:24,850 --> 00:00:29,050
+Se não recebeu,
+diremos que ela é 0.
+
+12
+00:00:29,100 --> 00:00:30,500
+E se tivermos mais classes?
+
+13
+00:00:30,550 --> 00:00:34,150
+Digamos que as classes sejam
+pato, castor e morsa.
+
+14
+00:00:34,700 --> 00:00:37,450
+Que variável
+inserimos no algoritmo?
+
+15
+00:00:37,500 --> 00:00:39,300
+Poderíamos inserir 0, 1 e 2,
+
+16
+00:00:39,350 --> 00:00:42,450
+mas isso insinuaria dependência
+entre as classes,
+
+17
+00:00:42,500 --> 00:00:45,100
+o que não podemos aceitar.
+Então fazemos o seguinte:
+
+18
+00:00:45,150 --> 00:00:48,800
+inventamos uma variável
+para cada classe.
+
+19
+00:00:48,850 --> 00:00:50,550
+Nossa tabela fica assim.
+
+20
+00:00:50,600 --> 00:00:52,300
+Uma variável para pato,
+
+21
+00:00:52,350 --> 00:00:54,950
+uma para castor
+e uma para morsa.
+
+22
+00:00:55,000 --> 00:00:57,800
+E cada uma tem
+sua coluna correspondente.
+
+23
+00:00:57,850 --> 00:01:02,100
+Se o input for pato,
+a variável do pato é 1,
+
+24
+00:01:02,150 --> 00:01:06,000
+e as variáveis
+do castor e da morsa são 0.
+
+25
+00:01:06,650 --> 00:01:09,400
+A mesma coisa
+para castor e morsa.
+
+26
+00:01:10,100 --> 00:01:11,600
+Podemos até ter mais dados,
+
+27
+00:01:11,650 --> 00:01:14,550
+mas pelo menos
+não há dependências indevidas.
+
+28
+00:01:14,600 --> 00:01:16,750
+Esse processo se chama
+"Código One-Hot",
+
+29
+00:01:16,800 --> 00:01:19,300
+e será usado muito
+no processamento de dados.
+

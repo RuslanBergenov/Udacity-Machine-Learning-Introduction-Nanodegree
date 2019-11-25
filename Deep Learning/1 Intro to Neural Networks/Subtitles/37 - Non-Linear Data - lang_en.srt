@@ -1,0 +1,28 @@
+1
+00:00:00,000 --> 00:00:04,003
+Now we've been dealing a lot with data sets that can be separated by a line,
+
+2
+00:00:04,003 --> 00:00:05,543
+like this one over here.
+
+3
+00:00:05,543 --> 00:00:08,865
+But as you can imagine the real world is much more complex than that.
+
+4
+00:00:08,865 --> 00:00:12,150
+This is where neural networks can show their full potential.
+
+5
+00:00:12,150 --> 00:00:14,970
+In the next few videos we'll see how to deal with
+
+6
+00:00:14,970 --> 00:00:17,350
+more complicated data sets that require
+
+7
+00:00:17,350 --> 00:00:20,109
+highly non-linear boundaries such as this one over here.
+

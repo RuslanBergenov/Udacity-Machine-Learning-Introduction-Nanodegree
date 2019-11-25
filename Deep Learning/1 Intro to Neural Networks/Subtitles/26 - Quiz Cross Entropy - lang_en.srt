@@ -1,0 +1,112 @@
+1
+00:00:00,000 --> 00:00:02,137
+So a quick recap. We have two models,
+
+2
+00:00:02,137 --> 00:00:05,009
+the bad one on the left and the good one on the right.
+
+3
+00:00:05,009 --> 00:00:07,559
+And the way to tell they're bad or good is to calculate
+
+4
+00:00:07,559 --> 00:00:11,730
+the probability of each point being the color it is according to the model.
+
+5
+00:00:11,730 --> 00:00:14,759
+Multiply these probabilities in order to obtain the probability of
+
+6
+00:00:14,759 --> 00:00:17,309
+the whole arrangement and then check that the model on
+
+7
+00:00:17,309 --> 00:00:20,960
+the right gives us a much higher probability than the model on the left.
+
+8
+00:00:20,960 --> 00:00:25,315
+Now all we need to do is to maximize this probability.
+
+9
+00:00:25,315 --> 00:00:29,690
+But probability is a product of numbers and products are hard.
+
+10
+00:00:29,690 --> 00:00:32,820
+Maybe this product of four numbers doesn't look so scary.
+
+11
+00:00:32,820 --> 00:00:35,642
+But what if we have thousands of datapoints?
+
+12
+00:00:35,642 --> 00:00:38,914
+That would correspond to a product of thousands of numbers,
+
+13
+00:00:38,914 --> 00:00:41,594
+all of them between zero and one.
+
+14
+00:00:41,594 --> 00:00:43,655
+This product would be very tiny,
+
+15
+00:00:43,655 --> 00:00:50,545
+something like 0.0000 something and we definitely want to stay away from those numbers.
+
+16
+00:00:50,545 --> 00:00:55,298
+Also, if I have a product of thousands of numbers and I change one of them,
+
+17
+00:00:55,298 --> 00:00:57,630
+the product will change drastically.
+
+18
+00:00:57,630 --> 00:01:02,642
+In summary, we really want to stay away from products.
+
+19
+00:01:02,642 --> 00:01:04,500
+And what's better than products?
+
+20
+00:01:04,500 --> 00:01:07,265
+Well, let's ask our friend here.
+
+21
+00:01:07,265 --> 00:01:11,805
+Products are bad, but sums are good. Let's do sums.
+
+22
+00:01:11,805 --> 00:01:14,885
+So let's try to turn these products into sums.
+
+23
+00:01:14,885 --> 00:01:19,939
+We need to find a function that will help us turn products into sums.
+
+24
+00:01:19,938 --> 00:01:21,779
+What would this function be?
+
+25
+00:01:21,780 --> 00:01:23,534
+It sounds like it's time for a quiz.
+
+26
+00:01:23,534 --> 00:01:26,745
+Quiz. Which function will help us out here?
+
+27
+00:01:26,745 --> 00:01:31,765
+Sine, cosine, logarithm or the exponential function?
+
+28
+00:01:31,765 --> 00:01:33,450
+Enter your answer below.
+

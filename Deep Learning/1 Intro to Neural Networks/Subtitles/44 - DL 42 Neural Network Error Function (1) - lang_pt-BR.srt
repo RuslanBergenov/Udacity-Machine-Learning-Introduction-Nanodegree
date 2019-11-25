@@ -1,0 +1,135 @@
+1
+00:00:00,238 --> 00:00:02,420
+Nosso objetivo é treinar
+nossa rede neural.
+
+2
+00:00:02,453 --> 00:00:06,026
+Para isto,
+precisamos definir a função de erro.
+
+3
+00:00:06,059 --> 00:00:07,963
+Vamos ver novamente
+o que funções de erro
+
+4
+00:00:07,996 --> 00:00:10,200
+eram para perceptrons.
+
+5
+00:00:10,233 --> 00:00:11,989
+Aqui está o perceptron.
+
+6
+00:00:12,022 --> 00:00:17,594
+À esquerda, temos o vetor de input
+com as entradas x1 a xn
+
+7
+00:00:17,627 --> 00:00:20,009
+e 1 para a unidade de viés.
+
+8
+00:00:20,042 --> 00:00:24,104
+E os limites
+com pesos W1 a Wn,
+
+9
+00:00:24,137 --> 00:00:27,317
+e b para a unidade de viés.
+Por fim, podemos ver
+
+10
+00:00:27,350 --> 00:00:30,556
+que este perceptron
+usa uma função sigmoide.
+
+11
+00:00:30,816 --> 00:00:36,460
+E a predição é definida por
+y-chapéu = sigmoide(Wx + b).
+
+12
+00:00:36,889 --> 00:00:40,647
+E, como vimos,
+esta função nos dá a medida de erro
+
+13
+00:00:40,680 --> 00:00:44,504
+de como cada ponto está
+sendo incorretamente classificado.
+
+14
+00:00:44,537 --> 00:00:46,476
+Aproximadamente,
+será um número bem pequeno
+
+15
+00:00:46,509 --> 00:00:48,696
+se o ponto
+for corretamente classificado
+
+16
+00:00:48,729 --> 00:00:51,145
+e uma medida da distância
+que ponto está da linha
+
+17
+00:00:51,178 --> 00:00:53,502
+e do ponto estar
+incorretamente classificado.
+
+18
+00:00:53,535 --> 00:00:55,483
+O que vamos fazer
+é definir a função de erro
+
+19
+00:00:55,516 --> 00:00:57,959
+em um perceptron
+de múltiplas camadas?
+
+20
+00:00:57,992 --> 00:00:59,882
+Como vimos,
+nossa predição é simplesmente
+
+21
+00:00:59,915 --> 00:01:03,679
+a combinação de multiplicações
+de matrizes e funções sigmoides.
+
+22
+00:01:03,712 --> 00:01:07,401
+Mas a função de erro pode ser
+exatamente a mesma coisa, certo?
+
+23
+00:01:07,434 --> 00:01:09,019
+Pode ter exatamente
+a mesma fórmula,
+
+24
+00:01:09,052 --> 00:01:12,049
+só que agora y-chapéu
+é um pouco mais complicada.
+
+25
+00:01:12,082 --> 00:01:13,741
+E, ainda assim,
+
+26
+00:01:13,774 --> 00:01:17,324
+esta função nos dirá o quanto
+um ponto é mal classificado.
+
+27
+00:01:17,357 --> 00:01:18,529
+Só que agora está olhando
+
+28
+00:01:18,562 --> 00:01:20,342
+para uma fronteira
+mais complicada.
+

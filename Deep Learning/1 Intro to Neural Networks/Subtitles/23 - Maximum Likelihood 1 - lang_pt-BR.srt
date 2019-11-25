@@ -1,0 +1,110 @@
+1
+00:00:00,334 --> 00:00:02,360
+Nós queremos um algoritmo
+
+2
+00:00:02,394 --> 00:00:05,633
+para escolhermos o melhor modelo
+para separar os dados.
+
+3
+00:00:05,667 --> 00:00:08,067
+Como estamos lidando
+com probabilidades,
+
+4
+00:00:08,101 --> 00:00:09,999
+vamos utilizá-las
+a nosso favor.
+
+5
+00:00:10,033 --> 00:00:13,065
+Digamos que eu seja um aluno
+que tenha dois modelos,
+
+6
+00:00:13,099 --> 00:00:17,697
+um que exibe 80%
+de probabilidade de ser aceito
+
+7
+00:00:17,731 --> 00:00:20,868
+e outro que exibe 55%
+de probabilidade.
+
+8
+00:00:20,902 --> 00:00:22,834
+Qual modelo
+parece mais preciso?
+
+9
+00:00:22,868 --> 00:00:24,467
+Se eu for aceito,
+
+10
+00:00:24,501 --> 00:00:28,167
+eu direi que o melhor modelo
+é o que exibiu 80%.
+
+11
+00:00:28,200 --> 00:00:29,734
+E se eu não for aceito?
+
+12
+00:00:29,767 --> 00:00:33,601
+O modelo mais preciso
+deve ser o que exibiu 55%.
+
+13
+00:00:34,470 --> 00:00:37,634
+Mas sou só uma pessoa.
+E se fosse eu e um amigo?
+
+14
+00:00:37,944 --> 00:00:40,334
+O melhor modelo
+deve ser aquele
+
+15
+00:00:40,367 --> 00:00:42,767
+que exibe as maiores
+probabilidades
+
+16
+00:00:42,801 --> 00:00:44,868
+dos eventos
+relacionados a nós,
+
+17
+00:00:44,901 --> 00:00:47,367
+seja de aceitação
+ou de rejeição.
+
+18
+00:00:47,400 --> 00:00:49,100
+Isso parece muito intuitivo.
+
+19
+00:00:49,133 --> 00:00:52,000
+O método é chamado
+de máxima verossimilhança.
+
+20
+00:00:52,033 --> 00:00:56,400
+Nós escolhemos o modelo
+que dá aos rótulos existentes
+
+21
+00:00:56,434 --> 00:00:58,267
+a maior probabilidade.
+
+22
+00:00:58,301 --> 00:01:00,267
+Ao maximizar
+a probabilidade,
+
+23
+00:01:00,300 --> 00:01:02,568
+nós podemos escolher
+o melhor modelo possível.
+

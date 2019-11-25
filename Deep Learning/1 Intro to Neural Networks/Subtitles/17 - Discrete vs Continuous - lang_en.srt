@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:03,758
+In the last section we pointed out the difference between a discrete and
+
+2
+00:00:03,758 --> 00:00:06,839
+a continuous error function and discovered that in order for
+
+3
+00:00:06,839 --> 00:00:10,814
+us to use gradient descent we need a continuous error function.
+
+4
+00:00:10,814 --> 00:00:13,634
+In order to do this we also need to move
+
+5
+00:00:13,634 --> 00:00:17,039
+from discrete predictions to continuous predictions.
+
+6
+00:00:17,039 --> 00:00:18,190
+Let me show you what I mean by that.
+

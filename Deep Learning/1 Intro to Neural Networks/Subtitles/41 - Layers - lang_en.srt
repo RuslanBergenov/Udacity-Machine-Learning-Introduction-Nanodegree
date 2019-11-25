@@ -1,0 +1,172 @@
+1
+00:00:00,000 --> 00:00:04,495
+Neural networks have a certain special architecture with layers.
+
+2
+00:00:04,495 --> 00:00:07,320
+The first layer is called the input layer,
+
+3
+00:00:07,320 --> 00:00:08,934
+which contains the inputs,
+
+4
+00:00:08,933 --> 00:00:11,931
+in this case, x1 and x2.
+
+5
+00:00:11,932 --> 00:00:14,460
+The next layer is called the hidden layer,
+
+6
+00:00:14,460 --> 00:00:18,855
+which is a set of linear models created with this first input layer.
+
+7
+00:00:18,855 --> 00:00:21,940
+And then the final layer is called the output layer,
+
+8
+00:00:21,940 --> 00:00:26,614
+where the linear models get combined to obtain a nonlinear model.
+
+9
+00:00:26,614 --> 00:00:28,644
+You can have different architectures.
+
+10
+00:00:28,643 --> 00:00:31,764
+For example, here's one with a larger hidden layer.
+
+11
+00:00:31,765 --> 00:00:33,689
+Now we're combining three linear models to
+
+12
+00:00:33,689 --> 00:00:36,600
+obtain the triangular boundary in the output layer.
+
+13
+00:00:36,600 --> 00:00:39,649
+Now what happens if the input layer has more nodes?
+
+14
+00:00:39,649 --> 00:00:43,460
+For example, this neural network has three nodes in its input layer.
+
+15
+00:00:43,460 --> 00:00:46,435
+Well, that just means we're not living in two-dimensional space anymore.
+
+16
+00:00:46,435 --> 00:00:48,755
+We're living in three-dimensional space,
+
+17
+00:00:48,755 --> 00:00:50,045
+and now our hidden layer,
+
+18
+00:00:50,045 --> 00:00:51,689
+the one with the linear models,
+
+19
+00:00:51,689 --> 00:00:54,795
+just gives us a bunch of planes in three space,
+
+20
+00:00:54,795 --> 00:00:59,820
+and the output layer bounds a nonlinear region in three space.
+
+21
+00:00:59,820 --> 00:01:03,030
+In general, if we have n nodes in our input layer,
+
+22
+00:01:03,030 --> 00:01:06,780
+then we're thinking of data living in n-dimensional space.
+
+23
+00:01:06,780 --> 00:01:08,983
+Now what if our output layer has more nodes?
+
+24
+00:01:08,983 --> 00:01:10,890
+Then we just have more outputs.
+
+25
+00:01:10,890 --> 00:01:14,209
+In that case, we just have a multiclass classification model.
+
+26
+00:01:14,209 --> 00:01:18,329
+So if our model is telling us if an image is a cat or dog or a bird,
+
+27
+00:01:18,328 --> 00:01:20,309
+then we simply have each node in
+
+28
+00:01:20,310 --> 00:01:25,140
+the output layer output a score for each one of the classes: one for the cat,
+
+29
+00:01:25,140 --> 00:01:27,930
+one for the dog, and one for the bird.
+
+30
+00:01:27,930 --> 00:01:31,189
+And finally, and here's where things get pretty cool,
+
+31
+00:01:31,188 --> 00:01:33,274
+what if we have more layers?
+
+32
+00:01:33,275 --> 00:01:36,090
+Then we have what's called a deep neural network.
+
+33
+00:01:36,090 --> 00:01:39,435
+Now what happens here is our linear models combine to create
+
+34
+00:01:39,435 --> 00:01:45,364
+nonlinear models and then these combine to create even more nonlinear models.
+
+35
+00:01:45,364 --> 00:01:48,150
+In general, we can do this many times and obtain
+
+36
+00:01:48,150 --> 00:01:51,329
+highly complex models with lots of hidden layers.
+
+37
+00:01:51,328 --> 00:01:54,434
+This is where the magic of neural networks happens.
+
+38
+00:01:54,435 --> 00:01:56,406
+Many of the models in real life,
+
+39
+00:01:56,406 --> 00:01:59,054
+for self-driving cars or for game-playing agents,
+
+40
+00:01:59,055 --> 00:02:01,049
+have many, many hidden layers.
+
+41
+00:02:01,049 --> 00:02:02,879
+That neural network will just split
+
+42
+00:02:02,879 --> 00:02:07,091
+the n-dimensional space with a highly nonlinear boundary,
+
+43
+00:02:07,090 --> 00:02:08,370
+such as maybe the one on the right.
+

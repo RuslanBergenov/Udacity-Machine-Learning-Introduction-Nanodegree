@@ -1,0 +1,173 @@
+1
+00:00:00,325 --> 00:00:03,324
+Temos finalmente as ferramentas
+para escrever o pseudocódigo
+
+2
+00:00:03,357 --> 00:00:05,125
+do algoritmo
+de gradiente descendente.
+
+3
+00:00:05,158 --> 00:00:07,207
+e ele é assim.
+
+4
+00:00:07,240 --> 00:00:08,779
+Primeiro passo:
+
+5
+00:00:08,812 --> 00:00:13,428
+comece com pesos aleatórios,
+W1 até Wn e b,
+
+6
+00:00:13,461 --> 00:00:15,340
+o que nos dá uma linha.
+
+7
+00:00:15,373 --> 00:00:16,507
+E não apenas uma linha,
+
+8
+00:00:16,540 --> 00:00:17,812
+mas a função
+de probabilidade inteira
+
+9
+00:00:17,845 --> 00:00:20,618
+dada pelo sigmoide de Wx + b.
+
+10
+00:00:20,651 --> 00:00:22,712
+Para cada ponto,
+calculamos o erro,
+
+11
+00:00:22,745 --> 00:00:23,841
+e, como podemos ver,
+
+12
+00:00:23,874 --> 00:00:26,138
+o erro está alto para os pontos
+classificados incorretamente
+
+13
+00:00:26,171 --> 00:00:29,120
+e baixo para os pontos
+classificados corretamente.
+
+14
+00:00:29,153 --> 00:00:33,515
+Para cada ponto
+com coordenadas de x1 a xn,
+
+15
+00:00:33,548 --> 00:00:37,344
+atualizamos wi somando
+a taxa de aprendizado de alfa
+
+16
+00:00:37,377 --> 00:00:40,982
+vezes o derivativo parcial
+da função de erro
+
+17
+00:00:41,015 --> 00:00:42,901
+em relação a wi.
+
+18
+00:00:42,934 --> 00:00:44,822
+Atualizamos também b
+somando alfa
+
+19
+00:00:44,855 --> 00:00:48,338
+vezes o derivativo parcial
+da função de erro em relação a b.
+
+20
+00:00:48,371 --> 00:00:52,568
+Isto nos dá novos pesos, wi´,
+e um novo viés, b´.
+
+21
+00:00:52,601 --> 00:00:55,231
+Agora já calculamos
+os derivativos parciais
+
+22
+00:00:55,264 --> 00:01:01,161
+e sabemos que são y-chapéu - y . xi
+para o derivativo em relação a wi
+
+23
+00:01:01,194 --> 00:01:05,238
+e y-chapéu - y para o derivativo
+em relação a b.
+
+24
+00:01:05,271 --> 00:01:08,339
+É assim que atualizamos
+os pesos.
+
+25
+00:01:10,176 --> 00:01:13,634
+Repita este processo
+até o erro ficar pequeno
+
+26
+00:01:13,667 --> 00:01:15,765
+ou podemos repetir
+um número fixo de vezes.
+
+27
+00:01:15,798 --> 00:01:17,201
+O número de vezes
+é chamado de "epochs",
+
+28
+00:01:17,234 --> 00:01:18,889
+e vamos aprender isto
+mais tarde.
+
+29
+00:01:18,922 --> 00:01:22,049
+Isto parece familiar,
+já vimos algo assim antes?
+
+30
+00:01:22,082 --> 00:01:24,019
+Olhamos os pontos,
+e o que cada um está fazendo
+
+31
+00:01:24,052 --> 00:01:26,954
+é somar um múltiplo de si mesmo
+aos pesos da linha
+
+32
+00:01:26,987 --> 00:01:29,889
+para que a linha
+se aproxime em direção a ele
+
+33
+00:01:29,922 --> 00:01:31,659
+se ela estiver
+classificada incorretamente.
+
+34
+00:01:31,692 --> 00:01:34,747
+É exatamente
+o que o algoritmo perceptron faz.
+
+35
+00:01:34,780 --> 00:01:36,897
+No próximo vídeo,
+vamos ver as similaridades,
+
+36
+00:01:36,930 --> 00:01:39,129
+porque essa similaridade
+é um pouco suspeita.
+

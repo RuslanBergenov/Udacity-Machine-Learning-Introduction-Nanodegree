@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:04,040
+So you may be wondering why are these objects called neural networks.
+
+2
+00:00:04,040 --> 00:00:06,059
+Well, the reason why they're called neural networks is
+
+3
+00:00:06,059 --> 00:00:08,759
+because perceptions kind of look like neurons in the brain.
+
+4
+00:00:08,759 --> 00:00:11,525
+In the left we have a perception with four inputs.
+
+5
+00:00:11,525 --> 00:00:12,809
+The number is one, zero,
+
+6
+00:00:12,808 --> 00:00:14,689
+four, and minus two.
+
+7
+00:00:14,689 --> 00:00:15,990
+And what the perception does,
+
+8
+00:00:15,990 --> 00:00:20,504
+it calculates some equations on the input and decides to return a one or a zero.
+
+9
+00:00:20,504 --> 00:00:24,839
+In a similar way neurons in the brain take inputs coming from the dendrites.
+
+10
+00:00:24,838 --> 00:00:27,058
+These inputs are nervous impulses.
+
+11
+00:00:27,059 --> 00:00:30,464
+So what the neuron does is it does something with the nervous impulses
+
+12
+00:00:30,463 --> 00:00:35,054
+and then it decides if it outputs a nervous impulse or not through the axon.
+
+13
+00:00:35,054 --> 00:00:38,070
+The way we'll create neural networks later in this lesson
+
+14
+00:00:38,070 --> 00:00:40,649
+is by concatenating these perceptions so we'll be mimicking
+
+15
+00:00:40,649 --> 00:00:43,200
+the way the brain connects neurons by taking the output from
+
+16
+00:00:43,200 --> 00:00:46,130
+one and turning it into the input for another one.
+

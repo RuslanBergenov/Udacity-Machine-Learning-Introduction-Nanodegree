@@ -1,0 +1,276 @@
+1
+00:00:00,000 --> 00:00:02,830
+Let's switch to a different example for a moment.
+
+2
+00:00:02,830 --> 00:00:06,365
+Let's say we have a model that will predict if you receive a gift or not.
+
+3
+00:00:06,365 --> 00:00:09,220
+So, the model use predictions in the following way.
+
+4
+00:00:09,220 --> 00:00:13,565
+It says, the probability that you get a gift is 0.8,
+
+5
+00:00:13,564 --> 00:00:18,759
+which automatically implies that the probability that you don't receive a gift is 0.2.
+
+6
+00:00:18,760 --> 00:00:20,265
+And what does the model do?
+
+7
+00:00:20,265 --> 00:00:22,449
+What the model does is take some inputs.
+
+8
+00:00:22,449 --> 00:00:26,064
+For example, is it your birthday or have it been good all year?
+
+9
+00:00:26,065 --> 00:00:27,580
+And based on those inputs,
+
+10
+00:00:27,579 --> 00:00:31,104
+it calculates a linear model which would be the score.
+
+11
+00:00:31,105 --> 00:00:34,090
+Then, the probability that you get the gift or not
+
+12
+00:00:34,090 --> 00:00:37,350
+is simply the sigmoid function applied to that score.
+
+13
+00:00:37,350 --> 00:00:41,539
+Now, what if you had more options than just getting a gift or not a gift?
+
+14
+00:00:41,539 --> 00:00:44,804
+Let's say we have a model that just tell us what animal we just saw,
+
+15
+00:00:44,804 --> 00:00:47,090
+and the options are a duck,
+
+16
+00:00:47,090 --> 00:00:49,890
+a beaver and a walrus.
+
+17
+00:00:49,890 --> 00:00:53,015
+We want a model that tells an answer along the lines of,
+
+18
+00:00:53,015 --> 00:00:55,789
+the probability of a duck is 0.67,
+
+19
+00:00:55,789 --> 00:00:58,579
+the probability of a beaver is 0.24,
+
+20
+00:00:58,579 --> 00:01:02,689
+and the probability of a walrus is 0.09.
+
+21
+00:01:02,689 --> 00:01:06,319
+Notice that the probabilities need to add to one.
+
+22
+00:01:06,319 --> 00:01:09,377
+Let's say we have a linear model based on some inputs.
+
+23
+00:01:09,378 --> 00:01:12,375
+The inputs could be, does it have a beak or not?
+
+24
+00:01:12,375 --> 00:01:14,799
+Number of teeth. Number of feathers.
+
+25
+00:01:14,799 --> 00:01:17,599
+Hair, no hair. Does it live in the water? Does it fly?
+
+26
+00:01:17,599 --> 00:01:21,750
+Etc. We calculate linear function based on those inputs,
+
+27
+00:01:21,750 --> 00:01:24,209
+and let's say we get some scores.
+
+28
+00:01:24,209 --> 00:01:26,519
+So, the duck gets a score of two,
+
+29
+00:01:26,519 --> 00:01:28,554
+and the beaver gets a score of one,
+
+30
+00:01:28,555 --> 00:01:30,975
+and the walrus gets a score of zero.
+
+31
+00:01:30,974 --> 00:01:32,339
+And now the question is,
+
+32
+00:01:32,340 --> 00:01:35,939
+how do we turn these scores into probabilities?
+
+33
+00:01:35,939 --> 00:01:39,689
+The first thing we need to satisfy with probabilities is as we said,
+
+34
+00:01:39,689 --> 00:01:41,539
+they need to add to one.
+
+35
+00:01:41,540 --> 00:01:42,840
+So the two, the one,
+
+36
+00:01:42,840 --> 00:01:45,500
+and the zero do not add to one.
+
+37
+00:01:45,500 --> 00:01:47,719
+The second thing we need to satisfy is,
+
+38
+00:01:47,719 --> 00:01:50,459
+since the duck had a higher score than the beaver
+
+39
+00:01:50,459 --> 00:01:53,204
+and the beaver had a higher score than the walrus,
+
+40
+00:01:53,204 --> 00:01:57,554
+then we want the probability of the duck to be higher than the probability of the beaver,
+
+41
+00:01:57,555 --> 00:02:02,150
+and the probability of the beaver to be higher than the probability of the walrus.
+
+42
+00:02:02,150 --> 00:02:04,060
+Here's a simple way of doing it.
+
+43
+00:02:04,060 --> 00:02:08,134
+Let's take each score and divide it by the sum of all the scores.
+
+44
+00:02:08,134 --> 00:02:11,846
+The two becomes two divided by two plus one plus zero,
+
+45
+00:02:11,847 --> 00:02:15,950
+the one becomes one divided by two plus one plus zero,
+
+46
+00:02:15,949 --> 00:02:20,644
+and the zero becomes zero divided by two plus one plus zero.
+
+47
+00:02:20,645 --> 00:02:25,219
+This kind of works because the probabilities we obtain are two thirds for the duck,
+
+48
+00:02:25,219 --> 00:02:26,884
+one third for the beaver,
+
+49
+00:02:26,884 --> 00:02:29,419
+and zero for the walrus.
+
+50
+00:02:29,419 --> 00:02:31,849
+That works but there's a little problem. Let's think about it.
+
+51
+00:02:31,849 --> 00:02:33,745
+What could this problem be?
+
+52
+00:02:33,745 --> 00:02:35,610
+The problem is the following.
+
+53
+00:02:35,610 --> 00:02:38,295
+What happens if our scores are negative?
+
+54
+00:02:38,294 --> 00:02:39,929
+This is completely plausible since the scores are
+
+55
+00:02:39,930 --> 00:02:43,250
+linear function which could give negative values.
+
+56
+00:02:43,250 --> 00:02:47,069
+What if we had, say, scores of 1, 0 and (-1)?
+
+57
+00:02:47,069 --> 00:02:49,829
+Then, one of the probabilities would turn into one divided by
+
+58
+00:02:49,830 --> 00:02:52,864
+one plus zero plus minus one which is zero,
+
+59
+00:02:52,864 --> 00:02:55,930
+and we know very well that we cannot divide by zero.
+
+60
+00:02:55,930 --> 00:02:58,929
+This unfortunately won't work,
+
+61
+00:02:58,929 --> 00:03:00,719
+but the idea is good.
+
+62
+00:03:00,719 --> 00:03:06,694
+How can we turn this idea into one that works all the time even for negative numbers?
+
+63
+00:03:06,694 --> 00:03:10,539
+Well, it's almost like we need to turn these scores into positive scores.
+
+64
+00:03:10,539 --> 00:03:11,849
+How do we do this?
+
+65
+00:03:11,849 --> 00:03:14,299
+Is there a function that can help us?
+
+66
+00:03:14,300 --> 00:03:16,910
+This is the quiz. Let's look at some options.
+
+67
+00:03:16,909 --> 00:03:21,090
+There's sine, cosine, logarithm, and exponential.
+
+68
+00:03:21,090 --> 00:03:26,219
+Quiz. Which one of these functions will turn every number into a positive number?
+
+69
+00:03:26,219 --> 00:03:28,000
+Enter your answer below.
+

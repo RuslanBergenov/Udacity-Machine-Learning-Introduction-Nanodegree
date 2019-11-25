@@ -1,0 +1,30 @@
+1
+00:00:00,367 --> 00:00:03,667
+Até agora temos modelos
+que nos responde sim ou não
+
+2
+00:00:03,701 --> 00:00:06,934
+ou nos dá a probabilidade
+de ser positivo ou negativo.
+
+3
+00:00:06,968 --> 00:00:08,667
+E se tivéssemos
+mais classes?
+
+4
+00:00:08,701 --> 00:00:12,234
+E se quisermos saber se algo
+é vermelho, azul ou amarelo,
+
+5
+00:00:12,300 --> 00:00:14,100
+um cachorro, um gato
+ou um pássaro?
+
+6
+00:00:14,133 --> 00:00:16,234
+Neste vídeo eu mostrarei
+o que fazer.
+

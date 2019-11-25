@@ -1,0 +1,97 @@
+1
+00:00:00,367 --> 00:00:04,767
+Vamos ver o exemplo
+com dados não lineares
+
+2
+00:00:04,801 --> 00:00:07,968
+no qual uma linha não pode
+separar os pontos.
+
+3
+00:00:08,000 --> 00:00:12,300
+Dentre as soluções,
+a que melhor se adequou
+
+4
+00:00:12,334 --> 00:00:14,133
+foi esta curva.
+
+5
+00:00:14,167 --> 00:00:16,767
+Eu ensinarei
+a encontrar a curva,
+
+6
+00:00:16,801 --> 00:00:18,734
+que é parecido
+com o que vimos antes.
+
+7
+00:00:18,767 --> 00:00:20,634
+Nós usaremos
+o gradiente descendente.
+
+8
+00:00:20,667 --> 00:00:23,701
+O que nós faremos
+com estes dados
+
+9
+00:00:23,734 --> 00:00:25,868
+que não podem ser
+separados com uma linha?
+
+10
+00:00:25,901 --> 00:00:28,234
+Nós criaremos uma função
+de probabilidade
+
+11
+00:00:28,267 --> 00:00:30,133
+na qual os pontos
+da região azul
+
+12
+00:00:30,167 --> 00:00:31,934
+são mais prováveis
+de serem azuis,
+
+13
+00:00:31,968 --> 00:00:33,834
+e os pontos
+na região vermelha
+
+14
+00:00:33,868 --> 00:00:36,267
+são mais prováveis
+de serem vermelhos.
+
+15
+00:00:36,300 --> 00:00:39,367
+Esta curva que os separa
+
+16
+00:00:39,400 --> 00:00:41,133
+é um conjunto de pontos
+
+17
+00:00:41,167 --> 00:00:44,367
+que tem a mesma probabilidade
+de serem azuis ou vermelhos.
+
+18
+00:00:44,400 --> 00:00:46,267
+Tudo continuará igual
+como antes,
+
+19
+00:00:46,300 --> 00:00:49,367
+mas esta equação
+não será linear,
+
+20
+00:00:49,400 --> 00:00:52,300
+e é aqui que as rede neurais
+entram em jogo.
+

@@ -1,0 +1,56 @@
+1
+00:00:00,000 --> 00:00:02,459
+So, let's go back to this example of where we saw
+
+2
+00:00:02,459 --> 00:00:04,769
+some data that is not linearly separable.
+
+3
+00:00:04,769 --> 00:00:09,740
+So a line can not divide these red and blue points and we looked at some solutions,
+
+4
+00:00:09,740 --> 00:00:14,185
+and if you remember, the one we considered more seriously was this curve over here.
+
+5
+00:00:14,185 --> 00:00:18,664
+So what I'll teach you now is to find this curve and it's very similar than before.
+
+6
+00:00:18,664 --> 00:00:20,519
+We'll still use grading dissent.
+
+7
+00:00:20,518 --> 00:00:23,009
+In a nutshell, what we're going to do is for
+
+8
+00:00:23,010 --> 00:00:25,769
+these data which is not separable with a line,
+
+9
+00:00:25,768 --> 00:00:30,599
+we're going to create a probability function where the points in the blue region are more
+
+10
+00:00:30,600 --> 00:00:36,240
+likely to be blue and the points in the red region are more likely to be red.
+
+11
+00:00:36,240 --> 00:00:39,798
+And this curve here that separates them is
+
+12
+00:00:39,798 --> 00:00:44,329
+a set of points which are equally likely to be blue or red.
+
+13
+00:00:44,329 --> 00:00:47,789
+Everything will be the same as before except this equation
+
+14
+00:00:47,789 --> 00:00:52,000
+won't be linear and that's where neural networks come into play.
+

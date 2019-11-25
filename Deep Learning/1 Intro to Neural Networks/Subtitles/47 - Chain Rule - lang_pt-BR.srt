@@ -1,0 +1,116 @@
+1
+00:00:00,400 --> 00:00:02,868
+Antes de calcularmos
+os derivativos,
+
+2
+00:00:02,902 --> 00:00:04,801
+vamos relembrar
+a regra da cadeia,
+
+3
+00:00:04,835 --> 00:00:07,968
+que é a técnica principal
+para calcular isso.
+
+4
+00:00:08,002 --> 00:00:12,100
+Ela diz que se tivermos
+uma variável X em uma função F
+
+5
+00:00:12,134 --> 00:00:15,968
+que você aplica a X
+para obter F de X,
+
+6
+00:00:16,002 --> 00:00:17,567
+nós a chamaremos de A,
+
+7
+00:00:18,334 --> 00:00:21,868
+e outra função G,
+que aplicaremos a F de X
+
+8
+00:00:21,902 --> 00:00:23,701
+para obter G de F de X,
+
+9
+00:00:23,735 --> 00:00:25,734
+nós a chamaremos de B.
+
+10
+00:00:25,768 --> 00:00:28,133
+A rede da cadeia diz
+que se quisermos encontrar
+
+11
+00:00:28,167 --> 00:00:30,968
+o derivativo parcial de B
+
+12
+00:00:31,002 --> 00:00:32,968
+em respeito ao X,
+
+13
+00:00:33,002 --> 00:00:37,367
+isso será o derivativo parcial
+de B em respeito ao A
+
+14
+00:00:37,401 --> 00:00:40,934
+vezes o derivativo parcial de A
+em respeito a X.
+
+15
+00:00:41,667 --> 00:00:47,434
+Ele diz que, ao compor funções,
+os derivativos se multiplicam,
+
+16
+00:00:47,468 --> 00:00:50,000
+e isso será muito útil,
+
+17
+00:00:50,034 --> 00:00:55,066
+pois o feedforward é composto
+por um monte de funções,
+
+18
+00:00:55,567 --> 00:00:57,067
+e a propagação de retorno
+
+19
+00:00:57,101 --> 00:01:00,667
+é os derivativos
+de cada parte.
+
+20
+00:01:00,701 --> 00:01:03,334
+Como pegar os derivativos
+de uma composição
+
+21
+00:01:03,368 --> 00:01:06,567
+é o mesmo que multiplicar
+os derivativos parciais,
+
+22
+00:01:06,601 --> 00:01:08,434
+tudo que nós faremos
+
+23
+00:01:08,468 --> 00:01:11,300
+é multiplicar um monte
+de derivativos parciais
+
+24
+00:01:11,334 --> 00:01:13,033
+para obtermos
+o que desejamos.
+
+25
+00:01:13,067 --> 00:01:14,300
+Bem simples, não é?
+

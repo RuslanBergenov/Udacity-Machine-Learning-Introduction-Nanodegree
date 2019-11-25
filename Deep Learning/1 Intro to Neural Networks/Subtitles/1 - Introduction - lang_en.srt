@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:02,120
+So let's start with two questions,
+
+2
+00:00:02,120 --> 00:00:04,995
+what is deep learning, and what is it used for?
+
+3
+00:00:04,995 --> 00:00:08,160
+The answer to the second question is pretty much everywhere.
+
+4
+00:00:08,160 --> 00:00:11,009
+Recent applications include things such as beating
+
+5
+00:00:11,009 --> 00:00:14,349
+humans in games such as Go, or even jeopardy,
+
+6
+00:00:14,349 --> 00:00:18,050
+detecting spam in emails, forecasting stock prices,
+
+7
+00:00:18,050 --> 00:00:20,320
+recognizing images in a picture,
+
+8
+00:00:20,320 --> 00:00:24,635
+and even diagnosing illnesses sometimes with more precision than doctors.
+
+9
+00:00:24,635 --> 00:00:25,920
+And of course, one of
+
+10
+00:00:25,920 --> 00:00:29,850
+the most celebrated applications of deep learning is in self-driving cars.
+
+11
+00:00:29,850 --> 00:00:31,980
+And what is at the heart of deep learning?
+
+12
+00:00:31,980 --> 00:00:34,905
+This wonderful object called neural networks.
+
+13
+00:00:34,905 --> 00:00:38,789
+Neural networks vaguely mimic the process of how the brain operates,
+
+14
+00:00:38,789 --> 00:00:41,299
+with neurons that fire bits of information.
+
+15
+00:00:41,299 --> 00:00:43,049
+It sounds pretty scary, right?
+
+16
+00:00:43,049 --> 00:00:45,375
+As a matter of fact, the first time I heard of a neural network,
+
+17
+00:00:45,375 --> 00:00:47,234
+this is the image that came into my head,
+
+18
+00:00:47,234 --> 00:00:50,719
+some scary robot with artificial brain.
+
+19
+00:00:50,719 --> 00:00:53,100
+But then, I got to learn a bit more about neural networks and
+
+20
+00:00:53,100 --> 00:00:56,179
+I realized that there are actually a lot scarier than that.
+
+21
+00:00:56,179 --> 00:00:58,475
+This is how a neural network looks.
+
+22
+00:00:58,475 --> 00:01:01,800
+As a matter of fact, this one here is a deep neural network.
+
+23
+00:01:01,799 --> 00:01:04,319
+Has lots of nodes, lots of edges,
+
+24
+00:01:04,319 --> 00:01:09,029
+lots of layers, information coming through the nodes and leaving, it's quite complicated.
+
+25
+00:01:09,030 --> 00:01:11,625
+But after looking at neural networks for a while,
+
+26
+00:01:11,625 --> 00:01:14,540
+I realized that they're actually a lot simpler than that.
+
+27
+00:01:14,540 --> 00:01:16,470
+When I think of a neural network,
+
+28
+00:01:16,469 --> 00:01:18,825
+this is actually the image that comes to my mind.
+
+29
+00:01:18,825 --> 00:01:20,685
+There is a child playing in the sand,
+
+30
+00:01:20,685 --> 00:01:23,900
+with some red and blue shells and we are the child.
+
+31
+00:01:23,900 --> 00:01:27,300
+Can you draw a line that separates the red and the blue shells?
+
+32
+00:01:27,299 --> 00:01:29,530
+And the child draws this line.
+
+33
+00:01:29,530 --> 00:01:32,299
+That's it. That's what a neural network does.
+
+34
+00:01:32,299 --> 00:01:35,054
+Given some data in the form of blue or red points,
+
+35
+00:01:35,055 --> 00:01:38,800
+the neural network will look for the best line that separates them.
+
+36
+00:01:38,799 --> 00:01:41,730
+And if the data is a bit more complicated like this one over here,
+
+37
+00:01:41,730 --> 00:01:44,079
+then we'll need a more complicated algorithm.
+
+38
+00:01:44,079 --> 00:01:46,530
+Here, a deep neural network will do the job and
+
+39
+00:01:46,530 --> 00:01:49,799
+find a more complex boundary that separates the points.
+
+40
+00:01:49,799 --> 00:01:51,045
+So with that image in mind,
+
+41
+00:01:51,045 --> 00:01:53,469
+let's dive in and learn about neural networks.
+

@@ -1,0 +1,92 @@
+1
+00:00:00,234 --> 00:00:03,868
+Agora o objetivo é minimizar
+a função erro.
+
+2
+00:00:03,901 --> 00:00:05,934
+Começamos
+com pesos aleatórios
+
+3
+00:00:05,968 --> 00:00:09,434
+que vai nos dar a previsão
+sigmoide de Wx+b.
+
+4
+00:00:09,467 --> 00:00:12,200
+Isso também nos dá
+uma função erro,
+
+5
+00:00:12,234 --> 00:00:14,033
+que é esta fórmula.
+
+6
+00:00:14,067 --> 00:00:17,601
+As adições também são
+funções erro para cada ponto,
+
+7
+00:00:17,634 --> 00:00:21,434
+então cada um dá uma função
+maior se for mal classificado
+
+8
+00:00:21,467 --> 00:00:24,534
+e uma função menor se for
+classificado corretamente.
+
+9
+00:00:24,567 --> 00:00:27,968
+Vamos minimizar a função
+com o gradiente descendente.
+
+10
+00:00:28,000 --> 00:00:31,567
+Aqui está o Monte Everest
+e aqui estamos nós.
+
+11
+00:00:31,601 --> 00:00:36,467
+Vamos mexer a linha
+para diminuir a função erro.
+
+12
+00:00:36,501 --> 00:00:41,501
+A função erro é a altura,
+que é E de W e b,
+
+13
+00:00:41,534 --> 00:00:43,734
+onde W e b são os pesos.
+
+14
+00:00:43,767 --> 00:00:46,434
+Vamos usar
+o gradiente descendente
+
+15
+00:00:46,467 --> 00:00:50,567
+para descer a montanha
+e ficar numa altura mais baixa,
+
+16
+00:00:50,601 --> 00:00:56,200
+diminuindo a função erro,
+que é E de W' e b'.
+
+17
+00:00:56,467 --> 00:01:01,033
+Assim teremos novos pesos,
+o W' e o b',
+
+18
+00:01:01,067 --> 00:01:03,734
+nos dando
+uma previsão melhor,
+
+19
+00:01:03,767 --> 00:01:07,901
+que é sigmoide de W'x+b'.
+

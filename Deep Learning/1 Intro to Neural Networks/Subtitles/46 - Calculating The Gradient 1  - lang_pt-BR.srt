@@ -1,0 +1,242 @@
+1
+00:00:00,367 --> 00:00:02,734
+Nós faremos
+o mesmo de antes,
+
+2
+00:00:02,768 --> 00:00:04,367
+atualizaremos
+os pesos na rede
+
+3
+00:00:04,401 --> 00:00:06,100
+para classificar melhor
+os pontos,
+
+4
+00:00:06,134 --> 00:00:08,767
+mas isso será formal,
+então se prepare,
+
+5
+00:00:08,801 --> 00:00:10,400
+pois a matemática
+está chegando.
+
+6
+00:00:10,434 --> 00:00:13,968
+À esquerda, há um perceptron
+com um vetor de entrada,
+
+7
+00:00:14,002 --> 00:00:15,868
+os pesos, os vieses
+
+8
+00:00:15,902 --> 00:00:19,000
+e a função sigmoide
+dentro do nó.
+
+9
+00:00:19,034 --> 00:00:22,133
+À direita, há a fórmula
+da previsão,
+
+10
+00:00:22,167 --> 00:00:27,334
+que é a função sigmoide
+da função linear da entrada.
+
+11
+00:00:27,368 --> 00:00:31,200
+Abaixo nós temos
+a fórmula do erro,
+
+12
+00:00:31,234 --> 00:00:33,834
+que é a média
+de todos os pontos,
+
+13
+00:00:33,868 --> 00:00:36,467
+do ponto azul
+para os pontos azuis
+
+14
+00:00:36,501 --> 00:00:39,267
+e do termo vermelho
+para os pontos vermelhos.
+
+15
+00:00:39,301 --> 00:00:41,234
+Para descermos
+do Monte Errorest,
+
+16
+00:00:41,268 --> 00:00:43,000
+nós calculamos o gradiente,
+
+17
+00:00:43,601 --> 00:00:46,534
+que é simplesmente
+o vetor formado
+
+18
+00:00:46,568 --> 00:00:50,033
+por todos os derivativos
+parciais da função de erro
+
+19
+00:00:50,067 --> 00:00:53,767
+em respeito aos pesos
+de W1 até WN,
+
+20
+00:00:53,801 --> 00:00:55,801
+e ao viés B.
+
+21
+00:00:55,835 --> 00:00:58,300
+Isso corresponde
+a estes limites.
+
+22
+00:00:58,334 --> 00:01:01,200
+O que fazemos
+em um perceptron multicamada?
+
+23
+00:01:01,234 --> 00:01:03,434
+Isso é um pouco
+mais complicado,
+
+24
+00:01:03,468 --> 00:01:05,634
+mas é quase a mesma coisa.
+
+25
+00:01:05,668 --> 00:01:10,033
+Nós temos a previsão,
+que é a composição de funções
+
+26
+00:01:10,067 --> 00:01:13,434
+de matriz, de multiplicações
+e de sigmoides.
+
+27
+00:01:13,468 --> 00:01:16,167
+A função de erro é
+quase a mesma coisa,
+
+28
+00:01:16,201 --> 00:01:19,634
+mas o Y^ é
+um pouco mais complicado.
+
+29
+00:01:19,668 --> 00:01:21,701
+O gradiente é
+quase a mesma coisa,
+
+30
+00:01:21,735 --> 00:01:23,634
+só é bem mais longo.
+
+31
+00:01:23,668 --> 00:01:25,901
+Ele é um vetor enorme
+no qual cada entrada
+
+32
+00:01:25,935 --> 00:01:27,667
+é um derivativo parcial
+do erro
+
+33
+00:01:27,701 --> 00:01:29,868
+em respeito
+a cada um dos pesos.
+
+34
+00:01:29,902 --> 00:01:32,834
+Isso corresponde
+a todos os limites.
+
+35
+00:01:32,868 --> 00:01:34,868
+Para escrever
+de maneira mais formal,
+
+36
+00:01:34,902 --> 00:01:38,267
+lembre-se que a previsão é
+a composição da multiplicação
+
+37
+00:01:38,301 --> 00:01:41,634
+de sigmoides e da matriz,
+na qual estas são as matrizes
+
+38
+00:01:41,668 --> 00:01:45,534
+e o gradiente será formado
+pelos derivativos parciais.
+
+39
+00:01:45,568 --> 00:01:47,667
+Isso parece uma matriz,
+mas, na verdade,
+
+40
+00:01:47,701 --> 00:01:49,200
+é só um vetor longo.
+
+41
+00:01:49,234 --> 00:01:51,834
+O gradiente descendente
+fará o seguinte:
+
+42
+00:01:51,868 --> 00:01:56,634
+ele pega cada peso
+WIJ sobre K
+
+43
+00:01:56,668 --> 00:01:59,300
+e atualiza adicionando
+um pequeno valor,
+
+44
+00:01:59,334 --> 00:02:00,901
+a taxa de aprendizado
+
+45
+00:02:00,935 --> 00:02:03,467
+vezes o derivativo
+parcial de E
+
+46
+00:02:03,501 --> 00:02:06,067
+em respeito ao mesmo peso.
+
+47
+00:02:06,101 --> 00:02:08,067
+Este é o passo
+do gradiente descendente,
+
+48
+00:02:08,101 --> 00:02:14,000
+que nos dará um novo peso
+atualizado WIJ sobre K'.
+
+49
+00:02:14,034 --> 00:02:18,000
+Isso nos dará um novo modelo
+com novos pesos
+
+50
+00:02:18,034 --> 00:02:20,133
+que classificarão o ponto
+bem melhor.
+

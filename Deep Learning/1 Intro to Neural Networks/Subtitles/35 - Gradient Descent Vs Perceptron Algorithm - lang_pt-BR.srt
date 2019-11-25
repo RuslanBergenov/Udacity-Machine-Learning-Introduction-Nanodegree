@@ -1,0 +1,285 @@
+1
+00:00:00,224 --> 00:00:02,146
+Vamos comparar
+o algoritmo perceptron
+
+2
+00:00:02,179 --> 00:00:04,255
+ao algoritmo
+de gradiente descendente.
+
+3
+00:00:04,288 --> 00:00:05,932
+No algoritmo
+de gradiente descendente,
+
+4
+00:00:05,965 --> 00:00:09,136
+pegamos os pesos
+e mudamos de wi
+
+5
+00:00:09,169 --> 00:00:14,144
+para wi + alfa(y - y-chapéu)xi.
+
+6
+00:00:14,177 --> 00:00:17,286
+No algoritmo perceptron,
+nem todos os pontos mudam de pesos,
+
+7
+00:00:17,319 --> 00:00:19,144
+apenas os classificados
+incorretamente.
+
+8
+00:00:19,177 --> 00:00:21,406
+Aqui, se x está classificado
+incorretamente,
+
+9
+00:00:21,439 --> 00:00:25,475
+mudamos os pesos
+somando xi a wi
+
+10
+00:00:25,508 --> 00:00:27,700
+se o rótulo do ponto
+for positivo
+
+11
+00:00:27,733 --> 00:00:29,427
+e subtraindo se for negativo.
+
+12
+00:00:29,691 --> 00:00:32,372
+A questão agora é:
+as duas coisas são iguais?
+
+13
+00:00:32,405 --> 00:00:34,768
+Vamos lembrar
+que no algoritmo perceptron
+
+14
+00:00:34,801 --> 00:00:37,249
+os rótulos são 1 e 0
+
+15
+00:00:37,282 --> 00:00:40,512
+e as previsões y-chapéu
+são também 1 e 0.
+
+16
+00:00:40,545 --> 00:00:43,308
+Então, se o ponto
+está corretamente classificado,
+
+17
+00:00:43,341 --> 00:00:48,245
+y - y-chapéu = 0,
+porque y = y-chapéu.
+
+18
+00:00:48,278 --> 00:00:51,956
+Se o ponto tiver rótulo azul,
+y = 1.
+
+19
+00:00:51,989 --> 00:00:53,303
+E se estiver classificado
+incorretamente,
+
+20
+00:00:53,336 --> 00:00:55,999
+a predição deverá ser
+y-chapéu = 0.
+
+21
+00:00:56,032 --> 00:00:59,214
+Então y-chapéu - y = -1.
+
+22
+00:00:59,247 --> 00:01:00,984
+De forma parecida,
+com os pontos com rótulo vermelho,
+
+23
+00:01:01,017 --> 00:01:03,947
+y = 0 e y-chapéu = 1.
+
+24
+00:01:03,980 --> 00:01:06,632
+Então y-chapéu - y = 1.
+
+25
+00:01:06,665 --> 00:01:08,139
+Pode não ficar
+super claro logo de cara,
+
+26
+00:01:08,172 --> 00:01:09,900
+mas se olhar para a tela
+por muito tempo,
+
+27
+00:01:09,933 --> 00:01:13,521
+vai perceber que as dois
+são exatamente a mesma coisa.
+
+28
+00:01:13,554 --> 00:01:15,169
+A única diferença é que,
+à esquerda,
+
+29
+00:01:15,202 --> 00:01:18,359
+y-chapéu pode ter qualquer número
+entre 0 e 1,
+
+30
+00:01:18,392 --> 00:01:19,717
+enquanto à direita,
+
+31
+00:01:19,750 --> 00:01:23,559
+y-chapéu só pode ter
+os valores 0 ou 1.
+
+32
+00:01:23,592 --> 00:01:25,506
+É bem fascinante, né?
+
+33
+00:01:25,539 --> 00:01:26,846
+Mas vamos estudar
+o gradiente descendente
+
+34
+00:01:26,879 --> 00:01:28,341
+ainda mais de perto.
+
+35
+00:01:28,374 --> 00:01:29,662
+Tanto no algoritmo perceptron
+
+36
+00:01:29,695 --> 00:01:31,810
+quanto no algoritmo
+de descendente gradiente,
+
+37
+00:01:31,843 --> 00:01:35,580
+um ponto classificado incorretamente
+fala para a linha chegar mais perto
+
+38
+00:01:35,613 --> 00:01:38,409
+porque ele quer
+que a linha o ultrapasse,
+
+39
+00:01:38,442 --> 00:01:40,654
+para que ele fique
+do lado correto.
+
+40
+00:01:40,687 --> 00:01:43,881
+Mas o que acontece se o ponto
+estiver classificado corretamente?
+
+41
+00:01:43,914 --> 00:01:47,535
+O algoritmo diz
+para não fazer nada.
+
+42
+00:01:47,568 --> 00:01:51,271
+No algoritmo descendente,
+você muda os pesos.
+
+43
+00:01:51,304 --> 00:01:53,024
+Mas o que ele faz?
+
+44
+00:01:53,057 --> 00:01:54,485
+Se olharmos de perto,
+
+45
+00:01:54,518 --> 00:01:59,195
+o ponto fala para linha
+se afastar.
+
+46
+00:01:59,228 --> 00:02:01,113
+E isto faz sentido, certo?
+
+47
+00:02:01,146 --> 00:02:03,104
+Porque, se você está
+corretamente classificado,
+
+48
+00:02:03,137 --> 00:02:06,054
+por exemplo, se você for
+um ponto azul na região azul,
+
+49
+00:02:06,087 --> 00:02:08,227
+você vai querer estar
+mais ainda na região azul,
+
+50
+00:02:08,260 --> 00:02:10,805
+portanto sua predição é
+ainda mais próxima de 1,
+
+51
+00:02:10,838 --> 00:02:13,152
+e seu erro é ainda menor.
+
+52
+00:02:13,185 --> 00:02:16,118
+O mesmo para um ponto vermelho
+na região vermelha.
+
+53
+00:02:16,151 --> 00:02:19,661
+Então faz sentido o ponto falar
+para a linha se afastar.
+
+54
+00:02:19,694 --> 00:02:23,020
+E é exatamente o que o algoritmo
+de gradiente descendente faz.
+
+55
+00:02:23,053 --> 00:02:24,575
+Os pontos classificados
+incorretamente
+
+56
+00:02:24,608 --> 00:02:26,236
+pedem para a linha
+se aproximar,
+
+57
+00:02:26,269 --> 00:02:28,030
+e os pontos classificados
+corretamente
+
+58
+00:02:28,063 --> 00:02:30,575
+pedem para linha se afastar.
+
+59
+00:02:30,608 --> 00:02:34,127
+A linha escuta todos os pontos
+e dá passos de tal forma
+
+60
+00:02:34,160 --> 00:02:36,924
+que acaba chegando
+a uma ótima solução.
+

@@ -1,0 +1,454 @@
+1
+00:00:00,033 --> 00:00:02,930
+Agora que definimos
+o que são redes neurais,
+
+2
+00:00:02,963 --> 00:00:04,718
+precisamos aprender
+a treiná-las.
+
+3
+00:00:04,751 --> 00:00:06,050
+Treiná-las significa:
+
+4
+00:00:06,083 --> 00:00:08,094
+que parâmetros
+elas devem ter nos limites
+
+5
+00:00:08,127 --> 00:00:10,548
+para que elas moldem bem
+nossos dados?
+
+6
+00:00:10,581 --> 00:00:12,252
+Para aprendermos a treiná-las,
+
+7
+00:00:12,285 --> 00:00:14,797
+temos que prestar atenção
+em como elas processam o input
+
+8
+00:00:14,830 --> 00:00:16,575
+para obter um output.
+
+9
+00:00:16,608 --> 00:00:18,887
+Vamos dar uma olhada
+na rede neural mais simples,
+
+10
+00:00:18,920 --> 00:00:20,346
+o perceptron.
+
+11
+00:00:20,379 --> 00:00:24,313
+Este perceptron recebe
+um ponto de dado x1,x2,
+
+12
+00:00:24,346 --> 00:00:27,059
+em que o rótulo é y = 1.
+
+13
+00:00:27,092 --> 00:00:29,270
+Ou seja, o ponto é azul.
+
+14
+00:00:29,303 --> 00:00:31,871
+Agora o perceptron é definido
+por uma equação linear,
+
+15
+00:00:31,904 --> 00:00:35,949
+digamos, w1x1 + w2x2 + b,
+
+16
+00:00:35,982 --> 00:00:39,480
+em que w1 e w2
+são os pesos dos limites
+
+17
+00:00:39,513 --> 00:00:41,754
+e b é o viés do nó.
+
+18
+00:00:41,787 --> 00:00:43,388
+Aqui, w1 é maior que w2,
+
+19
+00:00:43,421 --> 00:00:46,428
+então vamos denotar isso
+desenhando o limite com rótulo w1
+
+20
+00:00:46,461 --> 00:00:49,655
+bem mais espesso
+que o limite com rótulo w2.
+
+21
+00:00:49,688 --> 00:00:54,272
+O que o perceptron faz
+é diagramar o ponto x1,x2
+
+22
+00:00:54,305 --> 00:00:57,409
+e gera a probabilidade
+de que o ponto é azul.
+
+23
+00:00:57,442 --> 00:00:59,239
+Aqui o ponto está
+na área vermelha,
+
+24
+00:00:59,272 --> 00:01:01,050
+então a saída é
+um número pequeno,
+
+25
+00:01:01,083 --> 00:01:03,920
+já que o ponto
+provavelmente não é azul.
+
+26
+00:01:03,953 --> 00:01:06,891
+Este processo é conhecido
+como "alimentação direta".
+
+27
+00:01:06,924 --> 00:01:10,883
+Podemos ver que é um modelo ruim
+porque o ponto é de fato azul.
+
+28
+00:01:10,916 --> 00:01:14,718
+Assim, a terceira coordenada,
+y, é igual a 1.
+
+29
+00:01:14,751 --> 00:01:16,891
+Se tivermos uma rede neural
+mais complicada,
+
+30
+00:01:16,924 --> 00:01:18,578
+o processo será o mesmo.
+
+31
+00:01:18,611 --> 00:01:21,756
+Aqui, temos limites espessos
+que correspondem a pesos grandes
+
+32
+00:01:21,789 --> 00:01:24,819
+e limites finos que correspondem
+a pesos pequenos.
+
+33
+00:01:24,852 --> 00:01:28,344
+A rede neural diagrama o ponto
+no gráfico de cima
+
+34
+00:01:28,377 --> 00:01:30,301
+e também no gráfico de baixo.
+
+35
+00:01:30,334 --> 00:01:34,754
+Os outputs será um número pequeno
+do modelo de cima.
+
+36
+00:01:34,787 --> 00:01:36,452
+O ponto está na área vermelha,
+
+37
+00:01:36,485 --> 00:01:39,673
+ou seja, é pouco provável
+que seja azul,
+
+38
+00:01:39,706 --> 00:01:43,020
+e um número grande
+do segundo modelo,
+
+39
+00:01:43,053 --> 00:01:44,658
+já que o ponto
+está na área azul,
+
+40
+00:01:44,691 --> 00:01:47,657
+ou seja,
+é muito provável que seja azul.
+
+41
+00:01:47,690 --> 00:01:51,358
+Agora, como os dois modelos
+foram combinados neste modelo linear
+
+42
+00:01:51,391 --> 00:01:54,132
+e a camada de saída
+diagrama apenas o ponto,
+
+43
+00:01:54,165 --> 00:01:57,695
+isso nos diz a probabilidade
+do ponto ser azul.
+
+44
+00:01:57,728 --> 00:02:00,037
+Como pode ver,
+é um modelo ruim,
+
+45
+00:02:00,070 --> 00:02:02,236
+porque coloca o ponto
+na área vermelha,
+
+46
+00:02:02,269 --> 00:02:03,998
+e o ponto é azul.
+
+47
+00:02:04,031 --> 00:02:06,284
+Novamente, este processo é chamado
+de "alimentação direta",
+
+48
+00:02:06,317 --> 00:02:08,231
+e vamos dar
+mais atenção a ele.
+
+49
+00:02:08,264 --> 00:02:10,633
+Aqui, temos nossa rede neural
+e as outras notações,
+
+50
+00:02:10,666 --> 00:02:13,227
+ou seja,
+o viés está do lado de fora.
+
+51
+00:02:13,260 --> 00:02:15,234
+Agora temos
+uma matriz de pesos.
+
+52
+00:02:15,267 --> 00:02:18,827
+A matriz elevada a 1,
+que denota a primeira camada,
+
+53
+00:02:18,860 --> 00:02:23,434
+e as entradas são
+os pesos w11 até w32.
+
+54
+00:02:23,467 --> 00:02:28,269
+Veja que os vieses
+foram escritos como w31 e w32.
+
+55
+00:02:28,302 --> 00:02:30,393
+É apenas por conveniência.
+
+56
+00:02:30,426 --> 00:02:32,549
+Na próxima camada,
+temos também uma matriz.
+
+57
+00:02:32,582 --> 00:02:35,961
+Esta é w elevada a 2
+para a segunda camada.
+
+58
+00:02:35,994 --> 00:02:37,901
+Esta camada contém
+os pesos que nos dizem
+
+59
+00:02:37,934 --> 00:02:40,269
+como combinar os modelos lineares
+da primeira camada
+
+60
+00:02:40,302 --> 00:02:43,550
+para obter o modelo não linear
+da segunda camada.
+
+61
+00:02:43,583 --> 00:02:45,408
+Agora o que acontece
+é matemática.
+
+62
+00:02:45,441 --> 00:02:47,958
+Temos o input
+na forma x1,x2,1,
+
+63
+00:02:47,991 --> 00:02:50,753
+em que 1
+vem da unidade de viés.
+
+64
+00:02:50,786 --> 00:02:55,562
+Multiplicamos isto pela matriz w1
+para obter estas saídas.
+
+65
+00:02:55,595 --> 00:02:58,805
+Depois aplicamos a função sigmoide
+para transformar as saídas
+
+66
+00:02:58,838 --> 00:03:01,409
+em valores entre 0 e 1.
+
+67
+00:03:01,442 --> 00:03:02,703
+Então o vetor formata
+estes valores
+
+68
+00:03:02,736 --> 00:03:05,162
+e obtém 1
+para a unidade de viés
+
+69
+00:03:05,195 --> 00:03:08,224
+multiplicada
+pela segunda matriz.
+
+70
+00:03:08,257 --> 00:03:11,866
+Isto retorna uma saída
+que é jogada em uma função sigmoide
+
+71
+00:03:11,899 --> 00:03:15,576
+para obter a saída final,
+que é y-chapéu.
+
+72
+00:03:15,609 --> 00:03:17,641
+y-chapéu é a predição
+
+73
+00:03:17,674 --> 00:03:20,975
+ou probabilidade
+do ponto ter rótulo azul.
+
+74
+00:03:21,008 --> 00:03:23,146
+É isto o que
+as redes neurais fazem.
+
+75
+00:03:23,179 --> 00:03:25,170
+Elas pegam o vetor de input
+
+76
+00:03:25,203 --> 00:03:27,253
+e aplicam uma sequência
+de modelos lineares
+
+77
+00:03:27,286 --> 00:03:29,005
+e funções sigmoides.
+
+78
+00:03:29,038 --> 00:03:30,377
+Estes mapas,
+quando combinados,
+
+79
+00:03:30,410 --> 00:03:33,029
+se tornam um mapa
+altamente não linear.
+
+80
+00:03:33,062 --> 00:03:38,210
+A fórmula final é simplesmente
+y-chapéu = sigmoide de w2
+
+81
+00:03:38,243 --> 00:03:43,257
+combinado ao sigmoide de w1,
+aplicado a x.
+
+82
+00:03:43,290 --> 00:03:46,053
+Apenas por redundância,
+fazemos isto de novo
+
+83
+00:03:46,086 --> 00:03:47,427
+em um perceptron
+de múltiplas camadas,
+
+84
+00:03:47,460 --> 00:03:48,821
+ou uma rede neural.
+
+85
+00:03:48,854 --> 00:03:51,057
+Para calcular
+a predição y-chapéu,
+
+86
+00:03:51,090 --> 00:03:53,246
+começamos
+com a unidade de vetor x,
+
+87
+00:03:53,279 --> 00:03:57,431
+então aplicamos a primeira matriz
+e uma função sigmoide
+
+88
+00:03:57,464 --> 00:04:00,301
+para obter os valores
+da segunda camada.
+
+89
+00:04:00,334 --> 00:04:04,311
+Depois aplicamos a segunda matriz
+e outra função sigmoide
+
+90
+00:04:04,344 --> 00:04:06,712
+para obter valores
+da terceira camada,
+
+91
+00:04:06,745 --> 00:04:09,365
+e assim por diante,
+
+92
+00:04:09,398 --> 00:04:13,485
+até obtermos
+a predição final, y-chapéu.
+
+93
+00:04:13,518 --> 00:04:15,407
+Este é o processo
+de alimentação direta
+
+94
+00:04:15,440 --> 00:04:16,666
+que as redes neurais usam
+
+95
+00:04:16,699 --> 00:04:19,657
+para obter a predição
+do vetor de input.
+

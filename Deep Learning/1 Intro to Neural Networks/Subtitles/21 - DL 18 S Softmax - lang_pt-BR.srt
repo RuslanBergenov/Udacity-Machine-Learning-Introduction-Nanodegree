@@ -1,0 +1,173 @@
+1
+00:00:00,267 --> 00:00:02,433
+Se você disse exponencial,
+você está certo,
+
+2
+00:00:02,467 --> 00:00:06,133
+porque esta função retorna
+valores positivos.
+
+3
+00:00:06,167 --> 00:00:09,633
+E sobre X é
+sempre um valor positivo.
+
+4
+00:00:09,667 --> 00:00:12,167
+Nós faremos
+o mesmo de antes,
+
+5
+00:00:12,201 --> 00:00:15,000
+mas aplicaremos E elevado a X
+nas pontuações.
+
+6
+00:00:15,034 --> 00:00:17,967
+Em vez de dois, um e zero,
+nós temos E ao quadrado,
+
+7
+00:00:18,001 --> 00:00:20,167
+E elevado a um
+e E elevado a zero.
+
+8
+00:00:20,201 --> 00:00:22,200
+O dois se torna
+E ao quadrado
+
+9
+00:00:22,234 --> 00:00:24,367
+dividido por E ao quadrado
+mais E elevado a um,
+
+10
+00:00:24,401 --> 00:00:25,667
+mais E elevado a zero.
+
+11
+00:00:25,701 --> 00:00:28,067
+É a mesma coisa
+para um e zero.
+
+12
+00:00:28,101 --> 00:00:31,733
+As probabilidades serão
+de 0,67,
+
+13
+00:00:31,767 --> 00:00:35,533
+0,24 e 0,09,
+
+14
+00:00:35,567 --> 00:00:37,133
+quem podem
+ser adicionadas a um.
+
+15
+00:00:37,167 --> 00:00:39,833
+Como a função exponencial
+está aumentando,
+
+16
+00:00:39,867 --> 00:00:43,000
+o pato tem maior probabilidade
+do que o castor,
+
+17
+00:00:43,034 --> 00:00:45,633
+que tem maior probabilidade
+do que a morsa.
+
+18
+00:00:46,567 --> 00:00:51,100
+Esta é a função softmax,
+que é definida assim:
+
+19
+00:00:51,134 --> 00:00:53,900
+digamos que temos N classes
+e um modelo linear
+
+20
+00:00:53,934 --> 00:00:55,800
+que nos fornece
+as pontuações
+
+21
+00:00:55,834 --> 00:00:58,967
+Z1, Z2 até Zn,
+
+22
+00:00:59,001 --> 00:01:01,633
+uma pontuação
+para cada uma das classes.
+
+23
+00:01:01,667 --> 00:01:04,267
+Para torná-las probabilidades,
+nós dizemos
+
+24
+00:01:04,301 --> 00:01:07,300
+que a probabilidade de o objeto
+estar na classe I
+
+25
+00:01:07,334 --> 00:01:10,233
+será de E elevado
+a potência de ZI
+
+26
+00:01:10,267 --> 00:01:13,300
+dividido pela soma de E
+elevado a potência de Z1
+
+27
+00:01:13,334 --> 00:01:16,200
+somando até E elevado
+a potência de Zn.
+
+28
+00:01:16,234 --> 00:01:19,233
+É assim que transformamos
+pontuações em probabilidades.
+
+29
+00:01:19,267 --> 00:01:20,667
+Eu tenho uma pergunta.
+
+30
+00:01:20,701 --> 00:01:24,200
+Com duas classes, aplicamos
+a função sigmoide nas pontuações,
+
+31
+00:01:24,234 --> 00:01:27,733
+com mais classes,
+aplicamos a função softmax,
+
+32
+00:01:27,767 --> 00:01:31,133
+mas a função softmax
+para N igual a dois
+
+33
+00:01:31,167 --> 00:01:33,433
+igual à função sigmoide?
+
+34
+00:01:33,467 --> 00:01:34,767
+Pense a respeito.
+
+35
+00:01:34,801 --> 00:01:37,300
+A resposta é sim,
+mas não é simples assim
+
+36
+00:01:37,334 --> 00:01:38,933
+e é algo bom de se lembrar.
+

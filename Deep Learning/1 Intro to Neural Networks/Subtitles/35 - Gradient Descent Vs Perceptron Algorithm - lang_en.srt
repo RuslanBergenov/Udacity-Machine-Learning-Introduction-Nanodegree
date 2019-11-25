@@ -1,0 +1,228 @@
+1
+00:00:00,000 --> 00:00:03,990
+So let's compare the Perceptron algorithm and the Gradient Descent algorithm.
+
+2
+00:00:03,990 --> 00:00:05,845
+In the Gradient Descent algorithm,
+
+3
+00:00:05,845 --> 00:00:09,535
+we take the weights and change them from Wi to
+
+4
+00:00:09,535 --> 00:00:13,915
+Wi_ plus_ alpha_ times_ Y hat_ minus_ Y_ times_ Xi.
+
+5
+00:00:13,915 --> 00:00:15,325
+In the Perceptron algorithm,
+
+6
+00:00:15,325 --> 00:00:17,253
+not every point changes weights,
+
+7
+00:00:17,253 --> 00:00:18,960
+only the misclassified ones.
+
+8
+00:00:18,960 --> 00:00:21,385
+Here, if X is misclassified,
+
+9
+00:00:21,385 --> 00:00:27,525
+we'll change the weights by adding Xi to Wi if the point label is positive,
+
+10
+00:00:27,525 --> 00:00:29,785
+and subtracting if negative.
+
+11
+00:00:29,785 --> 00:00:32,327
+Now the question is, are these two things the same?
+
+12
+00:00:32,327 --> 00:00:34,920
+Well, let's remember that in that Perceptron algorithm,
+
+13
+00:00:34,920 --> 00:00:37,350
+the labels are one and zero.
+
+14
+00:00:37,350 --> 00:00:40,320
+And the predictions Y-hat are also one and zero.
+
+15
+00:00:40,320 --> 00:00:43,060
+So, if the point is correct, classified,
+
+16
+00:00:43,060 --> 00:00:48,440
+then Y_ minus_ Y-hat is zero because Y is equal to Y-hat.
+
+17
+00:00:48,440 --> 00:00:50,205
+Now, if the point is labeled blue,
+
+18
+00:00:50,205 --> 00:00:52,095
+then Y_ equals_ one.
+
+19
+00:00:52,095 --> 00:00:53,220
+And if it's misclassified,
+
+20
+00:00:53,220 --> 00:00:55,950
+then the prediction must be Y-hat_ equals_ zero.
+
+21
+00:00:55,950 --> 00:00:59,265
+So Y-hat_ minus_ Y is minus one.
+
+22
+00:00:59,265 --> 00:01:01,050
+Similarly, with the points labeled red,
+
+23
+00:01:01,050 --> 00:01:04,105
+then Y_ equals_ zero and Y-hat_ equals_ one.
+
+24
+00:01:04,105 --> 00:01:06,180
+So, Y-hat_ minus_ Y_ equals_ one.
+
+25
+00:01:06,180 --> 00:01:08,300
+This may not be super clear right away.
+
+26
+00:01:08,300 --> 00:01:10,035
+But if you stare at the screen for long enough,
+
+27
+00:01:10,035 --> 00:01:13,620
+you'll realize that the right and the left are exactly the same thing.
+
+28
+00:01:13,620 --> 00:01:15,175
+The only difference is that in the left,
+
+29
+00:01:15,175 --> 00:01:17,776
+Y-hat can take any number between zero and one,
+
+30
+00:01:17,776 --> 00:01:19,650
+whereas in the right,
+
+31
+00:01:19,650 --> 00:01:23,305
+Y-hat can take only the values zero or one.
+
+32
+00:01:23,305 --> 00:01:25,175
+It's pretty fascinating, isn't it?
+
+33
+00:01:25,175 --> 00:01:28,055
+But let's study Gradient Descent even more carefully.
+
+34
+00:01:28,055 --> 00:01:31,680
+Both in the Perceptron algorithm and the Gradient Descent algorithm,
+
+35
+00:01:31,680 --> 00:01:36,570
+a point that is misclassified tells a line to come closer because eventually,
+
+36
+00:01:36,570 --> 00:01:40,770
+it wants the line to surpass it so it can be in the correct side.
+
+37
+00:01:40,770 --> 00:01:43,734
+Now, what happens if the point is correctly classified?
+
+38
+00:01:43,734 --> 00:01:47,315
+Well, the Perceptron algorithm says do absolutely nothing.
+
+39
+00:01:47,315 --> 00:01:49,575
+In the Gradient Descent algorithm,
+
+40
+00:01:49,575 --> 00:01:51,195
+you are changing the weights.
+
+41
+00:01:51,195 --> 00:01:52,830
+But what is it doing?
+
+42
+00:01:52,830 --> 00:01:54,480
+Well, if we look carefully,
+
+43
+00:01:54,480 --> 00:01:56,640
+what the point is telling the line,
+
+44
+00:01:56,640 --> 00:01:58,875
+is to go farther away.
+
+45
+00:01:58,875 --> 00:02:01,120
+And this makes sense, right?
+
+46
+00:02:01,120 --> 00:02:03,180
+Because if you're correctly classified,
+
+47
+00:02:03,180 --> 00:02:05,895
+say, if you're a blue point in the blue region,
+
+48
+00:02:05,895 --> 00:02:08,385
+you'd like to be even more into the blue region,
+
+49
+00:02:08,385 --> 00:02:10,740
+so your prediction is even closer to one,
+
+50
+00:02:10,740 --> 00:02:13,060
+and your error is even smaller.
+
+51
+00:02:13,060 --> 00:02:16,320
+Similarly, for a red point in the red region.
+
+52
+00:02:16,320 --> 00:02:19,590
+So it makes sense that the point tells the line to go farther away.
+
+53
+00:02:19,590 --> 00:02:22,925
+And that's precisely what the Gradient Descent algorithm does.
+
+54
+00:02:22,925 --> 00:02:26,540
+The misclassified points asks the line to come closer and
+
+55
+00:02:26,540 --> 00:02:30,315
+the correctly classified points asks the line to go farther away.
+
+56
+00:02:30,315 --> 00:02:33,240
+The line listens to all the points and takes steps in
+
+57
+00:02:33,240 --> 00:02:37,000
+such a way that it eventually arrives to a pretty good solution.
+

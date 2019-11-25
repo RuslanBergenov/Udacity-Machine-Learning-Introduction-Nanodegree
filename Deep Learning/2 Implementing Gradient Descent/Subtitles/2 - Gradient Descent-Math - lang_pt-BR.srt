@@ -1,0 +1,710 @@
+1
+00:00:00,000 --> 00:00:04,033
+Agora sabemos como obter uma saída
+de uma rede neural simples,
+
+2
+00:00:04,067 --> 00:00:05,434
+como a mostrada aqui.
+
+3
+00:00:05,467 --> 00:00:08,167
+Queremos usar a saída
+para fazer previsões.
+
+4
+00:00:08,200 --> 00:00:11,100
+Mas como construir a rede
+para fazer previsões
+
+5
+00:00:11,133 --> 00:00:13,834
+sem saber os pesos certos
+antes de começar?
+
+6
+00:00:13,868 --> 00:00:17,200
+Podemos apresentar dados
+que sabemos ser verdadeiros
+
+7
+00:00:17,234 --> 00:00:21,467
+e colocar os parâmetros, os pesos,
+para se adequarem a esses dados.
+
+8
+00:00:21,501 --> 00:00:25,300
+Primeiro precisamos medir
+o quanto as previsões estão ruins.
+
+9
+00:00:25,334 --> 00:00:29,567
+A escolha óbvia é usar a diferença
+entre o valor que queremos, y,
+
+10
+00:00:29,601 --> 00:00:31,934
+e a saída da rede, y chapéu.
+
+11
+00:00:31,968 --> 00:00:34,334
+Mas se a previsão
+for muito alta,
+
+12
+00:00:34,367 --> 00:00:36,033
+o erro vai ser negativo,
+
+13
+00:00:36,067 --> 00:00:40,033
+e se a previsão for muito baixa,
+o erro vai ser positivo.
+
+14
+00:00:40,067 --> 00:00:43,067
+Preferimos tratar os erros
+da mesma forma.
+
+15
+00:00:43,100 --> 00:00:46,701
+Para que ambos sejam positivos,
+vamos elevar ao quadrado.
+
+16
+00:00:46,734 --> 00:00:49,901
+Você pode se perguntar
+por que não usar o módulo.
+
+17
+00:00:49,934 --> 00:00:53,801
+Uma característica do quadrado
+é que penaliza pontos extremos
+
+18
+00:00:53,834 --> 00:00:55,567
+mais do que pequenos erros.
+
+19
+00:00:55,601 --> 00:00:59,601
+Elevar ao quadrado também torna
+a Matemática bonita mais tarde.
+
+20
+00:00:59,634 --> 00:01:02,767
+Este é o erro
+de apenas uma previsão.
+
+21
+00:01:02,801 --> 00:01:06,567
+Queremos saber o erro
+de todo o conjunto de dados.
+
+22
+00:01:06,601 --> 00:01:10,000
+Então vamos somar os erros
+de cada registro dos dados,
+
+23
+00:01:10,033 --> 00:01:12,434
+escrito como
+o somatório sobre mu.
+
+24
+00:01:12,467 --> 00:01:14,734
+É esta letra aqui.
+
+25
+00:01:14,767 --> 00:01:19,601
+Agora temos o erro total da rede
+sobre o conjunto inteiro.
+
+26
+00:01:19,634 --> 00:01:22,400
+Finalmente, vamos colocar
+um meio na frente,
+
+27
+00:01:22,434 --> 00:01:25,133
+porque a Matemática
+fica mais limpa depois.
+
+28
+00:01:25,167 --> 00:01:28,701
+Essa formulação se chama
+soma dos erros quadrados.
+
+29
+00:01:28,734 --> 00:01:30,434
+Chamamos de SEQ.
+
+30
+00:01:30,467 --> 00:01:35,300
+Ela é a soma
+dos erros quadrados.
+
+31
+00:01:35,334 --> 00:01:38,000
+Lembre que y chapéu
+é a combinação linear
+
+32
+00:01:38,033 --> 00:01:39,501
+dos pesos e entradas
+
+33
+00:01:39,534 --> 00:01:41,567
+passada pela
+função de ativação.
+
+34
+00:01:41,601 --> 00:01:43,234
+Podemos substituir aqui
+
+35
+00:01:43,267 --> 00:01:46,634
+e vemos que o erro
+depende dos pesos wi
+
+36
+00:01:46,667 --> 00:01:49,234
+e das entradas xi.
+
+37
+00:01:49,267 --> 00:01:53,634
+Como disse antes, os registros
+são chamados pela letra grega mu.
+
+38
+00:01:53,667 --> 00:01:58,834
+Pense dos dados como tabelas,
+vetores, matrizes, o que quiser.
+
+39
+00:01:58,868 --> 00:02:01,267
+Uma contém
+os dados de entrada, x,
+
+40
+00:02:01,300 --> 00:02:04,100
+e a outra contém
+os objetivos, y.
+
+41
+00:02:04,133 --> 00:02:08,701
+Cada registro é uma linha,
+então mu=1 é a primeira linha.
+
+42
+00:02:08,734 --> 00:02:13,334
+Para calcular o erro total,
+você passa pelas linhas da matriz
+
+43
+00:02:13,367 --> 00:02:15,501
+e calcula a SEQ.
+
+44
+00:02:15,534 --> 00:02:18,367
+Depois soma
+todos esses resultados.
+
+45
+00:02:18,400 --> 00:02:21,300
+A SEQ é uma medida
+do desempenho da rede.
+
+46
+00:02:21,334 --> 00:02:24,434
+Se for alto, a rede está
+fazendo previsões ruins.
+
+47
+00:02:24,467 --> 00:02:27,567
+Se for baixo, a rede está
+fazendo boas previsões.
+
+48
+00:02:27,601 --> 00:02:30,501
+Queremos torná-lo
+tão pequeno quanto possível.
+
+49
+00:02:30,534 --> 00:02:33,200
+Agora vamos considerar
+um exemplo simples
+
+50
+00:02:33,234 --> 00:02:34,801
+com só um registro
+
+51
+00:02:34,834 --> 00:02:38,567
+para ficar mais fácil entender
+como vamos minimizar o erro.
+
+52
+00:02:38,601 --> 00:02:42,501
+Para esta rede simples, a SEQ
+é o objetivo menos a previsão,
+
+53
+00:02:42,534 --> 00:02:46,334
+y menos y chapéu, ao quadrado,
+dividido por 2.
+
+54
+00:02:46,367 --> 00:02:48,334
+Substituindo a previsão,
+
+55
+00:02:48,367 --> 00:02:51,200
+vemos que o erro
+é uma função dos pesos.
+
+56
+00:02:51,234 --> 00:02:54,968
+Os erros podem ser alterados
+para mudar a previsão da rede.
+
+57
+00:02:55,000 --> 00:02:57,667
+Isso por sua vez
+afeta o erro total.
+
+58
+00:02:57,701 --> 00:03:01,701
+O objetivo é encontrar pesos
+que minimizam o erro.
+
+59
+00:03:01,734 --> 00:03:05,300
+Aqui está uma figura simples
+do erro com um peso.
+
+60
+00:03:05,334 --> 00:03:08,501
+O objetivo é encontrar o peso
+no fundo deste pote.
+
+61
+00:03:08,534 --> 00:03:10,534
+Começando com
+um peso aleatório,
+
+62
+00:03:10,567 --> 00:03:13,868
+queremos dar um passo
+na direção do mínimo.
+
+63
+00:03:13,901 --> 00:03:16,667
+Esta direção
+é o oposto do gradiente,
+
+64
+00:03:16,701 --> 00:03:17,767
+a inclinação.
+
+65
+00:03:17,801 --> 00:03:19,367
+Se dermos muitos passos,
+
+66
+00:03:19,400 --> 00:03:21,334
+sempre descendo
+pelo gradiente,
+
+67
+00:03:21,367 --> 00:03:24,968
+o peso vai acabar encontrando
+o mínimo da função de erro.
+
+68
+00:03:25,000 --> 00:03:27,634
+Esta é
+a descida do gradiente.
+
+69
+00:03:27,667 --> 00:03:31,167
+Queremos atualizar os pesos
+para que o novo peso, wi,
+
+70
+00:03:31,200 --> 00:03:34,267
+seja o antigo peso wi
+mais este passo do peso,
+
+71
+00:03:34,300 --> 00:03:35,968
+delta wi.
+
+72
+00:03:36,000 --> 00:03:39,767
+Esta letra grega, delta,
+costuma significar mudança.
+
+73
+00:03:39,801 --> 00:03:42,567
+O passo do peso
+é proporcional ao gradiente,
+
+74
+00:03:42,601 --> 00:03:47,234
+a derivada parcial do erro
+em relação a cada peso wi.
+
+75
+00:03:47,267 --> 00:03:50,033
+Podemos colocar
+um parâmetro multiplicativo
+
+76
+00:03:50,067 --> 00:03:53,734
+para definir o tamanho dos passos
+da descida do gradiente.
+
+77
+00:03:53,767 --> 00:03:57,634
+Ele se chama taxa de aprendizagem
+e usamos a letra grega eta.
+
+78
+00:03:57,667 --> 00:04:01,267
+Calcular o gradiente requer
+cálculo de várias variáveis,
+
+79
+00:04:01,300 --> 00:04:04,968
+que você pode já saber,
+porque são derivadas parciais.
+
+80
+00:04:05,000 --> 00:04:08,667
+Não se preocupe demais se
+não entender o que eu faço aqui.
+
+81
+00:04:08,701 --> 00:04:12,567
+É mais importante entender
+o conceito da descida do gradiente
+
+82
+00:04:12,601 --> 00:04:14,000
+e o resultado final.
+
+83
+00:04:14,033 --> 00:04:15,534
+Se precisar se lembrar,
+
+84
+00:04:15,567 --> 00:04:18,400
+sugiro as aulas de cálculo
+da Khan Academy,
+
+85
+00:04:18,434 --> 00:04:20,834
+e vou colocar o link
+para vocês.
+
+86
+00:04:20,868 --> 00:04:24,033
+Agora para o gradiente,
+tomamos a derivada parcial
+
+87
+00:04:24,067 --> 00:04:26,734
+em relação aos pesos
+do erro quadrado.
+
+88
+00:04:26,767 --> 00:04:30,067
+A saída da rede, y chapéu,
+é uma função dos pesos.
+
+89
+00:04:30,100 --> 00:04:33,567
+O que temos aqui
+é uma função de outra função
+
+90
+00:04:33,601 --> 00:04:35,501
+que depende dos pesos.
+
+91
+00:04:35,534 --> 00:04:39,934
+Isso requer a regra da cadeia
+para calcular a derivada.
+
+92
+00:04:39,968 --> 00:04:42,834
+Vamos lembrar
+da regra da cadeia.
+
+93
+00:04:42,868 --> 00:04:45,434
+Se quisermos a derivada
+de uma função p
+
+94
+00:04:45,467 --> 00:04:46,901
+em relação a z.
+
+95
+00:04:46,934 --> 00:04:50,901
+Se p depende de outra função q
+que depende de z,
+
+96
+00:04:50,934 --> 00:04:55,000
+a regra da cadeia diz que primeiro
+derivamos p em relação a q
+
+97
+00:04:55,033 --> 00:04:58,767
+e multiplicamos pela derivada de q
+em relação a z.
+
+98
+00:04:58,801 --> 00:05:02,033
+Gosto de pensar nisso
+como frações normais.
+
+99
+00:05:02,067 --> 00:05:05,300
+O dq no denominador
+cancela o do numerador
+
+100
+00:05:05,334 --> 00:05:07,634
+e ficamos com dp/dz.
+
+101
+00:05:07,667 --> 00:05:11,400
+No nosso problema,
+o q é o erro,
+
+102
+00:05:11,434 --> 00:05:12,868
+y menos y chapéu,
+
+103
+00:05:12,901 --> 00:05:14,834
+e p é o erro quadrado.
+
+104
+00:05:14,868 --> 00:05:18,901
+Estamos derivando
+em relação a wi.
+
+105
+00:05:18,934 --> 00:05:23,200
+A derivada de p em relação a q
+dá o próprio erro.
+
+106
+00:05:23,234 --> 00:05:27,200
+O 2 do expoente desce
+e cancela com o meio.
+
+107
+00:05:27,234 --> 00:05:31,901
+Resta a derivada do erro
+em relação a wi.
+
+108
+00:05:31,934 --> 00:05:34,834
+O valor desejado, y,
+não depende dos pesos.
+
+109
+00:05:34,868 --> 00:05:36,701
+Mas y chapéu depende.
+
+110
+00:05:36,734 --> 00:05:40,200
+Usando a regra da cadeia de novo,
+o sinal de menos sai,
+
+111
+00:05:40,234 --> 00:05:43,100
+e sobra a derivada parcial
+de y chapéu.
+
+112
+00:05:43,133 --> 00:05:47,367
+Lembre que y chapéu
+é a função de ativação em h,
+
+113
+00:05:47,400 --> 00:05:51,501
+onde h é a combinação linear
+dos pesos e entradas.
+
+114
+00:05:51,534 --> 00:05:55,334
+Derivando y chapéu, usando
+a regra da cadeia de novo,
+
+115
+00:05:55,367 --> 00:05:58,701
+temos a derivada
+da função de ativação em h
+
+116
+00:05:58,734 --> 00:06:01,701
+vezes a derivada parcial
+da combinação linear.
+
+117
+00:06:02,200 --> 00:06:06,100
+Neste somatório, só tem um termo
+que depende de cada peso.
+
+118
+00:06:06,133 --> 00:06:07,834
+Escrevendo para o peso 1,
+
+119
+00:06:07,868 --> 00:06:12,167
+só o primeiro termo, com x1,
+depende do peso 1.
+
+120
+00:06:12,200 --> 00:06:17,033
+A derivada parcial da soma
+em relação ao peso 1 é só x1.
+
+121
+00:06:17,067 --> 00:06:19,300
+Todos os outros termos
+são zero.
+
+122
+00:06:19,334 --> 00:06:22,701
+Então a derivada parcial
+do somatório em relação a wi
+
+123
+00:06:22,734 --> 00:06:24,601
+é só xi.
+
+124
+00:06:24,634 --> 00:06:28,267
+Finalmente, juntando tudo,
+o gradiente do erro quadrado
+
+125
+00:06:28,300 --> 00:06:31,300
+em relação a wi é:
+menos o erro,
+
+126
+00:06:31,334 --> 00:06:34,767
+vezes a derivada
+da função de ativação em h,
+
+127
+00:06:34,801 --> 00:06:36,868
+vezes a entrada xi.
+
+128
+00:06:36,901 --> 00:06:39,801
+O passo do peso é
+a velocidade de treinamento,
+
+129
+00:06:39,834 --> 00:06:42,534
+vezes o erro,
+vezes a derivada da ativação,
+
+130
+00:06:42,567 --> 00:06:44,067
+vezes a entrada.
+
+131
+00:06:44,100 --> 00:06:46,734
+Por conveniência,
+e para facilitar depois,
+
+132
+00:06:46,767 --> 00:06:48,834
+podemos definir
+um termo de erro,
+
+133
+00:06:48,868 --> 00:06:49,901
+delta minúsculo,
+
+134
+00:06:49,934 --> 00:06:53,634
+como o erro vezes a derivada
+da função de ativação em h.
+
+135
+00:06:53,667 --> 00:06:56,067
+Então escrevemos
+a atualização do peso
+
+136
+00:06:56,100 --> 00:06:59,567
+como o que era antes vezes
+a velocidade de treinamento,
+
+137
+00:06:59,601 --> 00:07:02,133
+vezes o termo de erro,
+vezes xi.
+
+138
+00:07:02,167 --> 00:07:04,100
+É o valor da entrada i.
+
+139
+00:07:04,133 --> 00:07:07,234
+Você pode estar trabalhando
+com múltiplas saídas.
+
+140
+00:07:07,267 --> 00:07:11,300
+Pense que está empilhando
+a arquitetura de uma saída
+
+141
+00:07:11,334 --> 00:07:15,334
+mas conectando as entradas
+à nova saída.
+
+142
+00:07:15,367 --> 00:07:20,434
+Agora o erro total incluiria
+o erro de todas as saídas somado.
+
+143
+00:07:20,467 --> 00:07:23,033
+A descida do gradiente
+pode ser estendida
+
+144
+00:07:23,067 --> 00:07:25,200
+para uma rede
+com múltiplas saídas
+
+145
+00:07:25,234 --> 00:07:28,000
+calculando um termo de erro
+para cada saída,
+
+146
+00:07:28,033 --> 00:07:30,267
+denotado com o subscrito j.
+
+147
+00:07:30,300 --> 00:07:32,934
+Vou mostrar como
+traduzir isto para código
+
+148
+00:07:32,968 --> 00:07:35,434
+para implementar
+em Python e NumPy.
+

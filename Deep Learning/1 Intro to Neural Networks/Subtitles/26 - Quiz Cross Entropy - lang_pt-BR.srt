@@ -1,0 +1,153 @@
+1
+00:00:00,300 --> 00:00:03,399
+Nós temos dois modelos,
+o ruim, à esquerda,
+
+2
+00:00:03,433 --> 00:00:04,867
+e o bom, à direta.
+
+3
+00:00:04,901 --> 00:00:08,565
+Para saber se são ruins ou bons,
+nós calculamos a probabilidade
+
+4
+00:00:08,599 --> 00:00:11,633
+de cada ponto ser da cor que é
+de acordo com o modelo.
+
+5
+00:00:11,667 --> 00:00:14,731
+Multiplicamos as probabilidades
+para obter a probabilidade
+
+6
+00:00:14,765 --> 00:00:16,000
+de todo o arranjo
+
+7
+00:00:16,033 --> 00:00:19,133
+e vermos que o modelo da direita
+tem maior probabilidade
+
+8
+00:00:19,167 --> 00:00:20,767
+do que o da esquerda.
+
+9
+00:00:20,800 --> 00:00:25,100
+Nós só precisamos
+maximizar a probabilidade.
+
+10
+00:00:25,134 --> 00:00:29,698
+As probabilidades são produtos
+de números, que são difíceis.
+
+11
+00:00:29,732 --> 00:00:32,964
+Este produto de quatro números
+não é tão assustador,
+
+12
+00:00:32,998 --> 00:00:35,833
+mas e se tivéssemos milhares
+de pontos de dados?
+
+13
+00:00:35,867 --> 00:00:38,967
+Isso corresponderia a um produto
+com milhares de números
+
+14
+00:00:39,000 --> 00:00:41,700
+entre zero e um.
+
+15
+00:00:41,733 --> 00:00:43,867
+Este produto será minúsculo,
+
+16
+00:00:43,900 --> 00:00:47,200
+algo em torno do 0,00000.
+
+17
+00:00:47,233 --> 00:00:50,700
+Nós queremos evitar
+estes números.
+
+18
+00:00:50,733 --> 00:00:53,933
+Se eu tiver um produto
+com milhares de números
+
+19
+00:00:53,967 --> 00:00:55,500
+e altero um deles,
+
+20
+00:00:55,533 --> 00:00:58,233
+o produto mudará
+drasticamente.
+
+21
+00:00:58,267 --> 00:01:01,867
+Em suma, nós devemos
+evitar os produtos.
+
+22
+00:01:02,700 --> 00:01:04,533
+O que é melhor
+do que produtos?
+
+23
+00:01:04,567 --> 00:01:06,667
+Vamos perguntar
+ao nosso amigo aqui.
+
+24
+00:01:06,700 --> 00:01:09,667
+Produtos são ruins,
+mas somas são boas.
+
+25
+00:01:10,367 --> 00:01:11,900
+Vamos somar!
+
+26
+00:01:11,933 --> 00:01:14,867
+Vamos transformar os produtos
+em somas.
+
+27
+00:01:14,900 --> 00:01:16,600
+Precisamos de uma função
+
+28
+00:01:16,633 --> 00:01:20,167
+que nos ajude a transformar
+produtos em somas.
+
+29
+00:01:20,200 --> 00:01:23,633
+Qual seria a função?
+É hora de um questionário.
+
+30
+00:01:23,667 --> 00:01:26,667
+Qual função
+nos ajudaria aqui?
+
+31
+00:01:26,700 --> 00:01:29,933
+Seno, cosseno, logaritmo
+
+32
+00:01:29,967 --> 00:01:32,133
+ou a função exponencial?
+
+33
+00:01:32,167 --> 00:01:33,798
+Escreva a resposta abaixo.
+

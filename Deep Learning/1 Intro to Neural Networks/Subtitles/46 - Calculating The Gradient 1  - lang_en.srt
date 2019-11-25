@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:02,653
+Okay. So, now we'll do the same thing as we did before,
+
+2
+00:00:02,653 --> 00:00:06,279
+painting our weights in the neural network to better classify our points.
+
+3
+00:00:06,280 --> 00:00:07,679
+But we're going to do it formally,
+
+4
+00:00:07,679 --> 00:00:10,349
+so fasten your seat belts because math is coming.
+
+5
+00:00:10,349 --> 00:00:13,785
+On your left, you have a single perceptron with the input vector,
+
+6
+00:00:13,785 --> 00:00:18,879
+the weights and the bias and the sigmoid function inside the node.
+
+7
+00:00:18,879 --> 00:00:22,004
+And on the right, we have a formula for the prediction,
+
+8
+00:00:22,004 --> 00:00:27,050
+which is the sigmoid function of the linear function of the input.
+
+9
+00:00:27,050 --> 00:00:30,820
+And below, we have a formula for the error,
+
+10
+00:00:30,820 --> 00:00:34,520
+which is the average of all points of
+
+11
+00:00:34,520 --> 00:00:38,799
+the blue term for the blue points and the red term for the red points.
+
+12
+00:00:38,798 --> 00:00:41,185
+And in order to descend from Mount Errorest,
+
+13
+00:00:41,185 --> 00:00:43,269
+we calculate the gradient.
+
+14
+00:00:43,268 --> 00:00:48,608
+And the gradient is simply the vector formed by all the partial derivatives of
+
+15
+00:00:48,609 --> 00:00:55,630
+the error function with respect to the weights w1 up to wn and and the bias b.
+
+16
+00:00:55,630 --> 00:00:58,420
+They correspond to these edges over here,
+
+17
+00:00:58,420 --> 00:01:01,399
+and what do we do in a multilayer perceptron?
+
+18
+00:01:01,399 --> 00:01:05,405
+Well, this time it's a little more complicated but it's pretty much the same thing.
+
+19
+00:01:05,405 --> 00:01:07,233
+We have our prediction,
+
+20
+00:01:07,233 --> 00:01:13,503
+which is simply a composition of functions namely matrix multiplications and sigmoids.
+
+21
+00:01:13,504 --> 00:01:16,055
+And the error function is pretty much the same,
+
+22
+00:01:16,055 --> 00:01:19,234
+except the ŷ is a bit more complicated.
+
+23
+00:01:19,233 --> 00:01:21,649
+And the gradient is pretty much the same thing,
+
+24
+00:01:21,650 --> 00:01:23,799
+it's just much, much longer.
+
+25
+00:01:23,799 --> 00:01:25,909
+It's a huge vector where each entry is
+
+26
+00:01:25,909 --> 00:01:29,984
+a partial derivative of the error with respect to each of the weights.
+
+27
+00:01:29,983 --> 00:01:32,583
+And these just correspond to all the edges.
+
+28
+00:01:32,584 --> 00:01:34,489
+If we want to write this more formally,
+
+29
+00:01:34,489 --> 00:01:39,500
+we recall that the prediction is a composition of sigmoids and matrix multiplications,
+
+30
+00:01:39,500 --> 00:01:42,000
+where these are the matrices and
+
+31
+00:01:42,000 --> 00:01:45,765
+the gradient is just going to be formed by all these partial derivatives.
+
+32
+00:01:45,765 --> 00:01:47,579
+Here, it looks like a matrix but in reality,
+
+33
+00:01:47,578 --> 00:01:49,199
+it's just a long vector.
+
+34
+00:01:49,200 --> 00:01:51,730
+And the gradient descent is going to do the following;
+
+35
+00:01:51,730 --> 00:01:53,430
+we take each weight,
+
+36
+00:01:53,430 --> 00:01:59,206
+w_i_j super k and we update it by adding a small number,
+
+37
+00:01:59,206 --> 00:02:06,125
+the learning rate times the partial derivative of E with respect to that same weight.
+
+38
+00:02:06,125 --> 00:02:07,819
+This is the gradient descent step,
+
+39
+00:02:07,819 --> 00:02:14,270
+so it will give us new updated weight w_i_j super k prime.
+
+40
+00:02:14,270 --> 00:02:16,919
+That step is going to give us a whole new model
+
+41
+00:02:16,919 --> 00:02:20,270
+with new weights that will classify the point much better.
+

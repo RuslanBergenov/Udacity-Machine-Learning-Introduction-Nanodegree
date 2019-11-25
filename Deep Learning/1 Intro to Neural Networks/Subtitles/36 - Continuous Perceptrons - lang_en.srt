@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:04,139
+So, this is just a small recap video that will get us ready for what's coming.
+
+2
+00:00:04,139 --> 00:00:06,809
+Recall that if we have our data in the form of these points over
+
+3
+00:00:06,809 --> 00:00:10,710
+here and the linear model like this one, for example,
+
+4
+00:00:10,710 --> 00:00:14,865
+with equation 2x1 + 7x2 - 4 = 0,
+
+5
+00:00:14,865 --> 00:00:19,495
+this will give rise to a probability function that looks like this.
+
+6
+00:00:19,495 --> 00:00:23,760
+Where the points on the blue or positive region have more chance of being
+
+7
+00:00:23,760 --> 00:00:29,570
+blue and the points in the red or negative region have more chance of being red.
+
+8
+00:00:29,570 --> 00:00:32,609
+And this will give rise to this perception where we label
+
+9
+00:00:32,609 --> 00:00:36,314
+the edges by the weights and the node by the bias.
+
+10
+00:00:36,314 --> 00:00:37,664
+So, what the perception does,
+
+11
+00:00:37,664 --> 00:00:39,655
+it takes to point (x1, x2),
+
+12
+00:00:39,655 --> 00:00:44,689
+plots it in the graph and then it returns a probability that the point is blue.
+
+13
+00:00:44,689 --> 00:00:47,378
+In this case, it returns a 0.9
+
+14
+00:00:47,378 --> 00:00:51,200
+and this mimics the neurons in the brain because they receive nervous impulses,
+
+15
+00:00:51,200 --> 00:00:54,000
+do something inside and return a nervous impulse.
+

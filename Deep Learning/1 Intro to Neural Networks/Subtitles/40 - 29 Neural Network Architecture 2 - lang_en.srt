@@ -1,0 +1,140 @@
+1
+00:00:00,000 --> 00:00:02,770
+So in the previous session we learn that we can
+
+2
+00:00:02,770 --> 00:00:05,679
+add to linear models to obtain a third model.
+
+3
+00:00:05,679 --> 00:00:07,734
+As a matter of fact, we did even more.
+
+4
+00:00:07,735 --> 00:00:10,505
+We can take a linear combination of two models.
+
+5
+00:00:10,505 --> 00:00:13,750
+So, the first model times a constant plus the second model times a
+
+6
+00:00:13,750 --> 00:00:17,785
+constant plus a bias and that gives us a non-linear model.
+
+7
+00:00:17,785 --> 00:00:22,240
+That looks a lot like perceptrons where we can take a value times a constant plus
+
+8
+00:00:22,239 --> 00:00:26,784
+another value times a constant plus a bias and get a new value.
+
+9
+00:00:26,785 --> 00:00:28,204
+And that's no coincidence.
+
+10
+00:00:28,204 --> 00:00:31,649
+That's actually the building block of Neural Networks.
+
+11
+00:00:31,649 --> 00:00:33,210
+So, let's look at an example.
+
+12
+00:00:33,210 --> 00:00:40,304
+Let's say, we have this linear model where the linear equation is 5x1 minus 2x2 plus 8.
+
+13
+00:00:40,304 --> 00:00:42,689
+That's represented by this perceptron.
+
+14
+00:00:42,689 --> 00:00:46,169
+And we have another linear model with equations 7x1 minus
+
+15
+00:00:46,170 --> 00:00:52,045
+3x2 minus 1 which is represented by this perceptron over here.
+
+16
+00:00:52,045 --> 00:00:55,929
+Let's draw them nicely in here and let's use another perceptron
+
+17
+00:00:55,929 --> 00:01:00,070
+to combine these two models using the Linear Equation,
+
+18
+00:01:00,070 --> 00:01:06,420
+seven times the first model plus five times the second model minus six.
+
+19
+00:01:06,420 --> 00:01:11,170
+And now the magic happens when we join these together and we get a Neural Network.
+
+20
+00:01:11,170 --> 00:01:16,480
+We clean it up a bit and we obtain this. All the weights are there.
+
+21
+00:01:16,480 --> 00:01:18,670
+The weights on the left,
+
+22
+00:01:18,670 --> 00:01:22,445
+tell us what equations the linear models have.
+
+23
+00:01:22,444 --> 00:01:25,024
+And the weights on the right,
+
+24
+00:01:25,025 --> 00:01:27,160
+tell us what the linear combination is of
+
+25
+00:01:27,159 --> 00:01:31,629
+the two models to obtain the curve non-linear model in the right.
+
+26
+00:01:31,629 --> 00:01:35,319
+So, whenever you see a Neural Network like the one on the left,
+
+27
+00:01:35,319 --> 00:01:40,204
+think of what could be the nonlinear boundary defined by the Neural Network.
+
+28
+00:01:40,204 --> 00:01:45,444
+Now, note that this was drawn using the notation that puts a bias inside the node.
+
+29
+00:01:45,444 --> 00:01:50,394
+This can also be drawn using the notation that keeps the bias as a separate node.
+
+30
+00:01:50,394 --> 00:01:52,939
+Here, what we do is, in every layer we have
+
+31
+00:01:52,939 --> 00:01:56,870
+a bias unit coming from a node with a one on it.
+
+32
+00:01:56,870 --> 00:01:59,870
+So for example, the minus eight on the top node
+
+33
+00:01:59,870 --> 00:02:04,160
+becomes an edge labelled minus eight coming from the bias node.
+
+34
+00:02:04,159 --> 00:02:06,119
+We can see that this Neural Network uses
+
+35
+00:02:06,120 --> 00:02:09,000
+a Sigmoid Activation Function and the Perceptrons.
+

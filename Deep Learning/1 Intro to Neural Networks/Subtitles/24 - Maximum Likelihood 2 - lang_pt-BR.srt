@@ -1,0 +1,307 @@
+1
+00:00:00,367 --> 00:00:02,267
+Eu serei mais específico.
+
+2
+00:00:02,301 --> 00:00:04,200
+Vejamos os quatro pontos
+seguintes,
+
+3
+00:00:04,234 --> 00:00:06,063
+dois azuis e dois vermelhos,
+
+4
+00:00:06,097 --> 00:00:08,397
+e dois modelos
+para classificá-los,
+
+5
+00:00:08,431 --> 00:00:10,700
+o da esquerda
+e o da direita.
+
+6
+00:00:10,734 --> 00:00:14,267
+Qual modelo parece melhor?
+Você tem razão,
+
+7
+00:00:14,301 --> 00:00:16,733
+o da direita é bem melhor,
+
+8
+00:00:16,767 --> 00:00:20,096
+pois ele classifica os quatro
+pontos corretamente,
+
+9
+00:00:20,130 --> 00:00:24,193
+enquanto o da esquerda
+acerta dois pontos,
+
+10
+00:00:24,227 --> 00:00:25,800
+e erra os outros dois.
+
+11
+00:00:26,633 --> 00:00:29,033
+Vejamos por que o modelo
+da direita é melhor
+
+12
+00:00:29,067 --> 00:00:31,200
+a partir da perspectiva
+da probabilidade.
+
+13
+00:00:31,234 --> 00:00:35,300
+O arranjo da direita tem maior
+probabilidade de ocorrer
+
+14
+00:00:35,334 --> 00:00:37,167
+do que o da esquerda.
+
+15
+00:00:37,201 --> 00:00:41,698
+A previsão é Y^ igual
+a função sigmoide WX mais B,
+
+16
+00:00:41,732 --> 00:00:44,433
+que é a probabilidade
+de um ponto
+
+17
+00:00:44,467 --> 00:00:47,933
+ser rotulado como positivo,
+que significa ser azul.
+
+18
+00:00:47,967 --> 00:00:49,733
+Para os pontos na figura,
+
+19
+00:00:49,767 --> 00:00:52,200
+o modelo diz que
+as probabilidades de serem azuis
+
+20
+00:00:52,234 --> 00:00:56,767
+são de 0,9, 0,6, 0,3 e 0,2.
+
+21
+00:00:56,801 --> 00:01:00,465
+Os pontos na região azul
+tem mais tendência a serem azuis,
+
+22
+00:01:00,499 --> 00:01:03,997
+e os da região vermelha
+tem menos tendência de serem azuis.
+
+23
+00:01:04,031 --> 00:01:05,932
+A probabilidade
+de serem vermelhos
+
+24
+00:01:05,966 --> 00:01:08,100
+é um menos a probabilidade
+de ser azul.
+
+25
+00:01:08,134 --> 00:01:12,000
+As probabilidades de os pontos
+serem vermelhos são de 0,1,
+
+26
+00:01:12,034 --> 00:01:15,533
+0,4, 0,7 e 0,8.
+
+27
+00:01:16,233 --> 00:01:19,200
+Nós queremos calcular
+a probabilidade
+
+28
+00:01:19,233 --> 00:01:23,733
+de os quatro pontos
+serem da cor certa,
+
+29
+00:01:23,767 --> 00:01:27,500
+a probabilidade de os pontos
+vermelhos serem vermelhos
+
+30
+00:01:27,533 --> 00:01:30,033
+e dos azuis serem azuis.
+
+31
+00:01:30,067 --> 00:01:31,933
+Se pensarmos
+que as cores dos pontos
+
+32
+00:01:31,967 --> 00:01:33,400
+são eventos independentes,
+
+33
+00:01:33,434 --> 00:01:35,900
+a probabilidade
+de todo o arranjo
+
+34
+00:01:35,934 --> 00:01:39,232
+será o produto das probabilidades
+dos quatro pontos.
+
+35
+00:01:39,266 --> 00:01:44,400
+Isso é igual a 0,1 vezes 0,6,
+vezes 0,7, vezes 0,2,
+
+36
+00:01:44,629 --> 00:01:47,667
+que é igual a 0,0084.
+
+37
+00:01:47,701 --> 00:01:50,433
+Isso é muito pequeno,
+é menos de 1%.
+
+38
+00:01:50,467 --> 00:01:55,000
+Se o modelo é constituído
+por espaços de probabilidades,
+
+39
+00:01:55,033 --> 00:02:00,767
+a probabilidade de os pontos
+serem destas cores é de 0,0084.
+
+40
+00:02:00,800 --> 00:02:02,633
+Façamos o mesmo
+para os dois modelos.
+
+41
+00:02:02,667 --> 00:02:05,433
+O da esquerda nos diz
+que a probabilidade
+
+42
+00:02:05,467 --> 00:02:07,833
+de os pontos
+serem daquelas cores
+
+43
+00:02:07,867 --> 00:02:10,300
+é igual a 0,0084.
+
+44
+00:02:10,541 --> 00:02:12,667
+Se fizermos o mesmo
+com o modelo da direita,
+
+45
+00:02:12,700 --> 00:02:15,467
+teremos que a probabilidade
+de os dois pontos da direita
+
+46
+00:02:15,500 --> 00:02:18,267
+serem azuis
+é igual a 0,7 e 0,9.
+
+47
+00:02:18,300 --> 00:02:20,733
+E a dos pontos à esquerda
+de serem vermelhos,
+
+48
+00:02:20,767 --> 00:02:23,133
+de 0,8 e 0,6.
+
+49
+00:02:23,167 --> 00:02:26,600
+Ao multiplicarmos isto,
+nós temos 0,3024,
+
+50
+00:02:26,633 --> 00:02:28,333
+que é cerca de 30%.
+
+51
+00:02:28,367 --> 00:02:31,733
+Isso é muito maior
+do que 0,0084.
+
+52
+00:02:31,767 --> 00:02:34,533
+Nós confirmamos que o modelo
+da direita é melhor,
+
+53
+00:02:34,567 --> 00:02:36,667
+pois o arranjo dos pontos
+
+54
+00:02:36,700 --> 00:02:39,367
+tem mais tendência
+de terem aquelas cores.
+
+55
+00:02:39,400 --> 00:02:41,167
+Agora nós fazemos
+o seguinte:
+
+56
+00:02:41,200 --> 00:02:43,733
+pegamos o modelo ruim
+e calculamos a probabilidade
+
+57
+00:02:43,767 --> 00:02:45,867
+de os pontos
+serem daquelas cores.
+
+58
+00:02:45,900 --> 00:02:48,567
+Nós os multiplicamos e vemos
+que a probabilidade
+
+59
+00:02:48,600 --> 00:02:50,567
+é igual a 0,0084.
+
+60
+00:02:50,600 --> 00:02:53,267
+Se tivéssemos como maximizar
+esta probabilidade,
+
+61
+00:02:53,300 --> 00:02:56,767
+nós poderíamos aumentá-la
+até 0,3024.
+
+62
+00:02:57,433 --> 00:03:00,800
+A nossa meta se torna esta:
+
+63
+00:03:00,833 --> 00:03:03,433
+maximizar a probabilidade.
+
+64
+00:03:03,467 --> 00:03:06,097
+Este método,
+como dissemos antes,
+
+65
+00:03:06,131 --> 00:03:08,331
+é chamado
+de máxima verossimilhança.
+

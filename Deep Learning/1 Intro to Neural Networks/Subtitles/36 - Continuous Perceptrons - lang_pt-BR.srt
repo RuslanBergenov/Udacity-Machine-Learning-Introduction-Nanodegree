@@ -1,0 +1,87 @@
+1
+00:00:00,367 --> 00:00:04,067
+Faremos uma revisão para
+nos preparar para o que vem.
+
+2
+00:00:04,101 --> 00:00:07,601
+Nós temos dados
+em forma de pontos
+
+3
+00:00:07,635 --> 00:00:10,067
+e um módulo linear
+como este,
+
+4
+00:00:10,101 --> 00:00:14,001
+por exemplo, com equação
+2X1 mais 7X2 menos 4,
+
+5
+00:00:14,035 --> 00:00:15,367
+que é igual a zero.
+
+6
+00:00:15,401 --> 00:00:19,367
+Isso formará uma função
+de probabilidade como esta,
+
+7
+00:00:19,401 --> 00:00:22,567
+na qual os pontos
+na região azul positiva
+
+8
+00:00:22,601 --> 00:00:24,534
+têm mais chance
+de serem azuis,
+
+9
+00:00:24,568 --> 00:00:27,534
+e os pontos
+na região vermelha ou negativa
+
+10
+00:00:27,568 --> 00:00:29,734
+têm mais chance
+de serem vermelhos.
+
+11
+00:00:29,768 --> 00:00:32,000
+Isso criará este perceptron
+
+12
+00:00:32,034 --> 00:00:34,000
+que rotula os limites
+pelos pesos
+
+13
+00:00:34,034 --> 00:00:36,133
+e os nós pelos vieses.
+
+14
+00:00:36,167 --> 00:00:41,100
+O perceptron pega os pontos
+X1, X2, os coloca no gráfico
+
+15
+00:00:41,134 --> 00:00:44,734
+e retorna uma probabilidade
+de o ponto ser azul.
+
+16
+00:00:44,768 --> 00:00:47,901
+Neste caso,
+ele retorna um 0,9.
+
+17
+00:00:47,935 --> 00:00:51,300
+Isso imita os neurônios,
+que recebem impulsos nervosos,
+
+18
+00:00:51,334 --> 00:00:54,067
+fazem algo lá dentro
+e retorna outro impulso nervoso.
+

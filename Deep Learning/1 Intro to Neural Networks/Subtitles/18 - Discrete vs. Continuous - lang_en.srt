@@ -1,0 +1,276 @@
+1
+00:00:00,000 --> 00:00:03,575
+The prediction is basically the answer we get from the algorithm.
+
+2
+00:00:03,575 --> 00:00:06,220
+A discreet answer will be of the form yes, no.
+
+3
+00:00:06,219 --> 00:00:08,256
+Whereas a continued answer will be a number,
+
+4
+00:00:08,256 --> 00:00:11,615
+normally between zero and one which we'll consider a probability.
+
+5
+00:00:11,615 --> 00:00:13,224
+In the running example,
+
+6
+00:00:13,224 --> 00:00:16,664
+here we have our students where blue is accepted and red is rejected.
+
+7
+00:00:16,664 --> 00:00:21,035
+And the discrete algorithm will tell us if a student is accepted or rejected
+
+8
+00:00:21,035 --> 00:00:25,679
+by typing a zero for rejected students and a one for accepted students.
+
+9
+00:00:25,679 --> 00:00:27,274
+On the other hand,
+
+10
+00:00:27,274 --> 00:00:29,834
+the farther our point is from the black line,
+
+11
+00:00:29,835 --> 00:00:32,505
+the more drastic these probabilities are.
+
+12
+00:00:32,505 --> 00:00:36,240
+Points that are well into the blue area get very high probabilities,
+
+13
+00:00:36,240 --> 00:00:40,050
+such as this point with an 85% probability of being blue.
+
+14
+00:00:40,049 --> 00:00:43,884
+And points that are well into the red region are given very low probabilities,
+
+15
+00:00:43,884 --> 00:00:48,159
+such as this point on the bottom that is given a 20% probability of being blue.
+
+16
+00:00:48,159 --> 00:00:53,429
+The points over the line are all given a 50% probability of being blue.
+
+17
+00:00:53,429 --> 00:00:57,335
+As you can see the probability is a function of the distance from the line.
+
+18
+00:00:57,335 --> 00:01:00,390
+The way we move from discrete predictions to continuous,
+
+19
+00:01:00,390 --> 00:01:05,075
+is to simply change your activation function from the step function in the left,
+
+20
+00:01:05,075 --> 00:01:07,655
+to the sigmoid function on the right.
+
+21
+00:01:07,655 --> 00:01:10,609
+The sigmoid function is simply a function which for
+
+22
+00:01:10,609 --> 00:01:14,629
+large positive numbers will give us values very close to one.
+
+23
+00:01:14,629 --> 00:01:19,219
+For large negative numbers will give us values very close to zero.
+
+24
+00:01:19,219 --> 00:01:22,030
+And for numbers that are close to zero,
+
+25
+00:01:22,030 --> 00:01:25,599
+it'll give you values that are close to point five.
+
+26
+00:01:25,599 --> 00:01:32,684
+The formula is sigmoid effects equals σ(x) = 1/(1 + exp(-x))
+
+27
+00:01:32,685 --> 00:01:38,245
+So, before our model consisted of a line with a positive region and a negative region.
+
+28
+00:01:38,245 --> 00:01:42,010
+Now it consists of an entire probability space or for each point in the plane
+
+29
+00:01:42,010 --> 00:01:46,045
+we are given the probability that the label of the point is one for the blue points,
+
+30
+00:01:46,045 --> 00:01:47,969
+and zero for the red points.
+
+31
+00:01:47,969 --> 00:01:51,370
+For example, for this point the probability of
+
+32
+00:01:51,370 --> 00:01:55,850
+being blue is 50% and of being red is 50%.
+
+33
+00:01:55,849 --> 00:02:00,509
+For this point, the probabilities are 40% for being blue,
+
+34
+00:02:00,510 --> 00:02:02,975
+and 60% for being red.
+
+35
+00:02:02,974 --> 00:02:06,446
+For this one over here it's 30% for blue,
+
+36
+00:02:06,447 --> 00:02:08,469
+and 70% for red.
+
+37
+00:02:08,469 --> 00:02:11,439
+And for this point all over here is 80% for being
+
+38
+00:02:11,439 --> 00:02:14,655
+blue and 25 percent for being red.
+
+39
+00:02:14,655 --> 00:02:17,360
+The way we obtain this probability space is very simple.
+
+40
+00:02:17,360 --> 00:02:22,800
+We just combine the linear function WX + b with the sigmoid function.
+
+41
+00:02:22,800 --> 00:02:27,830
+So in the left we have the lines that represent the points for which WX + b is 
+
+42
+00:02:27,830 --> 00:02:32,630
+zero, one, two, minus one, minus two, etc.
+
+43
+00:02:32,629 --> 00:02:36,930
+And once we apply the sigmoid function to each of these values in the plane,
+
+44
+00:02:36,930 --> 00:02:40,515
+we then obtain numbers from zero to one for each point.
+
+45
+00:02:40,514 --> 00:02:44,074
+These numbers are just the probabilities of the point being blue.
+
+46
+00:02:44,074 --> 00:02:46,439
+The probability of the point being blue is a prediction of
+
+47
+00:02:46,439 --> 00:02:50,454
+the model Y hat to sigmoid of W x plus b.
+
+48
+00:02:50,455 --> 00:02:53,415
+Here we can see the lines for which the prediction is point five,
+
+49
+00:02:53,414 --> 00:02:55,259
+point six, point seven,
+
+50
+00:02:55,259 --> 00:02:58,419
+point four, point three, et cetera.
+
+51
+00:02:58,419 --> 00:03:01,539
+As you can see, as we get more into the blue area,
+
+52
+00:03:01,539 --> 00:03:04,905
+σ(Wx + b) gets closer and closer to one.
+
+53
+00:03:04,905 --> 00:03:07,740
+And as we move into the red area,
+
+54
+00:03:07,740 --> 00:03:11,115
+σ(Wx + b) gets closer and closer to zero.
+
+55
+00:03:11,115 --> 00:03:13,240
+When we're over the main line,
+
+56
+00:03:13,240 --> 00:03:15,120
+W x plus b is zero,
+
+57
+00:03:15,120 --> 00:03:19,319
+which means sigmoid of W s plus b is exactly zero point five.
+
+58
+00:03:19,319 --> 00:03:21,384
+So here on the left we have our old perceptron with
+
+59
+00:03:21,384 --> 00:03:24,250
+the activation function as a step function.
+
+60
+00:03:24,250 --> 00:03:26,669
+And on the right we have our new perceptron,
+
+61
+00:03:26,669 --> 00:03:29,944
+where the activation function is the sigmoid function.
+
+62
+00:03:29,944 --> 00:03:31,984
+What our new perceptron does,
+
+63
+00:03:31,985 --> 00:03:33,195
+it takes the inputs,
+
+64
+00:03:33,194 --> 00:03:38,301
+multiplies them by the weights in the edges and adds the results,
+
+65
+00:03:38,301 --> 00:03:40,935
+then applies the sigmoid function.
+
+66
+00:03:40,935 --> 00:03:45,170
+So instead of returning one and zero like before it returns
+
+67
+00:03:45,169 --> 00:03:49,984
+values between zero and one such as 0.99 or 0.67 etc.
+
+68
+00:03:49,985 --> 00:03:53,285
+Before it used to say the student got accepted or not,
+
+69
+00:03:53,284 --> 00:03:58,000
+and now it says the probability of the student got accepted is this much.
+

@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:02,580
+And now we finally have the tools to write
+
+2
+00:00:02,580 --> 00:00:05,120
+the pseudocode for the grading descent algorithm,
+
+3
+00:00:05,120 --> 00:00:06,830
+and it goes like this.
+
+4
+00:00:06,830 --> 00:00:15,170
+Step one, start with random weights w_one up to w_n and b which will give us a line,
+
+5
+00:00:15,170 --> 00:00:19,270
+and not just a line, but the whole probability function given by sigmoid of w x plus b.
+
+6
+00:00:19,270 --> 00:00:22,820
+Now for every point we'll calculate the error,
+
+7
+00:00:22,820 --> 00:00:25,150
+and as we can see the error is high for
+
+8
+00:00:25,150 --> 00:00:29,230
+misclassified points and small for correctly classified points.
+
+9
+00:00:29,230 --> 00:00:32,545
+Now for every point with coordinates x_one up to x_n,
+
+10
+00:00:32,545 --> 00:00:36,845
+we update w_i by adding the learning rate
+
+11
+00:00:36,845 --> 00:00:42,950
+alpha times the partial derivative of the error function with respect to w_i.
+
+12
+00:00:42,950 --> 00:00:45,120
+We also update b by adding alpha times
+
+13
+00:00:45,120 --> 00:00:48,440
+the partial derivative of the error function with respect to be.
+
+14
+00:00:48,440 --> 00:00:49,920
+This gives us new weights,
+
+15
+00:00:49,920 --> 00:00:52,610
+w_i_prime and then new bias b_prime.
+
+16
+00:00:52,610 --> 00:00:55,330
+Now we've already calculated these partial derivatives and we
+
+17
+00:00:55,330 --> 00:00:58,605
+know that they are y_hat minus y times
+
+18
+00:00:58,605 --> 00:01:01,295
+x_i for the derivative with respect to w_i
+
+19
+00:01:01,295 --> 00:01:05,215
+and y_hat minus y for the derivative with respect to b.
+
+20
+00:01:05,215 --> 00:01:08,840
+So that's how we'll update the weights.
+
+21
+00:01:08,840 --> 00:01:13,350
+Now repeat this process until the error is small,
+
+22
+00:01:13,350 --> 00:01:15,765
+or we can repeat it a fixed number of times.
+
+23
+00:01:15,765 --> 00:01:18,840
+The number of times is called the epochs and we'll learn them later.
+
+24
+00:01:18,840 --> 00:01:20,100
+Now this looks familiar,
+
+25
+00:01:20,100 --> 00:01:21,935
+have we seen something like that before?
+
+26
+00:01:21,935 --> 00:01:24,300
+Well, we look at the points and what each point is doing is
+
+27
+00:01:24,300 --> 00:01:26,640
+it's adding a multiple of itself into the weights of
+
+28
+00:01:26,640 --> 00:01:31,640
+the line in order to get the line to move closer towards it if it's misclassified.
+
+29
+00:01:31,640 --> 00:01:34,435
+That's pretty much what the Perceptron algorithm is doing.
+
+30
+00:01:34,435 --> 00:01:36,000
+So in the next video, we'll look at
+
+31
+00:01:36,000 --> 00:01:39,000
+the similarities because it's a bit suspicious how similar they are.
+

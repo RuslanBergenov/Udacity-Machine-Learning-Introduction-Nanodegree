@@ -1,0 +1,116 @@
+1
+00:00:00,000 --> 00:00:01,754
+So, as we've seen so far,
+
+2
+00:00:01,754 --> 00:00:03,674
+all our algorithms are numerical.
+
+3
+00:00:03,674 --> 00:00:05,807
+This means we need to input numbers,
+
+4
+00:00:05,807 --> 00:00:08,640
+such as a score in a test or the grades,
+
+5
+00:00:08,640 --> 00:00:12,600
+but the input data will not always look like numbers.
+
+6
+00:00:12,599 --> 00:00:14,184
+Sometimes it looks like this.
+
+7
+00:00:14,185 --> 00:00:15,925
+Let's say the module receives as an input
+
+8
+00:00:15,925 --> 00:00:18,640
+the fact that you got a gift or didn't get a gift.
+
+9
+00:00:18,640 --> 00:00:21,719
+How do we turn that into numbers? Well, that's easy.
+
+10
+00:00:21,719 --> 00:00:24,994
+If you've got a gift, we'll just say that the input variable is 1.
+
+11
+00:00:24,995 --> 00:00:26,144
+And, if you didn't get a gift,
+
+12
+00:00:26,144 --> 00:00:29,085
+we'll just say that the input variable is 0.
+
+13
+00:00:29,085 --> 00:00:31,350
+But, what if we have more classes as before or,
+
+14
+00:00:31,350 --> 00:00:34,515
+let's say, our classes are Duck, Beaver and Walrus?
+
+15
+00:00:34,515 --> 00:00:37,649
+What variable do we input in the algorithm?
+
+16
+00:00:37,649 --> 00:00:39,530
+Maybe, we can input a 0 or 1 and a 2,
+
+17
+00:00:39,530 --> 00:00:42,120
+but that would not work because it would assume dependencies between
+
+18
+00:00:42,119 --> 00:00:45,287
+the classes that we can't have. So, this is what we do.
+
+19
+00:00:45,287 --> 00:00:48,954
+What we do is, we come up with one variable for each of the classes.
+
+20
+00:00:48,954 --> 00:00:50,739
+So, our table becomes like this.
+
+21
+00:00:50,740 --> 00:00:52,274
+That's one variable for Duck,
+
+22
+00:00:52,274 --> 00:00:55,164
+one for Beaver and one for Walrus.
+
+23
+00:00:55,164 --> 00:00:58,109
+And, each one has its corresponding column.
+
+24
+00:00:58,109 --> 00:01:01,509
+Now, if the input is a duck then the variable for duck is
+
+25
+00:01:01,509 --> 00:01:06,780
+1 and the variables for beaver and walrus are 0.
+
+26
+00:01:06,780 --> 00:01:09,775
+Similarly for the beaver and the walrus.
+
+27
+00:01:09,775 --> 00:01:14,770
+We may have more columns of data but at least there are no unnecessary dependencies.
+
+28
+00:01:14,769 --> 00:01:16,834
+This process is called The One-Hot Encoding
+
+29
+00:01:16,834 --> 00:01:19,099
+and it will be used a lot for processing data.
+

@@ -1,0 +1,359 @@
+1
+00:00:00,400 --> 00:00:03,667
+Eu vou mostrar como criar
+modelos não lineares.
+
+2
+00:00:03,701 --> 00:00:06,167
+Nós faremos um truque
+bem simples.
+
+3
+00:00:06,200 --> 00:00:08,968
+Nós combinaremos
+dois modelos lineares
+
+4
+00:00:09,000 --> 00:00:12,033
+em um modelo não linear.
+
+5
+00:00:12,067 --> 00:00:13,701
+Visualmente ele será assim:
+
+6
+00:00:13,734 --> 00:00:17,300
+os dois modelos sobrepostos
+criando o modelo da direita.
+
+7
+00:00:17,334 --> 00:00:20,100
+É quase como aplicar
+aritmética nos modelos.
+
+8
+00:00:20,133 --> 00:00:22,868
+É como dizer
+"esta linha mais esta linha
+
+9
+00:00:22,901 --> 00:00:24,267
+é igual à curva."
+
+10
+00:00:24,300 --> 00:00:26,567
+Mostrarei como fazer isso
+matematicamente.
+
+11
+00:00:26,601 --> 00:00:30,667
+Um modelo linear é
+um espaço de probabilidade.
+
+12
+00:00:30,701 --> 00:00:36,200
+Para cada ponto, ele nos dá
+a probabilidade de ele ser azul.
+
+13
+00:00:36,234 --> 00:00:40,400
+Por exemplo, este ponto
+está na região azul,
+
+14
+00:00:40,434 --> 00:00:43,801
+então a probabilidade
+de ser azul é de 0,7.
+
+15
+00:00:43,834 --> 00:00:46,767
+O mesmo ponto, no segundo
+espaço de probabilidade
+
+16
+00:00:46,801 --> 00:00:48,634
+também está na região azul,
+
+17
+00:00:48,667 --> 00:00:51,934
+e a probabilidade
+de ele ser azul é de 0,8.
+
+18
+00:00:51,968 --> 00:00:56,067
+A dúvida é como combinar
+os dois.
+
+19
+00:00:56,100 --> 00:00:58,501
+A forma mais simples
+para combinar dois valores
+
+20
+00:00:58,534 --> 00:00:59,934
+é adicionando.
+
+21
+00:01:00,701 --> 00:01:05,467
+Então, 0,8 mais 0,7
+é igual a 1,5.
+
+22
+00:01:05,501 --> 00:01:08,434
+Mas isso não parece mais
+uma probabilidade,
+
+23
+00:01:08,467 --> 00:01:10,033
+pois é maior do que um.
+
+24
+00:01:10,067 --> 00:01:13,634
+As probabilidades devem estar
+entre zero e um.
+
+25
+00:01:13,667 --> 00:01:15,767
+O que podemos fazer?
+
+26
+00:01:15,801 --> 00:01:18,434
+Como transformar o valor
+que é maior do que um
+
+27
+00:01:18,467 --> 00:01:21,033
+em algo entre zero e um?
+
+28
+00:01:21,067 --> 00:01:23,834
+Nós já passamos por isso
+e utilizamos uma ferramenta
+
+29
+00:01:23,868 --> 00:01:27,801
+que transforma qualquer valor
+em algo entre zero e um,
+
+30
+00:01:27,834 --> 00:01:29,968
+que é a função sigmoide.
+
+31
+00:01:30,000 --> 00:01:32,534
+É isso que vamos fazer.
+
+32
+00:01:32,567 --> 00:01:35,834
+Nós a aplicamos
+a função sigmoide em 1,5
+
+33
+00:01:35,868 --> 00:01:38,534
+para obter o valor de 0,82,
+
+34
+00:01:38,567 --> 00:01:41,734
+que é a probabilidade
+de este ponto ser azul
+
+35
+00:01:41,767 --> 00:01:44,501
+no espaço de probabilidade
+resultante.
+
+36
+00:01:44,534 --> 00:01:47,033
+Nós criamos uma função
+de probabilidade
+
+37
+00:01:47,067 --> 00:01:49,267
+para cada ponto no plano,
+
+38
+00:01:49,300 --> 00:01:51,367
+e é assim que combinamos
+dois modelos.
+
+39
+00:01:51,400 --> 00:01:54,501
+Nós calculamos a probabilidade
+de um dos pontos,
+
+40
+00:01:54,534 --> 00:01:59,400
+a do outro, somamos
+e aplicamos a função sigmoide.
+
+41
+00:01:59,434 --> 00:02:01,901
+E se quiséssemos
+pesar a soma?
+
+42
+00:02:01,934 --> 00:02:04,100
+E se quiséssemos
+que o modelo de cima
+
+43
+00:02:04,133 --> 00:02:07,667
+tivesse maior probabilidade
+do que o segundo?
+
+44
+00:02:07,701 --> 00:02:12,334
+Este modelo parece mais
+com o de cima
+
+45
+00:02:12,367 --> 00:02:14,334
+do que com o de baixo.
+
+46
+00:02:14,367 --> 00:02:17,501
+Nós podemos adicionar pesos
+e dizer que o primeiro modelo
+
+47
+00:02:17,534 --> 00:02:22,200
+tem sete vezes
+mais que o segundo.
+
+48
+00:02:22,234 --> 00:02:24,434
+Eu posso adicionar
+o peso que eu quiser.
+
+49
+00:02:24,467 --> 00:02:27,267
+Eu posso dizer
+"sete vezes o primeiro
+
+50
+00:02:27,300 --> 00:02:29,033
+mais cinco vezes o segundo."
+
+51
+00:02:29,901 --> 00:02:32,100
+Isso combina os modelos
+
+52
+00:02:32,133 --> 00:02:36,434
+pegando a primeira probabilidade
+multiplicada por sete,
+
+53
+00:02:37,300 --> 00:02:40,300
+e pegando a segunda
+multiplicada por cinco.
+
+54
+00:02:40,901 --> 00:02:43,567
+Eu posso até adicionar
+um viés se eu quiser.
+
+55
+00:02:43,601 --> 00:02:45,567
+Digamos que o viés
+é menos seis,
+
+56
+00:02:45,601 --> 00:02:47,901
+então é só adicioná-lo
+à equação.
+
+57
+00:02:47,934 --> 00:02:52,734
+Temos sete vezes este mais
+cinco vezes este menos seis,
+
+58
+00:02:52,767 --> 00:02:54,901
+que dá 2,9.
+
+59
+00:02:54,934 --> 00:03:00,667
+Aplicamos a função sigmoide
+que nos dá 0,95.
+
+60
+00:03:00,701 --> 00:03:02,868
+É quase igual
+ao que tínhamos antes.
+
+61
+00:03:02,901 --> 00:03:06,100
+Antes nós tínhamos uma linha
+com uma combinação linear
+
+62
+00:03:06,133 --> 00:03:10,067
+dos valores de entrada
+vezes os pesos mais o viés.
+
+63
+00:03:10,100 --> 00:03:12,834
+Agora temos que este modelo
+é uma combinação linear
+
+64
+00:03:12,868 --> 00:03:15,701
+dos dois modelos antigos
+vezes os pesos
+
+65
+00:03:15,734 --> 00:03:17,601
+mais alguns vieses.
+
+66
+00:03:17,634 --> 00:03:18,968
+É quase a mesma coisa.
+
+67
+00:03:19,000 --> 00:03:21,767
+Parece com o modelo
+de curva da direita.
+
+68
+00:03:21,801 --> 00:03:23,901
+É uma combinação linear
+
+69
+00:03:23,934 --> 00:03:26,534
+dos dois modelos
+lineares de antes,
+
+70
+00:03:26,567 --> 00:03:30,334
+como se houvesse uma linha
+entre os dois modelos.
+
+71
+00:03:30,367 --> 00:03:32,033
+Isso não é coincidência,
+
+72
+00:03:32,067 --> 00:03:35,167
+é assim que e as redes
+neurais são construídas.
+
+73
+00:03:35,200 --> 00:03:37,701
+Nós podemos continuar
+fazendo isto
+
+74
+00:03:37,734 --> 00:03:40,133
+para obter modelos complexos
+
+75
+00:03:40,167 --> 00:03:43,300
+de combinações
+lineares existentes.
+
+76
+00:03:43,334 --> 00:03:46,767
+É isso que nós faremos
+para construir redes neurais.
+

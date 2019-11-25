@@ -1,0 +1,88 @@
+1
+00:00:00,000 --> 00:00:04,830
+Okay, so let's look more carefully at this model for accepting and rejecting students.
+
+2
+00:00:04,830 --> 00:00:06,025
+Let's say we have this student four,
+
+3
+00:00:06,025 --> 00:00:07,334
+who got nine in the test,
+
+4
+00:00:07,333 --> 00:00:08,905
+but only one on the grades.
+
+5
+00:00:08,906 --> 00:00:12,000
+According to our model this student gets accepted since it's
+
+6
+00:00:12,000 --> 00:00:15,525
+placed over here in the positive region of this line.
+
+7
+00:00:15,525 --> 00:00:17,804
+But let's say we don't want that since we'll say,
+
+8
+00:00:17,803 --> 00:00:19,183
+"If your grades were terrible,
+
+9
+00:00:19,184 --> 00:00:22,190
+no matter what you got on the test, you won't get accepted".
+
+10
+00:00:22,190 --> 00:00:25,565
+So our data should look more like this instead.
+
+11
+00:00:25,565 --> 00:00:28,574
+This model is much more realistic but now we have a problem
+
+12
+00:00:28,574 --> 00:00:32,329
+which is the data can no longer be separated by just a line.
+
+13
+00:00:32,329 --> 00:00:34,228
+So what is the next thing after a line?
+
+14
+00:00:34,228 --> 00:00:37,232
+Maybe a circle. A circle would work.
+
+15
+00:00:37,232 --> 00:00:40,574
+Maybe two lines. That could work, too.
+
+16
+00:00:40,575 --> 00:00:42,240
+Or maybe a curve like this.
+
+17
+00:00:42,240 --> 00:00:44,423
+That would also work. So let's go with that.
+
+18
+00:00:44,423 --> 00:00:46,109
+Let's go with the curve.
+
+19
+00:00:46,109 --> 00:00:49,795
+Now, unfortunately, the perceptron algorithm won't work for us this time.
+
+20
+00:00:49,795 --> 00:00:53,408
+We'll have to come up with something more complex and actually the solution will be,
+
+21
+00:00:53,408 --> 00:00:55,868
+we need to redefine our perceptron algorithm for
+
+22
+00:00:55,868 --> 00:01:00,000
+a line in a way that it'll generalize to other types of curves.
+

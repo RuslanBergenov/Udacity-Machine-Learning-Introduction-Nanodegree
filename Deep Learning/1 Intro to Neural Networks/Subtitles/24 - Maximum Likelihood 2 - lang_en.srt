@@ -1,0 +1,212 @@
+1
+00:00:00,000 --> 00:00:02,305
+So let me be more specific.
+
+2
+00:00:02,305 --> 00:00:05,128
+Let's look at the following four points: two blue and two red
+
+3
+00:00:05,128 --> 00:00:08,189
+and two models that classify them,
+
+4
+00:00:08,189 --> 00:00:10,740
+the one on the left and the one on the right.
+
+5
+00:00:10,740 --> 00:00:14,515
+Quick. Which model looks better? You are correct.
+
+6
+00:00:14,515 --> 00:00:17,219
+The model on the right is much better since it
+
+7
+00:00:17,219 --> 00:00:20,399
+classifies the four points correctly whereas
+
+8
+00:00:20,399 --> 00:00:26,625
+the model in the left gets two points correctly and two points incorrectly.
+
+9
+00:00:26,625 --> 00:00:31,065
+But let's see why the model in the right is better from the probability perspective.
+
+10
+00:00:31,065 --> 00:00:33,840
+And by that, we'll show you that the arrangement in the right is
+
+11
+00:00:33,840 --> 00:00:37,289
+much more likely to happen than the one in the left.
+
+12
+00:00:37,289 --> 00:00:42,228
+So let's recall that our prediction is ŷ = σ(Wx+b) and that that
+
+13
+00:00:42,228 --> 00:00:48,240
+is precisely the probability of a point being labeled positive which means blue.
+
+14
+00:00:48,240 --> 00:00:49,755
+So for the points in the figure,
+
+15
+00:00:49,755 --> 00:00:53,219
+let's say the model tells you that the probability of being blue are 0.9,
+
+16
+00:00:53,219 --> 00:00:56,835
+0.6, 0.3, and 0.2.
+
+17
+00:00:56,835 --> 00:00:59,640
+Notice that the points in the blue region are much more likely to be
+
+18
+00:00:59,640 --> 00:01:03,649
+blue and the points in the red region are much less likely to be blue.
+
+19
+00:01:03,649 --> 00:01:08,064
+Now obviously, the probability of being red is one minus the probability of being blue.
+
+20
+00:01:08,063 --> 00:01:12,083
+So in this case, the probability of some of the points being red are 0.1,
+
+21
+00:01:12,084 --> 00:01:16,319
+0.4, 0.7 and 0.8.
+
+22
+00:01:16,319 --> 00:01:19,334
+Now what we want to do is we want to calculate the probability of
+
+23
+00:01:19,334 --> 00:01:23,844
+the four points are of the colors that they actually are.
+
+24
+00:01:23,843 --> 00:01:26,500
+This means the probability that the two red points
+
+25
+00:01:26,500 --> 00:01:30,099
+are red and that the two blue points are blue.
+
+26
+00:01:30,099 --> 00:01:33,969
+Now if we assume that the colors of the points are independent events then
+
+27
+00:01:33,968 --> 00:01:36,140
+the probability for the whole arrangement is
+
+28
+00:01:36,140 --> 00:01:39,290
+the product of the probabilities of the four points.
+
+29
+00:01:39,290 --> 00:01:48,715
+This is equal to 0.1 × 0.6 × 0.7 × 0.2 = 0.0084. This is very small.
+
+30
+00:01:48,715 --> 00:01:50,465
+It's less than 1%.
+
+31
+00:01:50,465 --> 00:01:54,939
+What we mean by this is that if the model is given by these probability spaces,
+
+32
+00:01:54,938 --> 00:02:00,388
+then the probability that the points are of these colors is 0.0084.
+
+33
+00:02:00,388 --> 00:02:02,530
+Now let's do this for both models.
+
+34
+00:02:02,530 --> 00:02:05,629
+As we saw the model on the left tells us that the probabilities of
+
+35
+00:02:05,629 --> 00:02:10,485
+these points being of those colors is 0.0084.
+
+36
+00:02:10,485 --> 00:02:12,675
+If we do the same thing for the model on the right.
+
+37
+00:02:12,675 --> 00:02:15,020
+Let's say we get that the probabilities of the two points in
+
+38
+00:02:15,020 --> 00:02:17,699
+the right being blue are 0.7 and
+
+39
+00:02:17,699 --> 00:02:23,259
+0.9 and of the two points in the left being red are 0.8 and 0.6.
+
+40
+00:02:23,258 --> 00:02:28,468
+When we multiply these we get 0.3024 which is around 30%.
+
+41
+00:02:28,468 --> 00:02:31,763
+This is much higher than 0.0084.
+
+42
+00:02:31,764 --> 00:02:35,159
+Thus, we confirm that the model on the right is better because it makes
+
+43
+00:02:35,158 --> 00:02:39,478
+the arrangement of the points much more likely to have those colors.
+
+44
+00:02:39,479 --> 00:02:41,009
+So now, what we do is the following?
+
+45
+00:02:41,008 --> 00:02:42,404
+We start from the bad modeling,
+
+46
+00:02:42,405 --> 00:02:45,645
+calculate the probability that the points are those colors,
+
+47
+00:02:45,645 --> 00:02:50,780
+multiply them and we obtain the total probability is 0.0084.
+
+48
+00:02:50,780 --> 00:02:53,968
+Now if we just had a way to maximize this probability we can increase
+
+49
+00:02:53,968 --> 00:02:57,585
+it all the way to 0.3024.
+
+50
+00:02:57,585 --> 00:03:00,775
+Thus, our new goal becomes precisely that,
+
+51
+00:03:00,775 --> 00:03:03,104
+to maximize this probability.
+
+52
+00:03:03,104 --> 00:03:05,879
+This method, as we stated before,
+
+53
+00:03:05,878 --> 00:03:08,000
+is called maximum likelihood.
+

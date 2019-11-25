@@ -1,0 +1,236 @@
+1
+00:00:00,000 --> 00:00:05,220
+Now that was when we had two classes namely receiving a gift or not receiving a gift.
+
+2
+00:00:05,220 --> 00:00:09,285
+What happens if we have more classes? Let's take a look.
+
+3
+00:00:09,285 --> 00:00:10,790
+So we have a similar problem.
+
+4
+00:00:10,790 --> 00:00:12,220
+We still have three doors.
+
+5
+00:00:12,220 --> 00:00:14,940
+And this problem is still not the Monty Hall problem.
+
+6
+00:00:14,940 --> 00:00:16,860
+Behind each door there can be an animal,
+
+7
+00:00:16,860 --> 00:00:19,140
+and the animal can be of three types.
+
+8
+00:00:19,140 --> 00:00:21,555
+It can be a duck, it can be a beaver,
+
+9
+00:00:21,555 --> 00:00:23,575
+or it can be a walrus.
+
+10
+00:00:23,575 --> 00:00:26,095
+So let's look at this table of probabilities.
+
+11
+00:00:26,095 --> 00:00:28,485
+According to the first column on the table,
+
+12
+00:00:28,485 --> 00:00:30,135
+behind the first door,
+
+13
+00:00:30,135 --> 00:00:33,380
+the probability of finding a duck is 0.7,
+
+14
+00:00:33,380 --> 00:00:35,800
+the probability of finding a beaver is 0.2,
+
+15
+00:00:35,800 --> 00:00:39,080
+and the probability of finding a walrus is 0.1.
+
+16
+00:00:39,080 --> 00:00:42,150
+Notice that the numbers in each column need to add to
+
+17
+00:00:42,150 --> 00:00:45,745
+one because there is some animal behind door one.
+
+18
+00:00:45,745 --> 00:00:50,030
+The numbers in the rows do not need to add to one as you can see.
+
+19
+00:00:50,030 --> 00:00:53,825
+It could easly be that we have a duck behind every door and that's okay.
+
+20
+00:00:53,825 --> 00:00:55,590
+So let's look at a sample scenario.
+
+21
+00:00:55,590 --> 00:00:57,225
+Let's say we have our three doors,
+
+22
+00:00:57,225 --> 00:00:59,775
+and behind the first door, there's a duck,
+
+23
+00:00:59,775 --> 00:01:02,040
+behind the second door there's a walrus,
+
+24
+00:01:02,040 --> 00:01:04,805
+and behind the third door there's also a walrus.
+
+25
+00:01:04,805 --> 00:01:07,895
+Recall that the probabilities are again by the table.
+
+26
+00:01:07,895 --> 00:01:11,555
+So a duck behind the first door is 0.7 likely,
+
+27
+00:01:11,555 --> 00:01:14,870
+a walrus behind the second door is 0.3 likely,
+
+28
+00:01:14,870 --> 00:01:18,925
+and a walrus behind the third door is 0.4 likely.
+
+29
+00:01:18,925 --> 00:01:21,930
+So the probability of obtaining this three animals is the product of
+
+30
+00:01:21,930 --> 00:01:25,470
+the probabilities of the three events since they are independent events,
+
+31
+00:01:25,470 --> 00:01:27,900
+which in this case it's 0.084.
+
+32
+00:01:27,900 --> 00:01:30,285
+And as we learn,
+
+33
+00:01:30,285 --> 00:01:33,000
+that cross entropy here is given by
+
+34
+00:01:33,000 --> 00:01:37,065
+the sums of the negatives of the logarithms of the probabilities.
+
+35
+00:01:37,065 --> 00:01:40,720
+So the first one is negative logarithm of 0.7.
+
+36
+00:01:40,720 --> 00:01:43,710
+The second one is negative logarithm of 0.3.
+
+37
+00:01:43,710 --> 00:01:46,740
+And the third one is negative logarithm of 0.4.
+
+38
+00:01:46,740 --> 00:01:52,255
+The Cross entropy's and the sum of these three which is actually 2.48.
+
+39
+00:01:52,255 --> 00:01:55,490
+But we want a formula, so let's put some variables here.
+
+40
+00:01:55,490 --> 00:02:00,187
+So P11 is the probability of finding a duck behind door one.
+
+41
+00:02:00,187 --> 00:02:04,535
+P12 is the probability of finding a duck behind door two etc.
+
+42
+00:02:04,535 --> 00:02:09,260
+And let's have the indicator variables Y1j D1 if there's
+
+43
+00:02:09,260 --> 00:02:14,790
+a duck behind door J. Y2j B1 if there's a beaver behind door J,
+
+44
+00:02:14,790 --> 00:02:19,285
+and Y3j B1 if there's a walrus behind door J.
+
+45
+00:02:19,285 --> 00:02:21,935
+And these variables are zero otherwise.
+
+46
+00:02:21,935 --> 00:02:24,210
+And so, the formula for the cross entropy is
+
+47
+00:02:24,210 --> 00:02:27,445
+simply the negative of the summation from i_ equals_ one to n,
+
+48
+00:02:27,445 --> 00:02:35,630
+up to summation from y_ equals_ j to m of Yij_ times_ the logarithm of Pij.
+
+49
+00:02:35,630 --> 00:02:39,150
+In this case, m is a number of classes.
+
+50
+00:02:39,150 --> 00:02:42,330
+This formula works because Yij being zero one,
+
+51
+00:02:42,330 --> 00:02:45,135
+makes sure that we're only adding the logarithms
+
+52
+00:02:45,135 --> 00:02:48,555
+of the probabilities of the events that actually have occurred.
+
+53
+00:02:48,555 --> 00:02:53,760
+And voila, this is the formula for the cross entropy in more classes.
+
+54
+00:02:53,760 --> 00:02:55,080
+Now I'm going to leave this equestion.
+
+55
+00:02:55,080 --> 00:03:00,085
+Given that we have a formula for cross entropy for two classes and one for m classes.
+
+56
+00:03:00,085 --> 00:03:04,240
+These formulas look different but are they the same for m_ equals_ two?
+
+57
+00:03:04,240 --> 00:03:05,565
+Obviously the answer is yes,
+
+58
+00:03:05,565 --> 00:03:07,950
+but it's a cool exercise to actually write them down and
+
+59
+00:03:07,950 --> 00:03:11,000
+convince yourself that they are actually the same.
+

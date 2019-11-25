@@ -1,0 +1,482 @@
+1
+00:00:00,400 --> 00:00:04,067
+Agora nós estamos prontos
+para lidar com redes neurais.
+
+2
+00:00:04,101 --> 00:00:06,667
+Vamos revisar o feedforward.
+
+3
+00:00:06,701 --> 00:00:09,067
+Temos um perceptron
+com um ponto entrando
+
+4
+00:00:09,101 --> 00:00:10,534
+rotulado como positivo
+
+5
+00:00:10,568 --> 00:00:15,033
+e uma equação W1X1
+mais W2X2 mais B,
+
+6
+00:00:15,067 --> 00:00:19,734
+na qual W1 e W2 são os pesos
+e B, o viés.
+
+7
+00:00:19,768 --> 00:00:23,868
+O perceptron posiciona um ponto
+e retorna uma probabilidade
+
+8
+00:00:23,902 --> 00:00:25,467
+de o ponto ser azul,
+
+9
+00:00:25,501 --> 00:00:26,934
+que neste caso é pequena,
+
+10
+00:00:26,968 --> 00:00:29,200
+pois o ponto está
+na área vermelha.
+
+11
+00:00:29,234 --> 00:00:31,701
+Portanto, este é
+um perceptron ruim,
+
+12
+00:00:31,735 --> 00:00:35,901
+pois ele prevê que o ponto
+é vermelho quando ele é azul.
+
+13
+00:00:35,935 --> 00:00:39,501
+Vejamos o que fizemos
+no algoritmo gradiente descendente.
+
+14
+00:00:39,535 --> 00:00:41,968
+Nós fizemos
+uma propagação de retorno.
+
+15
+00:00:42,002 --> 00:00:44,467
+Nós fomos
+na direção contrária.
+
+16
+00:00:44,501 --> 00:00:47,534
+Perguntamos ao ponto:
+"O que você quer que o modelo
+
+17
+00:00:47,568 --> 00:00:48,868
+faça por você?"
+
+18
+00:00:48,902 --> 00:00:50,901
+E o ponto disse: "Bem,
+
+19
+00:00:50,935 --> 00:00:53,734
+eu fui classificado errado,
+então eu quero que o limite
+
+20
+00:00:53,768 --> 00:00:55,400
+se aproxime de mim."
+
+21
+00:00:55,434 --> 00:01:00,033
+Vimos que a linha se aproximou
+atualizando os pesos.
+
+22
+00:01:00,067 --> 00:01:04,434
+Neste caso, ele diz ao peso W1
+para diminuir
+
+23
+00:01:04,468 --> 00:01:07,033
+e ao peso W2 para aumentar.
+
+24
+00:01:07,067 --> 00:01:10,400
+Isso é só uma ilustração,
+não há nenhuma exatidão.
+
+25
+00:01:10,434 --> 00:01:14,567
+Nós obtemos novos pesos,
+W1' e W2',
+
+26
+00:01:14,601 --> 00:01:16,734
+que definem uma nova linha,
+
+27
+00:01:16,768 --> 00:01:19,167
+que está
+mais próxima do ponto.
+
+28
+00:01:19,201 --> 00:01:24,033
+Nós estamos descendo
+do monte Errorest, certo?
+
+29
+00:01:24,067 --> 00:01:28,133
+A altura será
+a função de erro E de W,
+
+30
+00:01:28,167 --> 00:01:31,801
+e nós calculamos o gradiente
+da função de erro,
+
+31
+00:01:31,835 --> 00:01:33,868
+que é o mesmo
+que perguntar ao ponto
+
+32
+00:01:33,902 --> 00:01:36,033
+o que ele quer
+que o modelo faça.
+
+33
+00:01:36,067 --> 00:01:40,267
+Enquanto descemos em direção
+ao negativo do gradiente,
+
+34
+00:01:40,301 --> 00:01:43,934
+nós diminuímos o erro
+para descermos a montanha.
+
+35
+00:01:43,968 --> 00:01:46,968
+Isso nos dá
+um novo erro E de W',
+
+36
+00:01:47,002 --> 00:01:50,133
+e um novo modelo
+com W' com erro menor,
+
+37
+00:01:50,167 --> 00:01:53,767
+o que significa obter uma nova
+linha mais próxima ao ponto.
+
+38
+00:01:53,801 --> 00:01:57,300
+Nós continuamos neste processo
+até diminuirmos o erro.
+
+39
+00:01:57,901 --> 00:01:59,934
+Isso foi
+para um perceptron único,
+
+40
+00:01:59,968 --> 00:02:02,734
+e o que fazemos para perceptrons
+de multicamadas?
+
+41
+00:02:02,768 --> 00:02:06,868
+Nós ainda reduzimos o erro
+descendo a montanha,
+
+42
+00:02:06,902 --> 00:02:10,267
+mas como a função de erro
+passa a ser mais complexa,
+
+43
+00:02:10,301 --> 00:02:11,968
+então não é mais
+o Monte Errorest,
+
+44
+00:02:12,002 --> 00:02:15,567
+mas o Monte Kilimanjerro,
+mas é a mesma coisa.
+
+45
+00:02:15,601 --> 00:02:19,334
+Nós calculamos a função
+de erro e o gradiente,
+
+46
+00:02:20,067 --> 00:02:25,200
+seguimos em direção ao negativo
+do gradiente a fim de encontrar
+
+47
+00:02:25,234 --> 00:02:30,601
+um novo modelo W'
+com erro E de W' menor,
+
+48
+00:02:30,635 --> 00:02:32,968
+que nos dará
+uma melhor previsão.
+
+49
+00:02:33,002 --> 00:02:36,834
+Nós continuamos até
+minimizar o erro.
+
+50
+00:02:36,868 --> 00:02:40,467
+Vejamos o que o feedforward faz
+no perceptron multicamadas.
+
+51
+00:02:40,501 --> 00:02:43,934
+O ponto entra
+com as coordenadas X1 e X2
+
+52
+00:02:43,968 --> 00:02:46,334
+e rótulo Y igual a um.
+
+53
+00:02:46,368 --> 00:02:48,434
+Ele é posicionado
+nos modelos lineares
+
+54
+00:02:48,468 --> 00:02:50,901
+correspondentes
+à camada oculta.
+
+55
+00:02:50,935 --> 00:02:53,434
+Quando combinamos
+as camadas,
+
+56
+00:02:53,468 --> 00:02:56,701
+o ponto é posicionado
+em um modelo não linear
+
+57
+00:02:56,735 --> 00:02:58,467
+na camada de saída.
+
+58
+00:02:58,501 --> 00:03:00,734
+A probabilidade
+de o ponto ser azul
+
+59
+00:03:00,768 --> 00:03:05,001
+é obtida pela posição
+do ponto neste modelo final.
+
+60
+00:03:05,035 --> 00:03:09,534
+Atenção, pois isto é a chave
+para treinar redes neurais,
+
+61
+00:03:09,568 --> 00:03:11,300
+esta propagação de retorno.
+
+62
+00:03:11,334 --> 00:03:13,901
+Nós faremos como antes,
+nós checaremos o erro.
+
+63
+00:03:13,935 --> 00:03:16,467
+Este modelo não é bom,
+pois ele prevê que o ponto
+
+64
+00:03:16,501 --> 00:03:19,100
+será vermelho quando,
+na verdade, é azul.
+
+65
+00:03:19,834 --> 00:03:21,400
+Nós perguntamos ao ponto:
+
+66
+00:03:21,434 --> 00:03:23,634
+"O que você quer
+que o modelo faça
+
+67
+00:03:23,668 --> 00:03:26,534
+para que você seja
+melhor classificado?"
+
+68
+00:03:26,568 --> 00:03:31,601
+E o ponto diz: "Eu quero
+que a região azul se aproxime."
+
+69
+00:03:31,635 --> 00:03:35,334
+O que isso significa?
+
+70
+00:03:35,368 --> 00:03:39,267
+Vejamos os dois modelos lineares
+na camada oculta.
+
+71
+00:03:39,301 --> 00:03:42,801
+Qual desses modelos
+está se saindo melhor?
+
+72
+00:03:42,835 --> 00:03:46,467
+Parece que o de cima
+está classificando mal,
+
+73
+00:03:46,501 --> 00:03:50,033
+enquanto o de baixo
+está classificando corretamente.
+
+74
+00:03:50,067 --> 00:03:53,100
+Nós queremos ouvir mais
+o de baixo
+
+75
+00:03:53,134 --> 00:03:55,300
+do que o de cima.
+
+76
+00:03:55,901 --> 00:03:59,567
+Nós queremos reduzir
+o peso do modelo de cima
+
+77
+00:03:59,601 --> 00:04:02,968
+e aumentar o peso
+do de baixo.
+
+78
+00:04:03,002 --> 00:04:04,767
+Agora nosso modelo final
+
+79
+00:04:04,801 --> 00:04:07,801
+será mais parecido
+com o modelo de baixo
+
+80
+00:04:07,835 --> 00:04:09,801
+do que com o de cima.
+
+81
+00:04:10,634 --> 00:04:14,067
+Mas nós podemos fazer mais,
+podemos ir aos modelos lineares
+
+82
+00:04:14,101 --> 00:04:15,567
+e perguntar ao ponto:
+
+83
+00:04:15,601 --> 00:04:18,001
+"o que os modelos
+podem fazer
+
+84
+00:04:18,035 --> 00:04:19,934
+para classificar melhor?"
+
+85
+00:04:19,968 --> 00:04:22,200
+E o ponto dirá: "Bem,
+
+86
+00:04:22,234 --> 00:04:24,734
+o modelo de cima está
+me classificando errado,
+
+87
+00:04:24,768 --> 00:04:28,133
+então eu quero que esta linha
+se aproxime de mim.
+
+88
+00:04:29,033 --> 00:04:32,801
+O segundo modelo está
+me classificando certo,
+
+89
+00:04:32,835 --> 00:04:36,667
+então eu quero que esta linha
+se afaste de mim."
+
+90
+00:04:37,300 --> 00:04:41,567
+Esta alteração no modelo
+atualizará os pesos.
+
+91
+00:04:41,601 --> 00:04:43,667
+Digamos que isso aumentará
+estes dois
+
+92
+00:04:43,701 --> 00:04:45,767
+e diminuirá estes dois.
+
+93
+00:04:45,801 --> 00:04:48,634
+Após atualizarmos os pesos,
+
+94
+00:04:48,668 --> 00:04:51,634
+nós temos previsões melhores
+em todos os modelos
+
+95
+00:04:51,668 --> 00:04:53,067
+da camada oculta
+
+96
+00:04:53,101 --> 00:04:57,334
+e previsão melhor do modelo
+na camada de saída.
+
+97
+00:04:57,368 --> 00:05:02,100
+Perceba que nós deixamos
+o viés de fora deste vídeo.
+
+98
+00:05:02,134 --> 00:05:04,167
+Na verdade,
+ao atualizar os pesos,
+
+99
+00:05:04,201 --> 00:05:06,367
+nós também atualizamos
+a unidade de viés.
+
+100
+00:05:06,401 --> 00:05:09,400
+Se você gosta de formalidades,
+não se preocupe,
+
+101
+00:05:09,434 --> 00:05:12,267
+nós vamos calcular
+estes gradientes em detalhe.
+

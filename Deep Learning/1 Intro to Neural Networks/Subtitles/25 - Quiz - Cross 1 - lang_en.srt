@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:01,980
+Well we're getting somewhere now.
+
+2
+00:00:01,980 --> 00:00:05,099
+We've concluded that the probability is important.
+
+3
+00:00:05,099 --> 00:00:08,969
+And that the better model will give us a better probability.
+
+4
+00:00:08,970 --> 00:00:10,544
+Now the question is,
+
+5
+00:00:10,544 --> 00:00:13,109
+how we maximize the probability.
+
+6
+00:00:13,109 --> 00:00:16,559
+Also, if remember correctly we're talking about an error function and how
+
+7
+00:00:16,559 --> 00:00:20,829
+minimizing this error function will take us to the best possible solution.
+
+8
+00:00:20,829 --> 00:00:23,070
+Could these two things be connected?
+
+9
+00:00:23,070 --> 00:00:26,362
+Could we obtain an error function from the probability?
+
+10
+00:00:26,362 --> 00:00:29,750
+Could it be that maximizing the probability is equivalent
+
+11
+00:00:29,750 --> 00:00:34,000
+to minimizing the error function? Maybe.
+

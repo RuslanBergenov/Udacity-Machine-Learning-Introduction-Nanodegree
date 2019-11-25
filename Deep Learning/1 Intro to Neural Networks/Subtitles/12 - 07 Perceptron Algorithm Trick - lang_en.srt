@@ -1,0 +1,196 @@
+1
+00:00:00,000 --> 00:00:03,924
+Now, let me show you a trick that will make a line go closer to a point.
+
+2
+00:00:03,924 --> 00:00:06,089
+Let's say we have our linear equation for example,
+
+3
+00:00:06,089 --> 00:00:09,019
+3x1 + 4x2 -10.
+
+4
+00:00:09,019 --> 00:00:11,809
+And that linear equation gives us a line which is
+
+5
+00:00:11,810 --> 00:00:15,054
+the points where the equation is zero and two regions.
+
+6
+00:00:15,054 --> 00:00:19,949
+The positive region drawn in blue where 3x1 + 4x2 - 10 is positive,
+
+7
+00:00:19,949 --> 00:00:26,750
+and the negative region drawn in red with 3x1 + 4x2 - 10 is negative.
+
+8
+00:00:26,750 --> 00:00:29,341
+So here we have our lonely misclassified point, the 0.4,
+
+9
+00:00:29,341 --> 00:00:32,460
+5 which is a red point in the blue area,
+
+10
+00:00:32,460 --> 00:00:35,039
+and the point has to come closer.
+
+11
+00:00:35,039 --> 00:00:38,310
+So how do we get that point to come closer to the line?
+
+12
+00:00:38,310 --> 00:00:42,570
+Well, the idea is we're going to take the four and five and use them to modify
+
+13
+00:00:42,570 --> 00:00:48,195
+the equation of the line in order to get the line to move closer to the point.
+
+14
+00:00:48,195 --> 00:00:50,509
+So here are parameters of the line 3,
+
+15
+00:00:50,509 --> 00:00:54,579
+4 and -10 and the coordinates of the point are 4 and 5,
+
+16
+00:00:54,579 --> 00:00:57,640
+and let's also add a one here for the bias unit.
+
+17
+00:00:57,640 --> 00:01:02,620
+So what we'll do is subtract these numbers from the parameters of the line to get 3 - 4,
+
+18
+00:01:02,619 --> 00:01:06,003
+4 - 5, and -10 -1.
+
+19
+00:01:06,004 --> 00:01:13,045
+The new line will have parameters -1, -1, -11.
+
+20
+00:01:13,045 --> 00:01:15,394
+And this line will move drastically towards the point,
+
+21
+00:01:15,394 --> 00:01:19,009
+possibly even going over it and placing it in the correct area.
+
+22
+00:01:19,010 --> 00:01:20,780
+Now, since we have a lot of other points,
+
+23
+00:01:20,780 --> 00:01:23,000
+we don't want to make any drastic moves since we may
+
+24
+00:01:23,000 --> 00:01:26,659
+accidentally misclassify all our other points.
+
+25
+00:01:26,659 --> 00:01:29,750
+We want the line to make a small move towards that point and for this,
+
+26
+00:01:29,750 --> 00:01:33,099
+we need to take small steps towards the point.
+
+27
+00:01:33,099 --> 00:01:35,599
+So here's where we introduce the learning rate,
+
+28
+00:01:35,599 --> 00:01:37,905
+the learning rate is a small number for example,
+
+29
+00:01:37,905 --> 00:01:41,670
+0.1 and what we'll do is instead of subtracting four,
+
+30
+00:01:41,670 --> 00:01:44,135
+five and one from the coordinates of the line,
+
+31
+00:01:44,135 --> 00:01:51,109
+we'll multiply these numbers by 0.1 and then subtract them from the equation of the line.
+
+32
+00:01:51,109 --> 00:01:52,760
+This means we'll be subtracting 0.4,
+
+33
+00:01:52,760 --> 00:01:56,600
+0.5, and 0.1 from the equation of the line.
+
+34
+00:01:56,599 --> 00:02:04,714
+Obtaining a new equation of 2.6x1 + 3.5x 2 - 10.1 = 0.
+
+35
+00:02:04,715 --> 00:02:07,890
+This new line will actually move closer to the point.
+
+36
+00:02:07,890 --> 00:02:11,840
+In the same way, if we have a blue point in the red area, for example,
+
+37
+00:02:11,840 --> 00:02:16,393
+the point 1,1 is a positively labeled point in the negative area.
+
+38
+00:02:16,393 --> 00:02:20,919
+This point is also misclassified and it says, come closer.
+
+39
+00:02:20,919 --> 00:02:22,189
+So what do we do here is the same thing,
+
+40
+00:02:22,189 --> 00:02:23,780
+except now instead of subtracting
+
+41
+00:02:23,780 --> 00:02:27,110
+the coordinates to the parameters of the line, we add them.
+
+42
+00:02:27,110 --> 00:02:31,250
+Again, we multiply by the learning rate in order to make small steps.
+
+43
+00:02:31,250 --> 00:02:34,139
+So here we take the coordinates of the point 1,1 and put
+
+44
+00:02:34,139 --> 00:02:36,834
+an extra one for the constant term and now,
+
+45
+00:02:36,835 --> 00:02:40,500
+we multiply them by the learning rates 0.1.
+
+46
+00:02:40,500 --> 00:02:45,245
+Now, we add them to the parameters of the line and we get a new line with
+
+47
+00:02:45,245 --> 00:02:50,640
+equation 3.1x1 + 4.1x2 - 9.9.
+
+48
+00:02:50,639 --> 00:02:54,674
+And magic, this line is closer to the point.
+
+49
+00:02:54,675 --> 00:02:59,000
+So that's the trick we're going to use repeatedly for the Perceptron Algorithm.
+

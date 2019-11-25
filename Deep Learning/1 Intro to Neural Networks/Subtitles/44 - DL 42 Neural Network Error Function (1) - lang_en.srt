@@ -1,0 +1,96 @@
+1
+00:00:00,000 --> 00:00:02,520
+So, our goal is to train our neural network.
+
+2
+00:00:02,520 --> 00:00:03,715
+In order to do this,
+
+3
+00:00:03,715 --> 00:00:05,950
+we have to define the error function.
+
+4
+00:00:05,950 --> 00:00:10,375
+So, let's look again at what the error function was for perceptrons.
+
+5
+00:00:10,375 --> 00:00:12,135
+So, here's our perceptron.
+
+6
+00:00:12,135 --> 00:00:15,000
+In the left, we have our input vector with
+
+7
+00:00:15,000 --> 00:00:18,900
+entries x_1 up to x_n, and one for the bias unit.
+
+8
+00:00:18,900 --> 00:00:23,945
+And the edges with weights W_1 up to W_n,
+
+9
+00:00:23,945 --> 00:00:26,360
+and b for the bias unit.
+
+10
+00:00:26,360 --> 00:00:30,275
+Finally, we can see that this perceptor uses a sigmoid function.
+
+11
+00:00:30,275 --> 00:00:37,008
+And the prediction is defined as y-hat equals sigmoid of Wx plus b.
+
+12
+00:00:37,008 --> 00:00:39,750
+And as we saw, this function gives us a measure of
+
+13
+00:00:39,750 --> 00:00:44,175
+the error of how badly each point is being classified.
+
+14
+00:00:44,175 --> 00:00:48,565
+Roughly, this is a very small number if the point is correctly classified,
+
+15
+00:00:48,565 --> 00:00:50,640
+and a measure of how far the point is from
+
+16
+00:00:50,640 --> 00:00:53,415
+the line and the point is incorrectly classified.
+
+17
+00:00:53,415 --> 00:00:57,840
+So, what are we going to do to define the error function in a multilayer perceptron?
+
+18
+00:00:57,840 --> 00:01:00,000
+Well, as we saw, our prediction is simply
+
+19
+00:01:00,000 --> 00:01:03,740
+a combination of matrix multiplications and sigmoid functions.
+
+20
+00:01:03,740 --> 00:01:07,370
+But the error function can be the exact same thing, right?
+
+21
+00:01:07,370 --> 00:01:08,817
+It can be the exact same formula,
+
+22
+00:01:08,817 --> 00:01:12,000
+except now, y-hat is just a bit more complicated.
+
+23
+00:01:12,000 --> 00:01:17,490
+And still, this function will tell us how badly a point gets misclassified.
+
+24
+00:01:17,490 --> 00:01:20,000
+Except now, it's looking at a more complicated boundary.
+
